@@ -19,7 +19,7 @@
             "description": "Accreditations and accolades that prove we walk the talk on excellence and trust",
             "certificate": [
                 {
-                    "button": "/iso.png",
+                    "button": "/Iso.png",
                     "view": "/ISMS.png",
                     "big": true
                 },
