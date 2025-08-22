@@ -1,0 +1,626 @@
+{
+  "metadata": {
+    "title": "Effortless: The All-In-One Growth Platform",
+    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs built to simplify billing, expenses, and team operations as you scale.",
+    "og": {
+      "title": "Effortless: The All-In-One Growth Platform",
+      "description": "More Business means More Jhanjhat. Effortless brings control—automating billing, expenses, team productivity, and cashflow for India's fastest-growing businesses.",
+      "url": "https://www.goeffortless.ai",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "usecaseFold": {
+    "pageHeading": "Effortless",
+    "ishome": true,
+    "mheading": "<span style='color:#FFFFFFFF'>More</span> Business.<br/><span style='color:#FFFFFFFF'>More</span> Jhanjhat.",
+    "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>More</span> Business.<br/><span style='color:#FFFFFFFF;font-weight: 300;'>More</span> Jhanjhat.",
+    "description": "Growth breaks your old tools. Effortless handles sales, cash, and team confusion — all in one place.",
+    "bannerImage": "/Home_page.png",
+    "mobileBannerImage": "/Home_page.png",
+    "ctaText": "Book a Demo",
+    "secondaryCtaUrl": "https://www.goeffortless.ai/pricing",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "secondaryCtaText": "View Pricing & Plans",
+    "businessPartnersLogo": [
+      { "src": "/RASSENSE 1.png", "width": 158, "height": 48 },
+      { "src": "/CTRLm.png", "width": 176, "height": 48 },
+      { "src": "/Pepul.png", "width": 130, "height": 48 },
+      { "src": "/MEINE ELECTRIC 1.svg", "width": 172, "height": 48 },
+      { "src": "/Insta.png", "width": 150, "height": 48 },
+      { "src": "/integral.svg", "width": 57, "height": 48 },
+      { "src": "/InnBuilt-logo 1.png", "width": 48, "height": 19 },
+      { "src": "/GallaBox.v1.2.png", "width": 74, "height": 19 },
+      { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 }
+    ]
+  },
+  "isHomePage": true,
+
+  "serviceContent": [
+    {
+      "tagLine": "Growing Pains",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "title": "The Way your Business Grows is Unique. ",
+      "colouredTitle": "The Confusion You Face Isn't.",
+      "description": "Every business that's scaling faces the same challenges in different forms.",
+      "growthFeaturesCard": [
+        {
+          "icon": "/people-icon.svg",
+          "title": "Field Sales",
+          "description": "When Sales Grows Faster, with Manual Systems, You Don't Scale — You Struggle.",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "icon": "/multiple-outlet.svg",
+          "title": "Multiple Branches",
+          "description": "You opened a New Branch to Grow — Not Lose Track of What's Going On.",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "icon": "/delivery.svg",
+          "title": "Distribution Networks",
+          "description": "More Partners, More Shipments, More Receivables—Harder to Stay on Top of it All.",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "icon": "/buyer-ecommerce.svg",
+          "title": "Buyer eCommerce",
+          "description": "Grow by Giving Buyers More Control — and Fewer Reasons to Wait.",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "icon": "/startups.svg",
+          "title": "Startups",
+          "description": "Revenue shows Growth. Cash flow shows Health. No visibility into deals and payments? You're flying blind.",
+          "width": 32,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "href": "#section2",
+      "showGreyBoderLine": true,
+      "tagLine": "Explore our Features",
+      "title": "The Engine behind ",
+      "colouredTitle": "India's Fastest-Growing Businesses",
+      "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
+      "homePageVerticalSlider": {
+        "features": [
+          {
+            "title": "Fleet on Street Selling ",
+            "description": "When sales outpace systems, you struggle—not scale.",
+            "image": "/people-icon.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Estimate &<br/> Order Creation",
+                  "description": "Send quotes and take orders on the spot. Sales don't get held up by paperwork.",
+                  "img": "/Estimate & Order Creation.svg"
+                },
+                {
+                  "title": "E-Invoicing & eWay Bill<br/> Generation",
+                  "description": "Generate compliant invoices instantly — right from the field.",
+                  "img": "/receipt 4.svg"
+                },
+                {
+                  "title": "Recurring Invoices",
+                  "description": "Set it once, and invoice cycles run themselves. Great for repeat orders.",
+                  "img": "/ballot-rect 1.svg"
+                },
+                {
+                  "title": "Outstanding<br/> Receivables",
+                  "description": "Know what's due per customer, per salesperson. Collections become proactive.",
+                  "img": "/banking-mobile 1.svg"
+                },
+                {
+                  "title": "Collections",
+                  "description": "Record Payments against customer and details are synced with your Accountant.",
+                  "img": "/Collection (Fleet On Street) 2.svg"
+                },
+                {
+                  "title": "Customer Assignment to<br/> Team",
+                  "description": "Assign customers to specific sales or support teams. No overlap. No confusion.",
+                  "img": "/chart-stock-price 2.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Purchase & Expense Management",
+            "description": "Finance fuels growth, not bill-chasing and approvals.",
+            "image": "/expense-management.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Field Expense <br/>Claims",
+                  "description": "Team submits bills directly from mobile. Finance doesn't chase paper.",
+                  "img": "/bill 2.svg"
+                },
+                {
+                  "title": "Amount-Based <br/>Approvals",
+                  "description": "Set limits for approvals by spend size. Small spends don't need big effort.",
+                  "img": "/Frame 1000012404.svg"
+                },
+                {
+                  "title": "Reimbursement Policy <br/>Controls",
+                  "description": "Define what's reimbursable. Eliminate debate, delays, and disputes.",
+                  "img": "/mobile-camera 1.svg"
+                },
+                {
+                  "title": "AI-Powered Bill <br/>Booking",
+                  "description": "Just click a photo — bills are read, validated, and booked in no time.",
+                  "img": "/clock-filled 2.svg"
+                },
+                {
+                  "title": "Document Evidence<br/> Storage",
+                  "description": "Upload, store, and retrieve all financial proofs — makes you audit ready.",
+                  "img": "/laptop-chart-cols 2.svg"
+                },
+                {
+                  "title": "Utility Bill <br/>Payments",
+                  "description": "Track and Pay recurring office expenses effotlessly like mobile, internet, and electricity.",
+                  "img": "/user-change.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Cross-Team Workflows",
+            "description": "More teams, more confusion—unless systems sync.",
+            "image": "/cross-platform.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Sales Approval Workflows<br/> for Orders, Invoices",
+                  "description": "Ensure the right people verify — and avoid mistakes and confusion.",
+                  "img": "/Sales Approval flows.svg"
+                },
+                {
+                  "title": "Approvals for Purchases,<br/> Claims & Payments",
+                  "description": "Bring Visibility and Control to all your expense approval flows.",
+                  "img": "/bolt-speed 3.svg"
+                },
+                {
+                  "title": "Multi-Level <br/>Approvals",
+                  "description": "Control your organization's approval process upto 5 levels.",
+                  "img": "/file-check 8.svg"
+                },
+                {
+                  "title": "1-Click Invoice <br/>Creation",
+                  "description": "Sales orders convert to invoices instantly. No lag. No loss.",
+                  "img": "/laptop-mobile 1.svg"
+                },
+                {
+                  "title": "Payment Gateway <br/>Integration",
+                  "description": "Collect payments faster via integrated UPI, cards, or net banking.",
+                  "img": "/credit-card-check 1.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Office & Live Field Team Tracking",
+            "description": "Track reps live. Spot gaps. Act fast.",
+            "image": "/team-tracking.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Live GPS<br/> Tracking",
+                  "description": "Track team movement on the map — see where they are and where they went.",
+                  "img": "/Live Gps Tracking.svg"
+                },
+                {
+                  "title": "GPS-Based Field Team<br/> Check-Ins",
+                  "description": "Ensure field activity is real, not logged from home.",
+                  "img": "/GPS Based Chickin.svg"
+                },
+                {
+                  "title": "Geo-Fencing",
+                  "description": "Restrict check-ins to where your customers are.",
+                  "img": "/Geo fencing.svg"
+                },
+                {
+                  "title": "Fraud<br/> Prevention",
+                  "description": "All Mobile GPS hacks are prevented through our security measures.",
+                  "img": "/laptop-mobile 1.svg"
+                },
+                {
+                  "title": "Biometric<br/> Integration",
+                  "description": "Add biometric hardware for high-security environments. No proxy punching.",
+                  "img": "/hold 1.svg"
+                },
+                {
+                  "title": "Attendance & Leave<br/> Management",
+                  "description": "Leave requests, approvals, and balances — all managed digitally.",
+                  "img": "/ballot-rect 1.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Customer Workflows",
+            "description": "Automate tasks for better customer experience.",
+            "image": "/customer-workflows.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Pay Now Emails<br/> with Invoices",
+                  "description": "Send invoice + payment link in one click. Get paid faster.",
+                  "img": "/Pay Now Emails  with Invoices.svg"
+                },
+                {
+                  "title": "Auto-Share of Invoices <br/>(WhatsApp and Email)",
+                  "description": "No one forgets to share invoices anymore — Effortless does it for you.",
+                  "img": "/Auto-Share of Invoices(WhatsApp and Email).svg"
+                },
+                {
+                  "title": "Automated Reminders <br/>(WhatsApp and Email)",
+                  "description": "Chase payments without chasing your team to follow up.",
+                  "img": "/circle-user-sparkle-2 1.svg"
+                },
+                {
+                  "title": "Domain-Mapped <br/>Reminder Delivery",
+                  "description": "Reminders go from your company email and number. Looks pro, builds trust.",
+                  "img": "/bill 2.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Business Health Dashboard",
+            "description": "Revenue reflects growth. Cashflow reflects health.",
+            "image": "/business-health.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Daily Business Snapshot <br/>on WhatsApp",
+                  "description": "Get a quick performance brief every morning. No dashboard login needed.",
+                  "img": "/laptop 1.svg"
+                },
+                {
+                  "title": "Sales & Collection <br/>Performance",
+                  "description": "Know what you earned, what you collected — every day.",
+                  "img": "/laptop-chart-cols 3.svg"
+                },
+                {
+                  "title": "Revenue <br/>Analysis",
+                  "description": "Break down sales by region, rep, SKU or channel. Know where growth is real.",
+                  "img": "/chart-pie-4 1.svg"
+                },
+                {
+                  "title": "Inventory Movement <br/>Analysis",
+                  "description": "See what's moving and what's not. Plan purchase and sales better.",
+                  "img": "/compass 1.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Buyer Portal",
+            "description": "If sales outgrow systems, you struggle to grow.",
+            "image": "/buyer-portal-icon.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Product Catalog with <br/>In-Stock Items",
+                  "description": "Buyers see exactly what's available with photos — no back-and-forth.",
+                  "img": "/cart-simple-add 1.svg"
+                },
+                {
+                  "title": "Self-Serve Ordering <br/>& Tracking",
+                  "description": "They place orders, track status, and reorder — without calling your team.",
+                  "img": "/cart-plus 1.svg"
+                },
+                {
+                  "title": "Dashboard with  <br/>Transaction History",
+                  "description": "Buyers get full visibility into past orders and invoices — all in one place.",
+                  "img": "/todo 1.svg"
+                },
+                {
+                  "title": "Open <br/>Bills",
+                  "description": "They can view pending payments and clear dues directly.",
+                  "img": "/bill 3.svg"
+                },
+                {
+                  "title": "Statement of <br/>Accounts",
+                  "description": "Download or view SoA anytime — no need to contact finance.",
+                  "img": "/bank-statement 1.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Banking and Cashflow Management",
+            "description": "More customers, vendors, cash—harder to manage.",
+            "image": "/banking.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Daily Bank Sync & <br/>Reconciliation",
+                  "description": "Bank data updates automatically. No end-of-month bottlenecks.",
+                  "img": "/greek-temple 1.svg"
+                },
+                {
+                  "title": "Collection Alerts to <br/>Owners",
+                  "description": "Get notified instantly when money comes in. Know who paid and how much.",
+                  "img": "/bell-filled 1.svg"
+                },
+                {
+                  "title": "Alerts to <br/>Salesman",
+                  "description": "Sales agents get notified when their customers make payments.",
+                  "img": "/user-update 1.svg"
+                },
+                {
+                  "title": "Party <br/>Collection",
+                  "description": "Map collections to specific customers and ensure data is shared with your accountant.",
+                  "img": "/circle-user-filled 1.svg"
+                },
+                {
+                  "title": "Petty Cash <br/>Management",
+                  "description": "Track small cash spends at branches or in the field — with full control.",
+                  "img": "/hand-holding-money 1.svg"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "href": "#section3",
+      "showGreyBoderLine": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Your Business Command Center",
+      "title": "No More Broken Pipes ",
+      "colouredTitle": "Between Systems",
+      "description": "Sales, finance, ops – everyone's on the same page, always.",
+      "growthCards": [
+        {
+          "title": "Growth multiplies Complexity",
+          "description": "More orders. More follow-ups. More risks.<br/>Your Existing stack cannot handle the load.",
+          "image": "/Your Business Growth Center (Growth multiplies Complexity).svg",
+          "width": 409,
+          "height": 505,
+          "showLine": true
+        },
+        {
+          "title": "Effortless is built for Managing Growth",
+          "description": "Your Business Command Center for sales, cash, and teams- built to help businesses to grow, without the mess.",
+          "image": "/Desktop Dashboard.png",
+          "height": 557,
+          "width": 812
+        }
+      ]
+    },
+    {
+      "href": "#section4",
+      "tagLine": "Pricing",
+      "showGreyBoderLine": true,
+      "title": "Pick the Plan ",
+      "colouredTitle": "That Powers Your Growth",
+      "description": "No hidden fees. No surprises. Plans that fit your stage.",
+      "pricingCards": [
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": false,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users (Up To): <b>50</b>",
+            "Additional User Price: <b>₹2,400</b>/user"
+          ],
+          "packageItems": [
+            "Buyer Portal",
+            "Multi-level Approval (5 Levels)",
+            "Geo-Fencing",
+            "Anti-Fraud Measures",
+            "Biometric Integration",
+            "Reimbursement Management",
+            "Dedicated Account Support"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+          "packageDescription": "Premium includes:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users (Up To): <b>15</b>",
+            "Additional User Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+              "E-Invoicing & e-Way Billing",
+              "Inventory Module",
+              "Tally Sync",
+              "Role Based Access Control",
+              "OCR-led Bill Booking",
+              "Reimbursement Module",
+              "Collections",
+              "Check-in & Live-GPS Tracking"
+          ]
+        }
+      ],
+      "newPricingCards": {
+        "packageItems": [
+          {
+            "name": "Premium Pro",
+            "annualPrice": "₹3,60,000",
+            "oneTimeImplementationFee": "₹1,24,000",
+            "numberOfUsers": 50,
+            "ocrScanning": "20,000",
+            "documentStorage": "25 GB",
+            "numberOfBRS": "5",
+            "additionalUsersPrice": "₹2,400/user",
+            "features": [
+              "Everything in Premium and:",
+              "Buyer Portal",
+              "Multi-level Approval (5 Levels)",
+              "Geo-Fencing",
+              "Anti-Fraud Measures",
+              "Biometric Integration",
+              "Reimbursement Management",
+              "Route Mapping",
+              "Dedicated Account Support"
+            ]
+          },
+          {
+            "name": "Premium",
+            "annualPrice": "₹1,54,000",
+            "oneTimeImplementationFee": "₹48,000",
+            "numberOfUsers": 15,
+            "ocrScanning": "5,000",
+            "documentStorage": "10 GB",
+            "numberOfBRS": "2",
+            "additionalUsersPrice": "₹3,000/user",
+            "features": [
+              "Premium includes:",
+              "E-Invoicing & e-Way Billing",
+              "Inventory Module",
+              "Tally Sync",
+              "Role Based Access Control",
+              "OCR-led Bill Booking",
+              "Reimbursement Module",
+              "Collections",
+              "Check-in & Live-GPS Tracking"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "href": "#section3",
+      "tagLine": "Customers Stories",
+      "title": "Trusted by Indian Founders,",
+      "colouredTitle": " Loved by their Teams.",
+      "description": "Thousands of Businesses already manage their growth with Effortless.",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "testimonialsSection": {
+        "businessPartnersLogo": [
+          { "src": "/RASSENSE 1.png", "width": 158, "height": 48 },
+          { "src": "/CTRLm.png", "width": 176, "height": 48 },
+          { "src": "/Pepul.png", "width": 130, "height": 48 },
+          { "src": "/MEINE ELECTRIC 1.svg", "width": 172, "height": 48 },
+          { "src": "/Insta.png", "width": 150, "height": 48 },
+          { "src": "/integral.svg", "width": 57, "height": 48 },
+          { "src": "/InnBuilt-logo 1.png", "width": 48, "height": 19 },
+          { "src": "/GallaBox.v1.2.png", "width": 74, "height": 19 },
+          { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 }
+        ],
+        "testimonials": [
+          {
+            "profile": "/Swami.png",
+            "name": "S. Swaminathan",
+            "designation": "Partner, ContraMinds Labs",
+            "review": "Managing the entire business through an app is incredibly convenient and efficient. While the initial setup took some time—especially for tasks like setting up business accounts and integrating with GST portals—it was made much easier with the support of a skilled accountant who ensured everything was done smoothly and accurately.",
+            "contribution": "Co-Founder & Former CEO, Hansa Cequity"
+          },
+          {
+            "profile": "/Saravanan.png",
+            "name": "S.Saravanan Sundaramoothy",
+            "designation": "Founder & Managing Director,",
+            "review": "As a startup founder, Effortless has greatly simplified managing our finances. The invoicing and collection features have optimized our cash flow, while the team ensures we stay fully compliant with GST and TDS, letting us focus on scaling the business.",
+            "contribution": "EdSix BrainLab Pvt. Ltd."
+          },
+          {
+            "profile": "/Hari.png",
+            "name": "Hari Shankar",
+            "designation": "Co-Founder,",
+            "review": "Effortless is a true, unified solution for business finance. With a strong product and a strong team, Effortless really gives me the experience I was looking for when I was using other tools and services. Effortless helps me worry less about finance and compliance and gives me more time to focus on building the company.",
+            "contribution": "ULTIweb Technologies"
+          }
+        ]
+      }
+    },
+    {
+      "href": "#section5",
+      "showGreyBoderLine": true,
+      "tagLine": "Security Assurance",
+      "title": "Secure by ",
+      "colouredTitle": "Design",
+      "description": "ISO 27001 certified. 256-bit encryption compliant. Your data is safe here.",
+      "complianceCards": [
+        {
+          "title": "8-Levels of Security",
+          "subTitle": "Enterprise Level Security",
+          "description": "The same security standards used by leading banks and financial institutions worldwide.",
+          "img": "/enterprse-level-security.svg"
+        },
+        {
+          "title": "Certified Excellence",
+          "subTitle": "ISO 27001 Certification",
+          "description": "Our systems and processes meet international standards for information security management.",
+          "img": "/award-certificate.svg"
+        },
+        {
+          "title": "Compliance Automation",
+          "subTitle": "MSME & GST Compliance Built-In",
+          "description": "Automatically generate compliant documents and filings that meet all regulatory requirements.",
+          "img": "/subscription.svg"
+        },
+        {
+          "title": "Control & Transparency",
+          "subTitle": "Secure User Roles and Audit Trail",
+          "description": "Set permissions by role and track every action in the system for complete accountability.",
+          "img": "/shield.svg"
+        }
+      ]
+    },
+    {
+      "href": "#section3",
+      "showGreyBoderLine": true,
+      "tagLine": "Get Started",
+      "bgColour": "bg-[#15181B]",
+      "title": "Growth Doesn't Wait. ",
+      "colouredTitle": "Why Should You?",
+      "description": "Let Effortless help you grow—without the Jhanjhat.",
+      "callBackCards": [
+        {
+          "title": "Talk to Us",
+          "description": "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+          "ctaText": "Request a Callback",
+          "subText": "We'll reach out within 4 business hours",
+          "list": [
+            "Schedule a personalized demo",
+            "Get your specific questions answered",
+            "Discuss your unique business challenges"
+          ],
+          "icon": "/calendar-days 1.svg"
+        },
+        {
+          "title": "Experience Effortless",
+          "description": "See Effortless in action with a personalized demo tailored to your business.",
+          "ctaText": "Get a Demo",
+          "subText": "Choose a time that works for you",
+          "list": [
+            "No generic presentations",
+            "Focus on your specific challenges",
+            "Get a clear picture of your potential ROI"
+          ],
+          "icon": "/cinema 1.svg"
+        },
+        {
+          "title": "Your Growth Engine Starts Here",
+          "description": "More growth, less overhead. Discover how India’s fastest growing businesses do it.",
+          "ctaText": "See it in Action",
+          "primary": true,
+          "subText": "Clarity in 30 minutes. No pressure, just proof.",
+          "list": [
+            "Automate invoicing, collections & approvals",
+            "Track sales team performance",
+            "Get cashflow clarity in real-time"
+          ],
+          "icon": "/customer-support 2.svg"
+        }
+      ]
+    }
+  ]
+}

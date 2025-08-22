@@ -1,0 +1,84 @@
+{
+  "headerItems": {
+    "headerMenus": [
+      {
+        "href": "/#solutions",
+        "title": "Solutions"
+      },
+      {
+        "href": "/#company",
+        "title": "Company"
+      },
+      {
+        "href": "/#resources",
+        "title": "Resources"
+      }
+    ]
+  },
+  "footerData": {
+    "logo": {
+      "src": "/Effotless Logo.svg",
+      "alt": "Effortless Logo"
+    },
+    "description": "Empowering businesses with intelligent automation.",
+    "links": [
+      {
+        "title": "Solutions",
+        "items": [
+          {
+            "href": "/solutions/finance",
+            "text": "Finance"
+          },
+          {
+            "href": "/solutions/hr",
+            "text": "HR"
+          },
+          {
+            "href": "/solutions/operations",
+            "text": "Operations"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "items": [
+          {
+            "href": "/about",
+            "text": "About Us"
+          },
+          {
+            "href": "/about-us",
+            "text": "Careers"
+          },
+          {
+            "href": "/contact",
+            "text": "Contact"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "items": [
+          {
+            "href": "/privacy-policy",
+            "text": "Privacy Policy"
+          },
+          {
+            "href": "/terms-of-service",
+            "text": "Terms of Service"
+          }
+        ]
+      }
+    ],
+    "socials": [
+      {
+        "href": "https://www.linkedin.com",
+        "icon": "/linkedin.svg"
+      },
+      {
+        "href": "https://www.twitter.com",
+        "icon": "/twitter.svg"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,438 @@
+{
+
+  "firstFold": {
+    "pageHeading": "Buyer Portal",
+    "heading": "<span style='color:#FFFFFFFF'>Your Dealers,</span>Now Self-Sufficient.",
+    "mheading": "<span style='color:#FFFFFFFF'>Your Dealers,</span>Now Self-Sufficient.",
+    "description": "With Effortless Buyer Portal, your B2B customers can place orders, track delivery, view invoices, and make payments — all without needing to call your sales team.",
+    "bannerImage": "/buyer-portal.svg",
+    "ctaText": "Book a Demo",
+    "secondaryCtaText": "See it in Action",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "businessPartnersLogo": [
+      { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+      { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+      { "src": "/sustainability-mafia-logo.svg", "width": 56, "height": 19 },
+      { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+      { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+      { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+      { "src": "/ctrl-logo.svg", "width": 32, "height": 19 },
+      { "src": "/HansaLogo.svg", "width": 47, "height": 19 }
+    ]
+  },
+  "serviceContent": [
+    {
+      "href": "#section1",
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Pain Points",
+      "showGreyTopBorder": true,
+      "showGreyBoderLine": true,
+      "title": "Built to Eliminate the ",
+      "colouredTitle": "Manual Dealer Coordination",
+      "description": "Built to Eliminate Manual, Manual Dealer Coordination",
+      "featureCardsSection": {
+        "featureCards": [
+          {
+            "title": "Dealers call to place every order.",
+            "description": "“We get calls and WhatsApps all day — and still miss orders during peak hours.”",
+            "img": "/Dealers.svg",
+            "imgPosition": "left"
+          },
+          {
+            "title": "Orders are delayed due to back-and-forth.",
+            "description": "“Our team has to double-check everything. It slows down the process and creates tension with dealers.”",
+            "img": "/collectedd.svg",
+            "imgPosition": "left"
+          },
+          {
+            "title": "Inventory visibility is missing..",
+            "description": "“Customers place orders for items that are out of stock. It leads to refunds, delays, and frustration.”",
+            "img": "/wasting-hours.svg",
+            "imgPosition": "left"
+          },
+          {
+            "title": "Sales Team is stuck answering basic queries.",
+            "description": "“My sales team spends half the day answering 'Where is my order?' messages.”",
+            "img": "/multiple-users.svg",
+            "imgPosition": "left"
+          },
+          {
+            "title": "Payment collection is inconsistent.",
+            "description": "“Even after delivery, it takes days of follow-up to get the payment.”",
+            "img": "/performance-tracking.svg",
+            "imgPosition": "left"
+          },
+          {
+            "title": "Growing orders = growing chaos.",
+            "description": "“As orders grow, so does confusion — more calls, more errors, more delays.”",
+            "img": "/user-change.svg",
+            "imgPosition": "left"
+          }
+        ]
+      }
+    },
+    {
+      "href": "#section2",
+      "tagLine": "Features",
+      "title": "What Powers ",
+      "colouredTitle": "Sales Finance Automation",
+      "description": "The critical bridge between sales execution and finance control — built for accuracy, speed, and scale.",
+      "showGreyBoderLine": true,
+      "featureCardsSection": {
+        "featureCards": [
+          {
+            "bg": "bg-[#121317]",
+            "title": "Buyer Portal",
+            "description": "Dealers place and track orders online, anytime.",
+            "img": "/buyer-portall.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Product Catalogue",
+            "description": "Show live inventory to buyers with pricing and specs.",
+            "img": "/product-catalogue.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Order Booking",
+            "description": "Allow buyers to place and confirm orders in seconds.",
+            "img": "/workflow.svg"
+          }
+        ]
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "Business Outcomes",
+      "bgColour": "bg-[#15181B]",
+      "title": "Unlock Real Results Across",
+      "colouredTitle": "Dealer Experience, and Order Velocity",
+      "description": "From reducing order chaos to boosting repeat business — here's what customers unlock with Effortless Buyer Portal.",
+      "dashboardSection": [
+        {
+          "title": "More Orders, Less Friction",
+          "description": "Self-serve ordering helps customers place more orders, more often — without waiting for your sales team.",
+          "img": "/less-fiction.svg",
+          "subTitle": "Powered by:",
+          "subDesc": "Order Booking, Buyer Portal"
+        },
+        {
+          "title": "Fewer Errors, Fewer Returns",
+          "description": "Real-time inventory with product details cuts down misorders and improves fulfillment accuracy.",
+          "img": "/few-returns.svg",
+          "subTitle": "Powered by:",
+          "subDesc": "Inventory"
+        },
+        {
+          "title": "Sales Team Gets Time Back",
+          "description": "Reps spend less time taking calls and more time closing strategic sales.",
+          "img": "/sales-report.svg",
+          "layout": "test",
+          "subTitle": "Powered by:",
+          "subDesc": "Buyer Portal, Order Tracking"
+        },
+        {
+          "title": "Faster, Smoother Payments",
+          "description": "Invoices are visible right in the portal — with one-click payment options built in.",
+          "img": "/make-payment.svg",
+          "subTitle": "Powered by:",
+          "subDesc": "Invoice Integration + Payment Links"
+        },
+        {
+          "title": "Clear Order Status for Customers",
+          "description": "Dealers track their own order status and delivery timelines — no more \"Where's my order?\" follow-ups.",
+          "img": "/order-status.svg",
+          "subTitle": "Powered by:",
+          "subDesc": "Buyer Portal"
+        },
+        {
+          "title": "Scale Dealer Ops Without Scaling Headcount",
+          "description": "Handle growing dealer volume with automation — not more manual work or team stress.",
+          "img": "/scaling-geadCout.svg",
+          "subTitle": "Powered by:",
+          "subDesc": "All Modules Combined",
+          "layout": "test"
+        }
+      ]
+    },
+    {
+      "href": "#section4",
+      "tagLine": "Pricing",
+      "showGreyBoderLine": true,
+      "title": "Pick the Plan That ",
+      "colouredTitle": "Powers Your Growth",
+      "description": "Choose the plan that works best for your business. All plans include core features with different limits.",
+      "pricingCards": [
+        {
+          "packageTitle": "Lite",
+          "packageSubTitle": "₹5,400",
+          "packageDescription": "Your Plan Include:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>FREE</b>",
+            "Users: <b>1</b>",
+            "Additional Users Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+            "Estimate/Sales Order Creation",
+            "E-Invoicing and eWay Bill on Mobile and Desktop",
+            "1-Click Order to Invoice Conversion",
+            "Customer-Level access to Sales and Account Management Team",
+            "Receivables Management"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+
+          "packageDescription": "Everything in Lite and:",
+
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users: <b>15</b>",
+            "Additional Users Price: <b>₹15,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 5000 Invoices)",
+            "Customer Group-Level access to Sales and Account Management Team",
+            "Reimbursement Management",
+            "Supervisor Entry",
+            "Automatic Geo-Tagged Check-in, Check-out"
+          ]
+        },
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": true,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users: <b>50</b>",
+            "Additional Users Price: <b>₹12,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 10000 Invoices)",
+            "Biometric Integration",
+            "Geo-Fence Monitoring",
+            "Anti-Fraud Measures for Tracking Salesperson Productivity",
+            "Designation-based Claim Rule Setup",
+            "Reimbursement Budget setup",
+            "Document Evidence (Up to 25GB)"
+          ]
+        },
+        {
+          "packageTitle": "Enterprise",
+          "packageSubTitle": "Custom Pricing",
+          "showAnnum": false,
+          "packageDescription": "Everything in Premium Pro, plus:",
+          "packageDetails": ["Users: <b>Unlimited</b>"],
+          "packageItems": [
+            "Unlimited E-Invoicing and eWay Bill on Mobile and Desktop",
+            "Unlimited Customer/Buyer Portal",
+            "Unlimited Multi GSTN Support",
+            "Bank Statement Fetch (with Unlimited Banks)",
+            "Reimbursement Module (INR 150 per Month Per User)"
+          ]
+        }
+      ]
+    },
+    {
+      "href": "#section3",
+      "tagLine": "Customers Stories",
+      "title": "Built for Startups,",
+      "colouredTitle": "Proven by Founders",
+      "description": "Here's what customers say about Effortless",
+      "showGreyBoderLine": true,
+      "bgColour": "bg-[#15181B]",
+      "testimonialsSection": {
+        "businessPartnersLogo": [
+          { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+          { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+          {
+            "src": "/sustainability-mafia-logo.svg",
+            "width": 56,
+            "height": 19
+          },
+          { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+          { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+          { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+          { "src": "/ctrl-logo.svg", "width": 32, "height": 19 }
+        ],
+        "testimonials": [
+          {
+            "profile": "/swaminathan.svg",
+            "name": "S. Swaminathan",
+            "designation": "Partner, ContraMinds Labs",
+            "review": "Managing the entire business through an app is incredibly convenient and efficient. While the initial setup took some time—especially for tasks like setting up business accounts and integrating with GST portals—it was made much easier with the support of a skilled accountant who ensured everything was done smoothly and accurately.",
+            "contribution": "Co-Founder & Former CEO, Hansa Cequity"
+          },
+          {
+            "profile": "/saravanan.svg",
+            "name": "S.Saravanan Sundaramoothy",
+            "designation": "Founder & Managing Director,",
+            "review": "As a startup founder, Effortless has greatly simplified managing our finances. The invoicing and collection features have optimized our cash flow, while the team ensures we stay fully compliant with GST and TDS, letting us focus on scaling the business.",
+            "contribution": "EdSix BrainLab Pvt. Ltd."
+          },
+          {
+            "profile": "/shankar.svg",
+            "name": "Hari Shankar",
+            "designation": "Co-Founder,",
+            "review": "Effortless is a true, unified solution for business finance. With a strong product and a strong team, Effortless really gives me the experience I was looking for when I was using other tools and services. Effortless helps me worry less about finance and compliance and gives me more time to focus on building the company.",
+            "contribution": "ULTIweb Technologies"
+          }
+        ]
+      }
+    },
+
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "How It Works",
+      "title": "Live in 7 Days,",
+      "colouredTitle": " Zero Headaches",
+      "description": "Launch stress-free in just 7 days — no delays, no complications, just results.",
+      "founderTestominial": [
+        {
+          "title": "Success Story",
+          "quote": "The onboarding was surprisingly smooth. We expected weeks of disruption but were fully operational in days.",
+          "name": "Ravi K.",
+          "designation": "Operations Manager, TechServices India"
+        }
+      ],
+      "timelineSteps": [
+        {
+          "dayLabel": "Today",
+          "title": "Get started.",
+          "points": [
+            "Plug into Tally, Zoho, and your bank in minutes",
+            "Set up vendor payments with zero manual work",
+            "Reconcile transactions without lifting a finger"
+          ]
+        },
+        {
+          "dayLabel": "Day 5",
+          "title": "Feel the difference.",
+          "points": [
+            "Automate GST, TDS, and compliance—no stress, no errors",
+            "Approvals? Handled. Multi-level workflows, built-in controls",
+            "Real-time visibility into every rupee, at your fingertips"
+          ]
+        },
+        {
+          "dayLabel": "Day 30",
+          "title": "Finance, reimagined.",
+          "points": [
+            "Vendor payments? Automated. Reimbursements? Done.",
+            "Compliance worries? A thing of the past.",
+            "Your business? Running smoother than ever."
+          ]
+        }
+      ]
+    },
+    {
+      "href": "#section5",
+      "showGreyBoderLine": true,
+      "tagLine": "Security and Compliance",
+      "title": "ISO-Certified,",
+      "colouredTitle": "Bank-Grade Secure",
+      "description": "Your data is protected with internationally recognized ISO standards and bank-grade encryption—ensuring privacy, integrity, and peace of mind",
+      "founderTestominial": [
+        {
+          "title": "Success Story",
+          "quote": "As a financial services company, security was our top concern. Effortless exceeded our requirements and gave us confidence to move our critical operations to their platform.",
+          "name": "Sunita R.",
+          "designation": "Compliance Officer, FinEdge Services"
+        }
+      ],
+      "complianceCards": [
+        {
+          "title": "Enterprise-Level Security",
+          "subTitle": "256-bit Encryption",
+          "description": "The same security standards used by leading banks and financial institutions worldwide.",
+          "img": "/enterprse-level-security.svg"
+        },
+        {
+          "title": "Certified Excellence",
+          "subTitle": "ISO 27001 Certification",
+          "description": "Our systems and processes meet international standards for information security management.",
+          "img": "/award-certificate.svg"
+        },
+        {
+          "title": "Compliance Automation",
+          "subTitle": "MSME & GST Compliance Built-In",
+          "description": "Automatically generate compliant documents and filings that meet all regulatory requirements.",
+          "img": "/subscription.svg"
+        },
+        {
+          "title": "Compliance Automation",
+          "subTitle": "Secure User Roles and Audit Trail",
+          "description": "Set permissions by role and track every action in the system for complete accountability.",
+          "img": "/shield.svg"
+        }
+      ]
+    },
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "Get Started",
+      "title": "Ready to Experience",
+      "colouredTitle": "Effortless?",
+      "description": "Step into a world of smooth, effortless financial management",
+      "callBackCards": [
+        {
+          "title": "Talk to Us",
+          "description": "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+          "ctaText": "Request a Callback",
+          "subText": "We'll reach out within 4 business hours",
+          "list": [
+            "Schedule a personalized demo",
+            "Get your specific questions answered",
+            "Discuss your unique business challenges"
+          ]
+        },
+        {
+          "title": "Request Demo",
+          "description": "See Effortless in action with a personalized demo tailored to your business.",
+          "ctaText": "Schedule a Demo",
+          "subText": "Choose a time that works for you",
+          "list": [
+            "No generic presentations",
+            "Focus on your specific challenges",
+            "Get a clear picture of your potential ROI"
+          ]
+        },
+        {
+          "title": "Start Free Trial",
+          "description": "Experience the full power of Effortless risk-free for 14 days.",
+          "ctaText": "Start Your Free Trial",
+          "primary": true,
+          "subText": "Be up and running in minutes",
+          "list": [
+            "No credit card required",
+            "Access to all features",
+            "Free implementation support"
+          ]
+        }
+      ]
+    },
+    {
+      "colouredTitle": "FAQs",
+      "description": "Get quick answers to common questions about managing reports, tracking inventory and receivables, and ensuring data security with Data-to-Decisions.",
+      "faqsSection": [
+        {
+          "question": "What are the main features of Effortless?",
+          "answer": "Effortless offers automation, centralized tracking, real-time dashboards, and custom workflows—helping you reduce manual work, gain clarity, and stay in control of your finances."
+        },
+        {
+          "question": "Is Effortless customizable to fit my business needs?",
+          "answer": "Yes. You can tailor approval flows, user roles, data fields, and reporting formats to suit your team structure and processes. Whether you're a small business or a large organization, Effortless adjusts to your way of working."
+        },
+        {
+          "question": "Do features support multiple users and roles?",
+          "answer": "Yes. You can tailor approval flows, user roles, data fields, and reporting formats to suit your team structure and processes. Whether you're a small business or a large organization, Effortless adjusts to your way of working."
+        },
+        {
+          "question": "Will I get real-time updates and insights?",
+          "answer": "Yes. All dashboards and reports reflect live data, so you're always working with the latest information. This helps you track spending, monitor performance, and make faster, more informed decisions."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "title": "About Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+    "description": "Effortless is a Team of Problem-Solvers on a Mission to solve the jhanjhat that comes with Growth for Ambitious Indian SMBs. Crafted by CAs, driven by Purpose. Join us and help reshape how India does business.",
+    "og": {
+      "title": "About Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+      "description": "Built by Founders who understand the complexity that comes with Growth, at Effortless, we're solving real-world problems with smart automation and a bias for action. Come build what matters.",
+      "url": "https://www.goeffortless.ai/about-us",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+
+  "careersBanner": {
+    "isCareersPage": true,
+    "label": "About Us",
+    "headline": "We’re",
+    "subheadline": "Build what matters. Solve real problems. Leave a legacy.",
+    "highlightWords": {
+      "emoji": "/orange-search.svg",
+      "text": "looking for",
+      "arrow": "/greeen-arrow.svg"
+    },
+    "teamImage": {
+      "src": "/Group Photo.png",
+      "alt": "Team Group Photo"
+    },
+    "missionHeading": [
+      "Amazing People.",
+      "Bold Mission.",
+      "Lasting Impact."
+    ],
+    "missionDescription": "We are a team of builders, problem-solvers, and change-makers who believe finance should be effortless, not exhausting. What brings us together is a shared obsession with simplifying business operations through innovation, automation, and design that just works. If you want to tackle real-world challenges, work with brilliant minds, and create lasting impact, this is where you belong."
+  },
+  "isCareersPage": true,
+  "serviceContent": [
+    {
+      "founderTeams": [
+        {
+          "imageSrc": "/JK.png",
+          "description": "Jayakumar (JK) is an Associate Chartered Accountant, Company Secretary, and holds an MBA from Symbiosis International University.\n\nWhile at Deloitte, JK worked with large Indian corporates and MNCs across industries such as manufacturing, finance, retail, and IT.\n\nHe co-founded Agrya in 2010, after 5 years with Deloitte.",
+          "linkedInUrl": "https://www.linkedin.com/in/cajayakumar"
+        },
+        {
+          "imageSrc": "/PR.png",
+          "description": "Priya is a Fellow Chartered Accountant and holds a Diploma in IFRS from ACCA, London.\n\nShe co-founded Agrya in 2010, after a 15-year stint with Deloitte.\n\nShe has worked with start-ups and multiple SMBs as a strategic advisor.\n\nShe is also a Seed Committee member of RTBI since 2014.",
+          "linkedInUrl": "https://www.linkedin.com/in/capriya"
+        },
+        {
+          "imageSrc": "/anushal.png",
+          "description": "Anshul is an MDI Gurgaon alumnus who has built and scaled fintech and revenue-led software businesses across Tally, Innoviti, and Khatabook.\n\nHe brings over a decade of experience working with Indian SMBs and startups.He helped build businesses from scratch in 15+ countries.\n\nHe has held key leadership roles driving product, growth, and go-to-market strategy.",
+          "linkedInUrl": "https://www.linkedin.com/in/anshulsudamagupta/"
+        }
+      ]
+    },
+    {
+      "mangementTeams": [
+        {
+          "imageSrc": "/madhur.svg",
+          "description": "Madhur leads Sales for our Channel Business at Effortless. He has held key Sales positions at Tally Solutions, iBall India, and CPM with deep expertise in IT and Retail Sales over a career that spans over a decade.",
+          "linkedInUrl": "https://www.linkedin.com/in/madhur-maheshwari-m1234/",
+          "isColoured": true
+        },
+        {
+          "imageSrc": "/manoj.svg",
+          "description": "Manoj leads Product Management at Effortless. He is a Chartered Accountant and works closely with key stakeholders across customers, partners, and our users.",
+          "linkedInUrl": "https://www.linkedin.com/in/consult-camanoj/",
+          "isColoured": true
+        },
+        {
+          "imageSrc": "/vignesh.svg",
+          "description": "Vignesh leads Product Marketing at Effortless. As part of the Founding Team, he also served as the Founding Product Manager, helping shape the company’s product, positioning, and early go-to-market motion. ",
+          "linkedInUrl": "https://www.linkedin.com/in/hrorq/",
+          "isColoured": true
+        },
+        {
+          "imageSrc": "/somu.png",
+          "description": "Somasundaram leads Engineering at Effortless. He is a Full-Stack Developer and oversees Effortless’ Product Development.  He is passionate about turning complex challenges into simple, powerful solutions that drive customer growth.",
+          "linkedInUrl": "https://www.linkedin.com/in/somasundaram-p-a4a71116b/",
+          "isColoured": true,
+          "className": "!h-[236px]"
+        },
+        {
+          "imageSrc": "/sarvanana.png",
+          "description": "Saravanan leads as Customer Success and Inside Sales at Effortless. He previously ran Inside Sales at Brick & Bolt and had stints at Khatabook, Housing.com, and Mphasis. He is an experienced trainer and leader with close to a decade of professional experience.",
+          "linkedInUrl": "https://www.linkedin.com/in/saravanan-prabhaharan-42138b66/",
+          "isColoured": true
+        }
+      ]
+    },
+    {
+      "mentorsCard": [
+        {
+          "imageSrc": "/tally.jpeg",
+          "description": "Tally’s leadership and ex-SAP APAC leaders are our well-wishers on our journey to build practical products that solve real problems. \n\nEffortless helps ambitious SMBs grow with control, not confusion."
+        },
+        {
+          "imageSrc": "/jayaramm.png",
+          "description": "Jayaram has over 12 years of rich experience in Software Development, Architecture, and Team Management.\n\n He is also a FinTech and Startup Enthusiast.\n\nHe has worked with two successful unicorn startups and was the founding engineer in one of them.",
+          "linkedInUrl": "https://www.linkedin.com/in/jayaram-r-42ab0722/"
+        }
+      ]
+    },
+    {
+      "showGreyBoderLine": true,
+      "investors": [
+        {
+          "imageSrc": "/raghavana.png",
+          "description": "G Srinivasa Raghavan is the Global President & CEO of TVS Mobility and MD of TVS Automobile Solutions, with over 20 years of global leadership experience across BFSI, Retail, and Transportation, and previously led India Operations at TCS.",
+          "linkedInUrl": "https://www.linkedin.com/in/srinivasa-raghavan-03152a1b7/",
+          "isColoured": true
+        },
+        {
+          "imageSrc": "/swami.png",
+          "description": "Swami is the Founder of ContraMinds Labs and a seasoned marketing leader, having co-founded and led Hansa Cequity as CEO, with prior leadership roles at R K Swamy-Hansa and WPP’s iContract. He is also a member of the Chennai Angels.",
+          "linkedInUrl": "https://www.linkedin.com/in/sivaraman-swaminathan-9856501/",
+          "isColoured": true
+        },
+        {
+          "imageSrc": "/bharath.png",
+          "description": "Bharath, Founder of KRIA Law, is a leading IP litigator and strategist with over 25 years of experience, serving on the Board of INTA and recognized among India’s top lawyers by India Business Law Journal and Asia IP. He was previously a Partner at Anand & Anand.",
+          "linkedInUrl": "https://www.linkedin.com/in/msbharath/",
+          "isColoured": true
+        },
+        {
+          "imageSrc": "/vikram.png",
+          "description": "Vikram is the CEO of Spalon India, driving the growth of brands like Bounce and Oryza into a leading salon chain across India’s top cities, continuing a legacy that began in 1982. He is an active Angel Investor.",
+          "linkedInUrl": "https://www.linkedin.com/in/vikram-mohan-350532350/",
+          "isColoured": true
+        },
+        {
+          "imageSrc": "/sandeep.png",
+          "description": "Sandeep Singh is a growth-focused retail leader in the wellness industry, known for 4x revenue growth, 2x EBITDA expansion, and closing the sector’s largest private equity deal. He is an active Angel Investor.",
+          "linkedInUrl": "https://www.linkedin.com/in/reachsandeepsingh/",
+          "isColoured": true
+        }
+      ]
+    },
+    {
+      "tagLine": "Values",
+      "showGreyBoderLine": true,
+      "title": "At Effortless, ",
+      "colouredTitle": "We Follow 7 Core Values",
+      "bgColour": "bg-[#15181B]",
+      "companyValuesItems": [
+        {
+          "icon": "/honesty.svg",
+          "title": "Honesty",
+          "description": "We speak the truth—even when it’s hard. Clear, candid communication builds trust."
+        },
+        {
+          "icon": "/integrity.svg",
+          "title": "Integrity",
+          "description": "We follow through. Our actions match our words, every time."
+        },
+        {
+          "icon": "/think-big-act-small.svg",
+          "title": "Think Big & Act Small",
+          "description": "We dream big, but execute with focus. Progress comes from daily, disciplined moves."
+        },
+        {
+          "icon": "/speed-matters.svg",
+          "title": "Speed Matters",
+          "description": "Momentum is everything. We move with urgency and bias for action."
+        },
+        {
+          "icon": "/be-an-entrepreneur.svg",
+          "title": "Be an Entrepreneur",
+          "description": "We act like founders. We own the outcome—not just the task."
+        },
+        {
+          "icon": "/customer-partner-first.svg",
+          "title": "Customer & Partner First",
+          "description": "We win when they win. Every decision starts with what’s best for our users and partners."
+        },
+        {
+          "icon": "/respect-each-other.svg",
+          "title": "Respect for Each Other",
+          "description": "We value people. We listen, disagree with care, and build with empathy."
+        }
+      ]
+    }
+  ]
+}

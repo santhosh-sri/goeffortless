@@ -1,0 +1,619 @@
+{
+  "headerItems": {
+    "headerMenus": [
+      {
+        "title": "Products",
+        "href": "#section1"
+      },
+      {
+        "title": "Solutions",
+        "href": "#section2"
+      },
+      {
+        "title": "Customers",
+        "href": "#section3"
+      },
+      {
+        "title": "Pricing",
+        "href": "#section4"
+      },
+      {
+        "title": "Resources",
+        "href": "#section5"
+      }
+    ]
+  },
+   "footerData": {
+    "sections": [
+      {
+        "title": "Products",
+        "items": [
+          "Order-to-Cash",
+          "Procurement-to-Pay",
+          "Data-to-Decisions",
+          "Integrations",
+          "Security",
+          "Pricing"
+        ]
+      },
+      {
+        "title": "Features",
+        "items": [
+          "Invoice",
+          "Payments",
+          "Reimbursement",
+          "Banking",
+          "Expense Tracking",
+          "Inventory"
+        ]
+      },
+      {
+        "title": "Solution By Size",
+        "items": ["Startups", "Small Business", "Mid-Market", "Enterprises"]
+      },
+      {
+        "title": "Solution By Team",
+        "items": [
+          "Sales",
+          "Accounting",
+          "CFOs & Controllers",
+          "CXOs & Leadership"
+        ]
+      },
+      {
+        "title": "Partners",
+        "items": [
+          "Accounting Firms",
+          "VC Firms",
+          "Incubators & Accelerators",
+          "Technology Partner"
+        ]
+      },
+      {
+        "title": "Customers",
+        "items": []
+      },
+      {
+        "title": "Resources",
+        "items": ["Blog", "News Letters", "Academy", "Change log"]
+      },
+      {
+        "title": "Legal",
+        "items": ["Privacy Policy", "Terms of Service"]
+      },
+      {
+        "title": "System Status",
+        "items": ["Live"]
+      },
+      {
+        "title": "Company",
+        "items": ["About", "Careers"]
+      }
+    ],
+
+    "logo": {
+      "src": "/logo-eff.svg",
+      "alt": "Effortless"
+    },
+      "social_links": [
+      {
+        "icon": "/instagram.svg",
+        "url": "#"
+      },
+      {
+        "icon": "/x.svg",
+        "url": "#"
+      },
+      {
+        "icon": "/linkedIn.svg",
+        "url": "#"
+      },
+      {
+        "icon": "/ham-logo.svg",
+        "url": "#"
+      }
+    ]
+  },
+  "firstFold": {
+    "pageHeading": "Order-to-Cash",
+    "pageName": "Effortless",
+    "heading": "<span style='color:#FFFFFFFF'>Sell Faster, Track Payments Instantly, and Control Cash </span>Flow—All in Real-Time!",
+    "description": "Effortless Order-to-Cash: The AI-powered platform for sales and finance teams to automate collections, sync inventory, and manage cash flow—on desktop or mobile.",
+    "bannerImage": "/order-to-cash-banner.svg",
+    "logo": "/pulse-logo.svg",
+    "ctaText": "Get Free Demo",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "businessPartnersLogo": [
+      { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+      { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+      { "src": "/sustainability-mafia-logo.svg", "width": 56, "height": 19 },
+      { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+      { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+      { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+      { "src": "/ctrl-logo.svg", "width": 32, "height": 19 },
+      { "src": "/HansaLogo.svg", "width": 47, "height": 19 }
+    ]
+  },
+  "serviceContent": [
+    {
+      "href": "#section1",
+      "bgColour": "bg-[#15181B]",
+      "colouredTagLine": "Order-to-Cash",
+      "tagLine": "Benefits",
+      "showGreyTopBorder": true,
+      "showGreyBoderLine": true,
+      "title": "Why Sales & Finance Teams Love Effortless Order-to-Cash",
+      "description": "Sales teams love Effortless Order-to-Cash for its seamless order-to-invoice flow, real-time receivables, and automated collections — reducing manual work and accelerating deal closures.",
+      "featureCardsSection": {
+        "GridCols": true,
+        "featureCards": [
+          {
+            "title": "One-Click Invoice Creation for Sales Teams",
+            "description": "Enable one-click invoice creation for instant, error-free billing. Automate workflows, save time, and accelerate sales. Focus on closing deals while ensuring seamless, hassle-free invoicing. Enhance customer experience with prompt and professional billing.",
+            "img": "/one-click.svg"
+          },
+          {
+            "title": "Track & Collect Payments with Automated Reminders",
+            "description": "Track outstanding payments in real time and automate follow-ups with smart reminders. Minimize delays, boost cash flow, and ensure hassle-free collections with zero manual effort. Stay in control, get paid faster, and improve financial stability effortlessly.",
+            "img": "/clock-cash.svg"
+          },
+          {
+            "title": "Real-Time Cash Flow & Inventory Insights",
+            "description": "Stay ahead with real-time insights into your cash flow and inventory, giving you complete control over finances and stock levels. Make informed decisions, optimize resource allocation, and ensure smooth business operations without delays or guesswork.",
+            "img": "/real-time-updates.svg"
+          },
+          {
+            "title": "Mobile App for Field Sales & Approvals",
+            "description": "Equip your field sales team with a mobile app for easy order management, instant invoicing, and quick approvals. Speed up sales cycles, streamline operations, and enable real-time decision-making for maximum efficiency. Stay connected anytime, anywhere for seamless business growth.",
+            "img": "/mobile-app.svg"
+          }
+        ]
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "colouredTagLine": "Order-to-Cash",
+      "tagLine": "Solution",
+      "title": "Stuck Between Sales Targets and Cash Flow Chaos? Get Order-to-Cash Fixes It.",
+      "description": "Effortless Order-to-Cash keeps your sales team on point, your deals moving, and your cash flowing—without the chaos.",
+      "dashboardSection": [
+        {
+          "title": "Manual invoicing delays order processing",
+          "solution": "One-Click Invoices: Generate GST-ready invoices in seconds.",
+          "img": "/manual-invoice.svg"
+        },
+        {
+          "title": "Chasing payments hurts cash flow",
+          "solution": "Track & Collect: Automated WhatsApp/email reminders + payment links",
+          "img": "/featuresFrame.svg"
+        },
+        {
+          "title": "No real-time view of cash flow or stock",
+          "solution": "Live Dashboards: Track cash flow, inventory, and receivables 24/7.",
+          "img": "/real-time-cash-flow.svg",
+          "layout": "test"
+        },
+        {
+          "title": "Field sales can't approve orders on the go",
+          "solution": "Mobile App, Approve orders, track sales visits, and sync data instantly.",
+          "img": "/filed-sales-anner.svg"
+        },
+        {
+          "title": "Distributors place orders via calls/emails, causing delays",
+          "solution": "B2B Self-Serve Portal: Let distributors place orders and pay online 24/7.",
+          "img": "/sales-banner.svg"
+        }
+      ]
+    },
+    {
+      "href": "#section2",
+      "colouredTagLine": "PULSE",
+      "tagLine": "Features",
+      "title": "Designed to Simplify, Built to Empower",
+      "description": "Pulse is built to remove complexity from your workflow, empowering your team with systematized processes that drive growth",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "featureCardsSection": {
+        "featureCards": [
+          {
+            "bg": "bg-[#121317]",
+            "title": "Receivables Management",
+            "description": "Track pending payments, automate follow-ups, and improve cash flow predictability.",
+            "img": "/receivables-management.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Payment Gateway Integrations",
+            "description": "Allow instant collections via UPI, credit card, or net banking.",
+            "img": "/payment-gateway-integrations.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Bank Reconciliation & Categorization",
+            "description": "Automatically categorize transactions with bank feeds to ensure accurate receivables.",
+            "img": "/bank-reconciliation.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "E-Invoicing & eWay Bill on Mobile",
+            "description": "Streamline tax compliance and invoicing directly from mobile devices.",
+            "img": "/e-invoicing-eway-bill.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Employee Reimbursements",
+            "description": "Automate reimbursements for sales teams, track expenses in real time, and eliminate paper-based approvals.",
+            "img": "/employee-reimbursements.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Revenue Reconciliation",
+            "description": "Ensure that every rupee in sales is accounted for with automated revenue tracking.",
+            "img": "/revenue-reconciliation.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Customer Portal",
+            "description": "Provide customers with access to invoices, payment options, and support to speed up collections.",
+            "img": "/customer-portal.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Recurring Contracts & Milestone-Based Billing",
+            "description": "Automate recurring invoicing and contract-based revenue tracking.",
+            "img": "/bank-reconciliation.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Web Check-In & Supervisor Entry",
+            "description": "Give sales managers control over rep attendance and performance monitoring.",
+            "img": "/web-checkin-supervisor.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "GPS-Based Sales Rep Tracking & Geo-Fencing",
+            "description": "Monitor rep locations, optimize routes, and prevent fraudulent check-ins.",
+            "img": "/people-roof.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Live Attendance Tracking & Biometric Integration",
+            "description": "Automate check-ins for field teams to ensure accountability.",
+            "img": "/gps-sales-rep-tracking.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Estimate & Sales Order Creation",
+            "description": "Enable reps to generate orders in 1-click and on-the-go, reducing delays in processing.",
+            "img": "/live-attendance-biometric.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Inventory Intelligence",
+            "description": "Identify Fast, Slow, and Dead stock with high, low, and loss-making items.",
+            "img": "/estimate-sales-order.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Automated Follow-Ups via WhatsApp & Email",
+            "description": "Automated follow-ups reduce collection effort by 80%.",
+            "img": "/inventory-intelligence.svg"
+          },
+          {
+            "bg": "bg-[#121317]",
+            "title": "Inventory with Visibility",
+            "description": "Track inventory effortlessly with full visibility. Stay in control with real-time insights.",
+            "img": "/search-chart.svg"
+          }
+        ]
+      }
+    },
+    {
+      "colouredTagLine": "PULSE",
+      "tagLine": "Use Cases",
+      "title": "Solutions Designed for Your Business Model",
+      "description": "Designed to align with your goals, our solutions adapt to your business for optimal growth and efficiency",
+      "useCases": [
+        {
+          "title": "Field Sales",
+          "description": "Optimize routes, invoice automation, and track receivables instantly",
+          "img": "/people-icon.svg"
+        },
+        {
+          "title": "Office Sales",
+          "description": "Organize orders, send e-invoice, and dispatch goods faster",
+          "img": "/icon-working.svg"
+        },
+        {
+          "title": "Distributor-Led Sales",
+          "description": "Track inventory, simplify order processes, and monitor receivables",
+          "img": "/delivery.svg"
+        },
+        {
+          "title": "E-commerce Sales",
+          "description": "Sync inventory, manage orders, and reconcile sales quickly",
+          "img": "/lap-web.svg"
+        }
+      ]
+    },
+    {
+      "tagLine": "Winning with Effortless",
+      "title": "Proven Results with PULSE",
+      "description": "See measurable impact with PULSE-streamlined operations, improved accuracy, and accelerated growth tailored to your business needs",
+      "verticalSlider": {
+        "title": "Seamless Payments. Live Insights. Smart Sales.",
+        "features": [
+          {
+            "title": "Payment reminder automation",
+            "description": "Streamline collections with automated payment reminders for timely follow-ups and improved cash flow. Reduce manual effort, minimize delays, and enhance customer relationships with proactive notifications. Customize schedules and messaging to ensure on-time payments effortlessly.",
+            "image": "/payment-automation.svg"
+          },
+          {
+            "title": "Live inventory tracker",
+            "description": "Keep real-time visibility on your stock. Prevent out-of-stock scenarios and make informed restocking decisions.",
+            "image": "/payment-automation.svg"
+          },
+          {
+            "title": "Geo-fenced sales visit logs",
+            "description": "Automatically log field visits using geo-fencing. Track team movement, visit frequency, and optimize coverage.",
+            "image": "/payment-automation.svg"
+          }
+        ],
+        "store_buttons": [
+          {
+            "image": "/applestore.svg",
+            "url": "https://apps.apple.com"
+          },
+          {
+            "image": "/playstore.svg",
+            "url": "https://play.google.com"
+          }
+        ]
+      }
+    },
+    {
+      "tagLine": "Winning with Effortless",
+      "title": "Proven Results with PULSE",
+      "description": "See measurable impact with PULSE-streamlined operations, improved accuracy, and accelerated growth tailored to your business needs",
+      "sliderSection": {
+        "sliderCards": [
+          {
+            "title": "/pepul.svg",
+            "organizationDetails": [
+              {
+                "name": "Challenge",
+                "description": "Cash flow delays and frequent stockouts"
+              },
+              {
+                "name": "Solution",
+                "description": "Automated invoicing, receivables tracking, and AI-based inventory planning."
+              }
+            ],
+            "impactDetails": [
+              {
+                "percentage": "-40%",
+                "negativeImpact": true,
+                "description": "Stockout reduction"
+              },
+              {
+                "percentage": "+20%",
+                "description": "Revenue growth"
+              },
+              {
+                "percentage": "+25%",
+                "description": "Cash flow improvement"
+              }
+            ]
+          },
+          {
+            "title": "/pepul.svg",
+            "organizationDetails": [
+              {
+                "name": "Challenge",
+                "description": "Cash flow delays and frequent stockouts"
+              },
+              {
+                "name": "Solution",
+                "description": "Automated invoicing, receivables tracking, and AI-based inventory planning."
+              }
+            ],
+            "impactDetails": [
+              {
+                "percentage": "-40%",
+                "negativeImpact": true,
+                "description": "Stockout reduction"
+              },
+              {
+                "percentage": "+20%",
+                "description": "Revenue growth"
+              },
+              {
+                "percentage": "+25%",
+                "description": "Cash flow improvement"
+              }
+            ]
+          },
+          {
+            "title": "/pepul.svg",
+            "organizationDetails": [
+              {
+                "name": "Challenge",
+                "description": "Cash flow delays and frequent stockouts"
+              },
+              {
+                "name": "Solution",
+                "description": "Automated invoicing, receivables tracking, and AI-based inventory planning."
+              }
+            ],
+            "impactDetails": [
+              {
+                "percentage": "-40%",
+                "negativeImpact": true,
+                "description": "Stockout reduction"
+              },
+              {
+                "percentage": "+20%",
+                "description": "Revenue growth"
+              },
+              {
+                "percentage": "+25%",
+                "description": "Cash flow improvement"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "href": "#section4",
+      "tagLine": "Pricing",
+      "showGreyBoderLine": true,
+      "title": "Pick the Plan That Powers Your Growth",
+      "description": "Choose the plan that works best for your business. All plans include core features with different limits.",
+      "pricingCards": [
+        {
+          "packageTitle": "Lite",
+          "packageSubTitle": "₹5,400",
+          "packageDescription": "Your Plan Include:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>FREE</b>",
+            "Users: <b>1</b>",
+            "Additional Users Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+            "Estimate/Sales Order Creation",
+            "E-Invoicing and eWay Bill on Mobile and Desktop",
+            "1-Click Order to Invoice Conversion",
+            "Customer-Level access to Sales and Account Management Team",
+            "Receivables Management"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+
+          "packageDescription": "Everything in Lite and:",
+
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users: <b>15</b>",
+            "Additional Users Price: <b>₹15,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 5000 Invoices)",
+            "Customer Group-Level access to Sales and Account Management Team",
+            "Reimbursement Management",
+            "Supervisor Entry",
+            "Automatic Geo-Tagged Check-in, Check-out"
+          ]
+        },
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": true,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users: <b>50</b>",
+            "Additional Users Price: <b>₹12,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 10000 Invoices)",
+            "Biometric Integration",
+            "Geo-Fence Monitoring",
+            "Anti-Fraud Measures for Tracking Salesperson Productivity",
+            "Designation-based Claim Rule Setup",
+            "Reimbursement Budget setup",
+            "Document Evidence (Up to 25GB)"
+          ]
+        },
+        {
+          "packageTitle": "Enterprise",
+          "packageSubTitle": "Custom Pricing",
+          "showAnnum": false,
+          "packageDescription": "Everything in Premium Pro, plus:",
+          "packageDetails": ["Users: <b>Unlimited</b>"],
+          "packageItems": [
+            "Unlimited E-Invoicing and eWay Bill on Mobile and Desktop",
+            "Unlimited Customer/Buyer Portal",
+            "Unlimited Multi GSTN Support",
+            "Bank Statement Fetch (with Unlimited Banks)",
+            "Reimbursement Module (INR 150 per Month Per User)"
+          ]
+        }
+      ]
+    },
+    {
+      "href": "#section3",
+      "tagLine": "Customers Stories",
+      "title": "Built for Startups, Proven by Founders",
+      "description": "Here's what customers say about Effortless",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "testimonialsSection": {
+        "businessPartnersLogo": [
+          { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+          { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+          {
+            "src": "/sustainability-mafia-logo.svg",
+            "width": 56,
+            "height": 19
+          },
+          { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+          { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+          { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+          { "src": "/ctrl-logo.svg", "width": 32, "height": 19 }
+        ],
+        "testimonials": [
+          {
+            "profile": "/swaminathan.svg",
+            "name": "S. Swaminathan",
+            "designation": "Partner, ContraMinds Labs",
+            "review": "Managing the entire business through an app is incredibly convenient and efficient. While the initial setup took some time—especially for tasks like setting up business accounts and integrating with GST portals—it was made much easier with the support of a skilled accountant who ensured everything was done smoothly and accurately.",
+            "contribution": "Co-Founder & Former CEO, Hansa Cequity"
+          },
+          {
+            "profile": "/saravanan.svg",
+            "name": "S.Saravanan Sundaramoothy",
+            "designation": "Founder & Managing Director,",
+            "review": "As a startup founder, Effortless has greatly simplified managing our finances. The invoicing and collection features have optimized our cash flow, while the team ensures we stay fully compliant with GST and TDS, letting us focus on scaling the business.",
+            "contribution": "EdSix BrainLab Pvt. Ltd."
+          },
+          {
+            "profile": "/shankar.svg",
+            "name": "Hari Shankar",
+            "designation": "Co-Founder,",
+            "review": "Effortless is a true, unified solution for business finance. With a strong product and a strong team, Effortless really gives me the experience I was looking for when I was using other tools and services. Effortless helps me worry less about finance and compliance and gives me more time to focus on building the company.",
+            "contribution": "ULTIweb Technologies"
+          }
+        ]
+      }
+    }
+  ],
+  "productsSection": [
+    {
+      "title": "ProPay",
+      "subTitle": "Smarter Control over Every Expense",
+      "description": "ProPay simplifies expense management with real-time insights, automated payments, and full compliance. Streamline invoicing, boost cash flow visibility, and gain smarter expense control for growth."
+    },
+    {
+      "title": "PRISM",
+      "subTitle": "Know More. Manage Better",
+      "description": "Prism empowers you with real-time visibility into financials and inventory, delivering timely reports and strategic insights that drive smarter decisions and optimize capital."
+    }
+  ],
+  "faqsSection": [
+    {
+      "question": "How does PULSE address small business challenges like late payments and overdue invoices?",
+      "answer": "With PULSE, you can track outstanding payments, send automated reminders, and gain real-time insights into receivables, helping you reduce delays and improve cash collection."
+    },
+    {
+      "question": "How does PULSE address small business challenges like late payments and overdue invoices?",
+      "answer": "With PULSE, you can track outstanding payments, send automated reminders, and gain real-time insights into receivables, helping you reduce delays and improve cash collection."
+    },
+    {
+      "question": "How does PULSE address small business challenges like late payments and overdue invoices?",
+      "answer": "With PULSE, you can track outstanding payments, send automated reminders, and gain real-time insights into receivables, helping you reduce delays and improve cash collection."
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "title": "Effortless Pricing: Plans for Every Growing Business",
+    "description": "Choose from simple, powerful plans to automate billing, expenses, and team operations. Try Effortless free for 7 days. No credit card required.",
+    "og": {
+      "title": "Effortless Pricing: Plans for Every Growing Business",
+      "description": "Pick the plan that fits your Growth. From Premium Pro to Lite, automate your billing, cashflow, and sales operations with Effortless.",
+      "url": "https://www.goeffortless.ai/pricing",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "isPricingPage": true,
+  "headerItems": {
+    "headerMenus": [
+      {
+        "title": "Products",
+        "href": "#section1"
+      },
+      {
+        "title": "Solutions",
+        "href": "#section2"
+      },
+      {
+        "title": "Customers",
+        "href": "#section3"
+      },
+      {
+        "title": "Pricing",
+        "href": "#section4"
+      },
+      {
+        "title": "Resources",
+        "href": "#section5"
+      }
+    ]
+  },
+  "footerData": {
+    "sections": [
+      {
+        "title": "Products",
+        "items": [
+          "Pulse",
+          "ProPay",
+          "Prism",
+          "Integrations",
+          "Security",
+          "Pricing"
+        ]
+      },
+      {
+        "title": "Feature",
+        "items": [
+          "Invoice",
+          "Payments",
+          "Reimbursement",
+          "Banking",
+          "Expense Tracking",
+          "Inventory"
+        ]
+      },
+      {
+        "title": "Partners",
+        "items": [
+          "Accounting Firms",
+          "VC Firms",
+          "Incubators & Accelerators",
+          "Technology Partner"
+        ]
+      },
+      {
+        "title": "Comparison",
+        "items": ["vs. Bit Analyst", "vs. Zoho Books", "vs. Zoho Bigin"]
+      }
+    ],
+    "logo": {
+      "src": "/logo-eff.svg",
+      "alt": "Effortless"
+    },
+    "social_links": [
+      {
+        "icon": "/instagram.svg",
+        "url": "#"
+      },
+      {
+        "icon": "/x.svg",
+        "url": "#"
+      },
+      {
+        "icon": "/linkedIn.svg",
+        "url": "#"
+      },
+      {
+        "icon": "/ham-logo.svg",
+        "url": "#"
+      }
+    ]
+  },
+  "serviceContent": [
+    {
+      "href": "#section4",
+      "showGreyBoderLine": true,
+      "Customtitle": "<span style='color:#FFFFFF'>Pick a plan that's</span><span style='font-weight: 500'> right for you</span>",
+      "description": "Simple Plans. Powerful Features. Zero Finance Headaches.",
+      "pricingFeatures": true,
+      "pricingCards": [
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": false,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users (Up To): <b>50</b>",
+            "Additional User Price: <b>₹2,400</b>/user"
+          ],
+          "packageItems": [
+            "Buyer Portal",
+            "Multi-level Approval (5 Levels)",
+            "Geo-Fencing",
+            "Anti-Fraud Measures",
+            "Biometric Integration",
+            "Reimbursement Management",
+            "Dedicated Account Support"
+          ]
+        },
+       {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+          "packageDescription": "Premium includes:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users (Up To): <b>15</b>",
+            "Additional User Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+            "E-Invoicing & e-Way Billing",
+            "Inventory Module",
+            "Tally Sync",
+            "Role Based Access Control",
+            "OCR-led Bill Booking",
+            "Reimbursement Module",
+            "Collections",
+            "Check-in & Live-GPS Tracking"
+          ]
+        }
+      ]
+    },
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "Get Started",
+      "bgColour": "bg-[#15181B]",
+      "title": "Ready to Experience ",
+      "colouredTitle": "Effortless?",
+      "description": "Step into a world of smooth, effortless financial management",
+      "callBackCards": [
+        {
+          "title": "Talk to Us",
+          "description": "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+          "ctaText": "Request a Callback",
+          "subText": "We'll reach out within 4 business hours",
+          "list": [
+            "Schedule a personalized demo",
+            "Get your specific questions answered",
+            "Discuss your unique business challenges"
+          ]
+        },
+        {
+          "title": "Request Demo",
+          "description": "See Effortless in action with a personalized demo tailored to your business.",
+          "ctaText": "Schedule a Demo",
+          "subText": "Choose a time that works for you",
+          "list": [
+            "No generic presentations",
+            "Focus on your specific challenges",
+            "Get a clear picture of your potential ROI"
+          ]
+        },
+        {
+          "title": "Your Growth Engine Starts Here",
+          "description": "More growth, less overhead. Discover how India’s fastest growing businesses do it.",
+          "ctaText": "See it in Action",
+          "primary": true,
+          "subText": "Clarity in 30 minutes. No pressure, just proof.",
+          "list": [
+            "Automate invoicing, collections & approvals",
+            "Track sales team performance",
+            "Get cashflow clarity in real-time"
+          ]
+        }
+      ]
+    }
+  ]
+}

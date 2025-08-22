@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "Partner with Effortless: Earn More While Helping SMBs Grow",
+    "description": "Become an Effortless Partner and unlock new revenue while helping Indian SMBs automate finance, billing, and cashflow. Earn high commissions, bonuses, and recurring income.",
+    "og": {
+      "title": "Partner with Effortless: Earn More While Helping SMBs Grow",
+      "description": "Join the Effortless Partner Program to simplify growth for ambitious businesses and unlock lucrative commissions, milestone rewards, and joint sales support.",
+      "url": "https://www.goeffortless.ai/partners",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "isPartnerPage": true,
+  "usecaseFold": {
+    "pageHeading": "Become a Partner",
+    "heading": "<span style=\"color: #FFFFFF; font-weight: 300;\">Partner with</span> Effortless. <span style=\"color: #FFFFFF; font-weight: 300;\">Unlock New </span><span style=\"color: #A3F0E6;\">Revenue.</span>",
+    "description": "Help businesses simplify finance and compliance while earning commissions, exclusive rewards, and long-term revenue.",
+    "isPartnerPage": true,
+    "bannerImage": "/Partner-2x.png",
+    "ctaText": "Partner Portal Login",
+    "secondaryCtaText": "Join as a Partner",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "businessPartnersLogo": [
+      { "src": "/RASSENSE 1.png", "width": 158, "height": 48 },
+      { "src": "/CTRLm.png", "width": 176, "height": 48 },
+      { "src": "/Pepul.png", "width": 130, "height": 48 },
+      { "src": "/MEINE ELECTRIC 1.svg", "width": 172, "height": 48 },
+      { "src": "/Insta.png", "width": 150, "height": 48 },
+      { "src": "/integral.svg", "width": 57, "height": 48 },
+      { "src": "/InnBuilt-logo 1.png", "width": 48, "height": 19 },
+      { "src": "/GallaBox.v1.2.png", "width": 74, "height": 19 },
+      { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 }
+    ]
+  },
+  "serviceContent": [
+    {
+      "tagLine": "About Effortless",
+      "title": "",
+      "colouredTitle": "",
+      "description": "",
+      "bgColour": "bg-[#121317]",
+      "showGreyTopBorder": true,
+      "showGreyBoderLine": true,
+      "missionCard": {
+        "image": {
+          "src": "/careers-imgage.svg",
+          "alt": "Team Effortless"
+        },
+        "mobileImage": {
+          "src": "/Group Photo.png",
+          "alt": "Team Effortless"
+        },
+        "title": "Built by Founders, ",
+        "colouredTitle": "for Founders",
+        "intro": "At Effortless, we believe that managing your business's finances shouldn't be a struggle.",
+        "paragraphs": [
+          "Founded in 2021, our mission is clear:<span class='font-[500]'> to empower SMBs with smart, automated tools that make finance, compliance, and sales management simpler, faster, and more effective.</span>",
+          "Effortless was built by a team of experienced Chartered Accountants with 50+ years of combined experience. We understand the challenges businesses face in managing finances, and we're committed to delivering solutions that simplify complex processes and boost productivity."
+        ],
+        "cta": {
+          "text": "Know More About Us",
+          "url": "/about-us"
+        }
+      }
+    },
+    {
+      "tagLine": "Ideal Partners",
+      "showGreyBoderLine": true,
+      "title": "Built to Help Businesses Grow ",
+      "colouredTitle": "Without Losing Control.",
+      "description": "Join India’s fastest-growing partner ecosystem and offer the all-in-one platform that simplifies growth, sales team productivity, and cashflow visibility for India’s most ambitious businesses.",
+      "partnerList": [
+        {
+          "title": "Software Providers & IT Consultants",
+          "description": "Add Effortless to your suite of finance & ERP solutions.  "
+        },
+        {
+          "title": "ERP & Tally Service Providers",
+          "description": "Help clients integrate finance automation seamlessly."
+        },
+        {
+          "title": "Chartered Accountants & Consultants",
+          "description": "Offer businesses a powerful tool to streamline operations."
+        },
+        {
+          "title": "SaaS Resellers & Business Consultants",
+          "description": "Expand your portfolio with a high-demand finance product."
+        }
+      ]
+    },
+    {
+      "tagLine": "Partner Benefits",
+      "showGreyBoderLine": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "Grow with Us. ",
+      "colouredTitle": "Earn More. Get Rewarded.",
+      "description":"As an Effortless partner, you get access to exclusive benefits, tools, and commissions. Here's why Partners love Effortless:",
+      "partnerBenifits": [
+        {
+          "icon": "/licative-commisions.svg",
+          "title": "Lucrative <br/>Commissions",
+          "description": "Earn high commissions on every business you refer, with no cap on your earnings. The more you grow, the bigger your payouts—simple, transparent, and rewarding."
+        },
+        {
+          "icon": "/rewars-bonus.svg",
+          "title": "Exclusive Rewards & <br/>Bonuses",
+          "description": "Unlock special incentives, milestone bonuses, and exclusive perks as you hit higher referral tiers. From cash rewards to premium gifts, we ensure top performers are celebrated."
+        },
+        {
+          "icon": "/recurring-revenue.svg",
+          "title": "Recurring <br/>Revenue Model",
+          "description": "Don't just earn once—build a steady income stream with commissions on every active customer you onboard. As your referrals grow, so does your recurring revenue, ensuring long-term gains."
+        },
+        {
+          "icon": "/sales-support.svg",
+          "title": "Joint Sales <br/>Support",
+          "description": "Get direct access to our sales team for demos, presentations, and deal closures. Whether you need co-selling assistance or customer onboarding help, we're here to maximize your success."
+        },
+        {
+          "icon": "/co-branding.svg",
+          "title": "Co-Branding <br/>Opportunities",
+          "description": "Leverage Effortless' brand and expertise while positioning yourself as a finance automation leader. Access white-labeled marketing assets, joint webinars, and customized proposals to enhance credibility and close more deals."
+        },
+        {
+          "icon": "/training.svg",
+          "title": "Dedicated Support & <br/>Training",
+          "description": "Stay ahead with in-depth product training, sales resources, and a dedicated partner success manager. Whether it's technical assistance or strategic guidance, we ensure you have everything needed to grow."
+        }
+      ]
+    },
+    {
+      "tagLine": "Join Us",
+      "title": "Become a ",
+      "colouredTitle": "Partner",
+      "description": "Referrals don't just pay—you get exclusive perks, bonuses, and rewards for every milestone you hit.",
+      "showForm": true
+    }
+  ]
+}

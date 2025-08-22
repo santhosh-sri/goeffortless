@@ -1,0 +1,47 @@
+
+
+{
+    "metadata": {
+        "title": "About Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+        "description": "Effortless is a Team of Problem-Solvers on a Mission to solve the jhanjhat that comes with Growth for Ambitious Indian SMBs. Crafted by CAs, driven by Purpose. Join us and help reshape how India does business.",
+        "og": {
+            "title": "About Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+            "description": "Built by Founders who understand the complexity that comes with Growth, at Effortless, we're solving real-world problems with smart automation and a bias for action. Come build what matters.",
+            "url": "https://www.goeffortless.ai/about-us",
+            "type": "website",
+            "image": "https://iili.io/F7C7h12.png"
+        }
+    },
+    "serviceContent": [
+        {
+            "tagLine": "Governance & Recognition",
+            "Customtitle": "Certifications & Awards",
+            "description": "Accreditations and accolades that prove we walk the talk on excellence and trust",
+            "certificate": [
+                {
+                    "button": "/iso.png",
+                    "view": "/ISMS.png",
+                    "big": true
+                },
+                {
+                    "button": "/dpiit1.png",
+                    "view": "/DPIIT.png",
+                    "col": true
+                },
+                {
+                    "button": "/ficci-1.png",
+                    "view": "/FICCI.png"
+                },
+                {
+                    "button": "/IFTA 1.png",
+                    "view": "/IFTA.png"
+                },
+                {
+                    "button": "/iamai-1.png",
+                    "view": "/IAMAI.png",
+                    "col": true
+                }
+            ]
+        }
+    ]
+}
