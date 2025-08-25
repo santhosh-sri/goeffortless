@@ -11,6 +11,33 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/customer/services",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/customer/consulting",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/mission",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/customer/startups",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/shop/invoicing",
+        "destination": "/",
+        "type": 301
+      }
     ]
   }
 }

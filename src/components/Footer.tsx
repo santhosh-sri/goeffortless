@@ -14,7 +14,6 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
         id="footer"
       >
         <div className="flex flex-col-reverse w-full gap-4 md:gap-[40px]">
-          {/* Grid Layout */}
           <Image
             src={"/Effortless.svg"}
             alt="Effortless"
@@ -26,7 +25,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
           <div>
             {" "}
             <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-3">
-              Our Office{" "}
+              Our Offices{" "}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-x-4 gap-y-6 justify-center w-full">
               {officeLocation?.map((section, index) => (
@@ -58,12 +57,19 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                       )}
                     </div>
                     <div>
-                      <Image
-                        src={"/location-2.svg"}
-                        alt="Icon"
-                        width={20}
-                        height={20}
-                      />
+                      <a
+                        href={section.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src="/location-2.svg"
+                          alt="Location"
+                          width={20}
+                          height={20}
+                          className="cursor-pointer"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -34,37 +34,37 @@
         "featureCards": [
           {
             "title": "We don't know our exact bank balance.",
-            "description": ""I make big spending calls without knowing exactly how much cash we actually have."",
+            "description": "I make big spending calls without knowing exactly how much cash we actually have.",
             "img": "/white-balance.svg",
             "imgPosition": "left"
           },
           {
             "title": "Reconciliation takes too long.",
-            "description": ""It's a full-day job every week — and still prone to errors."",
+            "description": "It's a full-day job every week — and still prone to errors.",
             "img": "/collectedd.svg",
             "imgPosition": "left"
           },
           {
             "title": "Inflows and outflows aren't tracked daily.",
-            "description": ""Money moves daily, but I only see the real picture during month-end review."",
+            "description": "Money moves daily, but I only see the real picture during month-end review.",
             "img": "/wasting-hours.svg",
             "imgPosition": "left"
           },
           {
             "title": "Payments and receipts get misattributed.",
-            "description": ""A client paid us 3 days ago — but no one marked it in the system."",
+            "description": "A client paid us 3 days ago — but no one marked it in the system.",
             "img": "/payment-attribute.svg",
             "imgPosition": "left"
           },
           {
             "title": "Decision-making gets delayed.",
-            "description": ""We hold back on investments or hiring because we don't have real-time clarity."",
+            "description": "We hold back on investments or hiring because we don't have real-time clarity.",
             "img": "/performance-tracking.svg",
             "imgPosition": "left"
           },
           {
             "title": "Investors ask for financial data we can't give instantly.",
-            "description": ""I scramble for reports before every review — and they're never investor-ready."",
+            "description": "I scramble for reports before every review — and they're never investor-ready.",
             "img": "/user-change.svg",
             "imgPosition": "left"
           }

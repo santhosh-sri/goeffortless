@@ -138,24 +138,28 @@ export const footerData = {
       desc: "Agrya FinLabs Pvt. Ltd.<br/>Maan Sarovar Tower, First Floor 375271A,<br/> Scheme Rd, Teynampet, Chennai,<br/>Tamil Nadu - 600018‍",
       // "<br/><span class='font-[500]'>Phone:</span> 91-7654-4422",
       // "<span class='font-[500]'>Email:</span> hello@goeffortless.ai",
+      url: `https://maps.app.goo.gl/ZU1JDbuuFzVWnRZg9`
     },
     {
       title: "Bangalore",
       isMobile: true,
       border: true,
       desc: "4th floor, 241, Tribe CoWorking, above LG<br/>showroom, Sector 6, HSR Layout, Bengaluru, <br/>Karnataka - 560102",
+      url: `https://maps.app.goo.gl/29sAA2a3pFsMqywB6`
     },
     {
       title: "Mumbai",
       isMobile: false,
       border: true,
       desc: "1206-07, Ajmera Sikova, LBS Marg, Ashok Silk<br/>Mills Ln, Ghatkopar, Mumbai<br/>Maharashtra - 400086",
+      url: `https://maps.app.goo.gl/KzuyVBkWb6CkeA5Q6`
     },
     {
       title: "Hyderabad",
       isMobile: true,
       border: true,
       desc: "7th Floor, Vasavi MPM Grand, 824, beside<br/>Ameerpet Metro, Hyderabad<br/>Telangana - 500073",
+      url: `https://maps.app.goo.gl/oYDrhUz1kiL7X8jM6`
     },
   ],
 };

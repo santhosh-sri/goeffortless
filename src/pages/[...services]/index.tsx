@@ -9,7 +9,6 @@ interface Props {
 }
 
 const Index = ({ content }: Props) => {
-  debugger
   return (
     <div>
       <Landing {...content} />

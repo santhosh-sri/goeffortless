@@ -100,7 +100,7 @@
     {
       "href": "#section4",
       "showGreyBoderLine": true,
-      "Customtitle": "<span style='color:#FFFFFF'>Pick a plan that's</span><span style='font-weight: 500'> right for you</span>",
+      "Customtitle": "<span style='color:#FFFFFF ; font-weight: 300'>Pick a plan that's</span><span style='font-weight: 500'> right for you</span>",
       "description": "Simple Plans. Powerful Features. Zero Finance Headaches.",
       "pricingFeatures": true,
       "pricingCards": [

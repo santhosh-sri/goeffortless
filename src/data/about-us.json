@@ -74,11 +74,10 @@
           "isColoured": true
         },
         {
-          "imageSrc": "/somu.png",
+          "imageSrc": "/somu.svg",
           "description": "Somasundaram leads Engineering at Effortless. He is a Full-Stack Developer and oversees Effortless’ Product Development.  He is passionate about turning complex challenges into simple, powerful solutions that drive customer growth.",
           "linkedInUrl": "https://www.linkedin.com/in/somasundaram-p-a4a71116b/",
-          "isColoured": true,
-          "className": "!h-[236px]"
+          "isColoured": true
         },
         {
           "imageSrc": "/sarvanana.png",
@@ -91,7 +90,7 @@
     {
       "mentorsCard": [
         {
-          "imageSrc": "/tally.jpeg",
+          "imageSrc": "/tally.png",
           "description": "Tally’s leadership and ex-SAP APAC leaders are our well-wishers on our journey to build practical products that solve real problems. \n\nEffortless helps ambitious SMBs grow with control, not confusion."
         },
         {
