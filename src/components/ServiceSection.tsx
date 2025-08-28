@@ -339,7 +339,7 @@ const ServiceSection = ({
             <p className="font-[500] text-[32px] leading-[32px] text-[#FFFFFF] text-left">
               Well-Wishers & Advisors{" "}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 !gap-6 w-full items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 !gap-6 w-full">
               {mentorsCard?.map((team, index) => (
                 <MentorsCard key={index} {...team} />
               ))}

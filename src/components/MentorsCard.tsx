@@ -9,16 +9,16 @@ const MentorsCard: FC<TeamMember> = ({
   linkedInUrl,
 }) => {
   return (
-    <div className={`text-white rounded-lg shadow-md w-full grid md:grid-cols-2 gap-5 items-start p-5 md:bg-[#15181B]`}>
-      <div className="relative w-full rounded-md overflow-hidden">
+    <div className={`text-white rounded-2xl shadow-md w-full grid md:grid-cols-2 gap-5 p-5 md:bg-[#15181B]`}>
+      <div className="relative w-full overflow-hidden">
         <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
           <Image
             src={imageSrc}
             alt={"Team Member"}
-            width={312}
-            height={310}
+            width={350}
+            height={330}
             priority
-            className="md:!h-[310px] md:!w-[412px]"
+            className="h-full"
           />
         </a>
       </div>
