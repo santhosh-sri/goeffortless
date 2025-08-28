@@ -8,6 +8,7 @@ export default async function handler(
   try {
     const data: any = { properties: req.body }; // Sending form data as properties
     console.log("Data:", data);
+    console.log("env data",process.env.HUBSPOT_ACCESS_TOKEN)
     try {
       const emailRequest = await axios.get(
         `${process.env.HUBSPOT_API_URL}/${data?.properties?.email}?idProperty=email`,
