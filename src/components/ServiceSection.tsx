@@ -335,16 +335,18 @@ const ServiceSection = ({
           </div>
         )}
         {mentorsCard && (
-          <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full items-start">
-            <p className="font-[500] text-[32px] leading-[32px] text-[#FFFFFF] text-left">
+          <>
+          <p className="font-[500] text-[32px] leading-[32px] text-[#FFFFFF] text-left">
               Well-Wishers & Advisors{" "}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 !gap-6 w-full">
+          <div className="">
+            <div className="grid grid-cols-1 lg:grid-cols-2 !gap-6 w-full">
               {mentorsCard?.map((team, index) => (
                 <MentorsCard key={index} {...team} />
               ))}
             </div>
           </div>
+          </>
         )}
         {investors && (
           <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pb-[40px]">

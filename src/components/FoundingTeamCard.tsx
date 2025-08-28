@@ -8,10 +8,11 @@ const FoundingTeamCard: FC<TeamMember> = ({
   description,
   linkedInUrl,
   isColoured = false, // Default to false if not provided
+  isRadius = false
 }) => {
   return (
     <div className={`text-white shadow-md w-full ${isColoured ? "p-[6px] rounded-3xl md:rounded-2xl bg-[#15181B]" : ""}`}>
-      <div className="relative w-full overflow-hidden">
+      <div className={`relative ${isRadius ? 'rounded-2xl' : ''} w-full overflow-hidden`}>
         <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
           <Image
             src={imageSrc}

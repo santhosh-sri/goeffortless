@@ -9,14 +9,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const data = { properties: req.body };
   console.log("📩 Incoming payload:", data);
 
-  console.log(process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN,"env file");
+  console.log(process.env.HUBSPOT_ACCESS_TOKEN,"env file");
 
 
   try {
     const email = data.properties.email;
 
     // ✅ Verify env variables exist
-    if (!process.env.NEXT_PUBLIC_HUBSPOT_API_URL) {
+    if (!process.env.HUBSPOT_API_URL) {
       console.error("❌ Missing HUBSPOT env vars");
       return res.status(500).json({ error: "Server misconfiguration" });
     }
@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log(`🔍 Checking HubSpot for contact with email: ${email}`);
 
       const existingContact = await axios.get(
-        `${process.env.NEXT_PUBLIC_HUBSPOT_API_URL}/${email}?idProperty=email`,
+        `${process.env.HUBSPOT_API_URL}/${email}?idProperty=email`,
         {
           headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN}`,
@@ -39,11 +39,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log("✅ Found contact:", existingContact.data);
 
       hubspotResponse = await axios.patch(
-        `${process.env.NEXT_PUBLIC_HUBSPOT_API_URL}/${existingContact.data.id}`,
+        `${process.env.HUBSPOT_API_URL}/${existingContact.data.id}`,
         data,
         {
           headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN}`,
+            Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
             "Content-Type": "application/json",
           },
         }
@@ -54,9 +54,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (err.response?.status === 404) {
         console.log("❌ Contact not found. Creating new contact...");
 
-        hubspotResponse = await axios.post(process.env.NEXT_PUBLIC_HUBSPOT_API_URL, data, {
+        hubspotResponse = await axios.post(process.env.HUBSPOT_API_URL, data, {
           headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN}`,
+            Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
             "Content-Type": "application/json",
           },
         });
