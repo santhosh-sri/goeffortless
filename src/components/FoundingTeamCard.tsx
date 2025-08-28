@@ -22,7 +22,7 @@ const FoundingTeamCard: FC<TeamMember> = ({
           />
         </a>
       </div>
-      <p className={`text-[13px] font-[300] leading-[20px] md:leading-[26px] text-[#E4E4E7] mt-4 whitespace-pre-line ${isColoured ? "p-[12px] md:text-[14px] md:min-h-[240px]" : "md:text-[20px] "}`}>
+      <p className={`text-[13px] font-[300] leading-[20px] md:leading-[26px] text-[#E4E4E7] mt-4 whitespace-pre-line ${isColoured ? "p-3 md:p-1.5 md:text-[14px] md:min-h-[240px]" : "md:text-[20px] "}`}>
         {description}
       </p>
     </div>
