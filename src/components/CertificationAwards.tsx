@@ -45,26 +45,26 @@ const CertificationGrid: React.FC<Props> = ({ certificate }: any) => {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 flex items-center justify-center z-40"
+          className="fixed inset-0 flex items-center justify-center bg-[#15181B] backdrop-blur-md z-40"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative bg-[#15181B] rounded-2xl p-6 mx-6 w-full flex flex-col items-center">
-            {/* <div className="p-4"> */}
+          <div className="relative w-full h-full flex flex-col items-center">
+            <div className="p-2 w-full flex justify-end">
               <Image
                 onClick={() => setSelectedImage(null)}
-                className="cursor-pointer self-end"
+                className="cursor-pointer"
                 src="/round-close.svg"
                 alt="Close"
                 width={24}
                 height={24}
               />
-            {/* </div> */}
+            </div>
             <Image
               src={selectedImage}
               alt="overlay"
               width={800}
               height={700}
-              className="object-contain !h-[700px]"
+              className="object-contain h-[90%]"
             />
           </div>
         </div>

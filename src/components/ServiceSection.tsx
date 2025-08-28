@@ -311,7 +311,7 @@ const ServiceSection = ({
           </div>
         )}
         {founderTeams && (
-          <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full items-start md:pt-[40px]">
+          <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pt-[40px]">
             <p className="font-[500] text-[32px] leading-[24px] text-[#FFFFFF] text-left">
               Leadership Team
             </p>
@@ -327,7 +327,7 @@ const ServiceSection = ({
             <p className="font-[500] text-[32px] leading-[24px] text-[#FFFFFF] text-left">
               Management Team
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full items-start">
+            <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full">
               {mangementTeams?.map((team, index) => (
                 <FoundingTeamCard key={index} {...team} />
               ))}
@@ -347,11 +347,11 @@ const ServiceSection = ({
           </div>
         )}
         {investors && (
-          <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full items-start md:pb-[40px]">
+          <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pb-[40px]">
             <p className="font-[500] text-[32px] leading-[24px] text-[#FFFFFF] text-left">
               Angel Investors
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full items-start">
+            <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full">
               {investors?.map((team, index) => (
                 <FoundingTeamCard key={index} {...team} />
               ))}
