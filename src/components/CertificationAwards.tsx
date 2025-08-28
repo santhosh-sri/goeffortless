@@ -45,7 +45,7 @@ const CertificationGrid: React.FC<Props> = ({ certificate }: any) => {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-[#15181B] backdrop-blur-md z-40"
+          className="fixed inset-0 flex items-center justify-center bg-[#15181B] backdrop-blur-md z-[999]"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative w-full h-full flex flex-col items-center">
