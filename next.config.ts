@@ -4,9 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   env: {
-    GTM_ID: "GTM-3388VMGJ",
-    HUBSPOT_API_URL: "https://api.hubapi.com/crm/v3/objects/contacts",
-    HUBSPOT_ACCESS_TOKEN: "pat-na2-e6890392-af1e-4de7-9f87-7a79d309c148",
+    GTM_ID: process.env.GTM_ID,
+    HUBSPOT_ACCESS_TOKEN: process.env.HUBSPOT_ACCESS_TOKEN,
+    HUBSPOT_API_URL: process.env.HUBSPOT_API_URL,
   },
   images: {
     unoptimized: true,

@@ -9,7 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const data = { properties: req.body };
   console.log("📩 Incoming payload:", data);
 
-  console.log(process.env.HUBSPOT_ACCESS_TOKEN,"env file");
+  console.log(process.env.HUBSPOT_ACCESS_TOKEN,"access token");
+  console.log(process.env.HUBSPOT_API_URL,"Api url");
 
 
   try {
@@ -30,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         `${process.env.HUBSPOT_API_URL}/${email}?idProperty=email`,
         {
           headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN}`,
+            Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
             "Content-Type": "application/json",
           },
         }

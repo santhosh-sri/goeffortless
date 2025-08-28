@@ -22,7 +22,7 @@ const MentorsCard: FC<TeamMember> = ({
           />
         </a>
       </div>
-      <p className={`text-[13px] md:text-[20px] font-[300] leading-[20px] md:leading-[26px] text-[#E4E4E7] whitespace-pre-line md:min-h-[260px]`}>
+      <p className={`text-[13px] md:text-[20px] font-[300] leading-[20px] md:leading-[26px] text-[#E4E4E7] whitespace-pre-line`}>
         {description}
       </p>
     </div>
