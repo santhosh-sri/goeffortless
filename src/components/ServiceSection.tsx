@@ -48,7 +48,7 @@ interface ServiceSectionProps extends ServiceContent {
   isCareersPage?: boolean;
   isPricingPlanPage?: boolean;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
-  certificate?: any;
+  certificate?: any
 }
 
 const ServiceSection = ({
@@ -105,7 +105,7 @@ const ServiceSection = ({
   isPricingPage,
   isPricingPlanPage,
   setSelectedPlan,
-  certificate,
+  certificate
 }: ServiceSectionProps) => {
   return (
     <div className={`${bgColour ? bgColour : "bg-[#08090A]"} md:px-[80px]`}>
@@ -113,9 +113,7 @@ const ServiceSection = ({
         <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
       <div
-        className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${
-          tagLine === "Governance & Recognition" ? "mt-[64px] md:mt-0" : ""
-        } py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
+        className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${tagLine === 'Governance & Recognition' ? "mt-[64px] md:mt-0" : ""} py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
           isPricingPage || isPricingPlanPage
             ? "md:py-[64px]"
             : isCareersPage && !companyValuesItems
@@ -129,9 +127,7 @@ const ServiceSection = ({
         )}
         {Customtitle && (
           <h1
-            className={`${
-              tagLine === "Governance & Recognition" ? "" : "max-md:pt-[80px]"
-            } font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
+            className={`${tagLine === 'Governance & Recognition' ? '': 'max-md:pt-[80px]'} font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
             style={{
               background: "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
               WebkitBackgroundClip: "text", // For Safari and some Webkit browsers
@@ -339,18 +335,16 @@ const ServiceSection = ({
           </div>
         )}
         {mentorsCard && (
-          <>
+          <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full items-start">
             <p className="font-[500] text-[32px] leading-[32px] text-[#FFFFFF] text-left">
               Well-Wishers & Advisors{" "}
             </p>
-            {/* <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full"> */}
-              <div className="grid grid-cols-1 xl:grid-cols-2 !gap-6 w-full">
-                {mentorsCard?.map((team, index) => (
-                  <MentorsCard key={index} {...team} />
-                ))}
-              </div>
-            {/* </div> */}
-          </>
+            <div className="grid grid-cols-1 md:grid-cols-2 !gap-6 w-full">
+              {mentorsCard?.map((team, index) => (
+                <MentorsCard key={index} {...team} />
+              ))}
+            </div>
+          </div>
         )}
         {investors && (
           <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pb-[40px]">
@@ -557,11 +551,11 @@ const ServiceSection = ({
           ))}
         </div>
       )}
-      {certificate && (
+      {certificate &&
         <div className="md:pb-[100px] pb-[60px]">
-          <CertificationGrid certificate={certificate} />
+          <CertificationGrid certificate={certificate}/>
         </div>
-      )}
+      }
 
       {showGreyBoderLine && (
         <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
