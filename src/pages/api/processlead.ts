@@ -1,66 +1,76 @@
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  const data = { properties: req.body };
+  console.log("📩 Incoming payload:", data);
+
+  console.log(process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN,"env file");
+
+
   try {
-    const data: any = { properties: req.body }; // Sending form data as properties
-    console.log("Data:", data);
-    console.log("env check", process.env.HUBSPOT_API_URL)
+    const email = data.properties.email;
+
+    // ✅ Verify env variables exist
+    if (!process.env.NEXT_PUBLIC_HUBSPOT_API_URL) {
+      console.error("❌ Missing HUBSPOT env vars");
+      return res.status(500).json({ error: "Server misconfiguration" });
+    }
+
+    let hubspotResponse;
+
     try {
-      const emailRequest = await axios.get(
-        `${process.env.HUBSPOT_API_URL}/${data?.properties?.email}?idProperty=email`,
+      console.log(`🔍 Checking HubSpot for contact with email: ${email}`);
+
+      const existingContact = await axios.get(
+        `${process.env.NEXT_PUBLIC_HUBSPOT_API_URL}/${email}?idProperty=email`,
         {
           headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN}`,
             "Content-Type": "application/json",
-            Cookie:
-              "__cf_bm=50sXwbc.JeeBiHSnVhXvZafxKfBiVF88zhXx2iHg_hQ-1751200141-1.0.1.1-EfcoUDGiDOjZoMw9tQPUjrrk02SQuSc0VYSVNBGz2F__OEHRKSRLdv0A0nLaqN98C97.VuJeMjQ5SpwwlS4Eq5xh44Nxuze.0HpyDvUiuSM",
-            Authorization: `Bearer ${
-              process.env.HUBSPOT_ACCESS_TOKEN as string
-            }`,
           },
         }
       );
-      console.log(
-        "Email Request Response:",
-       data
-      );
-      const response = await axios.patch(
-        `${process.env.HUBSPOT_API_URL}/${emailRequest?.data?.id}`,
-       data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Cookie:
-              "__cf_bm=50sXwbc.JeeBiHSnVhXvZafxKfBiVF88zhXx2iHg_hQ-1751200141-1.0.1.1-EfcoUDGiDOjZoMw9tQPUjrrk02SQuSc0VYSVNBGz2F__OEHRKSRLdv0A0nLaqN98C97.VuJeMjQ5SpwwlS4Eq5xh44Nxuze.0HpyDvUiuSM",
-            Authorization: `Bearer ${
-              process.env.HUBSPOT_ACCESS_TOKEN as string
-            }`,
-          },
-        }
-      );
-      console.log(response, "responseresponseresponseresponse");
-      res.status(200).json(response.data);
-    } catch {
-      const response = await axios.post(
-        process.env.HUBSPOT_API_URL as string,
+
+      console.log("✅ Found contact:", existingContact.data);
+
+      hubspotResponse = await axios.patch(
+        `${process.env.NEXT_PUBLIC_HUBSPOT_API_URL}/${existingContact.data.id}`,
         data,
         {
           headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN}`,
             "Content-Type": "application/json",
-            Authorization: `Bearer ${
-              process.env.HUBSPOT_ACCESS_TOKEN as string
-            }`,
           },
         }
       );
-      console.log(response, "responseresponseresponseresponse1111");
-      res.status(200).json(response.data);
+
+      console.log("✏️ Updated contact:", hubspotResponse.data);
+    } catch (err: any) {
+      if (err.response?.status === 404) {
+        console.log("❌ Contact not found. Creating new contact...");
+
+        hubspotResponse = await axios.post(process.env.NEXT_PUBLIC_HUBSPOT_API_URL, data, {
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_ACCESS_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+        });
+
+        console.log("🎉 Created contact:", hubspotResponse.data);
+      } else {
+        console.error("🔥 HubSpot lookup failed:", err.response?.data || err.message);
+        return res.status(500).json({ error: "HubSpot lookup failed" });
+      }
     }
-  } catch (error) {
-    console.error("HubSpot API Error:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+
+    return res.status(200).json(hubspotResponse.data);
+  } catch (error: any) {
+    console.error("🔥 HubSpot API Error:", error.response?.data || error.message);
+    return res.status(500).json({ error: "HubSpot API call failed" });
   }
 }
