@@ -110,7 +110,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           {...register(field.name)}
         />
         <div
-          className="absolute right-2 cursor-pointer"
+          className="absolute right-4 cursor-pointer"
           onClick={() => setShowDropdown(!showDropdown)}
         >
           <Image

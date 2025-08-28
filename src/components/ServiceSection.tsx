@@ -113,7 +113,7 @@ const ServiceSection = ({
         <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
       <div
-        className={`flex flex-col md:gap-6 gap-4 items-center justify-center  py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
+        className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${tagLine === 'Governance & Recognition' ? "mt-[64px] md:mt-0" : ""} py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
           isPricingPage || isPricingPlanPage
             ? "md:py-[64px]"
             : isCareersPage && !companyValuesItems
@@ -127,7 +127,7 @@ const ServiceSection = ({
         )}
         {Customtitle && (
           <h1
-            className="max-md:pt-[80px] font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent"
+            className={`${tagLine === 'Governance & Recognition' ? '': 'max-md:pt-[80px]'} font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
             style={{
               background: "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
               WebkitBackgroundClip: "text", // For Safari and some Webkit browsers

@@ -117,7 +117,7 @@ const RequestDemoForm = ({
             <div className="flex items-center justify-between p-4 md:p-[28px] pb-6  md:border-none">
               <h2 className="text-white text-[18px]  md:text-[24px] font-[300] flex-1 text-center ">
                 Get a Free{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFF]">
+                <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFF]">
                   Demo{" "}
                 </span>
               </h2>
