@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   env: {
-    GTM_ID: process.env.GTM_ID,
+    GTM_ID: "GTM-3388VMGJ",
     HUBSPOT_ACCESS_TOKEN: process.env.HUBSPOT_ACCESS_TOKEN,
     HUBSPOT_API_URL: process.env.HUBSPOT_API_URL,
   },
