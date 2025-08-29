@@ -163,6 +163,8 @@ export interface TeamMember {
   description: string;
   linkedInUrl?: string;
   isColoured?: boolean;
+  name?: string;
+  title?: string;
 }
 
 export interface MissionSectionContent {
