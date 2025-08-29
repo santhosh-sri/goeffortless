@@ -1,0 +1,376 @@
+{
+
+  "usecaseFold": {
+    "pageHeading": "Field Sales",
+    "heading": "<span style='color:#FFFFFFFF'>Close Deals in the Field.</span>Get Paid Without Delay.",
+    "description": "Raise invoices, send payment links, and track collections—right from your sales team's phone.",
+    "bannerImage": "/field-sales-banner.svg",
+    "ctaText": "Speak to our Team",
+    "secondaryCtaText": "Unlock Free Trial",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "businessPartnersLogo": [
+      { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+      { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+      { "src": "/sustainability-mafia-logo.svg", "width": 56, "height": 19 },
+      { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+      { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+      { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+      { "src": "/ctrl-logo.svg", "width": 32, "height": 19 },
+      { "src": "/HansaLogo.svg", "width": 47, "height": 19 }
+    ]
+  },
+  "serviceContent": [
+    {
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Pain Points",
+      "showGreyBoderLine": true,
+      "title": "Where Field Sales Breaks",
+      "colouredTitle": "(and Growth Slows)",
+      "description": "From delayed collections to reimbursement chaos—these everyday issues stop your team from selling more and scaling faster.",
+      "topImagecards": [
+        {
+          "height": "medium",
+
+          "title": "Orders are coming in, but collections are getting delayed.",
+          "description": "Without instant invoicing or on-the-spot follow-ups, cash gets stuck—and growth slows down due to poor working capital.",
+          "img": "/orders-coming.svg"
+        },
+        {
+          "height": "medium",
+
+          "title": "My sales team spends more time coordinating than selling.",
+          "description": "Manual invoice generation, chasing office for approvals, and backend dependencies eat into valuable selling hours.",
+          "img": "/sales-time.svg"
+        },
+
+        {
+          "height": "medium",
+
+          "title": "I have zero real-time visibility into what's happening in field.",
+          "description": "No idea who visited which client, what's pending—making it impossible to manage or forecast sales effectively.",
+          "img": "/zer-visibility.svg"
+        },
+        {
+          "height": "medium",
+
+          "title": "Delayed Reimbursements kill my Team's morale.",
+          "description": "Sales reps use their own money for travel, claims take forever, and low morale leads to higher attrition and slower coverage.",
+          "img": "/reimbustments.svg"
+        },
+        {
+          "height": "medium",
+
+          "title": "Errors in invoices lead to delays, disputes, and missed GST credits.",
+          "description": "Manual errors cost more than time—they hurt relationships, credibility, and compliance.",
+          "img": "/errors.svg"
+        },
+        {
+          "height": "medium",
+
+          "title": "Scaling the field team means scaling the chaos.",
+          "description": "As more reps join, the mess multiplies—more Excel, more WhatsApp, more backend dependency, and no control.",
+          "img": "/invoices-lead.svg"
+        }
+      ]
+    },
+    {
+      "tagLine": "Features",
+      "title": "Smart Automation,",
+      "colouredTitle": "Built to Scale with You",
+      "showGreyBoderLine": true,
+      "description": "From raising invoices to capturing expenses and reconciling bank data, Effortless does the grunt work—so your team can move fast, stay lean, and stay fundraise-ready.",
+      "featuresBanner": [
+        {
+          "title": "Get Paid Faster, Without Chasing",
+          "description": "Empower your sales reps to raise GST-compliant invoices instantly, send payment links via WhatsApp, and automate follow-ups—so collections happen on time, and cash flows back into the business quicker.",
+          "howItSolvesItTitle": "How Effortless Solves it:",
+          "features": [
+            "Instant GST-compliant e-invoicing from mobile",
+            "One-click payment links shared via WhatsApp & email",
+            "Automated follow-ups and payment reminders",
+            "Real-time payment tracking dashboard",
+            "Customer-level receivables tracking"
+          ],
+          "imageSrc": "/usecase-feature1.png",
+          "imageAlt": "Stock Flow Chart"
+        },
+        {
+          "title": "Drive More Sales with Less Admin",
+          "description": "Your team focuses on closing deals, not coordinating with the back office. With real-time order capture, e-invoicing, and mobile workflows, reps sell more in less time—with zero paperwork delays.",
+          "howItSolvesItTitle": "How Effortless Solves it:",
+          "features": [
+            "Mobile-based order capture and instant invoice generation",
+            "2-click proforma and quotation creation",
+            "Auto-sync with Tally—no double entry",
+            "Error-proof invoicing with auto GST/HSN/SAC tagging",
+            "Field-ready invoice templates for faster billing"
+          ],
+          "imageSrc": "/usecase1-feature2.png",
+          "imageAlt": "Pricing Control Illustration"
+        },
+        {
+          "title": "Gain Full Visibility into Field Performance",
+          "description": "Track who's selling what, where, and how much—live. Monitor collections, route coverage, and reimbursement claims in real time to make faster decisions and improve field productivity.",
+          "howItSolvesItTitle": "How Effortless Solves it:",
+          "features": [
+            "GPS-based route and visit tracking",
+            "Live dashboards for collections and order fulfilment",
+            "Team-wise sales and collection performance reports",
+            "Reimbursement and collection timelines per rep",
+            "Manager notifications and real-time status updates"
+          ],
+          "imageSrc": "/usecase1-feature3.png",
+          "imageAlt": "Cash Flow Pie Chart"
+        }
+      ]
+    },
+    {
+      "tagLine": "Outcomes",
+      "bgColour": "bg-[#15181B]",
+      "title": "What You Unlock",
+      "colouredTitle": "by Going Effortless",
+      "showGreyBoderLine": true,
+      "description": "You didn't start your company to chase payments, fight spreadsheets, or stress about GST filings. Effortless gives you the control, speed, and freedom to focus on growth. Here's what startups across India are already unlocking:",
+      "useCaseSection": [
+        {
+          "title": "Collect faster, improve working capital, and reinvest into growth.",
+          "solution": [
+            "Sales reps can raise invoices and share payment links instantly from the field.",
+            "Automated reminders reduce payment delays without manual follow-ups.",
+            "Real-time receivables tracking ensures nothing falls through the cracks."
+          ],
+          "img": "/field-sales-outcome-1.svg",
+          "layout": "test"
+        },
+        {
+          "title": "Let your sales team spend more time selling—not stuck in admin.",
+          "solution": [
+            "Eliminate office back-and-forth with mobile invoicing and order capture.",
+            "Submit expenses, claims, and reports on the go.",
+            "Instant visibility into pending collections, claims, and customer status."
+          ],
+          "img": "/field-sales-outcome-2.svg",
+          "border": "borderBetween"
+        },
+        {
+          "title": "Know what's happening on the ground and manage it proactively.",
+          "solution": [
+            "Track orders, payments, visits, and route coverage in real-time.",
+            "Monitor rep performance across locations, products, and geographies.",
+            "Spot issues before they hurt revenue—no more blind spots."
+          ],
+          "img": "/field-sales-outcome-3.svg"
+        },
+        {
+          "title": "Keep things lean, compliant, and effortless—even as your sales team grows.",
+          "solution": [
+            "Reimbursements and claims are fast, transparent, and zero-hassle.",
+            "GST, TDS, and MSME compliance is baked into every transaction.",
+            "Sales, finance, and ops work in sync—with no manual intervention."
+          ],
+          "img": "/field-sales-outcome-4.svg",
+          "layout": "test",
+          "border": "last",
+          "position":"right"
+        }
+      ]
+    },
+    {
+      "href": "#section4",
+      "tagLine": "Pricing",
+      "showGreyBoderLine": true,
+      "title": "Pick the Plan That",
+      "colouredTitle":"Powers Your Growth",
+      "description": "Choose the plan that works best for your business. All plans include core features with different limits.",
+      "pricingCards": [
+        {
+          "packageTitle": "Lite",
+          "packageSubTitle": "₹5,400",
+          "packageDescription": "Your Plan Include:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>FREE</b>",
+            "Users: <b>1</b>",
+            "Additional Users Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+            "Estimate/Sales Order Creation",
+            "E-Invoicing and eWay Bill on Mobile and Desktop",
+            "1-Click Order to Invoice Conversion",
+            "Customer-Level access to Sales and Account Management Team",
+            "Receivables Management"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+
+          "packageDescription": "Everything in Lite and:",
+
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users: <b>15</b>",
+            "Additional Users Price: <b>₹15,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 5000 Invoices)",
+            "Customer Group-Level access to Sales and Account Management Team",
+            "Reimbursement Management",
+            "Supervisor Entry",
+            "Automatic Geo-Tagged Check-in, Check-out"
+          ]
+        },
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": true,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users: <b>50</b>",
+            "Additional Users Price: <b>₹12,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 10000 Invoices)",
+            "Biometric Integration",
+            "Geo-Fence Monitoring",
+            "Anti-Fraud Measures for Tracking Salesperson Productivity",
+            "Designation-based Claim Rule Setup",
+            "Reimbursement Budget setup",
+            "Document Evidence (Up to 25GB)"
+          ]
+        },
+        {
+          "packageTitle": "Enterprise",
+          "packageSubTitle": "Custom Pricing",
+          "showAnnum": false,
+          "packageDescription": "Everything in Premium Pro, plus:",
+          "packageDetails": ["Users: <b>Unlimited</b>"],
+          "packageItems": [
+            "Unlimited E-Invoicing and eWay Bill on Mobile and Desktop",
+            "Unlimited Customer/Buyer Portal",
+            "Unlimited Multi GSTN Support",
+            "Bank Statement Fetch (with Unlimited Banks)",
+            "Reimbursement Module (INR 150 per Month Per User)"
+          ]
+        }
+      ]
+    },
+    {
+      "href": "#section3",
+      "tagLine": "Customers Stories",
+      "title": "Built for Startups,",
+      "colouredTitle":"Proven by Founders",
+      "description": "Here's what customers say about Effortless",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "testimonialsSection": {
+        "businessPartnersLogo": [
+          { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+          { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+          {
+            "src": "/sustainability-mafia-logo.svg",
+            "width": 56,
+            "height": 19
+          },
+          { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+          { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+          { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+          { "src": "/ctrl-logo.svg", "width": 32, "height": 19 }
+        ],
+        "testimonials": [
+          {
+            "profile": "/swaminathan.svg",
+            "name": "S. Swaminathan",
+            "designation": "Partner, ContraMinds Labs",
+            "review": "Managing the entire business through an app is incredibly convenient and efficient. While the initial setup took some time—especially for tasks like setting up business accounts and integrating with GST portals—it was made much easier with the support of a skilled accountant who ensured everything was done smoothly and accurately.",
+            "contribution": "Co-Founder & Former CEO, Hansa Cequity"
+          },
+          {
+            "profile": "/saravanan.svg",
+            "name": "S.Saravanan Sundaramoothy",
+            "designation": "Founder & Managing Director,",
+            "review": "As a startup founder, Effortless has greatly simplified managing our finances. The invoicing and collection features have optimized our cash flow, while the team ensures we stay fully compliant with GST and TDS, letting us focus on scaling the business.",
+            "contribution": "EdSix BrainLab Pvt. Ltd."
+          },
+          {
+            "profile": "/shankar.svg",
+            "name": "Hari Shankar",
+            "designation": "Co-Founder,",
+            "review": "Effortless is a true, unified solution for business finance. With a strong product and a strong team, Effortless really gives me the experience I was looking for when I was using other tools and services. Effortless helps me worry less about finance and compliance and gives me more time to focus on building the company.",
+            "contribution": "ULTIweb Technologies"
+          }
+        ]
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "Get Started",
+      "title": "Ready to Experience",
+      "colouredTitle":"Effortless?",
+      "description": "Step into a world of smooth, effortless financial management",
+      "callBackCards": [
+        {
+          "title": "Talk to Us",
+          "description": "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+          "ctaText": "Request a Callback",
+          "subText": "We'll reach out within 4 business hours",
+          "list": [
+            "Schedule a personalized demo",
+            "Get your specific questions answered",
+            "Discuss your unique business challenges"
+          ]
+        },
+        {
+          "title": "Request Demo",
+          "description": "See Effortless in action with a personalized demo tailored to your business.",
+          "ctaText": "Schedule a Demo",
+          "subText": "Choose a time that works for you",
+          "list": [
+            "No generic presentations",
+            "Focus on your specific challenges",
+            "Get a clear picture of your potential ROI"
+          ]
+        },
+        {
+          "title": "Start Free Trial",
+          "description": "Experience the full power of Effortless risk-free for 14 days.",
+          "ctaText": "Start Your Free Trial",
+          "primary": true,
+          "subText": "Be up and running in minutes",
+          "list": [
+            "No credit card required",
+            "Access to all features",
+            "Free implementation support"
+          ]
+        }
+      ]
+    }
+  ],
+  "productsSection": [
+    {
+      "title": "ProPay",
+      "subTitle": "Smarter Control over Every Expense",
+      "description": "ProPay simplifies expense management with real-time insights, automated payments, and full compliance. Streamline invoicing, boost cash flow visibility, and gain smarter expense control for growth."
+    },
+    {
+      "title": "PRISM",
+      "subTitle": "Know More. Manage Better",
+      "description": "Prism empowers you with real-time visibility into financials and inventory, delivering timely reports and strategic insights that drive smarter decisions and optimize capital."
+    }
+  ],
+  "faqsSection": [
+    {
+      "question": "How does PULSE address small business challenges like late payments and overdue invoices?",
+      "answer": "With PULSE, you can track outstanding payments, send automated reminders, and gain real-time insights into receivables, helping you reduce delays and improve cash collection."
+    },
+    {
+      "question": "How does PULSE address small business challenges like late payments and overdue invoices?",
+      "answer": "With PULSE, you can track outstanding payments, send automated reminders, and gain real-time insights into receivables, helping you reduce delays and improve cash collection."
+    },
+    {
+      "question": "How does PULSE address small business challenges like late payments and overdue invoices?",
+      "answer": "With PULSE, you can track outstanding payments, send automated reminders, and gain real-time insights into receivables, helping you reduce delays and improve cash collection."
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+
+  "usecaseFold": {
+    "pageHeading": "Startups",
+    "heading": "<span style='color:#FFFFFFFF'>Move Fast.</span> Stay in Control.",
+    "description": "Add customers, close deals, grow revenue—without adding chaos to your operations",
+    "bannerImage": "/solutions-startups-banner.svg",
+    "ctaText": "Speak to our Team",
+    "secondaryCtaText": "Unlock Free Trial",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "businessPartnersLogo": [
+      { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+      { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+      { "src": "/sustainability-mafia-logo.svg", "width": 56, "height": 19 },
+      { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+      { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+      { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+      { "src": "/ctrl-logo.svg", "width": 32, "height": 19 },
+      { "src": "/HansaLogo.svg", "width": 47, "height": 19 }
+    ]
+  },
+  "serviceContent": [
+    {
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Pain Points",
+      "showGreyBoderLine": true,
+      "title": "The Startup",
+      "colouredTitle": "Struggle is Real",
+      "description": "If you're building a startup, this probably sounds way too familiar…",
+      "topImagecards": [
+        {
+          "height": "medium",
+          "title": "We're growing, but cash keeps getting stuck.",
+          "description": "You're stuck chasing payments instead of chasing new customers. Cash stays locked up, growth gets delayed.",
+          "img": "/growing-key.svg"
+        },
+        {
+          "height": "medium",
+          "title": "I have no real-time view of our burn or cash position.",
+          "description": "Reconciliation, missed entries, calls to CA, and manual follow-ups—your team burns out, and you still don't know your actual numbers.",
+          "img": "/real-grow.svg"
+        },
+        {
+          "height": "medium",
+          "title": "GST, TDS, and filings take up way too much headspace.",
+          "description": "One missed deadline or mismatch, and you're hit with fines, notices, or vendor issues. It's not worth the stress, but here we are.",
+          "img": "/doc-timer.svg"
+        },
+        {
+          "height": "medium",
+          "title": "Our ops are duct-taped together with Excel and WhatsApp.",
+          "description": "How much do we have in the bank? \"Who's paid, who hasn't?\" You ask these questions too often—and get answers too late.",
+          "img": "/icon-wp.svg"
+        },
+        {
+          "height": "medium",
+          "title": "I feel like I need to be a CA just to run the business.",
+          "description": "ERP here, spreadsheet there, bills on email, payments on WhatsApp. You're managing a business like it's 2010.",
+          "img": "/erp-sheet.svg"
+        },
+        {
+          "height": "medium",
+          "title": "We can't scale ops without scaling the mess.",
+          "description": "Every new order, customer, or hire adds more spreadsheets, approvals, and manual work. Growth feels like more weight—not more momentum.",
+          "img": "/scaling.svg"
+        }
+      ]
+    },
+    {
+      "tagLine": "Features",
+      "title": "Smart Automation,",
+      "colouredTitle":" Built to Scale with You",
+      "showGreyBoderLine": true,
+      "description": "From raising invoices to capturing expenses and reconciling bank data, Effortless does the grunt work—so your team can move fast, stay lean, and stay fundraise-ready.",
+      "featuresBanner": [
+        {
+          "title": "Streamline Your Distribution Network—Effortlessly",
+          "description": "From invoice to collection, automate the entire sales finance cycle so you get paid quicker and keep your cash flowing.",
+          "howItSolvesItTitle": "How Effortless Solves It:",
+          "features": [
+            "Sync stock, sales, and receivables in real-time",
+            "Automate price updates and order adjustments for error-free operations",
+            "Instant performance insights with a centralized dashboard",
+            "Real-time alerts for stockouts, low movement, and pricing discrepancies",
+            "Faster operations = smoother sales and better revenue flow"
+          ],
+          "imageSrc": "/startups-feature-1.svg",
+          "imageAlt": "Sales vs. Collection Chart"
+        },
+        {
+          "title": "Spend Smarter, Pay Faster, Without the Chaos",
+          "description": "Streamline approvals, track every expense, and pay vendors on time—without drowning in WhatsApp threads and Excel.",
+          "howItSolvesItTitle": "How Effortless Solves It:",
+          "features": [
+            "Auto-capture bills from Gmail or camera",
+            "Designation-based workflows for fast approvals",
+            "Pay vendors, bills, and teams with full visibility",
+            "Track project-level costs without manual entry",
+            "Keep your team focused on business, not backend"
+          ],
+          "imageSrc": "/startups-feature-2.svg",
+          "imageAlt": "Vendor Payment Dashboard"
+        },
+        {
+          "title": "Know What's Really Driving Growth",
+          "description": "See burn, margins, and cash position in real-time—so you can make smarter decisions, faster.",
+          "howItSolvesItTitle": "How Effortless Solves It:",
+          "features": [
+            "Live dashboards for runway, margins, and P&L",
+            "Drill down by product, location, or business unit",
+            "Board-ready reports in one click",
+            "No need to \"check with finance\"",
+            "Always ready for due diligence or investor updates"
+          ],
+          "imageSrc": "/startups-feature-3.svg",
+          "imageAlt": "Cashburn and Runway Chart"
+        }
+      ]
+    },
+    {
+      "tagLine": "Outcomes",
+      "title": "What You Unlock ",
+      "colouredTitle": "by Going Effortless",
+      "description": "You didn't start your company to chase payments, fight spreadsheets, or stress about GST filings. Effortless gives you the control, speed, and freedom to focus on growth. Here's what startups across India are already unlocking:",
+      "useCaseSection": [
+        {
+          "title": "Faster Cash In = More Fuel to Grow",
+          "solution": [
+            "Reduce your Days Sales Outstanding (DSO) with automated follow-ups, WhatsApp nudges, and real-time receivables tracking.",
+            "Send invoices in seconds, raise e-way bills instantly, and collect payments faster—without sales teams doing manual follow-ups.",
+            "Unlock working capital stuck in overdue invoices and use that cash to reinvest in growth."
+          ],
+          "img": "/startup-outcome-1.svg",
+          "layout": "test"
+        },
+        {
+          "title": "More Time for Growth, Not Bookkeeping",
+          "solution": [
+            "Cut finance ops time by up to 50% with one-click reconciliation, automated GST/TDS filings, and seamless Tally sync.",
+            "Eliminate Excel file back-and-forth, WhatsApp approvals, and email chains with smart workflows and automated reports.",
+            "Free up your team to work on sales, product, and strategy—not backend firefighting."
+          ],
+          "img": "/startup-outcome-2.svg",
+          "border": "borderBetween"
+        },
+        {
+          "title": "Smarter, Faster Decisions—Without Waiting for Month-End",
+          "solution": [
+            "Get real-time dashboards showing burn rate, cash runway, margins, and profitability by business unit, customer, or SKU.",
+            "No more delays in decision-making because you're \"waiting on reports.\" Everything is live, and at your fingertips.",
+            "Impress investors, build trust with board members, and run monthly reviews on clean, auto-generated MIS."
+          ],
+          "img": "/startup-outcome-3.svg"
+        },
+        {
+          "title": "No More \"Let Me Get Back to You With the Numbers.\"",
+          "solution": [
+            "Effortlessly monitor your company's burn rate, cash runway, revenue, and profit margins in real time, so you're always in control of your financial health without digging through spreadsheets.",
+            "Generate export-ready financial statements like balance sheets, profit and loss, cash flow, and MIS reports within seconds—perfectly formatted for investor decks, reviews, and board meetings.",
+            "Be always due-diligence ready with clean, organized records, fully automated GST and TDS filings, and accurate, error-free reconciliations that ensure compliance and audit-readiness."
+          ],
+          "img": "/startup-outcome-4.svg",
+          "layout": "test",
+          "border": "last",
+          "position":"right"
+        }
+      ]
+    },
+    {
+      "href": "#section4",
+      "tagLine": "Pricing",
+      "showGreyBoderLine": true,
+      "title": "Pick the Plan That ",
+      "colouredTitle":"Powers Your Growth",
+      "description": "Choose the plan that works best for your business. All plans include core features with different limits.",
+      "pricingCards": [
+        {
+          "packageTitle": "Lite",
+          "packageSubTitle": "₹5,400",
+          "packageDescription": "Your Plan Include:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>FREE</b>",
+            "Users: <b>1</b>",
+            "Additional Users Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+            "Estimate/Sales Order Creation",
+            "E-Invoicing and eWay Bill on Mobile and Desktop",
+            "1-Click Order to Invoice Conversion",
+            "Customer-Level access to Sales and Account Management Team",
+            "Receivables Management"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+
+          "packageDescription": "Everything in Lite and:",
+
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users: <b>15</b>",
+            "Additional Users Price: <b>₹15,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 5000 Invoices)",
+            "Customer Group-Level access to Sales and Account Management Team",
+            "Reimbursement Management",
+            "Supervisor Entry",
+            "Automatic Geo-Tagged Check-in, Check-out"
+          ]
+        },
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": true,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users: <b>50</b>",
+            "Additional Users Price: <b>₹12,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 10000 Invoices)",
+            "Biometric Integration",
+            "Geo-Fence Monitoring",
+            "Anti-Fraud Measures for Tracking Salesperson Productivity",
+            "Designation-based Claim Rule Setup",
+            "Reimbursement Budget setup",
+            "Document Evidence (Up to 25GB)"
+          ]
+        },
+        {
+          "packageTitle": "Enterprise",
+          "packageSubTitle": "Custom Pricing",
+          "showAnnum": false,
+          "packageDescription": "Everything in Premium Pro, plus:",
+          "packageDetails": ["Users: <b>Unlimited</b>"],
+          "packageItems": [
+            "Unlimited E-Invoicing and eWay Bill on Mobile and Desktop",
+            "Unlimited Customer/Buyer Portal",
+            "Unlimited Multi GSTN Support",
+            "Bank Statement Fetch (with Unlimited Banks)",
+            "Reimbursement Module (INR 150 per Month Per User)"
+          ]
+        }
+      ]
+    },
+    {
+      "href": "#section3",
+      "tagLine": "Customers Stories",
+      "title": "Built for Startups,",
+      "colouredTitle":"Proven by Founders",
+      "description": "Here's what customers say about Effortless",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "testimonialsSection": {
+        "businessPartnersLogo": [
+          { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+          { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+          {
+            "src": "/sustainability-mafia-logo.svg",
+            "width": 56,
+            "height": 19
+          },
+          { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+          { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+          { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+          { "src": "/ctrl-logo.svg", "width": 32, "height": 19 }
+        ],
+        "testimonials": [
+          {
+            "profile": "/swaminathan.svg",
+            "name": "S. Swaminathan",
+            "designation": "Partner, ContraMinds Labs",
+            "review": "Managing the entire business through an app is incredibly convenient and efficient. While the initial setup took some time—especially for tasks like setting up business accounts and integrating with GST portals—it was made much easier with the support of a skilled accountant who ensured everything was done smoothly and accurately.",
+            "contribution": "Co-Founder & Former CEO, Hansa Cequity"
+          },
+          {
+            "profile": "/saravanan.svg",
+            "name": "S.Saravanan Sundaramoothy",
+            "designation": "Founder & Managing Director,",
+            "review": "As a startup founder, Effortless has greatly simplified managing our finances. The invoicing and collection features have optimized our cash flow, while the team ensures we stay fully compliant with GST and TDS, letting us focus on scaling the business.",
+            "contribution": "EdSix BrainLab Pvt. Ltd."
+          },
+          {
+            "profile": "/shankar.svg",
+            "name": "Hari Shankar",
+            "designation": "Co-Founder,",
+            "review": "Effortless is a true, unified solution for business finance. With a strong product and a strong team, Effortless really gives me the experience I was looking for when I was using other tools and services. Effortless helps me worry less about finance and compliance and gives me more time to focus on building the company.",
+            "contribution": "ULTIweb Technologies"
+          }
+        ]
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "Get Started",
+      "title": "Ready to Experience ",
+      "colouredTitle":"Effortless?",
+      "description": "Step into a world of smooth, effortless financial management",
+      "callBackCards": [
+        {
+          "title": "Talk to Us",
+          "description": "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+          "ctaText": "Request a Callback",
+          "subText": "We'll reach out within 4 business hours",
+          "list": [
+            "Schedule a personalized demo",
+            "Get your specific questions answered",
+            "Discuss your unique business challenges"
+          ]
+        },
+        {
+          "title": "Request Demo",
+          "description": "See Effortless in action with a personalized demo tailored to your business.",
+          "ctaText": "Schedule a Demo",
+          "subText": "Choose a time that works for you",
+          "list": [
+            "No generic presentations",
+            "Focus on your specific challenges",
+            "Get a clear picture of your potential ROI"
+          ]
+        },
+        {
+          "title": "Start Free Trial",
+          "description": "Experience the full power of Effortless risk-free for 14 days.",
+          "ctaText": "Start Your Free Trial",
+          "primary": true,
+          "subText": "Be up and running in minutes",
+          "list": [
+            "No credit card required",
+            "Access to all features",
+            "Free implementation support"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,797 @@
+/* Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Lexend", sans-serif;
+}
+
+/* Global Styles (globals.css or a CSS module) */
+.slick-dots {
+  bottom: -50px !important; /* Adjust position of dots if necessary */
+}
+
+.slick-dots li button {
+  background-color: #808080 !important; /* Inactive dots color (grey) */
+  border-radius: 80%; /* Keep the dot circular */
+  width: 3px !important; /* Adjust dot size */
+  height: 0px !important;
+}
+.slick-dots li button:before {
+  display: none !important;
+}
+.slick-dots li.slick-active button {
+  background-color: #f08b32 !important; /* Active dot color (orange) */
+  color: #f08b32 !important;
+  width: 15px !important; /* Adjust dot size */
+  height: 0px !important;
+}
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+.gradient-border {
+  border-left-width: 1px;
+  border-style: dashed !important;
+  border-image: linear-gradient(180deg, #484848 0%, #ffffff 50%, #484848 100%);
+  border-image-slice: 1;
+}
+
+/* Base gradient border left */
+.gradient-border-left {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gradient-border-left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 15%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.3) 85%,
+    transparent 100%
+  );
+  mask: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  -webkit-mask: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Responsive gradient border left - MD and up - UPDATED FOR CONSISTENT HEIGHT */
+@media (min-width: 768px) {
+  .md\:gradient-border-left {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 347px; /* Force consistent height */
+  }
+
+  .md\:gradient-border-left::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 15%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.3) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+
+  /* Last item gets right border with same height */
+  .md\:gradient-border-left:last-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 15%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.3) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+
+  /* Hide gradient borders with responsive prefixes */
+  .md\:first\:before\:hidden:first-child::before {
+    display: none !important;
+  }
+
+  .md\:last\:before\:hidden:last-child::before {
+    display: none !important;
+  }
+
+  .md\:first\:before\:hidden:first-child::after {
+    display: none !important;
+  }
+
+  .md\:last\:before\:hidden:last-child::after {
+    display: none !important;
+  }
+
+  /* NEW: Hide only right border on last item */
+  .md\:last\:after\:hidden:last-child::after {
+    display: none !important;
+  }
+
+  /* FIX: Remove right border from last gradient-border-left item */
+  .md\:gradient-border-left:last-child::after {
+    display: none !important;
+  }
+}
+
+/* Gradient border right */
+.gradient-border-right {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.gradient-border-right::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  mask: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  -webkit-mask: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Responsive gradient border right - MD and up */
+@media (min-width: 768px) {
+  .md\:gradient-border-right {
+    position: relative;
+    padding-right: 2rem;
+  }
+
+  .md\:gradient-border-right::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.1) 80%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+}
+
+/* Enhanced gradient border top with stronger center white - UPDATED */
+.gradient-border-top {
+  position: relative;
+  padding-top: 0; /* Removed default padding */
+}
+
+.gradient-border-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 15%,
+    rgba(255, 255, 255, 0.4) 25%,
+    rgba(255, 255, 255, 0.9) 45%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.9) 55%,
+    rgba(255, 255, 255, 0.4) 75%,
+    rgba(255, 255, 255, 0.2) 85%,
+    transparent 100%
+  );
+  mask: repeating-linear-gradient(
+    to right,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  -webkit-mask: repeating-linear-gradient(
+    to right,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Enhanced responsive gradient border top - MD and up - UPDATED */
+@media (min-width: 768px) {
+  .md\:gradient-border-top {
+    position: relative;
+    padding-top: 0; /* Removed default padding */
+    min-height: 347px; /* Force consistent height */
+  }
+
+  .md\:gradient-border-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 15%,
+      rgba(255, 255, 255, 0.4) 25%,
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.9) 55%,
+      rgba(255, 255, 255, 0.4) 75%,
+      rgba(255, 255, 255, 0.2) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+}
+
+/* Enhanced responsive gradient border top - Mobile only - UPDATED WITH PROPER SPACING */
+@media (max-width: 767px) {
+  .max-md\:gradient-border-top {
+    position: relative;
+    padding-top: 2rem; /* Add space above the border */
+  }
+
+  .max-md\:gradient-border-top::before {
+    content: "";
+    position: absolute;
+    top: 1rem; /* Move border down from the top by 1rem */
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 15%,
+      rgba(255, 255, 255, 0.4) 25%,
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.9) 55%,
+      rgba(255, 255, 255, 0.4) 75%,
+      rgba(255, 255, 255, 0.2) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+}
+
+/* Enhanced gradient border bottom with stronger center white - UPDATED */
+.gradient-border-bottom {
+  position: relative;
+  padding-bottom: 0; /* Removed default padding */
+}
+
+.gradient-border-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 15%,
+    rgba(255, 255, 255, 0.4) 25%,
+    rgba(255, 255, 255, 0.9) 45%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.9) 55%,
+    rgba(255, 255, 255, 0.4) 75%,
+    rgba(255, 255, 255, 0.2) 85%,
+    transparent 100%
+  );
+  mask: repeating-linear-gradient(
+    to right,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  -webkit-mask: repeating-linear-gradient(
+    to right,
+    black 0px,
+    black 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Enhanced responsive gradient border bottom - MD and up - UPDATED */
+@media (min-width: 768px) {
+  .md\:gradient-border-bottom {
+    position: relative;
+    padding-bottom: 0; /* Removed default padding */
+    min-height: 347px; /* Force consistent height */
+  }
+
+  .md\:gradient-border-bottom::after {
+    /* Changed to ::after to avoid conflicts */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 15%,
+      rgba(255, 255, 255, 0.4) 25%,
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.9) 55%,
+      rgba(255, 255, 255, 0.4) 75%,
+      rgba(255, 255, 255, 0.2) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+}
+
+/* Enhanced responsive gradient border bottom - Mobile only - UPDATED WITH CONSISTENT SPACING */
+@media (max-width: 767px) {
+  .max-md\:gradient-border-bottom {
+    position: relative;
+    padding-bottom: 2rem; /* Add consistent space below the border */
+  }
+
+  .max-md\:gradient-border-bottom::before {
+    content: "";
+    position: absolute;
+    bottom: 1rem; /* Move border up from the bottom by 1rem for consistent spacing */
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 15%,
+      rgba(255, 255, 255, 0.4) 25%,
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.9) 55%,
+      rgba(255, 255, 255, 0.4) 75%,
+      rgba(255, 255, 255, 0.2) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+
+  /* Hide mobile gradient borders when needed */
+  .max-md\:first\:before\:hidden:first-child::before {
+    display: none !important;
+  }
+
+  .max-md\:last\:before\:hidden:last-child::before {
+    display: none !important;
+  }
+}
+
+/* Add a new utility class for consistent spacing without the border */
+@media (max-width: 767px) {
+  .max-md\:bottom-spacing {
+    padding-bottom: 2rem;
+  }
+}
+
+/* For dashed effect if needed */
+.gradient-border-left.dashed::before {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(255, 255, 255, 0.8) 50%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 10%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.1) 90%,
+      transparent 100%
+    );
+  background-size: 1px 12px, 1px 100%;
+  background-repeat: repeat-y, no-repeat;
+}
+
+/* Enhanced gradient border top-bottom combination - UPDATED */
+@media (min-width: 768px) {
+  .md\:gradient-border-top-bottom {
+    position: relative;
+    padding-top: 0; /* Removed default padding */
+    padding-bottom: 0; /* Removed default padding */
+    min-height: 347px; /* Force consistent height */
+  }
+
+  .md\:gradient-border-top-bottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 15%,
+      rgba(255, 255, 255, 0.4) 25%,
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.9) 55%,
+      rgba(255, 255, 255, 0.4) 75%,
+      rgba(255, 255, 255, 0.2) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+
+  .md\:gradient-border-top-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 15%,
+      rgba(255, 255, 255, 0.4) 25%,
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.9) 55%,
+      rgba(255, 255, 255, 0.4) 75%,
+      rgba(255, 255, 255, 0.2) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to right,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+}
+
+.taglineBorder {
+  border-radius: 42px;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(
+    128.65deg,
+    rgba(255, 255, 255, 0.2) -75.81%,
+    rgba(255, 255, 255, 0) 154.59%
+  ) 1;
+  overflow: hidden; /* Add this line */
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("/fonts/TTHoves-DemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Ensures better performance by swapping with fallback font */
+}
+
+.customScrollbar {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  /* Handle track*/
+  &::-webkit-scrollbar-track {
+    background-color: black;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 4px;
+    height: 1rem;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: black;
+  }
+}
+
+.slick-dots li.slick-active button {
+  width: auto !important;
+}
+
+/* Add these new CSS rules to your existing stylesheet */
+
+/* Right border for last item in 3-column grid (desktop) */
+@media (min-width: 768px) {
+  .md\:grid-cols-3 .md\:gradient-border-left:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 15%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.3) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    display: block !important;
+  }
+}
+
+/* Right border for last item in 2-column flex (desktop) */
+@media (min-width: 768px) {
+  .md\:flex-row .md\:gradient-border-left:last-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 15%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.3) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    display: block !important;
+  }
+}
+
+/* Alternative approach using utility classes */
+@media (min-width: 768px) {
+  .gradient-border-right-special {
+    position: relative;
+  }
+  
+  .gradient-border-right-special::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 15%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.3) 85%,
+      transparent 100%
+    );
+    mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    -webkit-mask: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+}

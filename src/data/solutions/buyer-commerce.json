@@ -1,0 +1,341 @@
+{
+
+  "usecaseFold": {
+    "pageHeading": "Buyer Commerce",
+    "heading": "<span style='color:#FFFFFFFF'>Grow Without Backend</span> Bottlenecks",
+    "description": "Automate vendor payments, approvals, and finance workflows so you can scale faster—and stay in control.",
+    "bannerImage": "/solutions-buyer-commerce-banner.svg",
+    "ctaText": "Speak to our Team",
+    "secondaryCtaText": "Unlock Free Trial",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "businessPartnersLogo": [
+      { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+      { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+      { "src": "/sustainability-mafia-logo.svg", "width": 56, "height": 19 },
+      { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+      { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+      { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+      { "src": "/ctrl-logo.svg", "width": 32, "height": 19 },
+      { "src": "/HansaLogo.svg", "width": 47, "height": 19 }
+    ]
+  },
+  "serviceContent": [
+    {
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Pain Points",
+      "showGreyBoderLine": true,
+      "title": "The Hidden Costs of a Broken",
+      "colouredTitle": "Buyer Portal",
+      "description": "Every delayed approval, missed payment, and lost invoice isn't just an operational mess—it's a direct hit to your cash flow, your margins, and your ability to scale.",
+      "topImagecards": [
+        {
+          "height": "medium",
+          "title": "We waste hours manually taking and confirming orders.",
+          "description": "Sales team gets stuck in back-and-forth calls, emails, and WhatsApps just to process basic orders — wasting valuable time that could drive growth.",
+          "img": "/clock.svg"
+        },
+        {
+          "height": "medium",
+          "title": "Invoices and payment details lost in endless WhatsApp chats.",
+          "description": "When invoices aren't centralized searchable, payment delays happen, follow-ups become painful, and collections drag out.",
+          "img": "/message.svg"
+        },
+        {
+          "height": "medium",
+          "title": "Customers keep calling or texting for order status updates.",
+          "description": "Without a self-serve platform, your team spends hours daily answering \"where's my order?\" instead of closing new business.",
+          "img": "/clockplus.svg"
+        },
+        {
+          "height": "medium",
+          "title": "Payment reminders and dues tracking are manual, messy, and easy to miss.",
+          "description": "Manual follow-ups and Excel trackers create gaps — leading to aging receivables, working capital crunches, and cash flow risks.",
+          "img": "/reimbustments.svg"
+        },
+        {
+          "height": "medium",
+          "title": "There's no easy way for customers to reorder or place repeat orders quickly.",
+          "description": "Without a portal that remembers past orders, customers have to redo the entire buying process each time — adding friction and reducing repeat business.",
+          "img": "/easy-way.svg"
+        },
+        {
+          "height": "medium",
+          "title": "Scaling the number of customers only scales the backend chaos.",
+          "description": "As you onboard more buyers and distributors, the lack of a centralized order/payment portal leads to operational gridlock and slower scaling.",
+          "img": "/replace.svg"
+        }
+      ]
+    },
+    {
+      "tagLine": "Features",
+      "title": "Operate Every Outlet Like It's",
+      "colouredTitle":"Repeat Customer",
+      "showGreyBoderLine": true,
+      "description": "Give your customers a fast, easy, and professional buying experience—so they place more orders, pay quicker, and stay loyal longer.",
+      "featuresBanner": [
+        {
+          "title": "Turn Your Buyers Into Self-Serve Growth Engines",
+          "description": "Give your customers a smooth portal to place orders, view invoices, and clear payments faster—without tying up your team.",
+          "howItSolvesItTitle": "How Effortless Solves it:",
+          "features": [
+            "Branded Buyer Portal for easy, mobile-friendly ordering anytime",
+            "Instant invoice visibility for every order placed",
+            "One-click payment links attached to invoices",
+            "Real-time tracking of dues, payments, and order status for buyers",
+            "Automated reminders (WhatsApp/SMS/email) linked to payment deadlines"
+          ],
+          "imageSrc": "/solutions-outcome-1.svg",
+          "imageAlt": "Stock Flow Chart"
+        },
+        {
+          "title": "Speed Up Collections Without Chasing",
+          "description": "Turn invoices into cash faster by giving buyers clarity, nudges, and easy payment tools—inside their portal.",
+          "howItSolvesItTitle": "How Effortless Solves it:",
+          "features": [
+            "Live, searchable invoice history for buyers",
+            "Smart payment reminders via WhatsApp, email, SMS",
+            "Auto-apply payment receipts against open invoices",
+            "Track overdue payments buyer-by-buyer, not manually"
+          ],
+          "imageSrc": "/solutions-outcome-2.svg",
+          "imageAlt": "Pricing Control Illustration"
+        },
+        {
+          "title": "Deliver a Buying Experience That Makes Customers Come Back",
+          "description": "Make ordering, tracking, and paying so easy for your customers that they prefer doing business with you—again and again.",
+          "howItSolvesItTitle": "How Effortless Solves it:",
+          "features": [
+            "Mobile-optimized, self-serve Buyer Portal branded for your business",
+            "Customers can place repeat orders in one click (reorder from history)",
+            "Download invoices, view payment history, and raise queries—all from one place",
+            "Integrated status updates for order dispatches and deliveries"
+          ],
+          "imageSrc": "/solutions-outcome-3.svg",
+          "imageAlt": "Cash Flow Pie Chart"
+        }
+      ]
+    },
+    {
+      "tagLine": "Outcomes",
+      "title": "What You Unlock",
+      "colouredTitle": "by Going Effortless",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "description": "You didn't start your company to chase payments, fight spreadsheets, or stress about GST filings. Effortless gives you the control, speed, and freedom to focus on growth. Here's what startups across India are already unlocking:",
+      "useCaseSection": [
+        {
+          "title": "Faster, Higher-Value Orders",
+          "solution": [
+            "Business place orders anytime-no waiting for your sales team to respond.",
+            "Request and ask prices faster from your sales team with one-click reordering from history.",
+            "More frequent ordering = higher average order value and volume over time."
+          ],
+          "img": "/nuyer-commerce-outcome-1.svg",
+          "layout": "test"
+        },
+        {
+          "title": "Accelerated Collections, Improved Cash Flow",
+          "solution": [
+            "Leverage frictionless payments and messaging; removes payment confusion and delays.",
+            "Automated WhatsApp and email payment reminders nudge buyers to pay on time and expedite collections.",
+            "Real-time tracking ensures you get accurate payments, nearly exact and fast."
+          ],
+          "img": "/nuyer-commerce-outcome-2.svg",
+          "border": "borderBetween"
+        },
+        {
+          "title": "Reduced Manual Load on Your Sales and Finance Teams",
+          "solution": [
+            "No need for manual order taking, invoice mailing, or payment chasing by your team.",
+            "Keep your business nimble with your buyers with features on order tracking, real-time visibility reports etc.",
+            "Business continuity so you avoid more buyers without traveling to local locations."
+          ],
+          "img": "/nuyer-commerce-outcome-3.svg"
+        },
+        {
+          "title": "Stronger Buyer Relationships and Loyalty",
+          "solution": [
+            "Customers enjoy a frictionless buying experience—no phone calls, fast, and mobile-friendly.",
+            "Instant access to orders, invoices, and payment history builds transparency and trust.",
+            "Happy buyers maintain exclusive customers most likely to reorder and stay with you longer."
+          ],
+          "img": "/nuyer-commerce-outcome-4.svg",
+          "layout": "test",
+          "border": "last",
+          "position":"right"
+        }
+      ]
+    },
+    {
+      "href": "#section4",
+      "tagLine": "Pricing",
+      "showGreyBoderLine": true,
+      "title": "Pick the Plan That",
+      "colouredTitle":"Powers Your Growth",
+      "description": "Choose the plan that works best for your business. All plans include core features with different limits.",
+      "pricingCards": [
+        {
+          "packageTitle": "Lite",
+          "packageSubTitle": "₹5,400",
+          "packageDescription": "Your Plan Include:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>FREE</b>",
+            "Users: <b>1</b>",
+            "Additional Users Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+            "Estimate/Sales Order Creation",
+            "E-Invoicing and eWay Bill on Mobile and Desktop",
+            "1-Click Order to Invoice Conversion",
+            "Customer-Level access to Sales and Account Management Team",
+            "Receivables Management"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+
+          "packageDescription": "Everything in Lite and:",
+
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users: <b>15</b>",
+            "Additional Users Price: <b>₹15,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 5000 Invoices)",
+            "Customer Group-Level access to Sales and Account Management Team",
+            "Reimbursement Management",
+            "Supervisor Entry",
+            "Automatic Geo-Tagged Check-in, Check-out"
+          ]
+        },
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": true,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users: <b>50</b>",
+            "Additional Users Price: <b>₹12,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 10000 Invoices)",
+            "Biometric Integration",
+            "Geo-Fence Monitoring",
+            "Anti-Fraud Measures for Tracking Salesperson Productivity",
+            "Designation-based Claim Rule Setup",
+            "Reimbursement Budget setup",
+            "Document Evidence (Up to 25GB)"
+          ]
+        },
+        {
+          "packageTitle": "Enterprise",
+          "packageSubTitle": "Custom Pricing",
+          "showAnnum": false,
+          "packageDescription": "Everything in Premium Pro, plus:",
+          "packageDetails": ["Users: <b>Unlimited</b>"],
+          "packageItems": [
+            "Unlimited E-Invoicing and eWay Bill on Mobile and Desktop",
+            "Unlimited Customer/Buyer Portal",
+            "Unlimited Multi GSTN Support",
+            "Bank Statement Fetch (with Unlimited Banks)",
+            "Reimbursement Module (INR 150 per Month Per User)"
+          ]
+        }
+      ]
+    },
+    {
+      "href": "#section3",
+      "tagLine": "Customers Stories",
+      "title": "Built for Startups, ",
+      "colouredTitle":"Proven by Founders",
+      "description": "Here's what customers say about Effortless",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "testimonialsSection": {
+        "businessPartnersLogo": [
+          { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+          { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+          {
+            "src": "/sustainability-mafia-logo.svg",
+            "width": 56,
+            "height": 19
+          },
+          { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+          { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+          { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+          { "src": "/ctrl-logo.svg", "width": 32, "height": 19 }
+        ],
+        "testimonials": [
+          {
+            "profile": "/swaminathan.svg",
+            "name": "S. Swaminathan",
+            "designation": "Partner, ContraMinds Labs",
+            "review": "Managing the entire business through an app is incredibly convenient and efficient. While the initial setup took some time—especially for tasks like setting up business accounts and integrating with GST portals—it was made much easier with the support of a skilled accountant who ensured everything was done smoothly and accurately.",
+            "contribution": "Co-Founder & Former CEO, Hansa Cequity"
+          },
+          {
+            "profile": "/saravanan.svg",
+            "name": "S.Saravanan Sundaramoothy",
+            "designation": "Founder & Managing Director,",
+            "review": "As a startup founder, Effortless has greatly simplified managing our finances. The invoicing and collection features have optimized our cash flow, while the team ensures we stay fully compliant with GST and TDS, letting us focus on scaling the business.",
+            "contribution": "EdSix BrainLab Pvt. Ltd."
+          },
+          {
+            "profile": "/shankar.svg",
+            "name": "Hari Shankar",
+            "designation": "Co-Founder,",
+            "review": "Effortless is a true, unified solution for business finance. With a strong product and a strong team, Effortless really gives me the experience I was looking for when I was using other tools and services. Effortless helps me worry less about finance and compliance and gives me more time to focus on building the company.",
+            "contribution": "ULTIweb Technologies"
+          }
+        ]
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "Get Started",
+      "title": "Ready to Experience ",
+      "colouredTitle":"Effortless?",
+      "description": "Step into a world of smooth, effortless financial management",
+      "callBackCards": [
+        {
+          "title": "Talk to Us",
+          "description": "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+          "ctaText": "Request a Callback",
+          "subText": "We'll reach out within 4 business hours",
+          "list": [
+            "Schedule a personalized demo",
+            "Get your specific questions answered",
+            "Discuss your unique business challenges"
+          ]
+        },
+        {
+          "title": "Request Demo",
+          "description": "See Effortless in action with a personalized demo tailored to your business.",
+          "ctaText": "Schedule a Demo",
+          "subText": "Choose a time that works for you",
+          "list": [
+            "No generic presentations",
+            "Focus on your specific challenges",
+            "Get a clear picture of your potential ROI"
+          ]
+        },
+        {
+          "title": "Start Free Trial",
+          "description": "Experience the full power of Effortless risk-free for 14 days.",
+          "ctaText": "Start Your Free Trial",
+          "primary": true,
+          "subText": "Be up and running in minutes",
+          "list": [
+            "No credit card required",
+            "Access to all features",
+            "Free implementation support"
+          ]
+        }
+      ]
+    }
+  ]
+}

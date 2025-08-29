@@ -1,0 +1,340 @@
+{
+
+  "usecaseFold": {
+    "pageHeading": "Distributor Network",
+    "heading": "<span style='color:#FFFFFFFF'>Scattered Orders.</span>One System.",
+    "description": "From order to payout, your entire distribution chain runs on one clean system.",
+    "bannerImage": "/solutions-distributor-sales-banner.svg",
+    "ctaText": "Speak to our Team",
+    "secondaryCtaText": "Unlock Free Trial",
+    "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
+    "businessPartnersLogo": [
+      { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+      { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+      { "src": "/sustainability-mafia-logo.svg", "width": 56, "height": 19 },
+      { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+      { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+      { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+      { "src": "/ctrl-logo.svg", "width": 32, "height": 19 },
+      { "src": "/HansaLogo.svg", "width": 47, "height": 19 }
+    ]
+  },
+  "serviceContent": [
+    {
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Pain Points",
+      "showGreyBoderLine": true,
+      "title": "Where Distribution Breaks ",
+      "colouredTitle": "and Growth Slows",
+      "description": "From scattered orders to stock mismatches and delayed collections — these everyday issues stall your sales, stretch your backend, and slow down your growth.",
+      "topImagecards": [
+        {
+          "height": "medium",
+          "title": "Orders are coming in, but everything's still manual.",
+          "description": "Dealers send orders over WhatsApp, calls, or spreadsheets — and your team scrambles to piece it together. Nothing's trackable. Nothing's standardized.",
+          "img": "/order-book.svg"
+        },
+        {
+          "height": "medium",
+          "title": "Sales reps are promising stock we don't have.",
+          "description": "Sales teams often commit based on guesswork — and when orders fall through, operations gets the blame.",
+          "img": "/sales-reps.svg"
+        },
+        {
+          "height": "medium",
+          "title": "We follow up for payments, but there's no system.",
+          "description": "No one knows which dealer paid, who didn't, or what's overdue — until it becomes a cash flow crisis.",
+          "img": "/payment-warning.svg"
+        },
+        {
+          "height": "medium",
+          "title": "The backend team is constantly firefighting instead of scaling ops.",
+          "description": "Orders, payments, and schemes are logged manually — twice if they're fixing someone else's mistake.",
+          "img": "/manual-errors.svg"
+        },
+        {
+          "height": "medium",
+          "title": "Manual errors in dealer schemes = money lost every month.",
+          "description": "Dealer-specific schemes and rates change by the region. But without automation, something always slips through.",
+          "img": "/coins.svg"
+        },
+        {
+          "height": "medium",
+          "title": "By the time a report shows it, the damage is already done.",
+          "description": "No visibility across SKUs or regions in real time means you're always reacting — never preventing.",
+          "img": "/wrong-doc.svg"
+        }
+      ]
+    },
+    {
+      "tagLine": "Features",
+      "title": "Smart Automation,",
+      "colouredTitle":"Built to Scale with You",
+      "showGreyBoderLine": true,
+      "description": "From raising invoices to capturing expenses and reconciling bank data, Effortless does the grunt work—so your team can move fast, stay lean, and stay fundraise-ready.",
+      "featuresBanner": [
+        {
+          "title": "Turn Dealer Orders Into Cash — Faster",
+          "description": "From order placement to collection, streamline your entire order-to-cash cycle. Get paid quicker, reduce delays, and unlock working capital for growth.",
+          "howItSolvesItTitle": "How Effortless Solves It:",
+          "features": [
+            "Dealers place orders directly via portal — no calls, no errors",
+            "Auto-generated invoices + payment links via WhatsApp",
+            "Track receivables by dealer, region, and credit limit",
+            "Auto-reconcile payments in Tally",
+            "Faster cash = better rotation, stronger cash flow"
+          ],
+          "imageSrc": "/distributors-feature-1.svg",
+          "imageAlt": "DPO Trend Graph"
+        },
+        {
+          "title": "Control Pricing, Stock & Payments Without Manual Work",
+          "description": "Give every dealer the right price and visibility — without relying on Excel or follow-ups. Approve, track, and fulfill orders across SKUs and schemes automatically.",
+          "howItSolvesItTitle": "How Effortless Solves It:",
+          "features": [
+            "Real-time stock visibility across all branches and warehouses",
+            "Dealer-specific pricing and discount logic applied instantly",
+            "Credit control workflows built-in",
+            "Auto-apply schemes and validate item codes",
+            "Sales, ops, and finance all see the same truth"
+          ],
+          "imageSrc": "/distributors-feature-2.svg",
+          "imageAlt": "Stock Ageing Table"
+        },
+        {
+          "title": "Know What's Happening — Across Every Territory",
+          "description": "Get full visibility across your distributor chain — by product, region, and dealer. No more guessing. Just data-backed decisions that help you grow faster.",
+          "howItSolvesItTitle": "How Effortless Solves It:",
+          "features": [
+            "Live dashboards for orders, receivables, inventory, and collections",
+            "Drill down by distributor, sales rep, product, or zone",
+            "View pending orders, out-of-stock items, and overdue invoices instantly",
+            "Always investor- and audit-ready — no end-of-month scramble"
+          ],
+          "imageSrc": "/distributors-feature-3.svg",
+          "imageAlt": "Warehouse & Alerts Panel"
+        }
+      ]
+    },
+    {
+      "tagLine": "Outcomes",
+      "title": "What You Unlock",
+      "colouredTitle":"by Going Effortless",
+      "description": "You didn't start your company to chase payments, fight spreadsheets, or stress about GST filings. Effortless gives you the control, speed, and freedom to focus on growth. Here's what startups across India are already unlocking:",
+      "useCaseSection": [
+        {
+          "title": "Let Dealers Order Themselves — and Get It Right the First Time",
+          "solution": [
+            "Dealers place their own orders — no calls, no confusion.",
+            "Stock and pricing are always accurate and up to date.",
+            "Reps track order status in real time — not in Excel."
+          ],
+          "img": "/distributors.outcome-1.svg",
+          "layout": "test"
+        },
+        {
+          "title": "Live Stock = No Guessing, No Apologies, No Lost Orders",
+          "solution": [
+            "Live inventory across branches, godowns, and sales teams — all in sync.",
+            "What's shown to dealers is exactly what's available — no false promises.",
+            "Reps commit confidently. Ops delivers without chaos."
+          ],
+          "img": "/distributors.outcome-2.svg",
+          "border": "borderBetween"
+        },
+        {
+          "title": "Know Who Owes You — and Get Paid Without Chasing",
+          "solution": [
+            "You know exactly who owes what — and how long it's been overdue.",
+            "Follow-ups run automatically via WhatsApp & email.",
+            "Payments get collected and reconciled — without anyone chasing."
+          ],
+          "img": "/distributors.outcome-3.svg"
+        },
+        {
+          "title": "Operations That Run Themselves — So You Can Focus on Growth",
+          "solution": [
+            "Orders, payments, and pricing are synced to Tally in real time.",
+            "GST and TDS stay clean, filed, and ready for audits.",
+            "No more gaps, double entries, or manual clean-up before month-end."
+          ],
+          "img": "/distributors.outcome-4.svg",
+          "layout": "test",
+          "border": "last",
+          "position":"right"
+        }
+      ]
+    },
+    {
+      "href": "#section4",
+      "tagLine": "Pricing",
+      "showGreyBoderLine": true,
+      "title": "Pick the Plan",
+      "colouredTitle":"That Powers Your Growth",
+      "description": "Choose the plan that works best for your business. All plans include core features with different limits.",
+      "pricingCards": [
+        {
+          "packageTitle": "Lite",
+          "packageSubTitle": "₹5,400",
+          "packageDescription": "Your Plan Include:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>FREE</b>",
+            "Users: <b>1</b>",
+            "Additional Users Price: <b>₹3,000</b>/user"
+          ],
+          "packageItems": [
+            "Estimate/Sales Order Creation",
+            "E-Invoicing and eWay Bill on Mobile and Desktop",
+            "1-Click Order to Invoice Conversion",
+            "Customer-Level access to Sales and Account Management Team",
+            "Receivables Management"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹1,54,000",
+
+          "packageDescription": "Everything in Lite and:",
+
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users: <b>15</b>",
+            "Additional Users Price: <b>₹15,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 5000 Invoices)",
+            "Customer Group-Level access to Sales and Account Management Team",
+            "Reimbursement Management",
+            "Supervisor Entry",
+            "Automatic Geo-Tagged Check-in, Check-out"
+          ]
+        },
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹3,60,000",
+          "Recommended": true,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users: <b>50</b>",
+            "Additional Users Price: <b>₹12,000</b>/5 Users"
+          ],
+          "packageItems": [
+            "E-Invoicing and eWay Bill (Up to 10000 Invoices)",
+            "Biometric Integration",
+            "Geo-Fence Monitoring",
+            "Anti-Fraud Measures for Tracking Salesperson Productivity",
+            "Designation-based Claim Rule Setup",
+            "Reimbursement Budget setup",
+            "Document Evidence (Up to 25GB)"
+          ]
+        },
+        {
+          "packageTitle": "Enterprise",
+          "packageSubTitle": "Custom Pricing",
+          "showAnnum": false,
+          "packageDescription": "Everything in Premium Pro, plus:",
+          "packageDetails": ["Users: <b>Unlimited</b>"],
+          "packageItems": [
+            "Unlimited E-Invoicing and eWay Bill on Mobile and Desktop",
+            "Unlimited Customer/Buyer Portal",
+            "Unlimited Multi GSTN Support",
+            "Bank Statement Fetch (with Unlimited Banks)",
+            "Reimbursement Module (INR 150 per Month Per User)"
+          ]
+        }
+      ]
+    },
+    {
+      "href": "#section3",
+      "tagLine": "Customers Stories",
+      "title": "Built for Startups,",
+      "colouredTitle":"Proven by Founders",
+      "description": "Here's what customers say about Effortless",
+      "bgColour": "bg-[#15181B]",
+      "showGreyBoderLine": true,
+      "testimonialsSection": {
+        "businessPartnersLogo": [
+          { "src": "/InnBuilt-logo.svg", "width": 48, "height": 19 },
+          { "src": "/gallabox-logo.svg", "width": 74, "height": 19 },
+          {
+            "src": "/sustainability-mafia-logo.svg",
+            "width": 56,
+            "height": 19
+          },
+          { "src": "/rassense-logo.svg", "width": 62, "height": 19 },
+          { "src": "/pepul-logo.svg", "width": 51, "height": 19 },
+          { "src": "/meine-electric-logo.svg", "width": 68, "height": 19 },
+          { "src": "/ctrl-logo.svg", "width": 32, "height": 19 }
+        ],
+        "testimonials": [
+          {
+            "profile": "/swaminathan.svg",
+            "name": "S. Swaminathan",
+            "designation": "Partner, ContraMinds Labs",
+            "review": "Managing the entire business through an app is incredibly convenient and efficient. While the initial setup took some time—especially for tasks like setting up business accounts and integrating with GST portals—it was made much easier with the support of a skilled accountant who ensured everything was done smoothly and accurately.",
+            "contribution": "Co-Founder & Former CEO, Hansa Cequity"
+          },
+          {
+            "profile": "/saravanan.svg",
+            "name": "S.Saravanan Sundaramoothy",
+            "designation": "Founder & Managing Director,",
+            "review": "As a startup founder, Effortless has greatly simplified managing our finances. The invoicing and collection features have optimized our cash flow, while the team ensures we stay fully compliant with GST and TDS, letting us focus on scaling the business.",
+            "contribution": "EdSix BrainLab Pvt. Ltd."
+          },
+          {
+            "profile": "/shankar.svg",
+            "name": "Hari Shankar",
+            "designation": "Co-Founder,",
+            "review": "Effortless is a true, unified solution for business finance. With a strong product and a strong team, Effortless really gives me the experience I was looking for when I was using other tools and services. Effortless helps me worry less about finance and compliance and gives me more time to focus on building the company.",
+            "contribution": "ULTIweb Technologies"
+          }
+        ]
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "tagLine": "Get Started",
+      "title": "Ready to Experience ",
+      "colouredTitle":"Effortless?",
+      "description": "Step into a world of smooth, effortless financial management",
+      "callBackCards": [
+        {
+          "title": "Talk to Us",
+          "description": "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+          "ctaText": "Request a Callback",
+          "subText": "We'll reach out within 4 business hours",
+          "list": [
+            "Schedule a personalized demo",
+            "Get your specific questions answered",
+            "Discuss your unique business challenges"
+          ]
+        },
+        {
+          "title": "Request Demo",
+          "description": "See Effortless in action with a personalized demo tailored to your business.",
+          "ctaText": "Schedule a Demo",
+          "subText": "Choose a time that works for you",
+          "list": [
+            "No generic presentations",
+            "Focus on your specific challenges",
+            "Get a clear picture of your potential ROI"
+          ]
+        },
+        {
+          "title": "Start Free Trial",
+          "description": "Experience the full power of Effortless risk-free for 7 days.",
+          "ctaText": "Start Your Free Trial",
+          "primary": true,
+          "subText": "Be up and running in minutes",
+          "list": [
+            "No credit card required",
+            "Access to all features",
+            "Free implementation support"
+          ]
+        }
+      ]
+    }
+  ]
+}
