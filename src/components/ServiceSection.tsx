@@ -407,19 +407,19 @@ const ServiceSection = ({
         )}
         {companyValuesItems && (
           <div className="md:flex md:flex-col md:gap-[42px] items-center">
-            <div className="grid grid-cols-1 md:grid-cols-4 md:gap-6 w-full items-start">
+            <div className="grid grid-cols-1 md:grid-cols-4 md:gap-6 w-full items-start md:flex-row">
               {companyValuesItems.slice(0, 4).map((team, index) => (
                 <ValueCard
                   key={index}
                   {...team}
                   customLength={true}
-                  hidetopBorder={true}
+                  // hideLastBorder={true}
                 />
               ))}
             </div>
             <div className="flex flex-col md:flex-row md:gap-6 md:w-[100%] items-start ">
               {companyValuesItems.slice(4, 7).map((team, index) => (
-                <ValueCard key={index + 3} {...team} customLength={true} />
+                <ValueCard key={index} {...team} customLength={true} />
               ))}
             </div>
           </div>
