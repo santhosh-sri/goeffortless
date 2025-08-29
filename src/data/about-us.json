@@ -39,52 +39,67 @@
         {
           "imageSrc": "/JK.png",
           "description": "Jayakumar (JK) is an Associate Chartered Accountant, Company Secretary, and holds an MBA from Symbiosis International University.\n\nWhile at Deloitte, JK worked with large Indian corporates and MNCs across industries such as manufacturing, finance, retail, and IT.\n\nHe co-founded Agrya in 2010, after 5 years with Deloitte.",
-          "linkedInUrl": "https://www.linkedin.com/in/cajayakumar"
+          "linkedInUrl": "https://www.linkedin.com/in/cajayakumar",
+          "name": "CA Jayakumar M.",
+          "title": "Co-Founder and CEO"
         },
         {
           "imageSrc": "/PR.png",
           "description": "Priya is a Fellow Chartered Accountant and holds a Diploma in IFRS from ACCA, London.\n\nShe co-founded Agrya in 2010, after a 15-year stint with Deloitte.\n\nShe has worked with start-ups and multiple SMBs as a strategic advisor.\n\nShe is also a Seed Committee member of RTBI since 2014.",
-          "linkedInUrl": "https://www.linkedin.com/in/capriya"
+          "linkedInUrl": "https://www.linkedin.com/in/capriya",
+          "name": "CA Priya Raghavan",
+          "title": "Co-Founder and COO"
         },
         {
           "imageSrc": "/anushal.png",
           "description": "Anshul is an MDI Gurgaon alumnus who has built and scaled fintech and revenue-led software businesses across Tally, Innoviti, and Khatabook.\n\nHe brings over a decade of experience working with Indian SMBs and startups.He helped build businesses from scratch in 15+ countries.\n\nHe has held key leadership roles driving product, growth, and go-to-market strategy.",
           "linkedInUrl": "https://www.linkedin.com/in/anshulsudamagupta/",
-          "isRadius": true
+          "name": "Anshul Gupta",
+          "title": "Chief Business Officer"
         }
       ]
     },
     {
       "mangementTeams": [
         {
-          "imageSrc": "/madhur.svg",
+          "imageSrc": "/madhur.png",
           "description": "Madhur leads Sales for our Channel Business at Effortless. He has held key Sales positions at Tally Solutions, iBall India, and CPM with deep expertise in IT and Retail Sales over a career that spans over a decade.",
           "linkedInUrl": "https://www.linkedin.com/in/madhur-maheshwari-m1234/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "Madhur M. Maheshwari",
+          "title": "National Sales Manager"
         },
         {
-          "imageSrc": "/manoj.svg",
+          "imageSrc": "/manoj.png",
           "description": "Manoj leads Product Management at Effortless. He is a Chartered Accountant and works closely with key stakeholders across customers, partners, and our users.",
           "linkedInUrl": "https://www.linkedin.com/in/consult-camanoj/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "CA Manoj S.",
+          "title": "Product Manager"
         },
         {
-          "imageSrc": "/vignesh.svg",
+          "imageSrc": "/vignesh.png",
           "description": "Vignesh leads Product Marketing at Effortless. As part of the Founding Team, he also served as the Founding Product Manager, helping shape the company’s product, positioning, and early go-to-market motion. ",
           "linkedInUrl": "https://www.linkedin.com/in/hrorq/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "Vignesh S.",
+          "title": "Product Marketing Manager"
         },
         {
-          "imageSrc": "/somu.svg",
+          "imageSrc": "/somu.png",
           "description": "Somasundaram leads Engineering at Effortless. He is a Full-Stack Developer and oversees Effortless’ Product Development.  He is passionate about turning complex challenges into simple, powerful solutions that drive customer growth.",
           "linkedInUrl": "https://www.linkedin.com/in/somasundaram-p-a4a71116b/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "Somasundaram P.",
+          "title": "Technical Lead"
         },
         {
           "imageSrc": "/sarvanana.png",
           "description": "Saravanan leads as Customer Success and Inside Sales at Effortless. He previously ran Inside Sales at Brick & Bolt and had stints at Khatabook, Housing.com, and Mphasis. He is an experienced trainer and leader with close to a decade of professional experience.",
           "linkedInUrl": "https://www.linkedin.com/in/saravanan-prabhaharan-42138b66/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "Saravanan P.",
+          "title": "Customer Success Manager"
         }
       ]
     },
@@ -95,9 +110,11 @@
           "description": "Tally’s leadership and ex-SAP APAC leaders are our well-wishers on our journey to build practical products that solve real problems. \n\nEffortless helps ambitious SMBs grow with control, not confusion."
         },
         {
-          "imageSrc": "/jayaramm.png",
+          "imageSrc": "/Jayaram.png",
           "description": "Jayaram has over 12 years of rich experience in Software Development, Architecture, and Team Management.\n\n He is also a FinTech and Startup Enthusiast.\n\nHe has worked with two successful unicorn startups and was the founding engineer in one of them.",
-          "linkedInUrl": "https://www.linkedin.com/in/jayaram-r-42ab0722/"
+          "linkedInUrl": "https://www.linkedin.com/in/jayaram-r-42ab0722/",
+          "name": "Jayaram R.",
+          "title": "Senior Technical Advisor"
         }
       ]
     },
@@ -108,31 +125,41 @@
           "imageSrc": "/raghavana.png",
           "description": "G Srinivasa Raghavan is the Global President & CEO of TVS Mobility and MD of TVS Automobile Solutions, with over 20 years of global leadership experience across BFSI, Retail, and Transportation, and previously led India Operations at TCS.",
           "linkedInUrl": "https://www.linkedin.com/in/srinivasa-raghavan-03152a1b7/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "G.S. Raghavan",
+          "title": "Global President & CEO, TVS Mobility, Ki Mobility"
         },
         {
           "imageSrc": "/swami.png",
           "description": "Swami is the Founder of ContraMinds Labs and a seasoned marketing leader, having co-founded and led Hansa Cequity as CEO, with prior leadership roles at R K Swamy-Hansa and WPP’s iContract. He is also a member of the Chennai Angels.",
           "linkedInUrl": "https://www.linkedin.com/in/sivaraman-swaminathan-9856501/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "S. Swaminathan",
+          "title": "Founder & Managing Partner, ContraMinds Ventures"
         },
         {
           "imageSrc": "/bharath.png",
           "description": "Bharath, Founder of KRIA Law, is a leading IP litigator and strategist with over 25 years of experience, serving on the Board of INTA and recognized among India’s top lawyers by India Business Law Journal and Asia IP. He was previously a Partner at Anand & Anand.",
           "linkedInUrl": "https://www.linkedin.com/in/msbharath/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "M.S. Bharath",
+          "title": "Founder & Managing Partner, KRIA Law"
         },
         {
           "imageSrc": "/vikram.png",
           "description": "Vikram is the CEO of Spalon India, driving the growth of brands like Bounce and Oryza into a leading salon chain across India’s top cities, continuing a legacy that began in 1982. He is an active Angel Investor.",
           "linkedInUrl": "https://www.linkedin.com/in/vikram-mohan-350532350/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "Vikram Chandra Mohan",
+          "title": "CEO & Managing Director, Spalon India"
         },
         {
           "imageSrc": "/sandeep.png",
           "description": "Sandeep Singh is a growth-focused retail leader in the wellness industry, known for 4x revenue growth, 2x EBITDA expansion, and closing the sector’s largest private equity deal. He is an active Angel Investor.",
           "linkedInUrl": "https://www.linkedin.com/in/reachsandeepsingh/",
-          "isColoured": true
+          "isColoured": true,
+          "name": "Sandeep Kumar Singh",
+          "title": "CEO, JCB Salons & Bounce Salons"
         }
       ]
     },
