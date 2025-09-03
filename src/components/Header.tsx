@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getCalApi } from "@calcom/embed-react";
 
 const Header = ({
   setShowForm = () => {},
@@ -32,6 +33,21 @@ const Header = ({
     "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-[#fff] md:py-[12px] py-[7px] px-[20px] rounded font-ttHoves";
   const secondaryCTA =
     "bg-[#FFFFFF] text-[16px] font-[600] text-[#52525B] py-[12px] md:px-[36px] px-3 rounded ";
+
+      useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "demo" });
+      cal("ui", {
+        theme: "dark",
+        cssVarsPerTheme: {
+          light: { "cal-brand": "#292929" },
+          dark: { "cal-brand": "#F08B33" },
+        },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
 
   return (
     <>
@@ -130,9 +146,12 @@ const Header = ({
             {!isMobile && (
               <button
                 className={primaryCTA}
-                onClick={() => {
-                  setShowForm(true);
-                }}
+                // onClick={() => {
+                //   setShowForm(true);
+                // }}
+                data-cal-namespace="demo"
+                data-cal-link="goeffortless/demo"
+                data-cal-config='{"layout":"month_view","theme":"dark"}'
               >
                 Get a Demo
               </button>
@@ -174,9 +193,12 @@ const Header = ({
               <button
                 className="w-full bg-[#F08B32] text-white py-3 px-4 rounded-lg text-[14px] font-[600] transition-colors"
                 onClick={() => {
-                  setShowForm(true);
+                  // setShowForm(true);
                   setExpandedSections(false);
                 }}
+                data-cal-namespace="demo"
+                data-cal-link="goeffortless/demo"
+                data-cal-config='{"layout":"month_view","theme":"dark"}'
               >
                 Speak to Us
               </button>
