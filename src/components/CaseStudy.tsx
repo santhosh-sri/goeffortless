@@ -221,7 +221,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
             </button>
           </div>
         </div>
-        <div className="bg-white p-3 md:p-6">
+        <div className="bg-white bg-[url('/Layer.png')] bg-cover bg-center bg-no-repeat bg-blend-multiply p-3 md:p-6">
           <div className="flex items-center gap-4">
             <div className="h-[80px] min-w-[122px]">
               <Image
@@ -231,7 +231,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 width={122}
               />
             </div>
-            <h1 className="text-[#000000] text-xl text-[32px] font-normal leading-[100%] -tracking-[3%]">
+            <h1 className="text-[#000000] text-xl md:text-[32px] font-normal leading-[100%] -tracking-[3%]">
               {title}
             </h1>
           </div>
