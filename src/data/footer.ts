@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const footerData = {
   mwebsections: [
     // {
@@ -34,6 +36,10 @@ export const footerData = {
           title: "Certifications & Awards",
           url: "/certifications_awards",
         },
+        {
+          title: "Customer Stories",
+          url: "/customer_stories",
+        }
       ],
     },
     {
@@ -89,6 +95,10 @@ export const footerData = {
           title: "Certifications & Awards",
           url: "/certifications_awards",
         },
+        {
+          title: "Customer Stories",
+          url: "/customer_stories",
+        }
       ],
     },
     {

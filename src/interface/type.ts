@@ -265,6 +265,7 @@ export interface ServiceContent {
   faqsSection?: faqs[];
   isPricingPlanPage?: boolean;
   certificate?:CertificationData[];
+  caseStudies?: CaseStudyCardProps[];
 }
 
 export interface CareersSectionContent {
@@ -448,3 +449,41 @@ export interface CertificationData  {
   view?: string;
   big?: boolean;
 };
+
+export interface CaseStudyCardProps {
+  title: string;
+  description: string;
+  details: CaseStudyProps;
+  type?: string;
+  onReadMore: ()=> void;
+}
+
+export interface Stat {
+  value: string;
+  label: string;
+}
+
+export interface Contact {
+  label: string;
+  value: string;
+  link?: string;
+}
+
+export interface CaseStudyProps {
+  logoColor?: string;
+  title: string;
+  subtitle: string;
+  fullDescription: string;
+  challenges: string[];
+  fixTitle: string;
+  fixDescription: string;
+  stats: Stat[];
+  testimonial: {
+    quote: string;
+    author: string;
+  };
+  contacts: Contact[];
+  logo?: string;
+  onClose: () => void;
+}
+

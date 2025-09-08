@@ -1,0 +1,295 @@
+{
+    "metadata": {
+        "title": "Custome Stories with Effortless: Earn More While Helping SMBs Grow",
+        "description": "Become an Effortless Customer and unlock new revenue while helping Indian SMBs automate finance, billing, and cashflow. Earn high commissions, bonuses, and recurring income.",
+        "og": {
+            "title": "Customer Stories with Effortless: Earn More While Helping SMBs Grow",
+            "description": "Join the Effortless Customer Program to simplify growth for ambitious businesses and unlock lucrative commissions, milestone rewards, and joint sales support.",
+            "url": "https://www.goeffortless.ai/partners",
+            "type": "website",
+            "image": "https://iili.io/F7C7h12.png"
+        }
+    },
+    "usecaseFold": {
+        "pageHeading": "Customer Stories",
+        "heading": "<span style=\"color: #FFFFFF; font-weight: 300;\">Transforming Ambition</span><span style=\"font-weight: 500;\"> into Achievement</span>",
+        "description": "See how businesses like yours transformed operations and finance with Effortless.",
+        "bannerImage": "/caseStudybanner.png",
+        "isCustomerPage": true
+    },
+    "serviceContent": [
+        {
+            "caseStudies": [
+                {
+                    "title": "Smarter finance, fewer leaks",
+                    "description": "A Mumbai LED manufacturer reduced cash leaks by 88% and gained 60% daily finance visibility with Effortless.",
+                    "details": {
+                        "title": "How This Customer in Mumbai Stopped Cash Leaks & Gained Finance Visibility",
+                        "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
+                        "fullDescription": "Field sales ran on WhatsApp and Google Sheets, leaving managers blind to ground activity, routes, performance, and reimbursements—causing delays, confusion, and lost productivity.",
+                        "challenges": [
+                            "Missed/delayed orders from manual processes",
+                            "No real-time team movement tracking",
+                            "Late/incorrect manual reimbursements",
+                            "Hard-to-track branch performance",
+                            "No reliable data for route planning"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
+                        "stats": [
+                            {
+                                "value": "↓88%",
+                                "label": "Reduction in cash leaks"
+                            },
+                            {
+                                "value": "60%",
+                                "label": "Daily finance visibility gained"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "We moved from chaos to clarity. Effortless gave us complete visibility into our finances, and cash leaks simply disappeared.",
+                            "author": "Operation Head"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goefortless.ai",
+                                "link": "https://www.goefortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goefortless.ai",
+                                "link": "mailto:hello@goefortless.ai"
+                            }
+                        ]
+                    },
+                    "type": "Manufacturing"
+                },
+                {
+                    "title": "Faster finance, zero paperwork",
+                    "description": "A Kochi logistics company cut all manual paperwork and made approvals 3× faster by digitizing treasury and banking with Effortless.",
+                    "details": {
+                        "title": "How This Logistics Firm in Kochi Digitized Treasury & Banking",
+                        "subtitle": "Paper-Heavy Processes Slowing Finance Operations",
+                        "fullDescription": "The finance team was drowning in paperwork and manual approvals. Approvals took days, mistakes crept in, and treasury operations stalled.",
+                        "challenges": [
+                            "Delays in approvals due to paperwork",
+                            "Human errors in treasury management",
+                            "Slow manual banking processes",
+                            "Increased operational costs",
+                            "Lack of real-time finance visibility"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless digitized approvals, treasury, and banking—removing paperwork entirely. The company moved to real-time finance operations with full accuracy and speed.",
+                        "stats": [
+                            {
+                                "value": "3x",
+                                "label": "Faster approvals"
+                            },
+                            {
+                                "value": "0",
+                                "label": "Paperwork needed"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "Paperwork is gone. Approvals are instant, and treasury operations are smooth. Effortless has been a game-changer.",
+                            "author": "Operation Head"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goefortless.ai",
+                                "link": "https://www.goefortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goefortless.ai",
+                                "link": "mailto:hello@goefortless.ai"
+                            }
+                        ]
+                    },
+                    "type": "Distribution Businesses"
+                },
+                {
+                    "title": "Field sales, fully in sync",
+                    "description": "A Gurugram distributor gained 100% team visibility, cut manual coordination by 80%, and sped up order-to-billing 4× with Effortless.",
+                    "details": {
+                        "title": "How This Customer in Gurugram Did Field Sales & Reimbursements Under One Roof",
+                        "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
+                        "fullDescription": "Field sales ran on WhatsApp and Google Sheets, leaving managers blind to ground activity, routes, performance, and reimbursements—causing delays, confusion, and lost productivity.",
+                        "challenges": [
+                            "Missed/delayed orders from manual processes",
+                            "No real-time team movement tracking",
+                            "Late/incorrect manual reimbursements",
+                            "Hard-to-track branch performance",
+                            "No reliable data for route planning"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
+                        "stats": [
+                            {
+                                "value": "↓100%",
+                                "label": "Visibility into team activities"
+                            },
+                            {
+                                "value": "4x",
+                                "label": "Faster order tracking and billing cycle"
+                            },
+                            {
+                                "value": "↑80%",
+                                "label": "Reduction in manual coordination"
+                            },
+                            {
+                                "value": "2x",
+                                "label": "Improvement in payment follow-ups"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "We dumped the WhatsApp chaos. With Effortless, sales reps stick to planned routes, orders are tracked live, and reimbursements just happen. It’s like giving our field ops a command center.",
+                            "author": "Operation Head"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goefortless.ai",
+                                "link": "https://www.goefortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goefortless.ai",
+                                "link": "mailto:hello@goefortless.ai"
+                            }
+                        ]
+                    },
+                    "type": "B2B SaaS"
+                },
+                {
+                    "title": "Field sales, fully in sync",
+                    "description": "A Gurugram distributor gained 100% team visibility, cut manual coordination by 80%, and sped up order-to-billing 4× with Effortless.",
+                    "details": {
+                        "title": "How This Customer in Gurugram Did Field Sales & Reimbursements Under One Roof",
+                        "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
+                        "fullDescription": "Field sales ran on WhatsApp and Google Sheets, leaving managers blind to ground activity, routes, performance, and reimbursements—causing delays, confusion, and lost productivity.",
+                        "challenges": [
+                            "Missed/delayed orders from manual processes",
+                            "No real-time team movement tracking",
+                            "Late/incorrect manual reimbursements",
+                            "Hard-to-track branch performance",
+                            "No reliable data for route planning"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
+                        "stats": [
+                            {
+                                "value": "↓100%",
+                                "label": "Visibility into team activities"
+                            },
+                            {
+                                "value": "4x",
+                                "label": "Faster order tracking and billing cycle"
+                            },
+                            {
+                                "value": "↑80%",
+                                "label": "Reduction in manual coordination"
+                            },
+                            {
+                                "value": "2x",
+                                "label": "Improvement in payment follow-ups"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "We dumped the WhatsApp chaos. With Effortless, sales reps stick to planned routes, orders are tracked live, and reimbursements just happen. It’s like giving our field ops a command center.",
+                            "author": "Operation Head"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goefortless.ai",
+                                "link": "https://www.goefortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goefortless.ai",
+                                "link": "mailto:hello@goefortless.ai"
+                            }
+                        ]
+                    },
+                    "type": "Retail"
+                },
+                {
+                    "title": "Field sales, fully in sync",
+                    "description": "A Gurugram distributor gained 100% team visibility, cut manual coordination by 80%, and sped up order-to-billing 4× with Effortless.",
+                    "details": {
+                        "title": "How This Customer in Gurugram Did Field Sales & Reimbursements Under One Roof",
+                        "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
+                        "fullDescription": "Field sales ran on WhatsApp and Google Sheets, leaving managers blind to ground activity, routes, performance, and reimbursements—causing delays, confusion, and lost productivity.",
+                        "challenges": [
+                            "Missed/delayed orders from manual processes",
+                            "No real-time team movement tracking",
+                            "Late/incorrect manual reimbursements",
+                            "Hard-to-track branch performance",
+                            "No reliable data for route planning"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
+                        "stats": [
+                            {
+                                "value": "↓100%",
+                                "label": "Visibility into team activities"
+                            },
+                            {
+                                "value": "4x",
+                                "label": "Faster order tracking and billing cycle"
+                            },
+                            {
+                                "value": "↑80%",
+                                "label": "Reduction in manual coordination"
+                            },
+                            {
+                                "value": "2x",
+                                "label": "Improvement in payment follow-ups"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "We dumped the WhatsApp chaos. With Effortless, sales reps stick to planned routes, orders are tracked live, and reimbursements just happen. It’s like giving our field ops a command center.",
+                            "author": "Operation Head"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goefortless.ai",
+                                "link": "https://www.goefortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goefortless.ai",
+                                "link": "mailto:hello@goefortless.ai"
+                            }
+                        ]
+                    },
+                    "type": "Logistics"
+                }
+            ]
+        }
+    ]
+}
