@@ -602,16 +602,16 @@ const ServiceSection = ({
           <div className="pb-10">
             <CategoryTabs active={activeTab} setActive={setActiveTab} />
           </div>
-          <h3 className="font-light text-[32px]">
+          <h3 className="font-light text-xl md:text-[32px]">
             Featured{" "}
             <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
               Stories
             </span>
           </h3>
-          <p className="text-2xl font-light">
+          <p className="text-base md:text-2xl font-light">
             Helping companies of all sizes and in all industries in India
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-x-5 md:gap-y-10 pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-10 pt-10">
             {filteredStudies?.map((item, index) => (
               <CaseStudyCard
                 key={index}
@@ -625,14 +625,10 @@ const ServiceSection = ({
         </div>
       )}
       {selectedStudy && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="relative w-full max-w-7xl max-h-[90vh] overflow-y-auto">
             <CaseStudy
               {...selectedStudy}
               onClose={() => setSelectedStudy(null)}
             />
-          </div>
-        </div>
       )}
 
       {showGreyBoderLine && (

@@ -38,8 +38,9 @@
                         "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
                         "stats": [
                             {
-                                "value": "↓88%",
-                                "label": "Reduction in cash leaks"
+                                "value": "88%",
+                                "label": "Reduction in cash leaks",
+                                "raiseType": "down"
                             },
                             {
                                 "value": "60%",
@@ -136,16 +137,18 @@
                         "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
                         "stats": [
                             {
-                                "value": "↓100%",
-                                "label": "Visibility into team activities"
+                                "value": "100%",
+                                "label": "Visibility into team activities",
+                                "raiseType": "down"
                             },
                             {
                                 "value": "4x",
                                 "label": "Faster order tracking and billing cycle"
                             },
                             {
-                                "value": "↑80%",
-                                "label": "Reduction in manual coordination"
+                                "value": "80%",
+                                "label": "Reduction in manual coordination",
+                                "raiseType": "up"
                             },
                             {
                                 "value": "2x",
@@ -193,16 +196,18 @@
                         "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
                         "stats": [
                             {
-                                "value": "↓100%",
-                                "label": "Visibility into team activities"
+                                "value": "100%",
+                                "label": "Visibility into team activities",
+                                "raiseType": "down"
                             },
                             {
                                 "value": "4x",
                                 "label": "Faster order tracking and billing cycle"
                             },
                             {
-                                "value": "↑80%",
-                                "label": "Reduction in manual coordination"
+                                "value": "80%",
+                                "label": "Reduction in manual coordination",
+                                "raiseType": "up"
                             },
                             {
                                 "value": "2x",
@@ -250,16 +255,18 @@
                         "fixDescription": "Effortless replaced WhatsApp and Excel with a real-time app, streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
                         "stats": [
                             {
-                                "value": "↓100%",
-                                "label": "Visibility into team activities"
+                                "value": "100%",
+                                "label": "Visibility into team activities",
+                                "raiseType": "down"
                             },
                             {
                                 "value": "4x",
                                 "label": "Faster order tracking and billing cycle"
                             },
                             {
-                                "value": "↑80%",
-                                "label": "Reduction in manual coordination"
+                                "value": "80%",
+                                "label": "Reduction in manual coordination",
+                                "raiseType": "up"
                             },
                             {
                                 "value": "2x",

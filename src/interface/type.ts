@@ -461,6 +461,7 @@ export interface CaseStudyCardProps {
 export interface Stat {
   value: string;
   label: string;
+  raiseType?: string;
 }
 
 export interface Contact {
