@@ -48,7 +48,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 
   return (
     <>
-      <div className="h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]">
+      <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]">
         <div className="z-[9999] relative md:p-[20px] w-[1280px] h-full md:h-auto flex flex-col mx-5 max-md:overflow-y-auto">
           <div className="flex justify-end hidden md:flex">
             <div className="flex gap-3 bg-white py-2 px-4 items-center">
@@ -205,7 +205,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                       {challenges.map((item, idx) => (
                         <li
                           key={idx}
-                          className="flex items-center gap-2 font-light text-[13px] xl:text-base text-[#000000]"
+                          className="flex items-start gap-2 font-light text-[13px] xl:text-base text-[#000000]"
                         >
                           <span className="mt-1">
                             <Image
@@ -213,7 +213,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                               alt="bullet"
                               width={16}
                               height={16}
-                              className="w-4 h-4"
+                              className="w-3 h-3 md:w-4 md:h-4"
                             />
                           </span>
                           <span>{item}</span>
@@ -238,21 +238,19 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   {stats.map((s, idx) => (
                     <div key={idx} className="flex flex-col gap-1">
                       <p
-                        className={`${
-                          s.raiseType === "up" && "items-baseline"
-                        } flex gap-1 text-[#F08B32] font-bold text-xl xl:text-[40px]`}
+                        className={`flex items-baseline gap-1 text-[#F08B32] font-bold text-xl xl:text-[40px]`}
                       >
                         {s.raiseType && (
                           <Image
                             src={`${
                               s.raiseType === "down"
-                                ? "/arrow-down.png"
-                                : "/arrow-up.png"
+                                ? "/arrow-down.svg"
+                                : "/arrow-up.svg"
                             }`}
                             alt="r-arrow"
                             height={32}
-                            width={20}
-                            className={`h-[32px] w-[20px]`}
+                            width={32}
+                            className={`w-[14px] h-[14px] md:h-[32px] md:w-[32px]`}
                           />
                         )}
                         <span>{s.value}</span>

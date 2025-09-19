@@ -8,9 +8,11 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   details,
   onReadMore,
 }) => {
-    
   return (
-    <div className="flex flex-col border border-transparent gap-3 justify-between rounded-lg bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] p-5">
+    <div
+      className="flex flex-col gap-3 justify-between rounded-lg bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] p-5 cursor-pointer "
+      onClick={onReadMore}
+    >
       <div className="">
         <Image
           src={"/blur.png"}
@@ -26,10 +28,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
       <p className="font-light text-sm md:text-base text-white leading-[100%] tracking-[0]">
         {description}
       </p>
-      <p
-        className="flex items-center gap-1 cursor-pointer mt-1"
-        onClick={onReadMore}
-      >
+      <p className="flex items-center gap-1 mt-1">
         <span className="font-light text-[#F08B32] text-sm md:text-base leading-[100%] tracking-[1%]">
           Read more
         </span>
