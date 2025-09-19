@@ -485,6 +485,7 @@ export interface CaseStudyProps {
   };
   contacts: Contact[];
   logo?: string;
+  docName?:string;
   onClose: () => void;
 }
 

@@ -13,38 +13,42 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   stats,
   testimonial,
   contacts,
-  logo,
+  docName,
   onClose,
 }) => {
   const primaryCTA =
     "flex justify-center gap-2 items-center bg-[#F08B32] xl:text-base text-sm xl:font-[600] font-[400] text-[#fff] xl:py-[14px] py-[7px] px-[16px] rounded-[32px] font-ttHoves max-md:w-full";
 
-  // const handleDownload = () => {
-  //   const link = document.createElement("a");
-  //   link.href = "/sample.pdf"; // replace with your file path or dynamic URL
-  //   link.download = `${title || "case-study"}.pdf`;
-  //   link.click();
-  // };
+const handleDownload = () => {
+    const pdfUrl = `/documents/${docName}.pdf`; 
+    
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.setAttribute('download', `${docName}.pdf`);
+    
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
 
-  // const handleEmail = () => {
-  //   debugger
-  //   window.location.href =
-  //     "mailto:hello@goeffortless.ai";
-  // };
+  const handleEmail = () => {
+    window.location.href =
+      "mailto:hello@goeffortless.ai";
+  };
 
-  // const handleShare = () => {
-  //   const url = encodeURIComponent(window.location.href);
-  //   const text = encodeURIComponent("Check this out on Effortless!");
-  //   window.open(
-  //     `https://www.linkedin.com/sharing/share-offsite/?url=${url}&text=${text}`,
-  //     "_blank",
-  //     "noopener,noreferrer"
-  //   );
-  // };
+  const handleShare = () => {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Check this out on Effortless!");
+    window.open(
+      `https://www.linkedin.com/sharing/share-offsite/?url=${url}&text=${text}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
 
-  // const handlePrint = () => {
-  //   window.print();
-  // };
+  const handlePrint = () => {
+    window.print();
+  };
 
   return (
     <>
@@ -52,7 +56,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
         <div className="z-[9999] relative md:p-[20px] w-[1280px] h-full md:h-auto flex flex-col mx-5 max-md:overflow-y-auto">
           <div className="flex justify-end hidden md:flex">
             <div className="flex gap-3 bg-white py-2 px-4 items-center">
-              <button onClick={onClose}>
+              <button onClick={handleDownload}>
                 <Image
                   className="cursor-pointer"
                   src="/download.svg"
@@ -62,7 +66,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={onClose}>
+              <button onClick={handleEmail}>
                 <Image
                   className="cursor-pointer"
                   src="/customer-mail.svg"
@@ -72,7 +76,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={onClose}>
+              <button onClick={handleShare}>
                 <Image
                   className="cursor-pointer"
                   src="/connected-dots.svg"
@@ -82,7 +86,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={onClose}>
+              <button onClick={handlePrint}>
                 <Image
                   className="cursor-pointer"
                   src="/print.svg"
@@ -125,7 +129,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
               />
               <div className="flex justify-end md:hidden">
                 <div className="flex gap-3 items-center">
-                  <button onClick={onClose}>
+                  <button onClick={handleDownload}>
                     <Image
                       className="cursor-pointer"
                       src="/download.svg"
@@ -135,7 +139,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={onClose}>
+                  <button onClick={handleEmail}>
                     <Image
                       className="cursor-pointer"
                       src="/customer-mail.svg"
@@ -145,7 +149,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={onClose}>
+                  <button onClick={handleShare}>
                     <Image
                       className="cursor-pointer"
                       src="/connected-dots.svg"
@@ -155,7 +159,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={onClose}>
+                  <button onClick={handlePrint}>
                     <Image
                       className="cursor-pointer"
                       src="/print.svg"
@@ -176,12 +180,12 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   </button>
                 </div>
               </div>
-              <h1 className="hidden md:block text-[#000000] text-base xl:text-[26px] font-normal">
+              <h1 className="hidden md:block text-[#000000] text-base  leading-[100%] xl:text-[26px] font-normal">
                 {parse(title)}
               </h1>
             </div>
 
-            <h1 className="md:hidden mt-2 text-[#000000] text-base xl:text-[26px] font-normal">
+            <h1 className="md:hidden mt-2 text-[#000000] leading-[100%] text-base xl:text-[26px] font-normal">
               {parse(title)}
             </h1>
 

@@ -11,17 +11,62 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   // Data for the dropdown menus
   const menus = {
     about: [
-      { label: "Our Story", link: "/about-us" },
-      { label: "Leadership", link: "/about-us" },
-      { label: "Core values", link: "/about-us" },
-      { label: "Certificates", link: "/certifications_awards" },
+      {
+        label: "Our Story",
+        link: "/about-us",
+        icon: "/book.svg",
+        activeIcon: "/book-active.svg",
+      },
+      {
+        label: "Leadership",
+        link: "/about-us",
+        icon: "/trainer.svg",
+        activeIcon: "/trainer-active.svg",
+      },
+      {
+        label: "Core values",
+        link: "/about-us",
+        icon: "/handshake.svg",
+        activeIcon: "/handshake-active.svg",
+      },
+      {
+        label: "Certificates",
+        link: "/certifications_awards",
+        icon: "/award-certificates.svg",
+        activeIcon: "/award-certificates-active.svg",
+      },
     ],
     caseStudy: [
-      { label: "Manufacturing", link: "/customer_stories" },
-      { label: "Distribution Businesses", link: "/customer_stories" },
-      { label: "B2B SaaS", link: "/customer_stories" },
-      { label: "Retail", link: "/customer_stories" },
-      { label: "Logistics", link: "/customer_stories" },
+      {
+        label: "Manufacturing",
+        link: "/customer_stories",
+        icon: "/industry.svg",
+        activeIcon: "/industry-active.svg",
+      },
+      {
+        label: "Distribution Businesses",
+        link: "/customer_stories",
+        icon: "/truck-fast.svg",
+        activeIcon: "/truck-fast-active.svg",
+      },
+      {
+        label: "B2B SaaS",
+        link: "/customer_stories",
+        icon: "/briefcase.svg",
+        activeIcon: "/briefcase-active.svg",
+      },
+      {
+        label: "Retail",
+        link: "/customer_stories",
+        icon: "/shop.svg",
+        activeIcon: "/shop-active.svg",
+      },
+      {
+        label: "Logistics",
+        link: "/customer_stories",
+        icon: "/pallet-package.svg",
+        activeIcon: "/pallet-package-active.svg",
+      },
     ],
   };
 
@@ -78,10 +123,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
 
       <header
         className={`bg-[#08090A] text-white ${
-          isMobile ? "pt-[32px] pb-[16px]" : "pt-[40px] px-[80px]"
+          isMobile ? "pt-[20px] pb-[16px] px-4" : "pt-[40px] px-[80px]"
         } relative z-50`}
       >
-        <div className="flex justify-between items-center px-4 py-3 rounded-xl">
+        <div className="flex justify-between items-center rounded-xl">
           <div className="flex items-center">
             <Link href="/">
               <Image
@@ -104,18 +149,39 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="text-base font-normal cursor-pointer">
+                <div className="text-base text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] font-normal cursor-pointer">
                   About Us
                 </div>
                 {openMenu === "about" && (
-                  <div className="absolute top-full left-0 mt-2 w-fit bg-[#15181B] rounded-md p-2 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-[240px]  bg-[#15181B] rounded-lg p-2 z-50">
                     {menus.about.map((item, idx) => (
                       <Link
                         key={idx}
                         href={item.link}
-                        className="block px-4 py-2 text-sm whitespace-nowrap hover:text-[#F08B32]"
+                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap text-[#FFFFFF] hover:font-normal  hover:text-[#F08B32] relative"
                       >
-                        {item.label}
+                        <Image
+                          src={item.icon}
+                          alt="menu_icons"
+                          width={20}
+                          height={20}
+                          className="group-hover:hidden"
+                        />
+                        <Image
+                          src={item.activeIcon}
+                          alt="menu_icons"
+                          width={20}
+                          height={20}
+                          className="hidden group-hover:block"
+                        />
+                        <span>{item.label}</span>
+                        <Image
+                          src="/arrow-rights.svg"
+                          alt="arrow"
+                          width={16}
+                          height={16}
+                          className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </Link>
                     ))}
                   </div>
@@ -127,18 +193,39 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseEnter={() => handleMouseEnter("caseStudy")}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="text-base font-normal cursor-pointer">
+                <div className="text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer">
                   Case Study
                 </div>
                 {openMenu === "caseStudy" && (
-                  <div className="absolute top-full left-0 mt-2 w-fit bg-[#15181B] rounded-md p-2 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-[280px] bg-[#15181B] rounded-lg p-2 z-50">
                     {menus.caseStudy.map((item, idx) => (
                       <Link
                         key={idx}
                         href={item.link}
-                        className="block px-4 py-2 text-sm whitespace-nowrap hover:text-[#F08B32]"
+                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap text-[#FFFFFF] hover:text-[#F08B32] hover:font-normal relative transform transition-transform duration-200 group-hover:translate-x-2"
                       >
-                        {item.label}
+                        <Image
+                          src={item.icon}
+                          alt="menu_icons"
+                          width={20}
+                          height={20}
+                          className="group-hover:hidden"
+                        />
+                        <Image
+                          src={item.activeIcon}
+                          alt="menu_icons"
+                          width={20}
+                          height={20}
+                          className="hidden group-hover:block"
+                        />
+                        <span>{item.label}</span>
+                        <Image
+                          src="/arrow-rights.svg"
+                          alt="arrow"
+                          width={16}
+                          height={16}
+                          className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </Link>
                     ))}
                   </div>
@@ -146,7 +233,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               </div>
               <Link
                 href="/pricing"
-                className="text-base font-normal cursor-pointer"
+                className="text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer"
               >
                 Pricing
               </Link>

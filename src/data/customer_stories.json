@@ -24,7 +24,7 @@
                     "title": "Smarter finance, fewer leaks",
                     "description": "A Mumbai LED manufacturer reduced cash leaks by 88% and gained 60% daily finance visibility with Effortless.",
                     "details": {
-                        "title": " How This Jaipur-based LED Manufacturer Gained Unified Finance Visibility <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": " How This Jaipur-based LED Manufacturer Gained Unified Finance Visibility <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Manual Finance Processes Causing Delays and Leaks",
                         "fullDescription": "This manufacturer managed 100+ SKUs across two plants and exports to 30+ countries, but finance was buried in spreadsheets. With 20+ accountants chasing fragmented systems, reconciliations lagged, visibility was poor, and cash leaks left the CFO blind to compliance and working capital.",
                         "challenges": [
@@ -76,7 +76,8 @@
                                 "value": "hello@goefortless.ai",
                                 "link": "mailto:hello@goefortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Instapower - Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -84,7 +85,7 @@
                     "title": "Clear visibility, smarter sales",
                     "description": "A Gurugram auto parts leader cut revenue leakage 25%, raised productivity 20%, and improved payment visibility 35% with Effortless.",
                     "details": {
-                        "title": "How This Gurugram Auto Parts Maker Unified Sales Systems <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This Gurugram Auto Parts Maker Unified Sales Systems <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Disconnected Tools Created Gaps and Inefficiencies",
                         "fullDescription": "This manufacturer relied on fragmented tools for order tracking, sales analytics, and collections. The IT team faced integration issues, data mismatches, and no central visibility into order flows. These inefficiencies slowed down sales, caused revenue leakage, and made scaling harder.",
                         "challenges": [
@@ -137,7 +138,8 @@
                                 "value": "hello@goefortless.ai",
                                 "link": "mailto:hello@goefortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "JP Minda - Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -145,7 +147,7 @@
                     "title": "Faster payments, clearer finances",
                     "description": "An Indian ceramic company cut reconciliation 70%, sped up payments 50%, and improved accuracy 80% with Effortless.",
                     "details": {
-                        "title": "How This Indore-based Manufacturer Gained Full Control of Banking & Expenses <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This Indore-based Manufacturer Gained Full Control of Banking & Expenses <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Fragmented Finance Slowing Growth and Decisions",
                         "fullDescription": "This specialty ceramics company managed multiple bank accounts and expenses manually, leaving the owner without clear visibility into cashflow or budgets. Scattered data delayed financial reporting and decision-making. Growth was slowed by inefficiency and lack of control.",
                         "challenges": [
@@ -198,7 +200,8 @@
                                 "value": "hello@goefortless.ai",
                                 "link": "mailto:hello@goefortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Ceratattva - Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -206,7 +209,7 @@
                     "title": "Faster payments, stronger control",
                     "description": "A Delhi electrical brand cut errors 75%, improved payout accuracy 90%, and digitized ₹35L in payments with Effortless.",
                     "details": {
-                        "title": "How This Hyderabad-based Manufacturer Fixed Cashflow Bottlenecks <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This Hyderabad-based Manufacturer Fixed Cashflow Bottlenecks <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Finance Inefficiencies Slowing Growth and Cashflow",
                         "fullDescription": "This manufacturer processed 200+ invoices monthly across multiple sites but was buried in paperwork, approvals, and delays. Errors and missed due dates stalled vendor payments and strained cashflow. The CEO lacked real-time visibility into payouts and working capital, putting growth at risk.",
                         "challenges": [
@@ -259,7 +262,8 @@
                                 "value": "hello@goefortless.ai",
                                 "link": "mailto:hello@goefortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Meine Electric - Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -283,7 +287,7 @@
                             {
                                 "value": "100%",
                                 "label": "Visibility into team activities",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             },
                             {
                                 "value": "4×",
@@ -292,7 +296,7 @@
                             {
                                 "value": "80%",
                                 "label": "Reduction in manual coordination",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             },
                             {
                                 "value": "2x",
@@ -318,7 +322,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Arvind Petroleoum-Distibution"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -326,7 +331,7 @@
                     "title": "Faster orders, zero admin chaos",
                     "description": "A Mumbai bakery saved 25 weekly admin hours and doubled order processing speed by digitizing field sales with Effortless.",
                     "details": {
-                        "title": "How This Kochi Bakery Fixed Field Sales Confusion & Order Delays <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This Kochi Bakery Fixed Field Sales Confusion & Order Delays <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Manual Sales Processes Slowing Growth & Deliveries",
                         "fullDescription": "This bakery relied on sales reps taking orders manually across multiple cities, using paper notes and WhatsApp. With no real-time tracking or structured customer assignment, orders were often delayed or duplicated. The lack of visibility created bottlenecks, slowing growth and frustrating customers.",
                         "challenges": [
@@ -341,22 +346,22 @@
                             {
                                 "value": "100%",
                                 "label": "Accuracy in Sales Rep-Customer Assignments",
-                                "raiseType":"down"
+                                "raiseType": "down"
                             },
                             {
                                 "value": "30%",
                                 "label": "Faster Deliveries boosting Sales & Repeat Orders",
-                                "raiseType":"down"
+                                "raiseType": "down"
                             },
                             {
                                 "value": "25+",
                                 "label": "Hours saved weekly in admin coordination",
-                                "raiseType":"down"
+                                "raiseType": "down"
                             },
                             {
                                 "value": "2x",
                                 "label": "Faster Order Processing from Field to Fulfilment",
-                                "raiseType":"down"
+                                "raiseType": "down"
                             }
                         ],
                         "testimonial": {
@@ -378,7 +383,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Fores Iniyaa - Distribution"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -386,7 +392,7 @@
                     "title": "Real-time receivables, faster closures",
                     "description": "A Bangalore healthcare distributor saved 25 hours weekly and gave 600 reps 100% receivables visibility with Effortless.",
                     "details": {
-                        "title": "How a 600+ Strong Sales Team in Mumbai Switched from Manual Orders to Real-Time Sync <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How a 600+ Strong Sales Team in Mumbai Switched from Manual Orders to Real-Time Sync <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "The Growing Pain of Manual Order Tracking",
                         "fullDescription": "This distribution-led business struggled with sales reps logging orders through WhatsApp and Excel spreadsheets. Finance teams were buried in manual entries with no real-time visibility—creating a reactive, chaotic environment.",
                         "challenges": [
@@ -401,22 +407,22 @@
                             {
                                 "value": "100%",
                                 "label": "Real-time receivables for multi-city sales teams",
-                                "raiseType":"down"
+                                "raiseType": "down"
                             },
                             {
                                 "value": "96%",
                                 "label": "Average order fulfilment time reduced from 24 hours to 1 hour",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             },
                             {
                                 "value": "80%",
                                 "label": "Faster invoice approvals across branches",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             },
                             {
                                 "value": "70%",
                                 "label": "Better visibility into stock and collections",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             }
                         ],
                         "testimonial": {
@@ -438,7 +444,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "MSI - Distribution"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -446,7 +453,7 @@
                     "title": "Accurate claims, happier teams",
                     "description": "A Bangalore food service company improved claim accuracy 95%, freed 15+ weekly hours, and lifted employee satisfaction 40% with Effortless.",
                     "details": {
-                        "title": "Food Service Company in Hyderabad Overcomes Reimbursement Leakages <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "Food Service Company in Hyderabad Overcomes Reimbursement Leakages <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Manual Reimbursements Caused Delays, Errors, and Endless Leakages Hitting Profitability",
                         "fullDescription": "A leading Hyderabad-based food service company known for meals faced major reimbursement issues of employee and staff travel-related expenses. Manual processes led to delays, errors, and leakage that impacted profitability and employee satisfaction.",
                         "challenges": [
@@ -461,22 +468,22 @@
                             {
                                 "value": "100%",
                                 "label": "Accuracy improved from ~70% to 100%",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             },
                             {
                                 "value": "96",
                                 "label": "Finance team moved from wasting time to creating value",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             },
                             {
                                 "value": "40%",
                                 "label": "Increased employee satisfaction scores related to reimbursements",
-                                "raiseType":"up"
+                                "raiseType": "up"
                             },
                             {
                                 "value": "60%",
                                 "label": "Reduction in manual follow-ups and errors",
-                                "raiseType":"down"
+                                "raiseType": "down"
                             }
                         ],
                         "testimonial": {
@@ -498,7 +505,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Rassense - Distribution"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -506,7 +514,7 @@
                     "title": "Clearer finances, faster processes",
                     "description": "A Kochi bathroom fittings wholesaler cut mismatches 95% and sped up bank and invoice processing 70% with Effortless.",
                     "details": {
-                        "title": "How This Bengaluru Distributor Fixed Bank Reconciliation & Invoicing Chaos <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This Bengaluru Distributor Fixed Bank Reconciliation & Invoicing Chaos <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Errors and Delays Undermining Cashflow Visibility",
                         "fullDescription": "This distributor was reconciling payments manually in Excel while raising invoices through emails and disconnected tools. The lack of real-time transaction matching caused constant mismatches and delays. Without financial visibility, the CFO struggled to track receivables and plan cashflow effectively.",
                         "challenges": [
@@ -558,7 +566,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "LUX - Distribution"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -566,7 +575,7 @@
                     "title": "Faster claims, total expense control",
                     "description": "A Mumbai print management firm sped up reimbursements by 65% and achieved 98% claim-to-project accuracy with Effortless.",
                     "details": {
-                        "title": "How This Surat Logistics Company Digitized Operations and Improved Efficiency <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This Surat Logistics Company Digitized Operations and Improved Efficiency <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Paper-Based Workflows Slowed IT and Finance Ops",
                         "fullDescription": "This logistics provider managed reimbursements through scattered, paper-based submissions and manual approvals. The IT team struggled with no centralized system, poor visibility, and repeated errors. The lack of integration made it harder to scale operations smoothly.",
                         "challenges": [
@@ -619,7 +628,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "CTRL M - Logistics"
                     },
                     "type": "Logistics"
                 },
@@ -627,7 +637,7 @@
                     "title": "Faster finance, zero paperwork",
                     "description": "A Kochi logistics company cut all manual paperwork and made approvals 3× faster by digitizing treasury and banking with Effortless.",
                     "details": {
-                        "title": "How This Vijayawada-based Logistics Business Gained Speed and Control <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This Vijayawada-based Logistics Business Gained Speed and Control <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Paperwork and Delays Blocking Growth Decisions",
                         "fullDescription": "This logistics company struggled with slow treasury and payment approvals due to paper-based workflows. Manual invoices, sign-offs, and multi-team bottlenecks delayed operations and blocked cashflow visibility. The MD lacked real-time control, making it harder to drive growth with confidence.",
                         "challenges": [
@@ -680,7 +690,8 @@
                                 "value": "hello@goefortless.ai",
                                 "link": "mailto:hello@goefortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Integral Logistics - Logistics"
                     },
                     "type": "Logistics"
                 },
@@ -688,7 +699,7 @@
                     "title": "Zero chaos, full finance control",
                     "description": "A Chennai retailer with 100+ stores cut manual work by 97% and gained 100% visibility into bills and petty cash with Effortless.",
                     "details": {
-                        "title": "How This 100-store Chennai Retail Company Gained Visibility and Control <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How This 100-store Chennai Retail Company Gained Visibility and Control <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Manual Entries and Delays Crippling Finance Ops",
                         "fullDescription": "With 100+ stores and 30,000+ monthly bills, finance was drowning in manual entries and slow approvals. Errors and delays frustrated vendors, while petty cash lacked any audit trail. The Finance Head had no visibility or control, leaving the team stuck in firefighting mode.",
                         "challenges": [
@@ -741,7 +752,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Neerus - Retail"
                     },
                     "type": "Retail"
                 },
@@ -749,7 +761,7 @@
                     "title": "Accurate invoicing, faster cash flow",
                     "description": "A Mumbai ESG company cut data errors by 90% and sped up invoicing by 60%, gaining 100% visibility into payments with Effortless.",
                     "details": {
-                        "title": "Mumbai-based ESG Solutions Company Improves Invoicing Efficiency <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "Mumbai-based ESG Solutions Company Improves Invoicing Efficiency <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Slow Manual Processes Blocking Payments and Client Trust",
                         "fullDescription": "A top Mumbai-based ESG solutions company struggled with manual invoicing, leading to delays, errors, and inadequate payment tracking, which impacted cash flow and client communication.",
                         "challenges": [
@@ -802,7 +814,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Breathe ESG - B2B SaaS"
                     },
                     "type": "B2B SaaS"
                 },
@@ -810,7 +823,7 @@
                     "title": "Automated invoicing, faster cash flow",
                     "description": "A Chennai ISP saved 40+ hours weekly, invoiced 3× faster, and hit 100% accuracy with Effortless.",
                     "details": {
-                        "title": "How a Leading Internet Service Provider in Chennai Streamlined Finance Operations <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How a Leading Internet Service Provider in Chennai Streamlined Finance Operations <span style=\"color: #F08B32\"></br>with Effortless</span>",
                         "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
                         "fullDescription": "A leading Internet Service Provider faced manual recurring invoicing delays, slow cash flow, and finance team strain, with no automation for bulk invoice sharing—hurting customer communication and timely collections.",
                         "challenges": [
@@ -863,7 +876,8 @@
                                 "value": "hello@goeffortless.ai",
                                 "link": "mailto:hello@goeffortless.ai"
                             }
-                        ]
+                        ],
+                        "docName": "Precious Netcom - B2B SaaS"
                     },
                     "type": "B2B SaaS"
                 }
