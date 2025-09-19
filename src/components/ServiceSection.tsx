@@ -603,12 +603,12 @@ const ServiceSection = ({
             <CategoryTabs active={activeTab} setActive={setActiveTab} />
           </div>
           <h3 className="font-light text-xl md:text-[32px]">
-            Featured{" "}
+            Featured{" "} {activeTab !== 'All' && 'Stories'} {" "}
             <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
-              Stories
+              {activeTab === 'All' ? 'Stories' : `In ${activeTab}`}
             </span>
           </h3>
-          <p className="text-base md:text-2xl font-light">
+          <p className="text-base md:text-2xl font-light text-white mt-2">
             Helping companies of all sizes and in all industries in India
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-10 pt-10">

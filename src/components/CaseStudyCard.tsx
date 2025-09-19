@@ -20,10 +20,10 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
           className="h-[40px] md:h-[64px] blur-lg"
         />
       </div>
-      <h2 className="font-medium text-white text-base md:text-xl md:leading-[100%] tracking-[0] mt-1">
+      <h2 className="font-medium text-white text-base md:text-xl leading-[100%] tracking-[0] mt-1">
         {title}
       </h2>
-      <p className="font-light text-[13px] md:text-lg text-white md:leading-[100%] tracking-[0]">
+      <p className="font-light text-sm md:text-base text-white leading-[100%] tracking-[0]">
         {description}
       </p>
       <p

@@ -34,12 +34,11 @@
                             "Compliance risks with fragmented GST/TDS tracking"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless streamlined finance with <span style=\"font-weight: 500\">Daily Bank Sync & Reconciliation</span> and <span style=\"font-weight: 500\">Smart Compliance Check (ITC, TDS).</span> Using the <span style=\"font-weight: 500\">Business Health Dashboard, Petty Cash Management, and Expense Approval Flows,</span> the CFO gained real-time visibility into cashflow and expenses.",
+                        "fixDescription": "Effortless streamlined finance with Daily Bank Sync & Reconciliation and Smart Compliance Check (ITC, TDS). Using the Business Health Dashboard, Petty Cash Management, and Expense Approval Flows, the CFO gained real-time visibility into cashflow and expenses.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Unified Reporting across plants and export markets",
-                                "raiseType": "down"
+                                "label": "Unified Reporting across plants and export markets"
                             },
                             {
                                 "value": "88%",
@@ -48,13 +47,11 @@
                             },
                             {
                                 "value": "60%",
-                                "label": "Faster daily visibility into financial data",
-                                "raiseType": "down"
+                                "label": "Faster daily visibility into financial data"
                             },
                             {
                                 "value": "₹50L",
-                                "label": "Tracked in bills and petty cash in one place",
-                                "raiseType": "up"
+                                "label": "Tracked in bills and petty cash in one place"
                             }
                         ],
                         "testimonial": {
@@ -95,27 +92,20 @@
                             "High dependency on manual interventions for reporting"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless gave IT one platform for <span style=\"font-weight: 500\">sales tracking, order management, and collections.</span> With <span style=\"font-weight: 500\">Business Health Dashboard, Tally Sync, and Role-Based Access,</span> the team got real-time visibility, secure workflows, and fewer manual tasks.",
+                        "fixDescription": "Effortless gave IT one platform for sales tracking, order management, and collections. With Business Health Dashboard, Tally Sync, and Role-Based Access, the team got real-time visibility, secure workflows, and fewer manual tasks.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Data Security with centralized, role-based access",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "35%",
-                                "label": "Better Visibility into orders and payments across systems",
-                                "raiseType": "down"
+                                "label": "Data Security with centralized, role-based access"
                             },
                             {
                                 "value": "25%",
                                 "label": "Less Revenue Leakage with tighter order-to-collection tracking",
-                                "raiseType": "up"
+                                "raiseType": "down"
                             },
                             {
-                                "value": "40%",
-                                "label": "Productivity Gain from reduced manual reporting",
-                                "raiseType": "up"
+                                "value": "35%",
+                                "label": "Better Visibility into orders and payments across systems"
                             }
                         ],
                         "testimonial": {
@@ -156,27 +146,24 @@
                             "Limited visibility for growth decisions"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless unified <span style=\"font-weight: 500\">Banking & Expense Management</span> into one platform with <span style=\"font-weight: 500\">Daily Bank Sync, Petty Cash Management, and Business Health Dashboard.</span> The MD gained real-time visibility, faster decisions, and full control over finances—without the manual delays.",
+                        "fixDescription": "Effortless unified Banking & Expense Management into one platform with Daily Bank Sync, Petty Cash Management, and Business Health Dashboard. The MD gained real-time visibility, faster decisions, and full control over finances—without the manual delays.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Visibility into cashflow and budgets",
-                                "raiseType": "up"
+                                "label": "Visibility into cashflow and budgets"
                             },
                             {
                                 "value": "80%",
-                                "label": "More Accurate expense categorization",
-                                "raiseType": "up"
+                                "label": "More Accurate expense categorization"
+                            },
+                            {
+                                "value": "50%",
+                                "label": "Faster payment processing"
                             },
                             {
                                 "value": "70%",
                                 "label": "Less manual reconciliation workload",
                                 "raiseType": "down"
-                            },
-                            {
-                                "value": "50%",
-                                "label": "Faster payment processing",
-                                "raiseType": "up"
                             }
                         ],
                         "testimonial": {
@@ -217,12 +204,15 @@
                             "Growth slowed by finance bottlenecks"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless digitized <span style=\"font-weight: 500\">Payment Approvals</span> and <span style=\"font-weight: 500\">Vendor Workflows,</span> giving leadership a single view of bills, claims, and advances. With <span style=\"font-weight: 500\">Real-Time Reconciliation</span> and the <span style=\"font-weight: 500\">Business Health Dashboard,</span> the CEO gained clarity, speed, and control over cashflow across sites.",
+                        "fixDescription": "Effortless digitized Payment Approvals and Vendor Workflows, giving leadership a single view of bills, claims, and advances. With Real-Time Reconciliation and the Business Health Dashboard, the CEO gained clarity, speed, and control over cashflow across sites.",
                         "stats": [
                             {
                                 "value": "90%",
-                                "label": "Accuracy in vendor payouts",
-                                "raiseType": "down"
+                                "label": "Accuracy in vendor payouts"
+                            },
+                            {
+                                "value": "60%",
+                                "label": "Faster daily visibility into financial data"
                             },
                             {
                                 "value": "75%",
@@ -230,14 +220,8 @@
                                 "raiseType": "down"
                             },
                             {
-                                "value": "64%",
-                                "label": "Faster daily visibility into financial data",
-                                "raiseType": "up"
-                            },
-                            {
                                 "value": "₹35L",
-                                "label": "Tracked digitally in payments and advances",
-                                "raiseType": "down"
+                                "label": "Tracked digitally in payments and advances"
                             }
                         ],
                         "testimonial": {
@@ -278,12 +262,11 @@
                             "No reliable data for route planning"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless replaced this existing siloed approach with a holistic solution where orders were approved for credit-limit approved parties with a real-time app (Mobile and Desktop) streamlining field sales. <span style=\"font-weight: 500\">Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.</span>",
+                        "fixDescription": "Effortless replaced this existing siloed approach with a holistic solution where orders were approved for credit-limit approved parties with a real-time app (Mobile and Desktop) streamlining field sales. Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Visibility into team activities",
-                                "raiseType":"up"
+                                "label": "Visibility into team activities"
                             },
                             {
                                 "value": "4×",
@@ -291,8 +274,7 @@
                             },
                             {
                                 "value": "80%",
-                                "label": "Reduction in manual coordination",
-                                "raiseType":"up"
+                                "label": "Reduction in manual coordination"
                             },
                             {
                                 "value": "2x",
@@ -336,27 +318,23 @@
                             "Admin bottlenecks slowed fulfillment handoffs"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless digitized field sales with <span style=\"font-weight: 500\">Fleet-on-Street Selling, Auto Customer Assignment, and Real-Time Order Sync.</span> The owner gained complete visibility into sales activities, eliminated paperwork, and ensured faster, error-free order fulfillment.",
+                        "fixDescription": "Effortless digitized field sales with Fleet-on-Street Selling, Auto Customer Assignment, and Real-Time Order Sync. The owner gained complete visibility into sales activities, eliminated paperwork, and ensured faster, error-free order fulfillment.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Accuracy in Sales Rep-Customer Assignments",
-                                "raiseType":"down"
+                                "label": "Accuracy in Sales Rep-Customer Assignments"
                             },
                             {
                                 "value": "30%",
-                                "label": "Faster Deliveries boosting Sales & Repeat Orders",
-                                "raiseType":"down"
+                                "label": "Faster Deliveries boosting Sales & Repeat Orders"
                             },
                             {
                                 "value": "25+",
-                                "label": "Hours saved weekly in admin coordination",
-                                "raiseType":"down"
+                                "label": "Hours saved weekly in admin coordination"
                             },
                             {
                                 "value": "2x",
-                                "label": "Faster Order Processing from Field to Fulfilment",
-                                "raiseType":"down"
+                                "label": "Faster Order Processing from Field to Fulfilment"
                             }
                         ],
                         "testimonial": {
@@ -396,27 +374,15 @@
                             "Delays in collections and dispatch"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless transformed operations with <span style=\"font-weight: 500\">mobile-first order automation, creating real-time synchronisation between sales and finance teams</span> through a central dashboard. This provided complete visibility across cities, enabled faster payment follow-ups, and eliminated manual data entry entirely.",
+                        "fixDescription": "Effortless transformed operations with mobile-first order automation, creating real-time synchronisation between sales and finance teams through a central dashboard. This provided complete visibility across cities, enabled faster payment follow-ups, and eliminated manual data entry entirely.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Real-time receivables for multi-city sales teams",
-                                "raiseType":"down"
+                                "label": "Real-time receivables for multi-city sales teams"
                             },
                             {
                                 "value": "96%",
-                                "label": "Average order fulfilment time reduced from 24 hours to 1 hour",
-                                "raiseType":"up"
-                            },
-                            {
-                                "value": "80%",
-                                "label": "Faster invoice approvals across branches",
-                                "raiseType":"up"
-                            },
-                            {
-                                "value": "70%",
-                                "label": "Better visibility into stock and collections",
-                                "raiseType":"up"
+                                "label": "Average order fulfilment time reduced from 24 hours to 1 hour"
                             }
                         ],
                         "testimonial": {
@@ -456,27 +422,19 @@
                             "No central visibility of reimbursement policy adherence"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless automated the reimbursement process as per the company’s policies with <span style=\"font-weight: 500\">easy claim submissions, real-time tracking, and streamlined multi-level approvals.</span> This accelerated reimbursements, minimized errors, enhanced transparency, and improved employee satisfaction, allowing the finance team to focus on more value-driven tasks.",
+                        "fixDescription": "Effortless automated the reimbursement process as per the company’s policies with easy claim submissions, real-time tracking, and streamlined multi-level approvals. This accelerated reimbursements, minimized errors, enhanced transparency, and improved employee satisfaction, allowing the finance team to focus on more value-driven tasks.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Accuracy improved from ~70% to 100%",
-                                "raiseType":"up"
+                                "label": "Accuracy improved from ~70% to 100%"
                             },
                             {
-                                "value": "96",
-                                "label": "Finance team moved from wasting time to creating value",
-                                "raiseType":"up"
+                                "value": "15+ Hours",
+                                "label": "Finance team moved from wasting time to creating value"
                             },
                             {
                                 "value": "40%",
-                                "label": "Increased employee satisfaction scores related to reimbursements",
-                                "raiseType":"up"
-                            },
-                            {
-                                "value": "60%",
-                                "label": "Reduction in manual follow-ups and errors",
-                                "raiseType":"down"
+                                "label": "Increased employee satisfaction scores related to reimbursements"
                             }
                         ],
                         "testimonial": {
@@ -516,27 +474,23 @@
                             "Delayed collections disrupting working capital and financial control"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless streamlined operations with <span style=\"font-weight: 500\">Banking & Cashflow Management, Automated Transaction Matching, and Digital Invoicing.</span> A unified <span style=\"font-weight: 500\">Business Health Dashboard</span> gave the CFO full visibility into receivables, reconciliations, and cashflow—removing errors and saving time.",
+                        "fixDescription": "Effortless streamlined operations with Banking & Cashflow Management, Automated Transaction Matching, and Digital Invoicing. A unified Business Health Dashboard gave the CFO full visibility into receivables, reconciliations, and cashflow—removing errors and saving time.",
                         "stats": [
                             {
                                 "value": "95%",
-                                "label": "Fewer Reconciliation Mismatches",
-                                "raiseType": "down"
+                                "label": "Fewer Reconciliation Mismatches"
                             },
                             {
                                 "value": "70%",
-                                "label": "Faster Month-End Reconciliations",
-                                "raiseType": "up"
+                                "label": "Faster Month-End Reconciliations"
                             },
                             {
                                 "value": "50%",
-                                "label": "Reduction in Time to Close Books",
-                                "raiseType": "down"
+                                "label": "Reduction in Time to Close Books"
                             },
                             {
                                 "value": "30%",
-                                "label": "Faster Collections improving Working Capital",
-                                "raiseType": "up"
+                                "label": "Faster Collections improving Working Capital"
                             }
                         ],
                         "testimonial": {
@@ -563,6 +517,63 @@
                     "type": "Distribution Businesses"
                 },
                 {
+                    "_title": "Automated invoicing, faster cash flow",
+                    "_description": "A Chennai ISP saved 40+ hours weekly, invoiced 3× faster, and hit 100% accuracy with Effortless.",
+                    "_details": {
+                        "title": "How This Pune-based Logistics Business Gained Control, Efficiency, and Financial Clarity <span style=\"color: #F08B32\">with Effortless</span>",
+                        "subtitle": "Manual Invoicing Delays Hurting Payments and Compliance",
+                        "fullDescription": "With 500+ daily shipments, invoices were manually matched against delivery challans. Payments slowed, eWay bill compliance was at risk, and vendor trust was falling. The Finance Head lacked speed, accuracy, and control over critical financial workflows.",
+                        "challenges": [
+                            "Manual invoice–delivery challan matching delayed approvals",
+                            "Payments to vendors slowed down, creating dissatisfaction",
+                            "Compliance risks in eWay bill generation",
+                            "Finance team overwhelmed by repetitive tasks"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless automated Invoice Approvals, Delivery Challan Matching, and eWay Bill Generation. The Finance Head gained faster, error-free workflows with real-time visibility into payments and compliance.",
+                        "stats": [
+                            {
+                                "value": "100%",
+                                "label": "Compliance in eWay bill generation"
+                            },
+                            {
+                                "value": "25%",
+                                "label": "Lower Vendor Escalations due to faster payments",
+                                "raiseType": "down"
+                            },
+                            {
+                                "value": "15+",
+                                "label": "Hours Saved Weekly in manual reconciliation"
+                            },
+                            {
+                                "value": "Zero",
+                                "label": "Manual Errors in invoice–delivery matching"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "Earlier, payments dragged on for weeks. With Effortless, invoices match instantly, bills generate on time, and payments are done on time. It’s given me speed, compliance, and credibility.",
+                            "author": "Head of Finance"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goeffortless.ai",
+                                "link": "https://www.goeffortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goeffortless.ai",
+                                "link": "mailto:hello@goeffortless.ai"
+                            }
+                        ]
+                    },
+                    "_type": "Logistics"
+                },
+                {
                     "title": "Faster claims, total expense control",
                     "description": "A Mumbai print management firm sped up reimbursements by 65% and achieved 98% claim-to-project accuracy with Effortless.",
                     "details": {
@@ -577,27 +588,23 @@
                             "IT overhead in maintaining fragmented systems"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless gave IT one digital platform for <span style=\"font-weight: 500\">claims, approvals, and tracking,</span> replacing paper-heavy workflows. With <span style=\"font-weight: 500\">Multi-level Approvals and Expense Tracking,</span> the IT team reduced manual dependencies, improved data accuracy, and simplified adoption across finance and operations.",
+                        "fixDescription": "Effortless gave IT one digital platform for claims, approvals, and tracking, replacing paper-heavy workflows. With Multi-level Approvals and Expense Tracking, the IT team reduced manual dependencies, improved data accuracy, and simplified adoption across finance and operations.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Visibility of pending, approved, and rejected claims",
-                                "raiseType": "up"
+                                "label": "Visibility of pending, approved, and rejected claims"
                             },
                             {
                                 "value": "98%",
-                                "label": "Visibility in claim-to-client mapping",
-                                "raiseType": "up"
+                                "label": "Visibility in claim-to-client mapping"
                             },
                             {
                                 "value": "85%",
-                                "label": "Faster reimbursement processing",
-                                "raiseType": "up"
+                                "label": "Faster reimbursement processing"
                             },
                             {
                                 "value": "Zero",
-                                "label": "Integration Failures with Tally",
-                                "raiseType": "down"
+                                "label": "Integration Failures with Tally"
                             }
                         ],
                         "testimonial": {
@@ -638,27 +645,23 @@
                             "Compliance risks from scattered approvals"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless digitized <span style=\"font-weight: 500\">Invoicing, Multi-Level Approvals, and Payment</span> Clearance on a single platform. With <span style=\"font-weight: 500\">Business Health Dashboard</span> and <span style=\"font-weight: 500\">full audit trails,</span> the MD gained speed, visibility, and confidence to run operations without paperwork bottlenecks.",
+                        "fixDescription": "Effortless digitized Invoicing, Multi-Level Approvals, and Payment Clearance on a single platform. With Business Health Dashboard and full audit trails, the MD gained speed, visibility, and confidence to run operations without paperwork bottlenecks.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Elimination of manual paperwork",
-                                "raiseType": "up"
+                                "label": "Elimination of manual paperwork"
                             },
                             {
                                 "value": "3x",
-                                "label": "Faster approvals across teams",
-                                "raiseType": "up"
+                                "label": "Faster approvals across teams"
                             },
                             {
                                 "value": "Zero",
-                                "label": "Delays in treasury and banking ops",
-                                "raiseType": "down"
+                                "label": "Delays in treasury and banking ops"
                             },
                             {
                                 "value": "20+",
-                                "label": "Hours saved in approvals and payments",
-                                "raiseType": "up"
+                                "label": "Hours saved in approvals and payments"
                             }
                         ],
                         "testimonial": {
@@ -685,6 +688,64 @@
                     "type": "Logistics"
                 },
                 {
+                    "_title": "Accurate invoicing, faster cash flow",
+                    "_description": "A Mumbai ESG company cut data errors by 90% and sped up invoicing by 60%, gaining 100% visibility into payments with Effortless.",
+                    "_details": {
+                        "title": "How This Mangalore-based Footwear Retailer Scaled 60 Stores with Expense Discipline <span style=\"color: #F08B32\">with Effortless</span>",
+                        "subtitle": "Uncontrolled Expenses Threatened Growth and Profitability",
+                        "fullDescription": "As the retailer scaled to 60 stores, expense control collapsed. Paper bills and WhatsApp claims buried finance, leaving the CEO blind to leakage and profitability.",
+                        "challenges": [
+                            "No budgetary control at store level",
+                            "Delayed payouts caused poor accountability",
+                            "Fragmented expense visibility across stores",
+                            "High risk of leakage as scale increased",
+                            "Growth slowed by weak financial discipline"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless introduced a single Expense Management System with Mobile Bill Uploads, Smart Approval Workflows, and Budget Caps with Controls. The CEO gained real-time visibility across all 60 stores, tighter cost discipline, and confidence to scale profitably.",
+                        "stats": [
+                            {
+                                "value": "100%",
+                                "label": "Adherence with Budget Caps"
+                            },
+                            {
+                                "value": "95%",
+                                "label": "Accuracy in claims and expense tracking"
+                            },
+                            {
+                                "value": "65%",
+                                "label": "Faster expense approvals across stores"
+                            },
+                            {
+                                "value": "30%",
+                                "label": "Reduction in expense leakage",
+                                "raiseType": "down"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "Before Effortless, expenses were leaking across stores. Now, every claim is tracked, approved, and within budget. As CEO, I finally have the control to scale with confidence.",
+                            "author": "Chief Executive Officer"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goeffortless.ai",
+                                "link": "https://www.goeffortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goeffortless.ai",
+                                "link": "mailto:hello@goeffortless.ai"
+                            }
+                        ]
+                    },
+                    "_type": "Retail"
+                },
+                {
                     "title": "Zero chaos, full finance control",
                     "description": "A Chennai retailer with 100+ stores cut manual work by 97% and gained 100% visibility into bills and petty cash with Effortless.",
                     "details": {
@@ -699,12 +760,11 @@
                             "No bandwidth for planning or strategy"
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless automated <span style=\"font-weight: 500\">Petty Cash and Expense Management,</span> with <span style=\"font-weight: 500\">Multi-Level Approvals</span> and real-time visibility through the <span style=\"font-weight: 500\">Cost Center Reports.</span> The Finance Head gained complete control over cashflows, cut manual work, and synced all store-level operations seamlessly.",
+                        "fixDescription": "Effortless automated Petty Cash and Expense Management, with Multi-Level Approvals and real-time visibility through the Cost Center Reports. The Finance Head gained complete control over cashflows, cut manual work, and synced all store-level operations seamlessly.",
                         "stats": [
                             {
                                 "value": "100%",
-                                "label": "Tracking of petty cash and bills in one place",
-                                "raiseType": "up"
+                                "label": "Tracking of petty cash and bills in one place"
                             },
                             {
                                 "value": "100%",
@@ -718,8 +778,7 @@
                             },
                             {
                                 "value": "Zero",
-                                "label": "Blind Spots in multi-store cashflows",
-                                "raiseType": "down"
+                                "label": "Blind Spots in multi-store cashflows"
                             }
                         ],
                         "testimonial": {
@@ -746,10 +805,69 @@
                     "type": "Retail"
                 },
                 {
+                    "_title": "",
+                    "_description": "",
+                    "_details": {
+                        "title": "How a Noida-based Apparel Chain Unified Store-Level Financewith Effortless",
+                        "subtitle": "Scattered Tools Created Data Gaps and Delays",
+                        "fullDescription": "This apparel chain managed 75 outlets with Excel and WhatsApp updates. Store data arrived late, inconsistent, and unverifiable, leaving IT struggling with fragmented reporting and audit issues. Without a centralized system, errors multiplied and scaling was harder.",
+                        "challenges": [
+                            "No centralized platform for store-level finance data",
+                            "Manual Excel entries causing errors and mismatches",
+                            "Frequent audit issues from missing records",
+                            "IT overhead in reconciling fragmented systems",
+                            "Reporting delays slowed scale-up"
+                        ],
+                        "fixTitle": "The Effortless Fix",
+                        "fixDescription": "Effortless gave IT one secure platform for store bills, petty cash, and reporting, replacing Excel and WhatsApp chaos. With Mobile Uploads, Automatic Tagging, and a Central Dashboard, IT reduced manual overhead, improved audit readiness, and enabled real-time visibility across 75 outlets.",
+                        "stats": [
+                            {
+                                "value": "100%",
+                                "label": "Real-Time Visibility across all outlets"
+                            },
+                            {
+                                "value": "88%",
+                                "label": "Fewer Cash Leaks with centralized controls",
+                                "raiseType": "up"
+                            },
+                            {
+                                "value": "76+",
+                                "label": "Hours Saved Monthly in IT + finance reporting effort",
+                                "raiseType": "down"
+                            },
+                            {
+                                "value": "64%",
+                                "label": "Lower IT Maintenance Effort with one platform"
+                            }
+                        ],
+                        "testimonial": {
+                            "quote": "Before Effortless, store data came through Excel and WhatsApp, full of errors. Now everything runs on one secure platform—real-time, accurate, and easy for IT to manage.",
+                            "author": "IT Operations Manager"
+                        },
+                        "contacts": [
+                            {
+                                "label": "Help Desk",
+                                "value": "+91 91765 44422"
+                            },
+                            {
+                                "label": "Website",
+                                "value": "www.goeffortless.ai",
+                                "link": "https://www.goeffortless.ai"
+                            },
+                            {
+                                "label": "Email",
+                                "value": "hello@goeffortless.ai",
+                                "link": "mailto:hello@goeffortless.ai"
+                            }
+                        ]
+                    },
+                    "_type": "Retail"
+                },
+                {
                     "title": "Accurate invoicing, faster cash flow",
                     "description": "A Mumbai ESG company cut data errors by 90% and sped up invoicing by 60%, gaining 100% visibility into payments with Effortless.",
                     "details": {
-                        "title": "Mumbai-based ESG Solutions Company Improves Invoicing Efficiency <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "Mumbai-based ESG Solutions Company Improves Invoicing Efficiencywith Effortless",
                         "subtitle": "Slow Manual Processes Blocking Payments and Client Trust",
                         "fullDescription": "A top Mumbai-based ESG solutions company struggled with manual invoicing, leading to delays, errors, and inadequate payment tracking, which impacted cash flow and client communication.",
                         "challenges": [
@@ -760,7 +878,7 @@
                             "Poor visibility of outstanding payments."
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless implemented a <span style=\"font-weight: 500\">customised invoicing system</span> enabling <span style=\"font-weight: 500\">digital invoice generation, automated sending, real-time payment tracking, and reminders,</span> with a <span style=\"font-weight: 500\">unified dashboard for full billing visibility</span> and <span style=\"font-weight: 500\">improved cash flow.</span>",
+                        "fixDescription": "Effortless implemented a customised invoicing system enabling digital invoice generation, automated sending, real-time payment tracking, and reminders, with a unified dashboard for full billing visibility and improved cash flow.",
                         "stats": [
                             {
                                 "value": "90%",
@@ -810,7 +928,7 @@
                     "title": "Automated invoicing, faster cash flow",
                     "description": "A Chennai ISP saved 40+ hours weekly, invoiced 3× faster, and hit 100% accuracy with Effortless.",
                     "details": {
-                        "title": "How a Leading Internet Service Provider in Chennai Streamlined Finance Operations <span style=\"color: #F08B32\">with Effortless</span>",
+                        "title": "How a Leading Internet Service Provider in Chennai Streamlined Finance Operations with Effortless",
                         "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
                         "fullDescription": "A leading Internet Service Provider faced manual recurring invoicing delays, slow cash flow, and finance team strain, with no automation for bulk invoice sharing—hurting customer communication and timely collections.",
                         "challenges": [
@@ -821,7 +939,7 @@
                             "Errors in assigning invoices to the right sales rep or customer."
                         ],
                         "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless connected <span style=\"font-weight: 500\">Tally</span> with the <span style=\"font-weight: 500\">sales team’s mobile app, enabling real-time order tracking, instant invoicing, and payment link sharing.</span> This <span style=\"font-weight: 500\">eliminated manual updates, reduced delays, and improved cash flow.</span>",
+                        "fixDescription": "Effortless connected Tally with the sales team’s mobile app, enabling real-time order tracking, instant invoicing, and payment link sharing. This eliminated manual updates, reduced delays, and improved cash flow.",
                         "stats": [
                             {
                                 "value": "40 hrs",

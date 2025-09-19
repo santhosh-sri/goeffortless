@@ -12,7 +12,7 @@ const categories = [
 const CategoryTabs = ({ active, setActive }: any) => {
   return (
     <div className="flex justify-center">
-      <div className="inline-flex items-center gap-1 md:gap-3 bg-[#15181B] p-2 rounded-lg overflow-x-scroll">
+      <div className="inline-flex items-center gap-1 md:gap-3 bg-[#15181B] p-2 rounded-lg max-md:overflow-x-scroll">
         {categories.map((category) => (
           <button
             key={category}
