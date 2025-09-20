@@ -41,6 +41,7 @@ import CertificationGrid from "./CertificationAwards";
 import CaseStudyCard from "./CaseStudyCard";
 import CaseStudy from "./CaseStudy";
 import CategoryTabs from "./CategoryTabs";
+import { useSearchParams } from "next/navigation";
 
 interface ServiceSectionProps extends ServiceContent {
   setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -110,6 +111,7 @@ const ServiceSection = ({
   certificate,
   caseStudies = [],
 }: ServiceSectionProps) => {
+  const searchParams = useSearchParams();
   const [selectedStudy, setSelectedStudy] = useState<CaseStudyProps | null>(
     null
   );
@@ -119,6 +121,13 @@ const ServiceSection = ({
     activeTab === "All"
       ? caseStudies
       : caseStudies.filter((item) => item.type === activeTab);
+
+  useEffect(() => {
+    const type = searchParams.get("type");
+    if (type) {
+      setActiveTab(type);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (selectedStudy) {
@@ -146,7 +155,7 @@ const ServiceSection = ({
               : isCareersPage && !companyValuesItems
               ? "md:pb-[90px]"
               : "md:py-[80px]"
-          }`}
+          } scroll-mt-20`}
           id={href}
         >
           {(colouredTagLine || tagLine) && (
@@ -598,14 +607,14 @@ const ServiceSection = ({
         </div>
       )}
       {caseStudies?.length > 0 && (
-        <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
+        <div id={href} className="md:pb-[100px] pb-[60px] px-5 md:p-0 scroll-mt-20">
           <div className="pb-10">
             <CategoryTabs active={activeTab} setActive={setActiveTab} />
           </div>
-          <h3 className="font-light text-xl md:text-[32px]">
-            Featured{" "} {activeTab !== 'All' && 'Stories'} {" "}
+          <h3 className="font-light text-xl md:text-[32px] text-white ">
+            Featured {activeTab !== "All" && "Stories"}{" "}
             <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
-              {activeTab === 'All' ? 'Stories' : `In ${activeTab}`}
+              {activeTab === "All" ? "Stories" : `In ${activeTab}`}
             </span>
           </h3>
           <p className="text-base md:text-2xl font-light text-white mt-2">
@@ -625,10 +634,7 @@ const ServiceSection = ({
         </div>
       )}
       {selectedStudy && (
-            <CaseStudy
-              {...selectedStudy}
-              onClose={() => setSelectedStudy(null)}
-            />
+        <CaseStudy {...selectedStudy} onClose={() => setSelectedStudy(null)} />
       )}
 
       {showGreyBoderLine && (

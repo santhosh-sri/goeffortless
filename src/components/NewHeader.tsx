@@ -1,37 +1,60 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { getCalApi } from "@calcom/embed-react";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = ({ isMobile }: { isMobile: boolean }) => {
   const [expandedSections, setExpandedSections] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // Data for the dropdown menus
+  const handleMenuClick = async (e: React.MouseEvent, href: string) => {
+    if (href.includes("#")) {
+      e.preventDefault();
+      const [fullPath, hash] = href.split("#");
+      const path = fullPath;
+
+      if (pathname + window.location.search === path) {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        await router.push(href);
+        setTimeout(() => {
+          const el = document.getElementById(hash);
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300);
+      }
+    }
+  };
+
   const menus = {
     about: [
       {
         label: "Our Story",
-        link: "/about-us",
+        link: "/about-us#ourstory",
         icon: "/book.svg",
         activeIcon: "/book-active.svg",
       },
       {
         label: "Leadership",
-        link: "/about-us",
+        link: "/about-us#leadership",
         icon: "/trainer.svg",
         activeIcon: "/trainer-active.svg",
       },
       {
         label: "Core values",
-        link: "/about-us",
+        link: "/about-us#corevalues",
         icon: "/handshake.svg",
         activeIcon: "/handshake-active.svg",
       },
       {
         label: "Certificates",
-        link: "/certifications_awards",
+        link: "/certifications-awards",
         icon: "/award-certificates.svg",
         activeIcon: "/award-certificates-active.svg",
       },
@@ -39,43 +62,51 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     caseStudy: [
       {
         label: "Manufacturing",
-        link: "/customer_stories",
+        link: "/case-studies?type=Manufacturing#caseStudies",
         icon: "/industry.svg",
         activeIcon: "/industry-active.svg",
       },
       {
         label: "Distribution Businesses",
-        link: "/customer_stories",
+        link: "/case-studies?type=Distribution Businesses#caseStudies",
         icon: "/truck-fast.svg",
         activeIcon: "/truck-fast-active.svg",
       },
       {
         label: "B2B SaaS",
-        link: "/customer_stories",
+        link: "/case-studies?type=B2B SaaS#caseStudies",
         icon: "/briefcase.svg",
         activeIcon: "/briefcase-active.svg",
       },
       {
         label: "Retail",
-        link: "/customer_stories",
+        link: "/case-studies?type=Retail#caseStudies",
         icon: "/shop.svg",
         activeIcon: "/shop-active.svg",
       },
       {
         label: "Logistics",
-        link: "/customer_stories",
+        link: "/case-studies?type=Logistics#caseStudies",
         icon: "/pallet-package.svg",
         activeIcon: "/pallet-package-active.svg",
       },
     ],
   };
 
-  // Navigation items array for mobile view
-  const navigationItems = [
-    { href: "/", label: "Home", hasBottomBorder: true },
+  const mobileMenu = [
+    {
+      href: "/about-us",
+      label: "About Us",
+      hasBottomBorder: true,
+      subMenu: menus.about,
+    },
+    {
+      href: "/case-studies",
+      label: "Customer",
+      hasBottomBorder: true,
+      subMenu: menus.caseStudy,
+    },
     { href: "/pricing", label: "Pricing", hasBottomBorder: true },
-    { href: "/partners", label: "Partners", hasBottomBorder: true },
-    { href: "/about-us", label: "About Us", hasBottomBorder: true },
   ];
 
   const handleMouseEnter = (menuName: string) => {
@@ -117,7 +148,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
       {isMobile && expandedSections && (
         <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-          onClick={() => setExpandedSections(false)}
+          onClick={() => {
+            setExpandedSections(false);
+            setOpenSubMenu(null);
+          }}
         />
       )}
 
@@ -158,29 +192,36 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                       <Link
                         key={idx}
                         href={item.link}
-                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap text-[#FFFFFF] hover:font-normal  hover:text-[#F08B32] relative"
+                        onClick={(e) => handleMenuClick(e, item.link)}
+                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap 
+             text-white hover:text-[#F08B32] relative transition-transform duration-300 ease-out hover:translate-x-[5px]"
                       >
                         <Image
                           src={item.icon}
-                          alt="menu_icons"
+                          alt="menu_icon"
                           width={20}
                           height={20}
-                          className="group-hover:hidden"
+                          className="group-hover:hidden transition-opacity duration-300"
                         />
+
                         <Image
                           src={item.activeIcon}
-                          alt="menu_icons"
+                          alt="menu_icon_active"
                           width={20}
                           height={20}
-                          className="hidden group-hover:block"
+                          className="hidden group-hover:block transition-opacity duration-300"
                         />
-                        <span>{item.label}</span>
+
+                        <span className="transition-colors duration-300">
+                          {item.label}
+                        </span>
+
                         <Image
                           src="/arrow-rights.svg"
                           alt="arrow"
                           width={16}
                           height={16}
-                          className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         />
                       </Link>
                     ))}
@@ -202,29 +243,36 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                       <Link
                         key={idx}
                         href={item.link}
-                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap text-[#FFFFFF] hover:text-[#F08B32] hover:font-normal relative transform transition-transform duration-200 group-hover:translate-x-2"
+                        onClick={(e) => handleMenuClick(e, item.link)}
+                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap 
+             text-white hover:text-[#F08B32] relative transition-transform duration-300 ease-out hover:translate-x-[5px]"
                       >
                         <Image
                           src={item.icon}
-                          alt="menu_icons"
+                          alt="menu_icon"
                           width={20}
                           height={20}
-                          className="group-hover:hidden"
+                          className="group-hover:hidden transition-opacity duration-300"
                         />
+
                         <Image
                           src={item.activeIcon}
-                          alt="menu_icons"
+                          alt="menu_icon_active"
                           width={20}
                           height={20}
-                          className="hidden group-hover:block"
+                          className="hidden group-hover:block transition-opacity duration-300"
                         />
-                        <span>{item.label}</span>
+
+                        <span className="transition-colors duration-300">
+                          {item.label}
+                        </span>
+
                         <Image
                           src="/arrow-rights.svg"
                           alt="arrow"
                           width={16}
                           height={16}
-                          className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         />
                       </Link>
                     ))}
@@ -273,7 +321,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
             {/* Mobile Hamburger/Close Icon */}
             {isMobile && (
               <div
-                onClick={() => setExpandedSections(!expandedSections)}
+                onClick={() => {
+                  setExpandedSections(!expandedSections);
+                  setOpenSubMenu(null);
+                }}
                 className="flex p-1 border-[1px] border-[#E5E5E533] rounded-sm items-center cursor-pointer"
               >
                 <Image
@@ -301,45 +352,107 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           </div>
         </div>
 
-        {/* Mobile Menu Panel */}
         {isMobile && expandedSections && (
           <div className="absolute top-full left-0 right-0 bg-[#08090A] z-50 rounded-b-lg">
-            {/* Navigation Menu */}
             <div className="space-y-0">
-              {navigationItems.map((item, index) => (
-                <Link
+              {mobileMenu.map((item, index) => (
+                <div
                   key={index}
-                  href={item.href}
-                  className={`flex items-center justify-between py-4 px-[24px] text-white hover:text-[#F08B32] transition-colors ${
-                    item.hasBottomBorder
-                      ? "border-b-[2px] border-[#E5E5E533] border-dashed"
-                      : ""
-                  }`}
-                  onClick={() => setExpandedSections(false)}
+                  className="border-b border-[#E5E5E533] border-dashed"
                 >
-                  <span className="text-[16px] font-[400]">{item.label}</span>
-                  <Image
-                    src="/white-arrow-right.svg"
-                    alt="arrow"
-                    width={16}
-                    height={16}
-                    className="opacity-70"
-                    unoptimized={true}
-                  />
-                </Link>
+                  <div
+                    className={`flex items-center justify-between py-4 px-[24px] text-white cursor-pointer transition-colors ${
+                      openSubMenu === item.label
+                        ? "!text-[#F08B32]"
+                        : "text-white hover:text-[#F08B32]"
+                    }`}
+                    onClick={() => {
+                      if (item.subMenu) {
+                        setOpenSubMenu(
+                          openSubMenu === item.label ? null : item.label
+                        );
+                      } else {
+                        setExpandedSections(false);
+                        setOpenSubMenu(null);
+                        router.push(item.href);
+                      }
+                    }}
+                  >
+                    <span className="text-[16px] font-[400]">{item.label}</span>
+                    {item.subMenu ? (
+                      <Image
+                        src={
+                          openSubMenu === item.label
+                            ? "/chevron-up.svg"
+                            : "/chevron-down.svg"
+                        }
+                        alt="toggle submenu"
+                        width={16}
+                        height={16}
+                        className="transition-transform duration-300"
+                        unoptimized
+                      />
+                    ) : (
+                      <Image
+                        src="/white-arrow-right.svg"
+                        alt="navigate"
+                        width={16}
+                        height={16}
+                        className="opacity-70"
+                        unoptimized
+                      />
+                    )}
+                  </div>
+
+                  {item.subMenu && openSubMenu === item.label && (
+                    <div className="pb-4 space-y-2">
+                      {item.subMenu.map((child, idx) => (
+                        <Link
+                          key={idx}
+                          href={child.link}
+                          className="flex items-center gap-2 text-sm text-[#A8A8A8] transition-colors py-2 px-6"
+                          onClick={() => {
+                            setExpandedSections(false);
+                            setOpenSubMenu(null);
+                          }}
+                        >
+                          <Image
+                            src={child.icon}
+                            alt={child.label}
+                            width={20}
+                            height={20}
+                            className="opacity-80"
+                          />
+                          {child.label}
+                          <Image
+                            src="/white-arrow-right.svg"
+                            alt="arrow"
+                            width={16}
+                            height={16}
+                            className={`ml-auto transition-transform duration-300`}
+                            unoptimized
+                          />
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
 
             {/* Bottom CTA Buttons */}
             <div className="grid grid-cols-2 gap-4 px-4 py-[30px]">
               <button
-                className="w-full bg-[#F08B32] text-white py-3 px-4 rounded-lg text-[14px] font-[600] transition-colors"
-                onClick={() => setExpandedSections(false)}
+                className="w-full bg-[#F08B32] text-white py-3 px-4 rounded-sm text-[14px] font-[600] transition-colors"
+                onClick={() => {
+                  setExpandedSections(false);
+                  setOpenSubMenu(null);
+                }}
                 data-cal-namespace="demo"
                 data-cal-link="goeffortless/demo"
                 data-cal-config='{"layout":"month_view","theme":"dark"}'
               >
-                Speak to Us
+                Schedule Demo
               </button>
               <Link
                 href="https://i.goeffortless.ai/"
@@ -349,8 +462,11 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               >
                 <a target="_blank" rel="noopener noreferrer">
                   <button
-                    className="w-full bg-transparent border border-[#F08B32] text-[#F08B32] py-3 px-4 rounded-lg text-[14px] font-[600] transition-colors hover:text-white"
-                    onClick={() => setExpandedSections(false)}
+                    className="w-full bg-transparent border border-[#F08B32] text-[#F08B32] py-3 px-4 rounded-sm text-[14px] font-[600] transition-colors hover:text-white"
+                    onClick={() => {
+                      setExpandedSections(false);
+                      setOpenSubMenu(null);
+                    }}
                   >
                     Login
                   </button>

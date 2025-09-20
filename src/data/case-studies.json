@@ -5,7 +5,7 @@
         "og": {
             "title": "Customer Stories with Effortless: Earn More While Helping SMBs Grow",
             "description": "Join the Effortless Customer Program to simplify growth for ambitious businesses and unlock lucrative commissions, milestone rewards, and joint sales support.",
-            "url": "https://www.goeffortless.ai/customer_stories",
+            "url": "https://www.goeffortless.ai/case-studies",
             "type": "website",
             "image": "https://iili.io/F7C7h12.png"
         }
@@ -19,6 +19,7 @@
     },
     "serviceContent": [
         {
+            "href": "caseStudies",
             "caseStudies": [
                 {
                     "title": "Smarter finance, fewer leaks",

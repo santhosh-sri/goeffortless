@@ -270,6 +270,7 @@ export interface ServiceContent {
 
 export interface CareersSectionContent {
   label?: string;
+  href?: string;
   headline?: string;
   subheadline?: string;
   highlightWords?: {

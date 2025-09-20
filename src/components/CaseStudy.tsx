@@ -19,21 +19,25 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   const primaryCTA =
     "flex justify-center gap-2 items-center bg-[#F08B32] xl:text-base text-sm xl:font-[600] font-[400] text-[#fff] xl:py-[14px] py-[7px] px-[16px] rounded-[32px] font-ttHoves max-md:w-full";
 
-const handleDownload = () => {
-    const pdfUrl = `/documents/${docName}.pdf`; 
-    
-    const link = document.createElement('a');
+  const handleDownload = () => {
+    const pdfUrl = `/documents/${docName}.pdf`;
+
+    const link = document.createElement("a");
     link.href = pdfUrl;
-    link.setAttribute('download', `${docName}.pdf`);
-    
+    link.setAttribute("download", `${docName}.pdf`);
+
     document.body.appendChild(link);
     link.click();
     link.remove();
   };
 
-  const handleEmail = () => {
-    window.location.href =
-      "mailto:hello@goeffortless.ai";
+  const handleEmail = () => { const recipient = "hello@goeffortless.ai";
+  const subject = "Here is your PDF";
+  const body = `Hi,\n\nPlease find the PDF attached.\n\nThanks!`;
+
+  const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoLink;
   };
 
   const handleShare = () => {
@@ -47,7 +51,33 @@ const handleDownload = () => {
   };
 
   const handlePrint = () => {
-    window.print();
+    if (!docName) return;
+
+    // Create a Blob URL for the PDF
+    const pdfUrl = `/documents/${docName}.pdf`;
+
+    fetch(pdfUrl)
+      .then((res) => res.blob())
+      .then((blob) => {
+        const dataUrl = window.URL.createObjectURL(blob);
+        const pdfWindow = window.open(dataUrl);
+
+        if (!pdfWindow) {
+          alert("Please allow popups to print the PDF.");
+          return;
+        }
+
+        pdfWindow.onload = () => {
+          pdfWindow.focus();
+          pdfWindow.print();
+
+          // Clean up the object URL after printing
+          window.URL.revokeObjectURL(dataUrl);
+        };
+      })
+      .catch((err) => {
+        console.error("Failed to fetch PDF for printing:", err);
+      });
   };
 
   return (

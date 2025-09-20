@@ -10,8 +10,8 @@
       "image": "https://iili.io/F7C7h12.png"
     }
   },
-
   "careersBanner": {
+    "href": "ourstory",
     "isCareersPage": true,
     "label": "About Us",
     "headline": "We’re",
@@ -35,6 +35,7 @@
   "isCareersPage": true,
   "serviceContent": [
     {
+      "href": "leadership",
       "founderTeams": [
         {
           "imageSrc": "/JK.png",
@@ -164,6 +165,7 @@
       ]
     },
     {
+      "href": "corevalues",
       "tagLine": "Values",
       "showGreyBoderLine": true,
       "title": "At Effortless, ",
