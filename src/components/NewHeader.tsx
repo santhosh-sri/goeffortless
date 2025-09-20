@@ -201,7 +201,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                           alt="menu_icon"
                           width={20}
                           height={20}
-                          className="group-hover:hidden transition-opacity duration-300"
+                          className="group-hover:hidden opacity-100 group-hover:opacity-0 transition-opacity duration-300"
                         />
 
                         <Image
@@ -209,7 +209,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                           alt="menu_icon_active"
                           width={20}
                           height={20}
-                          className="hidden group-hover:block transition-opacity duration-300"
+                          className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         />
 
                         <span className="transition-colors duration-300">
@@ -252,7 +252,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                           alt="menu_icon"
                           width={20}
                           height={20}
-                          className="group-hover:hidden transition-opacity duration-300"
+                          className="group-hover:hidden opacity-100 group-hover:opacity-0 transition-opacity duration-300"
                         />
 
                         <Image
@@ -260,7 +260,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                           alt="menu_icon_active"
                           width={20}
                           height={20}
-                          className="hidden group-hover:block transition-opacity duration-300"
+                          className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         />
 
                         <span className="transition-colors duration-300">
