@@ -9,6 +9,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const [expandedSections, setExpandedSections] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
   const router = useRouter();
@@ -193,23 +194,19 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                         key={idx}
                         href={item.link}
                         onClick={(e) => handleMenuClick(e, item.link)}
+                        onMouseEnter={() => setHoveredIndex(idx)}
+                        onMouseLeave={() => setHoveredIndex(null)}
                         className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap 
              text-white hover:text-[#F08B32] relative transition-transform duration-300 ease-out hover:translate-x-[5px]"
                       >
                         <Image
-                          src={item.icon}
+                          src={
+                            hoveredIndex === idx ? item.activeIcon : item.icon
+                          }
                           alt="menu_icon"
                           width={20}
                           height={20}
-                          className="group-hover:hidden opacity-100 group-hover:opacity-0 transition-opacity duration-300"
-                        />
-
-                        <Image
-                          src={item.activeIcon}
-                          alt="menu_icon_active"
-                          width={20}
-                          height={20}
-                          className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          className="transition-opacity duration-300"
                         />
 
                         <span className="transition-colors duration-300">
@@ -244,23 +241,19 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                         key={idx}
                         href={item.link}
                         onClick={(e) => handleMenuClick(e, item.link)}
+                        onMouseEnter={() => setHoveredIndex(idx)}
+                        onMouseLeave={() => setHoveredIndex(null)}
                         className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap 
              text-white hover:text-[#F08B32] relative transition-transform duration-300 ease-out hover:translate-x-[5px]"
                       >
                         <Image
-                          src={item.icon}
+                          src={
+                            hoveredIndex === idx ? item.activeIcon : item.icon
+                          }
                           alt="menu_icon"
                           width={20}
                           height={20}
-                          className="group-hover:hidden opacity-100 group-hover:opacity-0 transition-opacity duration-300"
-                        />
-
-                        <Image
-                          src={item.activeIcon}
-                          alt="menu_icon_active"
-                          width={20}
-                          height={20}
-                          className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          className="transition-opacity duration-300"
                         />
 
                         <span className="transition-colors duration-300">
