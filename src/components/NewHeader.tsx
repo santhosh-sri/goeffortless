@@ -352,12 +352,11 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               </div>
             )}
 
-            {/* Schedule Demo Button */}
             {!isMobile && (
               <button
                 className={primaryCTA}
                 data-cal-namespace="demo"
-                data-cal-link="goeffortless/demo"
+                data-cal-link="effortless/demo"
                 data-cal-config='{"layout":"month_view"}'
               >
                 Schedule Demo
@@ -365,7 +364,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
             )}
           </div>
         </div>
-        
+
         {isMobile && expandedSections && (
           <div className="absolute top-full left-0 right-0 bg-[#08090A] z-50 rounded-b-lg">
             <div className="space-y-0">
@@ -463,8 +462,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   setOpenSubMenu(null);
                 }}
                 data-cal-namespace="demo"
-                data-cal-link="goeffortless/demo"
-                data-cal-config='{"layout":"month_view","theme":"dark"}'
+                data-cal-link="effortless/demo"
+                data-cal-config='{"layout":"month_view"}'
               >
                 Schedule Demo
               </button>
