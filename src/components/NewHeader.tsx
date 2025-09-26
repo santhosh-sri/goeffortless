@@ -25,10 +25,12 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       } else {
         await router.push(href);
+        setOpenMenu(null);
+        setHoveredIndex(null);
         setTimeout(() => {
           const el = document.getElementById(hash);
           if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 300);
+        }, 100);
       }
     }
   };
@@ -123,15 +125,13 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     }, 400);
   };
 
-  // useEffect for Cal.com embed
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "demo" });
       cal("ui", {
-        theme: "dark",
         cssVarsPerTheme: {
           light: { "cal-brand": "#292929" },
-          dark: { "cal-brand": "#F08B33" },
+          dark: { "cal-brand": "#F08B32" },
         },
         hideEventTypeDetails: false,
         layout: "month_view",
@@ -176,7 +176,6 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
           {!isMobile && (
             <div className="flex items-center gap-[40px] relative">
               <div
@@ -184,11 +183,20 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="text-base text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] font-normal cursor-pointer">
+                <Link
+                  href="/about-us"
+                  onClick={() => {
+                    setOpenMenu(null);
+                    setHoveredIndex(null);
+                  }}
+                  className={`text-base text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] font-normal cursor-pointer ${
+                    openMenu === "about" ? "border-b-[#F08B32] text-white" : ""
+                  }`}
+                >
                   About Us
-                </div>
+                </Link>
                 {openMenu === "about" && (
-                  <div className="absolute top-full left-0 mt-2 w-[240px]  bg-[#15181B] rounded-lg p-2 z-50">
+                  <div className="absolute left-0 mt-4 w-[240px]  bg-[#15181B] rounded-lg p-2 z-50">
                     {menus.about.map((item, idx) => (
                       <Link
                         key={idx}
@@ -231,11 +239,22 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseEnter={() => handleMouseEnter("caseStudy")}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer">
+                <Link
+                  href="/case-studies"
+                  onClick={() => {
+                    setOpenMenu(null);
+                    setHoveredIndex(null);
+                  }}
+                  className={`text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer ${
+                    openMenu === "caseStudy"
+                      ? "border-b-[#F08B32] text-white"
+                      : ""
+                  }`}
+                >
                   Case Study
-                </div>
+                </Link>
                 {openMenu === "caseStudy" && (
-                  <div className="absolute top-full left-0 mt-2 w-[280px] bg-[#15181B] rounded-lg p-2 z-50">
+                  <div className="absolute left-0 mt-4 w-[280px] bg-[#15181B] rounded-lg p-2 z-50">
                     {menus.caseStudy.map((item, idx) => (
                       <Link
                         key={idx}
@@ -272,12 +291,14 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   </div>
                 )}
               </div>
-              <Link
-                href="/pricing"
-                className="text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer"
-              >
-                Pricing
-              </Link>
+              <div>
+                <Link
+                  href="/pricing"
+                  className={`text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer`}
+                >
+                  Pricing
+                </Link>
+              </div>
             </div>
           )}
 
@@ -337,14 +358,14 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 className={primaryCTA}
                 data-cal-namespace="demo"
                 data-cal-link="goeffortless/demo"
-                data-cal-config='{"layout":"month_view","theme":"dark"}'
+                data-cal-config='{"layout":"month_view"}'
               >
                 Schedule Demo
               </button>
             )}
           </div>
         </div>
-
+        
         {isMobile && expandedSections && (
           <div className="absolute top-full left-0 right-0 bg-[#08090A] z-50 rounded-b-lg">
             <div className="space-y-0">
