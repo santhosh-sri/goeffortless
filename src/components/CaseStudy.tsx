@@ -1,7 +1,9 @@
+"use client";
 import { CaseStudyProps } from "@/interface/type";
 import Image from "next/image";
 import React from "react";
 import parse from "html-react-parser";
+import { preloadedPDFs, printPdf } from "@/utils/printPdf";
 
 const CaseStudy: React.FC<CaseStudyProps> = ({
   title,
@@ -31,13 +33,16 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     link.remove();
   };
 
-  const handleEmail = () => { const recipient = "hello@goeffortless.ai";
-  const subject = "Here is your PDF";
-  const body = `Hi,\n\nPlease find the PDF attached.\n\nThanks!`;
+  const handleEmail = () => {
+    const recipient = "hello@goeffortless.ai";
+    const subject = "Here is your PDF";
+    const body = `Hi,\n\nPlease find the PDF attached.\n\nThanks!`;
 
-  const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
 
-  window.location.href = mailtoLink;
+    window.location.href = mailtoLink;
   };
 
   const handleShare = () => {
@@ -50,39 +55,37 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     );
   };
 
+  const [isPdfLoaded, setIsPdfLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    let cancelled = false;
+    if (docName) {
+      if (preloadedPDFs[docName]) {
+        setIsPdfLoaded(true);
+      } else {
+        setIsPdfLoaded(false);
+        printPdf(docName).then(() => {
+          if (!cancelled) setIsPdfLoaded(true); // update only if modal is still open
+        });
+      }
+    } else {
+      setIsPdfLoaded(true);
+    }
+  }, [docName]);
+
   const handlePrint = () => {
-    if (!docName) return;
+    if (!docName || !preloadedPDFs[docName]) return;
 
-    // Create a Blob URL for the PDF
-    const pdfUrl = `/documents/${docName}.pdf`;
-
-    fetch(pdfUrl)
-      .then((res) => res.blob())
-      .then((blob) => {
-        const dataUrl = window.URL.createObjectURL(blob);
-        const pdfWindow = window.open(dataUrl);
-
-        if (!pdfWindow) {
-          alert("Please allow popups to print the PDF.");
-          return;
-        }
-
-        pdfWindow.onload = () => {
-          pdfWindow.focus();
-          pdfWindow.print();
-
-          // Clean up the object URL after printing
-          window.URL.revokeObjectURL(dataUrl);
-        };
-      })
-      .catch((err) => {
-        console.error("Failed to fetch PDF for printing:", err);
-      });
+    const iframe = preloadedPDFs[docName];
+    iframe.contentWindow?.focus();
+    iframe.contentWindow?.print();
   };
 
   return (
     <>
-      <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]">
+      <div
+        className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]"
+      >
         <div className="z-[9999] relative md:p-[20px] w-[1280px] h-full md:h-auto flex flex-col mx-5 max-md:overflow-y-auto">
           <div className="flex justify-end hidden md:flex">
             <div className="flex gap-3 bg-white py-2 px-4 items-center">
@@ -210,12 +213,12 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   </button>
                 </div>
               </div>
-              <h1 className="hidden md:block text-[#000000] text-base  leading-[100%] xl:text-[26px] font-normal">
+              <h1 className="hidden md:block text-[#000000] text-base xl:text-[26px] xl:leading-[32px] font-normal">
                 {parse(title)}
               </h1>
             </div>
 
-            <h1 className="md:hidden mt-2 text-[#000000] leading-[100%] text-base xl:text-[26px] font-normal">
+            <h1 className="md:hidden mt-2 text-[#000000] text-base xl:text-[26px] font-normal">
               {parse(title)}
             </h1>
 
@@ -284,12 +287,12 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                             alt="r-arrow"
                             height={32}
                             width={32}
-                            className={`w-[14px] h-[14px] md:h-[32px] md:w-[32px]`}
+                            className={`w-[14px] h-[14px] xl:h-[32px] xl:w-[32px]`}
                           />
                         )}
                         <span>{s.value}</span>
                       </p>
-                      <p className="text-xs xl:text-base font-normal leading-[100%] tracking-0 text-[#08090A] mt-1">
+                      <p className="text-xs xl:text-base font-normal tracking-0 text-[#08090A] mt-1">
                         {s.label}
                       </p>
                     </div>
@@ -297,7 +300,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 </div>
 
                 <div className="mt-2 md:mt-6 bg-[#F0F0F0] rounded-xl p-5">
-                  <p className="text-[#000000] text-[13px] xl:text-lg leading-[100%] font-light tracking-0">
+                  <p className="text-[#000000] text-[13px] xl:text-lg font-light tracking-0">
                     “{testimonial.quote}”
                   </p>
                   <p className="mt-2 text-[#000000] text-sm xl:text-base font-medium flex items-center gap-1">
@@ -356,6 +359,33 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
           </div>
         </div>
       </div>
+      {!isPdfLoaded && (
+          <div className="absolute inset-0 bg-black/75 bg-opacity-70 flex justify-center items-center rounded-lg">
+            <div className="flex flex-col items-center gap-2">
+              <svg
+                className="animate-spin h-8 w-8 text-blue-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 00-8 8z"
+                ></path>
+              </svg>
+              <p className="text-gray-700 text-sm font-medium">Loading PDF...</p>
+            </div>
+          </div>
+        )}
     </>
   );
 };

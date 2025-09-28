@@ -41,7 +41,8 @@ import CertificationGrid from "./CertificationAwards";
 import CaseStudyCard from "./CaseStudyCard";
 import CaseStudy from "./CaseStudy";
 import CategoryTabs from "./CategoryTabs";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { printPdf } from "@/utils/printPdf";
 
 interface ServiceSectionProps extends ServiceContent {
   setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -112,6 +113,7 @@ const ServiceSection = ({
   caseStudies = [],
 }: ServiceSectionProps) => {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [selectedStudy, setSelectedStudy] = useState<CaseStudyProps | null>(
     null
   );
@@ -130,6 +132,19 @@ const ServiceSection = ({
   }, [searchParams]);
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    params.set("type", activeTab);
+    const hash = window.location.hash;
+    // Build URL without hash
+    const newUrl = `${window.location.pathname}?${params.toString()}${hash}`;
+
+    // Only replace if URL changed
+    if (newUrl !== window.location.href) {
+      router.replace(newUrl, { scroll: false });
+    }
+  }, [activeTab, router]);
+
+  useEffect(() => {
     if (selectedStudy) {
       document.body.style.overflow = "hidden";
     } else {
@@ -139,6 +154,12 @@ const ServiceSection = ({
       document.body.style.overflow = "";
     };
   }, [selectedStudy]);
+
+  useEffect(() => {
+    caseStudies?.forEach(
+      (cs) => cs.details.docName && printPdf(cs.details.docName)
+    );
+  }, [caseStudies]);
 
   return (
     <div className={`${bgColour ? bgColour : "bg-[#08090A]"} md:px-[80px]`}>
@@ -607,7 +628,10 @@ const ServiceSection = ({
         </div>
       )}
       {caseStudies?.length > 0 && (
-        <div id={href} className="md:pb-[100px] pb-[60px] px-5 md:p-0 scroll-mt-20">
+        <div
+          id={href}
+          className="md:pb-[100px] pb-[60px] px-5 md:p-0 scroll-mt-20"
+        >
           <div className="pb-10">
             <CategoryTabs active={activeTab} setActive={setActiveTab} />
           </div>

@@ -189,8 +189,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     setOpenMenu(null);
                     setHoveredIndex(null);
                   }}
-                  className={`text-base text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] font-normal cursor-pointer ${
-                    openMenu === "about" ? "border-b-[#F08B32] text-white" : ""
+                  className={`text-base hover:text-white border-b-[2.5px] pb-2 hover:border-b-[#F08B32] font-normal cursor-pointer ${
+                    openMenu === "about" ? "border-b-[#F08B32] text-white" : "border-b-transparent text-[#A8A8A8]"
                   }`}
                 >
                   About Us
@@ -245,10 +245,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     setOpenMenu(null);
                     setHoveredIndex(null);
                   }}
-                  className={`text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer ${
+                  className={`text-base font-normal hover:text-white border-b-[2.5px] pb-2 hover:border-b-[#F08B32] cursor-pointer ${
                     openMenu === "caseStudy"
                       ? "border-b-[#F08B32] text-white"
-                      : ""
+                      : "border-b-transparent text-[#A8A8A8]"
                   }`}
                 >
                   Case Study
