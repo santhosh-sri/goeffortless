@@ -16,6 +16,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   testimonial,
   contacts,
   docName,
+  fileName,
   onClose,
 }) => {
   const primaryCTA =
@@ -26,7 +27,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.setAttribute("download", `${docName}.pdf`);
+    link.setAttribute("download", `Effortless-${fileName}-CaseStudy.pdf`);
 
     document.body.appendChild(link);
     link.click();
@@ -35,19 +36,22 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 
   const handleEmail = () => {
     const recipient = "hello@goeffortless.ai";
-    const subject = "Here is your PDF";
-    const body = `Hi,\n\nPlease find the PDF attached.\n\nThanks!`;
+    const subject =
+      "Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights";
+    const body = `I think this content I found on www.goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — http://goeffortless.vercel.app/case-studies`;
 
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
 
-    window.location.href = mailtoLink;
+    window.open(mailtoLink, "_blank", "noopener,noreferrer");
   };
 
   const handleShare = () => {
     const url = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent("Check this out on Effortless!");
+    const text = encodeURIComponent(
+      `I think this content I found on www.goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — http://goeffortless.vercel.app/case-studies`
+    );
     window.open(
       `https://www.linkedin.com/sharing/share-offsite/?url=${url}&text=${text}`,
       "_blank",
@@ -83,13 +87,14 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 
   return (
     <>
-      <div
-        className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]"
-      >
+      <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]">
         <div className="z-[9999] relative md:p-[20px] w-[1280px] h-full md:h-auto flex flex-col mx-5 max-md:overflow-y-auto">
           <div className="flex justify-end hidden md:flex">
             <div className="flex gap-3 bg-white py-2 px-4 items-center">
-              <button onClick={handleDownload} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+              <button
+                onClick={handleDownload}
+                className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+              >
                 <Image
                   className="cursor-pointer"
                   src="/download.svg"
@@ -99,7 +104,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={handleEmail} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+              <button
+                onClick={handleEmail}
+                className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+              >
                 <Image
                   className="cursor-pointer"
                   src="/customer-mail.svg"
@@ -109,7 +117,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={handleShare} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+              <button
+                onClick={handleShare}
+                className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+              >
                 <Image
                   className="cursor-pointer"
                   src="/connected-dots.svg"
@@ -119,7 +130,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={handlePrint} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+              <button
+                onClick={handlePrint}
+                className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+              >
                 <Image
                   className="cursor-pointer"
                   src="/print.svg"
@@ -129,7 +143,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={onClose} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+              <button
+                onClick={onClose}
+                className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+              >
                 <Image
                   className="cursor-pointer"
                   src="/e-remove.svg"
@@ -162,7 +179,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
               />
               <div className="flex justify-end md:hidden">
                 <div className="flex gap-3 items-center">
-                  <button onClick={handleDownload} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+                  <button
+                    onClick={handleDownload}
+                    className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+                  >
                     <Image
                       className="cursor-pointer"
                       src="/download.svg"
@@ -172,7 +192,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={handleEmail} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+                  <button
+                    onClick={handleEmail}
+                    className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+                  >
                     <Image
                       className="cursor-pointer"
                       src="/customer-mail.svg"
@@ -182,7 +205,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={handleShare} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+                  <button
+                    onClick={handleShare}
+                    className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+                  >
                     <Image
                       className="cursor-pointer"
                       src="/connected-dots.svg"
@@ -192,7 +218,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={handlePrint} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+                  <button
+                    onClick={handlePrint}
+                    className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+                  >
                     <Image
                       className="cursor-pointer"
                       src="/print.svg"
@@ -202,7 +231,10 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={onClose} className="hover:bg-[#F0F0F0] p-1 rounded-md">
+                  <button
+                    onClick={onClose}
+                    className="hover:bg-[#F0F0F0] p-1 border border-transparent hover:border-[#646464] rounded-md"
+                  >
                     <Image
                       className="cursor-pointer"
                       src="/e-remove.svg"
@@ -318,8 +350,8 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   <button
                     className={primaryCTA}
                     data-cal-namespace="demo"
-                    data-cal-link="goeffortless/demo"
-                    data-cal-config='{"layout":"month_view","theme":"dark"}'
+                    data-cal-link="effortless/demo"
+                    data-cal-config='{"layout":"month_view"}'
                   >
                     <Image
                       src="/window-cursor.svg"
@@ -360,32 +392,32 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
         </div>
       </div>
       {!isPdfLoaded && (
-          <div className="absolute inset-0 bg-black/75 flex justify-center items-center rounded-lg">
-            <div className="flex flex-col items-center gap-2">
-              <svg
-                className="animate-spin h-8 w-8 text-blue-600"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 00-8 8z"
-                ></path>
-              </svg>
-              <p className="text-gray-700 text-sm font-medium">Loading PDF...</p>
-            </div>
+        <div className="absolute inset-0 bg-black/75 flex justify-center items-center rounded-lg">
+          <div className="flex flex-col items-center gap-2">
+            <svg
+              className="animate-spin h-8 w-8 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 00-8 8z"
+              ></path>
+            </svg>
+            <p className="text-gray-700 text-sm font-medium">Loading PDF...</p>
           </div>
-        )}
+        </div>
+      )}
     </>
   );
 };

@@ -78,7 +78,8 @@
                                 "link": "mailto:hello@goefortless.ai"
                             }
                         ],
-                        "docName": "Instapower - Manufacturing"
+                        "docName": "Instapower - Manufacturing",
+                        "fileName": "Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -140,7 +141,8 @@
                                 "link": "mailto:hello@goefortless.ai"
                             }
                         ],
-                        "docName": "JP Minda - Manufacturing"
+                        "docName": "JP Minda - Manufacturing",
+                        "fileName": "Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -202,7 +204,8 @@
                                 "link": "mailto:hello@goefortless.ai"
                             }
                         ],
-                        "docName": "Ceratattva - Manufacturing"
+                        "docName": "Ceratattva - Manufacturing",
+                        "fileName": "Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -264,7 +267,8 @@
                                 "link": "mailto:hello@goefortless.ai"
                             }
                         ],
-                        "docName": "Meine Electric - Manufacturing"
+                        "docName": "Meine Electric - Manufacturing",
+                        "fileName": "Manufacturing"
                     },
                     "type": "Manufacturing"
                 },
@@ -324,7 +328,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "Arvind Petroleoum-Distibution"
+                        "docName": "Arvind Petroleoum-Distibution",
+                        "fileName": "Distribution Businesses"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -385,7 +390,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "Fores Iniyaa - Distribution"
+                        "docName": "Fores Iniyaa - Distribution",
+                        "fileName": "Distribution Businesses"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -446,7 +452,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "MSI - Distribution"
+                        "docName": "MSI - Distribution",
+                        "fileName": "Distribution Businesses"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -507,7 +514,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "Rassense - Distribution"
+                        "docName": "Rassense - Distribution",
+                        "fileName": "Distribution Businesses"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -568,7 +576,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "LUX - Distribution"
+                        "docName": "LUX - Distribution",
+                        "fileName": "Distribution Businesses"
                     },
                     "type": "Distribution Businesses"
                 },
@@ -630,7 +639,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "CTRL M - Logistics"
+                        "docName": "CTRL M - Logistics",
+                        "fileName": "Logistics"
                     },
                     "type": "Logistics"
                 },
@@ -692,7 +702,8 @@
                                 "link": "mailto:hello@goefortless.ai"
                             }
                         ],
-                        "docName": "Integral Logistics - Logistics"
+                        "docName": "Integral Logistics - Logistics",
+                        "fileName": "Logistics"
                     },
                     "type": "Logistics"
                 },
@@ -754,7 +765,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "Neerus - Retail"
+                        "docName": "Neerus - Retail",
+                        "fileName": "Retail"
                     },
                     "type": "Retail"
                 },
@@ -816,7 +828,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "Breathe ESG - B2B SaaS"
+                        "docName": "Breathe ESG - B2B SaaS",
+                        "fileName": "B2B SaaS"
                     },
                     "type": "B2B SaaS"
                 },
@@ -878,7 +891,8 @@
                                 "link": "mailto:hello@goeffortless.ai"
                             }
                         ],
-                        "docName": "Precious Netcom - B2B SaaS"
+                        "docName": "Precious Netcom - B2B SaaS",
+                        "fileName": "B2B SaaS"
                     },
                     "type": "B2B SaaS"
                 }
