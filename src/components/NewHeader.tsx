@@ -18,19 +18,19 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     if (href.includes("#")) {
       e.preventDefault();
       const [fullPath, hash] = href.split("#");
-      const path = fullPath;
 
-      if (pathname + window.location.search === path) {
+      if (pathname + window.location.search === fullPath) {
         const el = document.getElementById(hash);
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       } else {
-        await router.push(href);
+        await router.push(href, { scroll: false });
         setOpenMenu(null);
         setHoveredIndex(null);
+
         setTimeout(() => {
           const el = document.getElementById(hash);
           if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
+        }, 50);
       }
     }
   };
@@ -190,7 +190,9 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     setHoveredIndex(null);
                   }}
                   className={`text-base hover:text-white border-b-[2.5px] pb-2 hover:border-b-[#F08B32] font-normal cursor-pointer ${
-                    openMenu === "about" ? "border-b-[#F08B32] text-white" : "border-b-transparent text-[#A8A8A8]"
+                    openMenu === "about"
+                      ? "border-b-[#F08B32] text-white"
+                      : "border-b-transparent text-[#A8A8A8]"
                   }`}
                 >
                   About Us

@@ -38,13 +38,22 @@ const CaseStudiesSection: React.FC<Props> = ({ caseStudies }) => {
     } else {
       params.set("type", activeTab);
     }
-    const hash = window.location.hash;
-    // Build URL without hash
-    const newUrl = activeTab === "All" ? `${window.location.pathname}${hash}` : `${window.location.pathname}?${params.toString()}${hash}`;
 
-    // Only replace if URL changed
+    const hash = window.location.hash;
+    const newUrl =
+      activeTab === "All"
+        ? `${window.location.pathname}${hash}`
+        : `${window.location.pathname}?${params.toString()}${hash}`;
+
     if (newUrl !== window.location.href) {
       router.replace(newUrl, { scroll: false });
+    }
+
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash.slice(1));
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
     }
   }, [activeTab, router]);
 
