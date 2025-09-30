@@ -11,6 +11,7 @@ interface UsecaseFoldProps extends FirstFoldContent {
   setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   isMobile?: boolean;
   isPartnerPage?: boolean;
+  isCustomerPage?: boolean;
 }
 const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   pageHeading = "",
@@ -29,6 +30,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   setShowForm,
   isMobile,
   isPartnerPage,
+  isCustomerPage
 }) => {
   const handleDirect = () => {
     if (secondaryCtaText?.toLowerCase().includes("join as a partner")) {
@@ -207,7 +209,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
           </div>
         )}
       </div>
-      <Logocarousel />
+      {!isCustomerPage && <Logocarousel />}
     </>
   );
 };

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import CareersSection from "./CareersBanner";
 import RequestDemoForm from "./DemoForm";
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./NewHeader";
 import Metadata from "./Metadata";
 import ServiceSection from "./ServiceSection";
 import UsecaseFold from "./UsecaseFold";
@@ -75,7 +75,6 @@ const Landing: React.FC<Content> = ({
         <div className={`max-md:fixed max-md:top-0 w-full max-md:z-[999]`}>
           <Header
             {...headerItems}
-            setShowForm={setShowForm}
             isMobile={isMobile}
           />
         </div>

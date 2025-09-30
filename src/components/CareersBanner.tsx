@@ -6,6 +6,7 @@ import PageTitle from "./PageTitle";
 
 const CareersSection: FC<CareersSectionContent> = ({
   label,
+  href,
   headline,
   subheadline,
   highlightWords,
@@ -14,8 +15,8 @@ const CareersSection: FC<CareersSectionContent> = ({
   missionDescription,
 }) => {
   return (
-    <div
-      className={`text-[#FFFFFF] flex flex-col md:gap-[72px] gap-[40px] items-center justify-center md:pt-[64px] mx-auto max-md:px-5 max-md:pt-[112px] md:px-[80px]`}
+    <div id={href}
+      className={`text-[#FFFFFF] flex flex-col md:gap-[72px] gap-[40px] items-center justify-center md:pt-[64px] mx-auto max-md:px-5 max-md:pt-[112px] md:px-[80px] scroll-mt-20`}
     >
       <div className="flex flex-col !gap-6 items-center justify-center">
         <PageTitle pageHeading={label} />
