@@ -61,7 +61,7 @@ const CaseStudiesSection: React.FC<Props> = ({ caseStudies }) => {
 
   useEffect(() => {
     caseStudies?.forEach(
-      (cs) => cs.details.fileName && printPdf(cs.details.fileName)
+      (cs) => cs.details.docName && printPdf(cs.details.docName)
     );
   }, [caseStudies]);
 
