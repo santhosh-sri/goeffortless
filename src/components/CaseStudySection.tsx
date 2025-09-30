@@ -40,7 +40,7 @@ const CaseStudiesSection: React.FC<Props> = ({ caseStudies }) => {
     }
     const hash = window.location.hash;
     // Build URL without hash
-    const newUrl = `${window.location.pathname}?${params.toString()}${hash}`;
+    const newUrl = activeTab === "All" ? `${window.location.pathname}${hash}` : `${window.location.pathname}?${params.toString()}${hash}`;
 
     // Only replace if URL changed
     if (newUrl !== window.location.href) {
@@ -61,7 +61,7 @@ const CaseStudiesSection: React.FC<Props> = ({ caseStudies }) => {
 
   useEffect(() => {
     caseStudies?.forEach(
-      (cs) => cs.details.docName && printPdf(cs.details.docName)
+      (cs) => cs.details.fileName && printPdf(cs.details.fileName)
     );
   }, [caseStudies]);
 
