@@ -23,12 +23,12 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     "flex justify-center gap-2 items-center bg-[#F08B32] xl:text-base text-sm xl:font-[600] font-[400] text-[#fff] xl:py-[14px] py-[7px] px-[16px] rounded-[32px] font-ttHoves max-md:w-full";
 
   const handleDownload = () => {
-    debugger;
     const pdfUrl = `/documents/${docName}.pdf`;
 
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.setAttribute("download", `Effortless-${fileName}-CaseStudy.pdf`);
+    // link.setAttribute("download", `Effortless-${fileName}-CaseStudy.pdf`);
+    link.download = `Effortless-${fileName}-CaseStudy.pdf`;
 
     document.body.appendChild(link);
     link.click();
