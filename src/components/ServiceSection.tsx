@@ -133,7 +133,11 @@ const ServiceSection = ({
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    params.set("type", activeTab);
+    if (activeTab === "All") {
+      params.delete("type");
+    } else {
+      params.set("type", activeTab);
+    }
     const hash = window.location.hash;
     // Build URL without hash
     const newUrl = `${window.location.pathname}?${params.toString()}${hash}`;

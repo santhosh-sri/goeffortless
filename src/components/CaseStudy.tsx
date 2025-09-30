@@ -89,7 +89,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
         <div className="z-[9999] relative md:p-[20px] w-[1280px] h-full md:h-auto flex flex-col mx-5 max-md:overflow-y-auto">
           <div className="flex justify-end hidden md:flex">
             <div className="flex gap-3 bg-white py-2 px-4 items-center">
-              <button onClick={handleDownload}>
+              <button onClick={handleDownload} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                 <Image
                   className="cursor-pointer"
                   src="/download.svg"
@@ -99,7 +99,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={handleEmail}>
+              <button onClick={handleEmail} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                 <Image
                   className="cursor-pointer"
                   src="/customer-mail.svg"
@@ -109,7 +109,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={handleShare}>
+              <button onClick={handleShare} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                 <Image
                   className="cursor-pointer"
                   src="/connected-dots.svg"
@@ -119,7 +119,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={handlePrint}>
+              <button onClick={handlePrint} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                 <Image
                   className="cursor-pointer"
                   src="/print.svg"
@@ -129,7 +129,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 />
               </button>
               <div className="h-[24px] w-[1px] bg-[#646464]" />
-              <button onClick={onClose}>
+              <button onClick={onClose} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                 <Image
                   className="cursor-pointer"
                   src="/e-remove.svg"
@@ -162,7 +162,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
               />
               <div className="flex justify-end md:hidden">
                 <div className="flex gap-3 items-center">
-                  <button onClick={handleDownload}>
+                  <button onClick={handleDownload} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                     <Image
                       className="cursor-pointer"
                       src="/download.svg"
@@ -172,7 +172,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={handleEmail}>
+                  <button onClick={handleEmail} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                     <Image
                       className="cursor-pointer"
                       src="/customer-mail.svg"
@@ -182,7 +182,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={handleShare}>
+                  <button onClick={handleShare} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                     <Image
                       className="cursor-pointer"
                       src="/connected-dots.svg"
@@ -192,7 +192,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={handlePrint}>
+                  <button onClick={handlePrint} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                     <Image
                       className="cursor-pointer"
                       src="/print.svg"
@@ -202,7 +202,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                     />
                   </button>
                   <div className="h-[24px] w-[1px] bg-[#646464]" />
-                  <button onClick={onClose}>
+                  <button onClick={onClose} className="hover:bg-[#F0F0F0] p-1 rounded-md">
                     <Image
                       className="cursor-pointer"
                       src="/e-remove.svg"
@@ -300,7 +300,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 </div>
 
                 <div className="mt-2 md:mt-6 bg-[#F0F0F0] rounded-xl p-5">
-                  <p className="text-[#000000] text-[13px] xl:text-lg font-light tracking-0">
+                  <p className="text-[#000000] italic text-[13px] xl:text-lg font-light tracking-0">
                     “{testimonial.quote}”
                   </p>
                   <p className="mt-2 text-[#000000] text-sm xl:text-base font-medium flex items-center gap-1">
@@ -346,7 +346,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 </div>
               ))}
 
-              <div className="flex items-center">
+              <div className="flex items-center justify-end">
                 <Image
                   src={"/casestudylogo.svg"}
                   alt="Effortless Logo"
@@ -360,7 +360,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
         </div>
       </div>
       {!isPdfLoaded && (
-          <div className="absolute inset-0 bg-black/75 bg-opacity-70 flex justify-center items-center rounded-lg">
+          <div className="absolute inset-0 bg-black/75 flex justify-center items-center rounded-lg">
             <div className="flex flex-col items-center gap-2">
               <svg
                 className="animate-spin h-8 w-8 text-blue-600"
