@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./NewHeader";
 import { Content } from "@/interface/type";
 import RequestDemoForm from "./DemoForm";
 
@@ -40,7 +40,6 @@ const PrivacyPolicy: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
       <div className={`max-md:fixed max-md:top-0 w-full max-md:z-[999]`}>
         <Header
           {...headerItems}
-          setShowForm={setShowForm}
           isMobile={isMobile}
         />
       </div>

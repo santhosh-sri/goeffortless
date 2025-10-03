@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.27.1",
+    "@calcom/embed-react": "^1.5.3",
     "@hookform/resolvers": "^3.10.0",
     "axios": "^1.7.9",
     "html-react-parser": "^5.2.2",

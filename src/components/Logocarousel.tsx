@@ -9,7 +9,7 @@ const Logocarousel = () => {
     { src: "/MEINE ELECTRIC 1.svg", width: 172, height: 48 },
     { src: "/Insta.png", width: 150, height: 48 },
     { src: "/integral.svg", width: 57, height: 48 },
-    { src: "/InnBuilt-logo 1.png", width: 48, height: 19 },
+    // { src: "/InnBuilt-logo 1.png", width: 48, height: 19 },
     { src: "/Galla.png", width: 74, height: 48 },
     { src: "/Hansa Cequity Logo 1.png", width: 91, height: 48 },
   ];
