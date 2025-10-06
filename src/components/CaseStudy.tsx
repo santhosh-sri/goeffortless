@@ -44,14 +44,15 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   };
 
   const handleEmail = () => {
-    const recipient = "hello@goeffortless.ai";
+    const url = encodeURIComponent(window.location.href);
+    const cc = "hello@goeffortless.ai";
     const subject =
       "Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights";
-    const body = `I think this content I found on www.goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — http://goeffortless.vercel.app/case-studies`;
+    const body = `I think this content I found on goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — ${url}`;
 
-    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:?cc=${encodeURIComponent(
+      cc
+    )}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.open(mailtoLink, "_blank", "noopener,noreferrer");
   };
@@ -59,7 +60,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   const handleShare = () => {
     const url = encodeURIComponent(window.location.href);
     const text = encodeURIComponent(
-      `I think this content I found on www.goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — http://goeffortless.vercel.app/case-studies`
+      `I think this content I found on goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — ${url}`
     );
     window.open(
       `https://www.linkedin.com/sharing/share-offsite/?url=${url}&text=${text}`,

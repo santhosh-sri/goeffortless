@@ -37,7 +37,7 @@ export const footerData = {
           url: "/certifications-awards",
         },
         {
-          title: "Customer Stories",
+          title: "Case Study",
           url: "/case-studies",
         },
       ],
@@ -96,7 +96,7 @@ export const footerData = {
           url: "/certifications-awards",
         },
         {
-          title: "Customer Stories",
+          title: "Case Study",
           url: "/case-studies",
         },
       ],

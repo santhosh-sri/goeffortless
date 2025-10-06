@@ -105,7 +105,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     },
     {
       href: "/case-studies",
-      label: "Customer",
+      label: "Case Study",
       hasBottomBorder: true,
       subMenu: menus.caseStudy,
     },
@@ -190,7 +190,9 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     setHoveredIndex(null);
                   }}
                   className={`text-base hover:text-white border-b-[2.5px] pb-2 hover:border-b-[#F08B32] font-normal cursor-pointer ${
-                    openMenu === "about" ? "border-b-[#F08B32] text-white" : "border-b-transparent text-[#A8A8A8]"
+                    openMenu === "about"
+                      ? "border-b-[#F08B32] text-white"
+                      : "border-b-transparent text-[#A8A8A8]"
                   }`}
                 >
                   About Us
@@ -354,12 +356,23 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
 
             {!isMobile && (
               <button
-                className={primaryCTA}
+                className={`group relative transition-all duration-500 ease-in-out flex items-center justify-center gap-1 w-[200px] ${primaryCTA}`}
                 data-cal-namespace="demo"
                 data-cal-link="effortless/demo"
                 data-cal-config='{"layout":"month_view"}'
               >
-                Schedule Demo
+                <span className="relative inline-flex items-center ">
+                  <span className="md:group-hover:mr-1 transition-all duration-500">
+                    Schedule Demo
+                  </span>
+                  <Image
+                    src="/calendar-clock.svg"
+                    alt="arrow"
+                    width={16}
+                    height={16}
+                    className="absolute max-md:hidden top-1/2 right-[-1.4rem] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
+                  />
+                </span>
               </button>
             )}
           </div>
