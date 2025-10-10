@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { getCalApi } from "@calcom/embed-react";
 import { usePathname, useRouter } from "next/navigation";
+import { CalcomConfig } from "@/utils/calConfig";
 
 const Header = ({ isMobile }: { isMobile: boolean }) => {
   const [expandedSections, setExpandedSections] = useState(false);
@@ -356,22 +357,23 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
 
             {!isMobile && (
               <button
-                className={`group relative transition-all duration-500 ease-in-out flex items-center justify-center gap-1 w-[200px] ${primaryCTA}`}
-                data-cal-namespace="demo"
-                data-cal-link="effortless/demo"
-                data-cal-config='{"layout":"month_view"}'
+                {...CalcomConfig}
+                className={`group relative overflow-hidden transition-all duration-500 ease-in-out flex items-center justify-center w-[220px] max-md:w-full  md:hover:!pr-[36px] ${primaryCTA}`}
               >
                 <span className="relative inline-flex items-center ">
-                  <span className="md:group-hover:mr-1 transition-all duration-500">
+                  <span className="md:group-hover:mr-1 whitespace-nowrap transition-all duration-500">
                     Schedule Demo
                   </span>
-                  <Image
-                    src="/calendar-clock.svg"
-                    alt="arrow"
-                    width={16}
-                    height={16}
-                    className="absolute max-md:hidden top-1/2 right-[-1.4rem] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
-                  />
+                  <span className="absolute max-md:hidden top-1/2 right-[-1.4rem] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out md:block hidden">
+                    <Image
+                      src="/calendar-clock.svg"
+                      alt="arrow"
+                      width={16}
+                      height={16}
+                      className="block"
+                      unoptimized
+                    />
+                  </span>
                 </span>
               </button>
             )}
@@ -474,9 +476,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   setExpandedSections(false);
                   setOpenSubMenu(null);
                 }}
-                data-cal-namespace="demo"
-                data-cal-link="effortless/demo"
-                data-cal-config='{"layout":"month_view"}'
+                {...CalcomConfig}
               >
                 Schedule Demo
               </button>

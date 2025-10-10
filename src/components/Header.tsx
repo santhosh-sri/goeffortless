@@ -34,7 +34,7 @@ const Header = ({
   const secondaryCTA =
     "bg-[#FFFFFF] text-[16px] font-[600] text-[#52525B] py-[12px] md:px-[36px] px-3 rounded ";
 
-      useEffect(() => {
+  useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "demo" });
       cal("ui", {

@@ -2,13 +2,7 @@ import Image from "next/image";
 import React from "react";
 import RedirectCta from "./RedirectCta";
 
-const BusineesCardSection = ({
-  setShowForm,
-  isMobile,
-}: {
-  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
-  isMobile?: boolean;
-}) => {
+const BusineesCardSection = ({ isMobile }: { isMobile?: boolean }) => {
   const images = [
     "Tally1.png",
     "Gmail final .png",
@@ -41,7 +35,6 @@ const BusineesCardSection = ({
       </div>
       <div className="w-full md:w-fit mt-4">
         <RedirectCta
-          setShowForm={setShowForm}
           ctaText={
             isMobile
               ? "How SMBs Grow with Effortless"

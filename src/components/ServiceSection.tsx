@@ -41,7 +41,6 @@ import CertificationGrid from "./CertificationAwards";
 import CaseStudiesSection from "./CaseStudySection";
 
 interface ServiceSectionProps extends ServiceContent {
-  setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   isMobile?: boolean;
   isHomePage?: boolean;
   isPricingPage?: boolean;
@@ -99,7 +98,6 @@ const ServiceSection = ({
   jobCardDetails,
   colouredTitle,
   faqsSection = [],
-  setShowForm = () => {},
   isMobile,
   isCareersPage = false,
   isPricingPage,
@@ -108,7 +106,6 @@ const ServiceSection = ({
   certificate,
   caseStudies = [],
 }: ServiceSectionProps) => {
-
   return (
     <div className={`${bgColour ? bgColour : "bg-[#08090A]"} md:px-[80px]`}>
       {showGreyTopBorder && (
@@ -210,20 +207,13 @@ const ServiceSection = ({
                   />
                 ))}{" "}
               </div>
-              <BusineesCardSection
-                setShowForm={setShowForm}
-                isMobile={isMobile}
-              />
+              <BusineesCardSection isMobile={isMobile} />
             </div>
           )}
           {callBackCards && (
             <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center mt-[-10px]">
               {callBackCards?.map((card, index) => (
-                <CallbackCardSection
-                  key={index}
-                  {...card}
-                  setShowForm={setShowForm}
-                />
+                <CallbackCardSection key={index} {...card} />
               ))}
             </div>
           )}
@@ -241,10 +231,7 @@ const ServiceSection = ({
               ) : (
                 <HomePageCarousel {...homePageVerticalSlider} />
               )}{" "}
-              <RedirectCta
-                setShowForm={setShowForm}
-                ctaText={"Explore Effortless Now"}
-              />
+              <RedirectCta ctaText={"Explore Effortless Now"} />
             </div>
           )}
           {verticalSlider && <Verticalslider section={verticalSlider} />}
@@ -406,7 +393,6 @@ const ServiceSection = ({
               {
                 <div className="md:pt-[40px] max-md:w-full">
                   <RedirectCta
-                    setShowForm={setShowForm}
                     ctaText={
                       isMobile
                         ? "Discover How"
@@ -490,7 +476,6 @@ const ServiceSection = ({
             <div className="max-md:hidden flex flex-col md:gap-[4.5rem] gap-8 md:items-center md:justify-center mt-[-20px]">
               <NewPricingCard
                 {...newPricingCards}
-                setShowForm={setShowForm}
                 setSelectedPlan={setSelectedPlan}
               />
             </div>
@@ -524,10 +509,7 @@ const ServiceSection = ({
           } flex flex-col md:gap-[4.5rem] gap-8 !w-full max-md:pb-[32px] md:max-w-[1360px] md:mx-auto`}
         >
           {pricingFeatures && (isPricingPlanPage || !isMobile) && (
-            <PricingFeatures
-              setShowForm={setShowForm}
-              setSelectedPlan={setSelectedPlan}
-            />
+            <PricingFeatures setSelectedPlan={setSelectedPlan} />
           )}{" "}
           {pricingCards && !isPricingPlanPage && (
             <div
@@ -538,7 +520,6 @@ const ServiceSection = ({
                 <PricingSection
                   key={index}
                   {...cardContents}
-                  setShowForm={setShowForm}
                   setSelectedPlan={setSelectedPlan}
                 />
               ))}
@@ -557,7 +538,6 @@ const ServiceSection = ({
               <div className={`${!isHomePage ? "max-md:w-[50%]" : ""}`}>
                 <Democta
                   ctaText={!isHomePage ? "Contact Us" : "View Full Details"}
-                  setShowForm={setShowForm}
                 />
               </div>
             )}{" "} */}
@@ -580,7 +560,7 @@ const ServiceSection = ({
           id={href}
           className="md:pb-[100px] pb-[60px] px-5 md:p-0 scroll-mt-20"
         >
-          <CaseStudiesSection caseStudies={caseStudies}/>
+          <CaseStudiesSection caseStudies={caseStudies} />
         </div>
       )}
 

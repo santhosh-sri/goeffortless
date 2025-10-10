@@ -1,15 +1,14 @@
 import { HomePagePricing } from "@/interface/type";
 import React from "react";
 import SecondaryCta from "./SecondaryCta";
+import { CalcomConfig } from "@/utils/calConfig";
 
 type NewPricingCardProps = HomePagePricing & {
-  setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const NewPricingCard: React.FC<NewPricingCardProps> = ({
   packageItems,
-  setShowForm = () => {},
   setSelectedPlan = () => {},
 }) => {
   const colouredText = ["annualPrice", "oneTimeImplementationFee"];
@@ -32,9 +31,9 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                       <div>{plan.name}</div>
                       <button
                         onClick={() => {
-                          setShowForm(true);
                           setSelectedPlan(plan.name);
                         }}
+                        {...CalcomConfig}
                         id="democta"
                         className="bg-[#F08B32] hover:bg-[#DD781F] py-[8px] px-4 w-full text-[13px] md:text-[14px] mt-[20px] max-w-[120px] text-white font-[400] cursor-pointer rounded-[4px]"
                       >

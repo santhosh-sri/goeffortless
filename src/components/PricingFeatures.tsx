@@ -1,6 +1,7 @@
 import parse from "html-react-parser";
 import { useRef, useState } from "react";
 import { pricingData, pricingHeader } from "../data/pricingFeatures";
+import { CalcomConfig } from "@/utils/calConfig";
 
 // Type definitions
 interface Feature {
@@ -26,10 +27,8 @@ interface PricingData {
 }
 
 const PricingFeatures = ({
-  setShowForm = () => {},
   setSelectedPlan = () => {},
 }: {
-  setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const [expandedSections, setExpandedSections] = useState<
@@ -92,7 +91,7 @@ const PricingFeatures = ({
                 <td
                   key={tier}
                   className={`py-4 text-center w-[15%] border-[#2D2D2D] border-b-[1px] ${
-                    i !== planOrder.length 
+                    i !== planOrder.length
                       ? " border-l-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                       : ""
                   }`}
@@ -180,9 +179,9 @@ const PricingFeatures = ({
                 </p>
                 <button
                   onClick={() => {
-                    setShowForm(true);
                     setSelectedPlan(data.name || key);
                   }}
+                  {...CalcomConfig}
                   className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[120px] text-white font-[400] cursor-pointer"
                 >
                   Contact Us
@@ -274,9 +273,9 @@ const PricingFeatures = ({
                       </p>
                       <button
                         onClick={() => {
-                          setShowForm(true);
                           setSelectedPlan(planData.name || planKey);
                         }}
+                        {...CalcomConfig}
                         className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[120px] text-white font-[400] cursor-pointer"
                       >
                         {planData.trial || "Contact Us"}
@@ -299,8 +298,8 @@ const PricingFeatures = ({
                   onClick={() => toggleSection(sectionName)}
                   className={`${
                     expandedSections[sectionName]
-                    ? "bg-black border-t border-b [border-image-source:linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)] [border-image-slice:1]"
-                    : "border border-[#2D2D2D] border-t-0"
+                      ? "bg-black border-t border-b [border-image-source:linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)] [border-image-slice:1]"
+                      : "border border-[#2D2D2D] border-t-0"
                   } w-full flex items-center justify-between p-3 sm:p-4 transition-colors`}
                 >
                   <div className="flex items-center space-x-3">
@@ -356,7 +355,6 @@ const PricingFeatures = ({
                             {planOrder.map((tier, tierIndex) => (
                               <div
                                 key={tier}
-                                
                                 className={`w-[150px] py-3 text-center flex-shrink-0 ${
                                   tierIndex < planOrder.length - 1
                                     ? " border-r-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"

@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import parse from "html-react-parser";
 import { preloadedPDFs, printPdf } from "@/utils/printPdf";
+import { CalcomConfig } from "@/utils/calConfig";
 
 const CaseStudy: React.FC<CaseStudyProps> = ({
   title,
@@ -357,12 +358,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   </p>
                 </div>
                 <div className="flex justify-end">
-                  <button
-                    className={primaryCTA}
-                    data-cal-namespace="demo"
-                    data-cal-link="effortless/demo"
-                    data-cal-config='{"layout":"month_view"}'
-                  >
+                  <button className={primaryCTA} {...CalcomConfig}>
                     <Image
                       src="/window-cursor.svg"
                       alt="bullet"

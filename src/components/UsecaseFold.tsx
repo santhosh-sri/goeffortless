@@ -8,7 +8,6 @@ import Logocarousel from "./Logocarousel";
 import PageTitle from "./PageTitle";
 import SecondaryCta from "./SecondaryCta";
 interface UsecaseFoldProps extends FirstFoldContent {
-  setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   isMobile?: boolean;
   isPartnerPage?: boolean;
   isCustomerPage?: boolean;
@@ -27,10 +26,9 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   secondaryCtaUrl = "",
   businessPartnersLogo = [],
   founderTestominial = [],
-  setShowForm,
   isMobile,
   isPartnerPage,
-  isCustomerPage
+  isCustomerPage,
 }) => {
   const handleDirect = () => {
     if (secondaryCtaText?.toLowerCase().includes("join as a partner")) {
@@ -40,8 +38,6 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
       }
     } else if (secondaryCtaUrl) {
       window.open(secondaryCtaUrl);
-    } else {
-      setShowForm && setShowForm(true);
     }
   };
   return (
@@ -115,13 +111,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                       : "max-md:grid grid-cols-1 max-md:w-full max-md:[@media(min-width:439px)]:grid-cols-2 md:flex md:flex-row-reverse md:mt-[20px]"
                   } max-md:flex-col gap-[24px] mb-6`}
                 >
-                  {ctaText && (
-                    <Democta
-                      setShowForm={setShowForm}
-                      customStyle={true}
-                      ctaText={ctaText}
-                    />
-                  )}{" "}
+                  {ctaText && <Democta customStyle={true} ctaText={ctaText} />}{" "}
                   {secondaryCtaText && (
                     <SecondaryCta
                       customStyle={true}
@@ -179,13 +169,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                 />
               )}
               <div className="w-[100%] text-[13px]">
-                {ctaText && (
-                  <Democta
-                    customStyle={true}
-                    setShowForm={setShowForm}
-                    ctaText={ctaText}
-                  />
-                )}{" "}
+                {ctaText && <Democta customStyle={true} ctaText={ctaText} />}{" "}
               </div>
             </div>
           )}

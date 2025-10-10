@@ -73,28 +73,18 @@ const Landing: React.FC<Content> = ({
 
       <div>
         <div className={`max-md:fixed max-md:top-0 w-full max-md:z-[999]`}>
-          <Header
-            {...headerItems}
-            isMobile={isMobile}
-          />
+          <Header {...headerItems} isMobile={isMobile} />
         </div>
         <div className="bg-[#08090A]">
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}
-          {usecaseFold && (
-            <UsecaseFold
-              {...usecaseFold}
-              setShowForm={setShowForm}
-              isMobile={isMobile}
-            />
-          )}
+          {usecaseFold && <UsecaseFold {...usecaseFold} isMobile={isMobile} />}
           {/* <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div> */}
           {serviceContent &&
             serviceContent?.map((contentItem, index) => (
               <ServiceSection
                 key={index}
                 {...contentItem}
-                setShowForm={setShowForm}
                 setSelectedPlan={setSelectedPlan}
                 isMobile={isMobile}
                 isHomePage={isHomePage}
@@ -104,16 +94,13 @@ const Landing: React.FC<Content> = ({
                 isCareersPage={isCareersPage}
               />
             ))}
-          {showForm && (
-            <RequestDemoForm
-              setShowForm={setShowForm}
-              selectedPlan={selectedPlan}
-            />
-          )}
         </div>
         <div
           className={`${
-            (isHomePage || isPricingPlanPage || isPricingPage||isCareersPage) &&
+            (isHomePage ||
+              isPricingPlanPage ||
+              isPricingPage ||
+              isCareersPage) &&
             "pt-[60px] md:pt-[120px] bg-black"
           }`}
         >
@@ -129,7 +116,6 @@ const Landing: React.FC<Content> = ({
             >
               <Democta
                 ctaText={firstFold?.ctaText || usecaseFold?.ctaText}
-                setShowForm={setShowForm}
               />
             </div>
           )} */}
