@@ -12,8 +12,14 @@ const Logocarousel = () => {
     // { src: "/InnBuilt-logo 1.png", width: 48, height: 19 },
     { src: "/Galla.png", width: 74, height: 48 },
     { src: "/Hansa Cequity Logo 1.png", width: 91, height: 48 },
+    { src: "/mithaicana-logo.png", width: 182, height: 48 },
+    { src: "/GS-logo.png", width: 180, height: 48 },
+    { src: "/kanvar-logo.png", width: 76, height: 48 },
+    { src: "/kria.png", width: 117, height: 48 },
+    { src: "/image.png", width: 68, height: 48 },
+    { src: "/krish_fashion.png", width: 150, height: 48 },
   ];
-  
+
   const logosliderSettings = {
     infinite: true,
     speed: 500,

@@ -39,6 +39,7 @@ import Verticalslider from "./VerticlaSlider";
 import MentorsCard from "./MentorsCard";
 import CertificationGrid from "./CertificationAwards";
 import CaseStudiesSection from "./CaseStudySection";
+import FaqComponent from "./FaqComponent";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -105,6 +106,8 @@ const ServiceSection = ({
   setSelectedPlan,
   certificate,
   caseStudies = [],
+  faqs,
+  marginTop,
 }: ServiceSectionProps) => {
   return (
     <div className={`${bgColour ? bgColour : "bg-[#08090A]"} md:px-[80px]`}>
@@ -114,7 +117,7 @@ const ServiceSection = ({
       {caseStudies?.length === 0 && (
         <div
           className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${
-            tagLine === "Governance & Recognition" ? "mt-[64px] md:mt-0" : ""
+            marginTop ? "mt-[64px] md:mt-0" : ""
           } py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
             isPricingPage || isPricingPlanPage
               ? "md:py-[64px]"
@@ -130,7 +133,7 @@ const ServiceSection = ({
           {Customtitle && (
             <h1
               className={`${
-                tagLine === "Governance & Recognition" ? "" : "max-md:pt-[80px]"
+                marginTop ? "" : "max-md:pt-[80px]"
               } font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
               style={{
                 background:
@@ -561,6 +564,11 @@ const ServiceSection = ({
           className="md:pb-[100px] pb-[60px] px-5 md:p-0 scroll-mt-20"
         >
           <CaseStudiesSection caseStudies={caseStudies} />
+        </div>
+      )}
+      {faqs && (
+        <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
+          <FaqComponent faqs={faqs} />
         </div>
       )}
 

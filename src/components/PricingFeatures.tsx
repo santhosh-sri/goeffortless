@@ -182,9 +182,9 @@ const PricingFeatures = ({
                     setSelectedPlan(data.name || key);
                   }}
                   {...CalcomConfig}
-                  className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[120px] text-white font-[400] cursor-pointer"
+                  className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[125px] text-white font-[400] cursor-pointer whitespace-nowrap"
                 >
-                  Contact Us
+                  Schedule Demo
                 </button>
               </div>
             )
@@ -257,7 +257,7 @@ const PricingFeatures = ({
                   ([planKey, planData], index) => (
                     <div
                       key={planKey}
-                      className={`w-[150px] h-full p-2 sm:p-3 text-center flex-shrink-0 ${
+                      className={`w-[160px] h-full p-2 sm:p-3 text-center flex-shrink-0 ${
                         index <
                         Object.keys(pricingHeader as PricingHeader).length - 1
                           ? "border-r [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
@@ -276,9 +276,9 @@ const PricingFeatures = ({
                           setSelectedPlan(planData.name || planKey);
                         }}
                         {...CalcomConfig}
-                        className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[120px] text-white font-[400] cursor-pointer"
+                        className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[150px] text-white font-[400] cursor-pointer whitespace-nowrap"
                       >
-                        {planData.trial || "Contact Us"}
+                        {planData.trial || "Schedule Demo"}
                       </button>
                     </div>
                   )
@@ -355,7 +355,7 @@ const PricingFeatures = ({
                             {planOrder.map((tier, tierIndex) => (
                               <div
                                 key={tier}
-                                className={`w-[150px] py-3 text-center flex-shrink-0 ${
+                                className={`w-[160px] py-3 text-center flex-shrink-0 ${
                                   tierIndex < planOrder.length - 1
                                     ? " border-r-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                                     : ""

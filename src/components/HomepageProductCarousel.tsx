@@ -79,4 +79,3 @@ const HomePageCarousel: FC<HomePageVerticalSlider> = ({
   );
 };
 export default HomePageCarousel;
-

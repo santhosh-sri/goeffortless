@@ -10,107 +10,104 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const [expandedSections, setExpandedSections] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<{
+    section: number;
+    link: number;
+  } | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
   const router = useRouter();
 
   const handleMenuClick = async (e: React.MouseEvent, href: string) => {
-    if (href.includes("#")) {
-      e.preventDefault();
-      const [fullPath, hash] = href.split("#");
-      const path = fullPath;
+    // if (href.includes("#")) {
+    e.preventDefault();
+    const [fullPath, hash] = href.split("#");
+    const path = fullPath;
 
-      if (pathname + window.location.search === path) {
+    if (pathname + window.location.search === path) {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setExpandedSections(false);
+    } else {
+      await router.push(href);
+      setOpenMenu(null);
+      setExpandedSections(false);
+      setHoveredIndex(null);
+      setTimeout(() => {
         const el = document.getElementById(hash);
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        await router.push(href);
-        setOpenMenu(null);
-        setHoveredIndex(null);
-        setTimeout(() => {
-          const el = document.getElementById(hash);
-          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
-      }
+      }, 100);
     }
+    // }
   };
 
-  const menus = {
-    about: [
-      {
-        label: "Our Story",
-        link: "/about-us#ourstory",
-        icon: "/book.svg",
-        activeIcon: "/book-active.svg",
-      },
-      {
-        label: "Leadership",
-        link: "/about-us#leadership",
-        icon: "/trainer.svg",
-        activeIcon: "/trainer-active.svg",
-      },
-      {
-        label: "Core values",
-        link: "/about-us#corevalues",
-        icon: "/handshake.svg",
-        activeIcon: "/handshake-active.svg",
-      },
-      {
-        label: "Certificates",
-        link: "/certifications-awards",
-        icon: "/award-certificates.svg",
-        activeIcon: "/award-certificates-active.svg",
-      },
-    ],
-    caseStudy: [
-      {
-        label: "Manufacturing",
-        link: "/case-studies?type=Manufacturing#caseStudies",
-        icon: "/industry.svg",
-        activeIcon: "/industry-active.svg",
-      },
-      {
-        label: "Distribution Businesses",
-        link: "/case-studies?type=Distribution Businesses#caseStudies",
-        icon: "/truck-fast.svg",
-        activeIcon: "/truck-fast-active.svg",
-      },
-      {
-        label: "B2B SaaS",
-        link: "/case-studies?type=B2B SaaS#caseStudies",
-        icon: "/briefcase.svg",
-        activeIcon: "/briefcase-active.svg",
-      },
-      {
-        label: "Retail",
-        link: "/case-studies?type=Retail#caseStudies",
-        icon: "/shop.svg",
-        activeIcon: "/shop-active.svg",
-      },
-      {
-        label: "Logistics",
-        link: "/case-studies?type=Logistics#caseStudies",
-        icon: "/pallet-package.svg",
-        activeIcon: "/pallet-package-active.svg",
-      },
-    ],
-  };
+  const headerResources = [
+    {
+      title: "Learn",
+      links: [
+        {
+          label: "Blog",
+          link: "/blog",
+          icon: "/book-open.svg",
+          activeIcon: "/book-open-active.svg",
+        },
+        {
+          label: "FAQs",
+          link: "/faqs",
+          icon: "/circle-question.svg",
+          activeIcon: "/circle-question-active.svg",
+        },
+      ],
+    },
+    {
+      title: "Connect",
+      links: [
+        {
+          label: "Partners",
+          link: "/partners",
+          icon: "/crowd.svg",
+          activeIcon: "/crowd-active.svg",
+        },
+      ],
+    },
+    {
+      title: "Company",
+      links: [
+        {
+          label: "About Us",
+          link: "/about-us",
+          icon: "/circle-info-sparkle.svg",
+          activeIcon: "/circle-info-sparkle-active.svg",
+        },
+        {
+          label: "Certifications",
+          link: "/certifications-awards",
+          icon: "/header-certificate.svg",
+          activeIcon: "/award-certificate-active.svg",
+        },
+        {
+          label: "Contact Us",
+          link: "/contact-us",
+          icon: "/user-phone.svg",
+          activeIcon: "/user-phone-active.svg",
+        },
+      ],
+    },
+  ];
 
   const mobileMenu = [
-    {
-      href: "/about-us",
-      label: "About Us",
-      hasBottomBorder: true,
-      subMenu: menus.about,
-    },
+    { href: "/pricing", label: "Pricing", hasBottomBorder: true },
     {
       href: "/case-studies",
       label: "Case Study",
       hasBottomBorder: true,
-      subMenu: menus.caseStudy,
     },
-    { href: "/pricing", label: "Pricing", hasBottomBorder: true },
+    {
+      href: "",
+      label: "Resources",
+      hasBottomBorder: true,
+      subMenu: headerResources,
+    },
   ];
 
   const handleMouseEnter = (menuName: string) => {
@@ -179,135 +176,119 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
 
           {!isMobile && (
             <div className="flex items-center gap-[40px] relative">
-              <div
-                className="relative"
-                onMouseEnter={() => handleMouseEnter("about")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Link
-                  href="/about-us"
-                  onClick={() => {
-                    setOpenMenu(null);
-                    setHoveredIndex(null);
-                  }}
-                  className={`text-base hover:text-white border-b-[2.5px] pb-2 hover:border-b-[#F08B32] font-normal cursor-pointer ${
-                    openMenu === "about"
-                      ? "border-b-[#F08B32] text-white"
-                      : "border-b-transparent text-[#A8A8A8]"
-                  }`}
-                >
-                  About Us
-                </Link>
-                {openMenu === "about" && (
-                  <div className="absolute left-0 mt-4 w-[240px]  bg-[#15181B] rounded-lg p-2 z-50">
-                    {menus.about.map((item, idx) => (
-                      <Link
-                        key={idx}
-                        href={item.link}
-                        onClick={(e) => handleMenuClick(e, item.link)}
-                        onMouseEnter={() => setHoveredIndex(idx)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap 
-             text-white hover:text-[#F08B32] relative transition-transform duration-300 ease-out hover:translate-x-[5px]"
-                      >
-                        <Image
-                          src={
-                            hoveredIndex === idx ? item.activeIcon : item.icon
-                          }
-                          alt="menu_icon"
-                          width={20}
-                          height={20}
-                          className="transition-opacity duration-300"
-                        />
-
-                        <span className="transition-colors duration-300">
-                          {item.label}
-                        </span>
-
-                        <Image
-                          src="/arrow-rights.svg"
-                          alt="arrow"
-                          width={16}
-                          height={16}
-                          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <div
-                className="relative"
-                onMouseEnter={() => handleMouseEnter("caseStudy")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Link
-                  href="/case-studies"
-                  onClick={() => {
-                    setOpenMenu(null);
-                    setHoveredIndex(null);
-                  }}
-                  className={`text-base font-normal hover:text-white border-b-[2.5px] pb-2 hover:border-b-[#F08B32] cursor-pointer ${
-                    openMenu === "caseStudy"
-                      ? "border-b-[#F08B32] text-white"
-                      : "border-b-transparent text-[#A8A8A8]"
-                  }`}
-                >
-                  Case Study
-                </Link>
-                {openMenu === "caseStudy" && (
-                  <div className="absolute left-0 mt-4 w-[280px] bg-[#15181B] rounded-lg p-2 z-50">
-                    {menus.caseStudy.map((item, idx) => (
-                      <Link
-                        key={idx}
-                        href={item.link}
-                        onClick={(e) => handleMenuClick(e, item.link)}
-                        onMouseEnter={() => setHoveredIndex(idx)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                        className="group flex items-center gap-2 px-4 py-2 text-base whitespace-nowrap 
-             text-white hover:text-[#F08B32] relative transition-transform duration-300 ease-out hover:translate-x-[5px]"
-                      >
-                        <Image
-                          src={
-                            hoveredIndex === idx ? item.activeIcon : item.icon
-                          }
-                          alt="menu_icon"
-                          width={20}
-                          height={20}
-                          className="transition-opacity duration-300"
-                        />
-
-                        <span className="transition-colors duration-300">
-                          {item.label}
-                        </span>
-
-                        <Image
-                          src="/arrow-rights.svg"
-                          alt="arrow"
-                          width={16}
-                          height={16}
-                          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
               <div>
                 <Link
                   href="/pricing"
-                  className={`text-base font-normal text-[#A8A8A8] hover:text-white border-b-[2.5px] pb-2 border-b-transparent hover:border-b-[#F08B32] cursor-pointer`}
+                  className={`text-base font-normal text-[#A8A8A8] hover:text-white cursor-pointer`}
                 >
                   Pricing
                 </Link>
+              </div>
+              <div>
+                <Link
+                  href="/case-studies"
+                  className={`text-base font-normal text-[#A8A8A8] hover:text-white cursor-pointer`}
+                >
+                  Case Study
+                </Link>
+              </div>
+
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("resources")}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div
+                  // href="/case-studies"
+                  onClick={() => {
+                    setOpenMenu(null);
+                    setHoveredIndex(null);
+                  }}
+                  className={`text-base font-normal hover:text-white cursor-pointer flex items-center gap-2 ${
+                    openMenu === "resources" ? "text-white" : "text-[#A8A8A8]"
+                  }`}
+                >
+                  <span>Resources</span>
+                  <Image
+                    src={
+                      openMenu === "resources"
+                        ? "/resource-right.svg"
+                        : "/resource-down.svg"
+                    }
+                    alt="resource"
+                    width={16}
+                    height={16}
+                    className="transition-transform duration-300"
+                    unoptimized
+                  />
+                </div>
+                {openMenu === "resources" && (
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50">
+                    <div className="bg-[#15181B] rounded-lg p-6 w-[610px]">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                        {headerResources.map((section, sectionIdx) => (
+                          <div key={sectionIdx}>
+                            <h3 className="text-white font-semibold mb-3 border-b border-[#A0A0A01A] pb-1">
+                              {section.title}
+                            </h3>
+                            <div className="space-y-3">
+                              {section.links.map((link, linkIdx) => {
+                                const isHovered =
+                                  hoveredIndex?.section === sectionIdx &&
+                                  hoveredIndex?.link === linkIdx;
+                                return (
+                                  <Link
+                                    key={linkIdx}
+                                    href={link.link}
+                                    onClick={(e) =>
+                                      handleMenuClick(e, link.link)
+                                    }
+                                    onMouseEnter={() =>
+                                      setHoveredIndex({
+                                        section: sectionIdx,
+                                        link: linkIdx,
+                                      })
+                                    }
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                    className="group flex items-center gap-2 p-2 text-base text-[#A0A0A0] whitespace-nowrap 
+             hover:text-white hover:bg-[#1E2024] rounded relative transition-transform duration-300 ease-out"
+                                  >
+                                    <Image
+                                      src={
+                                        isHovered ? link.activeIcon : link.icon
+                                      }
+                                      alt="menu_icon"
+                                      width={20}
+                                      height={20}
+                                      className="transition-opacity duration-300"
+                                    />
+                                    <span className="flex-1 transition-colors duration-300">
+                                      {link.label}
+                                    </span>
+                                    <Image
+                                      src="/arrow-white.svg"
+                                      alt="arrow"
+                                      width={16}
+                                      height={16}
+                                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    />
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}
 
           <div className="flex items-center space-x-2 md:space-x-6">
             {/* Phone Number */}
-            <div
+            {/* <div
               className="flex items-center text-sm gap-2"
               onClick={() => {
                 window.location.href = `tel:+919176544422`;
@@ -324,7 +305,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               <p className="mr-3 text-[14px] md:text-[16px] font-[400] cursor-pointer">
                 +91 91765 44422
               </p>
-            </div>
+            </div> */}
 
             {/* Login Button */}
             {!isMobile && (
@@ -433,34 +414,57 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   </div>
 
                   {item.subMenu && openSubMenu === item.label && (
-                    <div className="pb-4 space-y-2">
-                      {item.subMenu.map((child, idx) => (
-                        <Link
-                          key={idx}
-                          href={child.link}
-                          className="flex items-center gap-2 text-sm text-[#A8A8A8] transition-colors py-2 px-6"
-                          onClick={() => {
-                            setExpandedSections(false);
-                            setOpenSubMenu(null);
-                          }}
-                        >
-                          <Image
-                            src={child.icon}
-                            alt={child.label}
-                            width={20}
-                            height={20}
-                            className="opacity-80"
-                          />
-                          {child.label}
-                          <Image
-                            src="/white-arrow-right.svg"
-                            alt="arrow"
-                            width={16}
-                            height={16}
-                            className={`ml-auto transition-transform duration-300`}
-                            unoptimized
-                          />
-                        </Link>
+                    <div className="px-[24px]">
+                      {item.subMenu.map((section, sectionIdx) => (
+                        <div key={sectionIdx}>
+                          <h3 className="text-white mb-3 border-b border-[#E5E5E533] border-dashed pb-1">
+                            {section.title}
+                          </h3>
+                          <div className="space-y-3">
+                            {section.links.map((link, linkIdx) => {
+                              const isHovered =
+                                hoveredIndex?.section === sectionIdx &&
+                                hoveredIndex?.link === linkIdx;
+
+                              return (
+                                <Link
+                                  key={linkIdx}
+                                  href={link.link}
+                                  onClick={(e) => handleMenuClick(e, link.link)}
+                                  onMouseEnter={() =>
+                                    setHoveredIndex({
+                                      section: sectionIdx,
+                                      link: linkIdx,
+                                    })
+                                  }
+                                  onMouseLeave={() => setHoveredIndex(null)}
+                                  className="group flex items-center gap-2 px-2 py-1 text-base text-[#A0A0A0] whitespace-nowrap 
+                  hover:text-white hover:bg-[#1E2024] rounded relative transition-transform duration-300 ease-out select-none"
+                                >
+                                  <Image
+                                    src={
+                                      isHovered ? link.activeIcon : link.icon
+                                    }
+                                    alt="menu_icon"
+                                    width={20}
+                                    height={20}
+                                    className="transition-opacity duration-300"
+                                  />
+                                  <span className="flex-1 transition-colors duration-300">
+                                    {link.label}
+                                  </span>
+                                  <Image
+                                    src="/arrow-white.svg"
+                                    alt="arrow"
+                                    width={16}
+                                    height={16}
+                                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0"
+                                  />
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   )}

@@ -26,8 +26,12 @@ const FeatureBanner: React.FC<FeatureBannerItem> = ({
 
         {/* Middle: Title & Description */}
         <div className="md:col-span-4 flex flex-col justify-center md:p-7 md:border-l-2 md:border-dashed border-gray-700">
-          <h2 className="text-[20px] font-[400] leading-[26px] mb-4">{title}</h2>
-          <p className="text-[#FFFFFF] text-[16px] font-[300] leading-[26px]">{description}</p>
+          <h2 className="text-[20px] font-[400] leading-[26px] mb-4">
+            {title}
+          </h2>
+          <p className="text-[#FFFFFF] text-[16px] font-[300] leading-[26px]">
+            {description}
+          </p>
         </div>
         {/* Left: Image */}
         <div className="md:hidden md:col-span-4 flex justify-center items-center">
@@ -41,7 +45,9 @@ const FeatureBanner: React.FC<FeatureBannerItem> = ({
         </div>
         {/* Right: Features with border */}
         <div className="md:col-span-4 md:border-l-2 md:border-gray-700 border-dashed md:p-7">
-          <h3 className="text-[20px] font-[400] leading-[26px] mb-4">{howItSolvesItTitle}</h3>
+          <h3 className="text-[20px] font-[400] leading-[26px] mb-4">
+            {howItSolvesItTitle}
+          </h3>
           <ul className="list-disc list-inside space-y-2 text-[#FFFFFF] text-[16px] font-[300] leading-[26px]">
             {features.map((feat, i) => (
               <li key={i}>{feat}</li>

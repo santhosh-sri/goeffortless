@@ -24,7 +24,7 @@ const Featurecard: React.FC<FeatureCard> = ({
         }`}
       >
         {title && (
-          <p className="text-[14px] md:text-[16px] md:leading-[22px] leading-[23px] md:min-h-[40px] w-[90%]">
+          <p className="text-[14px] md:text-[16px] md:leading-[22px] leading-[23px] md:min-h-[40px] w-[90%] whitespace-pre-line">
             {parse(title)}
           </p>
         )}
@@ -33,8 +33,8 @@ const Featurecard: React.FC<FeatureCard> = ({
             <Image
               src={img}
               alt="Icon"
-              width={20}
-              height={20}
+              width={24}
+              height={24}
               unoptimized={true}
             />
           )}
