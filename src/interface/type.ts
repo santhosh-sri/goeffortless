@@ -268,6 +268,7 @@ export interface ServiceContent {
   caseStudies?: CaseStudyCardProps[];
   faqs?: FAQData;
   marginTop?: boolean
+  officelocation?: Location[];
 }
 
 export interface CareersSectionContent {
@@ -496,3 +497,10 @@ export interface CaseStudyProps {
 export interface FAQData {
   [category: string]: faqs[];
 };
+
+export interface Location {
+  locationName: string;
+  details: string;
+  locationSrc: string;
+  link: string;
+}

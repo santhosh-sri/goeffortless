@@ -475,7 +475,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
             {/* Bottom CTA Buttons */}
             <div className="grid grid-cols-2 gap-4 px-4 py-[30px]">
               <button
-                className="w-full bg-[#F08B32] text-white py-3 px-4 rounded-sm text-[14px] font-[600] transition-colors"
+                className="w-full bg-[#F08B32] text-white py-3 px-4 rounded-sm text-[14px] whitespace-nowrap font-[600] transition-colors"
                 onClick={() => {
                   setExpandedSections(false);
                   setOpenSubMenu(null);

@@ -40,6 +40,7 @@ import MentorsCard from "./MentorsCard";
 import CertificationGrid from "./CertificationAwards";
 import CaseStudiesSection from "./CaseStudySection";
 import FaqComponent from "./FaqComponent";
+import OfficeLocations from "./OfficeLocations";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -108,6 +109,7 @@ const ServiceSection = ({
   caseStudies = [],
   faqs,
   marginTop,
+  officelocation,
 }: ServiceSectionProps) => {
   return (
     <div className={`${bgColour ? bgColour : "bg-[#08090A]"} md:px-[80px]`}>
@@ -569,6 +571,11 @@ const ServiceSection = ({
       {faqs && (
         <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
           <FaqComponent faqs={faqs} />
+        </div>
+      )}
+      {officelocation && (
+        <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
+          <OfficeLocations locations={officelocation} />
         </div>
       )}
 
