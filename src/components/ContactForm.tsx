@@ -210,7 +210,6 @@ export const formSchema = z.object({
   message: z.string().min(2, "Message is required"),
 });
 
-// ✅ Infer Type from Schema
 export type FormValues = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
@@ -228,15 +227,12 @@ const ContactForm = () => {
 
   const [showSucessPopup, setShowSucessPopup] = useState(false);
 
-  // 🧠 Your EmailJS credentials
-  const SERVICE_ID = "service_gefi98g"; // <-- replace with your EmailJS service ID
-  const TEMPLATE_ID = "template_9g7jmuj"; // <-- replace with your EmailJS template ID
-  const PUBLIC_KEY = "wE6WMo76ZFqA582jw"; // <-- replace with your EmailJS public key
+  const SERVICE_ID: any = process.env.SERVICE_ID;
+  const TEMPLATE_ID: any = process.env.TEMPLATE_ID;
+  const PUBLIC_KEY: any = process.env.PUBLIC_KEY;
 
-  // ✅ Handle Form Submission
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
-      // Send email directly with EmailJS
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,

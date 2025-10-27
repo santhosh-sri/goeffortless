@@ -50,6 +50,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           link: "/blog",
           icon: "/book-open.svg",
           activeIcon: "/book-open-active.svg",
+          soon: true,
         },
         {
           label: "FAQs",
@@ -239,10 +240,12 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                 return (
                                   <Link
                                     key={linkIdx}
-                                    href={link.link}
-                                    onClick={(e) =>
-                                      handleMenuClick(e, link.link)
-                                    }
+                                    href={link.soon ? "#" : link.link}
+                                    onClick={(e) => {
+                                      if (!link.soon) {
+                                        handleMenuClick(e, link.link);
+                                      }
+                                    }}
                                     onMouseEnter={() =>
                                       setHoveredIndex({
                                         section: sectionIdx,
@@ -265,13 +268,20 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                     <span className="flex-1 transition-colors duration-300">
                                       {link.label}
                                     </span>
-                                    <Image
-                                      src="/arrow-white.svg"
-                                      alt="arrow"
-                                      width={16}
-                                      height={16}
-                                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                    />
+                                    {link.soon && (
+                                      <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-ttHoves font-normal bg-[#FFA0431A] text-[#FFA043]">
+                                        coming soon
+                                      </span>
+                                    )}
+                                    {!link.soon && (
+                                      <Image
+                                        src="/arrow-white.svg"
+                                        alt="arrow"
+                                        width={16}
+                                        height={16}
+                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                      />
+                                    )}
                                   </Link>
                                 );
                               })}
@@ -429,8 +439,12 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                               return (
                                 <Link
                                   key={linkIdx}
-                                  href={link.link}
-                                  onClick={(e) => handleMenuClick(e, link.link)}
+                                  href={link.soon ? "#" : link.link}
+                                  onClick={(e) => {
+                                    if (!link.soon) {
+                                      handleMenuClick(e, link.link);
+                                    }
+                                  }}
                                   onMouseEnter={() =>
                                     setHoveredIndex({
                                       section: sectionIdx,
@@ -453,13 +467,20 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                   <span className="flex-1 transition-colors duration-300">
                                     {link.label}
                                   </span>
-                                  <Image
-                                    src="/arrow-white.svg"
-                                    alt="arrow"
-                                    width={16}
-                                    height={16}
-                                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0"
-                                  />
+                                  {link.soon && (
+                                    <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-ttHoves font-normal bg-[#FFA0431A] text-[#FFA043]">
+                                      coming soon
+                                    </span>
+                                  )}
+                                  {!link.soon && (
+                                    <Image
+                                      src="/arrow-white.svg"
+                                      alt="arrow"
+                                      width={16}
+                                      height={16}
+                                      className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0"
+                                    />
+                                  )}
                                 </Link>
                               );
                             })}
