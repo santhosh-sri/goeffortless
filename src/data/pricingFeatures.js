@@ -139,8 +139,8 @@ export const pricingData = {
     },
     {
       name: "E-Invoicing & e WayBill Generation",
-      premiumPro: "<span class='text-emerald-400'>✓</span> 5000/month",
-      premium: "<span class='text-emerald-400'>✓</span> 1500/month",
+      premiumPro: "<span class='text-emerald-400'>✓</span> 5000/user/month",
+      premium: "<span class='text-emerald-400'>✓</span> 1500/user/month",
       lite: "✓ 500/month",
       enterprise: "Unlimited",
     },
@@ -246,7 +246,7 @@ export const pricingData = {
       enterprise: "✓",
     }
   ],
-  "Banking and Cashflow Visibility": [
+  "Banking and Cashflow Management": [
     {
       name: "Bank Statement AI Fetch for (All Leading Banks)",
       premiumPro: "(Up To 5 Banks)",

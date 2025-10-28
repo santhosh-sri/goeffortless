@@ -114,7 +114,7 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
                           <div className="text-base font-light text-[#E5E5E5]">
                             {item.answer}
                           </div>
-                          <div className="text-xs text-[#A1A1A1] font-normal flex justify-between border-t border-[#26262699] pt-2">
+                          <div className="text-xs md:text-sm text-[#A1A1A1] font-normal flex justify-between items-center border-t border-[#26262699] pt-2">
                             <p>Was this helpful?</p>
                             <div className="flex gap-1">
                               <button

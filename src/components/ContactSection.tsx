@@ -5,7 +5,7 @@ export default function ContactSection() {
     <section className="">
       <div className="grid md:grid-cols-2 gap-8">
         {/* Quick Contact */}
-        <div className="border border-[#E5E5E533] p-2 md:p-8 rounded-xl">
+        <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
           <h2 className="text-2xl font-light mb-6">
             Quick{" "}
             <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">
@@ -48,7 +48,7 @@ export default function ContactSection() {
         </div>
 
         {/* Connect With Us */}
-        <div className="border border-[#E5E5E533] p-2 md:p-8 rounded-xl">
+        <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
           <h2 className="text-2xl font-light mb-6">
             Connect{" "}
             <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">

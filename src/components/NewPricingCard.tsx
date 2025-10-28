@@ -89,7 +89,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                                 idx == 0
                                   ? "text-[#F08B32] font-[500]"
                                   : "font-[300]"
-                              } border-b border-[#363636] p-3 text-[13px] md:text-[16px] last:border-b-0 text-left leading-5`}
+                              } border-b border-[#363636] p-3 text-[13px] md:text-[16px] last:border-b-0 text-left leading-5 h-[65px] content-center`}
                             >
                               {feature}
                             </li>

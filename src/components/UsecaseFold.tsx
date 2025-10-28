@@ -184,7 +184,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
         {businessTagline && (
           <div
             className={`text-[#FFFFFF] flex flex-col gap-10  md:gap-[40px] items-center justify-center ${
-              isPartnerPage && !isMobile ? "pt-[80px]" : ""
+              isPartnerPage && !isMobile ? "pt-[24px]" : ""
             }`}
           >
             <p className="text-[14px] leading-5 text-center md:text-[20px] max-w-[1350px] mx-auto">

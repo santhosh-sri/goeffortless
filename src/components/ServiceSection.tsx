@@ -169,11 +169,11 @@ const ServiceSection = ({
             <p
               className={` ${
                 isHomePage
-                  ? "md:text-[24px] md:leading-[24px]"
+                  ? "md:text-2xl"
                   : Customtitle
-                  ? "md:text-[24px] text-[14px] md:font-[300] md:leading-[24px] md:mt-[4px]"
-                  : "md:text-[20px] md:leading-[24px] text-[16px]"
-              } text-[#E4E4E7]  leading-[20px] text-center md:mb-[10px] font-[400] md:font-[300] md:pb-[20px]`}
+                  ? "md:text-2xl text-sm md:font-[300] md:mt-[4px]"
+                  : "md:text-xl text-base"
+              } text-[#E4E4E7] text-center md:mb-[10px] font-[400] md:font-[300] md:pb-[20px]`}
             >
               {description}
             </p>

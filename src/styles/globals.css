@@ -654,13 +654,13 @@ body {
   overflow: hidden; /* Add this line */
 }
 
-@font-face {
+/* @font-face {
   font-family: "TT Hoves";
   src: url("/fonts/TTHoves-DemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Ensures better performance by swapping with fallback font */
-}
+  font-display: swap; 
+} */
 
 .customScrollbar {
   &::-webkit-scrollbar {

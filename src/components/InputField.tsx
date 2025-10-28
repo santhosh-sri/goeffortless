@@ -66,7 +66,7 @@ const InputField: React.FC<InputFieldProps> = ({
           background:
             "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
         }}
-        className={`w-full rounded-[4px] m-1 border px-2 py-[9px] md:px-3 md:py-[7px] text-[#B1B1B1] text-[12px] md:text-[13px] focus:outline-none ${
+        className={`w-full rounded-[4px] border px-2 py-[9px] md:px-3 md:py-[7px] text-[#B1B1B1] text-[12px] md:text-[13px] focus:outline-none ${
           error ? "border-red-500" : "border-[#E5E5E533]"
         }`}
         onKeyDown={handleKeyDown}

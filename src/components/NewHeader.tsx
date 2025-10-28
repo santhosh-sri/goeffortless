@@ -139,7 +139,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   }, []);
 
   const primaryCTA =
-    "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-[#fff] md:py-[12px] py-[7px] px-[20px] rounded font-ttHoves";
+    "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-[#fff] md:py-[12px] py-[7px] px-[20px] rounded font-lexend";
   const secondaryCTA =
     "bg-[#FFFFFF] text-[16px] font-[600] text-[#52525B] py-[12px] md:px-[36px] px-3 rounded";
 
@@ -157,7 +157,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
 
       <header
         className={`bg-[#08090A] text-white ${
-          isMobile ? "pt-[20px] pb-[16px] px-4" : "pt-[40px] px-[80px]"
+          isMobile ? "pt-[20px] pb-[16px] px-4" : "py-[20px] px-[80px]"
         } relative z-50`}
       >
         <div className="flex justify-between items-center rounded-xl">
@@ -269,7 +269,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                       {link.label}
                                     </span>
                                     {link.soon && (
-                                      <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-ttHoves font-normal bg-[#FFA0431A] text-[#FFA043]">
+                                      <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-lexend  font-normal bg-[#FFA0431A] text-[#FFA043]">
                                         coming soon
                                       </span>
                                     )}
@@ -424,10 +424,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   </div>
 
                   {item.subMenu && openSubMenu === item.label && (
-                    <div className="px-[24px]">
+                    <div className="px-6 pb-4">
                       {item.subMenu.map((section, sectionIdx) => (
                         <div key={sectionIdx}>
-                          <h3 className="text-white mb-3 border-b border-[#E5E5E533] border-dashed pb-1">
+                          <h3 className="text-white mb-3 border-b border-[#E5E5E533] border-dashed pt-2 pb-4">
                             {section.title}
                           </h3>
                           <div className="space-y-3">
@@ -468,7 +468,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                     {link.label}
                                   </span>
                                   {link.soon && (
-                                    <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-ttHoves font-normal bg-[#FFA0431A] text-[#FFA043]">
+                                    <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-lexend font-normal bg-[#FFA0431A] text-[#FFA043]">
                                       coming soon
                                     </span>
                                   )}

@@ -85,7 +85,7 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
             />
           </button>
           {isOpen === index && (
-            <div className="bg-[#15181B]">
+            <div className="">
               <FeatureWrapper
                 GridCols={false}
                 {...feature.featureCardsSection}

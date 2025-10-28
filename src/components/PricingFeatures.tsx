@@ -35,14 +35,15 @@ const PricingFeatures = ({
     Record<string, boolean>
   >({
     Overview: true,
+    "Integrations, Security & Support": false,
     "Fleet on Street Selling": false,
     "Purchase & Expense Management": false,
-    "Cross team Workflows": false,
-    "Banking and Cashflow Visibility": false,
-    "Buyer Portal": false,
-    "Field & Office Team Tracking": false,
+    "Banking and Cashflow Management": false,
+    "Cross-Team Workflows": false,
+    "Office & Live Field Team Tracking": false,
+    "Customer Workflows": false,
     "Business Health Dashboard": false,
-    "Integrations & Support": false,
+    "Buyer Portal (Unlimited)": false,
   });
 
   const scrollRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -135,12 +136,12 @@ const PricingFeatures = ({
         }
         .sticky-header {
           position: sticky;
-          top: 80px;
+          top: 70px;
           z-index: 10;
         }
         .desktop-sticky-header {
           position: sticky;
-          top: -10px;
+          top: 88px;
           z-index: 10;
         }
       `}</style>

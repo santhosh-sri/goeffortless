@@ -103,7 +103,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
             background:
               "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
           }}
-          className={`w-full m-1  px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-[#B1B1B1] placeholder:text-gray-500 cursor-pointer hover:border-[#606162] focus:outline-none ${
+          className={`w-full px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-[#B1B1B1] placeholder:text-gray-500 cursor-pointer hover:border-[#606162] focus:outline-none ${
             errors[field.name] ? "border-red-500" : "border-[#E5E5E533]"
           }`}
           {...register(field.name)}
@@ -122,7 +122,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
 
         {showDropdown && (
           <div
-            className={`absolute top-8 mt-1 bg-[#121212]  rounded-md shadow-md max-h-40 overflow-y-auto z-10 w-full rounded-tl-none rounded-tr-none`}
+            className={`absolute top-8 bg-[#121212] rounded-md shadow-md max-h-40 overflow-y-auto z-10 w-full rounded-tl-none rounded-tr-none`}
           >
             {filteredOptions?.length === 0 ? (
               <div className="px-3 py-2 text-[12px] text-gray-500">

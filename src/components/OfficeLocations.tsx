@@ -11,8 +11,8 @@ interface OfficeLocationsProps {
 
 const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
   return (
-    <section className="w-full py-10">
-      <div className="border border-[#E5E5E533] p-2 md:p-8 rounded-xl">
+    <section className="w-full pb-10">
+      <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
         <h1 className="text-2xl md:text-3xl font-bold text-white mb-8">
           Office{" "}
           <span className="bg-custom-gradient bg-clip-text text-transparent">
@@ -24,9 +24,9 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
           {locations.map((loc, index) => (
             <div
               key={index}
-              className="relative rounded-lg overflow-hidden h-[320px]"
+              className="relative rounded-lg overflow-hidden md:h-[320px]"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden max-md:h-[200px]">
                 <Image
                   src={loc.locationSrc}
                   alt={loc.locationName}
@@ -68,7 +68,7 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
       <div className="mt-8">
         <ContactSection />
       </div>
-      <div className="border border-[#E5E5E533] p-2 md:p-8 rounded-xl mt-8">
+      <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl mt-8">
         <ContactForm />
       </div>
     </section>
