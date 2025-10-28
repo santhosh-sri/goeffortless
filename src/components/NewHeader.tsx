@@ -213,7 +213,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   <Image
                     src={
                       openMenu === "resources"
-                        ? "/resource-right.svg"
+                        ? "/chevron-down.svg"
                         : "/resource-down.svg"
                     }
                     alt="resource"
@@ -380,7 +380,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   className="border-b border-[#E5E5E533] border-dashed"
                 >
                   <div
-                    className={`flex items-center justify-between py-4 px-[24px] text-white cursor-pointer transition-colors ${
+                    className={`flex items-center justify-between py-3 px-[24px] text-white cursor-pointer transition-colors ${
                       openSubMenu === item.label
                         ? "!text-[#F08B32]"
                         : "text-white hover:text-[#F08B32]"
@@ -424,10 +424,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   </div>
 
                   {item.subMenu && openSubMenu === item.label && (
-                    <div className="px-6 pb-4">
+                    <div className="px-6 pb-3 overflow-y-scroll h-[320px]">
                       {item.subMenu.map((section, sectionIdx) => (
                         <div key={sectionIdx}>
-                          <h3 className="text-white mb-3 border-b border-[#E5E5E533] border-dashed pt-2 pb-4">
+                          <h3 className="text-white mb-3 border-b border-[#E5E5E533] border-dashed pt-2 pb-3">
                             {section.title}
                           </h3>
                           <div className="space-y-3">
@@ -494,7 +494,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
             </div>
 
             {/* Bottom CTA Buttons */}
-            <div className="grid grid-cols-2 gap-4 px-4 py-[30px]">
+            <div className="grid grid-cols-2 gap-4 px-4 py-4">
               <button
                 className="w-full bg-[#F08B32] text-white py-3 px-4 rounded-sm text-[14px] whitespace-nowrap font-[600] transition-colors"
                 onClick={() => {
