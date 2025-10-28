@@ -427,7 +427,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     <div className="px-6 pb-3 overflow-y-scroll h-[320px]">
                       {item.subMenu.map((section, sectionIdx) => (
                         <div key={sectionIdx}>
-                          <h3 className="text-white mb-3 border-b border-[#E5E5E533] border-dashed pt-2 pb-3">
+                          <h3 className="text-white my-1 border-t border-[#E5E5E533] border-dashed pt-2 pb-1">
                             {section.title}
                           </h3>
                           <div className="space-y-3">

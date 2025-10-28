@@ -223,14 +223,14 @@ export const contactFormFields = [
     ],
     validation: { required: "Please select a preferred contact time" },
   },
-  {
-    name: "subject",
-    label: "Subject",
-    type: "text",
-    colSpan: 2,
-    placeholder: 'What’s this about?',
-    validation: { required: "Subject is required" },
-  },
+  // {
+  //   name: "subject",
+  //   label: "Subject",
+  //   type: "text",
+  //   colSpan: 2,
+  //   placeholder: 'What’s this about?',
+  //   validation: { required: "Subject is required" },
+  // },
   {
     name: "message",
     label: "Message",

@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function ContactSection() {
   return (
     <section className="">
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8">
         {/* Quick Contact */}
         <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
-          <h2 className="text-2xl font-light mb-6">
+          <h2 className="text-lg md:text-[32px]  font-light mb-4 md:mb-8">
             Quick{" "}
             <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">
               Contact
@@ -49,7 +49,7 @@ export default function ContactSection() {
 
         {/* Connect With Us */}
         <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
-          <h2 className="text-2xl font-light mb-6">
+          <h2 className="text-lg md:text-[32px]  font-light mb-4 md:mb-8">
             Connect{" "}
             <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">
               With Us

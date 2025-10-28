@@ -13,20 +13,20 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
   return (
     <section className="w-full pb-10">
       <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
-        <h1 className="text-2xl md:text-3xl font-bold text-white mb-8">
+        <h1 className="text-xl md:text-[32px]  font-light text-white mb-4 md:mb-8">
           Office{" "}
-          <span className="bg-custom-gradient bg-clip-text text-transparent">
+          <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
             Locations
           </span>
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {locations.map((loc, index) => (
             <div
               key={index}
               className="relative rounded-lg overflow-hidden md:h-[320px]"
             >
-              <div className="overflow-hidden max-md:h-[200px]">
+              <div className="overflow-hidden max-md:h-[188px]">
                 <Image
                   src={loc.locationSrc}
                   alt={loc.locationName}
@@ -36,7 +36,7 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
                 />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.1)_0%,_#000000_50%)] p-2 md:p-5 text-white">
+              <div className="md:absolute bottom-0 left-0 right-0 md:bg-[linear-gradient(180deg,_rgba(0,0,0,0.1)_0%,_#000000_50%)] p-2 md:p-5 text-white">
                 <h2 className="text-base font-medium text-[#F08B32]">
                   {loc.locationName}
                 </h2>
@@ -65,10 +65,10 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
           ))}
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-6 md:mt-8">
         <ContactSection />
       </div>
-      <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl mt-8">
+      <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl mt-6 md:mt-8">
         <ContactForm />
       </div>
     </section>

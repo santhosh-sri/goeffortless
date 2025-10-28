@@ -58,7 +58,7 @@ const Logocarousel = () => {
   };
 
   return (
-    <div className="!w-screen md:mt-[10px] px-4 pt-[20px]">
+    <div className="!w-screen md:mt-[10px] px-4">
       <Slider
         {...logosliderSettings}
         className="flex items-center justify-center"

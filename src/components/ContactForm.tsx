@@ -22,8 +22,8 @@ export const formSchema = z.object({
   preferred_contact_time: z
     .string()
     .min(1, "Please select a preferred contact time"),
-  subject: z.string().min(2, "Subject is required"),
-  message: z.string().min(2, "Message is required"),
+  // subject: z.string().min(2, "Subject is required"),
+  message: z.string(),
 });
 
 export type FormValues = z.infer<typeof formSchema>;
@@ -60,7 +60,7 @@ const ContactForm = () => {
           phone: data.phone,
           your_current_erp: data.your_current_erp,
           preferred_contact_time: data.preferred_contact_time,
-          subject: data.subject,
+          // subject: data.subject,
           message: data.message,
         },
         PUBLIC_KEY
@@ -105,7 +105,9 @@ const ContactForm = () => {
               >
                 <p className="text-[#FFFFFF] font-normal text-[14px]">
                   {field.label}
-                  <span className="text-[#F08B32]">*</span>
+                  {field?.type !== "textArea" && (
+                    <span className="text-[#F08B32]">*</span>
+                  )}
                 </p>
 
                 {["text", "number", "email"].includes(field.type) && (

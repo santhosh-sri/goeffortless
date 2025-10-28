@@ -95,7 +95,7 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
                       className="rounded-[8px] border-t-0 bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5
             drop-shadow-sm select-none cursor-pointer"
                     >
-                      <div className="w-full px-6 py-4 flex items-center justify-between">
+                      <div className="w-full px-4 py-4 flex items-center justify-between gap-3">
                         <span className="text-left text-base text-[#FAFAFA] font-normal">
                           {item.question}
                         </span>
@@ -110,7 +110,7 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
                         />
                       </div>
                       {isOpen && (
-                        <div className="px-6 pb-4 flex flex-col gap-3 transition-all duration-700 ease-in-out">
+                        <div className="px-4 pb-4 flex flex-col gap-3 transition-all duration-700 ease-in-out">
                           <div className="text-base font-light text-[#E5E5E5]">
                             {item.answer}
                           </div>

@@ -24,7 +24,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
 
   return (
     <div>
-      <div className={`max-md:fixed max-md:top-0 w-full max-md:z-[999]`}>
+      <div className={`fixed top-0 w-full z-[999]`}>
         <Header {...headerItems} isMobile={isMobile} />
       </div>
       <div className="bg-[#08090A] text-[#EAEBEB]">
