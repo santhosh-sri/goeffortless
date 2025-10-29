@@ -383,7 +383,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     className={`flex items-center justify-between py-3 px-[24px] text-white cursor-pointer transition-colors ${
                       openSubMenu === item.label
                         ? "!text-[#F08B32]"
-                        : "text-white hover:text-[#F08B32]"
+                        : "text-white"
                     }`}
                     onClick={() => {
                       if (item.subMenu) {

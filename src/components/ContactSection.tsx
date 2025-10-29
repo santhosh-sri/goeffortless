@@ -15,7 +15,7 @@ export default function ContactSection() {
 
           <div className="space-y-5">
             {/* Email */}
-            <div className="flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-2 md:p-4">
+            <div className="flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-3 md:p-5">
               <Image src={"/envelope.svg"} alt="Icon" width={24} height={24} />
               <div>
                 <p className="font-normal text-base text-white">
@@ -29,7 +29,7 @@ export default function ContactSection() {
 
             {/* Phone */}
             <div
-              className="flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-2 md:p-4"
+              className="flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-3 md:p-5"
               onClick={() => {
                 window.location.href = `tel:+919176544422`;
               }}
@@ -80,7 +80,7 @@ export default function ContactSection() {
             ].map((social) => (
               <button
                 key={social.name}
-                className="w-full flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-2 md:p-4 hover:bg-neutral-800 transition"
+                className="w-full flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-3 md:p-5 hover:bg-neutral-800 transition"
               >
                 <div onClick={() => window.open(social?.url ?? "")}>
                   <Image

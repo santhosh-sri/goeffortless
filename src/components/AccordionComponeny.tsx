@@ -74,9 +74,7 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
             </div>
             <Image
               src={
-                isOpen === index
-                  ? "/arrow-up-oramge.svg"
-                  : "/arrow-down-white.svg"
+                isOpen === index ? "/chevron-up.svg" : "/arrow-down-white.svg"
               }
               alt="open or close accordion"
               width={16}

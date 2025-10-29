@@ -173,7 +173,7 @@ const ServiceSection = ({
                   : Customtitle
                   ? "md:text-2xl text-sm md:font-[300] md:mt-[4px]"
                   : "md:text-xl text-base"
-              } text-[#E4E4E7] text-center md:mb-[10px] font-[400] md:font-[300] md:pb-[20px]`}
+              } text-[#E4E4E7] text-center font-[400] md:font-[300]`}
             >
               {description}
             </p>
