@@ -103,7 +103,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
             background:
               "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
           }}
-          className={`w-full px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-[#B1B1B1] placeholder:text-gray-500 cursor-pointer hover:border-[#606162] focus:outline-none ${
+          className={`w-full px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-[#B1B1B1] placeholder-[#B1B1B1] cursor-pointer hover:border-[#606162] focus:outline-none ${
             errors[field.name] ? "border-red-500" : "border-[#E5E5E533]"
           }`}
           {...register(field.name)}

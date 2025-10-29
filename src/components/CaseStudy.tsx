@@ -100,7 +100,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     <>
       <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]">
         <div className="z-[9999] relative md:p-[20px] w-[1280px] h-full md:h-auto flex flex-col mx-5 max-md:overflow-y-auto">
-          <div className="flex justify-end hidden md:flex">
+          <div className="justify-end hidden md:flex">
             <div className="flex gap-3 bg-white py-2 px-4 items-center">
               <button
                 onClick={handleDownload}
