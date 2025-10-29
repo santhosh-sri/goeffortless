@@ -1,18 +1,11 @@
+import { CalcomConfig } from "@/utils/calConfig";
 import Image from "next/image";
 import React from "react";
 
-const RedirectCta = ({
-  setShowForm,
-  ctaText,
-}: {
-  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
-  ctaText?: string;
-}) => {
+const RedirectCta = ({ ctaText }: { ctaText?: string }) => {
   return (
     <button
-      onClick={() => {
-        setShowForm(true);
-      }}
+      {...CalcomConfig}
       id="democta"
       className="
         group

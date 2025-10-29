@@ -25,7 +25,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
       <h2 className="font-medium text-white text-base md:text-xl leading-[100%] tracking-[0] mt-1">
         {title}
       </h2>
-      <p className="font-light text-sm md:text-base text-white leading-[100%] tracking-[0]">
+      <p className="font-light text-sm md:text-base text-white">
         {description}
       </p>
       <p className="flex items-center gap-1 mt-1">

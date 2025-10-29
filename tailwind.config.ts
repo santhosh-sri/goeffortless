@@ -14,7 +14,6 @@ export default {
       },
       fontFamily: {
         lexend: ["var(--font-lexend)"],
-        ttHoves: ['"TT Hoves"'],
       },
       backgroundImage: {
         "custom-gradient":

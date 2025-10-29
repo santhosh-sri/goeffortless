@@ -1,4 +1,5 @@
 import { CallBackcards } from "@/interface/type";
+import { CalcomConfig } from "@/utils/calConfig";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
@@ -12,7 +13,6 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
   image,
   primary = false,
   redirectUrl,
-  setShowForm = () => {},
   icon,
 }) => {
   const router = useRouter();
@@ -21,7 +21,6 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
       window.location.href = redirectUrl;
       return;
     }
-    setShowForm(true);
   };
 
   return (
@@ -61,6 +60,7 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
         <div className="mt-auto flex flex-col items-center gap-[8px]">
           <button
             onClick={handleClick}
+            {...CalcomConfig}
             className={`group relative overflow-hidden transition-all duration-500 ease-in-out
             mt-4 py-2 px-4 rounded flex items-center justify-center
             text-[14px] md:text-[16px] font-[500] w-[100%]
