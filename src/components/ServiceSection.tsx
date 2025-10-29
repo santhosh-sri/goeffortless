@@ -39,9 +39,10 @@ import Verticalslider from "./VerticlaSlider";
 import MentorsCard from "./MentorsCard";
 import CertificationGrid from "./CertificationAwards";
 import CaseStudiesSection from "./CaseStudySection";
+import FaqComponent from "./FaqComponent";
+import OfficeLocations from "./OfficeLocations";
 
 interface ServiceSectionProps extends ServiceContent {
-  setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   isMobile?: boolean;
   isHomePage?: boolean;
   isPricingPage?: boolean;
@@ -99,7 +100,6 @@ const ServiceSection = ({
   jobCardDetails,
   colouredTitle,
   faqsSection = [],
-  setShowForm = () => {},
   isMobile,
   isCareersPage = false,
   isPricingPage,
@@ -107,8 +107,10 @@ const ServiceSection = ({
   setSelectedPlan,
   certificate,
   caseStudies = [],
+  faqs,
+  marginTop,
+  officelocation,
 }: ServiceSectionProps) => {
-
   return (
     <div className={`${bgColour ? bgColour : "bg-[#08090A]"} md:px-[80px]`}>
       {showGreyTopBorder && (
@@ -117,7 +119,7 @@ const ServiceSection = ({
       {caseStudies?.length === 0 && (
         <div
           className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${
-            tagLine === "Governance & Recognition" ? "mt-[64px] md:mt-0" : ""
+            marginTop ? "mt-[64px] md:mt-0" : ""
           } py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
             isPricingPage || isPricingPlanPage
               ? "md:py-[64px]"
@@ -133,7 +135,7 @@ const ServiceSection = ({
           {Customtitle && (
             <h1
               className={`${
-                tagLine === "Governance & Recognition" ? "" : "max-md:pt-[80px]"
+                marginTop ? "" : "max-md:pt-[80px]"
               } font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
               style={{
                 background:
@@ -167,11 +169,11 @@ const ServiceSection = ({
             <p
               className={` ${
                 isHomePage
-                  ? "md:text-[24px] md:leading-[24px]"
+                  ? "md:text-2xl"
                   : Customtitle
-                  ? "md:text-[24px] text-[14px] md:font-[300] md:leading-[24px] md:mt-[4px]"
-                  : "md:text-[20px] md:leading-[24px] text-[16px]"
-              } text-[#E4E4E7]  leading-[20px] text-center md:mb-[10px] font-[400] md:font-[300] md:pb-[20px]`}
+                  ? "md:text-2xl text-sm md:font-[300] md:mt-[4px]"
+                  : "md:text-xl text-base"
+              } text-[#E4E4E7] text-center font-[400] md:font-[300]`}
             >
               {description}
             </p>
@@ -210,20 +212,13 @@ const ServiceSection = ({
                   />
                 ))}{" "}
               </div>
-              <BusineesCardSection
-                setShowForm={setShowForm}
-                isMobile={isMobile}
-              />
+              <BusineesCardSection isMobile={isMobile} />
             </div>
           )}
           {callBackCards && (
             <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center mt-[-10px]">
               {callBackCards?.map((card, index) => (
-                <CallbackCardSection
-                  key={index}
-                  {...card}
-                  setShowForm={setShowForm}
-                />
+                <CallbackCardSection key={index} {...card} />
               ))}
             </div>
           )}
@@ -241,10 +236,7 @@ const ServiceSection = ({
               ) : (
                 <HomePageCarousel {...homePageVerticalSlider} />
               )}{" "}
-              <RedirectCta
-                setShowForm={setShowForm}
-                ctaText={"Explore Effortless Now"}
-              />
+              <RedirectCta ctaText={"Explore Effortless Now"} />
             </div>
           )}
           {verticalSlider && <Verticalslider section={verticalSlider} />}
@@ -406,7 +398,6 @@ const ServiceSection = ({
               {
                 <div className="md:pt-[40px] max-md:w-full">
                   <RedirectCta
-                    setShowForm={setShowForm}
                     ctaText={
                       isMobile
                         ? "Discover How"
@@ -490,7 +481,6 @@ const ServiceSection = ({
             <div className="max-md:hidden flex flex-col md:gap-[4.5rem] gap-8 md:items-center md:justify-center mt-[-20px]">
               <NewPricingCard
                 {...newPricingCards}
-                setShowForm={setShowForm}
                 setSelectedPlan={setSelectedPlan}
               />
             </div>
@@ -524,10 +514,7 @@ const ServiceSection = ({
           } flex flex-col md:gap-[4.5rem] gap-8 !w-full max-md:pb-[32px] md:max-w-[1360px] md:mx-auto`}
         >
           {pricingFeatures && (isPricingPlanPage || !isMobile) && (
-            <PricingFeatures
-              setShowForm={setShowForm}
-              setSelectedPlan={setSelectedPlan}
-            />
+            <PricingFeatures setSelectedPlan={setSelectedPlan} />
           )}{" "}
           {pricingCards && !isPricingPlanPage && (
             <div
@@ -538,7 +525,6 @@ const ServiceSection = ({
                 <PricingSection
                   key={index}
                   {...cardContents}
-                  setShowForm={setShowForm}
                   setSelectedPlan={setSelectedPlan}
                 />
               ))}
@@ -557,7 +543,6 @@ const ServiceSection = ({
               <div className={`${!isHomePage ? "max-md:w-[50%]" : ""}`}>
                 <Democta
                   ctaText={!isHomePage ? "Contact Us" : "View Full Details"}
-                  setShowForm={setShowForm}
                 />
               </div>
             )}{" "} */}
@@ -580,7 +565,17 @@ const ServiceSection = ({
           id={href}
           className="md:pb-[100px] pb-[60px] px-5 md:p-0 scroll-mt-20"
         >
-          <CaseStudiesSection caseStudies={caseStudies}/>
+          <CaseStudiesSection caseStudies={caseStudies} />
+        </div>
+      )}
+      {faqs && (
+        <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
+          <FaqComponent faqs={faqs} />
+        </div>
+      )}
+      {officelocation && (
+        <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
+          <OfficeLocations locations={officelocation} />
         </div>
       )}
 

@@ -74,9 +74,7 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
             </div>
             <Image
               src={
-                isOpen === index
-                  ? "/arrow-up-oramge.svg"
-                  : "/arrow-down-white.svg"
+                isOpen === index ? "/chevron-up.svg" : "/arrow-down-white.svg"
               }
               alt="open or close accordion"
               width={16}
@@ -85,7 +83,7 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
             />
           </button>
           {isOpen === index && (
-            <div className="bg-[#15181B]">
+            <div className="">
               <FeatureWrapper
                 GridCols={false}
                 {...feature.featureCardsSection}

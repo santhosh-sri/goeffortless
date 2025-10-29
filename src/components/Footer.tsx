@@ -101,7 +101,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                     "url" in item ? (
                       <Link href={item.url || ""} key={idx}>
                         <li
-                          className="text-[#FFFFFF] text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
+                          className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
                           key={idx}
                         >
                           {item.title ?? ""}
@@ -109,7 +109,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                       </Link>
                     ) : (
                       <li
-                        className="text-[#FFFFFF] text-[13px] md:text-[16px] font-[300] leading-5 md:leading-normal"
+                        className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] leading-5 md:leading-normal"
                         key={idx}
                       >
                         {typeof item === "string" ? parse(item) : item}

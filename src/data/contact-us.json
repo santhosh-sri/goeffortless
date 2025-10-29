@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Contact Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+    "description": "Effortless is a Team of Problem-Solvers on a Mission to solve the jhanjhat that comes with Growth for Ambitious Indian SMBs. Crafted by CAs, driven by Purpose. Join us and help reshape how India does business.",
+    "og": {
+      "title": "Contact Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+      "description": "Built by Founders who understand the complexity that comes with Growth, at Effortless, we're solving real-world problems with smart automation and a bias for action. Come build what matters.",
+      "url": "https://www.goeffortless.ai/contact-us",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "serviceContent": [
+    {
+      "tagLine": "Contact Us",
+      "marginTop": true,
+      "Customtitle": "<span style=\"color: #FFFFFF; font-weight: 300;\">Let's Start Something  </span></br> <span style=\"font-weight: 500;\">Amazing Together</span>",
+      "description": "Whether you have a question, want to collaborate, or need support, we're here to help. Reach out through any of our channels and connect with our global team.",
+      "officelocation": [
+        {
+          "locationName": "Chennai HQ",
+          "locationSrc": "/chennailocation.jpg",
+          "details": "Agrya FinLabs Pvt. Ltd. Maan Sarovar Tower, First Floor 375/271A, Scheme Rd, Teynampet, Chennai, Tamil Nadu - 600018",
+          "link": "https://maps.app.goo.gl/ZU1JDbuuFzVWnRZg9"
+        },
+        {
+          "locationName": "Bangalore",
+          "locationSrc": "/bangalorelocation.jpg",
+          "details": "4th floor, 241, Tribe CoWorking, above LG showroom, Sector 6, HSR Layout, Bengaluru, Karnataka - 560102",
+          "link": "https://maps.app.goo.gl/29sAA2a3pFsMqywB6"
+        },
+        {
+          "locationName": "Mumbai",
+          "locationSrc": "/mumbailocation.jpg",
+          "details": "1206-07, Ajmera Sikova, LBS Marg, Ashok Silk Mills Ln, Ghatkopar, Mumbai, Maharashtra - 400086",
+          "link": "https://maps.app.goo.gl/KzuyVBkWb6CkeA5Q6"
+        },
+        {
+          "locationName": "Hyderabad",
+          "locationSrc": "/hyderabadlocation.jpg",
+          "details": "7th Floor, Vasavi MPM Grand, 824, beside Ameerpet Metro, Hyderabad, Telangana - 500073",
+          "link": "https://maps.app.goo.gl/oYDrhUz1kiL7X8jM6"
+        },
+        {
+          "locationName": "NCR",
+          "locationSrc": "/ncrlocation.jpg",
+          "details": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}

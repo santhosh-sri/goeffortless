@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import parse from "html-react-parser";
 import { preloadedPDFs, printPdf } from "@/utils/printPdf";
+import { CalcomConfig } from "@/utils/calConfig";
 
 const CaseStudy: React.FC<CaseStudyProps> = ({
   title,
@@ -20,7 +21,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   onClose,
 }) => {
   const primaryCTA =
-    "flex justify-center gap-2 items-center bg-[#F08B32] xl:text-base text-sm xl:font-[600] font-[400] text-[#fff] xl:py-[14px] py-[7px] px-[16px] rounded-[32px] font-ttHoves max-md:w-full";
+    "flex justify-center gap-2 items-center bg-[#F08B32] xl:text-base text-sm xl:font-[600] font-[400] text-[#fff] xl:py-[14px] py-[7px] px-[16px] rounded-[32px] font-lexend max-md:w-full";
 
   const handleDownload = async () => {
     try {
@@ -44,14 +45,15 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   };
 
   const handleEmail = () => {
-    const recipient = "hello@goeffortless.ai";
+    const url = encodeURIComponent(window.location.href);
+    const cc = "hello@goeffortless.ai";
     const subject =
       "Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights";
-    const body = `I think this content I found on www.goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — http://goeffortless.vercel.app/case-studies`;
+    const body = `I think this content I found on goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — ${url}`;
 
-    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:?cc=${encodeURIComponent(
+      cc
+    )}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.open(mailtoLink, "_blank", "noopener,noreferrer");
   };
@@ -59,7 +61,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   const handleShare = () => {
     const url = encodeURIComponent(window.location.href);
     const text = encodeURIComponent(
-      `I think this content I found on www.goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — http://goeffortless.vercel.app/case-studies`
+      `I think this content I found on goeffortless.ai may interest you: Unlocking Smarter Business and Financial Workflows with Effortless Automation and Insights — ${url}`
     );
     window.open(
       `https://www.linkedin.com/sharing/share-offsite/?url=${url}&text=${text}`,
@@ -98,7 +100,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     <>
       <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[40px] pb-[40px]">
         <div className="z-[9999] relative md:p-[20px] w-[1280px] h-full md:h-auto flex flex-col mx-5 max-md:overflow-y-auto">
-          <div className="flex justify-end hidden md:flex">
+          <div className="justify-end hidden md:flex">
             <div className="flex gap-3 bg-white py-2 px-4 items-center">
               <button
                 onClick={handleDownload}
@@ -356,12 +358,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   </p>
                 </div>
                 <div className="flex justify-end">
-                  <button
-                    className={primaryCTA}
-                    data-cal-namespace="demo"
-                    data-cal-link="effortless/demo"
-                    data-cal-config='{"layout":"month_view"}'
-                  >
+                  <button className={primaryCTA} {...CalcomConfig}>
                     <Image
                       src="/window-cursor.svg"
                       alt="bullet"

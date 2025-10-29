@@ -28,7 +28,13 @@
       { "src": "/Insta.png", "width": 150, "height": 48 },
       { "src": "/integral.svg", "width": 57, "height": 48 },
       { "src": "/GallaBox.v1.2.png", "width": 74, "height": 19 },
-      { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 }
+      { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 },
+      { "src": "/mithaicana-logo.png", "width": 182, "height": 48 },
+      { "src": "/GS-logo.png", "width": 180, "height": 48 },
+      { "src": "/kanvar-logo.png", "width": 76, "height": 48 },
+      { "src": "/kria.png", "width": 117, "height": 48 },
+      { "src": "/image.png", "width": 68, "height": 48 },
+      { "src": "/krish_fashion.png", "width": 150, "height": 48 }
     ]
   },
   "serviceContent": [
@@ -93,7 +99,7 @@
       "bgColour": "bg-[#15181B]",
       "title": "Grow with Us. ",
       "colouredTitle": "Earn More. Get Rewarded.",
-      "description":"As an Effortless partner, you get access to exclusive benefits, tools, and commissions. Here's why Partners love Effortless:",
+      "description": "As an Effortless partner, you get access to exclusive benefits, tools, and commissions. Here's why Partners love Effortless:",
       "partnerBenifits": [
         {
           "icon": "/licative-commisions.svg",

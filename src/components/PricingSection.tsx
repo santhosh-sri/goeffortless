@@ -1,4 +1,5 @@
 import { PricingSectionContents } from "@/interface/type";
+import { CalcomConfig } from "@/utils/calConfig";
 import parse from "html-react-parser";
 import Image from "next/image";
 import React from "react";
@@ -11,7 +12,6 @@ const PricingSection: React.FC<PricingSectionContents> = ({
   packageDetails,
   showAnnum = true,
   Recommended = false,
-  setShowForm,
   setSelectedPlan,
 }) => {
   return (
@@ -74,13 +74,13 @@ const PricingSection: React.FC<PricingSectionContents> = ({
           <button
             className="bg-[#F08B32] text-white px-4 py-2 rounded-[4px] hover:bg-[#D87A2C] transition-colors duration-300 text-[14px] font-[500]"
             onClick={() => {
-              if (setShowForm && setSelectedPlan) {
-                setShowForm(true);
+              if (setSelectedPlan) {
                 if (packageTitle) {
                   setSelectedPlan(packageTitle);
                 }
               }
             }}
+            {...CalcomConfig}
           >
             Request a Demo
           </button>

@@ -266,6 +266,9 @@ export interface ServiceContent {
   isPricingPlanPage?: boolean;
   certificate?:CertificationData[];
   caseStudies?: CaseStudyCardProps[];
+  faqs?: FAQData;
+  marginTop?: boolean
+  officelocation?: Location[];
 }
 
 export interface CareersSectionContent {
@@ -491,3 +494,13 @@ export interface CaseStudyProps {
   onClose: () => void;
 }
 
+export interface FAQData {
+  [category: string]: faqs[];
+};
+
+export interface Location {
+  locationName: string;
+  details: string;
+  locationSrc: string;
+  link: string;
+}

@@ -79,7 +79,7 @@ const RequestDemoForm = ({
       prefer_contact_time: data.preferred_contact_time,
       package_name: selectedPlan,
       team_size: data?.team_size,
-};
+    };
 
     try {
       const response = await axios.post("/api/processlead", payload);
@@ -156,7 +156,7 @@ const RequestDemoForm = ({
                       />
                     )}
 
-                    {field.type === "select" && field?.options?.length ? (
+                    {/* {field.type === "select" && field?.options?.length ? (
                       <SearchableDropdown
                         field={{
                           ...field,
@@ -167,7 +167,7 @@ const RequestDemoForm = ({
                         watch={watch}
                         errors={errors}
                       />
-                    ) : null}
+                    ) : null} */}
                   </div>
                 ))}
               </form>

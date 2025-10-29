@@ -2,13 +2,10 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Header from "./NewHeader";
 import { Content } from "@/interface/type";
-import RequestDemoForm from "./DemoForm";
 
-const SecurityPractices: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
-  headerItems,
-  footerData,
-}) => {
-  const [showForm, setShowForm] = useState<boolean>(false);
+const SecurityPractices: React.FC<
+  Pick<Content, "headerItems" | "footerData">
+> = ({ headerItems, footerData }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
@@ -24,24 +21,10 @@ const SecurityPractices: React.FC<Pick<Content, "headerItems" | "footerData">> =
     };
   }, []);
 
-  useEffect(() => {
-    if (showForm) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showForm]);
-
   return (
     <div>
-      <div className={`max-md:fixed max-md:top-0 w-full max-md:z-[999]`}>
-        <Header
-          {...headerItems}
-          isMobile={isMobile}
-        />
+      <div className={`fixed top-0 w-full z-[999]`}>
+        <Header {...headerItems} isMobile={isMobile} />
       </div>
       <div className="bg-[#08090A] text-[#EAEBEB]">
         <div className="container mx-auto px-4 text-center pt-32 pb-16 md:pt-40 md:pb-20">
@@ -238,15 +221,10 @@ const SecurityPractices: React.FC<Pick<Content, "headerItems" | "footerData">> =
             . Thank you for trusting Effortless with your business needs.
           </p>
         </div>
-         {showForm && (
-            <RequestDemoForm
-              setShowForm={setShowForm}
-            />
-          )}
       </div>
       <Footer {...footerData} isMobile={isMobile} />
     </div>
   );
 };
 
-export default SecurityPractices; 
+export default SecurityPractices;

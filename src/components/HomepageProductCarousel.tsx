@@ -18,7 +18,7 @@ const HomePageCarousel: FC<HomePageVerticalSlider> = ({
   return (
     <div className="text-white">
       <div className="flex gap-8 items-start">
-        <div>
+        <div className="flex flex-col gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -79,4 +79,3 @@ const HomePageCarousel: FC<HomePageVerticalSlider> = ({
   );
 };
 export default HomePageCarousel;
-

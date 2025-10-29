@@ -1,6 +1,7 @@
 import parse from "html-react-parser";
 import { useRef, useState } from "react";
 import { pricingData, pricingHeader } from "../data/pricingFeatures";
+import { CalcomConfig } from "@/utils/calConfig";
 
 // Type definitions
 interface Feature {
@@ -26,24 +27,23 @@ interface PricingData {
 }
 
 const PricingFeatures = ({
-  setShowForm = () => {},
   setSelectedPlan = () => {},
 }: {
-  setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const [expandedSections, setExpandedSections] = useState<
     Record<string, boolean>
   >({
     Overview: true,
+    "Integrations, Security & Support": false,
     "Fleet on Street Selling": false,
     "Purchase & Expense Management": false,
-    "Cross team Workflows": false,
-    "Banking and Cashflow Visibility": false,
-    "Buyer Portal": false,
-    "Field & Office Team Tracking": false,
+    "Banking and Cashflow Management": false,
+    "Cross-Team Workflows": false,
+    "Office & Live Field Team Tracking": false,
+    "Customer Workflows": false,
     "Business Health Dashboard": false,
-    "Integrations & Support": false,
+    "Buyer Portal (Unlimited)": false,
   });
 
   const scrollRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -92,7 +92,7 @@ const PricingFeatures = ({
                 <td
                   key={tier}
                   className={`py-4 text-center w-[15%] border-[#2D2D2D] border-b-[1px] ${
-                    i !== planOrder.length 
+                    i !== planOrder.length
                       ? " border-l-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                       : ""
                   }`}
@@ -136,12 +136,12 @@ const PricingFeatures = ({
         }
         .sticky-header {
           position: sticky;
-          top: 80px;
+          top: 70px;
           z-index: 10;
         }
         .desktop-sticky-header {
           position: sticky;
-          top: -10px;
+          top: 88px;
           z-index: 10;
         }
       `}</style>
@@ -180,12 +180,12 @@ const PricingFeatures = ({
                 </p>
                 <button
                   onClick={() => {
-                    setShowForm(true);
                     setSelectedPlan(data.name || key);
                   }}
-                  className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[120px] text-white font-[400] cursor-pointer"
+                  {...CalcomConfig}
+                  className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[125px] text-white font-[400] cursor-pointer whitespace-nowrap"
                 >
-                  Contact Us
+                  Schedule Demo
                 </button>
               </div>
             )
@@ -258,7 +258,7 @@ const PricingFeatures = ({
                   ([planKey, planData], index) => (
                     <div
                       key={planKey}
-                      className={`w-[150px] h-full p-2 sm:p-3 text-center flex-shrink-0 ${
+                      className={`w-[160px] h-full p-2 sm:p-3 text-center flex-shrink-0 ${
                         index <
                         Object.keys(pricingHeader as PricingHeader).length - 1
                           ? "border-r [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
@@ -274,12 +274,12 @@ const PricingFeatures = ({
                       </p>
                       <button
                         onClick={() => {
-                          setShowForm(true);
                           setSelectedPlan(planData.name || planKey);
                         }}
-                        className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[120px] text-white font-[400] cursor-pointer"
+                        {...CalcomConfig}
+                        className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[150px] text-white font-[400] cursor-pointer whitespace-nowrap"
                       >
-                        {planData.trial || "Contact Us"}
+                        {planData.trial || "Schedule Demo"}
                       </button>
                     </div>
                   )
@@ -299,8 +299,8 @@ const PricingFeatures = ({
                   onClick={() => toggleSection(sectionName)}
                   className={`${
                     expandedSections[sectionName]
-                    ? "bg-black border-t border-b [border-image-source:linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)] [border-image-slice:1]"
-                    : "border border-[#2D2D2D] border-t-0"
+                      ? "bg-black border-t border-b [border-image-source:linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)] [border-image-slice:1]"
+                      : "border border-[#2D2D2D] border-t-0"
                   } w-full flex items-center justify-between p-3 sm:p-4 transition-colors`}
                 >
                   <div className="flex items-center space-x-3">
@@ -356,8 +356,7 @@ const PricingFeatures = ({
                             {planOrder.map((tier, tierIndex) => (
                               <div
                                 key={tier}
-                                
-                                className={`w-[150px] py-3 text-center flex-shrink-0 ${
+                                className={`w-[160px] py-3 text-center flex-shrink-0 ${
                                   tierIndex < planOrder.length - 1
                                     ? " border-r-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                                     : ""

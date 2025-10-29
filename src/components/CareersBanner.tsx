@@ -15,7 +15,8 @@ const CareersSection: FC<CareersSectionContent> = ({
   missionDescription,
 }) => {
   return (
-    <div id={href}
+    <div
+      id={href}
       className={`text-[#FFFFFF] flex flex-col md:gap-[72px] gap-[40px] items-center justify-center md:pt-[64px] mx-auto max-md:px-5 max-md:pt-[112px] md:px-[80px] scroll-mt-20`}
     >
       <div className="flex flex-col !gap-6 items-center justify-center">
@@ -73,7 +74,9 @@ const CareersSection: FC<CareersSectionContent> = ({
 
       <div className="grid grid-cols-5 w-full max-w-[1350px] mx-auto">
         <div className="col-span-2 w-full text-[#FFFFFF] md:text-[32px] text-[16px] leading-[28px] md:!leading-[42px] font-[500]">
-          {missionHeading?.map((line, i) => <p key={i}>{line}</p>)}
+          {missionHeading?.map((line, i) => (
+            <p key={i}>{line}</p>
+          ))}
         </div>
 
         <div className="col-span-3 w-full text-[#E4E4E7] !font-[300] leading-[20px] md:text-[22px] text-[13px] md:leading-[28px] pt-[4px]">

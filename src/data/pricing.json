@@ -111,36 +111,35 @@
           "packageDescription": "Everything in Premium and:",
           "packageDetails": [
             "One-Time Setup Cost: <b>₹1,24,000</b>",
-            "Users (Up To): <b>50</b>",
+            "Users: <b>50</b>",
             "Additional User Price: <b>₹2,400</b>/user"
           ],
           "packageItems": [
-            "Buyer Portal",
+            "Buyer Portal (Unlimited)",
             "Multi-level Approval (5 Levels)",
             "Geo-Fencing",
             "Anti-Fraud Measures",
             "Biometric Integration",
-            "Reimbursement Management",
+            "APIs at additional Cost available for Custom integrations with Oracle and SAP",
             "Dedicated Account Support"
           ]
         },
-       {
+        {
           "packageTitle": "Premium",
           "packageSubTitle": "₹1,54,000",
           "packageDescription": "Premium includes:",
           "packageDetails": [
             "One-Time Setup Cost: <b>₹48,000</b>",
-            "Users (Up To): <b>15</b>",
+            "Users: <b>15</b>",
             "Additional User Price: <b>₹3,000</b>/user"
           ],
           "packageItems": [
-            "E-Invoicing & e-Way Billing",
-            "Inventory Module",
-            "Tally Sync",
-            "Role Based Access Control",
-            "OCR-led Bill Booking",
-            "Reimbursement Module",
-            "Collections",
+            "Tally (Concurrent & Bi-Directional)",
+            "8 Levels of Enterprise Grade Security",
+            "Role Based Access Control, Multi-level Approvals (2 Levels)",
+            "Order Management, Scheme Creation and Collections Management",
+            "E-Invoicing & e-Way Billing on the Go",
+            "AI-Powered Bill Booking, Expense, Petty Cash, Reimbursement",
             "Check-in & Live-GPS Tracking"
           ]
         }

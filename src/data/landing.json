@@ -18,7 +18,7 @@
     "description": "Growth breaks your old tools. Effortless handles sales, cash, and team confusion — all in one place.",
     "bannerImage": "/Home_page.png",
     "mobileBannerImage": "/Home_page.png",
-    "ctaText": "Book a Demo",
+    "ctaText": "Get Started",
     "secondaryCtaUrl": "https://www.goeffortless.ai/pricing",
     "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",
     "secondaryCtaText": "View Pricing & Plans",
@@ -30,7 +30,13 @@
       { "src": "/Insta.png", "width": 150, "height": 48 },
       { "src": "/integral.svg", "width": 57, "height": 48 },
       { "src": "/GallaBox.v1.2.png", "width": 74, "height": 19 },
-      { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 }
+      { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 },
+      { "src": "/mithaicana-logo.png", "width": 273, "height": 72 },
+      { "src": "/GS-logo.png", "width": 270, "height": 72 },
+      { "src": "/kanvar-logo.png", "width": 114, "height": 72 },
+      { "src": "/kria.png", "width": 176, "height": 72 },
+      { "src": "/image.png", "width": 102, "height": 72 },
+      { "src": "/krish_fashion.png", "width": 225, "height": 72 }
     ]
   },
   "isHomePage": true,
@@ -92,111 +98,249 @@
       "homePageVerticalSlider": {
         "features": [
           {
-            "title": "Fleet on Street Selling ",
-            "description": "When sales outpace systems, you struggle—not scale.",
+            "title": "Integrations, Security & Support",
+            "description": "Start by securely connecting Effortless to your systems.",
+            "image": "/gear-nodes.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Tally (Concurrent &\n Bi-Directional)",
+                  "description": "Plug and play with Tally, bridging finance and intelligence.",
+                  "img": "/plug.svg"
+                },
+                {
+                  "title": "Paid API integrations for\n Oracle & SAP",
+                  "description": "Enterprise level connectivity. Tailored API access.",
+                  "img": "/algorithm.svg"
+                },
+                {
+                  "title": "Multi-Company\n Concurrent Sync",
+                  "description": "All companies , one stream. always in sync.",
+                  "img": "/api.svg"
+                },
+                {
+                  "title": "8 Levels of Enterprise\n Grade Security",
+                  "description": "From perimeter to core, 8 level of unbreakable security.",
+                  "img": "/shield-lock.svg"
+                },
+                {
+                  "title": "Email, Call, & WhatsApp\n Support",
+                  "description": "One team, Three channels, Total with support.",
+                  "img": "/envelope.svg"
+                },
+                {
+                  "title": "Dedicated Account\n Manager",
+                  "description": "Your success partner- A dedicated Account manager for every step.",
+                  "img": "/users-shaking-hands.svg"
+                },
+                {
+                  "title": "Implementation &\n Onboarding Support",
+                  "description": "Your journey begins seamlessly with our Onboarding Experts and seasoned CAs.",
+                  "img": "/badge-check.svg"
+                },
+                {
+                  "title": "Payment Gateway\n (RazorPay)",
+                  "description": "Got Razorpay? You are already halfway there.",
+                  "img": "/money-bill.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Fleet on Street Selling",
+            "description": "Empower your team to drive revenue on the ground.",
             "image": "/people-icon.svg",
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Estimate &<br/> Order Creation",
-                  "description": "Send quotes and take orders on the spot. Sales don't get held up by paperwork.",
-                  "img": "/Estimate & Order Creation.svg"
+                  "title": "Estimate, PI & Sales\n Order Creation",
+                  "description": "Send quotes, take orders instantly—no paperwork delays.",
+                  "img": "/bill 2.svg"
                 },
                 {
-                  "title": "E-Invoicing & eWay Bill<br/> Generation",
-                  "description": "Generate compliant invoices instantly — right from the field.",
-                  "img": "/receipt 4.svg"
+                  "title": "Scheme Creation and\n Management",
+                  "description": "Set SKU schemes by qty, period, or customer no manual setup.",
+                  "img": "/list-checkbox-2.svg"
                 },
                 {
-                  "title": "Recurring Invoices",
+                  "title": "Customer wise Credit\n Limit check",
+                  "description": "Check live credit limits synced with books, block invoices if exceeded.",
+                  "img": "/user.svg"
+                },
+                {
+                  "title": "Follow your own Voucher\n Type & Numbering",
+                  "description": "Select voucher type & series as in Tally continue using your existing setup.",
+                  "img": "/laptop-settings.svg"
+                },
+                {
+                  "title": "E-Invoicing & e WayBill \nGeneration",
+                  "description": "Generate compliant invoices instantly right from the field.",
+                  "img": "/file-content.svg"
+                },
+                {
+                  "title": "Recurring\n Invoices",
                   "description": "Set it once, and invoice cycles run themselves. Great for repeat orders.",
-                  "img": "/ballot-rect 1.svg"
+                  "img": "/files-content.svg"
                 },
                 {
-                  "title": "Outstanding<br/> Receivables",
-                  "description": "Know what's due per customer, per salesperson. Collections become proactive.",
-                  "img": "/banking-mobile 1.svg"
+                  "title": "Outstanding\n Receivables",
+                  "description": "See dues by customer or salesperson and make collections proactive.",
+                  "img": "/hand-holding-coins.svg"
                 },
                 {
-                  "title": "Collections",
-                  "description": "Record Payments against customer and details are synced with your Accountant.",
-                  "img": "/Collection (Fleet On Street) 2.svg"
+                  "title": "Collections\n",
+                  "description": "Record customer payments with details synced to your accountant.",
+                  "img": "/hand-holding-money 2.svg"
                 },
                 {
-                  "title": "Customer Assignment to<br/> Team",
-                  "description": "Assign customers to specific sales or support teams. No overlap. No confusion.",
-                  "img": "/chart-stock-price 2.svg"
+                  "title": "Payment\n Links",
+                  "description": "Now include payment links during payment collection remainders.",
+                  "img": "/link-4.svg"
+                },
+                {
+                  "title": "Customer Assignment to\n Team",
+                  "description": "Assign customers to specific teams with no overlap or confusion.",
+                  "img": "/todo 2.svg"
                 }
               ]
             }
           },
           {
             "title": "Purchase & Expense Management",
-            "description": "Finance fuels growth, not bill-chasing and approvals.",
+            "description": "Manage procurement and expenses in sync.",
             "image": "/expense-management.svg",
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Field Expense <br/>Claims",
+                  "title": "Field Expense\n Claims",
                   "description": "Team submits bills directly from mobile. Finance doesn't chase paper.",
                   "img": "/bill 2.svg"
                 },
                 {
-                  "title": "Amount-Based <br/>Approvals",
+                  "title": "Multi GSTN Compliance\n Support",
+                  "description": "Manage multiple branches and GSTNs centrally with hassle-free ITC.",
+                  "img": "/circle-check.svg"
+                },
+                {
+                  "title": "Vendor Purchase Invoice\n Email",
+                  "description": "AI auto email Vendor invoice bills are read, validated, and booked in no time.",
+                  "img": "/envelope-content.svg"
+                },
+                {
+                  "title": "Amount-Based\n Approvals",
                   "description": "Set limits for approvals by spend size. Small spends don't need big effort.",
-                  "img": "/Frame 1000012404.svg"
+                  "img": "/money-bills.svg"
                 },
                 {
-                  "title": "Reimbursement Policy <br/>Controls",
+                  "title": "Reimbursement Policy\n Controls",
                   "description": "Define what's reimbursable. Eliminate debate, delays, and disputes.",
-                  "img": "/mobile-camera 1.svg"
+                  "img": "/hand-holding-money 2.svg"
                 },
                 {
-                  "title": "AI-Powered Bill <br/>Booking",
-                  "description": "Just click a photo — bills are read, validated, and booked in no time.",
-                  "img": "/clock-filled 2.svg"
+                  "title": "AI-Powered Bill\n Booking",
+                  "description": "Just click a photo bills are read, validated, and booked in no time.",
+                  "img": "/receipt.svg"
                 },
                 {
-                  "title": "Document Evidence<br/> Storage",
-                  "description": "Upload, store, and retrieve all financial proofs — makes you audit ready.",
-                  "img": "/laptop-chart-cols 2.svg"
+                  "title": "GST/TDS\n Automation",
+                  "description": "All GST numbers validated by AI and TDS calculated basis TDS rules set.",
+                  "img": "/ai.svg"
                 },
                 {
-                  "title": "Utility Bill <br/>Payments",
-                  "description": "Track and Pay recurring office expenses effotlessly like mobile, internet, and electricity.",
-                  "img": "/user-change.svg"
+                  "title": "Document Evidence\n Storage",
+                  "description": "Upload, store, and retrieve all financial proofs makes you audit ready.",
+                  "img": "/file-tree.svg"
+                },
+                {
+                  "title": "Utility Bill\n Payments",
+                  "description": "Track and pay recurring expenses like mobile, internet, and electricity easily.",
+                  "img": "/banking-mobile.svg"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Banking and Cashflow Management",
+            "description": "Real-time financial clarity from the bank level.",
+            "image": "/banking.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Bank Statement AI Fetch\n (all leading banks)",
+                  "description": "Bank data updates automatically. No end-of-month bottlenecks.",
+                  "img": "/greek-temple 1.svg"
+                },
+                {
+                  "title": "Auto-categorisation of\n Bank Entries",
+                  "description": "Set once & forget the hassle - Let effortless AI do it next time.",
+                  "img": "/bell-filled 1.svg"
+                },
+                {
+                  "title": "Collection Alerts to\n Owners",
+                  "description": "Get bank statement alerts by frequency know who paid and how much.",
+                  "img": "/user-update.svg"
+                },
+                {
+                  "title": "Party\n Collection",
+                  "description": "Map collections to customers and share data with your accountant.",
+                  "img": "/circle-user-filled 1.svg"
+                },
+                {
+                  "title": "Generate Bulk Payment\n Files for (All Leading Banks)",
+                  "description": "Handle approvals and generate bank payment files in Effortless.",
+                  "img": "/hand-holding-money 1.svg"
+                },
+                {
+                  "title": "Petty Cash\n Management",
+                  "description": "Track small cash spends at branches or in the field with full control.",
+                  "img": "/money-bill-coin.svg"
                 }
               ]
             }
           },
           {
             "title": "Cross-Team Workflows",
-            "description": "More teams, more confusion—unless systems sync.",
+            "description": "Strengthen process control and compliance.",
             "image": "/cross-platform.svg",
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Sales Approval Workflows<br/> for Orders, Invoices",
-                  "description": "Ensure the right people verify — and avoid mistakes and confusion.",
+                  "title": "Sales Approval Workflows\n for Orders, Invoices",
+                  "description": "Ensure the right people verifies - and avoid mistakes & confusion.",
                   "img": "/Sales Approval flows.svg"
                 },
                 {
-                  "title": "Approvals for Purchases,<br/> Claims & Payments",
-                  "description": "Bring Visibility and Control to all your expense approval flows.",
-                  "img": "/bolt-speed 3.svg"
+                  "title": "Approval for Purchases,\n Claims & Payments",
+                  "description": "Bring Visibility and Control to all your expenses",
+                  "img": "/list-check.svg"
                 },
                 {
-                  "title": "Multi-Level <br/>Approvals",
+                  "title": "Multi-Level\n Approvals",
                   "description": "Control your organization's approval process upto 5 levels.",
                   "img": "/file-check 8.svg"
                 },
                 {
-                  "title": "1-Click Invoice <br/>Creation",
-                  "description": "Sales orders convert to invoices instantly. No lag. No loss.",
-                  "img": "/laptop-mobile 1.svg"
+                  "title": "Designation-based Claim\n Rule Setup",
+                  "description": "Define who can approve based on their role in your organization.",
+                  "img": "/user-check.svg"
                 },
                 {
-                  "title": "Payment Gateway <br/>Integration",
+                  "title": "1-Click Invoice\n Creation",
+                  "description": "Sales orders convert to invoices instantly. No lag. No loss.",
+                  "img": "/window-cursor.svg"
+                },
+                {
+                  "title": "Audit Trail",
+                  "description": "Track daily activity in Effortless and control who does what.",
+                  "img": "/calendar-check.svg"
+                },
+                {
+                  "title": "Multiple outlet/\nwarehouse/company management",
+                  "description": "Multi Warehouse management support for Invoicing and bill booking",
+                  "img": "/storage-unit.svg"
+                },
+                {
+                  "title": "Payment Gateway\n Integration",
                   "description": "Collect payments faster via integrated UPI, cards, or net banking.",
                   "img": "/credit-card-check 1.svg"
                 }
@@ -205,19 +349,34 @@
           },
           {
             "title": "Office & Live Field Team Tracking",
-            "description": "Track reps live. Spot gaps. Act fast.",
+            "description": "Track performance and attendance seamlessly.",
             "image": "/team-tracking.svg",
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Live GPS<br/> Tracking",
-                  "description": "Track team movement on the map — see where they are and where they went.",
+                  "title": "Live GPS\n Tracking",
+                  "description": "Track team movement on the map see where they are and where they went.",
                   "img": "/Live Gps Tracking.svg"
                 },
                 {
-                  "title": "GPS-Based Field Team<br/> Check-Ins",
+                  "title": "Fraud\n Prevention",
+                  "description": "All Mobile GPS Hacks is prevented through our security measures",
+                  "img": "/lock-2.svg"
+                },
+                {
+                  "title": "GPS-Based Field Team\n Check-ins",
                   "description": "Ensure field activity is real, not logged from home.",
                   "img": "/GPS Based Chickin.svg"
+                },
+                {
+                  "title": "Supervisor Entry",
+                  "description": "Authorize a Supervisor to punch attendence on behalf of your employees",
+                  "img": "/trainer.svg"
+                },
+                {
+                  "title": "Biometric\n Integration",
+                  "description": "Add biometric hardware for secure check-ins with no proxy punching.",
+                  "img": "/hold 1.svg"
                 },
                 {
                   "title": "Geo-Fencing",
@@ -225,17 +384,7 @@
                   "img": "/Geo fencing.svg"
                 },
                 {
-                  "title": "Fraud<br/> Prevention",
-                  "description": "All Mobile GPS hacks are prevented through our security measures.",
-                  "img": "/laptop-mobile 1.svg"
-                },
-                {
-                  "title": "Biometric<br/> Integration",
-                  "description": "Add biometric hardware for high-security environments. No proxy punching.",
-                  "img": "/hold 1.svg"
-                },
-                {
-                  "title": "Attendance & Leave<br/> Management",
+                  "title": "Attendance & Leave\n Management",
                   "description": "Leave requests, approvals, and balances — all managed digitally.",
                   "img": "/ballot-rect 1.svg"
                 }
@@ -244,126 +393,117 @@
           },
           {
             "title": "Customer Workflows",
-            "description": "Automate tasks for better customer experience.",
+            "description": "Automate engagement and collections.",
             "image": "/customer-workflows.svg",
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Pay Now Emails<br/> with Invoices",
+                  "title": "Pay Now Emails\n with Invoices",
                   "description": "Send invoice + payment link in one click. Get paid faster.",
                   "img": "/Pay Now Emails  with Invoices.svg"
                 },
                 {
-                  "title": "Auto-Share of Invoices <br/>(WhatsApp and Email)",
+                  "title": "Auto-Share of Invoices\n (WhatsApp and Email)",
                   "description": "No one forgets to share invoices anymore — Effortless does it for you.",
                   "img": "/Auto-Share of Invoices(WhatsApp and Email).svg"
                 },
                 {
-                  "title": "Automated Reminders <br/>(WhatsApp and Email)",
+                  "title": "Automated Reminders\n (WhatsApp and Email)",
                   "description": "Chase payments without chasing your team to follow up.",
                   "img": "/circle-user-sparkle-2 1.svg"
                 },
                 {
-                  "title": "Domain-Mapped <br/>Reminder Delivery",
-                  "description": "Reminders go from your company email and number. Looks pro, builds trust.",
-                  "img": "/bill 2.svg"
+                  "title": "Domain-Mapped\n Reminder Delivery",
+                  "description": "Reminders go from your email and number builds trust.",
+                  "img": "/alarm-clock.svg"
                 }
               ]
             }
           },
           {
             "title": "Business Health Dashboard",
-            "description": "Revenue reflects growth. Cashflow reflects health.",
+            "description": "Dashboards and analytics close the loop.",
             "image": "/business-health.svg",
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Daily Business Snapshot <br/>on WhatsApp",
+                  "title": "Daily Business Snapshot\n on WhatsApp",
                   "description": "Get a quick performance brief every morning. No dashboard login needed.",
-                  "img": "/laptop 1.svg"
+                  "img": "/whatsapp.svg"
                 },
                 {
-                  "title": "Sales & Collection <br/>Performance",
+                  "title": "Sales & Collection\n Performance",
                   "description": "Know what you earned, what you collected — every day.",
                   "img": "/laptop-chart-cols 3.svg"
                 },
                 {
-                  "title": "Revenue <br/>Analysis",
-                  "description": "Break down sales by region, rep, SKU or channel. Know where growth is real.",
+                  "title": "Sales Order\n Report",
+                  "description": "View sales order reports by customer, item, or salesperson.",
+                  "img": "/chart-bar-arrow-up.svg"
+                },
+                {
+                  "title": "Sales Report ",
+                  "description": "View sales reports by customer, item, or salesperson.",
                   "img": "/chart-pie-4 1.svg"
                 },
                 {
-                  "title": "Inventory Movement <br/>Analysis",
-                  "description": "See what's moving and what's not. Plan purchase and sales better.",
-                  "img": "/compass 1.svg"
+                  "title": "Revenue\n Analysis",
+                  "description": "Break down sales by region, rep, SKU or channel. Know where growth is real.",
+                  "img": "/chart-stacked-line.svg"
+                },
+                {
+                  "title": "Uncategorized\n Transactions",
+                  "description": "Have an eye on your Uncategorized Transactions, and categories them.",
+                  "img": "/money-transfer.svg"
+                },
+                {
+                  "title": "Compliance Reports\n (TDS, ITC)",
+                  "description": "Get TDS and ITC reports to ensure accuracy and avoid losses.",
+                  "img": "/search-chart.svg"
+                },
+                {
+                  "title": "Cost Centre Reports:\n Income & Balance Sheet",
+                  "description": "Set cost centre layers to compare real-time balance sheets and profitability.",
+                  "img": "/receipt 5.svg"
+                },
+                {
+                  "title": "Inventory Movement\n Analysis",
+                  "description": "See what’s moving and what’s not. Plan purchase and sales better.",
+                  "img": "/person-chart-arrow-up.svg"
                 }
               ]
             }
           },
           {
-            "title": "Buyer Portal",
-            "description": "If sales outgrow systems, you struggle to grow.",
+            "title": "Buyer Portal (Unlimited)",
+            "description": "Enable your B2B customers via the Buyer Portal.",
             "image": "/buyer-portal-icon.svg",
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Product Catalog with <br/>In-Stock Items",
-                  "description": "Buyers see exactly what's available with photos — no back-and-forth.",
+                  "title": "Product Catalog with In-\nStock Items",
+                  "description": "Buyers see exactly what's available with photos, no back-and-forth.",
                   "img": "/cart-simple-add 1.svg"
                 },
                 {
-                  "title": "Self-Serve Ordering <br/>& Tracking",
-                  "description": "They place orders, track status, and reorder — without calling your team.",
+                  "title": "Self-Serve Ordering\n & Tracking",
+                  "description": "They place orders, track status, and reorder without calling your team.",
                   "img": "/cart-plus 1.svg"
                 },
                 {
-                  "title": "Dashboard with  <br/>Transaction History",
-                  "description": "Buyers get full visibility into past orders and invoices — all in one place.",
+                  "title": "Dashboard with\n Transaction History",
+                  "description": "Buyers get full visibility into past orders and invoices all in one place.",
                   "img": "/todo 1.svg"
                 },
                 {
-                  "title": "Open <br/>Bills",
+                  "title": "Open\n Bills",
                   "description": "They can view pending payments and clear dues directly.",
                   "img": "/bill 3.svg"
                 },
                 {
-                  "title": "Statement of <br/>Accounts",
+                  "title": "Statement of\n Accounts",
                   "description": "Download or view SoA anytime — no need to contact finance.",
                   "img": "/bank-statement 1.svg"
-                }
-              ]
-            }
-          },
-          {
-            "title": "Banking and Cashflow Management",
-            "description": "More customers, vendors, cash—harder to manage.",
-            "image": "/banking.svg",
-            "featureCardsSection": {
-              "featureCards": [
-                {
-                  "title": "Daily Bank Sync & <br/>Reconciliation",
-                  "description": "Bank data updates automatically. No end-of-month bottlenecks.",
-                  "img": "/greek-temple 1.svg"
-                },
-                {
-                  "title": "Collection Alerts to <br/>Owners",
-                  "description": "Get notified instantly when money comes in. Know who paid and how much.",
-                  "img": "/bell-filled 1.svg"
-                },
-                {
-                  "title": "Alerts to <br/>Salesman",
-                  "description": "Sales agents get notified when their customers make payments.",
-                  "img": "/user-update 1.svg"
-                },
-                {
-                  "title": "Party <br/>Collection",
-                  "description": "Map collections to specific customers and ensure data is shared with your accountant.",
-                  "img": "/circle-user-filled 1.svg"
-                },
-                {
-                  "title": "Petty Cash <br/>Management",
-                  "description": "Track small cash spends at branches or in the field — with full control.",
-                  "img": "/hand-holding-money 1.svg"
                 }
               ]
             }
@@ -417,12 +557,12 @@
             "Additional User Price: <b>₹2,400</b>/user"
           ],
           "packageItems": [
-            "Buyer Portal",
+            "Buyer Portal (Unlimited)",
             "Multi-level Approval (5 Levels)",
             "Geo-Fencing",
             "Anti-Fraud Measures",
             "Biometric Integration",
-            "Reimbursement Management",
+            "APIs at additional Cost available for Custom integrations with Oracle and SAP",
             "Dedicated Account Support"
           ]
         },
@@ -436,14 +576,13 @@
             "Additional User Price: <b>₹3,000</b>/user"
           ],
           "packageItems": [
-              "E-Invoicing & e-Way Billing",
-              "Inventory Module",
-              "Tally Sync",
-              "Role Based Access Control",
-              "OCR-led Bill Booking",
-              "Reimbursement Module",
-              "Collections",
-              "Check-in & Live-GPS Tracking"
+            "Tally (Concurrent & Bi-Directional)",
+            "8 Levels of Enterprise Grade Security",
+            "Role Based Access Control, Multi-level Approvals (2 Levels)",
+            "Order Management, Scheme Creation and Collections Management",
+            "E-Invoicing & e-Way Billing on the Go",
+            "AI-Powered Bill Booking, Expense, Petty Cash, Reimbursement",
+            "Check-in & Live-GPS Tracking"
           ]
         }
       ],
@@ -460,13 +599,12 @@
             "additionalUsersPrice": "₹2,400/user",
             "features": [
               "Everything in Premium and:",
-              "Buyer Portal",
+              "Buyer Portal (Unlimited)",
               "Multi-level Approval (5 Levels)",
               "Geo-Fencing",
               "Anti-Fraud Measures",
               "Biometric Integration",
-              "Reimbursement Management",
-              "Route Mapping",
+              "APIs at additional Cost available for Custom integrations with Oracle and SAP",
               "Dedicated Account Support"
             ]
           },
@@ -481,13 +619,12 @@
             "additionalUsersPrice": "₹3,000/user",
             "features": [
               "Premium includes:",
-              "E-Invoicing & e-Way Billing",
-              "Inventory Module",
-              "Tally Sync",
-              "Role Based Access Control",
-              "OCR-led Bill Booking",
-              "Reimbursement Module",
-              "Collections",
+              "Tally (Concurrent & Bi-Directional)",
+              "8 Levels of Enterprise Grade Security",
+              "Role Based Access Control, Multi-level Approvals (2 Levels)",
+              "Order Management, Scheme Creation and Collections Management",
+              "E-Invoicing & e-Way Billing on the Go",
+              "AI-Powered Bill Booking, Expense, Petty Cash, Reimbursement",
               "Check-in & Live-GPS Tracking"
             ]
           }
@@ -511,7 +648,13 @@
           { "src": "/Insta.png", "width": 150, "height": 48 },
           { "src": "/integral.svg", "width": 57, "height": 48 },
           { "src": "/GallaBox.v1.2.png", "width": 74, "height": 19 },
-          { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 }
+          { "src": "/Hansa Cequity Logo 1.png", "width": 91, "height": 48 },
+          { "src": "/mithaicana-logo.png", "width": 182, "height": 48 },
+          { "src": "/GS-logo.png", "width": 180, "height": 48 },
+          { "src": "/kanvar-logo.png", "width": 76, "height": 48 },
+          { "src": "/kria.png", "width": 117, "height": 48 },
+          { "src": "/image.png", "width": 68, "height": 48 },
+          { "src": "/krish_fashion.png", "width": 150, "height": 48 }
         ],
         "testimonials": [
           {
@@ -596,7 +739,7 @@
         {
           "title": "Experience Effortless",
           "description": "See Effortless in action with a personalized demo tailored to your business.",
-          "ctaText": "Get a Demo",
+          "ctaText": "Schedule Demo",
           "subText": "Choose a time that works for you",
           "list": [
             "No generic presentations",
