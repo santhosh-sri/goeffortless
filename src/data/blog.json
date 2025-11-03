@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "Blog Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+    "description": "Effortless is a Team of Problem-Solvers on a Mission to solve the jhanjhat that comes with Growth for Ambitious Indian SMBs. Crafted by CAs, driven by Purpose. Join us and help reshape how India does business.",
+    "og": {
+      "title": "Blog Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+      "description": "Built by Founders who understand the complexity that comes with Growth, at Effortless, we're solving real-world problems with smart automation and a bias for action. Come build what matters.",
+      "url": "https://www.goeffortless.ai/blog",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "serviceContent": [
+    {
+      "tagLine": "Blogs",
+      "marginTop": true,
+      "Customtitle": "<span style='color:#FFFFFF ; font-weight: 300'>The </span> <span style='font-weight: 500'>Effortless Edge</span>",
+      "description": "Stay ahead with The Effortless Edge - your source for insights on AI-driven automation, smarter sales, and efficient financial workflows for growing businesses.",
+      "blogs": [
+        {
+          "imageUrl": "/blog1.jpg",
+          "title": "10 Common Challenges of Field Sales in India (and How to Overcome Them)",
+          "desc": "Discover key hurdles faced by field sales teams—and smart ways to solve them.",
+          "date": "October 2025",
+          "href": "/blog-sales"
+        },
+        {
+          "imageUrl": "/blog1.jpg",
+          "title": "Why Recurring Invoices Are Critical for Growing SMBs",
+          "desc": "Automate billing, improve cash flow, and focus on business growth.",
+          "date": "October 2025",
+          "href": "/blog-sales"
+        },
+        {
+          "imageUrl": "/blog1.jpg",
+          "title": "How Multiple Branches Make Inventory & Receivables Complex",
+          "desc": "Managing stock, payments, and reports across locations gets harder to control.",
+          "date": "October 2025",
+          "href": "/blog-sales"
+        },
+        {
+          "imageUrl": "/blog1.jpg",
+          "title": "The Hidden Costs of Manual Billing & Delayed Collections",
+          "desc": "Lost revenue, cash flow gaps, and reduced business efficiency.",
+          "date": "October 2025",
+          "href": "/blog-sales"
+        },
+        {
+          "imageUrl": "/blog1.jpg",
+          "title": "GST & E-Invoicing: What Indian Businesses Need to Know in 2025",
+          "desc": "Stay compliant, simplify reporting, and avoid costly penalties.",
+          "date": "October 2025",
+          "href": "/blog-sales"
+        },
+        {
+          "imageUrl": "/blog1.jpg",
+          "title": "How Live GPS Tracking Boosts Field Sales Productivity",
+          "desc": "Track team movement in real time to plan better and close more sales.",
+          "date": "October 2025",
+          "href": "/blog-sales"
+        }
+      ]
+    }
+  ]
+}

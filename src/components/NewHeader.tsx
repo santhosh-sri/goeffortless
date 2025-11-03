@@ -50,7 +50,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           link: "/blog",
           icon: "/book-open.svg",
           activeIcon: "/book-open-active.svg",
-          soon: true,
+          soon: false,
         },
         {
           label: "FAQs",
