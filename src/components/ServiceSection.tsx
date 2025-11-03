@@ -41,6 +41,7 @@ import CertificationGrid from "./CertificationAwards";
 import CaseStudiesSection from "./CaseStudySection";
 import FaqComponent from "./FaqComponent";
 import OfficeLocations from "./OfficeLocations";
+import DownloadApps from "./DownloadApps";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -50,6 +51,7 @@ interface ServiceSectionProps extends ServiceContent {
   isCareersPage?: boolean;
   isPricingPlanPage?: boolean;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
+  isDownloadPage?: boolean;
 }
 
 const ServiceSection = ({
@@ -110,9 +112,16 @@ const ServiceSection = ({
   faqs,
   marginTop,
   officelocation,
+  downloadApps = [],
+  isDownloadPage = false,
 }: ServiceSectionProps) => {
+  console.log(isDownloadPage);
   return (
-    <div className={`${bgColour ? bgColour : "bg-[#08090A]"} md:px-[80px]`}>
+    <div
+      className={`${bgColour ? bgColour : "bg-[#08090A]"} ${
+        !isDownloadPage && "md:px-[80px]"
+      }`}
+    >
       {showGreyTopBorder && (
         <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
@@ -576,6 +585,14 @@ const ServiceSection = ({
       {officelocation && (
         <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
           <OfficeLocations locations={officelocation} />
+        </div>
+      )}
+
+      {downloadApps?.length > 0 && (
+        <div className="flex flex-col gap-20">
+          {downloadApps?.map((items, index) => (
+            <DownloadApps key={index} {...items} />
+          ))}
         </div>
       )}
 
