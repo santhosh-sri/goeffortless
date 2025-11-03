@@ -24,6 +24,7 @@ const Landing: React.FC<Content> = ({
   isPricingPlanPage,
   isCareersPage,
   metadata, // Add metadata prop
+  isDownloadPage,
 }) => {
   const isFormVisible = useElementVisibility("firstFold", {
     top: 80,
@@ -92,6 +93,7 @@ const Landing: React.FC<Content> = ({
                 isPricingPage={isPricingPage}
                 isPricingPlanPage={isPricingPlanPage}
                 isCareersPage={isCareersPage}
+                isDownloadPage={isDownloadPage}
               />
             ))}
         </div>
@@ -100,7 +102,8 @@ const Landing: React.FC<Content> = ({
             (isHomePage ||
               isPricingPlanPage ||
               isPricingPage ||
-              isCareersPage) &&
+              isCareersPage ||
+              isDownloadPage) &&
             "pt-[60px] md:pt-[120px] bg-black"
           }`}
         >

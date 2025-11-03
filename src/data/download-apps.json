@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Download Apps Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+    "description": "Effortless is a Team of Problem-Solvers on a Mission to solve the jhanjhat that comes with Growth for Ambitious Indian SMBs. Crafted by CAs, driven by Purpose. Join us and help reshape how India does business.",
+    "og": {
+      "title": "Download Apps Effortless: The Team Making Growth more manageable for Ambitious SMBs",
+      "description": "Built by Founders who understand the complexity that comes with Growth, at Effortless, we're solving real-world problems with smart automation and a bias for action. Come build what matters.",
+      "url": "https://www.goeffortless.ai/download-apps",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "isDownloadPage": true,
+  "serviceContent": [
+    {
+      "tagLine": "Download Apps",
+      "marginTop": true,
+      "Customtitle": "<span style='font-weight: 500'>Work Effortlessly. Anywhere.</span>",
+      "description": "Your business runs nonstop—stay in control with Effortless apps for sales, finance, and field teams.",
+      "downloadApps": [
+        {
+          "appName": "Effortless",
+          "title": "All Your Sales & Finance in",
+          "highlight": "One Powerful App",
+          "description": "Stay on top of sales, collections, and reimbursements—all in real time.",
+          "subDescription": "From order to payment, Effortless keeps everything connected so your business runs smoother, faster, and smarter.",
+          "appStoreLink": "https://apps.apple.com/in/app/go-effortless/id1595319149",
+          "playStoreLink": "https://play.google.com/store/apps/details?id=com.agrya.effortless",
+          "imageSrc": "/iMockup-effortless.png",
+          "option": "Your office, now in your pocket."
+        },
+        {
+          "appName": "Effortless Geo",
+          "title": "Track. Manage.",
+          "highlight": "Win Every Day.",
+          "description": "Empower your field teams with live tracking, route insights, and attendance monitoring.",
+          "subDescription": "Effortless Geo turns every visit into data you can trust—and every rep into a top performer.",
+          "appStoreLink": "https://apps.apple.com/in/app/effortless-geo/id6751136645",
+          "playStoreLink": "https://play.google.com/store/apps/details?id=com.effortless.geo",
+          "imageSrc": "/iMockup-effortlessgeo.png",
+          "option": "Effortless Geo App works seamlessly with Effortless App."
+        }
+      ]
+    }
+  ]
+}
