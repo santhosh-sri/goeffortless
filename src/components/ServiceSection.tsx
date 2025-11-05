@@ -118,7 +118,6 @@ const ServiceSection = ({
   isDownloadPage = false,
   blogs = [],
 }: ServiceSectionProps) => {
-  console.log(isDownloadPage);
   return (
     <>
       {showGreyTopBorder && (

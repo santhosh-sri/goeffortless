@@ -126,19 +126,19 @@ export const footerData = {
   },
   social_links: [
     {
-      icon: "instagram.svg",
+      icon: "/instagram.svg",
       url: "https://www.instagram.com/goeffortless.ai/",
     },
     {
-      icon: "x.svg",
+      icon: "/x.svg",
       url: "https://x.com/go_effortless",
     },
     {
-      icon: "linkedIn.svg",
+      icon: "/linkedIn.svg",
       url: "https://www.linkedin.com/company/igoeffortless/",
     },
     {
-      icon: "ham-logo.svg",
+      icon: "/ham-logo.svg",
       url: "https://goeffortless.substack.com/",
     },
   ],

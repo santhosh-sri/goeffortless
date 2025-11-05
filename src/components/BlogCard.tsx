@@ -30,7 +30,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
       <div className="absolute bottom-0 left-0 right-0 p-5 ">
         <h3 className="text-lg md:text-xl text-white font-normal">{title}</h3>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center justify-between">
           <div>
             <p className="hidden opacity-0 group-hover:block group-hover:opacity-100 text-base text-[#E5E5E5] font-light transition-opacity duration-300 ease-in-out">
               {desc}
