@@ -1,0 +1,181 @@
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import PageTitle from "@/components/PageTitle";
+import Header from "@/components/NewHeader";
+import Footer from "@/components/Footer";
+import BlogPageSkeleton from "@/components/BlogPageSkeleton";
+import CallbackCardSection from "@/components/CallBackCardSection";
+
+interface BlogResponse {
+  blog?: {
+    title?: string;
+    content?: string;
+  };
+}
+
+const callBackCards = [
+  {
+    title: "Talk to Us",
+    description:
+      "Have questions about how Effortless can transform your business? Our team of experts is ready to help.",
+    ctaText: "Request a Callback",
+    subText: "We'll reach out within 4 business hours",
+    list: [
+      "Schedule a personalized demo",
+      "Get your specific questions answered",
+      "Discuss your unique business challenges",
+    ],
+  },
+  {
+    title: "Request Demo",
+    description:
+      "See Effortless in action with a personalized demo tailored to your business.",
+    ctaText: "Schedule a Demo",
+    subText: "Choose a time that works for you",
+    list: [
+      "No generic presentations",
+      "Focus on your specific challenges",
+      "Get a clear picture of your potential ROI",
+    ],
+  },
+  {
+    title: "Your Growth Engine Starts Here",
+    description:
+      "More growth, less overhead. Discover how India’s fastest growing businesses do it.",
+    ctaText: "See it in Action",
+    primary: true,
+    subText: "Clarity in 30 minutes. No pressure, just proof.",
+    list: [
+      "Automate invoicing, collections & approvals",
+      "Track sales team performance",
+      "Get cashflow clarity in real-time",
+    ],
+  },
+];
+
+export default function BlogDetail() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const [isMobile, setIsMobile] = useState(false);
+  const [htmlContent, setHtmlContent] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  useEffect(() => {
+    if (!id) return;
+
+    const fetchBlogHTML = async () => {
+      try {
+        const res = await fetch(
+          `https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs/${id}?format=html`
+        );
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data: BlogResponse = await res.json();
+        setHtmlContent(data.blog?.content || "");
+        setTitle(data.blog?.title || "Untitled");
+      } catch (err: any) {
+        console.error(err.message || "Failed to fetch blog");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchBlogHTML();
+  }, [id]);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
+    <>
+      <div className={`fixed top-0 w-full z-[999]`}>
+        <Header isMobile={isMobile} />
+      </div>
+      <div className={`bg-[#08090A] md:px-[80px]`}>
+        {isLoading ? (
+          <div className="">
+            <BlogPageSkeleton />
+          </div>
+        ) : (
+          <>
+            <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
+              <PageTitle pageHeading={"Blogs"} />
+              <h1
+                className={`font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
+                style={{
+                  background:
+                    "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
+                  WebkitBackgroundClip: "text",
+                }}
+              >
+                <span className="text-white font-light">
+                  10 Common Challenges of{" "}
+                </span>
+                <br /> <span className="font-medium">Field Sales in India</span>
+              </h1>
+              <p
+                className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+              >
+                Discover the top 10 challenges faced by field sales teams in
+                India, from delayed collections to inefficient tracking, and
+                learn proven strategies to overcome them with digital tools like
+                Effortless.
+              </p>
+            </div>
+            <div className="md:pb-[100px] pb-[60px] max-md:py-[32px] max-md:px-5">
+              <h1 className="text-3xl font-semibold mb-6">{title}</h1>
+              <div
+                className="prose max-w-none"
+                dangerouslySetInnerHTML={{ __html: htmlContent }}
+              />
+            </div>
+          </>
+        )}
+      </div>
+
+      <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+      <div className={`bg-[#15181B] md:px-[80px]`}>
+        <div className="flex flex-col md:gap-6 gap-4 items-center justify-center  py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[64px] scroll-mt-20">
+          <PageTitle pageHeading={"Get Started"} />
+          <h1
+            className={`font-[300] md:font-medium  text-[24px] md:text-[32px] text-center bg-clip-text text-transparent`}
+            style={{
+              background: "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
+              WebkitBackgroundClip: "text",
+            }}
+          >
+            <span className="text-white font-light">Growth Doesn’t Wait. </span>
+            <span className="font-medium">Why Should You?</span>
+          </h1>
+          <p
+            className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+          >
+            Let Effortless help you scale—without the scramble.
+          </p>
+          {callBackCards && (
+            <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center">
+              {callBackCards?.map((card, index) => (
+                <CallbackCardSection key={index} {...card} />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+      <div className="md:pt-[100px] pt-[60px] ">
+        <Footer isMobile={isMobile} />
+      </div>
+    </>
+  );
+}
