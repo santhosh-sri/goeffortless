@@ -18,7 +18,7 @@ const DownloadApps = ({
   return (
     <div>
       <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-      <section className="w-full bg-[#15181B] flex flex-col gap-6 lg:flex-row items-center justify-between px-5 lg:px-[80px] pt-12 md:pt-20">
+      <section className="w-full bg-[#15181B] flex flex-col gap-6 lg:flex-row max-lg:items-center justify-between lg:px-[80px] md:pt-20">
         <div className="max-w-3xl space-y-6 max-md:py-8 max-md:px-5">
           <div className="inline-block bg-[linear-gradient(124.77deg,rgba(255,255,255,0.1)_-5.51%,rgba(255,255,255,0)_104.11%)] text-sm px-3 py-1 rounded-full text-white">
             {appName}
@@ -76,7 +76,7 @@ const DownloadApps = ({
             </button>
           </div>
 
-          <p className="text-[#E4E4E7] text-sm md:text-xl font-light pb-4 md:pb-0 !mb-6">
+          <p className="text-[#E4E4E7] text-sm md:text-xl font-light md:pb-4 !md:mb-6">
             {option}
           </p>
         </div>
