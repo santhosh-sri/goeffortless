@@ -47,7 +47,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
       links: [
         {
           label: "Blog",
-          link: "/stories",
+          link: "/blogs",
           icon: "/book-open.svg",
           activeIcon: "/book-open-active.svg",
           soon: false,
