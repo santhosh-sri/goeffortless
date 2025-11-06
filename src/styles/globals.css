@@ -799,3 +799,28 @@ body {
     );
   }
 }
+
+@layer components {
+  .htmlContainer h1,
+  .htmlContainer h2,
+  .htmlContainer h3,
+  .htmlContainer p,
+  .htmlContainer strong,
+  .htmlContainer em {
+    font-size: revert;
+    font-weight: revert;
+    line-height: revert;
+  }
+  .htmlContainer ul,
+  .htmlContainer ol {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
+
+  .htmlContainer li {
+    font-size: revert;
+    line-height: revert;
+    font-weight: revert;
+  }
+}

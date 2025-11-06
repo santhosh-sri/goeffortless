@@ -154,7 +154,7 @@ export default function BlogDetail({ blog }: any) {
             </div>
             <div className="md:pb-[100px] pb-[60px] max-md:py-[32px] max-md:px-5">
               <div
-                className="text-[#E4E4E7] font-light text-base md:text-xl flex flex-col gap-4 html-container"
+                className="text-[#E4E4E7] flex flex-col gap-4 htmlContainer"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
             </div>
