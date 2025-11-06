@@ -3,7 +3,6 @@ import useElementVisibility from "@/data/useElementVisibility";
 import { Content } from "@/interface/type";
 import React, { useEffect, useState } from "react";
 import CareersSection from "./CareersBanner";
-import RequestDemoForm from "./DemoForm";
 import Footer from "./Footer";
 import Header from "./NewHeader";
 import Metadata from "./Metadata";
@@ -24,6 +23,7 @@ const Landing: React.FC<Content> = ({
   isPricingPlanPage,
   isCareersPage,
   metadata, // Add metadata prop
+  isDownloadPage,
 }) => {
   const isFormVisible = useElementVisibility("firstFold", {
     top: 80,
@@ -92,6 +92,7 @@ const Landing: React.FC<Content> = ({
                 isPricingPage={isPricingPage}
                 isPricingPlanPage={isPricingPlanPage}
                 isCareersPage={isCareersPage}
+                isDownloadPage={isDownloadPage}
               />
             ))}
         </div>
@@ -100,7 +101,8 @@ const Landing: React.FC<Content> = ({
             (isHomePage ||
               isPricingPlanPage ||
               isPricingPage ||
-              isCareersPage) &&
+              isCareersPage ||
+              isDownloadPage) &&
             "pt-[60px] md:pt-[120px] bg-black"
           }`}
         >

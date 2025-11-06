@@ -269,6 +269,7 @@ export interface ServiceContent {
   faqs?: FAQData;
   marginTop?: boolean
   officelocation?: Location[];
+  downloadApps?: DownloadSectionProps[]
 }
 
 export interface CareersSectionContent {
@@ -414,6 +415,7 @@ export interface Content {
   isCareersPage?: boolean;
   isPricingPlanPage?: boolean;
   metadata?: MetadataType;
+  isDownloadPage?: boolean;
 }
 export interface FooterSection {
   title?: string;
@@ -503,4 +505,16 @@ export interface Location {
   details: string;
   locationSrc: string;
   link: string;
+}
+
+export interface DownloadSectionProps {
+  appName?: string;
+  title?: string;
+  highlight?: string;
+  description?: string;
+  subDescription?: string;
+  appStoreLink?: string;
+  playStoreLink?: string;
+  imageSrc: string;
+  option: string
 }
