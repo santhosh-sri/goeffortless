@@ -1,5 +1,6 @@
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import PageTitle from "@/components/PageTitle";
 import Header from "@/components/NewHeader";
 import Footer from "@/components/Footer";
@@ -9,7 +10,9 @@ import CallbackCardSection from "@/components/CallBackCardSection";
 interface BlogResponse {
   blog?: {
     title?: string;
+    description?: string;
     content?: string;
+    seoMetaKeywords?: string;
   };
 }
 
@@ -53,13 +56,21 @@ const callBackCards = [
   },
 ];
 
-export default function BlogDetail() {
+export default function BlogDetail({ blog }: any) {
+  const {
+    title: metaTitle,
+    description,
+    seoMetaKeywords,
+    id: ids,
+  } = blog?.blog;
+
   const router = useRouter();
   const { id } = router.query;
 
   const [isMobile, setIsMobile] = useState(false);
   const [htmlContent, setHtmlContent] = useState<string>("");
   const [title, setTitle] = useState<string>("");
+  const [desc, setDesc] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
 
   const handleResize = () => {
@@ -78,6 +89,7 @@ export default function BlogDetail() {
         const data: BlogResponse = await res.json();
         setHtmlContent(data.blog?.content || "");
         setTitle(data.blog?.title || "Untitled");
+        setDesc(data.blog?.description || "Read the full article");
       } catch (err: any) {
         console.error(err.message || "Failed to fetch blog");
       } finally {
@@ -99,6 +111,19 @@ export default function BlogDetail() {
 
   return (
     <>
+      <Head>
+        <title>Effortless Blogs: {title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={seoMetaKeywords} />
+        <meta property="og:title" content={`Effortless Blogs: ${metaTitle}`} />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:url"
+          content={`https://www.goeffortless.ai/blogs/${ids}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://iili.io/F7C7h12.png" />
+      </Head>
       <div className={`fixed top-0 w-full z-[999]`}>
         <Header isMobile={isMobile} />
       </div>
@@ -119,24 +144,17 @@ export default function BlogDetail() {
                   WebkitBackgroundClip: "text",
                 }}
               >
-                <span className="text-white font-light">
-                  10 Common Challenges of{" "}
-                </span>
-                <br /> <span className="font-medium">Field Sales in India</span>
+                <span className="font-medium">{title}</span>
               </h1>
               <p
-                className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+                className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300] capitalize`}
               >
-                Discover the top 10 challenges faced by field sales teams in
-                India, from delayed collections to inefficient tracking, and
-                learn proven strategies to overcome them with digital tools like
-                Effortless.
+                {desc}
               </p>
             </div>
             <div className="md:pb-[100px] pb-[60px] max-md:py-[32px] max-md:px-5">
-              <h1 className="text-3xl font-semibold mb-6">{title}</h1>
               <div
-                className="prose max-w-none"
+                className="text-[#E4E4E7] font-light text-base md:text-xl flex flex-col gap-4 html-container"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
             </div>
@@ -178,4 +196,13 @@ export default function BlogDetail() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps({ params }: any) {
+  const res = await fetch(
+    `https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs/${params.id}?format=html`
+  );
+  const blog = await res.json();
+
+  return { props: { blog } };
 }

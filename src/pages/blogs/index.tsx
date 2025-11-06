@@ -1,10 +1,11 @@
+import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import BlogCard from "@/components/BlogCard";
 import BlogCardSkeleton from "@/components/BlogCardSkeleton";
 import Footer from "@/components/Footer";
 import Header from "@/components/NewHeader";
 import PageTitle from "@/components/PageTitle";
 import { BlogCardProps } from "@/interface/type";
-import React, { useEffect, useState } from "react";
 
 const Index = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,14 +17,10 @@ const Index = () => {
   };
   const transformBlogs = (data: any[]): BlogCardProps[] => {
     return data.map((item) => {
-      const imageNode = item.content?.content?.find(
-        (block: any) => block.type === "image"
-      );
-
-      const imageUrl = imageNode?.attrs?.src || "/blog1.jpg";
-      const desc = item.excerpt || "Read the full article";
+      const imageUrl = item.imageUrl;
+      const desc = item.description || "Read the full article";
       const date = new Date(
-        item.publishedAt._seconds * 1000
+        item.publishedAt.split("-").reverse().join("-")
       ).toLocaleDateString("en-US", { year: "numeric", month: "long" });
 
       return {
@@ -31,7 +28,7 @@ const Index = () => {
         title: item.title || "Untitled",
         desc,
         date,
-        href: `/stories/${item.id}`,
+        href: `/blogs/${item.id}`,
       };
     });
   };
@@ -66,6 +63,28 @@ const Index = () => {
 
   return (
     <>
+      <Head>
+        <title>Effortless Blogs: The Effortless Edge</title>
+        <meta
+          name="description"
+          content="Stay ahead with The Effortless Edge - your source for insights on
+            AI-driven automation, smarter sales, and efficient financial
+            workflows for growing businesses."
+        />
+        <meta
+          property="og:title"
+          content="Effortless Blogs: The Effortless Edge"
+        />
+        <meta
+          property="og:description"
+          content="Stay ahead with The Effortless Edge - your source for insights on
+            AI-driven automation, smarter sales, and efficient financial
+            workflows for growing businesses."
+        />
+        <meta property="og:url" content="https://www.goeffortless.ai/blogs" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://iili.io/F7C7h12.png" />
+      </Head>
       <div className={`fixed top-0 w-full z-[999]`}>
         <Header isMobile={isMobile} />
       </div>
@@ -80,7 +99,7 @@ const Index = () => {
             }}
           >
             <span className="text-white font-light">The </span>
-            <br /> <span className="font-medium">Effortless Edge</span>
+            <span className="font-medium">Effortless Edge</span>
           </h1>
           <p
             className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
