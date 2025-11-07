@@ -123,8 +123,8 @@ const Index = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-10 text-gray-400">
-              No blogs found.
+            <div className="text-center py-10 text-[#E4E4E7]">
+              No blogs found
             </div>
           )}
         </div>
