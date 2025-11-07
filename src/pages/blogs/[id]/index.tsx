@@ -62,7 +62,7 @@ export default function BlogDetail({ blog }: any) {
     description,
     seoMetaKeywords,
     id: ids,
-  } = blog?.blog;
+  } = blog?.blog || {};
 
   const router = useRouter();
   const { id } = router.query;
@@ -132,7 +132,7 @@ export default function BlogDetail({ blog }: any) {
           <div className="">
             <BlogPageSkeleton />
           </div>
-        ) : (
+        ) : htmlContent ? (
           <>
             <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
               <PageTitle pageHeading={"Blogs"} />
@@ -147,18 +147,22 @@ export default function BlogDetail({ blog }: any) {
                 <span className="font-medium">{title}</span>
               </h1>
               <p
-                className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300] capitalize`}
+                className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[300] md:font-[400] capitalize`}
               >
                 {desc}
               </p>
             </div>
             <div className="md:pb-[100px] pb-[60px] max-md:py-[32px] max-md:px-5">
               <div
-                className="text-[#E4E4E7] font-light text-base md:text-xl flex flex-col gap-4 html-container"
+                className="text-[#E4E4E7] flex flex-col gap-4 htmlContainer"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
             </div>
           </>
+        ) : (
+          <div className="flex flex-col md:gap-6 text-[#E4E4E7] gap-4 items-center justify-center mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
+            Blog not found
+          </div>
         )}
       </div>
 
