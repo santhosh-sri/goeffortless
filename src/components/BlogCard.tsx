@@ -15,7 +15,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <Link
       href={href}
-      className="group relative block w-full rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+      className="group relative block w-full rounded-xl rounded-b-none overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
     >
       {imageUrl ? (
         <div className="relative w-full h-[300px] md:h-[350px]">
@@ -29,7 +29,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_65.38%,#000_100%)]" />
         </div>
       ) : (
-        <div className="relative w-full h-[300px] md:h-[350px] bg-[#15181B]" />
+        <>
+          <div className="relative w-full h-[300px] md:h-[350px] bg-[#15181B]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_65.38%,#000_100%)]" />
+        </>
       )}
 
       <div className="absolute bottom-0 left-0 right-0 p-5 ">

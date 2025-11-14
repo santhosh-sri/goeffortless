@@ -109,6 +109,25 @@ export default function BlogDetail({ blog }: any) {
     };
   }, []);
 
+  // useEffect(() => {
+  //   const columns = document.querySelectorAll<HTMLElement>(
+  //     ".htmlContainer .tiptap-column[data-width]"
+  //   );
+
+  //   columns.forEach((column) => {
+  //     const width = column.getAttribute("data-width")?.trim();
+  //     if (!width) return;
+
+  //     // Set a CSS custom property
+  //     column.style.setProperty("--column-width", width);
+
+  //     // Fallback for browsers not supporting var() in flex-basis
+  //     column.style.flex = `0 0 ${width}`;
+  //     column.style.flexBasis = width;
+  //     column.style.maxWidth = width;
+  //   });
+  // }, []);
+
   return (
     <>
       <Head>

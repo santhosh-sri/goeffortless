@@ -886,3 +886,38 @@ body {
 .animate-logo {
   animation: logoPulse 1s ease-in-out infinite;
 }
+
+.htmlContainer .tiptap-columns {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.htmlContainer .tiptap-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.htmlContainer .tiptap-column {
+  flex-basis: var(--column-width, 100%);
+  max-width: var(--column-width, 100%);
+}
+
+/* .htmlContainer .tiptap-column > * + * {
+  margin-top: 4px;
+} */
+
+@media (max-width: 768px) {
+  .htmlContainer .tiptap-columns {
+    flex-direction: column;
+  }
+  
+.htmlContainer .tiptap-columns .tiptap-column {
+  flex: 0 0 100% !important;
+  max-width: 100%  !important;
+}
+}
