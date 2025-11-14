@@ -18,14 +18,14 @@ const Index = () => {
   const transformBlogs = (data: any[]): BlogCardProps[] => {
     return data.map((item) => {
       const imageUrl = item.imageUrl;
-      const desc = item.description || "Read the full article";
+      const desc = item.listDescription || "Read the full article";
       const date = new Date(
         item.publishedAt.split("-").reverse().join("-")
       ).toLocaleDateString("en-US", { year: "numeric", month: "long" });
 
       return {
         imageUrl,
-        title: item.title || "Untitled",
+        title: item.listTitle || "Untitled",
         desc,
         date,
         href: `/blogs/${item.id}`,
@@ -109,7 +109,7 @@ const Index = () => {
             workflows for growing businesses.
           </p>
         </div>
-        <div>
+        <div className="max-md:px-5">
           {blogs?.length > 0 ? (
             <div className="md:pb-[100px] pb-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {blogs.map((items, index) => (

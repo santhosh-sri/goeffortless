@@ -18,6 +18,9 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const pathname = usePathname();
   const router = useRouter();
 
+  const resourcePath =
+    pathname === "/pricing" || pathname === "/case-studies" || pathname === "/";
+
   const handleMenuClick = async (e: React.MouseEvent, href: string) => {
     // if (href.includes("#")) {
     e.preventDefault();
@@ -198,7 +201,9 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               <div>
                 <Link
                   href="/pricing"
-                  className={`text-base font-normal text-[#A8A8A8] hover:text-white cursor-pointer`}
+                  className={`text-base font-normal ${
+                    pathname === "/pricing" ? "text-white" : "text-[#A8A8A8]"
+                  } hover:text-white cursor-pointer`}
                 >
                   Pricing
                 </Link>
@@ -206,7 +211,11 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               <div>
                 <Link
                   href="/case-studies"
-                  className={`text-base font-normal text-[#A8A8A8] hover:text-white cursor-pointer`}
+                  className={`text-base font-normal ${
+                    pathname === "/case-studies"
+                      ? "text-white"
+                      : "text-[#A8A8A8]"
+                  } hover:text-white cursor-pointer`}
                 >
                   Case Study
                 </Link>
@@ -224,7 +233,9 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     setHoveredIndex(null);
                   }}
                   className={`text-base font-normal hover:text-white cursor-pointer flex items-center gap-2 ${
-                    openMenu === "resources" ? "text-white" : "text-[#A8A8A8]"
+                    openMenu === "resources" || !resourcePath
+                      ? "text-white"
+                      : "text-[#A8A8A8]"
                   }`}
                 >
                   <span>Resources</span>
