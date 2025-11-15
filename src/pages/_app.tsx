@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import { Lexend } from "next/font/google";
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";
+import PageTransition from "@/components/PageTransition";
+
 const lexend = Lexend({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"], // customize as needed
@@ -16,8 +18,10 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, []);
   return (
-    <div className={lexend.variable}>
-      <Component {...pageProps} />
-    </div>
+    <PageTransition>
+      <div className={lexend.variable}>
+        <Component {...pageProps} />
+      </div>
+    </PageTransition>
   );
 }

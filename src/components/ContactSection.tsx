@@ -18,7 +18,7 @@ export default function ContactSection() {
             <div className="flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-3 md:p-5">
               <Image src={"/envelope.svg"} alt="Icon" width={24} height={24} />
               <div>
-                <p className="font-normal text-white text-base">
+                <p className="font-normal text-base text-white">
                   hello@goeffortless.ai
                 </p>
                 <p className="text-[#B1B1B1] font-light text-sm">
