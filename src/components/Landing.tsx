@@ -8,6 +8,7 @@ import Header from "./NewHeader";
 import Metadata from "./Metadata";
 import ServiceSection from "./ServiceSection";
 import UsecaseFold from "./UsecaseFold";
+import BlogWithSidebar from "./BlogWithSidebar";
 
 //Landing component
 const Landing: React.FC<Content> = ({
@@ -22,6 +23,7 @@ const Landing: React.FC<Content> = ({
   isPricingPage,
   isPricingPlanPage,
   isCareersPage,
+  isBlogPage,
   metadata, // Add metadata prop
   isDownloadPage,
 }) => {
@@ -79,6 +81,7 @@ const Landing: React.FC<Content> = ({
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}
           {usecaseFold && <UsecaseFold {...usecaseFold} isMobile={isMobile} />}
+          {isBlogPage && <BlogWithSidebar />}
           {/* <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div> */}
           {serviceContent &&
             serviceContent?.map((contentItem, index) => (
@@ -102,7 +105,8 @@ const Landing: React.FC<Content> = ({
               isPricingPlanPage ||
               isPricingPage ||
               isCareersPage ||
-              isDownloadPage) &&
+              isDownloadPage ||
+              isBlogPage) &&
             "pt-[60px] md:pt-[120px] bg-black"
           }`}
         >

@@ -42,6 +42,8 @@ import CaseStudiesSection from "./CaseStudySection";
 import FaqComponent from "./FaqComponent";
 import OfficeLocations from "./OfficeLocations";
 import DownloadApps from "./DownloadApps";
+import BlogCard from "./BlogCard";
+import BlogWithSidebar from "./BlogWithSidebar";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -114,6 +116,7 @@ const ServiceSection = ({
   officelocation,
   downloadApps = [],
   isDownloadPage = false,
+  blogs = [],
 }: ServiceSectionProps) => {
   return (
     <>
@@ -585,6 +588,13 @@ const ServiceSection = ({
         {officelocation && (
           <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
             <OfficeLocations locations={officelocation} />
+          </div>
+        )}
+        {blogs?.length > 0 && (
+          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0 grid grid-cols-3 gap-5">
+            {blogs?.map((items, index) => (
+              <BlogCard key={index} {...items} />
+            ))}
           </div>
         )}
       </div>

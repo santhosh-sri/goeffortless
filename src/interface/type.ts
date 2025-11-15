@@ -269,6 +269,7 @@ export interface ServiceContent {
   faqs?: FAQData;
   marginTop?: boolean
   officelocation?: Location[];
+  blogs?: BlogCardProps[];
   downloadApps?: DownloadSectionProps[]
 }
 
@@ -415,6 +416,7 @@ export interface Content {
   isCareersPage?: boolean;
   isPricingPlanPage?: boolean;
   metadata?: MetadataType;
+  isBlogPage?: boolean;
   isDownloadPage?: boolean;
 }
 export interface FooterSection {
@@ -505,6 +507,14 @@ export interface Location {
   details: string;
   locationSrc: string;
   link: string;
+}
+
+export interface BlogCardProps {
+  imageUrl: string;
+  title: string;
+  desc: string;
+  date: string;
+  href?: string;
 }
 
 export interface DownloadSectionProps {
