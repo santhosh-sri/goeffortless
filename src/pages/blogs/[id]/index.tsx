@@ -109,10 +109,13 @@ export default function BlogDetail({ blog }: any) {
     };
   }, []);
 
-  const cleanHTML = (html: any) => {
-    return html
-      .replace(/<(\w+)[^>]*>\s*<\/\1>/g, "")
-      .replace(/<(\w+)[^>]*>(?:\s|&nbsp;)*<\/\1>/g, "");
+  const cleanHTML = (html: string) => {
+    return (
+      html
+        // remove empty tags EXCEPT iframe
+        .replace(/<(?!iframe)(\w+)[^>]*>\s*<\/\1>/gi, "")
+        .replace(/<(?!iframe)(\w+)[^>]*>(?:\s|&nbsp;)*<\/\1>/gi, "")
+    );
   };
 
   // useEffect(() => {
