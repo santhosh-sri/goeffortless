@@ -227,7 +227,7 @@ export default function BlogDetail({ blog }: any) {
         </div>
         <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       </div>
-      <div className="md:pt-[100px] pt-[60px] bg-[#15181B]">
+      <div className="md:pt-[100px] pt-[60px] bg-[#08090A]">
         <Footer isMobile={isMobile} />
       </div>
     </>
