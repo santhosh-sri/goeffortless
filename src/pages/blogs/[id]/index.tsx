@@ -193,8 +193,8 @@ export default function BlogDetail({ blog }: any) {
           </div>
         )}
       </div>
-      <div className="bg-[#15181B]">
-        <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+      <div className="bg-[#15181B] mt-[40px] md:mt-[60px]">
+        <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
         <div className={`md:px-[80px]`}>
           <div className="flex flex-col md:gap-6 gap-4 items-center justify-center  py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[64px] scroll-mt-20">
             <PageTitle pageHeading={"Get Started"} />
