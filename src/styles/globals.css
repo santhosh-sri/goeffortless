@@ -893,7 +893,7 @@ body {
   flex-wrap: nowrap;
   gap: 1.5rem;
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 32px 0;
 }
 
 .htmlContainer .tiptap-column {
@@ -901,6 +901,10 @@ body {
   flex-direction: column;
   min-width: 0;
   flex: 0 0 auto;
+}
+
+.htmlContainer .tiptap-column img {
+  margin: 0 !important;
 }
 
 .htmlContainer .tiptap-column {
