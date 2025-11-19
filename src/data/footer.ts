@@ -38,7 +38,7 @@ export const footerData = {
         },
         {
           title: "Case Study",
-          url: "/case-studies",
+          url: "/case-study",
         },
       ],
     },
@@ -97,7 +97,7 @@ export const footerData = {
         },
         {
           title: "Case Study",
-          url: "/case-studies",
+          url: "/case-study",
         },
       ],
     },

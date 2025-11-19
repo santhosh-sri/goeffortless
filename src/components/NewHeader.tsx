@@ -19,7 +19,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const router = useRouter();
 
   const resourcePath =
-    pathname === "/pricing" || pathname === "/case-studies" || pathname === "/";
+    pathname === "/pricing" || pathname === "/case-study" || pathname === "/";
 
   const handleMenuClick = async (e: React.MouseEvent, href: string) => {
     // if (href.includes("#")) {
@@ -120,7 +120,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const mobileMenu = [
     { href: "/pricing", label: "Pricing", hasBottomBorder: true },
     {
-      href: "/case-studies",
+      href: "/case-study",
       label: "Case Study",
       hasBottomBorder: true,
     },
@@ -210,11 +210,9 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               </div>
               <div>
                 <Link
-                  href="/case-studies"
+                  href="/case-study"
                   className={`text-base font-normal ${
-                    pathname === "/case-studies"
-                      ? "text-white"
-                      : "text-[#A8A8A8]"
+                    pathname === "/case-study" ? "text-white" : "text-[#A8A8A8]"
                   } hover:text-white cursor-pointer`}
                 >
                   Case Study
@@ -227,7 +225,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <div
-                  // href="/case-studies"
+                  // href="/case-study"
                   onClick={() => {
                     setOpenMenu(null);
                     setHoveredIndex(null);
