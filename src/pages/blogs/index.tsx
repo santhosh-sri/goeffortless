@@ -28,7 +28,7 @@ const Index = () => {
         title: item.listTitle || "Untitled",
         desc,
         date,
-        href: `/blogs/${item.id}`,
+        href: `/blogs/${item.slug}`,
       };
     });
   };
