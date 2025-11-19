@@ -109,6 +109,12 @@ export default function BlogDetail({ blog }: any) {
     };
   }, []);
 
+  const cleanHTML = (html: any) => {
+    return html
+      .replace(/<(\w+)[^>]*>\s*<\/\1>/g, "")
+      .replace(/<(\w+)[^>]*>(?:\s|&nbsp;)*<\/\1>/g, "");
+  };
+
   // useEffect(() => {
   //   const columns = document.querySelectorAll<HTMLElement>(
   //     ".htmlContainer .tiptap-column[data-width]"
@@ -173,8 +179,8 @@ export default function BlogDetail({ blog }: any) {
             </div>
             <div className="md:pb-[100px] pb-[60px] max-md:py-[32px] max-md:px-5">
               <div
-                className="text-[#E4E4E7] flex flex-col gap-4 htmlContainer"
-                dangerouslySetInnerHTML={{ __html: htmlContent }}
+                className="text-[#E4E4E7] flex flex-col gap-3 htmlContainer"
+                dangerouslySetInnerHTML={{ __html: cleanHTML(htmlContent) }}
               />
             </div>
           </>

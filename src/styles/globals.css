@@ -809,6 +809,7 @@ body {
   .htmlContainer h2 {
     font-size: 20px;
     font-weight: 500;
+    padding-top: 12px;
   }
 
   .htmlContainer h3 {
@@ -817,7 +818,7 @@ body {
   }
 
   .htmlContainer p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
   }
 
@@ -907,9 +908,9 @@ body {
   max-width: var(--column-width, 100%);
 }
 
-/* .htmlContainer .tiptap-column > * + * {
-  margin-top: 4px;
-} */
+.htmlContainer .tiptap-column > * + * {
+  margin-top: 12px;
+}
 
 @media (max-width: 768px) {
   .htmlContainer .tiptap-columns {
