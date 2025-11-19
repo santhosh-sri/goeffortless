@@ -193,37 +193,41 @@ export default function BlogDetail({ blog }: any) {
           </div>
         )}
       </div>
-
-      <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-      <div className={`bg-[#15181B] md:px-[80px]`}>
-        <div className="flex flex-col md:gap-6 gap-4 items-center justify-center  py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[64px] scroll-mt-20">
-          <PageTitle pageHeading={"Get Started"} />
-          <h1
-            className={`font-[300] md:font-medium  text-[24px] md:text-[32px] text-center bg-clip-text text-transparent`}
-            style={{
-              background: "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
-              WebkitBackgroundClip: "text",
-            }}
-          >
-            <span className="text-white font-light">Growth Doesn’t Wait. </span>
-            <span className="font-medium">Why Should You?</span>
-          </h1>
-          <p
-            className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
-          >
-            Let Effortless help you scale—without the scramble.
-          </p>
-          {callBackCards && (
-            <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center">
-              {callBackCards?.map((card, index) => (
-                <CallbackCardSection key={index} {...card} />
-              ))}
-            </div>
-          )}
+      <div className="bg-[#15181B]">
+        <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div className={`md:px-[80px]`}>
+          <div className="flex flex-col md:gap-6 gap-4 items-center justify-center  py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[64px] scroll-mt-20">
+            <PageTitle pageHeading={"Get Started"} />
+            <h1
+              className={`font-[300] md:font-medium  text-[24px] md:text-[32px] text-center bg-clip-text text-transparent`}
+              style={{
+                background:
+                  "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
+                WebkitBackgroundClip: "text",
+              }}
+            >
+              <span className="text-white font-light">
+                Growth Doesn’t Wait.{" "}
+              </span>
+              <span className="font-medium">Why Should You?</span>
+            </h1>
+            <p
+              className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+            >
+              Let Effortless help you scale—without the scramble.
+            </p>
+            {callBackCards && (
+              <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center">
+                {callBackCards?.map((card, index) => (
+                  <CallbackCardSection key={index} {...card} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
+        <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       </div>
-      <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-      <div className="md:pt-[100px] pt-[60px] ">
+      <div className="md:pt-[100px] pt-[60px] bg-[#15181B]">
         <Footer isMobile={isMobile} />
       </div>
     </>

@@ -20,7 +20,7 @@ export const pricingData = {
       lite: "<span class='text-[#F08B32]'> Free</span>",
     },
     {
-      name: "Number of Users",
+      name: "Number of Users (Up To)",
       premiumPro: "50",
       premium: "15",
       lite: "5",
@@ -139,8 +139,8 @@ export const pricingData = {
     },
     {
       name: "E-Invoicing & e WayBill Generation",
-      premiumPro: "<span class='text-emerald-400'>✓</span> 5000/user/month",
-      premium: "<span class='text-emerald-400'>✓</span> 1500/user/month",
+      premiumPro: "<span class='text-emerald-400'>✓</span> 5000/month",
+      premium: "<span class='text-emerald-400'>✓</span> 1500/month",
       lite: "✓ 500/month",
       enterprise: "Unlimited",
     },
