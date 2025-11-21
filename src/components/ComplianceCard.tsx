@@ -10,7 +10,7 @@ const ComplianceCardSection: React.FC<ComplianceCard> = ({
 }) => {
   return (
     <div className="rounded-xl shadow-md">
-      <div className="text-[#FFF]  flex flex-col gap-2 p-5 md:p-3 items-center  justify-center rounded-xl bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] md:min-w-[280px]">
+      <div className="text-[#FFF]  flex flex-col gap-2 p-5 items-center  justify-center rounded-xl bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] md:min-w-[280px]">
         {img && (
           <Image
             src={img}
