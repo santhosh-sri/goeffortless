@@ -138,8 +138,8 @@ export const footerData = {
       url: "https://www.linkedin.com/company/igoeffortless/",
     },
     {
-      icon: "/ham-logo.svg",
-      url: "https://goeffortless.substack.com/",
+      icon: "/youtube.svg",
+      url: "https://www.youtube.com/@Effortless_official",
     },
   ],
   officeLocation: [
