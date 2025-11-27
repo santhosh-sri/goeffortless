@@ -11,8 +11,27 @@ export default function PageTransition({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const handleStart = () => setLoading(true);
-    const handleStop = () => setTimeout(() => setLoading(false), 600);
+    const handleStart = (url: unknown) => {
+      if (typeof url !== "string") {
+        setLoading(true);
+        return;
+      }
+
+      if (url.includes("#")) return;
+
+      setLoading(true);
+    };
+
+    const handleStop = (url: unknown) => {
+      if (typeof url !== "string") {
+        setTimeout(() => setLoading(false), 600);
+        return;
+      }
+
+      if (url.includes("#")) return;
+
+      setTimeout(() => setLoading(false), 600);
+    };
 
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleStop);
