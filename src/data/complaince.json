@@ -1,0 +1,564 @@
+{
+  "metadata": {
+    "title": "Effortless: Automate TDS, GST & Cost Centers. Reduce Manual Work.",
+    "description": "Designed for Indian finance workflows. Ensure accurate compliance and faster closing.",
+    "og": {
+      "title": "Effortless: Automate TDS, GST & Cost Centers. Reduce Manual Work.",
+      "description": "Designed for Indian finance workflows. Ensure accurate compliance and faster closing.",
+      "url": "https://www.goeffortless.ai/complaince",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "usecaseFold": {
+    "pageHeading": "Compliance",
+    "heading": "<span style=\"font-weight: 500;\">Automate TDS, GST & Cost Centers. Reduce Manual Work.</span>",
+    "description": "Designed for Indian finance workflows. Ensure accurate compliance and faster closing.",
+    "bannerImage": "/complaincebanner.png",
+    "ctaText": "Request Demo",
+    "isComplaincePage": true
+  },
+  "isComplaincePage": true,
+  "tds": {
+    "serviceContent": [
+      {
+        "tagLine": "Expense",
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">TDS on Expense</span>",
+        "description": "Track and manage TDS deductions on every expense with ease",
+        "trackData": [
+          {
+            "title": "Start Definition",
+            "desc": "TDS requires the payer to deduct tax while making certain business payments and deposit that tax to the government. It helps ensure income reporting at the source and prevents under-reporting."
+          },
+          {
+            "title": "Why It Matters for Effortless Users",
+            "desc": "Effortless automatically applies the correct TDS section, rate, and threshold based on the expense type and vendor PAN status. This eliminates manual mistakes and reduces audit exposure."
+          }
+        ]
+      },
+      {
+        "tagLine": "Key Factors",
+        "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Key Factors</span>",
+        "description": "Essential elements that drive success",
+        "keyFactor": [
+          "TDS depends on the nature of the expense (not vendor)",
+          "Rates may vary for Individual vs Non-Individual vendors",
+          "Thresholds may apply per transaction or cumulative FY basis",
+          "PAN not linked to Aadhaar → TDS @ 20% applies"
+        ]
+      },
+      {
+        "tagLine": "TDS Apply",
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Where TDS Commonly Applies</span>",
+        "description": "Know the key areas where TDS is usually deducted on business expenses",
+        "tdsApply": [
+          {
+            "title": "194A",
+            "desc": "Interest Payments",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194C",
+            "desc": "Advertisement, Contractor, Repairs, Maintenance",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194J(a)",
+            "desc": "Professional Fee & Royalty",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194J(b)",
+            "desc": "Technical Fee",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194I(a)",
+            "desc": "Rent – Plant & Machinery",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194I(b)",
+            "desc": "Rent – Immovable / Furniture",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194IA",
+            "desc": "Purchase of Immovable Property (non-agri)",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194H",
+            "desc": "Commission / Brokerage",
+            "icon": "/tdstick.svg"
+          },
+          {
+            "title": "194Q",
+            "desc": "Purchase of Goods (threshold rule applies)",
+            "icon": "/tdstick.svg"
+          }
+        ]
+      },
+      {
+        "tagLine": "TDS Matrix",
+        "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">TDS Section Matrix</span>",
+        "description": "Overview of TDS sections and their applicable rules",
+        "tdsMatrix": {
+          "requirements": [
+            "TAN is required for TDS deduction and reporting",
+            "Deposit TDS within statutory deadlines",
+            "File quarterly TDS returns (Form 24Q / 26Q / 27Q)",
+            "Issue TDS certificates (Form 16A / 16) to vendors"
+          ],
+          "consequences": [
+            "Interest & penalties",
+            "Expense disallowance",
+            "Audit & scrutiny exposure"
+          ]
+        },
+        "tableData": {
+          "tableHeader": [
+            { "key": "section", "label": "Section" },
+            { "key": "expenseType", "label": "Expense Type" },
+            { "key": "singleThreshold", "label": "Single Threshold" },
+            { "key": "aggregateThreshold", "label": "Aggregate Threshold" },
+            { "key": "tdsRateIndividual", "label": "TDS Rate (Individual)" },
+            {
+              "key": "tdsRateNonIndividual",
+              "label": "TDS Rate (Non-Individual)"
+            }
+          ],
+          "tableBody": [
+            {
+              "section": "194C",
+              "expenseType": "Advertisement, Contractor, Repairs, Maintenance",
+              "singleThreshold": "₹30,000",
+              "aggregateThreshold": "₹1,00,000 FY",
+              "tdsRateIndividual": "1%",
+              "tdsRateNonIndividual": "2%"
+            },
+            {
+              "section": "194J(a)",
+              "expenseType": "Professional Fee & Royalty",
+              "singleThreshold": "₹50,000",
+              "aggregateThreshold": "₹50,000 FY",
+              "tdsRateIndividual": "2%",
+              "tdsRateNonIndividual": "10%"
+            },
+            {
+              "section": "194J(b)",
+              "expenseType": "Technical Fee",
+              "singleThreshold": "₹50,000",
+              "aggregateThreshold": "₹50,000 FY",
+              "tdsRateIndividual": "2%",
+              "tdsRateNonIndividual": "2%"
+            },
+            {
+              "section": "194I(a)",
+              "expenseType": "Rent – Plant & Machinery",
+              "singleThreshold": "₹50,000/month",
+              "aggregateThreshold": "₹6,00,000 FY",
+              "tdsRateIndividual": "2%",
+              "tdsRateNonIndividual": "2%"
+            },
+            {
+              "section": "194I(b)",
+              "expenseType": "Rent – Immovable / Furniture",
+              "singleThreshold": "₹50,000/month",
+              "aggregateThreshold": "₹6,00,000 FY",
+              "tdsRateIndividual": "10%",
+              "tdsRateNonIndividual": "10%"
+            },
+            {
+              "section": "194IA",
+              "expenseType": "Purchase of Immovable Property (non-agri)",
+              "singleThreshold": "₹50,00,000",
+              "aggregateThreshold": "₹50,00,000",
+              "tdsRateIndividual": "1%",
+              "tdsRateNonIndividual": "1%"
+            },
+            {
+              "section": "194H",
+              "expenseType": "Commission / Brokerage",
+              "singleThreshold": "₹20,000",
+              "aggregateThreshold": "₹20,000 FY",
+              "tdsRateIndividual": "2%",
+              "tdsRateNonIndividual": "2%"
+            },
+            {
+              "section": "194Q",
+              "expenseType": "Purchase of Goods (Buyer turnover > ₹10Cr)",
+              "singleThreshold": "-",
+              "aggregateThreshold": "₹50,00,000 FY",
+              "tdsRateIndividual": "0.10%",
+              "tdsRateNonIndividual": "0.10%"
+            }
+          ]
+        }
+      },
+      {
+        "tagLine": "Automates TDS",
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "title": "How Effortless ",
+        "colouredTitle": "Automates TDS",
+        "description": "Designed to match the pace of growing teams and their needs.",
+        "tdsAutomation": [
+          "TDS mapped to Expense GL, not Vendor Master (supports multiple sections per vendor)",
+          "Auto-applies correct section, rate, and threshold",
+          "Auto-applies 20% if PAN missing/inoperative",
+          "TDS at Bill Booking (expense accrual) or Payment (vendor advance)",
+          "Section-wise, Vendor-wise, Period-wise TDS dashboards",
+          "CSV export ready for Form 26Q / 27Q NSDL RPU",
+          "26AS reconciliation currently manual (auto-match planned)"
+        ]
+      },
+      {
+        "tagLine": "FAQ",
+        "title": "Frequently Asked ",
+        "colouredTitle": "Questions",
+        "tdsFAQ": [
+          {
+            "question": "Does Effortless automatically calculate TDS?",
+            "answer": "Yes. Effortless uses the configured TDS sections and rates based on Tax behaviour mapping during setup process to automatically compute TDS on eligible transactions."
+          },
+          {
+            "question": "Can we define multiple TDS sections for one vendor?",
+            "answer": "TDS mapping is done at Expense GL level and not at vendor level. You can map multiple Expense GL at the time of bill booking which inturn maps the respective TDS tagged under multiple GL's to the same vendor and select the relevant one at the time of transaction Booking."
+          },
+          {
+            "question": "Can the system handle 'No PAN' higher rate deduction (20%)?",
+            "answer": "Yes. Effortless automatically applies the higher rate if vendor PAN is not captured."
+          },
+          {
+            "question": "At what stage is TDS calculated – at Bill Booking or Payment?",
+            "answer": "For Bill Booking – TDS is deducted when the liability is recorded. For Vendor Advance Payment Level – TDS is deducted only when payment is made."
+          },
+          {
+            "question": "Does the system generate TDS Challan?",
+            "answer": "No. Effortless does not generate a TDS challan."
+          },
+          {
+            "question": "Can we get TDS computation reports section-wise, vendor-wise, and period-wise?",
+            "answer": "Yes. Effortless provides detailed reports for: Section-wise summary Vendor-wise deduction register Periodic (monthly/quarterly) compliance view"
+          },
+          {
+            "question": "Can Effortless generate Form 26Q/27Q data for quarterly filing?",
+            "answer": "No. But You can export a clean TDS Report, which can be used for TDS filing with minimal modifications (as per RPU/NSDL format)."
+          },
+          {
+            "question": "Can Effortless validate TDS with Form 26AS?",
+            "answer": "Currently, direct 26AS reconciliation is not available, but you can export TDS data and reconcile externally. (Planned feature: Automated 26AS match.)"
+          },
+          {
+            "question": "Does Effortless deduct TDS only on the excess amount over threshold or the entire amount?",
+            "answer": "As per the Income-tax Act, once the cumulative payments to a deductee exceed the prescribed threshold in a financial year, TDS is deducted on the entire amount of the transaction that crosses the threshold, not just on the excess. Effortless following this exactly once threshold is breached, the entire bill amount on which TDS is applicable will be considered for deduction."
+          }
+        ]
+      },
+      {
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "tagLine": "Effortless Compliance",
+        "title": "Enable Accurate and ",
+        "colouredTitle": "Automated Compliance with Effortless.",
+        "description": "Join hundreds of Indian businesses streamlining TDS, GST, and cost centre tracking with our purpose-built finance automation platform.",
+        "keyvalues": [
+          { "title": "1000+", "desc": "Growing Businesses Trust Effortless" },
+          { "title": "99.9%", "desc": "Compliance Accuracy" },
+          { "title": "60-70%", "desc": "Time Saved on Month-End" }
+        ]
+      }
+    ]
+  },
+  "gst": {
+    "serviceContent": [
+      {
+        "tagLine": "Compliance",
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">GST Input Tax Credit (ITC)</span>",
+        "description": "Track and claim your eligible GST credits accurately.",
+        "trackData": [
+          {
+            "title": "What is Input Tax Credit (ITC)",
+            "desc": "Input Tax Credit (ITC) allows a registered business to reduce its GST liability by claiming credit for the GST paid on purchases of goods or services that are used in the course of business. In simple terms, ITC ensures tax is paid only on the value added at each stage of the supply chain."
+          },
+          {
+            "title": "Example",
+            "desc": "If a business pays ₹18,000 GST on purchases and collects ₹25,000 GST on sales, it can claim ₹18,000 as ITC and remit only ₹7,000 to the government."
+          }
+        ]
+      },
+      {
+        "tagLine": "Claiming ITC",
+        "title": "Basic Conditions for ",
+        "colouredTitle": "Claiming ITC",
+        "description": "To avail ITC, the following conditions must be satisfied",
+        "tdsAutomation": [
+          "The taxpayer must be registered under GST",
+          "The invoice or debit note must be available and contain all prescribed details",
+          "The supplier must have uploaded the invoice in their GSTR-1 and paid tax to the government (appearing in the recipient's GSTR-2B)",
+          "Goods or services must be received and used for business purposes",
+          "The payment to the supplier (including tax) must be made within 180 days of invoice date",
+          "ITC must be claimed within the due date for the September return following the end of the financial year (or annual return filing, whichever is earlier)"
+        ]
+      },
+      {
+        "tagLine": "Ineligible ITC",
+        "bgColour": "bg-[#15181B]",
+        "showGreyTopBorder": true,
+        "showGreyBoderLine": true,
+        "title": "Ineligible or Blocked Credits ",
+        "colouredTitle": "(Section 17(5))",
+        "description": "Overview of TDS sections and their applicable rules",
+        "tableData": {
+          "tableHeader": [
+            { "key": "category", "label": "Category" },
+            { "key": "examples", "label": "Examples" }
+          ],
+          "tableBody": [
+            {
+              "category": "Motor vehicles (except when used for transport, training, etc.)",
+              "examples": "Cars for directors or employees"
+            },
+            {
+              "category": "Personal expenses",
+              "examples": "Staff canteen, personal purchases"
+            },
+            {
+              "category": "Construction of immovable property",
+              "examples": "Building office premises"
+            },
+            {
+              "category": "Memberships and clubs",
+              "examples": "Gym, health club subscriptions"
+            },
+            {
+              "category": "Goods lost, stolen, destroyed, or given as gifts",
+              "examples": "Promotional giveaways"
+            }
+          ]
+        }
+      },
+      {
+        "tagLine": "Auto-Handled",
+        "title": "Effortless Automatically ",
+        "colouredTitle": "Supports",
+        "description": "Seamless automation built right in",
+        "tdsAutomation": [
+          "Whether the supplier has valid GST number or not?",
+          "Whether the supplier is regular in filing the GST returns or not?",
+          "Whether the input credit is available or not for the scanned invoice?",
+          "Ineligible credits"
+        ]
+      },
+      {
+        "tagLine": "FAQ",
+        "title": "Effortless – ",
+        "colouredTitle": "GST Input Credit Handling",
+        "tdsFAQ": [
+          {
+            "question": "Does Effortless auto-calculate eligible ITC?",
+            "answer": "Yes. It reads GST rates from supplier invoices and segregates taxable, exempt, and reverse-charge items."
+          },
+          {
+            "question": "Can reports be viewed vendor-wise and period-wise?",
+            "answer": "Yes. Detailed GST Input Summary and Mismatch Report are available."
+          },
+          {
+            "question": "Does Effortless handle reverse charge ITC?",
+            "answer": "Yes. The system flags RCM entries separately and credits them only once payment of tax is confirmed in books."
+          },
+          {
+            "question": "Can client customize input credit eligibility basis the industry",
+            "answer": "Yes, they can customise at each expense category level."
+          }
+        ]
+      },
+      {
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "tagLine": "Effortless Compliance",
+        "title": "Enable Accurate and ",
+        "colouredTitle": "Automated Compliance with Effortless.",
+        "description": "Join hundreds of Indian businesses streamlining TDS, GST, and cost centre tracking with our purpose-built finance automation platform.",
+        "keyvalues": [
+          { "title": "1000+", "desc": "Growing Businesses Trust Effortless" },
+          { "title": "99.9%", "desc": "Compliance Accuracy" },
+          { "title": "60-70%", "desc": "Time Saved on Month-End" }
+        ]
+      }
+    ]
+  },
+  "costCenters": {
+    "serviceContent": [
+      {
+        "tagLine": "Tracking",
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Cost Centre</span>",
+        "description": "Track and manage expenses by department or project",
+        "trackData": [
+          {
+            "title": "What is a Cost Centre",
+            "desc": "A Cost Centre is a unit within an organization for which costs and revenues can be tracked separately. It helps management understand where money is being earned or spent and analyze profitability by department, project, branch, or business vertical.\nIn accounting systems, cost centers act as analytical dimensions used to allocate income and expenses accurately across various business activities."
+          }
+        ]
+      },
+      {
+        "tagLine": "Purpose",
+        "title": "Purpose of ",
+        "colouredTitle": "Purpose of Cost Centers",
+        "description": "To monitor, control, and analyze expenses for specific departments, teams, or projects.",
+        "tdsAutomation": [
+          "To identify which segment or department is generating profit or incurring losses",
+          "To support budgeting, variance analysis, and management reporting",
+          "To help link operational activities with financial outcomes",
+          "To enable multi-dimensional analysis, such as project-wise or location-wise cost tracking"
+        ]
+      },
+      {
+        "tagLine": "Examples",
+        "title": "Examples of ",
+        "colouredTitle": "Cost Centre Usage",
+        "description": "A company tracks marketing, sales, and HR expenses separately to measure each department’s spending and performance.",
+        "tableData": {
+          "tableHeader": [
+            { "key": "businessType", "label": "Business Type" },
+            { "key": "examples", "label": "Example of Cost Centre" },
+            { "key": "purpose", "label": "Purpose" }
+          ],
+          "tableBody": [
+            {
+              "businessType": "Manufacturing",
+              "examples": "Production Unit A, Production Unit B",
+              "purpose": "Track cost and efficiency by plant"
+            },
+            {
+              "businessType": "Construction",
+              "examples": "Project Alpha, Project Beta",
+              "purpose": "Track labour, materials, and overhead project-wise"
+            },
+            {
+              "businessType": "Service Industry",
+              "examples": "Client A, Client B",
+              "purpose": "Track client-level profitability"
+            },
+            {
+              "businessType": "Multi-branch Business",
+              "examples": "Chennai Office, Delhi Office",
+              "purpose": "Compare branch performance"
+            }
+          ]
+        }
+      },
+      {
+        "tagLine": "Cost Center",
+        "title": "How Cost Centers",
+        "colouredTitle": " Work in Effortless",
+        "description": "Effortless automatically tags expenses, invoices, and payments to the right cost centers, giving clear visibility into where money is spent and how each team performs.",
+        "tableData": {
+          "tableHeader": [
+            { "key": "feature", "label": "Feature" },
+            { "key": "explanation", "label": "Explanation" }
+          ],
+          "tableBody": [
+            {
+              "feature": "Setup",
+              "explanation": "Create cost centers in Settings to sync with Tally. Legacy Tally cost centers not imported can be hidden in Effortless."
+            },
+            {
+              "feature": "Tagging",
+              "explanation": "Users can tag cost centers while booking transactions — e.g., while creating invoices, expenses, reimbursement or bank entries."
+            },
+            {
+              "feature": "Multiple Levels (Group Hierarchies)",
+              "explanation": "Effortless allows grouping under parent and sub-cost centres for better reporting (e.g., 'North India' > 'Delhi Office')."
+            },
+            {
+              "feature": "Integration with Tally",
+              "explanation": "Cost centre tagging is fully synced with Tally so that expenses and incomes remain aligned in both systems.Reports"
+            },
+            {
+              "feature": "Reports",
+              "explanation": "Detailed cost centre reports show total income, expenses, and net profit by cost centre for any selected period."
+            }
+          ]
+        }
+      },
+      {
+        "tagLine": "How it Works",
+        "title": "Your Expenses, Organised and ",
+        "colouredTitle": "Under Control",
+        "description": "Smart automation for tracking, allocating, and controlling every expense.",
+        "tdsApply": [
+          {
+            "title": "Project-Based Analysis",
+            "desc": "Monitor profitability of each project or job"
+          },
+          {
+            "title": "Client-Based Reporting",
+            "desc": "View total revenue vs. expenses for each client"
+          },
+          {
+            "title": "Branch-Level Control",
+            "desc": "Compare performance across different business locations"
+          },
+          {
+            "title": "Business Unit Profitability",
+            "desc": "Helps track profitability by units"
+          }
+        ]
+      },
+      {
+        "tagLine": "FAQ",
+        "title": "Effortless – ",
+        "colouredTitle": "Cost Centre FAQs",
+        "tdsFAQ": [
+          {
+            "question": "Can one transaction have multiple cost centers?",
+            "answer": "Yes. Each line item can be tagged to different cost centers."
+          },
+          {
+            "question": "Are cost centers mandatory?",
+            "answer": "Optional. They can be enabled as per organization structure."
+          },
+          {
+            "question": "Does Effortless sync cost centers with Tally?",
+            "answer": "Yes. Both creation and tagging are automatically synced."
+          },
+          {
+            "question": "Can we view profitability by cost centre?",
+            "answer": "Yes. Reports provide income, expense, and balance summary per cost centre."
+          }
+        ]
+      },
+      {
+        "bgColour": "bg-[#15181B]",
+        "showGreyBoderLine": true,
+        "showGreyTopBorder": true,
+        "tagLine": "Effortless Compliance",
+        "title": "Enable Accurate and ",
+        "colouredTitle": "Automated Compliance with Effortless.",
+        "description": "Join hundreds of Indian businesses streamlining TDS, GST, and cost centre tracking with our purpose-built finance automation platform.",
+        "keyvalues": [
+          { "title": "1000+", "desc": "Growing Businesses Trust Effortless" },
+          { "title": "99.9%", "desc": "Compliance Accuracy" },
+          { "title": "60-70%", "desc": "Time Saved on Month-End" }
+        ]
+      }
+    ]
+  }
+}

@@ -57,10 +57,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
         },
         {
           label: "Compliance Basics",
-          link: "/",
+          link: "/complaince",
           icon: "/compliance.svg",
           activeIcon: "/compliance-active.svg",
-          soon: true,
+          soon: false,
         },
         {
           label: "FAQs",

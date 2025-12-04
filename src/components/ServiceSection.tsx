@@ -44,6 +44,13 @@ import OfficeLocations from "./OfficeLocations";
 import DownloadApps from "./DownloadApps";
 import BlogCard from "./BlogCard";
 import BlogWithSidebar from "./BlogWithSidebar";
+import TrackSection from "./Complaince/TrackSection";
+import FaqCompliance from "./Complaince/FaqCompliance";
+import KeyFactor from "./Complaince/KeyFactor";
+import TdsApply from "./Complaince/TdsApply";
+import TdsAutomation from "./Complaince/TdsAutomation";
+import SupportComponent from "./Complaince/SupportComponent";
+import TdsMatrix from "./Complaince/TdsMatrix";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -54,6 +61,7 @@ interface ServiceSectionProps extends ServiceContent {
   isPricingPlanPage?: boolean;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
   isDownloadPage?: boolean;
+  isComplaincePage?: boolean;
 }
 
 const ServiceSection = ({
@@ -117,28 +125,30 @@ const ServiceSection = ({
   downloadApps = [],
   isDownloadPage = false,
   blogs = [],
+  trackData = [],
+  tdsFAQ = [],
+  keyFactor = [],
+  tdsApply = [],
+  tdsAutomation = [],
+  keyvalues = [],
+  tdsMatrix = {},
+  tableData = {},
 }: ServiceSectionProps) => {
   return (
     <>
       {showGreyTopBorder && (
-        <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div className="mt-[40px] md:mt-[64px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
       <div
         className={`${bgColour ? bgColour : "bg-[#08090A]"} ${
-          !isDownloadPage && "md:px-[80px]"
+          !isDownloadPage && "max-md:px-5 md:px-[80px] py-4 md:py-[60px]"
         }`}
       >
         {caseStudies?.length === 0 && (
           <div
             className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${
               marginTop ? "mt-[64px] md:mt-0" : ""
-            } py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
-              isPricingPage || isPricingPlanPage
-                ? "md:py-[64px]"
-                : isCareersPage && !companyValuesItems
-                ? "md:pb-[90px]"
-                : "md:py-[80px]"
-            } scroll-mt-20`}
+            } max-w-[1350px] mx-auto scroll-mt-20`}
             id={href}
           >
             {(colouredTagLine || tagLine) && (
@@ -516,6 +526,41 @@ const ServiceSection = ({
                 ))}
               </div>
             )}
+            {trackData?.length > 0 && (
+              <div>
+                <TrackSection trackData={trackData} />
+              </div>
+            )}
+            {keyFactor?.length > 0 && (
+              <div className="w-full">
+                <KeyFactor keyFactor={keyFactor} />
+              </div>
+            )}
+            {tdsApply?.length > 0 && (
+              <div className="w-full">
+                <TdsApply tdsApply={tdsApply} />
+              </div>
+            )}
+            {tableData && Object.keys(tableData)?.length > 0 && (
+              <div className="w-full">
+                <TdsMatrix tableData={tableData} tdsMatrix={tdsMatrix} />
+              </div>
+            )}
+            {tdsAutomation?.length > 0 && (
+              <div className="w-full">
+                <TdsAutomation tdsAutomation={tdsAutomation} />
+              </div>
+            )}
+            {tdsFAQ?.length > 0 && (
+              <div className="w-full">
+                <FaqCompliance faqs={tdsFAQ} />
+              </div>
+            )}
+            {keyvalues?.length > 0 && (
+              <div>
+                <SupportComponent keyvalues={keyvalues} />
+              </div>
+            )}
           </div>
         )}
         {pricingCards && (
@@ -608,7 +653,7 @@ const ServiceSection = ({
       )}
 
       {showGreyBoderLine && (
-        <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div className="mb-[40px] md:mb-[64px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
     </>
   );

@@ -1,6 +1,10 @@
 import FirstFold from "@/components/FirstFold";
 import useElementVisibility from "@/data/useElementVisibility";
-import { Content } from "@/interface/type";
+import {
+  ComplianceTabSection,
+  Content,
+  ServiceContent,
+} from "@/interface/type";
 import React, { useEffect, useState } from "react";
 import CareersSection from "./CareersBanner";
 import Footer from "./Footer";
@@ -26,6 +30,10 @@ const Landing: React.FC<Content> = ({
   isBlogPage,
   metadata, // Add metadata prop
   isDownloadPage,
+  isComplaincePage,
+  tds,
+  gst,
+  costCenters,
 }) => {
   const isFormVisible = useElementVisibility("firstFold", {
     top: 80,
@@ -43,6 +51,7 @@ const Landing: React.FC<Content> = ({
   const handleShowForm = () => setShowForm(true);
   const [isMobile, setIsMobile] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
+  const [activeTab, setActiveTab] = React.useState<any>("tds");
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768); // You can set your mobile breakpoint here
@@ -68,6 +77,15 @@ const Landing: React.FC<Content> = ({
     };
   }, [showForm]);
 
+  const tabDataMap: Record<any, ComplianceTabSection | undefined> = {
+    tds,
+    gst,
+    costCenters,
+  };
+  const activeServiceContent = isComplaincePage
+    ? tabDataMap[activeTab]?.serviceContent
+    : serviceContent;
+  console.log(tabDataMap[activeTab]?.serviceContent);
   return (
     <>
       {/* Render Metadata component */}
@@ -80,11 +98,18 @@ const Landing: React.FC<Content> = ({
         <div className="bg-[#08090A] md:mt-20">
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}
-          {usecaseFold && <UsecaseFold {...usecaseFold} isMobile={isMobile} />}
+          {usecaseFold && (
+            <UsecaseFold
+              {...usecaseFold}
+              isMobile={isMobile}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
+          )}
           {isBlogPage && <BlogWithSidebar />}
           {/* <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div> */}
-          {serviceContent &&
-            serviceContent?.map((contentItem, index) => (
+          {activeServiceContent &&
+            activeServiceContent?.map((contentItem, index) => (
               <ServiceSection
                 key={index}
                 {...contentItem}
@@ -96,6 +121,7 @@ const Landing: React.FC<Content> = ({
                 isPricingPlanPage={isPricingPlanPage}
                 isCareersPage={isCareersPage}
                 isDownloadPage={isDownloadPage}
+                isComplaincePage={isComplaincePage}
               />
             ))}
         </div>
@@ -106,7 +132,8 @@ const Landing: React.FC<Content> = ({
               isPricingPage ||
               isCareersPage ||
               isDownloadPage ||
-              isBlogPage) &&
+              isBlogPage ||
+              isComplaincePage) &&
             "pt-[60px] md:pt-[120px] bg-black"
           }`}
         >

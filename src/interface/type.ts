@@ -271,6 +271,14 @@ export interface ServiceContent {
   officelocation?: Location[];
   blogs?: BlogCardProps[];
   downloadApps?: DownloadSectionProps[]
+  trackData?: TrackDataProps[]
+  tdsFAQ?: faqs[];
+  keyFactor?: string[];
+  tdsApply?: TrackDataProps[];
+  tdsAutomation?: string[];
+  keyvalues?:  TrackDataProps[];
+  tdsMatrix?: any;
+  tableData?: any;
 }
 
 export interface CareersSectionContent {
@@ -418,6 +426,10 @@ export interface Content {
   metadata?: MetadataType;
   isBlogPage?: boolean;
   isDownloadPage?: boolean;
+  isComplaincePage?: boolean;
+  tds?: ComplianceTabSection;
+  gst?: ComplianceTabSection;
+  costCenters?: ComplianceTabSection
 }
 export interface FooterSection {
   title?: string;
@@ -528,3 +540,27 @@ export interface DownloadSectionProps {
   imageSrc: string;
   option: string
 }
+
+export interface TrackDataProps {
+  title?: string;
+  desc?: string;
+  icon?: string | any;
+}
+
+export interface TdsMatrixRow {
+  section: string;
+  expenseType: string;
+  singleThreshold: string;
+  aggregateThreshold: string;
+  tdsRateIndividual: string;
+  tdsRateNonIndividual: string;
+}
+ export interface ComplainceHeader {
+  key: string;
+  label: string;
+ }
+
+export interface ComplianceTabSection {
+  serviceContent: ServiceContent[];
+}
+
