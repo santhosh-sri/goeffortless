@@ -72,8 +72,8 @@ const TdsMatrix = (props: any) => {
                   Compliance Requirements
                 </h3>
                 {tdsMatrix &&
-                  tdsMatrix?.requirements.map((item: string) => (
-                    <div className="flex items-center gap-3">
+                  tdsMatrix?.requirements.map((item: string, index: number) => (
+                    <div className="flex items-center gap-3" key={index}>
                       <Image
                         src={"/arrow-rights.svg"}
                         alt="resource"
@@ -98,8 +98,8 @@ const TdsMatrix = (props: any) => {
                   Consequences of Non-Compliance
                 </h3>
                 {tdsMatrix &&
-                  tdsMatrix?.consequences.map((item: string) => (
-                    <div className="flex items-center gap-3">
+                  tdsMatrix?.consequences.map((item: string, index: number) => (
+                    <div key={index} className="flex items-center gap-3">
                       <Image
                         src={"/arrow-rights.svg"}
                         alt="resource"
