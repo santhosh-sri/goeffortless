@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   const service = Array.isArray(context?.params?.services)
     ? context?.params?.services.join("/")
     : context?.params?.services;
-    console.log(service, "service")
+  console.log(service, "service");
   try {
     const content = await fetchServiceData(service);
 

@@ -7,10 +7,14 @@ import FounderTestimonialCard from "./FounderTestimonials";
 import Logocarousel from "./Logocarousel";
 import PageTitle from "./PageTitle";
 import SecondaryCta from "./SecondaryCta";
+import TabComponent from "./TabComponent";
 interface UsecaseFoldProps extends FirstFoldContent {
   isMobile?: boolean;
   isPartnerPage?: boolean;
   isCustomerPage?: boolean;
+  isComplaincePage?: boolean;
+  activeTab?: string;
+  setActiveTab?: any;
 }
 const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   pageHeading = "",
@@ -29,6 +33,9 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   isMobile,
   isPartnerPage,
   isCustomerPage,
+  isComplaincePage,
+  activeTab,
+  setActiveTab,
 }) => {
   const handleDirect = () => {
     if (secondaryCtaText?.toLowerCase().includes("join as a partner")) {
@@ -40,6 +47,11 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
       window.open(secondaryCtaUrl);
     }
   };
+  const tabList = [
+    { val: "tds", label: "TDS" },
+    { val: "costCenters", label: "Cost Center" },
+    { val: "gst", label: "GST" },
+  ];
   return (
     <>
       <div
@@ -128,7 +140,8 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
               className={
                 !ishome
                   ? `${
-                      isPartnerPage && !isMobile
+                      (isPartnerPage || isCustomerPage || isComplaincePage) &&
+                      !isMobile
                         ? "top-1/2 transform -translate-y-1/2 right-0 absolute"
                         : ""
                     }`
@@ -193,7 +206,14 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
           </div>
         )}
       </div>
-      {!isCustomerPage && <Logocarousel />}
+      {!isCustomerPage && !isComplaincePage && <Logocarousel />}
+      {isComplaincePage && (
+        <TabComponent
+          tabArr={tabList}
+          activeTab={activeTab}
+          setActiveTab={(val) => setActiveTab(val)}
+        />
+      )}
     </>
   );
 };

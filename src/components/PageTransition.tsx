@@ -17,7 +17,7 @@ export default function PageTransition({
         return;
       }
 
-      if (url.includes("#")) return;
+      if (url.includes("#") || url.includes("?")) return;
 
       setLoading(true);
     };
@@ -28,7 +28,7 @@ export default function PageTransition({
         return;
       }
 
-      if (url.includes("#")) return;
+      if (url.includes("#") || url.includes("?")) return;
 
       setTimeout(() => setLoading(false), 600);
     };
