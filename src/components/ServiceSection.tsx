@@ -62,6 +62,7 @@ interface ServiceSectionProps extends ServiceContent {
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
   isDownloadPage?: boolean;
   isComplaincePage?: boolean;
+  isLastSection?: boolean;
 }
 
 const ServiceSection = ({
@@ -133,15 +134,16 @@ const ServiceSection = ({
   keyvalues = [],
   tdsMatrix = {},
   tableData = {},
+  isLastSection = false,
 }: ServiceSectionProps) => {
   return (
     <>
       {showGreyTopBorder && (
-        <div className="mt-[40px] md:mt-[64px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div className="mt-[40px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
       <div
         className={`${bgColour ? bgColour : "bg-[#08090A]"} ${
-          !isDownloadPage && "max-md:px-5 md:px-[80px] py-4 md:py-[60px]"
+          !isDownloadPage && "max-md:px-5 md:px-[80px] py-8 md:py-[60px]"
         }`}
       >
         {caseStudies?.length === 0 && (
@@ -653,7 +655,11 @@ const ServiceSection = ({
       )}
 
       {showGreyBoderLine && (
-        <div className="mb-[40px] md:mb-[64px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div
+          className={`${
+            !isLastSection && "mb-[40px]"
+          } h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]`}
+        ></div>
       )}
     </>
   );
