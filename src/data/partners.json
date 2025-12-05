@@ -70,7 +70,6 @@
     },
     {
       "tagLine": "Ideal Partners",
-      "showGreyBoderLine": true,
       "title": "Built to Help Businesses Grow ",
       "colouredTitle": "Without Losing Control.",
       "description": "Join India’s fastest-growing partner ecosystem and offer the all-in-one platform that simplifies growth, sales team productivity, and cashflow visibility for India’s most ambitious businesses.",
@@ -96,6 +95,8 @@
     {
       "tagLine": "Partner Benefits",
       "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "isLastSection": true,
       "bgColour": "bg-[#15181B]",
       "title": "Grow with Us. ",
       "colouredTitle": "Earn More. Get Rewarded.",

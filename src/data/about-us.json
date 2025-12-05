@@ -25,11 +25,7 @@
       "src": "/Group Photo.png",
       "alt": "Team Group Photo"
     },
-    "missionHeading": [
-      "Amazing People.",
-      "Bold Mission.",
-      "Lasting Impact."
-    ],
+    "missionHeading": ["Amazing People.", "Bold Mission.", "Lasting Impact."],
     "missionDescription": "We are a team of builders, problem-solvers, and change-makers who believe finance should be effortless, not exhausting. What brings us together is a shared obsession with simplifying business operations through innovation, automation, and design that just works. If you want to tackle real-world challenges, work with brilliant minds, and create lasting impact, this is where you belong."
   },
   "isCareersPage": true,
@@ -120,7 +116,6 @@
       ]
     },
     {
-      "showGreyBoderLine": true,
       "investors": [
         {
           "imageSrc": "/raghavana.png",
@@ -168,6 +163,8 @@
       "href": "corevalues",
       "tagLine": "Values",
       "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "isLastSection": true,
       "title": "At Effortless, ",
       "colouredTitle": "We Follow 7 Core Values",
       "bgColour": "bg-[#15181B]",
