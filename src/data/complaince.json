@@ -61,47 +61,47 @@
           {
             "title": "194A",
             "desc": "Interest Payments",
-            "icon": "/tdstick.svg"
+            "icon": "/194A.svg"
           },
           {
             "title": "194C",
-            "desc": "Advertisement, Contractor, Repairs, Maintenance",
-            "icon": "/tdstick.svg"
+            "desc": "<span style=\"letter-spacing: -0.5px\">Advertisement, Contractor, Repairs, Maintenance</span>",
+            "icon": "/194C.svg"
           },
           {
             "title": "194J(a)",
             "desc": "Professional Fee & Royalty",
-            "icon": "/tdstick.svg"
+            "icon": "/194J(a).svg"
           },
           {
             "title": "194J(b)",
             "desc": "Technical Fee",
-            "icon": "/tdstick.svg"
+            "icon": "/194J(b).svg"
           },
           {
             "title": "194I(a)",
             "desc": "Rent – Plant & Machinery",
-            "icon": "/tdstick.svg"
+            "icon": "/194I(a).svg"
           },
           {
             "title": "194I(b)",
             "desc": "Rent – Immovable / Furniture",
-            "icon": "/tdstick.svg"
+            "icon": "/194I(b).svg"
           },
           {
             "title": "194IA",
             "desc": "Purchase of Immovable Property (non-agri)",
-            "icon": "/tdstick.svg"
+            "icon": "/194IA.svg"
           },
           {
             "title": "194H",
             "desc": "Commission / Brokerage",
-            "icon": "/tdstick.svg"
+            "icon": "/194H.svg"
           },
           {
             "title": "194Q",
             "desc": "Purchase of Goods (threshold rule applies)",
-            "icon": "/tdstick.svg"
+            "icon": "/194Q.svg"
           }
         ]
       },

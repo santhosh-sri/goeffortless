@@ -1,4 +1,5 @@
 import { TrackDataProps } from "@/interface/type";
+import parse from "html-react-parser";
 import Image from "next/image";
 import React from "react";
 
@@ -27,7 +28,11 @@ const TdsApply = ({ tdsApply }: { tdsApply: TrackDataProps[] }) => {
               <h2 className="text-white font-medium text-base md:text-xl">
                 {item?.title}
               </h2>
-              <p className="text-[#E4E4E7] text-sm font-light">{item.desc}</p>
+              {item.desc && (
+                <p className="text-[#E4E4E7] text-sm font-light">
+                  {parse(item.desc)}
+                </p>
+              )}
             </div>
           </div>
         </div>
