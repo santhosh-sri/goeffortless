@@ -197,7 +197,7 @@ const ServiceSection = ({
                     : Customtitle
                     ? "md:text-2xl text-sm md:font-[300] md:mt-[4px]"
                     : "md:text-xl text-base"
-                } text-[#E4E4E7] text-center font-[400] md:font-[300] md:pb-2.5`}
+                } text-[#E4E4E7] text-center font-[400] md:font-[300]`}
               >
                 {description}
               </p>
@@ -240,7 +240,7 @@ const ServiceSection = ({
               </div>
             )}
             {callBackCards && (
-              <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center mt-[-10px]">
+              <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center">
                 {callBackCards?.map((card, index) => (
                   <CallbackCardSection key={index} {...card} />
                 ))}
@@ -249,7 +249,7 @@ const ServiceSection = ({
             {homePageVerticalSlider && (
               <div
                 className={`flex flex-col gap-[40px] items-center ${
-                  isMobile ? "w-full" : "pt-[1.5rem] pb-[1rem]"
+                  isMobile ? "w-full" : ""
                 }`}
               >
                 {isMobile ? (
@@ -502,7 +502,7 @@ const ServiceSection = ({
               </div>
             )}
             {newPricingCards && (
-              <div className="max-md:hidden flex flex-col md:gap-[4.5rem] gap-8 md:items-center md:justify-center mt-[-20px]">
+              <div className="max-md:hidden flex flex-col md:gap-[4.5rem] gap-8 md:items-center md:justify-center">
                 <NewPricingCard
                   {...newPricingCards}
                   setSelectedPlan={setSelectedPlan}
