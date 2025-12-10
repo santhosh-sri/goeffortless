@@ -141,6 +141,10 @@ export const footerData = {
       icon: "/youtube.svg",
       url: "https://www.youtube.com/@Effortless_official",
     },
+    {
+      icon: "/facebook.svg",
+      url: "https://www.facebook.com/GoEffortlessOfficial",
+    },
   ],
   officeLocation: [
     {
