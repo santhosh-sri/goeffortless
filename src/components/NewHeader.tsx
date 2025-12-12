@@ -19,7 +19,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const router = useRouter();
 
   const resourcePath =
-    pathname === "/pricing" || pathname === "/case-study" || pathname === "/";
+    pathname === "/pricing" || pathname === "/case-studies" || pathname === "/";
 
   const handleMenuClick = async (e: React.MouseEvent, href: string) => {
     // if (href.includes("#")) {
@@ -56,6 +56,13 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           soon: false,
         },
         {
+          label: "Compliance Basics",
+          link: "/complaince",
+          icon: "/compliance.svg",
+          activeIcon: "/compliance-active.svg",
+          soon: false,
+        },
+        {
           label: "FAQs",
           link: "/faqs",
           icon: "/circle-question.svg",
@@ -83,13 +90,13 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           icon: "/downloadMenu.svg",
           activeIcon: "/download-active.svg",
         },
-        // {
-        //   label: "Automation ROI",
-        //   link: "/",
-        //   icon: "/calculator.svg",
-        //   activeIcon: "/calculator-active.svg",
-        //   soon: false,
-        // },
+        {
+          label: "Automation ROI",
+          link: "/",
+          icon: "/calculator.svg",
+          activeIcon: "/calculator-active.svg",
+          soon: true,
+        },
       ],
     },
     {
@@ -120,7 +127,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const mobileMenu = [
     { href: "/pricing", label: "Pricing", hasBottomBorder: true },
     {
-      href: "/case-study",
+      href: "/case-studies",
       label: "Case Study",
       hasBottomBorder: true,
     },
@@ -210,9 +217,11 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
               </div>
               <div>
                 <Link
-                  href="/case-study"
+                  href="/case-studies"
                   className={`text-base font-normal ${
-                    pathname === "/case-study" ? "text-white" : "text-[#A8A8A8]"
+                    pathname === "/case-studies"
+                      ? "text-white"
+                      : "text-[#A8A8A8]"
                   } hover:text-white cursor-pointer`}
                 >
                   Case Study
@@ -225,7 +234,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <div
-                  // href="/case-study"
+                  // href="/case-studies"
                   onClick={() => {
                     setOpenMenu(null);
                     setHoveredIndex(null);
@@ -252,8 +261,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 </div>
                 {openMenu === "resources" && (
                   <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50">
-                    <div className="bg-[#15181B] rounded-lg p-6 w-[908px]">
-                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
+                    <div className="bg-[#15181B] rounded-lg p-6 w-[1220px]">
+                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
                         {headerResources.map((section, sectionIdx) => (
                           <div key={sectionIdx}>
                             <h3 className="text-white font-semibold mb-3 border-b border-[#A0A0A01A] pb-1">
