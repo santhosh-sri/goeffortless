@@ -90,7 +90,6 @@
     },
     {
       "href": "#section2",
-      "showGreyBoderLine": true,
       "tagLine": "Explore our Features",
       "title": "The Engine behind ",
       "colouredTitle": "India's Fastest-Growing Businesses",
@@ -515,6 +514,7 @@
     {
       "href": "#section3",
       "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
       "bgColour": "bg-[#15181B]",
       "tagLine": "Your Business Command Center",
       "title": "No More Broken Pipes ",
@@ -541,7 +541,6 @@
     {
       "href": "#section4",
       "tagLine": "Pricing",
-      "showGreyBoderLine": true,
       "title": "Pick the Plan ",
       "colouredTitle": "That Powers Your Growth",
       "description": "No hidden fees. No surprises. Plans that fit your stage.",
@@ -639,6 +638,7 @@
       "description": "Thousands of Businesses already manage their growth with Effortless.",
       "bgColour": "bg-[#15181B]",
       "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
       "testimonialsSection": {
         "businessPartnersLogo": [
           { "src": "/RASSENSE 1.png", "width": 158, "height": 48 },
@@ -683,7 +683,6 @@
     },
     {
       "href": "#section5",
-      "showGreyBoderLine": true,
       "tagLine": "Security Assurance",
       "title": "Secure by ",
       "colouredTitle": "Design",
@@ -718,6 +717,8 @@
     {
       "href": "#section3",
       "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "isLastSection": true,
       "tagLine": "Get Started",
       "bgColour": "bg-[#15181B]",
       "title": "Growth Doesn't Wait. ",

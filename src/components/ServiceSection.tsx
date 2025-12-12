@@ -44,6 +44,13 @@ import OfficeLocations from "./OfficeLocations";
 import DownloadApps from "./DownloadApps";
 import BlogCard from "./BlogCard";
 import BlogWithSidebar from "./BlogWithSidebar";
+import TrackSection from "./Complaince/TrackSection";
+import FaqCompliance from "./Complaince/FaqCompliance";
+import KeyFactor from "./Complaince/KeyFactor";
+import TdsApply from "./Complaince/TdsApply";
+import TdsAutomation from "./Complaince/TdsAutomation";
+import SupportComponent from "./Complaince/SupportComponent";
+import TdsMatrix from "./Complaince/TdsMatrix";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -54,6 +61,8 @@ interface ServiceSectionProps extends ServiceContent {
   isPricingPlanPage?: boolean;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
   isDownloadPage?: boolean;
+  isComplaincePage?: boolean;
+  isLastSection?: boolean;
 }
 
 const ServiceSection = ({
@@ -117,28 +126,31 @@ const ServiceSection = ({
   downloadApps = [],
   isDownloadPage = false,
   blogs = [],
+  trackData = [],
+  tdsFAQ = [],
+  keyFactor = [],
+  tdsApply = [],
+  tdsAutomation = [],
+  keyvalues = [],
+  tdsMatrix = {},
+  tableData = {},
+  isLastSection = false,
 }: ServiceSectionProps) => {
   return (
     <>
       {showGreyTopBorder && (
-        <div className="mt-[40px] md:mt-[60px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div className="mt-[40px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
       <div
         className={`${bgColour ? bgColour : "bg-[#08090A]"} ${
-          !isDownloadPage && "md:px-[80px]"
+          !isDownloadPage && "max-md:px-5 md:px-[80px] py-8 md:py-[60px]"
         }`}
       >
         {caseStudies?.length === 0 && (
           <div
             className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${
               marginTop ? "mt-[64px] md:mt-0" : ""
-            } py-[32px] max-w-[1350px] mx-auto max-md:px-5 ${
-              isPricingPage || isPricingPlanPage
-                ? "md:py-[64px]"
-                : isCareersPage && !companyValuesItems
-                ? "md:pb-[90px]"
-                : "md:py-[80px]"
-            } scroll-mt-20`}
+            } max-w-[1350px] mx-auto scroll-mt-20`}
             id={href}
           >
             {(colouredTagLine || tagLine) && (
@@ -185,7 +197,7 @@ const ServiceSection = ({
                     : Customtitle
                     ? "md:text-2xl text-sm md:font-[300] md:mt-[4px]"
                     : "md:text-xl text-base"
-                } text-[#E4E4E7] text-center font-[400] md:font-[300] md:pb-2.5`}
+                } text-[#E4E4E7] text-center font-[400] md:font-[300]`}
               >
                 {description}
               </p>
@@ -228,7 +240,7 @@ const ServiceSection = ({
               </div>
             )}
             {callBackCards && (
-              <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center mt-[-10px]">
+              <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center">
                 {callBackCards?.map((card, index) => (
                   <CallbackCardSection key={index} {...card} />
                 ))}
@@ -237,7 +249,7 @@ const ServiceSection = ({
             {homePageVerticalSlider && (
               <div
                 className={`flex flex-col gap-[40px] items-center ${
-                  isMobile ? "w-full" : "pt-[1.5rem] pb-[1rem]"
+                  isMobile ? "w-full" : ""
                 }`}
               >
                 {isMobile ? (
@@ -490,7 +502,7 @@ const ServiceSection = ({
               </div>
             )}
             {newPricingCards && (
-              <div className="max-md:hidden flex flex-col md:gap-[4.5rem] gap-8 md:items-center md:justify-center mt-[-20px]">
+              <div className="max-md:hidden flex flex-col md:gap-[4.5rem] gap-8 md:items-center md:justify-center">
                 <NewPricingCard
                   {...newPricingCards}
                   setSelectedPlan={setSelectedPlan}
@@ -514,6 +526,41 @@ const ServiceSection = ({
                 {useCases?.map((cardContents, index) => (
                   <USeCaseCard key={index} {...cardContents} />
                 ))}
+              </div>
+            )}
+            {trackData?.length > 0 && (
+              <div>
+                <TrackSection trackData={trackData} />
+              </div>
+            )}
+            {keyFactor?.length > 0 && (
+              <div className="w-full">
+                <KeyFactor keyFactor={keyFactor} />
+              </div>
+            )}
+            {tdsApply?.length > 0 && (
+              <div className="w-full">
+                <TdsApply tdsApply={tdsApply} />
+              </div>
+            )}
+            {tableData && Object.keys(tableData)?.length > 0 && (
+              <div className="w-full">
+                <TdsMatrix tableData={tableData} tdsMatrix={tdsMatrix} />
+              </div>
+            )}
+            {tdsAutomation?.length > 0 && (
+              <div className="w-full">
+                <TdsAutomation tdsAutomation={tdsAutomation} />
+              </div>
+            )}
+            {tdsFAQ?.length > 0 && (
+              <div className="w-full">
+                <FaqCompliance faqs={tdsFAQ} />
+              </div>
+            )}
+            {keyvalues?.length > 0 && (
+              <div>
+                <SupportComponent keyvalues={keyvalues} />
               </div>
             )}
           </div>
@@ -608,7 +655,11 @@ const ServiceSection = ({
       )}
 
       {showGreyBoderLine && (
-        <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div
+          className={`${
+            !isLastSection && "mb-[40px]"
+          } h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]`}
+        ></div>
       )}
     </>
   );

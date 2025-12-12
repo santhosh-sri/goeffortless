@@ -38,7 +38,7 @@ export const footerData = {
         },
         {
           title: "Case Study",
-          url: "/case-study",
+          url: "/case-studies",
         },
       ],
     },
@@ -97,7 +97,7 @@ export const footerData = {
         },
         {
           title: "Case Study",
-          url: "/case-study",
+          url: "/case-studies",
         },
       ],
     },
@@ -138,8 +138,12 @@ export const footerData = {
       url: "https://www.linkedin.com/company/igoeffortless/",
     },
     {
-      icon: "/ham-logo.svg",
-      url: "https://goeffortless.substack.com/",
+      icon: "/youtube.svg",
+      url: "https://www.youtube.com/@Effortless_official",
+    },
+    {
+      icon: "/facebook.svg",
+      url: "https://www.facebook.com/GoEffortlessOfficial",
     },
   ],
   officeLocation: [
