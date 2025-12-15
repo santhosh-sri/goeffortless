@@ -12,7 +12,7 @@ interface UsecaseFoldProps extends FirstFoldContent {
   isMobile?: boolean;
   isPartnerPage?: boolean;
   isCustomerPage?: boolean;
-  isComplaincePage?: boolean;
+  isCompliancePage?: boolean;
   activeTab?: string;
   setActiveTab?: any;
 }
@@ -33,7 +33,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   isMobile,
   isPartnerPage,
   isCustomerPage,
-  isComplaincePage,
+  isCompliancePage,
   activeTab,
   setActiveTab,
 }) => {
@@ -140,7 +140,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
               className={
                 !ishome
                   ? `${
-                      (isPartnerPage || isCustomerPage || isComplaincePage) &&
+                      (isPartnerPage || isCustomerPage || isCompliancePage) &&
                       !isMobile
                         ? "top-1/2 transform -translate-y-1/2 right-0 absolute"
                         : ""
@@ -206,8 +206,8 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
           </div>
         )}
       </div>
-      {!isCustomerPage && !isComplaincePage && <Logocarousel />}
-      {isComplaincePage && (
+      {!isCustomerPage && !isCompliancePage && <Logocarousel />}
+      {isCompliancePage && (
         <TabComponent
           tabArr={tabList}
           activeTab={activeTab}
