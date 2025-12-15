@@ -44,13 +44,13 @@ import OfficeLocations from "./OfficeLocations";
 import DownloadApps from "./DownloadApps";
 import BlogCard from "./BlogCard";
 import BlogWithSidebar from "./BlogWithSidebar";
-import TrackSection from "./Complaince/TrackSection";
-import FaqCompliance from "./Complaince/FaqCompliance";
-import KeyFactor from "./Complaince/KeyFactor";
-import TdsApply from "./Complaince/TdsApply";
-import TdsAutomation from "./Complaince/TdsAutomation";
-import SupportComponent from "./Complaince/SupportComponent";
-import TdsMatrix from "./Complaince/TdsMatrix";
+import TrackSection from "./Compliance/TrackSection";
+import FaqCompliance from "./Compliance/FaqCompliance";
+import KeyFactor from "./Compliance/KeyFactor";
+import TdsApply from "./Compliance/TdsApply";
+import TdsAutomation from "./Compliance/TdsAutomation";
+import SupportComponent from "./Compliance/SupportComponent";
+import TdsMatrix from "./Compliance/TdsMatrix";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -61,7 +61,7 @@ interface ServiceSectionProps extends ServiceContent {
   isPricingPlanPage?: boolean;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
   isDownloadPage?: boolean;
-  isComplaincePage?: boolean;
+  isCompliancePage?: boolean;
   isLastSection?: boolean;
 }
 

@@ -30,7 +30,7 @@ const Landing: React.FC<Content> = ({
   isBlogPage,
   metadata, // Add metadata prop
   isDownloadPage,
-  isComplaincePage,
+  isCompliancePage,
   tds,
   gst,
   costCenters,
@@ -82,7 +82,7 @@ const Landing: React.FC<Content> = ({
     gst,
     costCenters,
   };
-  const activeServiceContent = isComplaincePage
+  const activeServiceContent = isCompliancePage
     ? tabDataMap[activeTab]?.serviceContent
     : serviceContent;
   console.log(tabDataMap[activeTab]?.serviceContent);
@@ -121,7 +121,7 @@ const Landing: React.FC<Content> = ({
                 isPricingPlanPage={isPricingPlanPage}
                 isCareersPage={isCareersPage}
                 isDownloadPage={isDownloadPage}
-                isComplaincePage={isComplaincePage}
+                isCompliancePage={isCompliancePage}
               />
             ))}
         </div>
@@ -133,7 +133,7 @@ const Landing: React.FC<Content> = ({
               isCareersPage ||
               isDownloadPage ||
               isBlogPage ||
-              isComplaincePage) &&
+              isCompliancePage) &&
             "pt-[60px] md:pt-[120px] bg-black"
           }`}
         >

@@ -5,7 +5,7 @@
     "og": {
       "title": "Effortless: Automate TDS, GST & Cost Centers. Reduce Manual Work.",
       "description": "Designed for Indian finance workflows. Ensure accurate compliance and faster closing.",
-      "url": "https://www.goeffortless.ai/complaince",
+      "url": "https://www.goeffortless.ai/compliance",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
     }
@@ -14,11 +14,11 @@
     "pageHeading": "Compliance",
     "heading": "<span style=\"font-weight: 500;\">Automate TDS, GST & Cost Centers. Reduce Manual Work.</span>",
     "description": "Designed for Indian finance workflows. Ensure accurate compliance and faster closing.",
-    "bannerImage": "/complaincebanner.png",
+    "bannerImage": "/compliancebanner.png",
     "ctaText": "Request Demo",
-    "isComplaincePage": true
+    "isCompliancePage": true
   },
-  "isComplaincePage": true,
+  "isCompliancePage": true,
   "tds": {
     "serviceContent": [
       {
