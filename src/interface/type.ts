@@ -426,7 +426,7 @@ export interface Content {
   metadata?: MetadataType;
   isBlogPage?: boolean;
   isDownloadPage?: boolean;
-  isComplaincePage?: boolean;
+  isCompliancePage?: boolean;
   tds?: ComplianceTabSection;
   gst?: ComplianceTabSection;
   costCenters?: ComplianceTabSection
@@ -555,7 +555,7 @@ export interface TdsMatrixRow {
   tdsRateIndividual: string;
   tdsRateNonIndividual: string;
 }
- export interface ComplainceHeader {
+ export interface ComplianceHeader {
   key: string;
   label: string;
  }
