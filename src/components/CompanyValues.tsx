@@ -20,9 +20,10 @@ const ValueCard: FC<CompanyValue & { className?: string }> = ({
       className={`
         w-[100%] text-white py-5 md:min-h-[200px] 
         flex flex-col items-center text-center gap-1 md:gap-3 
-        ${customLength 
-          ? "md:px-[16px] md:py-[20px] md:tracking-negative" 
-          : "md:p-5 md:py-[32px]"
+        ${
+          customLength
+            ? "md:px-[16px] md:py-[20px] md:tracking-negative"
+            : "md:p-5 md:py-[32px]"
         }
         ${hideLastBorder ? "max-md:last:before:hidden" : ""}
         max-md:gradient-border-bottom

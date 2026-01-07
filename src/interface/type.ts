@@ -29,6 +29,8 @@ export interface FirstFoldContent {
   }[];
   isPartnerPage?: boolean;
   isCareersPage?: boolean;
+  languageModalConfig?: any;
+  secondaryIcon?: string;
 }
 export interface FeatureCard {
   title?: string;
@@ -279,6 +281,11 @@ export interface ServiceContent {
   keyvalues?:  TrackDataProps[];
   tdsMatrix?: any;
   tableData?: any;
+  commandCenterCards?: CommandCenterCardProps[];
+  comparisonData?: ComparisonProps
+  salesFeature?: FeatureSectionProps[]
+  videoId?: string;
+  FeatureItem?: FeatureHighlightItem[];
 }
 
 export interface CareersSectionContent {
@@ -564,3 +571,59 @@ export interface ComplianceTabSection {
   serviceContent: ServiceContent[];
 }
 
+export interface CommandCenterCardProps {
+  icon: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  ctaText: string;
+}
+
+export interface LanguageOption {
+  id: string;
+  label: string;
+  flag: string;
+  value: string;
+}
+
+export interface LanguageModalConfig {
+  title: string;
+  subtitle: string;
+  options: LanguageOption[];
+}
+
+export interface ComparisonProps {
+  left: {
+    title: string;
+    subtitle: string;
+    chat: {
+      label: string;
+      message: string;
+      time: string;
+    };
+    points: string[];
+  };
+  right: {
+    title: string;
+    subtitle: string;
+    images: string;
+  };
+}
+
+// export interface FeatureSectionCard {
+//   title: string;
+//   subtitle?: string;
+//   description: string;
+//   image: string;
+//   }
+export interface FeatureSectionProps {
+  
+  feature: any;
+  position: number;
+}
+
+export interface FeatureHighlightItem {
+  title: string;
+  icon: string;
+}

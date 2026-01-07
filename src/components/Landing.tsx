@@ -13,6 +13,7 @@ import Metadata from "./Metadata";
 import ServiceSection from "./ServiceSection";
 import UsecaseFold from "./UsecaseFold";
 import BlogWithSidebar from "./BlogWithSidebar";
+import HeaderBanner from "./HeaderBanner";
 
 //Landing component
 const Landing: React.FC<Content> = ({
@@ -52,6 +53,7 @@ const Landing: React.FC<Content> = ({
   const [isMobile, setIsMobile] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
   const [activeTab, setActiveTab] = React.useState<any>("tds");
+  const [closeBanner, setCloseBanner] = useState(true);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768); // You can set your mobile breakpoint here
@@ -85,17 +87,19 @@ const Landing: React.FC<Content> = ({
   const activeServiceContent = isCompliancePage
     ? tabDataMap[activeTab]?.serviceContent
     : serviceContent;
-  console.log(tabDataMap[activeTab]?.serviceContent);
+
   return (
     <>
       {/* Render Metadata component */}
       <Metadata {...metadata} />
-
       <div>
         <div className={`fixed top-0 w-full z-[999]`}>
+          {closeBanner && <HeaderBanner setCloseBanner={setCloseBanner} />}
           <Header {...headerItems} isMobile={isMobile} />
         </div>
-        <div className="bg-[#08090A] md:mt-20">
+        <div
+          className={`bg-[#08090A] ${closeBanner ? "md:mt-24" : "md:mt-20"}`}
+        >
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}
           {usecaseFold && (

@@ -51,6 +51,14 @@ import TdsApply from "./Compliance/TdsApply";
 import TdsAutomation from "./Compliance/TdsAutomation";
 import SupportComponent from "./Compliance/SupportComponent";
 import TdsMatrix from "./Compliance/TdsMatrix";
+import CommandCenterCard from "./Homepage/CommandCenterCard";
+import ComparisonSection from "./FeaturesComponent/ComparisonSection";
+import FeatureSection from "./FeaturesComponent/FeatureSection";
+import YoutubeVideoCard from "./YoutubeVideoCard";
+import FeatureHighlights from "./FeaturesComponent/FeatureHighlights";
+import ComplianceAuditPanel from "./FeaturesComponent/ComplianceAuditPanel";
+import BillingModesComparison from "./FeaturesComponent/BillingModesComparison";
+import ButtonComponent from "./FeaturesComponent/ButtonComponent";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -63,6 +71,9 @@ interface ServiceSectionProps extends ServiceContent {
   isDownloadPage?: boolean;
   isCompliancePage?: boolean;
   isLastSection?: boolean;
+  complianceAuditData?: any;
+  billingModesData?: any;
+  demoButton?: boolean;
 }
 
 const ServiceSection = ({
@@ -135,6 +146,14 @@ const ServiceSection = ({
   tdsMatrix = {},
   tableData = {},
   isLastSection = false,
+  commandCenterCards = [],
+  comparisonData,
+  salesFeature = [],
+  videoId,
+  FeatureItem = [],
+  complianceAuditData,
+  billingModesData,
+  demoButton = false,
 }: ServiceSectionProps) => {
   return (
     <>
@@ -317,12 +336,59 @@ const ServiceSection = ({
                 ))}
               </div>
             )}
-            {complianceCards && (
-              <div className="md:grid md:grid-cols-4 md:!gap-4 flex flex-col gap-4 items-center justify-center">
-                {complianceCards?.map((card, index) => (
-                  <ComplianceCardSection key={index} {...card} />
+            {commandCenterCards?.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center">
+                {commandCenterCards.map((card, index) => (
+                  <CommandCenterCard key={index} {...card} />
                 ))}
               </div>
+            )}
+            {comparisonData && <ComparisonSection data={comparisonData} />}
+            {complianceAuditData && (
+              <ComplianceAuditPanel data={complianceAuditData} />
+            )}
+            {billingModesData?.length > 0 && (
+              <BillingModesComparison modes={billingModesData} />
+            )}
+            {salesFeature?.length > 0 && (
+              <div>
+                {salesFeature.map((feature, index) => (
+                  <FeatureSection
+                    key={index}
+                    feature={feature}
+                    position={index}
+                  />
+                ))}
+              </div>
+            )}
+            {FeatureItem?.length > 0 && (
+              <div className="flex items-center justify-center gap-[180px]">
+                {FeatureItem.map((highlight, index) => (
+                  <FeatureHighlights key={index} {...highlight} />
+                ))}
+              </div>
+            )}
+            {videoId && <YoutubeVideoCard videoId={videoId} type="page" />}
+            {demoButton && <ButtonComponent />}
+            {complianceCards && (
+              <>
+                <div className="md:grid md:grid-cols-4 md:!gap-4 flex flex-col gap-4 items-center justify-center">
+                  {complianceCards?.map((card, index) => (
+                    <ComplianceCardSection key={index} {...card} />
+                  ))}
+                </div>
+                {tagLine === "Built for India" && (
+                  <div className="md:pt-[40px] max-md:w-full">
+                    <RedirectCta
+                      ctaText={
+                        isMobile
+                          ? "Discover How"
+                          : "Effortless keeps your business running—without the mess. Discover How."
+                      }
+                    />
+                  </div>
+                )}
+              </>
             )}
             {IdeasCard && (
               <div className="md:grid md:grid-cols-2 flex flex-col gap-8 items-center justify-center">
@@ -404,8 +470,8 @@ const ServiceSection = ({
                     />
                   ))}
                 </div>
-                <div className="flex flex-col md:flex-row md:gap-6 md:w-[70%] items-start">
-                  {growthFeaturesCard.slice(3, 5).map((team, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-3 w-full items-start ">
+                  {growthFeaturesCard.slice(3, 6).map((team, index) => (
                     <ValueCard
                       key={index + 3}
                       {...team}
@@ -659,7 +725,7 @@ const ServiceSection = ({
           className={`${
             !isLastSection && "mb-[40px]"
           } h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]`}
-        ></div>
+        />
       )}
     </>
   );

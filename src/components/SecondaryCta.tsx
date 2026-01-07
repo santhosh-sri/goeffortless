@@ -7,6 +7,7 @@ interface SecondaryCtaProps {
   customStyle?: true;
   ishome?: boolean;
   isOrange?: boolean;
+  secondaryIcon?: string;
 }
 
 const SecondaryCta: React.FC<SecondaryCtaProps> = ({
@@ -15,6 +16,7 @@ const SecondaryCta: React.FC<SecondaryCtaProps> = ({
   customStyle = false,
   ishome,
   isOrange,
+  secondaryIcon,
 }) => {
   return (
     <button
@@ -27,12 +29,17 @@ const SecondaryCta: React.FC<SecondaryCtaProps> = ({
         ${ishome ? "w-[220px] max-md:w-full" : ""}  md:hover:!pr-[36px]`}
     >
       <span className="relative inline-flex items-center ">
+        {secondaryIcon && (
+          <span className="mr-2">
+            <Image src={secondaryIcon} alt="secIcon" width={24} height={24} />
+          </span>
+        )}
         <span className="md:group-hover:mr-1 whitespace-nowrap transition-all duration-500">
           {secondaryCtaText}
         </span>
         <span className="absolute max-md:hidden top-1/2 right-[-1.4rem] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out md:block hidden">
           <Image
-            src={isOrange ? "/secondary-arrow.svg" : "/arrow-white.svg"}
+            src={isOrange ? "/newHeader.svg" : "/newRightArrow.svg"}
             alt="arrow"
             width={16}
             height={16}

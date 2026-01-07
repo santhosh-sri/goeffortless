@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "title": "Effortless: Explore our Features",
+    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs built to simplify billing, expenses, and team operations as you scale.",
+    "og": {
+      "title": "Effortless: Explore our Features",
+      "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
+      "url": "https://www.goeffortless.ai/allProducts",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "usecaseFold": {
+    "pageHeading": "Say 👋 to Effortless",
+    "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>Every Rupee</span><br/><span style='color:#FFFFFFFF;font-weight: 300;'>Verified.</span><br/><span style='font-weight: 500'>Before It Leaves</span><br/><span style='color:#F08B32;font-weight: 500'>the Bank</span>",
+    "description": "End the pile of paper bills. Automate vendor bill booking, employee claims, and petty cash with built-in policy checks.",
+    "bannerImage": "/expensesbanner.png",
+    "ctaText": "Automate Your Expenses",
+    "isFeaturePage": true
+  },
+
+  "serviceContent": [
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Built-In Intelligence",
+      "title": "The 3-Second ",
+      "colouredTitle": "Compliance Audit",
+      "description": "Effortless AI picks up the Vendor Bill Directly from your Email / Your team uploads. Effortless checks.",
+      "complianceAuditData": {
+        "left": {
+          "title": "Vendor Bill Upload",
+          "subtitle": "Manual steps, slow updates, and constant follow-ups",
+          "card": {
+            "vendorName": {
+              "label": "Vendor Name",
+              "value": "XYZ Trading Co.",
+              "highlight": true
+            },
+            "gstin": {
+              "label": "GSTIN",
+              "value": "27AABCU9603R1ZM",
+              "highlight": true
+            },
+            "lineItems": [
+              { "label": "Service A", "value": "₹30,000" },
+              { "label": "Service B", "value": "₹20,000" }
+            ],
+            "summary": [
+              { "label": "Subtotal", "value": "₹50,000" },
+              { "label": "GST (18%)", "value": "+ ₹9,000" },
+              { "label": "TDS (10%)", "value": "- ₹5,000" },
+              {
+                "label": "Total",
+                "value": "₹54,000",
+                "highlight": true
+              }
+            ]
+          }
+        },
+
+        "right": {
+          "title": "Automated Checks",
+          "subtitle": "Clean handoffs, instant clarity, and faster decisions",
+          "checks": [
+            {
+              "title": "IDP (Intelligent Data Processing) Complete",
+              "description": "Extracted: GSTIN, Vendor Name, Line items, Tax amounts, Bank Details & Validates with GSTN, TDS Applicability, RCM Applicability, Bank Validation",
+              "color": "#28B463",
+              "icon": "/eyeIcon.svg"
+            },
+            {
+              "title": "Vendor GST Defaulting — High Risk",
+              "description": "Warning: This vendor has missed recent GST filings",
+              "color": "#F08B32",
+              "icon": "/riskIcon.svg"
+            },
+            {
+              "title": "TDS Auto-Applied",
+              "description": "TDS Section 194J(a) — ₹5,000 (based on finance rules)",
+              "color": "#3B82F6",
+              "icon": "/calcIcon.svg"
+            },
+            {
+              "title": "RCM Identified",
+              "description": "Reverse Charge Mechanism applied and posted correctly",
+              "color": "#8A38F5",
+              "icon": "/rcmIcon.svg"
+            }
+          ]
+        }
+      }
+    },
+
+    {
+      "tagLine": "Feature",
+      "title": "Feature ",
+      "colouredTitle": "Deep Dive",
+      "description": "Layers of protection for every rupee that leaves your company",
+      "salesFeature": [
+        {
+          "id": "intelligent-data-capture",
+          "subtitle": "Intelligent Data Capture",
+          "title": "Capture Vendor Bills Instantly",
+          "description": [
+            "Bills are uploaded directly. The system reads them accurately — GSTIN, Date, Tax, PO, Amount.",
+            "No typing, no delays, no mistakes."
+          ],
+          "image": "/expenses001.png",
+          "alignment": "left"
+        },
+        {
+          "id": "vendor-gstin-validation",
+          "subtitle": "Vendor GSTIN Validation",
+          "title": "Avoid Bad Vendors Before Booking Bills",
+          "description": [
+            "Effortless checks on vendor GST return status and claim history.",
+            "The system blocks bills if the GST is inactive.",
+            "You stay compliant before the bill gets approved."
+          ],
+          "image": "/expenses002.png",
+          "alignment": "right"
+        },
+        {
+          "id": "employee-expenses",
+          "subtitle": "Happy Employees, Happy Finance",
+          "title": "Employee Claims, Without Follow-ups",
+          "description": [
+            "Employees upload travel, food, and petty cash bills from the mobile app.",
+            "Policy checks run automatically — daily limits, category limits, receipt requirements.",
+            "Finance sees and approves faster because rules already applied."
+          ],
+          "image": "/expenses003.png",
+          "alignment": "left"
+        },
+        {
+          "id": "approval-flow",
+          "subtitle": "No More Chasing",
+          "title": "The Approval Flow That Runs Itself",
+          "description": [
+            "Rules decide who needs to approve — manager, finance, or head office.",
+            "Everyone sees the complete motion — who approved, who rejected, why."
+          ],
+          "image": "/expenses004.png",
+          "alignment": "right"
+        },
+        {
+          "id": "payments",
+          "subtitle": "Right Payments, No Surprises",
+          "title": "The CFO’s Payment Stack",
+          "description": [
+            "Approved bills and reimbursements land in a single queue.",
+            "Finance can run payments in batches or approve individually.",
+            "One dashboard, zero errors, zero confusion."
+          ],
+          "image": "/expenses005.png",
+          "alignment": "left"
+        },
+        {
+          "id": "tally-sync",
+          "subtitle": "The Final Truth Remains True",
+          "title": "Tally Always Updated. Always.",
+          "description": [
+            "Approved bills, payments, and journals move into Tally without retyping.",
+            "Master data sync, record-keeping stays clean, and audits stay smooth."
+          ],
+          "image": "/expenses006.png",
+          "alignment": "right"
+        },
+        {
+          "id": "transparency-metrics",
+          "subtitle": "Transparency Metrics",
+          "title": "Every Rupee. One View.",
+          "description": [
+            "A real-time dashboard shows:",
+            "Total vendor bills",
+            "Total employee claims",
+            "Pending approvals",
+            "Bank-wise and department-wise spend",
+            "Budget vs actual",
+            "Everything can be exported instantly for audit or monthly close."
+          ],
+          "image": "/expenses007.png",
+          "alignment": "left"
+        }
+      ]
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Why This Matters</span>",
+      "FeatureItem": [
+        {
+          "title": "No lost bills",
+          "icon": "/salesorder.svg"
+        },
+        {
+          "title": "No policy violations",
+          "icon": "/salesViolations.svg"
+        },
+        {
+          "title": "No month-end chaos",
+          "icon": "salesGrowth.svg"
+        }
+      ]
+    },
+    {
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">See it in Action</span>",
+      "description": "Watch how finance teams are automating expense management",
+      "videoId": "3OFsEO-47e0"
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Ready to Protect Every Rupee?</span>",
+      "description": "See how finance teams are saving hours and catching errors before they become losses",
+      "demoButton": true
+    }
+  ]
+}

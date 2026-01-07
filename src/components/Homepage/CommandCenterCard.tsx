@@ -1,0 +1,61 @@
+import React from "react";
+import RedirectCta from "../RedirectCta";
+import { CommandCenterCardProps } from "@/interface/type";
+import Image from "next/image";
+
+const CommandCenterCard: React.FC<CommandCenterCardProps> = ({
+  icon,
+  title,
+  subtitle,
+  description,
+  features,
+  ctaText,
+}) => {
+  return (
+    <div className="relative flex flex-col gap-4 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] p-5 rounded-xl shadow-md border border-white/10">
+      {/* Icon */}
+      <div className="flex flex-col gap-2">
+        <div className="self-center">
+          <Image
+            src={icon}
+            alt="Icon"
+            width={48}
+            height={48}
+            className="w-[32px] h-[32px] md:!w-[48px] md:!h-[48px]"
+            unoptimized={true}
+          />
+        </div>
+
+        {/* Title */}
+        <h3 className="text-lg md:text-2xl font-semibold text-[#F08B32] text-center">
+          {title}
+        </h3>
+        <p className="text-xs leading-4 text-[#E4E4E7] font-medium text-center">
+          {subtitle}
+        </p>
+      </div>
+      {/* Description */}
+      <div>
+        <p className="text-base text-white font-normal text-center">
+          {description}
+        </p>
+
+        <hr className="h-[1px] border-[#3A3A3A] mt-5" />
+      </div>
+      {/* Features */}
+      <div className="flex flex-col gap-4 text-sm text-white font-normal">
+        {features.map((feature, index) => (
+          <p key={index} className="flex items-start gap-2">
+            <span className="text-[#F08B32]">✓</span>
+            <span className="text-sm font-normal">{feature}</span>
+          </p>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <RedirectCta ctaText={ctaText} fullWidth />
+    </div>
+  );
+};
+
+export default CommandCenterCard;

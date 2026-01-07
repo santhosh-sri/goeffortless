@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "title": "Effortless: Explore our Features",
+    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs built to simplify billing, expenses, and team operations as you scale.",
+    "og": {
+      "title": "Effortless: Explore our Features",
+      "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
+      "url": "https://www.goeffortless.ai/allProducts",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "usecaseFold": {
+    "pageHeading": "Say 👋 to Effortless",
+    "heading": "<span style='white-space: nowrap;color:#FFFFFFFF;font-weight: 300;'>Put Your Revenue on</span><br/> <span style='color:#F08B32;font-weight: 500'>Autopilot.</span>",
+    "description": "Never miss a renewal. Automate recurring Proformas, Invoices, and Reminders. Perfect for AMCs, Rentals, and Retainers.",
+    "bannerImage": "/contractbanner.png",
+    "ctaText": "Automate Your Billing",
+    "isFeaturePage": true
+  },
+
+  "serviceContent": [
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Flexible Billing Workflows",
+      "title": "Two Modes. ",
+      "colouredTitle": "One Platform.",
+      "description": "Choose the billing workflow that fits your business",
+      "billingModesData": [
+        {
+          "title": "Proforma First (Tax Safe)",
+          "titleColor": "text-white",
+          "steps": [
+            "Send Proforma with Payment link or QR",
+            "Customer Pays",
+            "GST Invoice in One Click"
+          ],
+          "whyTitle": "Why this mode exists:",
+          "whyText": "Use when you want to avoid early GST liability. Proforma goes first, payment clears, invoice is created instantly.",
+          "supports": [
+            "Recurring Contracts",
+            "Recurring Proformas",
+            "1-Click Conversion to GST Invoice",
+            "Pay Now Links",
+            "E-invoice support",
+            "Pro-Active Custom Contract Renewal Reminders"
+          ]
+        },
+        {
+          "title": "Invoice First (Fully Automatic)",
+          "titleColor": "text-orange-400",
+          "steps": [
+            "Auto-Generate GST Invoice with Payment Link or QR",
+            "Auto-Send via WhatsApp + Email"
+          ],
+          "whyTitle": "Why this mode exists:",
+          "whyText": "For fixed retainers and trusted clients where the invoice should fire on the exact date without manual work.",
+          "supports": [
+            "Recurring Invoices",
+            "Automated Delivery",
+            "Domain-branded communication",
+            "E-invoice generation",
+            "Auto-share via WhatsApp & Email",
+            "Pro-Active Custom Contract Renewal Reminders"
+          ]
+        }
+      ]
+    },
+
+    {
+      "tagLine": "Feature",
+      "title": "Feature ",
+      "colouredTitle": "Deep Dive",
+      "description": "Seven powerful features that make recurring revenue effortless",
+      "salesFeature": [
+        {
+          "id": "create-it-once",
+          "subtitle": "Create It Once",
+          "title": "Bill Forever",
+          "description": [
+            "Set frequency, duration, service start dates, billing dates, billing modes and payment preferences.",
+            "Effortless handling of periodic contracts — no re-creation, no spreadsheet."
+          ],
+          "points": [
+            "Recurring Contracts",
+            "Recurring Invoices",
+            "GST Tracking",
+            "1-Click Conversion (Proforma → Invoice)"
+          ],
+          "image": "/contracts001.png",
+          "alignment": "left"
+        },
+        {
+          "id": "smart-reminders",
+          "subtitle": "Smart Reminders",
+          "title": "Never Miss a Renewal",
+          "description": [
+            "Automatic alerts for renewals, no manual follow-ups, no missed revenue."
+          ],
+          "points": [
+            "Automated Reminders",
+            "Auto-Create Invoices",
+            "Smart Renewal Delivery (Email your tax invoice)"
+          ],
+          "image": "/contracts002.png",
+          "alignment": "right"
+        },
+        {
+          "id": "two-billing-styles",
+          "subtitle": "Multiple Billing",
+          "title": "Two Billing Styles, One System",
+          "description": [
+            "Choose Proforma Invoice First or Invoice First.",
+            "Both run smoothly in the same dashboard."
+          ],
+          "points": [
+            "Proforma Invoice",
+            "1-Click Invoice Creation",
+            "Pay-Now Links"
+          ],
+          "image": "/contracts003.png",
+          "alignment": "left"
+        },
+        {
+          "id": "built-in-controls",
+          "subtitle": "Built-in Controls",
+          "title": "Audit-Ready Visibility",
+          "description": [
+            "Assign cost centers to the correct GSTIN, HQ, and business vertical.",
+            "Complete visibility, zero dirty data."
+          ],
+          "points": ["Multi-GSTIN", "Multi-Branch", "Multi-Cost Center"],
+          "image": "/contracts004.png",
+          "alignment": "right"
+        },
+        {
+          "id": "revenue-forecast",
+          "subtitle": "Revenue Forecast",
+          "title": "Forecast in One Screen",
+          "description": [
+            "Know your upcoming invoices, overdue contracts, expected cash, and future inflow in seconds."
+          ],
+          "points": ["Revenue Dashboard", "Collection Dashboard"],
+          "image": "/contracts005.png",
+          "alignment": "left"
+        },
+        {
+          "id": "tally-sync-recurring",
+          "subtitle": "The Final Truth Remains True",
+          "title": "Tally Sync That Just Works",
+          "description": [
+            "Invoices, Proformas, Payments — everything flows into Tally without rework.",
+            "No duplicate records. No mismatches."
+          ],
+          "points": ["Key Sync", "Voucher Numbering Sync"],
+          "image": "/contracts006.png",
+          "alignment": "right"
+        },
+        {
+          "id": "cash-flow",
+          "subtitle": "Mr Predictable",
+          "title": "Cash Flow That Follows Your Billing",
+          "description": [
+            "When billing becomes predictable, monthly inflow becomes predictable too.",
+            "Now you control revenue, not surprises."
+          ],
+          "points": [],
+          "image": "/contracts007.png",
+          "alignment": "left"
+        }
+      ]
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Why This Matters</span>",
+      "FeatureItem": [
+        {
+          "title": "Never miss a renewal",
+          "icon": "/salesorder.svg"
+        },
+        {
+          "title": "Zero manual billing",
+          "icon": "/salesViolations.svg"
+        },
+        {
+          "title": "Predictable cash flow",
+          "icon": "salesGrowth.svg"
+        }
+      ]
+    },
+    {
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">See it in Action</span>",
+      "description": "Watch how businesses are automating their recurring revenues",
+      "videoId": "H845WIK8seA"
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Ready to Automate Your Recurring Revenue?</span>",
+      "description": "See how businesses are eliminating billing chaos and building predictable revenue streams",
+      "demoButton": true
+    }
+  ]
+}

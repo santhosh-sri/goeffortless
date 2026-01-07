@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import parse from "html-react-parser";
 import { useEffect, useRef, useState } from "react";
 import { getCalApi } from "@calcom/embed-react";
 import { usePathname, useRouter } from "next/navigation";
@@ -19,7 +20,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const router = useRouter();
 
   const resourcePath =
-    pathname === "/pricing" || pathname === "/case-studies" || pathname === "/";
+    pathname === "/pricing" ||
+    pathname === "/case-studies" ||
+    pathname === "/" ||
+    pathname === "/partners";
 
   const handleMenuClick = async (e: React.MouseEvent, href: string) => {
     // if (href.includes("#")) {
@@ -44,6 +48,48 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     // }
   };
 
+  const headerProducts = [
+    {
+      title: "Workflows",
+      links: [
+        {
+          label: "Sales & Collections",
+          spl: " The “Revenue Engine”",
+          desc: "GPS Check-ins, Orders, Schemes, & Auto-Tally Sync",
+          link: "/sales",
+          icon: "/book-open.svg",
+          activeIcon: "/book-open-active.svg",
+          soon: false,
+        },
+        {
+          label: "Expenses & Claims",
+          spl: " The “Profit Guardian”",
+          desc: "Vendor Bills, Employee Claims, Approvals & Policy Limits.",
+          link: "/expenses",
+          icon: "/book-open.svg",
+          activeIcon: "/book-open-active.svg",
+          soon: false,
+        },
+        {
+          label: "Contracts & Billing",
+          spl: " The “Recurring Revenue”",
+          desc: "Recurring Invoices, Proformas, & Auto-Renewals.",
+          link: "/contracts",
+          icon: "/compliance.svg",
+          activeIcon: "/compliance-active.svg",
+          soon: false,
+        },
+        {
+          label: "All Product Features",
+          desc: "Complete feature list across all modules.",
+          link: "/allProducts",
+          icon: "/circle-question.svg",
+          activeIcon: "/circle-question-active.svg",
+        },
+      ],
+    },
+  ];
+
   const headerResources = [
     {
       title: "Learn",
@@ -53,31 +99,28 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           link: "/blogs",
           icon: "/book-open.svg",
           activeIcon: "/book-open-active.svg",
-          soon: false,
+          desc: "Strategies for growth & control",
+        },
+        {
+          label: "Webinars",
+          link: "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform",
+          icon: "/book-open.svg",
+          activeIcon: "/book-open-active.svg",
+          desc: "Live sessions & masterclasses",
         },
         {
           label: "Compliance Basics",
           link: "/compliance",
           icon: "/compliance.svg",
           activeIcon: "/compliance-active.svg",
-          soon: false,
+          desc: "TDS, GST & Cost Center",
         },
         {
           label: "FAQs",
           link: "/faqs",
           icon: "/circle-question.svg",
           activeIcon: "/circle-question-active.svg",
-        },
-      ],
-    },
-    {
-      title: "Connect",
-      links: [
-        {
-          label: "Partners",
-          link: "/partners",
-          icon: "/crowd.svg",
-          activeIcon: "/crowd-active.svg",
+          desc: "Common questions answered",
         },
       ],
     },
@@ -89,6 +132,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           link: "/download-apps",
           icon: "/downloadMenu.svg",
           activeIcon: "/download-active.svg",
+          desc: "iOS & Android App",
         },
         {
           label: "Automation ROI",
@@ -96,6 +140,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           icon: "/calculator.svg",
           activeIcon: "/calculator-active.svg",
           soon: true,
+          desc: "Calculate your savings",
         },
       ],
     },
@@ -107,18 +152,33 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           link: "/about-us",
           icon: "/circle-info-sparkle.svg",
           activeIcon: "/circle-info-sparkle-active.svg",
+          desc: "Our mission & leadership",
         },
         {
           label: "Certifications",
           link: "/certifications-awards",
           icon: "/header-certificate.svg",
           activeIcon: "/award-certificate-active.svg",
+          desc: "ISO 27001 & Security",
         },
         {
           label: "Contact Us",
           link: "/contact-us",
           icon: "/user-phone.svg",
           activeIcon: "/user-phone-active.svg",
+          desc: "Get in touch with us",
+        },
+      ],
+    },
+    {
+      title: "Featured",
+      links: [
+        {
+          label: "Thinking of Migrating?",
+          link: "/about-us",
+          icon: "/circle-info-sparkle.svg",
+          activeIcon: "/circle-info-sparkle-active.svg",
+          desc: "Effortless vs <br/> SAP/Oracle/ERPs/Tally Plugins",
         },
       ],
     },
@@ -205,15 +265,114 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
 
           {!isMobile && (
             <div className="flex items-center gap-[40px] relative">
-              <div>
-                <Link
-                  href="/pricing"
-                  className={`text-base font-normal ${
-                    pathname === "/pricing" ? "text-white" : "text-[#A8A8A8]"
-                  } hover:text-white cursor-pointer`}
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("products")}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div
+                  // href="/case-studies"
+                  onClick={() => {
+                    setOpenMenu(null);
+                    setHoveredIndex(null);
+                  }}
+                  className={`text-base font-normal hover:text-white cursor-pointer flex items-center gap-2 ${
+                    openMenu === "products" || !resourcePath
+                      ? "text-white"
+                      : "text-[#A8A8A8]"
+                  }`}
                 >
-                  Pricing
-                </Link>
+                  <span>Products</span>
+                  <Image
+                    src={
+                      openMenu === "products"
+                        ? "/chevron-down.svg"
+                        : "/resource-down.svg"
+                    }
+                    alt="resource"
+                    width={16}
+                    height={16}
+                    className="transition-transform duration-300"
+                    unoptimized
+                  />
+                </div>
+                {openMenu === "products" && (
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-[462px]">
+                    <div className="bg-[#15181BF0] rounded-lg p-5 border border-[#2A3038] backdrop-blur-[2px]">
+                      <div className="">
+                        {headerProducts.map((section, sectionIdx) => (
+                          <div key={sectionIdx}>
+                            <h3 className="text-white font-semibold mb-3 border-b border-[#A0A0A01A] pb-1">
+                              {section.title}
+                            </h3>
+                            <div className="space-y-3">
+                              {section.links.map((link, linkIdx) => {
+                                // const isHovered =
+                                //   hoveredIndex?.section === sectionIdx &&
+                                //   hoveredIndex?.link === linkIdx;
+                                return (
+                                  <Link
+                                    key={linkIdx}
+                                    href={link.soon ? "#" : link.link}
+                                    onClick={(e) => {
+                                      if (!link.soon) {
+                                        handleMenuClick(e, link.link);
+                                      }
+                                    }}
+                                    onMouseEnter={() =>
+                                      setHoveredIndex({
+                                        section: sectionIdx,
+                                        link: linkIdx,
+                                      })
+                                    }
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                    className="group flex justify-between items-center gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
+           hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out"
+                                  >
+                                    <span className="flex flex-col gap-2">
+                                      <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] font-normal flex gap-2 items-center">
+                                        <Image
+                                          src={link.activeIcon}
+                                          alt="menu_icon"
+                                          width={20}
+                                          height={20}
+                                          className="transition-opacity duration-300"
+                                        />
+                                        {link.label}
+                                        {link.spl && (
+                                          <span className="text-xs font-light text-[#F08B32]">
+                                            {link.spl}
+                                          </span>
+                                        )}
+                                      </span>
+                                      <span className="text-[#B0B6BF] text-[13px] font-light">
+                                        {link.desc}
+                                      </span>
+                                    </span>
+                                    {link.soon && (
+                                      <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-lexend  font-normal bg-[#FFA0431A] text-[#FFA043]">
+                                        coming soon
+                                      </span>
+                                    )}
+                                    {!link.soon && (
+                                      <Image
+                                        src="/newHeader.svg"
+                                        alt="arrow"
+                                        width={16}
+                                        height={16}
+                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                      />
+                                    )}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
               <div>
                 <Link
@@ -225,6 +384,16 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   } hover:text-white cursor-pointer`}
                 >
                   Case Study
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/partners"
+                  className={`text-base font-normal ${
+                    pathname === "/partners" ? "text-white" : "text-[#A8A8A8]"
+                  } hover:text-white cursor-pointer`}
+                >
+                  Partners
                 </Link>
               </div>
 
@@ -260,8 +429,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   />
                 </div>
                 {openMenu === "resources" && (
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50">
-                    <div className="bg-[#15181B] rounded-lg p-6 w-[1220px]">
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-[1320px] mx-auto">
+                    <div className="bg-[#15181BF0] rounded-lg p-6 border border-[#2A3038] backdrop-blur-[2px]">
                       <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
                         {headerResources.map((section, sectionIdx) => (
                           <div key={sectionIdx}>
@@ -270,17 +439,29 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                             </h3>
                             <div className="space-y-3">
                               {section.links.map((link, linkIdx) => {
-                                const isHovered =
-                                  hoveredIndex?.section === sectionIdx &&
-                                  hoveredIndex?.link === linkIdx;
+                                // const isHovered =
+                                //   hoveredIndex?.section === sectionIdx &&
+                                //   hoveredIndex?.link === linkIdx;
                                 return (
                                   <Link
                                     key={linkIdx}
                                     href={link.soon ? "#" : link.link}
                                     onClick={(e) => {
-                                      if (!link.soon) {
-                                        handleMenuClick(e, link.link);
+                                      if (link.soon) {
+                                        e.preventDefault();
+                                        return;
                                       }
+                                      if (link.label === "Webinars") {
+                                        e.preventDefault();
+                                        window.open(
+                                          link.link,
+                                          "_blank",
+                                          "noopener,noreferrer"
+                                        );
+                                        return;
+                                      }
+
+                                      handleMenuClick(e, link.link);
                                     }}
                                     onMouseEnter={() =>
                                       setHoveredIndex({
@@ -289,35 +470,61 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                       })
                                     }
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className="group flex items-center gap-2 p-2 text-base text-[#A0A0A0] whitespace-nowrap 
-             hover:text-white hover:bg-[#1E2024] rounded relative transition-transform duration-300 ease-out"
+                                    className="group flex items-center gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
+             hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out"
                                   >
-                                    <Image
-                                      src={
-                                        isHovered ? link.activeIcon : link.icon
-                                      }
-                                      alt="menu_icon"
-                                      width={20}
-                                      height={20}
-                                      className="transition-opacity duration-300"
-                                    />
-                                    <span className="flex-1 transition-colors duration-300">
-                                      {link.label}
-                                    </span>
-                                    {link.soon && (
-                                      <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-lexend  font-normal bg-[#FFA0431A] text-[#FFA043]">
-                                        coming soon
+                                    <span className="flex flex-col gap-2 w-full">
+                                      <span className="flex justify-between items-center">
+                                        <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] font-normal flex gap-2 items-center">
+                                          <Image
+                                            src={link.activeIcon}
+                                            alt="menu_icon"
+                                            width={20}
+                                            height={20}
+                                            className="transition-opacity duration-300"
+                                          />
+                                          {link.label}
+                                        </span>
+                                        {!link.soon &&
+                                          link.label !==
+                                            "Thinking of Migrating?" && (
+                                            <Image
+                                              src="/newHeader.svg"
+                                              alt="arrow"
+                                              width={16}
+                                              height={16}
+                                              className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                            />
+                                          )}
                                       </span>
-                                    )}
-                                    {!link.soon && (
-                                      <Image
-                                        src="/arrow-white.svg"
-                                        alt="arrow"
-                                        width={16}
-                                        height={16}
-                                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                      />
-                                    )}
+                                      <span
+                                        className={`${
+                                          link.label ===
+                                          "Thinking of Migrating?"
+                                            ? "text-[#FFA043]"
+                                            : "text-[#B0B6BF]"
+                                        }  text-[13px] font-light"`}
+                                      >
+                                        {parse(link.desc)}{" "}
+                                        {link.soon && (
+                                          <span className="text-[#B0B6BF]">
+                                            <span className="capitalize text-xs font-lexend  font-normal text-[#FFA043]">
+                                              - coming soon
+                                            </span>
+                                          </span>
+                                        )}
+                                      </span>
+                                      {link.label ===
+                                        "Thinking of Migrating?" && (
+                                        <Image
+                                          src="/migrating.png"
+                                          alt="migration"
+                                          width={152}
+                                          height={160}
+                                          className="transition-opacity duration-300 self-center"
+                                        />
+                                      )}
+                                    </span>
                                   </Link>
                                 );
                               })}
@@ -328,6 +535,16 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     </div>
                   </div>
                 )}
+              </div>
+              <div>
+                <Link
+                  href="/pricing"
+                  className={`text-base font-normal ${
+                    pathname === "/pricing" ? "text-white" : "text-[#A8A8A8]"
+                  } hover:text-white cursor-pointer`}
+                >
+                  Pricing
+                </Link>
               </div>
             </div>
           )}
@@ -468,9 +685,9 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                           </h3>
                           <div className="space-y-3">
                             {section.links.map((link, linkIdx) => {
-                              const isHovered =
-                                hoveredIndex?.section === sectionIdx &&
-                                hoveredIndex?.link === linkIdx;
+                              // const isHovered =
+                              //   hoveredIndex?.section === sectionIdx &&
+                              //   hoveredIndex?.link === linkIdx;
 
                               return (
                                 <Link
@@ -492,9 +709,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   hover:text-white hover:bg-[#1E2024] rounded relative transition-transform duration-300 ease-out select-none"
                                 >
                                   <Image
-                                    src={
-                                      isHovered ? link.activeIcon : link.icon
-                                    }
+                                    src={link.activeIcon}
                                     alt="menu_icon"
                                     width={20}
                                     height={20}

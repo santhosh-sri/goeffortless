@@ -137,9 +137,9 @@ const Testimonials: React.FC<TestimonalProps> = ({
                           ? "bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]"
                           : "bg-[#121317]"
                       } flex-col `
-                } p-4 flex gap-3  !rounded-xl xl:!w-[95%] !w-[90%] lg:w-[70%]`}
+                } p-4 flex gap-3 !rounded-xl xl:!w-[95%] !w-[90%] lg:w-[70%]`}
               >
-                <div className="flex items-start gap-3 md:gap-4 ">
+                {/* <div className="flex items-start gap-3 md:gap-4 ">
                   {card?.profile && (
                     <Image
                       src={card?.profile}
@@ -163,16 +163,29 @@ const Testimonials: React.FC<TestimonalProps> = ({
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="flex flex-col gap-2">
                   {card?.title && (
                     <p className="text-[16px] md:text-[20px] leading-6 font-[400] text-[#FFFFFF]">
                       {card?.title}
                     </p>
                   )}
-                  <p className="text-[14px] md:leading-[22px] font-[300] leading-[24px] text-[#E4E4E7] md:!min-h-[135px] !min-h-[140px]">
+                  <p className="text-[14px] font-[300] text-[#E4E4E7] md:!min-h-[150px] !min-h-[170px]">
                     {card?.review}
                   </p>
+                </div>
+                <div className="flex flex-col md:gap-1 items-start">
+                  <p className="text-base font-[400] text-[#FFFFFF]">
+                    {card?.name}
+                  </p>
+                  <div>
+                    <p className="text-[#E4E4E7] md:text-sm text-xs leading-5 !font-[300]">
+                      {card?.designation}
+                    </p>
+                    {/* <p className="text-[#E4E4E7] md:text-[16px] text-[13px] leading-5 !font-[300] md:min-h-[40px]">
+                        {card?.contribution}
+                      </p> */}
+                  </div>
                 </div>
               </div>
             </div>
