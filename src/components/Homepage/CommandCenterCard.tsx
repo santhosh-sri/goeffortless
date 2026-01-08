@@ -46,7 +46,12 @@ const CommandCenterCard: React.FC<CommandCenterCardProps> = ({
       <div className="flex flex-col gap-4 text-sm text-white font-normal">
         {features.map((feature, index) => (
           <p key={index} className="flex items-start gap-2">
-            <span className="text-[#F08B32]">✓</span>
+            <Image
+              src="/orangeTick.svg"
+              alt="orangeTick"
+              width={20}
+              height={20}
+            />
             <span className="text-sm font-normal">{feature}</span>
           </p>
         ))}

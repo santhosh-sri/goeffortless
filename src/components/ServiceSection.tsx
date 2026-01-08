@@ -59,6 +59,10 @@ import FeatureHighlights from "./FeaturesComponent/FeatureHighlights";
 import ComplianceAuditPanel from "./FeaturesComponent/ComplianceAuditPanel";
 import BillingModesComparison from "./FeaturesComponent/BillingModesComparison";
 import ButtonComponent from "./FeaturesComponent/ButtonComponent";
+import ERPComparisonCards from "./FeaturesComponent/ERPComparisonCards";
+import ROICalculator from "./FeaturesComponent/ROICalculator";
+import ReadinessCards from "./FeaturesComponent/ReadinessCards";
+import MetricCards from "./FeaturesComponent/MetricCards";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -73,7 +77,6 @@ interface ServiceSectionProps extends ServiceContent {
   isLastSection?: boolean;
   complianceAuditData?: any;
   billingModesData?: any;
-  demoButton?: boolean;
 }
 
 const ServiceSection = ({
@@ -153,7 +156,12 @@ const ServiceSection = ({
   FeatureItem = [],
   complianceAuditData,
   billingModesData,
-  demoButton = false,
+  erpComparisonData = [],
+  roiCalculatorData,
+  readinessCardsData = [],
+  metricCardData = [],
+  demoCtaButton,
+  demoSecButton,
 }: ServiceSectionProps) => {
   return (
     <>
@@ -161,9 +169,9 @@ const ServiceSection = ({
         <div className="mt-[40px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
       <div
-        className={`${bgColour ? bgColour : "bg-[#08090A]"} ${
-          !isDownloadPage && "max-md:px-5 md:px-[80px] py-8 md:py-[60px]"
-        }`}
+        className={`${
+          bgColour ? bgColour : "bg-[#08090A]"
+        } max-md:px-5 md:px-[80px] py-8 md:py-[60px]`}
       >
         {caseStudies?.length === 0 && (
           <div
@@ -369,7 +377,26 @@ const ServiceSection = ({
               </div>
             )}
             {videoId && <YoutubeVideoCard videoId={videoId} type="page" />}
-            {demoButton && <ButtonComponent />}
+            {(demoCtaButton || demoSecButton) && (
+              <ButtonComponent
+                demoCtaButton={demoCtaButton}
+                demoSecButton={demoSecButton}
+              />
+            )}
+            {erpComparisonData?.length > 0 && (
+              <ERPComparisonCards cards={erpComparisonData} />
+            )}
+            {roiCalculatorData && (
+              <div className="w-full">
+                <ROICalculator data={roiCalculatorData} />
+              </div>
+            )}
+            {readinessCardsData?.length > 0 && (
+              <ReadinessCards cards={readinessCardsData} />
+            )}
+            {metricCardData?.length > 0 && (
+              <MetricCards cards={metricCardData} />
+            )}
             {complianceCards && (
               <>
                 <div className="md:grid md:grid-cols-4 md:!gap-4 flex flex-col gap-4 items-center justify-center">

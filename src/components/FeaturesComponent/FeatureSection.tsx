@@ -1,4 +1,5 @@
 import { FeatureSectionProps } from "@/interface/type";
+import Image from "next/image";
 import React from "react";
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({
@@ -9,7 +10,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   feature,
   position,
 }) => {
-  const { subtitle, title, description, image } = feature;
+  const { subtitle, title, description, image, points } = feature;
   const isEven = position % 2 === 1;
 
   return (
@@ -38,6 +39,23 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               {item}
             </p>
           ))}
+          {points?.length > 0 && (
+            <div>
+              <ul className="space-y-3">
+                {points.map((item: any, i: any) => (
+                  <li key={i} className="flex items-start gap-3 text-white">
+                    <Image
+                      src="/pointsTick.svg"
+                      alt="pointsTick"
+                      width={24}
+                      height={24}
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         {/* Image */}

@@ -20,7 +20,7 @@ export const pricingData = {
       lite: "<span class='text-[#F08B32]'> Free</span>",
     },
     {
-      name: "Number of Users (Up To)",
+      name: "Number of Free Users (with Base Plan)",
       premiumPro: "50",
       premium: "15",
       lite: "5",
@@ -44,69 +44,11 @@ export const pricingData = {
       lite: "1",
     },
     {
-      name: "Additional Users",
+      name: "Additional Paid Users (on top of Base Plan Users)",
       premiumPro: "₹2400/user",
       premium: "₹3000/user",
       lite: "₹3000/user",
     },
-  ],
-  "Integrations, Security & Support": [
-    {
-      name: "Tally (Concurrent & Bi-Directional)",
-      premiumPro: "✓",
-      premium: "✓",
-      lite: "✓",
-      enterprise: "✓",
-    },
-    {
-      name: "APIs at additional Cost available for Custom integrations with Oracle and SAP",
-      premiumPro: "✓",
-      premium: "✕",
-      lite: "✓",
-      enterprise: "✓",
-    },
-    {
-      name: "Multi-Company Concurrent Sync",
-      premiumPro: "✓",
-      premium: "✓",
-      lite: "✕",
-      enterprise: "✓",
-    },
-    {
-      name: "8 Levels of Enterprise Grade Security",
-      premiumPro: "✓",
-      premium: "✓",
-      lite: "✓",
-      enterprise: "✓",
-    },
-    {
-      name: "Email, Call, & WhatsApp Support",
-      premiumPro: "✓",
-      premium: "✓",
-      lite: "✓",
-      enterprise: "✓",
-    },
-    {
-      name: "Dedicated Account Manager",
-      premiumPro: "✓",
-      premium: "✓",
-      lite: "✕",
-      enterprise: "✓",
-    },
-    {
-      name: "Implementation & Onboarding Support",
-      premiumPro: "✓",
-      premium: "✓",
-      lite: "✓",
-      enterprise: "✓",
-    },
-    {
-      name: "Payment Gateway (RazorPay)",
-      premiumPro: "✓",
-      premium: "✓",
-      lite: "✕",
-      enterprise: "✓",
-    }
   ],
   "Fleet on Street Selling": [
     {
@@ -179,7 +121,12 @@ export const pricingData = {
       premium: "✓",
       lite: "✕",
       enterprise: "✓",
-    }
+    },
+    {name: "Intelligent QR on Invoice", 
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✕",
+      enterprise: "✓",}
   ],
   "Purchase & Expense Management": [
     {
@@ -427,6 +374,13 @@ export const pricingData = {
       premium: "✓",
       lite: "✕",
       enterprise: "✓",
+    },
+    {
+      name: "Contract Renewal Reminders (90/60/30/7/3/2/1 Days before due date— Custom Domain Email & WA)",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✕",
+      enterprise: "✓",
     }
   ],
   "Business Health Dashboard": [
@@ -536,6 +490,71 @@ export const pricingData = {
       premium: "✕",
       lite: "✕",
       enterprise: "✓",
+    },
+    {
+      name: "Personalised SOA Portal",
+      premiumPro: "✓",
+      premium: "✕",
+      lite: "✕",
+      enterprise: "✓",
     }
-  ]
+  ],
+  "Integrations, Security & Support": [
+    {
+      name: "Tally (Concurrent & Bi-Directional)",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "APIs at additional Cost available for Custom integrations with Oracle and SAP",
+      premiumPro: "✓",
+      premium: "✕",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Multi-Company Concurrent Sync",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✕",
+      enterprise: "✓",
+    },
+    {
+      name: "8 Levels of Enterprise Grade Security",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Email, Call, & WhatsApp Support",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Dedicated Account Manager",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✕",
+      enterprise: "✓",
+    },
+    {
+      name: "Implementation & Onboarding Support",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Payment Gateway (RazorPay)",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✕",
+      enterprise: "✓",
+    }
+  ],
 };

@@ -286,6 +286,12 @@ export interface ServiceContent {
   salesFeature?: FeatureSectionProps[]
   videoId?: string;
   FeatureItem?: FeatureHighlightItem[];
+  erpComparisonData?: ERPComparisonCard[];
+  roiCalculatorData?: any;
+  readinessCardsData?: ReadinessCard[]
+  metricCardData?: MetricCardData[];
+  demoCtaButton?: string;
+  demoSecButton?: string;
 }
 
 export interface CareersSectionContent {
@@ -626,4 +632,24 @@ export interface FeatureSectionProps {
 export interface FeatureHighlightItem {
   title: string;
   icon: string;
+}
+
+export interface ERPComparisonCard {
+  id: string;
+  title: string;
+  subTitle: string;
+  secondTitle: string;
+  erpPromise: any;
+  result?: string;
+}
+
+export interface ReadinessCard {
+  title: string;
+  description: string;
+  footnote?: string;
+}
+
+export interface MetricCardData {
+  value: string;
+  label: string;
 }

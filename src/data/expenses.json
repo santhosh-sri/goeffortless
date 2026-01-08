@@ -5,7 +5,7 @@
     "og": {
       "title": "Effortless: Explore our Features",
       "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
-      "url": "https://www.goeffortless.ai/allProducts",
+      "url": "https://www.goeffortless.ai/expense",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
     }
@@ -217,7 +217,8 @@
       "bgColour": "bg-[#15181B]",
       "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Ready to Protect Every Rupee?</span>",
       "description": "See how finance teams are saving hours and catching errors before they become losses",
-      "demoButton": true
+      "demoCtaButton": "Book Live Demo",
+      "demoSecButton": "See All Features"
     }
   ]
 }

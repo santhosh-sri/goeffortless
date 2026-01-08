@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface Mode {
@@ -30,7 +31,7 @@ const BillingModesComparison: React.FC<Props> = ({ modes }) => {
             </h3>
 
             {/* Steps */}
-            <div className="bg-[#0B0B0B] border border-[#1E1E1E] rounded-xl p-6 mb-8 space-y-5">
+            <div className="bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] border border-[#1E1E1E] rounded-xl p-6 mb-8 space-y-5">
               {mode.steps.map((step, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-8 h-8 rounded-full bg-[#FFE8D3] text-orange-500 flex items-center justify-center font-semibold">
@@ -55,7 +56,12 @@ const BillingModesComparison: React.FC<Props> = ({ modes }) => {
               <ul className="space-y-3">
                 {mode.supports.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-white">
-                    <span className="text-emerald-400 mt-1">✓</span>
+                    <Image
+                      src="/pointsTick.svg"
+                      alt="pointsTick"
+                      width={24}
+                      height={24}
+                    />
                     <span>{item}</span>
                   </li>
                 ))}

@@ -82,7 +82,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
         {
           label: "All Product Features",
           desc: "Complete feature list across all modules.",
-          link: "/allProducts",
+          link: "/allFeatures",
           icon: "/circle-question.svg",
           activeIcon: "/circle-question-active.svg",
         },
@@ -175,7 +175,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
       links: [
         {
           label: "Thinking of Migrating?",
-          link: "/about-us",
+          link: "/migratingFeature",
           icon: "/circle-info-sparkle.svg",
           activeIcon: "/circle-info-sparkle-active.svg",
           desc: "Effortless vs <br/> SAP/Oracle/ERPs/Tally Plugins",
@@ -190,6 +190,11 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
       href: "/case-studies",
       label: "Case Study",
       hasBottomBorder: true,
+    },
+    {
+      href: "",
+      label: "Products",
+      subMenu: headerProducts,
     },
     {
       href: "",
@@ -302,10 +307,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                       <div className="">
                         {headerProducts.map((section, sectionIdx) => (
                           <div key={sectionIdx}>
-                            <h3 className="text-white font-semibold mb-3 border-b border-[#A0A0A01A] pb-1">
+                            <h3 className="text-white font-semibold border-b border-[#A0A0A01A] pb-2">
                               {section.title}
                             </h3>
-                            <div className="space-y-3">
+                            <div className="">
                               {section.links.map((link, linkIdx) => {
                                 // const isHovered =
                                 //   hoveredIndex?.section === sectionIdx &&
@@ -326,11 +331,11 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                       })
                                     }
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className="group flex justify-between items-center gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
+                                    className="group flex justify-between items-start gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
            hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out"
                                   >
                                     <span className="flex flex-col gap-2">
-                                      <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] font-normal flex gap-2 items-center">
+                                      <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] text-base leading-5 font-normal flex gap-2 items-center group-hover:text-white">
                                         <Image
                                           src={link.activeIcon}
                                           alt="menu_icon"
@@ -340,20 +345,20 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                         />
                                         {link.label}
                                         {link.spl && (
-                                          <span className="text-xs font-light text-[#F08B32]">
+                                          <span className="text-xs font-light text-[#F08B32] group-hover:text-[#F08B32]">
                                             {link.spl}
                                           </span>
                                         )}
                                       </span>
-                                      <span className="text-[#B0B6BF] text-[13px] font-light">
+                                      <span className="text-[#B0B6BF] group-hover:text-white text-[13px] leading-4 font-light">
                                         {link.desc}
                                       </span>
                                     </span>
-                                    {link.soon && (
+                                    {/* {link.soon && (
                                       <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-lexend  font-normal bg-[#FFA0431A] text-[#FFA043]">
                                         coming soon
                                       </span>
-                                    )}
+                                    )} */}
                                     {!link.soon && (
                                       <Image
                                         src="/newHeader.svg"
@@ -429,15 +434,15 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   />
                 </div>
                 {openMenu === "resources" && (
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-[1320px] mx-auto">
+                  <div className="absolute -translate-x-1/2 top-full mt-2 z-50 w-[1320px] mx-auto">
                     <div className="bg-[#15181BF0] rounded-lg p-6 border border-[#2A3038] backdrop-blur-[2px]">
                       <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
                         {headerResources.map((section, sectionIdx) => (
                           <div key={sectionIdx}>
-                            <h3 className="text-white font-semibold mb-3 border-b border-[#A0A0A01A] pb-1">
+                            <h3 className="text-white font-semibold border-b border-[#A0A0A01A] pb-2">
                               {section.title}
                             </h3>
-                            <div className="space-y-3">
+                            <div className="">
                               {section.links.map((link, linkIdx) => {
                                 // const isHovered =
                                 //   hoveredIndex?.section === sectionIdx &&
@@ -475,7 +480,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                   >
                                     <span className="flex flex-col gap-2 w-full">
                                       <span className="flex justify-between items-center">
-                                        <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] font-normal flex gap-2 items-center">
+                                        <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] text-base leading-5 font-normal flex gap-2 items-center group-hover:text-white">
                                           <Image
                                             src={link.activeIcon}
                                             alt="menu_icon"
@@ -501,15 +506,16 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                         className={`${
                                           link.label ===
                                           "Thinking of Migrating?"
-                                            ? "text-[#FFA043]"
-                                            : "text-[#B0B6BF]"
-                                        }  text-[13px] font-light"`}
+                                            ? "text-[#F08B32] group-hover:text-[#FFA043] "
+                                            : "text-[#B0B6BF] group-hover:text-white"
+                                        } text-[13px] leading-4 font-light`}
                                       >
                                         {parse(link.desc)}{" "}
                                         {link.soon && (
-                                          <span className="text-[#B0B6BF]">
-                                            <span className="capitalize text-xs font-lexend  font-normal text-[#FFA043]">
-                                              - coming soon
+                                          <span className="text-[#B0B6BF] group-hover:text-white">
+                                            -{" "}
+                                            <span className="capitalize text-xs font-lexend  font-normal text-[#FFA043] group-hover:text-[#FFA043]">
+                                              coming soon
                                             </span>
                                           </span>
                                         )}
@@ -625,7 +631,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
         </div>
 
         {isMobile && expandedSections && (
-          <div className="absolute top-full left-0 right-0 bg-[#08090A] z-50 rounded-b-lg">
+          <div className="absolute top-full left-0 right-0 bg-[#15181BF0] backdrop-blur-[2px] z-50 rounded-b-lg">
             <div className="space-y-0">
               {mobileMenu.map((item, index) => (
                 <div
