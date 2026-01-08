@@ -83,8 +83,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
           label: "All Product Features",
           desc: "Complete feature list across all modules.",
           link: "/allFeatures",
-          icon: "/allMenu.svg",
-          activeIcon: "/allMenu.svg",
+          icon: "/allmenu.svg",
+          activeIcon: "/allmenu.svg",
         },
       ],
     },
@@ -276,9 +276,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <div
-                  // href="/case-studies"
                   onClick={() => {
-                    setOpenMenu(null);
+                    setOpenMenu("products");
                     setHoveredIndex(null);
                   }}
                   className={`text-base font-normal hover:text-white cursor-pointer flex items-center gap-2 ${
@@ -312,9 +311,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                             </h3>
                             <div className="">
                               {section.links.map((link, linkIdx) => {
-                                // const isHovered =
-                                //   hoveredIndex?.section === sectionIdx &&
-                                //   hoveredIndex?.link === linkIdx;
+                                const isHovered =
+                                  (hoveredIndex?.section === sectionIdx &&
+                                    hoveredIndex?.link === linkIdx) ||
+                                  pathname === link.link;
                                 return (
                                   <Link
                                     key={linkIdx}
@@ -331,8 +331,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                       })
                                     }
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className="group flex justify-between items-start gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
-           hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out"
+                                    className={`group flex justify-between items-start gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
+           hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out ${
+             isHovered && "bg-[#23292F]"
+           }`}
                                   >
                                     <span className="flex flex-col gap-2">
                                       <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] text-base leading-5 font-normal flex gap-2 items-center group-hover:text-white">
@@ -408,9 +410,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <div
-                  // href="/case-studies"
                   onClick={() => {
-                    setOpenMenu(null);
+                    setOpenMenu("resources");
                     setHoveredIndex(null);
                   }}
                   className={`text-base font-normal hover:text-white cursor-pointer flex items-center gap-2 ${
@@ -444,9 +445,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                             </h3>
                             <div className="">
                               {section.links.map((link, linkIdx) => {
-                                // const isHovered =
-                                //   hoveredIndex?.section === sectionIdx &&
-                                //   hoveredIndex?.link === linkIdx;
+                                const isHovered =
+                                  (hoveredIndex?.section === sectionIdx &&
+                                    hoveredIndex?.link === linkIdx) ||
+                                  pathname === link.link;
                                 return (
                                   <Link
                                     key={linkIdx}
@@ -475,8 +477,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                       })
                                     }
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className="group flex items-center gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
-             hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out"
+                                    className={`group flex items-center gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
+             hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out ${
+               isHovered && "bg-[#23292F]"
+             }`}
                                   >
                                     <span className="flex flex-col gap-2 w-full">
                                       <span className="flex justify-between items-center">

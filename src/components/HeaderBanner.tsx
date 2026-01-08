@@ -57,7 +57,16 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
           </p>
         </div>
         <div className="flex gap-6">
-          <button className="text-[#F08B32] text-sm font-semibold py-1.5 px-[16px] leading-4 whitespace-nowrap border-2 border-[#F08B32] rounded">
+          <button
+            className="text-[#F08B32] text-sm font-semibold py-1.5 px-[16px] leading-4 whitespace-nowrap border-2 border-[#F08B32] rounded"
+            onClick={() =>
+              window.open(
+                "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
             Save My Spot
           </button>
           <button className="border-0" onClick={() => setCloseBanner(false)}>
@@ -179,7 +188,16 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
           </div>
 
           <div className="flex gap-3 mt-4">
-            <button className="flex-1 text-[#F08B32] text-xs font-semibold py-2 border-2 border-[#F08B32] rounded">
+            <button
+              className="flex-1 text-[#F08B32] text-xs font-semibold py-2 border-2 border-[#F08B32] rounded"
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
               Save My Spot
             </button>
           </div>
