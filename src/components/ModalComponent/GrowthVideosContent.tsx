@@ -28,7 +28,7 @@ const GrowthVideosContent: React.FC<GrowthVideosContentProps> = ({
   videos,
 }) => {
   return (
-    <div className="flex flex-col gap-8 p-8">
+    <div className="flex flex-col gap-8  p-4 md:p-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <button
@@ -57,13 +57,13 @@ const GrowthVideosContent: React.FC<GrowthVideosContentProps> = ({
               stroke-linejoin="round"
             />
           </svg>
-          <span className="text-xl font-medium leading-6">
+          <span className="text-base md:text-xl font-medium leading-6">
             {" "}
             Change Language
           </span>
         </button>
 
-        <button onClick={onClose} className="text-red-500 text-xl font-bold">
+        <button onClick={onBack} className="text-red-500 text-xl font-bold">
           <svg
             width="32"
             height="32"
@@ -96,21 +96,23 @@ const GrowthVideosContent: React.FC<GrowthVideosContentProps> = ({
 
       {/* Title */}
       <div className="flex flex-col gap-4">
-        <h2 className="text-[32px] font-medium text-white leading-10">
+        <h2 className="text-2xl md:text-[32px] font-medium text-white leading-10">
           Effortless Growth Videos
         </h2>
 
         {/* Sections */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          {videos.map((video) => (
-            <VideoCard
-              key={video.id}
-              title={video.title}
-              subtitle={video.subtitle}
-              videoId={video.videoId}
-              onClick={() => onPlay(video)}
-            />
-          ))}
+        <div className="max-md:h-[500px] max-md:overflow-hidden max-md:overflow-y-scroll">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {videos.map((video) => (
+              <VideoCard
+                key={video.id}
+                title={video.title}
+                subtitle={video.subtitle}
+                videoId={video.videoId}
+                onClick={() => onPlay(video)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -124,40 +126,31 @@ const VideoCard = ({ title, subtitle, videoId, onClick }: VideoCardProps) => {
   return (
     <div className="flex flex-col gap-4 cursor-pointer" onClick={onClick}>
       <div className="flex flex-col gap-2">
-        <p className="text-[#F08B32] text-xl font-meduim leading-6">{title}</p>
-        <p className="text-white text-base font-light leading-5">{subtitle}</p>
+        <p className="text-[#F08B32] text-lg md:text-xl font-medium leading-6">
+          {title}
+        </p>
+        <p className="text-white text-sm md:text-base font-light leading-5">
+          {subtitle}
+        </p>
       </div>
 
-      {/* <div
+      {/* Thumbnail */}
+      <div
         className="
-          h-[228px] w-[416px] rounded-xl bg-[#121317] p-6
-          flex items-center justify-center border border-white/10
+          relative w-full max-w-[416px]
+          aspect-video md:aspect-auto md:h-[228px]
+          rounded-xl overflow-hidden
+          border border-white/10 bg-[#121317]
         "
       >
-        <svg
-          width="64"
-          height="64"
-          viewBox="0 0 64 64"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M62.662 16.4951C61.926 13.7231 59.758 11.5411 57.004 10.7991C52.012 9.45312 32 9.45312 32 9.45312C32 9.45312 11.986 9.45312 6.996 10.7991C4.242 11.5391 2.074 13.7231 1.338 16.4951C0 21.5191 0 31.9991 0 31.9991C0 31.9991 0 42.4811 1.338 47.5031C2.074 50.2751 4.242 52.4571 6.996 53.1971C11.988 54.5431 32 54.5431 32 54.5431C32 54.5431 52.014 54.5431 57.004 53.1971C59.758 52.4571 61.926 50.2731 62.662 47.5031C64 42.4791 64 31.9991 64 31.9991C64 31.9991 64 21.5191 62.662 16.4951ZM25.454 41.5151V22.4831L42.182 31.9991L25.454 41.5151Z"
-            fill="white"
-          />
-        </svg>
-      </div> */}
-      <div className="relative h-[228px] w-[416px] rounded-xl overflow-hidden border border-white/10 bg-[#121317]">
-        {/* Thumbnail */}
         <img
           src={thumbnailUrl}
           alt={title}
           className="h-full w-full object-cover"
         />
 
-        {/* Play button overlay */}
+        {/* Play overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* <div className="h-16 w-16 rounded-full bg-black/60 flex items-center justify-center"> */}
           <svg
             width="64"
             height="64"
@@ -172,7 +165,6 @@ const VideoCard = ({ title, subtitle, videoId, onClick }: VideoCardProps) => {
           </svg>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };

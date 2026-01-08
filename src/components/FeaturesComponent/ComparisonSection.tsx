@@ -10,15 +10,15 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
 
   return (
     <section>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[43px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* LEFT */}
-        <div className="flex justify-between">
+        <div className="flex max-md:flex-col justify-between max-md:gap-12">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-xl leading-[26px] font-medium text-center">
+              <h2 className="text-lg md:text-xl leading-[26px] font-medium text-center">
                 {left.title}
               </h2>
-              <p className="text-base leading-5 text-center text-[#E4E4E7]">
+              <p className="text-sm md:text-base leading-5 text-center text-[#E4E4E7]">
                 {left.subtitle}
               </p>
             </div>
@@ -48,22 +48,53 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
                     key={point}
                     className="flex items-center gap-3 text-base font-normal text-[#FFFFFF]"
                   >
-                    <span className="text-[#FF0000] text-lg">⚠</span>
+                    <span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.109 15.0038L11.4423 3.3371C11.297 3.0806 11.0862 2.86726 10.8314 2.71883C10.5767 2.57039 10.2872 2.49219 9.99234 2.49219C9.69752 2.49219 9.40797 2.57039 9.15324 2.71883C8.8985 2.86726 8.6877 3.0806 8.54234 3.3371L1.87567 15.0038C1.72874 15.2582 1.6517 15.547 1.65235 15.8409C1.653 16.1347 1.73132 16.4231 1.87938 16.677C2.02744 16.9308 2.23996 17.1409 2.49542 17.2861C2.75088 17.4313 3.04018 17.5064 3.33401 17.5038H16.6673C16.9598 17.5035 17.2469 17.4262 17.5001 17.2798C17.7532 17.1334 17.9634 16.923 18.1094 16.6697C18.2555 16.4164 18.3324 16.1291 18.3323 15.8367C18.3322 15.5443 18.2552 15.257 18.109 15.0038Z"
+                          stroke="#FF0000"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M10 7.5V10.8333"
+                          stroke="#FF0000"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M10 14.1641H10.0083"
+                          stroke="#FF0000"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
                     {point}
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className="h-full w-[1px] bg-[linear-gradient(180deg,#282828_0%,#FFFFFF_50%,#282828_100%)]" />
+          <div className="hidden md:block h-full w-[1px] bg-[linear-gradient(180deg,#282828_0%,#FFFFFF_50%,#282828_100%)]" />
+          <div className="md:hidden h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]" />
         </div>
         {/* RIGHT */}
         <div className="flex flex-col gap-[43px]">
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl leading-[26px] font-medium text-[#F08B32] text-center">
+            <h2 className="text-lg md:text-xl leading-[26px] font-medium text-[#F08B32] text-center">
               {right.title}
             </h2>
-            <p className="text-base leading-5 text-center text-[#E4E4E7]">
+            <p className="text-sm md:text-base leading-5 text-center text-[#E4E4E7]">
               {right.subtitle}
             </p>
           </div>

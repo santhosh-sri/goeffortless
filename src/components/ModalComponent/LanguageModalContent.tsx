@@ -57,24 +57,28 @@ const LanguageModalContent: React.FC<Props> = ({ data, onSelect, onClose }) => {
         </button>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="text-[32px] font-medium bg-custom-gradient bg-clip-text text-transparent">
+        <h2 className="text-2xl md:text-[32px] font-medium bg-custom-gradient bg-clip-text text-transparent">
           {data.title}
         </h2>
-        <p className="text-white text-2xl font-light my-0">{data.subtitle}</p>
+        <p className="text-white text-lg md:text-2xl font-light my-0">
+          {data.subtitle}
+        </p>
 
         {/* Options */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 place-items-center">
           {data.options.map((item) => (
             <button
               key={item.id}
               onClick={() => onSelect(item)}
               className="
-              h-[270px] w-[416px] rounded-xl bg-[#121317] p-6
+              w-full max-w-[416px] h-auto md:h-[270px] rounded-xl bg-[#121317] p-6
               flex flex-col gap-3 items-center justify-center border border-white/10
             "
             >
               <span className="text-[64px] !h-[64px]">{item.flag}</span>
-              <span className="text-lg text-white">{item.label}</span>
+              <span className="text-sm md:text-lg text-white">
+                {item.label}
+              </span>
             </button>
           ))}
         </div>

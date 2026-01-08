@@ -14,6 +14,7 @@
   "serviceContent": [
     {
       "tagLine": "The “Value Anchor”",
+      "marginTop": true,
       "Customtitle": "<span style='font-weight: 500'>Scale to ₹10,000 Cr. Keep Your Tally. Save the ERP Cost.</span>",
       "description": "Why spend ₹2 Crores on SAP or disrupt your finance team with a Generic Cloud ERP, when you can get Enterprise Control in 7 days with Tally + Effortless?",
       "metricCardData": [
@@ -208,14 +209,14 @@
             "unit": "Lakhs",
             "color": "#F08B32",
             "note": "Includes ₹9L Productivity Loss of switching to a Generic Cloud ERP",
-            "percent": 40
+            "percent": 45
           },
           {
             "label": "🟢 GoEffortless",
             "value": 3.6,
             "unit": "Lakhs",
             "color": "#2F9682",
-            "percent": 15
+            "percent": 30
           }
         ],
         "lossDesc": "You also avoid the ₹9L Productivity Loss of switching to a Generic Cloud ERP.",

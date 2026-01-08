@@ -7,21 +7,21 @@ interface Props {
 
 const MetricCards: React.FC<Props> = ({ cards }) => {
   return (
-    <section className="w-[1036px] mx-auto">
+    <section className="md:w-[1036px] mx-auto">
       <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className="border border-white/10 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] rounded-lg py-5 px-4 text-center flex flex-col gap-4"
+              className="border border-white/10 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] rounded-lg p-5 text-center flex flex-col gap-4"
             >
               {/* Value */}
-              <div className="text-[40px] font-medium text-[#F08B32]">
+              <div className="text-[32px] md:text-[40px] font-medium text-[#F08B32]">
                 {card.value}
               </div>
 
               {/* Label */}
-              <div className="text-[#E4E4E7] text-xl leading-6 font-light border-t border-[#2A2A2A] py-3">
+              <div className="text-[#E4E4E7] text-base md:text-xl leading-6 font-light border-t border-[#2A2A2A] pt-3">
                 {card.label}
               </div>
             </div>

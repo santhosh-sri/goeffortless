@@ -8,6 +8,7 @@ interface SecondaryCtaProps {
   ishome?: boolean;
   isOrange?: boolean;
   secondaryIcon?: string;
+  isFeaturePage?: boolean;
 }
 
 const SecondaryCta: React.FC<SecondaryCtaProps> = ({
@@ -17,7 +18,9 @@ const SecondaryCta: React.FC<SecondaryCtaProps> = ({
   ishome,
   isOrange,
   secondaryIcon,
+  isFeaturePage,
 }) => {
+  console.log(isFeaturePage, "isFeaturePage");
   return (
     <button
       onClick={handleDirect}
@@ -26,7 +29,9 @@ const SecondaryCta: React.FC<SecondaryCtaProps> = ({
         py-[12px] md:text-[16px] cursor-pointer border border-[#F08B32] text-[#F08B32] font-[500]
         md:px-6 px-[16px] rounded flex items-center justify-center  md:hover:pr-7
         ${customStyle ? "text-[14px]" : "md:text-[16px] text-[14px]"}
-        ${ishome ? "w-[220px] max-md:w-full" : ""}  md:hover:!pr-[36px]`}
+        ${
+          ishome || isFeaturePage ? "w-[220px] max-md:w-full" : ""
+        }  md:hover:!pr-[36px]`}
     >
       <span className="relative inline-flex items-center ">
         {secondaryIcon && (

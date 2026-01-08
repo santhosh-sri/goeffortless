@@ -47,7 +47,7 @@ const Modal = ({
       <div
         className="relative z-10 bg-[#15181BF0] rounded-xl shadow-xl border border-[#2A3038]
                    w-[1352px] mx-auto backdrop-blur-[2px]
-                   transform transition-all animate-scaleIn"
+                   transform transition-all animate-scaleIn max-md:m-5"
         onClick={(e) => e.stopPropagation()}
       >
         {children}

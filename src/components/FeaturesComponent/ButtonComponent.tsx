@@ -11,12 +11,13 @@ const ButtonComponent = ({
 }) => {
   const router = useRouter();
   return (
-    <div className="flex justify-center gap-6 items-center">
-      <Democta ctaText={demoCtaButton} />
+    <div className="flex max-md:flex-col justify-center gap-6 items-center max-md:w-full">
+      <Democta ctaText={demoCtaButton} customStyle={true} />
       {demoSecButton && (
         <SecondaryCta
           secondaryCtaText="See All Features"
           isOrange={true}
+          ishome={true}
           handleDirect={() => router.push("/allFeatures")}
         />
       )}

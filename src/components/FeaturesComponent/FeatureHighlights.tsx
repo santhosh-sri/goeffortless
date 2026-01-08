@@ -7,10 +7,18 @@ const FeatureHighlights: React.FC<FeatureHighlightItem> = ({ title, icon }) => {
     <section>
       <div className="flex flex-col items-center gap-4">
         <div>
-          <Image src={icon} alt="icon" width={64} height={64} />
+          <Image
+            src={icon}
+            alt="icon"
+            width={64}
+            height={64}
+            className="max-md:!w-[48px] max-md:!h-[48px]"
+          />
         </div>
 
-        <h3 className="text-white text-xl font-semibold">{title}</h3>
+        <h3 className="text-white text-base md:text-xl font-normal md:font-semibold">
+          {title}
+        </h3>
       </div>
     </section>
   );

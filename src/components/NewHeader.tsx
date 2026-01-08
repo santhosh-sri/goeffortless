@@ -136,7 +136,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
         },
         {
           label: "Automation ROI",
-          link: "/",
+          link: " ",
           icon: "/calculator.svg",
           activeIcon: "/calculator-active.svg",
           soon: true,
@@ -240,7 +240,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     <>
       {isMobile && expandedSections && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+          className="fixed inset-0 z-40"
           onClick={() => {
             setExpandedSections(false);
             setOpenSubMenu(null);
@@ -676,7 +676,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                       />
                     ) : (
                       <Image
-                        src="/white-arrow-right.svg"
+                        src="/newRightArrow.svg"
                         alt="navigate"
                         width={16}
                         height={16}
@@ -687,7 +687,13 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                   </div>
 
                   {item.subMenu && openSubMenu === item.label && (
-                    <div className="px-6 pb-3 overflow-y-scroll h-[320px]">
+                    <div
+                      className={`px-6 pb-3 ${
+                        openSubMenu === "Products"
+                          ? ""
+                          : "overflow-y-scroll h-[320px]"
+                      }`}
+                    >
                       {item.subMenu.map((section, sectionIdx) => (
                         <div key={sectionIdx}>
                           <h3 className="text-white my-1 border-t border-[#E5E5E533] border-dashed pt-2 pb-1">
@@ -704,6 +710,15 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                   key={linkIdx}
                                   href={link.soon ? "#" : link.link}
                                   onClick={(e) => {
+                                    if (link.label === "Webinars") {
+                                      e.preventDefault();
+                                      window.open(
+                                        link.link,
+                                        "_blank",
+                                        "noopener,noreferrer"
+                                      );
+                                      return;
+                                    }
                                     if (!link.soon) {
                                       handleMenuClick(e, link.link);
                                     }
@@ -735,7 +750,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                   )}
                                   {!link.soon && (
                                     <Image
-                                      src="/arrow-white.svg"
+                                      src="/newRightArrow.svg"
                                       alt="arrow"
                                       width={16}
                                       height={16}

@@ -32,12 +32,12 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 {subtitle}
               </span>
             )}
-            <h2 className="text-lg md:text-2xl font-medium text-[#EEEFFC]">
+            <h2 className="text-xl md:text-2xl font-medium text-[#EEEFFC]">
               {title}
             </h2>
           </div>
           {description?.map((item: string) => (
-            <p className="text-[#FFFFFF] text-xl font-light leading-8">
+            <p className="text-[#FFFFFF] text-base md:text-xl font-light leading-8">
               {item}
             </p>
           ))}

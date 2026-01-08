@@ -14,6 +14,7 @@
   "serviceContent": [
     {
       "href": "#section2",
+      "marginTop": true,
       "tagLine": "Explore our Features",
       "Customtitle": "<span style='font-weight: 300; color: white'>The Engine behind </span></br>India's Fastest-Growing Businesses",
       "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",

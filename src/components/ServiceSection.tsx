@@ -670,7 +670,7 @@ const ServiceSection = ({
             )}{" "}
             {pricingCards && !isPricingPlanPage && (
               <div
-                className="flex max-md:flex-col max-xl:overflow-hidden w-full gap-6 md:hidden"
+                className="flex max-md:flex-col max-xl:overflow-hidden w-full gap-6 md:hidden max-md:mt-4"
                 id="pricing"
               >
                 {pricingCards?.map((cardContents, index) => (

@@ -115,7 +115,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
             isPartnerPage ? "md:gap-[10px]" : "md:gap-[65px]"
           } items-center max-w-[1350px] mx-auto relative`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-center">
             <div className="flex flex-col gap-4 md:items-start items-center justify-center md:gap-[20px] w-full">
               <PageTitle
                 pageHeading={pageHeading}
@@ -151,10 +151,16 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
               >
                 {description}
               </p>
-              <div className={ishome ? "flex flex-col gap-[2rem] w-full" : ""}>
+              <div
+                className={
+                  ishome || isFeaturePage
+                    ? "flex flex-col gap-[2rem] w-full"
+                    : ""
+                }
+              >
                 <div
                   className={`${
-                    ishome
+                    ishome || isFeaturePage
                       ? "flex"
                       : "max-md:grid grid-cols-1 max-md:w-full max-md:[@media(min-width:439px)]:grid-cols-2 md:flex md:flex-row-reverse md:mt-[20px]"
                   } max-md:flex-col gap-[24px]`}
@@ -167,6 +173,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                       secondaryCtaText={secondaryCtaText}
                       isOrange={isPartnerPage || ishome ? true : false}
                       ishome={ishome}
+                      isFeaturePage={isFeaturePage}
                       secondaryIcon={secondaryIcon}
                     />
                   )}
@@ -234,6 +241,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                   ishome={ishome}
                   isOrange={isPartnerPage || ishome ? true : false}
                   secondaryIcon={secondaryIcon}
+                  isFeaturePage={isFeaturePage}
                 />
               )}
               <div className="w-[100%] text-[13px]">
