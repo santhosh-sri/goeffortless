@@ -442,7 +442,8 @@ export interface Content {
   isCompliancePage?: boolean;
   tds?: ComplianceTabSection;
   gst?: ComplianceTabSection;
-  costCenters?: ComplianceTabSection
+  costCenters?: ComplianceTabSection;
+  isFeaturePage?: boolean;
 }
 export interface FooterSection {
   title?: string;

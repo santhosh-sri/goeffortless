@@ -36,7 +36,7 @@ const Democta = ({
       {...(shouldAttachCal ? CalcomConfig : {})}
       id="democta"
       className={`group relative p-[10px] overflow-hidden transition-all duration-500 ease-in-out font-[500] cursor-pointer flex items-center justify-center gap-1 w-full ${
-        extraWidth ? "" : "md:w-[230px]"
+        extraWidth ? "" : "md:w-[260px]"
       } 
         ${
           customStyle

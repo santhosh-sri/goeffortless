@@ -359,7 +359,7 @@ const ServiceSection = ({
               <BillingModesComparison modes={billingModesData} />
             )}
             {salesFeature?.length > 0 && (
-              <div>
+              <div className="flex flex-col gap-12">
                 {salesFeature.map((feature, index) => (
                   <FeatureSection
                     key={index}
@@ -370,7 +370,7 @@ const ServiceSection = ({
               </div>
             )}
             {FeatureItem?.length > 0 && (
-              <div className="flex items-center justify-center gap-[180px]">
+              <div className="flex max-md:flex-col max-md:gap-[40px] items-center justify-center gap-[180px]">
                 {FeatureItem.map((highlight, index) => (
                   <FeatureHighlights key={index} {...highlight} />
                 ))}

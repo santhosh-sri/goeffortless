@@ -18,6 +18,7 @@
     "ctaText": "Automate Your Billing",
     "isFeaturePage": true
   },
+  "isFeaturePage": true,
 
   "serviceContent": [
     {
@@ -77,16 +78,15 @@
       "salesFeature": [
         {
           "id": "create-it-once",
-          "subtitle": "Create It Once",
-          "title": "Bill Forever",
+          "subtitle": "Once for All",
+          "title": "Create Once. Bill Forever.",
           "description": [
-            "Set frequency, duration, service start dates, billing dates, billing modes and payment preferences.",
-            "Effortless handling of periodic contracts — no re-creation, no spreadsheet."
+            "Set frequency, duration, service start date, billing date, billing mode and payment mode once. Effortless builds every cycle automatically—no calendar reminders, no spreadsheets."
           ],
           "points": [
             "Recurring Contracts",
-            "Recurring Invoices",
-            "GST Tracking",
+            "Recurring Proformas",
+            "GST Invoicing",
             "1-Click Conversion (Proforma → Invoice)"
           ],
           "image": "/contracts001.png",
@@ -94,53 +94,51 @@
         },
         {
           "id": "smart-reminders",
-          "subtitle": "Smart Reminders",
-          "title": "Never Miss a Renewal",
+          "subtitle": "Autopilot",
+          "title": "Smart Reminders",
           "description": [
-            "Automatic alerts for renewals, no manual follow-ups, no missed revenue."
+            "WhatsApp + Email reminders fire automatically. No manual follow-ups, no missed renewals."
           ],
           "points": [
             "Automated Reminders",
-            "Auto-Create Invoices",
-            "Smart Renewal Delivery (Email your tax invoice)"
+            "Auto-Share of Invoices",
+            "Domain-Branded Delivery (from your business ID)"
           ],
           "image": "/contracts002.png",
           "alignment": "right"
         },
         {
           "id": "two-billing-styles",
-          "subtitle": "Multiple Billing",
+          "subtitle": "Multi Choice",
           "title": "Two Billing Styles, One System",
           "description": [
-            "Choose Proforma Invoice First or Invoice First.",
-            "Both run smoothly in the same dashboard."
+            "Choose Proforma-first or Invoice-first. Both run smoothly in the same dashboard."
           ],
           "points": [
-            "Proforma Invoice",
+            "E-invoicing",
             "1-Click Invoice Creation",
-            "Pay-Now Links"
+            "Pay Now Links"
           ],
           "image": "/contracts003.png",
           "alignment": "left"
         },
         {
           "id": "built-in-controls",
-          "subtitle": "Built-in Controls",
-          "title": "Audit-Ready Visibility",
+          "subtitle": "Multi GSTIN",
+          "title": "Multi-Branch Visibility",
           "description": [
-            "Assign cost centers to the correct GSTIN, HQ, and business vertical.",
-            "Complete visibility, zero dirty data."
+            "Assign each contract to the correct GSTN or branch. HQ gets a consolidated view, branches see only their data."
           ],
-          "points": ["Multi-GSTIN", "Multi-Branch", "Multi-Cost Center"],
+          "points": ["Multi-GSTIN", "Multi-Branch", "Multi-outlet Controls"],
           "image": "/contracts004.png",
           "alignment": "right"
         },
         {
           "id": "revenue-forecast",
-          "subtitle": "Revenue Forecast",
+          "subtitle": "Weather Forecast",
           "title": "Forecast in One Screen",
           "description": [
-            "Know your upcoming invoices, overdue contracts, expected cash, and future inflow in seconds."
+            "Know your upcoming renewals, overdue contracts, expected cash, and customer history in seconds."
           ],
           "points": ["Revenue Dashboard", "Collection Dashboard"],
           "image": "/contracts005.png",
@@ -151,10 +149,9 @@
           "subtitle": "The Final Truth Remains True",
           "title": "Tally Sync That Just Works",
           "description": [
-            "Invoices, Proformas, Payments — everything flows into Tally without rework.",
-            "No duplicate records. No mismatches."
+            "Invoices, Proformas, Payments — everything flows into Tally post approvals without conflict. No duplicate voucher numbers. No mismatches."
           ],
-          "points": ["Key Sync", "Voucher Numbering Sync"],
+          "points": ["Tally Sync", "Voucher Numbering Sync"],
           "image": "/contracts006.png",
           "alignment": "right"
         },
@@ -164,7 +161,7 @@
           "title": "Cash Flow That Follows Your Billing",
           "description": [
             "When billing becomes predictable, monthly inflow becomes predictable too.",
-            "Now you control revenue, not surprises."
+            "Now your contracts run on autopilot."
           ],
           "points": [],
           "image": "/contracts007.png",
@@ -200,6 +197,7 @@
     {
       "showGreyBoderLine": true,
       "showGreyTopBorder": true,
+      "isLastSection": true,
       "bgColour": "bg-[#15181B]",
       "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Ready to Automate Your Recurring Revenue?</span>",
       "description": "See how businesses are eliminating billing chaos and building predictable revenue streams",

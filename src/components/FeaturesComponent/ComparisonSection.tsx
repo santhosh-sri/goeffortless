@@ -26,7 +26,7 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
               {/* Chat bubble */}
               <div className="bg-[#323232] rounded-xl p-4 flex gap-3 items-start">
                 <div>
-                  <Image src={""} alt="" width={40} height={40} />
+                  <Image src="/chatUser.svg" alt="" width={40} height={40} />
                 </div>
                 <div className=" flex flex-col gap-2">
                   <p className="text-sm text-[#F08B32] leading-[22px] font-normal">

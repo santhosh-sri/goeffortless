@@ -34,7 +34,70 @@
     {
       "title": "The ",
       "colouredTitle": "Reality Check",
-      "description": "Direct head-to-head comparison. No marketing fluff. Just hard numbers."
+      "description": "Direct head-to-head comparison. No marketing fluff. Just hard numbers.",
+
+      "tableData": {
+        "tableHeader": [
+          { "key": "feature", "label": "Feature Category" },
+          { "key": "expenseType", "label": "Legacy ERP (SAP/Oracle)" },
+          {
+            "key": "singleThreshold",
+            "label": "Generic Cloud ERP (Modern SaaS Suites)"
+          },
+          {
+            "key": "aggregateThreshold",
+            "label": "Basic Tally Plugin (Viewers)"
+          },
+          {
+            "key": "tdsRateIndividual",
+            "label": "Effortless + Tally (The Enterprise Layer)"
+          }
+        ],
+        "tableBody": [
+          {
+            "feature": "Implementation",
+            "expenseType": "12 - 18 Months (High Disruption)",
+            "singleThreshold": "3 - 6 Months (Mid Disruption)",
+            "aggregateThreshold": "Immediate (Zero Depth)",
+            "tdsRateIndividual": "7 - 10 Days (Plug & Play)"
+          },
+          {
+            "feature": "Est. 5-Year Cost",
+            "expenseType": "₹1.5 Cr - ₹5 Cr",
+            "singleThreshold": "₹25L - ₹50L (+ Efficiency Loss)",
+            "aggregateThreshold": "< ₹1 Lakh",
+            "tdsRateIndividual": "< ₹20 Lakhs (High ROI)"
+          },
+          {
+            "feature": "Financial Core",
+            "expenseType": "World Class",
+            "singleThreshold": "Basic / Rigid (Replaces Tally)",
+            "aggregateThreshold": "Tally Prime",
+            "tdsRateIndividual": "Tally Prime (Concurrent Sync)"
+          },
+          {
+            "feature": "Data Control",
+            "expenseType": "Cloud Lock-in",
+            "singleThreshold": "Cloud Lock-in",
+            "aggregateThreshold": "Read Only",
+            "tdsRateIndividual": "Bi-Directional (Read & Write)"
+          },
+          {
+            "feature": "Customization",
+            "expenseType": "Expensive Consultants",
+            "singleThreshold": "Code-Heavy",
+            "aggregateThreshold": "None",
+            "tdsRateIndividual": "Configurable (APIs Available)"
+          },
+          {
+            "feature": "Mobile Capability",
+            "expenseType": "Paid Add-on",
+            "singleThreshold": "Standard App",
+            "aggregateThreshold": "View Only",
+            "tdsRateIndividual": "Native Fleet App (Live GPS)"
+          }
+        ]
+      }
     },
     {
       "showGreyBoderLine": true,

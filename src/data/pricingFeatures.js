@@ -81,8 +81,8 @@ export const pricingData = {
     },
     {
       name: "E-Invoicing & e WayBill Generation",
-      premiumPro: "<span class='text-emerald-400'>✓</span> 5000/month",
-      premium: "<span class='text-emerald-400'>✓</span> 1500/month",
+      premiumPro: "<span class='text-emerald-400'>✓</span> 5000/user/month",
+      premium: "<span class='text-emerald-400'>✓</span> 1500/user/month",
       lite: "✓ 500/month",
       enterprise: "Unlimited",
     },

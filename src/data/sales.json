@@ -18,6 +18,7 @@
     "ctaText": "See the Field App",
     "isFeaturePage": true
   },
+  "isFeaturePage": true,
 
   "serviceContent": [
     {
@@ -63,12 +64,11 @@
       "salesFeature": [
         {
           "id": "account-creation",
-          "subtitle": "Instant Account Creation",
+          "subtitle": "Protect Sensitive Customer Data",
           "title": "Every Rep, One Assigned Customer",
           "description": [
-            "Assign specific customers to your field reps instantly.",
-            "No overlaps. No confusion.",
-            "The system tracks visits and orders automatically."
+            "Assign specific customers to your each rep. Overlap - No Confusion.",
+            "This ensures no overlaps and no missed visits."
           ],
           "points": [],
           "image": "/sales001.png",
@@ -76,11 +76,11 @@
         },
         {
           "id": "mobile-checkin",
-          "subtitle": "Live Location Tracking",
-          "title": "No Wrong Pings. Ever.",
+          "subtitle": "The Sales Discipline",
+          "title": "No Wrong Practice. Ever.",
           "description": [
-            "With a precise live location, billings happen only after check-in.",
-            "You know what actually happened — in real time, updated live."
+            "When a rep reaches the customer's location, he simply taps check-in.",
+            "You know the visit actually happened — no WhatsApp updates needed."
           ],
           "points": [],
           "image": "/sales002.png",
@@ -88,12 +88,12 @@
         },
         {
           "id": "credit-limit-control",
-          "subtitle": "Credit Limit Control",
-          "title": "Get Paid Before Risk Starts",
+          "subtitle": "The Collections Firewall",
+          "title": "Get Paid Before You Sell.",
           "description": [
-            "Prevent bill creation if outstanding crosses the credit limit.",
-            "If due exists, the system prompts — collect first, then sell.",
-            "Management is freed from bad payments."
+            "Reps see the client's Real-Time Outstanding & Credit Limit before they take an order. The system prompts collection immediately",
+            "If dues are high, the system prompts, — collect first, then order.",
+            "No more selling to bad paymasters."
           ],
           "points": [],
           "image": "/sales003.png",
@@ -101,14 +101,15 @@
         },
         {
           "id": "smart-pricing",
-          "subtitle": "Smart Pricing",
+          "subtitle": "The Schemes Engine",
           "title": "No Wrong Pricing. Ever.",
           "description": [
-            "You don’t use one discount for all. The app auto-calculates schemes based on your party logic.",
-            "Party DG price",
-            "Discount tiers",
-            "Category-based pricing",
-            "The rep applies what the system already knows."
+            "Buy 10 Get 1? 5% Discount on Cash? The app auto-applies schemes based on your Tally logic. No rep calculation errors.",
+            "Buy 10 Get 1?",
+            "5% discount for cash?",
+            "All items above ₹50,000 get slab pricing?",
+            "The app applies all schemes automatically based on your rules.",
+            "Reps never miscalculate. Orders stay accurate. Primary sales rise because schemes are used fully."
           ],
           "points": [],
           "image": "/sales004.png",
@@ -116,8 +117,8 @@
         },
         {
           "id": "fast-approvals",
-          "subtitle": "Instant Approvals",
-          "title": "No Calls. No Chasing. Just Approve.",
+          "subtitle": "Manager Instant Approval",
+          "title": "No Calls. No PDFs. Just Approve.",
           "description": [
             "Managers get order alerts instantly.",
             "Approve or reject with one tap.",
@@ -129,54 +130,56 @@
         },
         {
           "id": "auto-invoicing",
-          "subtitle": "Auto-Invoicing",
-          "title": "E-Invoices Flow Automatically",
+          "subtitle": "One-Click Sync to Tally",
+          "title": "E-Invoices Flow In Automatically",
           "description": [
-            "Approved orders convert to invoices and sync to Tally instantly.",
-            "No manual uploads. No tracking.",
-            "Zero mismatches. Zero backlog."
+            "Approved orders convert to e-invoices and sync to Tally as sales vouchers instantly.",
+            "Have your Invoice Specific UPI QR Code on Invoice for Smoother Collections & Tracking.",
+            "Your accountant does zero typing.",
+            "Zero mismatch. Zero backlog."
           ],
           "points": [],
           "image": "/sales006.png",
           "alignment": "right"
         },
         {
-          "id": "auto-payment-sync",
-          "subtitle": "Auto Payment Sync",
-          "title": "No Gaps Between Sales and Payment",
+          "id": "sales-dashboard",
+          "subtitle": "Auto-Reconciliation with the Bank",
+          "title": "No One Asks, Has the Payment Come?",
           "description": [
-            "Collection details sync instantly across sales, finance, and accounting.",
-            "Every payment is tracked against the same invoice."
+            "When money lands in the bank, Effortless updates automatically.",
+            "Collections reflect instantly across the manager dashboard and owner's view.",
+            "Reps, finance, and leadership always see the same number."
           ],
           "points": [],
           "image": "/sales007.png",
-          "alignment": "left"
-        },
-        {
-          "id": "sales-dashboard",
-          "subtitle": "One Unified View",
-          "title": "Sales Data, Clear At One Screen",
-          "description": [
-            "Overdue bills",
-            "Today's sales",
-            "Today's collections",
-            "Pending approvals",
-            "Branch-wise performance",
-            "Sales vs collection",
-            "Cash-back pending customers",
-            "Everything updates in real time."
-          ],
-          "points": [],
-          "image": "/sales008.png",
           "alignment": "right"
         },
         {
           "id": "tally-sync-sales",
-          "subtitle": "The Final Truth Remains True",
-          "title": "Tally Always Updated. Always.",
+          "subtitle": "Owner Visibility Panel",
+          "title": "Orders. Dues. Cash. All in One Screen.",
           "description": [
-            "Approved orders, invoices, and collections move into Tally without retyping.",
-            "Master sync stays clean, reconciliation stays simple, and audits stay smooth."
+            "Owners see",
+            "Today's orders",
+            "Today's collections",
+            "Pending by customer",
+            "Branch-wise and rep-wise performance",
+            "Scheme-driven sales lift",
+            "Cash stuck in overdue customers",
+            "Everything updates in real time."
+          ],
+          "points": [],
+          "image": "/sales008.png",
+          "alignment": "left"
+        },
+        {
+          "id": "final-truth",
+          "subtitle": "The Final Truth Remains True",
+          "title": "Tally Stays Updated. Always.",
+          "description": [
+            "Approved Orders, Invoices, and Collections move into Tally without typing.",
+            "Masters stay clean, reconciliations stay simple, and audit stays smooth."
           ],
           "points": [],
           "image": "/sales009.png",
@@ -212,6 +215,7 @@
     {
       "showGreyBoderLine": true,
       "showGreyTopBorder": true,
+      "isLastSection": true,
       "bgColour": "bg-[#15181B]",
       "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Ready to Equip Your Field Team?</span>",
       "description": "See how distributors are closing more deals with accurate orders and instant visibility",

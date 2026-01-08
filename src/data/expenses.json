@@ -18,6 +18,7 @@
     "ctaText": "Automate Your Expenses",
     "isFeaturePage": true
   },
+  "isFeaturePage": true,
 
   "serviceContent": [
     {
@@ -101,11 +102,11 @@
       "salesFeature": [
         {
           "id": "intelligent-data-capture",
-          "subtitle": "Intelligent Data Capture",
+          "subtitle": "Intelligent Data Processing",
           "title": "Capture Vendor Bills Instantly",
           "description": [
-            "Bills are uploaded directly. The system reads them accurately — GSTIN, Date, Tax, PO, Amount.",
-            "No typing, no delays, no mistakes."
+            "Bills arrive by email or can be uploaded directly. The system reads them in seconds — GSTIN, line items, TDS, RCM, amounts.",
+            "No typing, no delays, no mismatches."
           ],
           "image": "/expenses001.png",
           "alignment": "left"
@@ -115,9 +116,8 @@
           "subtitle": "Vendor GSTIN Validation",
           "title": "Avoid Bad Vendors Before Booking Bills",
           "description": [
-            "Effortless checks on vendor GST return status and claim history.",
-            "The system blocks bills if the GST is inactive.",
-            "You stay compliant before the bill gets approved."
+            "Effortless checks a vendor’s GST return status and alerts finance if the vendor has failed to file GSTR-1 on time.",
+            "You stop exposure before the bill gets approved."
           ],
           "image": "/expenses002.png",
           "alignment": "right"
@@ -128,8 +128,8 @@
           "title": "Employee Claims, Without Follow-ups",
           "description": [
             "Employees upload travel, food, and petty cash bills from the mobile app.",
-            "Policy checks run automatically — daily limits, category limits, receipt requirements.",
-            "Finance sees and approves faster because rules already applied."
+            "Policy checks run automatically — daily limits, category limits, receipts required.",
+            "Finance does not negotiate later because rules already applied."
           ],
           "image": "/expenses003.png",
           "alignment": "left"
@@ -139,20 +139,20 @@
           "subtitle": "No More Chasing",
           "title": "The Approval Flow That Runs Itself",
           "description": [
-            "Rules decide who needs to approve — manager, finance, or head office.",
-            "Everyone sees the complete motion — who approved, who rejected, why."
+            "Bills and claims travel through the right managers, finance, and head office.",
+            "Everyone sees the complete motion — who uploaded, who approved, who flagged."
           ],
           "image": "/expenses004.png",
           "alignment": "right"
         },
         {
           "id": "payments",
-          "subtitle": "Right Payments, No Surprises",
-          "title": "The CFO’s Payment Stack",
+          "subtitle": "Right Payment done Everytime",
+          "title": "The CFO's Payment Deck",
           "description": [
-            "Approved bills and reimbursements land in a single queue.",
-            "Finance can run payments in batches or approve individually.",
-            "One dashboard, zero errors, zero confusion."
+            "All approved bills and reimbursements land in a single queue.",
+            "Finance can run payments in batches post all approvals in Effortless.",
+            "One checklist, one run, zero confusion."
           ],
           "image": "/expenses005.png",
           "alignment": "left"
@@ -160,24 +160,24 @@
         {
           "id": "tally-sync",
           "subtitle": "The Final Truth Remains True",
-          "title": "Tally Always Updated. Always.",
+          "title": "Tally Stays Updated. Always.",
           "description": [
-            "Approved bills, payments, and journals move into Tally without retyping.",
-            "Master data sync, record-keeping stays clean, and audits stay smooth."
+            "Approved bills, claims, and payments move into Tally without typing.",
+            "Masters stay clean, reconciliations stay simple, and audit stays smooth."
           ],
           "image": "/expenses006.png",
           "alignment": "right"
         },
         {
           "id": "transparency-metrics",
-          "subtitle": "Transparency Metrics",
-          "title": "Every Rupee. One View.",
+          "subtitle": "Transparency Metric",
+          "title": "Every Spend, One View",
           "description": [
             "A real-time dashboard shows:",
             "Total vendor bills",
             "Total employee claims",
-            "Pending approvals",
-            "Bank-wise and department-wise spend",
+            "Delayed claimss",
+            "Branch-wise and department-wise spends",
             "Budget vs actual",
             "Everything can be exported instantly for audit or monthly close."
           ],
@@ -214,6 +214,7 @@
     {
       "showGreyBoderLine": true,
       "showGreyTopBorder": true,
+      "isLastSection": true,
       "bgColour": "bg-[#15181B]",
       "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Ready to Protect Every Rupee?</span>",
       "description": "See how finance teams are saving hours and catching errors before they become losses",

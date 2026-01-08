@@ -161,14 +161,14 @@
           "height": 32
         },
         {
-          "icon": "/suppliersvendor.svg",
+          "icon": "/newMulti.svg",
           "title": "Multiple Suppliers & Vendors",
           "description": "Vendors grow when you grow, Complexities outgrow Everywhere — Expenses, Petty Cash, TDS, ITC, Budget Checks, Manual Approvals.",
           "width": 32,
           "height": 32
         },
         {
-          "icon": "/subscription.svg",
+          "icon": "/newCustom.svg",
           "title": "Repeat Customers",
           "description": "Contracts are Growing, Reminders & Recurring Invoices multiply — Revenue starts slipping.",
           "width": 32,
@@ -249,25 +249,25 @@
           "title": "Incremental Data Load?",
           "subTitle": "Field teams stay productive even with little connectivity.",
           "description": "No new fancy systems expense required.",
-          "img": "/enterprse-level-security.svg"
+          "img": "/incrementLoad.svg"
         },
         {
           "title": "Staff won't use it",
           "subTitle": "It's simpler than WhatsApp. Protects them from blame.",
           "description": "Daily Business Snapshot on WhatsApp, Biometric Integration.",
-          "img": "/award-certificate.svg"
+          "img": "/newWhats.svg"
         },
         {
           "title": "Too Complex?",
           "subTitle": "Branch-wise controls keep everything separate.",
           "description": "Multi-Company Concurrent Sync, Cost Centre Income Statement.",
-          "img": "/subscription.svg"
+          "img": "/tooComplex.svg"
         },
         {
           "title": "Will Accountants Like It?",
           "subTitle": "They love it. Clean masters = fewer corrections.",
           "description": "Tally (Concurrent & Bi-Directional), Audit Trail.",
-          "img": "/shield.svg"
+          "img": "/willHeart.svg"
         }
       ]
     },

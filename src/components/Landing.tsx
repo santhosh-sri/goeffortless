@@ -35,6 +35,7 @@ const Landing: React.FC<Content> = ({
   tds,
   gst,
   costCenters,
+  isFeaturePage,
 }) => {
   const isFormVisible = useElementVisibility("firstFold", {
     top: 80,
@@ -137,7 +138,8 @@ const Landing: React.FC<Content> = ({
               isCareersPage ||
               isDownloadPage ||
               isBlogPage ||
-              isCompliancePage) &&
+              isCompliancePage ||
+              isFeaturePage) &&
             "pt-[60px] md:pt-[120px] bg-black"
           }`}
         >

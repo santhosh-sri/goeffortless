@@ -14,9 +14,9 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   const isEven = position % 2 === 1;
 
   return (
-    <section className="w-full py-20">
+    <section className="w-full">
       <div
-        className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
+        className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center ${
           isEven ? "md:flex-row-reverse" : ""
         }`}
       >
@@ -26,14 +26,16 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             isEven ? "md:order-1" : "md:order-2"
           }`}
         >
-          {subtitle && (
-            <span className="text-orange-400 text-sm font-semibold uppercase">
-              {subtitle}
-            </span>
-          )}
-          <h2 className="text-lg md:text-2xl font-medium text-[#EEEFFC]">
-            {title}
-          </h2>
+          <div className="flex flex-col gap-2">
+            {subtitle && (
+              <span className="text-[#F08B32] text-base font-normal">
+                {subtitle}
+              </span>
+            )}
+            <h2 className="text-lg md:text-2xl font-medium text-[#EEEFFC]">
+              {title}
+            </h2>
+          </div>
           {description?.map((item: string) => (
             <p className="text-[#FFFFFF] text-xl font-light leading-8">
               {item}
@@ -43,7 +45,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             <div>
               <ul className="space-y-3">
                 {points.map((item: any, i: any) => (
-                  <li key={i} className="flex items-start gap-3 text-white">
+                  <li key={i} className="flex items-start gap-2 text-white">
                     <Image
                       src="/pointsTick.svg"
                       alt="pointsTick"
