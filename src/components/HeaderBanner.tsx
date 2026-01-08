@@ -69,7 +69,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
           >
             Save My Spot
           </button>
-          <button className="border-0" onClick={() => setCloseBanner(false)}>
+          <button className="border-0" onClick={setCloseBanner}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -105,7 +105,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
         {/* Bottom Sheet */}
         <div className="relative w-full rounded-t-md bg-[#FFE8D4] p-4 animate-slideUp">
           <div className="flex justify-end">
-            <button onClick={() => setCloseBanner(false)}>
+            <button onClick={setCloseBanner}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"

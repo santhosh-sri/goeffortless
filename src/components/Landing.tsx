@@ -55,6 +55,7 @@ const Landing: React.FC<Content> = ({
   const [selectedPlan, setSelectedPlan] = useState("");
   const [activeTab, setActiveTab] = React.useState<any>("tds");
   const [closeBanner, setCloseBanner] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768); // You can set your mobile breakpoint here
@@ -89,17 +90,32 @@ const Landing: React.FC<Content> = ({
     ? tabDataMap[activeTab]?.serviceContent
     : serviceContent;
 
+  useEffect(() => {
+    setMounted(true);
+
+    const isBannerClosed =
+      sessionStorage.getItem("headerBannerClosed") === "true";
+
+    setCloseBanner(isBannerClosed);
+  }, []);
+
+  const handleCloseBanner = () => {
+    sessionStorage.setItem("headerBannerClosed", "true");
+    setCloseBanner(true);
+  };
+  if (!mounted) return null;
+
   return (
     <>
       {/* Render Metadata component */}
       <Metadata {...metadata} />
       <div>
         <div className={`fixed top-0 w-full z-[999]`}>
-          {closeBanner && <HeaderBanner setCloseBanner={setCloseBanner} />}
+          {!closeBanner && <HeaderBanner setCloseBanner={handleCloseBanner} />}
           <Header {...headerItems} isMobile={isMobile} />
         </div>
         <div
-          className={`bg-[#08090A] ${closeBanner ? "md:mt-24" : "md:mt-20"}`}
+          className={`bg-[#08090A] ${!closeBanner ? "md:mt-24" : "md:mt-20"}`}
         >
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}

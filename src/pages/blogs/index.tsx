@@ -88,7 +88,7 @@ const Index = () => {
       <div className={`fixed top-0 w-full z-[999]`}>
         <Header isMobile={isMobile} />
       </div>
-      <div className={`bg-[#08090A] md:px-[80px]`}>
+      <div className={`bg-[#08090A] md:px-[80px] mt-8 md:mt-[60px]`}>
         <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
           <PageTitle pageHeading={"Blogs"} />
           <h1
