@@ -13,7 +13,7 @@
   "usecaseFold": {
     "pageHeading": "Effortless",
     "ishome": true,
-    "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>The All-In-One Growth Platform for </span>Indian Business.",
+    "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>The All-In-One Growth Platform for </span><span  style='font-weight: 500;'>Indian Business.</span>",
     "description": "Growth breaks your old tools. Effortless handles Sales, Approvals, Schemes, Expenses, Contracts, Cash, and Operational chaos — all in one place.",
     "bannerImage": "/Home_page.png",
     "mobileBannerImage": "/Home_page.png",
@@ -195,6 +195,7 @@
           "description": "Field Team Accountability + Instant Tally Sync. Track every visit, auto-apply schemes, and sync to Tally in real-time.",
           "icon": "/effortlessSales.svg",
           "ctaText": "Explore Effortless Sales",
+          "ctaUrl": "/sales",
           "features": [
             "GPS Check-ins & Live Tracking",
             "Smart Schemes Engine",
@@ -210,6 +211,7 @@
           "description": "Stop leakage. Verify every bill. AI-powered IDP with GST/TDS compliance checks and automated approval workflows.",
           "icon": "/effortlessExpense.svg",
           "ctaText": "Explore Effortless Expenses",
+          "ctaUrl": "/expenses",
           "features": [
             "AI Powered Intelligent Data Processing (IDP)",
             "Live GST Defaulter Alerts",
@@ -225,6 +227,7 @@
           "description": "Put your revenue on autopilot. Create once, bill forever with automated reminders, renewals and seamless Tally sync.",
           "icon": "/effortlessContracts.svg",
           "ctaText": "Explore Effortless Contracts",
+          "ctaUrl": "/contracts",
           "features": [
             "Create Once. Bill Forever.",
             "Smart Reminders",
@@ -315,7 +318,7 @@
           {
             "profile": "/Hari.png",
             "name": "Gaurav Sharma",
-            "designation": "CFO - Precious Netcon",
+            "designation": "CFO - Precious Netcom",
             "review": "Managing 1000+ monthly recurring contracts used to take 5-7 days of work for three accountants. Now it's all in less than 2 hours. Effortless gives us control over customer contracts and avoids revenue leakage.",
             "contribution": "ULTIweb Technologies"
           }

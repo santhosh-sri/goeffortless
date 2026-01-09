@@ -111,11 +111,11 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
         }`}
       >
         <div
-          className={`text-[#FFFFFF] flex max-md:flex-col gap-10 ${
+          className={`text-[#FFFFFF] max-md:flex max-md:flex-col gap-10 w-full ${
             isPartnerPage ? "md:gap-[10px]" : "md:gap-[65px]"
-          } items-center max-w-[1350px] mx-auto relative`}
+          } items-center justify-between relative`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-md:gap-5 w-full items-center">
             <div className="flex flex-col gap-4 md:items-start items-center justify-center md:gap-[20px] w-full">
               <PageTitle
                 pageHeading={pageHeading}
@@ -133,7 +133,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                             ? "font-[500] md:leading-[80px] md:max-w-[80%] "
                             : "font-[300] md:leading-[90px]"
                         } bg-gradient-to-r from-[#F08B32] to-[#FFFFFF]`
-                  } max-md:text-center text-[32px] md:text-[72px] leading-[35px] bg-clip-text text-transparent`}
+                  } max-md:text-center text-[32px] md:text-[70px] leading-[35px] bg-clip-text text-transparent`}
                 >
                   {parse(heading)}
                 </h1>
@@ -211,8 +211,8 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                 }`}
               />
               {ishome && (
-                <div className="flex gap-2 items-center max-md:hidden">
-                  <p className="text-[15px] font-[300] md:text-[20px] md:leading-8 leading-5 text-center text-[#F08B32]">
+                <div className="flex gap-2 items-center justify-center max-md:hidden">
+                  <p className="text-[15px] font-[300] md:text-[32px] md:leading-8 leading-5 text-center text-[#F08B32]">
                     Work seamlessly with:
                   </p>
                   <Image

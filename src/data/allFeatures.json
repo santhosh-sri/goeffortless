@@ -21,55 +21,6 @@
       "homePageVerticalSlider": {
         "features": [
           {
-            "title": "Integrations, Security & Support",
-            "description": "Start by securely connecting Effortless to your systems.",
-            "image": "/gear-nodes.svg",
-            "featureCardsSection": {
-              "featureCards": [
-                {
-                  "title": "Tally (Concurrent &\n Bi-Directional)",
-                  "description": "Plug and play with Tally, bridging finance and intelligence.",
-                  "img": "/plug.svg"
-                },
-                {
-                  "title": "Paid API integrations for\n Oracle & SAP",
-                  "description": "Enterprise level connectivity. Tailored API access.",
-                  "img": "/algorithm.svg"
-                },
-                {
-                  "title": "Multi-Company\n Concurrent Sync",
-                  "description": "All companies , one stream. always in sync.",
-                  "img": "/api.svg"
-                },
-                {
-                  "title": "8 Levels of Enterprise\n Grade Security",
-                  "description": "From perimeter to core, 8 level of unbreakable security.",
-                  "img": "/shield-lock.svg"
-                },
-                {
-                  "title": "Email, Call, & WhatsApp\n Support",
-                  "description": "One team, Three channels, Total with support.",
-                  "img": "/envelope.svg"
-                },
-                {
-                  "title": "Dedicated Account\n Manager",
-                  "description": "Your success partner- A dedicated Account manager for every step.",
-                  "img": "/users-shaking-hands.svg"
-                },
-                {
-                  "title": "Implementation &\n Onboarding Support",
-                  "description": "Your journey begins seamlessly with our Onboarding Experts and seasoned CAs.",
-                  "img": "/badge-check.svg"
-                },
-                {
-                  "title": "Payment Gateway\n (RazorPay)",
-                  "description": "Got Razorpay? You are already halfway there.",
-                  "img": "/money-bill.svg"
-                }
-              ]
-            }
-          },
-          {
             "title": "Fleet on Street Selling",
             "description": "Empower your team to drive revenue on the ground.",
             "image": "/people-icon.svg",
@@ -96,7 +47,7 @@
                   "img": "/laptop-settings.svg"
                 },
                 {
-                  "title": "E-Invoicing & e WayBill \nGeneration",
+                  "title": "E-Invoicing & E-WayBill \nGeneration",
                   "description": "Generate compliant invoices instantly right from the field.",
                   "img": "/file-content.svg"
                 },
@@ -124,6 +75,11 @@
                   "title": "Customer Assignment to\n Team",
                   "description": "Assign customers to specific teams with no overlap or confusion.",
                   "img": "/todo 2.svg"
+                },
+                {
+                  "title": "Intelligent QR on\n Invoice",
+                  "description": "Add your Intelligent QR on Pro-forma or invoice for smother collections and reconciliation.",
+                  "img": "/qrCode.svg"
                 }
               ]
             }
@@ -404,14 +360,14 @@
             "featureCardsSection": {
               "featureCards": [
                 {
+                  "title": "Personalised SOA Portal",
+                  "description": "Each buyer gets an individual portal login where, they can download or view live SOA anytime.",
+                  "img": "/bank-statement 1.svg"
+                },
+                {
                   "title": "Product Catalog with In-\nStock Items",
                   "description": "Buyers see exactly what's available with photos, no back-and-forth.",
                   "img": "/cart-simple-add 1.svg"
-                },
-                {
-                  "title": "Self-Serve Ordering\n & Tracking",
-                  "description": "They place orders, track status, and reorder without calling your team.",
-                  "img": "/cart-plus 1.svg"
                 },
                 {
                   "title": "Dashboard with\n Transaction History",
@@ -419,14 +375,64 @@
                   "img": "/todo 1.svg"
                 },
                 {
+                  "title": "Self-Serve Ordering\n & Tracking",
+                  "description": "They place orders, track status, and reorder without calling your team.",
+                  "img": "/cart-plus 1.svg"
+                },
+                {
                   "title": "Open\n Bills",
                   "description": "They can view pending payments and clear dues directly.",
                   "img": "/bill 3.svg"
+                }
+              ]
+            }
+          },
+
+          {
+            "title": "Integrations, Security & Support",
+            "description": "Start by securely connecting Effortless to your systems.",
+            "image": "/gear-nodes.svg",
+            "featureCardsSection": {
+              "featureCards": [
+                {
+                  "title": "Tally (Concurrent &\n Bi-Directional)",
+                  "description": "Plug and play with Tally, bridging finance and intelligence.",
+                  "img": "/plug.svg"
                 },
                 {
-                  "title": "Statement of\n Accounts",
-                  "description": "Download or view SoA anytime — no need to contact finance.",
-                  "img": "/bank-statement 1.svg"
+                  "title": "Paid API integrations for\n Oracle & SAP",
+                  "description": "Enterprise level connectivity. Tailored API access.",
+                  "img": "/algorithm.svg"
+                },
+                {
+                  "title": "Multi-Company\n Concurrent Sync",
+                  "description": "All companies , one stream. always in sync.",
+                  "img": "/api.svg"
+                },
+                {
+                  "title": "8 Levels of Enterprise\n Grade Security",
+                  "description": "From perimeter to core, 8 level of unbreakable security.",
+                  "img": "/shield-lock.svg"
+                },
+                {
+                  "title": "Email, Call, & WhatsApp\n Support",
+                  "description": "One team, Three channels, Total with support.",
+                  "img": "/envelope.svg"
+                },
+                {
+                  "title": "Dedicated Account\n Manager",
+                  "description": "Your success partner- A dedicated Account manager for every step.",
+                  "img": "/users-shaking-hands.svg"
+                },
+                {
+                  "title": "Implementation &\n Onboarding Support",
+                  "description": "Your journey begins seamlessly with our Onboarding Experts and seasoned CAs.",
+                  "img": "/badge-check.svg"
+                },
+                {
+                  "title": "Payment Gateway\n (RazorPay)",
+                  "description": "Got Razorpay? You are already halfway there.",
+                  "img": "/money-bill.svg"
                 }
               ]
             }

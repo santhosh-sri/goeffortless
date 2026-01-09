@@ -2,6 +2,8 @@ import React from "react";
 import RedirectCta from "../RedirectCta";
 import { CommandCenterCardProps } from "@/interface/type";
 import Image from "next/image";
+import SecondaryCta from "../SecondaryCta";
+import { useRouter } from "next/navigation";
 
 const CommandCenterCard: React.FC<CommandCenterCardProps> = ({
   icon,
@@ -10,7 +12,9 @@ const CommandCenterCard: React.FC<CommandCenterCardProps> = ({
   description,
   features,
   ctaText,
+  ctaUrl,
 }) => {
+  const router = useRouter();
   return (
     <div className="relative flex flex-col gap-4 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] p-5 rounded-xl shadow-md border border-white/10">
       {/* Icon */}
@@ -58,7 +62,11 @@ const CommandCenterCard: React.FC<CommandCenterCardProps> = ({
       </div>
 
       {/* CTA */}
-      <RedirectCta ctaText={ctaText} fullWidth />
+      <SecondaryCta
+        secondaryCtaText={ctaText}
+        isOrange={true}
+        handleDirect={() => router.push(`${ctaUrl}`)}
+      />
     </div>
   );
 };

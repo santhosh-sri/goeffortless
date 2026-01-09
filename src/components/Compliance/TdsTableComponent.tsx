@@ -9,9 +9,11 @@ const SectionPill = ({ label }: { label: string }) => (
 const TdsTableComponent = ({
   tableHeader,
   tableBody,
+  tdsMatrix,
 }: {
   tableHeader: any[];
   tableBody: any[];
+  tdsMatrix?: any;
 }) => {
   const scrollRefs = useRef<HTMLDivElement[]>([]);
 
@@ -26,7 +28,7 @@ const TdsTableComponent = ({
       scrollRefs.current.push(el);
     }
   };
-
+  console.log(tdsMatrix, "tdsMatrix");
   return (
     <div
       className="w-full rounded-lg bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5
@@ -52,7 +54,9 @@ const TdsTableComponent = ({
                     className={`py-5 text-white text-sm font-medium ${
                       isFirst && "pl-5"
                     } ${isLast && "pr-5"} ${
-                      tableHeader.length <= 3 ? "text-left" : alignment
+                      tableHeader.length <= 3 || !tdsMatrix
+                        ? "text-left"
+                        : alignment
                     }`}
                   >
                     {header?.label}
@@ -79,7 +83,9 @@ const TdsTableComponent = ({
                       className={`py-5 text-white text-sm font-normal ${
                         isFirst && "pl-6"
                       } ${isLast && "pr-6"} ${
-                        tableHeader.length <= 3 ? "text-left" : alignment
+                        tableHeader.length <= 3 || !tdsMatrix
+                          ? "text-left"
+                          : alignment
                       }`}
                     >
                       {col?.key === "section" ? (

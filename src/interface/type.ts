@@ -585,6 +585,7 @@ export interface CommandCenterCardProps {
   description: string;
   features: string[];
   ctaText: string;
+  ctaUrl: string;
 }
 
 export interface LanguageOption {

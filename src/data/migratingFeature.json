@@ -212,7 +212,7 @@
             "percent": 45
           },
           {
-            "label": "🟢 GoEffortless",
+            "label": "🟢 Effortless",
             "value": 3.6,
             "unit": "Lakhs",
             "color": "#2F9682",
@@ -289,15 +289,15 @@
       "tdsFAQ": [
         {
           "question": "Do you replace Tally?",
-          "answer": "Yes. It reads GST rates from supplier invoices and segregates taxable, exempt, and reverse-charge items."
+          "answer": "No. We are the Operational Layer. Tally remains your financial Golden Record via our plug-and-play concurrent sync."
         },
         {
           "question": "Can you handle multi-branch?",
-          "answer": "Yes. Detailed GST Input Summary and Mismatch Report are available."
+          "answer": "Yes. We support Multi-Company Concurrent Sync and Multiple outlet/warehouse management."
         },
         {
           "question": "What about security?",
-          "answer": "Yes. The system flags RCM entries separately and credits them only once payment of tax is confirmed in books."
+          "answer": "We use 8 Levels of Enterprise Grade Security from perimeter to core."
         }
       ]
     },
