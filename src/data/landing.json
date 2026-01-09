@@ -49,7 +49,7 @@
         {
           "id": "en",
           "label": "English",
-          "flag": "🇺🇸",
+          "flag": "/english.svg",
           "value": "english",
           "videos": [
             {
@@ -75,7 +75,7 @@
         {
           "id": "hi",
           "label": "Hindi",
-          "flag": "🇮🇳",
+          "flag": "/india.svg",
           "value": "hindi",
           "videos": [
             {
@@ -101,7 +101,7 @@
         {
           "id": "ta",
           "label": "Tamil",
-          "flag": "🇮🇳",
+          "flag": "/india.svg",
           "value": "tamil",
           "videos": [
             {

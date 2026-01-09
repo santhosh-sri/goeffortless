@@ -259,24 +259,21 @@
       "demoCtaButton": "Book a Demo"
     },
     {
-      "title": "The Only ”ERP”. ",
+      "title": "The Only “ERP”. ",
       "colouredTitle": "Your Chartered Accountant Actually Likes",
       "description": "Migrating to SAP or a Cloud ERP means forcing your finance team to learn a new language. With Effortless, they keep using Tally Prime. We just clean the data before it reaches them.",
       "readinessCardsData": [
         {
           "title": "No change to Tally:",
-          "description": "Voucher Type and Series Selection remains as per Tally",
-          "footnote": "16"
+          "description": "Voucher Type and Series Selection remains as per Tally"
         },
         {
           "title": "Compliance Ready:",
-          "description": "Auto-Reconciled GST & TDS Reports",
-          "footnote": "17"
+          "description": "Auto-Reconciled GST & TDS Reports"
         },
         {
           "title": "Audit Ready:",
-          "description": "Document Evidence Storage makes you audit-ready instantly",
-          "footnote": "18"
+          "description": "Document Evidence Storage makes you audit-ready instantly"
         }
       ]
     },

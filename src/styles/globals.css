@@ -964,3 +964,17 @@ body {
   animation: scaleIn 0.25s ease-out;
 }
 
+/* Make all slick slides equal height */
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+.slick-slide > div {
+  display: flex;
+  height: 100%;
+}

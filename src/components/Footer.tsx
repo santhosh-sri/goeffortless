@@ -56,7 +56,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                         </div>
                       )}
                     </div>
-                    <div className="hover:bg-[#08090a] p-2 rounded">
+                    <div className="md:hover:bg-[#08090a] md:p-2 md:rounded">
                       <a
                         href={section.url}
                         target="_blank"
@@ -138,12 +138,12 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
             )}
 
             {/* Social Media Icons */}
-            <div className="flex md:gap-5 gap-2 cursor-pointer">
+            <div className="flex md:gap-3 gap-2 cursor-pointer">
               {social_links?.map((social, idx) => (
                 <div
                   key={idx}
                   onClick={() => window.open(social?.url ?? "")}
-                  className="hover:bg-[#08090a] p-2 rounded"
+                  className="md:hover:bg-[#08090a] md:p-1 md:rounded"
                 >
                   <Image
                     src={social?.icon ?? ""}

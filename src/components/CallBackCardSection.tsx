@@ -75,7 +75,7 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
               {ctaText}
               <span className="absolute right-[-1.5rem] top-1/2 -translate-y-1/2 opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                 <Image
-                  src="/arrow-white.svg"
+                  src={!primary ? "/newHeader.svg" : "/newRightArrow.svg"}
                   alt="arrow"
                   width={16}
                   height={16}

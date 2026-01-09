@@ -199,7 +199,7 @@ const ServiceSection = ({
             )}
             {title && (
               <div className="flex gap-2 md:gap-[16px]">
-                <h3 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-6 text-center text-[#FFFFFF]">
+                <h3 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-8 text-center text-[#FFFFFF]">
                   {parse(title)}
                   {colouredTitle && (
                     <span
@@ -726,7 +726,7 @@ const ServiceSection = ({
           </div>
         )}
         {officelocation && (
-          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
+          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0 mt-6 md:mt-8">
             <OfficeLocations locations={officelocation} />
           </div>
         )}

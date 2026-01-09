@@ -88,7 +88,7 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
         </div>
 
         {/* Productivity Loss */}
-        <div className=" shadow-md border border-white/10 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] py-10 px-4 rounded-lg flex flex-col gap-4">
+        <div className=" shadow-md border border-white/10 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] py-5 md:py-10 px-4 rounded-lg flex flex-col gap-4">
           <p className="md:text-base text-sm font-medium text-white text-center">
             {data.productivityLoss}{" "}
             <span className="font-light">{data.spanText}</span>

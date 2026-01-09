@@ -75,9 +75,9 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
           </div>
         </div>
       ) : (
-        <div className="flex flex-col gap-3 w-full p-8">
+        <div className="flex flex-col gap-3 w-full p-4">
           <div className="flex items-center justify-end">
-            <button onClick={onBack} className="text-red-500 text-xl font-bold">
+            <button onClick={onBack}>
               <svg
                 width="32"
                 height="32"
@@ -107,7 +107,7 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
               </svg>
             </button>
           </div>
-          <div className="relative aspect-video md:aspect-auto md:h-[630px] rounded-xl overflow-hidden bg-black">
+          <div className="relative aspect-video md:aspect-auto md:h-[630px] overflow-hidden bg-black">
             <iframe
               className="absolute inset-0 w-full h-full"
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}

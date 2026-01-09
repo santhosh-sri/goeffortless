@@ -56,7 +56,7 @@ const RedirectCta = ({
         "
       >
         <Image
-          src="/arrow-white.svg"
+          src="/newRightArrow.svg"
           alt="arrow"
           width={16}
           height={16}

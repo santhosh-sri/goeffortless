@@ -1,4 +1,5 @@
 import { LanguageModalConfig } from "@/interface/type";
+import Image from "next/image";
 import React from "react";
 
 type DemoVideo = {
@@ -72,11 +73,11 @@ const LanguageModalContent: React.FC<Props> = ({ data, onSelect, onClose }) => {
               onClick={() => onSelect(item)}
               className="
               w-full max-w-[416px] h-auto md:h-[270px] rounded-xl bg-[#121317] p-6
-              flex flex-col gap-3 items-center justify-center border border-white/10
+              flex flex-col gap-2 items-center justify-center border border-white/10
             "
             >
-              <span className="text-[64px] !h-[64px]">{item.flag}</span>
-              <span className="text-sm md:text-lg text-white">
+              <Image src={item.flag} alt="flag" width={48} height={48} />
+              <span className="text-base md:text-lg text-white">
                 {item.label}
               </span>
             </button>

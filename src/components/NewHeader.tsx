@@ -203,23 +203,25 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   ];
 
   const mobileMenu = [
-    { href: "/pricing", label: "Pricing", hasBottomBorder: true },
-    {
-      href: "/case-studies",
-      label: "Case Study",
-      hasBottomBorder: true,
-    },
     {
       href: "",
       label: "Products",
       subMenu: headerProducts,
+      hasBottomBorder: true,
     },
+    {
+      href: "/case-studies",
+      label: "Case Studies",
+      hasBottomBorder: true,
+    },
+    { href: "/partners", label: "Partners", hasBottomBorder: true },
     {
       href: "",
       label: "Resources",
       hasBottomBorder: true,
       subMenu: headerResources,
     },
+    { href: "/pricing", label: "Pricing", hasBottomBorder: true },
   ];
 
   const handleMouseEnter = (menuName: string) => {
@@ -714,7 +716,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                     >
                       {item.subMenu.map((section, sectionIdx) => (
                         <div key={sectionIdx}>
-                          <h3 className="text-white my-1 border-t border-[#E5E5E533] border-dashed pt-2 pb-1">
+                          <h3 className="text-[#A0A0A0] my-1 border-t border-[#E5E5E533] border-dashed pt-2 pb-1">
                             {section.title}
                           </h3>
                           <div className="space-y-3">
@@ -758,11 +760,11 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                     height={20}
                                     className="transition-opacity duration-300"
                                   />
-                                  <span className="flex-1 transition-colors duration-300">
+                                  <span className="flex-1 transition-colors duration-300 text-white font-light">
                                     {link.label}
                                   </span>
                                   {link.soon && (
-                                    <span className="inline-flex capitalize items-center justify-center p-0.5 rounded-[2px] text-xs font-lexend font-normal bg-[#FFA0431A] text-[#FFA043]">
+                                    <span className="inline-flex capitalize items-center justify-center px-2 py-1 rounded text-xs font-lexend font-normal bg-[#FFA0431A] text-[#FFA043]">
                                       coming soon
                                     </span>
                                   )}
