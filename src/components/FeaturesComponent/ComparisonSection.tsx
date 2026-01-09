@@ -15,7 +15,7 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
         <div className="flex max-md:flex-col justify-between max-md:gap-12">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-lg md:text-xl leading-[26px] font-medium text-center">
+              <h2 className="text-lg md:text-xl leading-[26px] font-medium text-center text-white">
                 {left.title}
               </h2>
               <p className="text-sm md:text-base leading-5 text-center text-[#E4E4E7]">

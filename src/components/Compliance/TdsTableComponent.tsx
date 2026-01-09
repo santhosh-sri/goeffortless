@@ -29,8 +29,8 @@ const TdsTableComponent = ({
 
   return (
     <div
-      className="w-full rounded-lg bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5
-    drop-shadow-sm"
+      className="w-full rounded-lg bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 md:shadow-sm md:shadow-black/5
+    md:drop-shadow-sm"
     >
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:block overflow-x-auto">
