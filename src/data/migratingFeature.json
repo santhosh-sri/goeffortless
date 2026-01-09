@@ -280,6 +280,7 @@
     {
       "showGreyBoderLine": true,
       "showGreyTopBorder": true,
+      "isLastSection": true,
       "bgColour": "bg-[#15181B]",
       "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Technical FAQ</span>",
       "description": "For the CTO/IT Head",
