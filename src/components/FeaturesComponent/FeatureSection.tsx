@@ -16,13 +16,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   return (
     <section className="w-full">
       <div
-        className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center ${
+        className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center ${
           isEven ? "md:flex-row-reverse" : ""
         }`}
       >
         {/* Text Content */}
         <div
-          className={`flex flex-col gap-4 ${
+          className={`flex flex-col gap-3 md:gap-4 ${
             isEven ? "md:order-1" : "md:order-2"
           }`}
         >
@@ -37,7 +37,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             </h2>
           </div>
           {description?.map((item: string) => (
-            <p className="text-[#FFFFFF] text-base md:text-xl font-light leading-8">
+            <p className="text-[#FFFFFF] text-base md:text-xl font-light leading-6 md:leading-8">
               {item}
             </p>
           ))}

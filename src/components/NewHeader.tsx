@@ -251,6 +251,18 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     })();
   }, []);
 
+  useEffect(() => {
+    if (isMobile && expandedSections) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [expandedSections, isMobile]);
+
   const primaryCTA =
     "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-[#fff] md:py-[12px] py-[7px] px-[20px] rounded font-lexend";
   const secondaryCTA =
@@ -751,7 +763,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
                                   }
                                   onMouseLeave={() => setHoveredIndex(null)}
                                   className="group flex items-center gap-2 px-2 py-1 text-base text-[#A0A0A0] whitespace-nowrap 
-                  hover:text-white hover:bg-[#1E2024] rounded relative transition-transform duration-300 ease-out select-none"
+                  rounded relative transition-transform duration-300 ease-out select-none"
                                 >
                                   <Image
                                     src={link.activeIcon}
