@@ -1,4 +1,13 @@
 const HeaderBanner = ({ setCloseBanner }: any) => {
+  const handleCloseBanner = () => {
+    sessionStorage.setItem("headerBannerClosed", "true");
+    setCloseBanner(true);
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
   return (
     <>
       <div className="hidden md:flex bg-[#FFE8D4] px-[80px] py-[12px] gap-2 justify-between items-center">
@@ -59,13 +68,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
         <div className="flex gap-6">
           <button
             className="text-[#F08B32] text-sm font-semibold py-1.5 px-[16px] leading-4 whitespace-nowrap border-2 border-[#F08B32] rounded"
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform",
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
+            onClick={handleCloseBanner}
           >
             Save My Spot
           </button>
@@ -95,7 +98,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
           </button>
         </div>
       </div>
-      <div className="fixed inset-0 z-50 md:hidden flex items-end">
+      <div className="fixed inset-0 z-50 md:hidden flex items-end pointer-events-none">
         {/* Backdrop */}
         {/* <div
           className="absolute inset-0"
@@ -103,7 +106,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
         /> */}
 
         {/* Bottom Sheet */}
-        <div className="relative w-full rounded-t-md bg-[#FFE8D4] p-4 animate-slideUp">
+        <div className="relative w-full rounded-t-md bg-[#FFE8D4] p-4 animate-slideUp pointer-events-auto">
           <div className="flex justify-end">
             <button onClick={setCloseBanner}>
               <svg
@@ -190,13 +193,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
           <div className="flex gap-3 mt-4">
             <button
               className="flex-1 text-[#F08B32] text-xs font-semibold py-2 border-2 border-[#F08B32] rounded"
-              onClick={() =>
-                window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
+              onClick={handleCloseBanner}
             >
               Save My Spot
             </button>

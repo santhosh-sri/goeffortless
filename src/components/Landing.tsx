@@ -103,6 +103,19 @@ const Landing: React.FC<Content> = ({
     sessionStorage.setItem("headerBannerClosed", "true");
     setCloseBanner(true);
   };
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      sessionStorage.removeItem("headerBannerClosed");
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
   if (!mounted) return null;
 
   return (
