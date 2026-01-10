@@ -72,6 +72,7 @@ export default function BlogDetail({ blog }: any) {
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
+  const [closeBanner, setCloseBanner] = useState(true);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -153,7 +154,11 @@ export default function BlogDetail({ blog }: any) {
         <meta property="og:image" content="https://iili.io/F7C7h12.png" />
       </Head>
       <div className={`fixed top-0 w-full z-[999]`}>
-        <Header isMobile={isMobile} />
+        <Header
+          isMobile={isMobile}
+          closeBanner={closeBanner}
+          setCloseBanner={setCloseBanner}
+        />
       </div>
       <div className={`bg-[#08090A] md:px-[80px]`}>
         {isLoading ? (

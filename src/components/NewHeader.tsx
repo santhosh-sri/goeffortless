@@ -7,7 +7,15 @@ import { getCalApi } from "@calcom/embed-react";
 import { usePathname, useRouter } from "next/navigation";
 import { CalcomConfig } from "@/utils/calConfig";
 
-const Header = ({ isMobile }: { isMobile: boolean }) => {
+const Header = ({
+  isMobile,
+  closeBanner,
+  setCloseBanner,
+}: {
+  isMobile: boolean;
+  closeBanner: boolean;
+  setCloseBanner: any;
+}) => {
   const [expandedSections, setExpandedSections] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
@@ -19,6 +27,8 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   const pathname = usePathname();
   const router = useRouter();
 
+  const [mounted, setMounted] = useState(false);
+
   const resourcePath =
     pathname === "/pricing" ||
     pathname === "/case-studies" ||
@@ -26,7 +36,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     pathname === "/partners" ||
     pathname === "/sales" ||
     pathname === "/expenses" ||
-    pathname === "/contracts";
+    pathname === "/contracts" ||
+    pathname === "/privacy-policy" ||
+    pathname === "/terms-of-service" ||
+    pathname === "/security-practices";
 
   const productPath =
     pathname === "/pricing" ||
@@ -41,7 +54,10 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     pathname === "/calculator.svg" ||
     pathname === "/about-us" ||
     pathname === "/migratingFeature" ||
-    pathname === "/contact-us";
+    pathname === "/contact-us" ||
+    pathname === "/privacy-policy" ||
+    pathname === "/terms-of-service" ||
+    pathname === "/security-practices";
 
   const handleMenuClick = async (e: React.MouseEvent, href: string) => {
     // if (href.includes("#")) {
@@ -267,6 +283,34 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
     "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-[#fff] md:py-[12px] py-[7px] px-[20px] rounded font-lexend";
   const secondaryCTA =
     "bg-[#FFFFFF] text-[16px] font-[600] text-[#52525B] py-[12px] md:px-[36px] px-3 rounded";
+
+  useEffect(() => {
+    setMounted(true);
+
+    const isBannerClosed =
+      sessionStorage.getItem("headerBannerClosed") === "true";
+
+    setCloseBanner(isBannerClosed);
+  }, []);
+
+  const handleCloseBanner = () => {
+    sessionStorage.setItem("headerBannerClosed", "true");
+    setCloseBanner(true);
+  };
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      sessionStorage.removeItem("headerBannerClosed");
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <>
