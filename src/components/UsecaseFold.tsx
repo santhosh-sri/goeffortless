@@ -211,8 +211,8 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                 }`}
               />
               {ishome && (
-                <div className="flex gap-2 items-center justify-center max-md:hidden">
-                  <p className="text-[15px] font-[300] md:text-[32px] md:leading-8 leading-5 text-center text-[#F08B32]">
+                <div className="flex gap-2 items-center justify-center">
+                  <p className="text-xl font-[300] md:text-[32px] md:leading-8 leading-5 text-center text-[#F08B32]">
                     Work seamlessly with:
                   </p>
                   <Image
