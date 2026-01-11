@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { getCalApi } from "@calcom/embed-react";
 import { usePathname, useRouter } from "next/navigation";
 import { CalcomConfig } from "@/utils/calConfig";
+import HeaderBanner from "./HeaderBanner";
 
 const Header = ({
   isMobile,
@@ -37,6 +38,7 @@ const Header = ({
     pathname === "/sales" ||
     pathname === "/expenses" ||
     pathname === "/contracts" ||
+    pathname === "/allFeatures" ||
     pathname === "/privacy-policy" ||
     pathname === "/terms-of-service" ||
     pathname === "/security-practices";
@@ -323,6 +325,7 @@ const Header = ({
           }}
         />
       )}
+      {!closeBanner && <HeaderBanner setCloseBanner={handleCloseBanner} />}
 
       <header
         className={`bg-[#08090A] text-white ${
