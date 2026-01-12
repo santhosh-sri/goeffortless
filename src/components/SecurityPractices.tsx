@@ -7,6 +7,7 @@ const SecurityPractices: React.FC<
   Pick<Content, "headerItems" | "footerData">
 > = ({ headerItems, footerData }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [closeBanner, setCloseBanner] = useState(true);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -24,7 +25,12 @@ const SecurityPractices: React.FC<
   return (
     <div>
       <div className={`fixed top-0 w-full z-[999]`}>
-        <Header {...headerItems} isMobile={isMobile} />
+        <Header
+          {...headerItems}
+          isMobile={isMobile}
+          closeBanner={closeBanner}
+          setCloseBanner={setCloseBanner}
+        />
       </div>
       <div className="bg-[#08090A] text-[#EAEBEB]">
         <div className="container mx-auto px-4 text-center pt-32 pb-16 md:pt-40 md:pb-20">

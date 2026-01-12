@@ -24,7 +24,7 @@ const Featurecard: React.FC<FeatureCard> = ({
         }`}
       >
         {title && (
-          <p className="text-[14px] md:text-[16px] md:leading-[22px] leading-[23px] md:min-h-[40px] w-[90%] whitespace-pre-line">
+          <p className="text-[14px] md:text-[16px] md:leading-[22px] leading-[23px] md:min-h-[40px] w-[90%] whitespace-pre-line -tracking-[0.8px]">
             {parse(title)}
           </p>
         )}

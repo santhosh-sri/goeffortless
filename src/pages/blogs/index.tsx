@@ -11,6 +11,7 @@ const Index = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [blogs, setBlogs] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [closeBanner, setCloseBanner] = useState(true);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -86,9 +87,13 @@ const Index = () => {
         <meta property="og:image" content="https://iili.io/F7C7h12.png" />
       </Head>
       <div className={`fixed top-0 w-full z-[999]`}>
-        <Header isMobile={isMobile} />
+        <Header
+          isMobile={isMobile}
+          closeBanner={closeBanner}
+          setCloseBanner={setCloseBanner}
+        />
       </div>
-      <div className={`bg-[#08090A] md:px-[80px]`}>
+      <div className={`bg-[#08090A] md:px-[80px] mt-8 md:mt-[60px]`}>
         <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
           <PageTitle pageHeading={"Blogs"} />
           <h1

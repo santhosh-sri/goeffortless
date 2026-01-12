@@ -9,9 +9,11 @@ const SectionPill = ({ label }: { label: string }) => (
 const TdsTableComponent = ({
   tableHeader,
   tableBody,
+  tdsMatrix,
 }: {
   tableHeader: any[];
   tableBody: any[];
+  tdsMatrix?: any;
 }) => {
   const scrollRefs = useRef<HTMLDivElement[]>([]);
 
@@ -26,7 +28,7 @@ const TdsTableComponent = ({
       scrollRefs.current.push(el);
     }
   };
-
+  console.log(tdsMatrix, "tdsMatrix");
   return (
     <div
       className="w-full rounded-lg bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5
@@ -52,7 +54,9 @@ const TdsTableComponent = ({
                     className={`py-5 text-white text-sm font-medium ${
                       isFirst && "pl-5"
                     } ${isLast && "pr-5"} ${
-                      tableHeader.length <= 3 ? "text-left" : alignment
+                      tableHeader.length <= 3 || !tdsMatrix
+                        ? "text-left"
+                        : alignment
                     }`}
                   >
                     {header?.label}
@@ -79,7 +83,9 @@ const TdsTableComponent = ({
                       className={`py-5 text-white text-sm font-normal ${
                         isFirst && "pl-6"
                       } ${isLast && "pr-6"} ${
-                        tableHeader.length <= 3 ? "text-left" : alignment
+                        tableHeader.length <= 3 || !tdsMatrix
+                          ? "text-left"
+                          : alignment
                       }`}
                     >
                       {col?.key === "section" ? (
@@ -98,14 +104,14 @@ const TdsTableComponent = ({
 
       {/* ================= MOBILE ================= */}
       <div className="md:hidden">
-        <div className="sticky top-[70px] z-10  border-b border-[#2D2D2D] bg-[linear-gradient(111.18deg,rgba(255,255,255,0.15)_-28.62%,rgba(255,255,255,0.05)_104.36%)]">
+        <div className="sticky top-[69px] z-10 text-white border-b border-[#2D2D2D] bg-[linear-gradient(111.18deg,rgba(255,255,255,0.15)_-28.62%,rgba(255,255,255,0.05)_104.36%)]">
           <div className="flex w-full bg-black z-[99] relative">
             <div
               style={{
                 background:
                   "linear-gradient(111.18deg, rgba(255, 255, 255, 0.2) -28.62%, rgba(255, 255, 255, 0) 104.36%)",
               }}
-              className="w-[160px] p-3 text-sm font-medium border-r border-[#2D2D2D]"
+              className="w-[160px] p-3 text-sm font-medium border-r border-[#2D2D2D] text-white"
             >
               {tableHeader[0]?.label}
             </div>
@@ -126,7 +132,7 @@ const TdsTableComponent = ({
                 {tableHeader.slice(1).map((header, index) => (
                   <div
                     key={header?.key}
-                    className={`w-[172px] p-3 text-sm font-medium ${
+                    className={`w-[172px] p-3 text-sm font-medium text-white ${
                       index < tableHeader.slice(1).length - 1 &&
                       "border-r [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                     }`}
@@ -149,7 +155,7 @@ const TdsTableComponent = ({
                 boxShadow:
                   "0px 2px 5px -2px rgba(16, 25, 40, 0.06), 0px 2px 7px 0px rgba(16, 25, 40, 0.05), 0px 0px 0px 1px rgba(16, 25, 40, 0.05)",
               }}
-              className="w-[160px] p-3 text-xs border-r border-[#2D2D2D]"
+              className="w-[160px] p-3 text-xs border-r border-[#2D2D2D] text-white"
             >
               {tableHeader[0].key === "section" ? (
                 <SectionPill label={row[tableHeader[0].key]} />
@@ -172,7 +178,7 @@ const TdsTableComponent = ({
                 {tableHeader.slice(1).map((col, index) => (
                   <div
                     key={col?.key}
-                    className={`w-[172px] text-xs p-3 ${
+                    className={`w-[172px] text-xs p-3 text-white ${
                       index < tableHeader.slice(1).length - 1 &&
                       "border-r-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                     }`}

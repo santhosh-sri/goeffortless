@@ -72,6 +72,7 @@ export default function BlogDetail({ blog }: any) {
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
+  const [closeBanner, setCloseBanner] = useState(true);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -153,7 +154,11 @@ export default function BlogDetail({ blog }: any) {
         <meta property="og:image" content="https://iili.io/F7C7h12.png" />
       </Head>
       <div className={`fixed top-0 w-full z-[999]`}>
-        <Header isMobile={isMobile} />
+        <Header
+          isMobile={isMobile}
+          closeBanner={closeBanner}
+          setCloseBanner={setCloseBanner}
+        />
       </div>
       <div className={`bg-[#08090A] md:px-[80px]`}>
         {isLoading ? (
@@ -162,7 +167,7 @@ export default function BlogDetail({ blog }: any) {
           </div>
         ) : htmlContent ? (
           <>
-            <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
+            <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-8 md:mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
               <PageTitle pageHeading={"Blogs"} />
               <h1
                 className={`font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}

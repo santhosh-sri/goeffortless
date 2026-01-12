@@ -1,13 +1,18 @@
 import { CalcomConfig } from "@/utils/calConfig";
 import Image from "next/image";
-import React from "react";
 
-const RedirectCta = ({ ctaText }: { ctaText?: string }) => {
+const RedirectCta = ({
+  ctaText,
+  fullWidth,
+}: {
+  ctaText?: string;
+  fullWidth?: boolean;
+}) => {
   return (
     <button
       {...CalcomConfig}
       id="democta"
-      className="
+      className={`
         group
         relative
         bg-[#F08B32]
@@ -22,14 +27,14 @@ const RedirectCta = ({ ctaText }: { ctaText?: string }) => {
         flex
         items-center
         justify-center
-        md:w-fit
+        ${fullWidth ? "md:w-full" : "md:w-fit"}
         max-md:w-full
         overflow-hidden
         transition-all
         duration-500
         ease-in-out
         md:hover:!pr-[50px]
-      "
+      `}
     >
       <span className="relative z-10">{ctaText}</span>
       <div
@@ -51,7 +56,7 @@ const RedirectCta = ({ ctaText }: { ctaText?: string }) => {
         "
       >
         <Image
-          src="/arrow-white.svg"
+          src="/newRightArrow.svg"
           alt="arrow"
           width={16}
           height={16}

@@ -29,6 +29,8 @@ export interface FirstFoldContent {
   }[];
   isPartnerPage?: boolean;
   isCareersPage?: boolean;
+  languageModalConfig?: any;
+  secondaryIcon?: string;
 }
 export interface FeatureCard {
   title?: string;
@@ -279,6 +281,17 @@ export interface ServiceContent {
   keyvalues?:  TrackDataProps[];
   tdsMatrix?: any;
   tableData?: any;
+  commandCenterCards?: CommandCenterCardProps[];
+  comparisonData?: ComparisonProps
+  salesFeature?: FeatureSectionProps[]
+  videoId?: string;
+  FeatureItem?: FeatureHighlightItem[];
+  erpComparisonData?: ERPComparisonCard[];
+  roiCalculatorData?: any;
+  readinessCardsData?: ReadinessCard[]
+  metricCardData?: MetricCardData[];
+  demoCtaButton?: string;
+  demoSecButton?: string;
 }
 
 export interface CareersSectionContent {
@@ -429,7 +442,8 @@ export interface Content {
   isCompliancePage?: boolean;
   tds?: ComplianceTabSection;
   gst?: ComplianceTabSection;
-  costCenters?: ComplianceTabSection
+  costCenters?: ComplianceTabSection;
+  isFeaturePage?: boolean;
 }
 export interface FooterSection {
   title?: string;
@@ -564,3 +578,80 @@ export interface ComplianceTabSection {
   serviceContent: ServiceContent[];
 }
 
+export interface CommandCenterCardProps {
+  icon: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  ctaText: string;
+  ctaUrl: string;
+}
+
+export interface LanguageOption {
+  id: string;
+  label: string;
+  flag: string;
+  value: string;
+}
+
+export interface LanguageModalConfig {
+  title: string;
+  subtitle: string;
+  options: LanguageOption[];
+}
+
+export interface ComparisonProps {
+  left: {
+    title: string;
+    subtitle: string;
+    chat: {
+      label: string;
+      message: string;
+      time: string;
+    };
+    points: string[];
+  };
+  right: {
+    title: string;
+    subtitle: string;
+    images: string;
+  };
+}
+
+// export interface FeatureSectionCard {
+//   title: string;
+//   subtitle?: string;
+//   description: string;
+//   image: string;
+//   }
+export interface FeatureSectionProps {
+  
+  feature: any;
+  position: number;
+}
+
+export interface FeatureHighlightItem {
+  title: string;
+  icon: string;
+}
+
+export interface ERPComparisonCard {
+  id: string;
+  title: string;
+  subTitle: string;
+  secondTitle: string;
+  erpPromise: any;
+  result?: string;
+}
+
+export interface ReadinessCard {
+  title: string;
+  description: string;
+  footnote?: string;
+}
+
+export interface MetricCardData {
+  value: string;
+  label: string;
+}

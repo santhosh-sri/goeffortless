@@ -51,6 +51,18 @@ import TdsApply from "./Compliance/TdsApply";
 import TdsAutomation from "./Compliance/TdsAutomation";
 import SupportComponent from "./Compliance/SupportComponent";
 import TdsMatrix from "./Compliance/TdsMatrix";
+import CommandCenterCard from "./Homepage/CommandCenterCard";
+import ComparisonSection from "./FeaturesComponent/ComparisonSection";
+import FeatureSection from "./FeaturesComponent/FeatureSection";
+import YoutubeVideoCard from "./YoutubeVideoCard";
+import FeatureHighlights from "./FeaturesComponent/FeatureHighlights";
+import ComplianceAuditPanel from "./FeaturesComponent/ComplianceAuditPanel";
+import BillingModesComparison from "./FeaturesComponent/BillingModesComparison";
+import ButtonComponent from "./FeaturesComponent/ButtonComponent";
+import ERPComparisonCards from "./FeaturesComponent/ERPComparisonCards";
+import ROICalculator from "./FeaturesComponent/ROICalculator";
+import ReadinessCards from "./FeaturesComponent/ReadinessCards";
+import MetricCards from "./FeaturesComponent/MetricCards";
 
 interface ServiceSectionProps extends ServiceContent {
   isMobile?: boolean;
@@ -63,6 +75,8 @@ interface ServiceSectionProps extends ServiceContent {
   isDownloadPage?: boolean;
   isCompliancePage?: boolean;
   isLastSection?: boolean;
+  complianceAuditData?: any;
+  billingModesData?: any;
 }
 
 const ServiceSection = ({
@@ -135,6 +149,19 @@ const ServiceSection = ({
   tdsMatrix = {},
   tableData = {},
   isLastSection = false,
+  commandCenterCards = [],
+  comparisonData,
+  salesFeature = [],
+  videoId,
+  FeatureItem = [],
+  complianceAuditData,
+  billingModesData,
+  erpComparisonData = [],
+  roiCalculatorData,
+  readinessCardsData = [],
+  metricCardData = [],
+  demoCtaButton,
+  demoSecButton,
 }: ServiceSectionProps) => {
   return (
     <>
@@ -142,9 +169,9 @@ const ServiceSection = ({
         <div className="mt-[40px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       )}
       <div
-        className={`${bgColour ? bgColour : "bg-[#08090A]"} ${
-          !isDownloadPage && "max-md:px-5 md:px-[80px] py-8 md:py-[60px]"
-        }`}
+        className={`${
+          bgColour ? bgColour : "bg-[#08090A]"
+        } max-md:px-5 md:px-[80px] py-8 md:py-[60px]`}
       >
         {caseStudies?.length === 0 && (
           <div
@@ -172,7 +199,7 @@ const ServiceSection = ({
             )}
             {title && (
               <div className="flex gap-2 md:gap-[16px]">
-                <h3 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-6 text-center text-[#FFFFFF]">
+                <h3 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-8 text-center text-[#FFFFFF]">
                   {parse(title)}
                   {colouredTitle && (
                     <span
@@ -317,12 +344,78 @@ const ServiceSection = ({
                 ))}
               </div>
             )}
-            {complianceCards && (
-              <div className="md:grid md:grid-cols-4 md:!gap-4 flex flex-col gap-4 items-center justify-center">
-                {complianceCards?.map((card, index) => (
-                  <ComplianceCardSection key={index} {...card} />
+            {commandCenterCards?.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center">
+                {commandCenterCards.map((card, index) => (
+                  <CommandCenterCard key={index} {...card} />
                 ))}
               </div>
+            )}
+            {comparisonData && <ComparisonSection data={comparisonData} />}
+            {complianceAuditData && (
+              <ComplianceAuditPanel data={complianceAuditData} />
+            )}
+            {billingModesData?.length > 0 && (
+              <BillingModesComparison modes={billingModesData} />
+            )}
+            {salesFeature?.length > 0 && (
+              <div className="flex flex-col gap-12">
+                {salesFeature.map((feature, index) => (
+                  <FeatureSection
+                    key={index}
+                    feature={feature}
+                    position={index}
+                  />
+                ))}
+              </div>
+            )}
+            {FeatureItem?.length > 0 && (
+              <div className="flex max-md:flex-col max-md:gap-[40px] items-center justify-center gap-[180px]">
+                {FeatureItem.map((highlight, index) => (
+                  <FeatureHighlights key={index} {...highlight} />
+                ))}
+              </div>
+            )}
+            {videoId && <YoutubeVideoCard videoId={videoId} type="page" />}
+            {(demoCtaButton || demoSecButton) && (
+              <ButtonComponent
+                demoCtaButton={demoCtaButton}
+                demoSecButton={demoSecButton}
+              />
+            )}
+            {erpComparisonData?.length > 0 && (
+              <ERPComparisonCards cards={erpComparisonData} />
+            )}
+            {roiCalculatorData && (
+              <div className="w-full">
+                <ROICalculator data={roiCalculatorData} />
+              </div>
+            )}
+            {readinessCardsData?.length > 0 && (
+              <ReadinessCards cards={readinessCardsData} />
+            )}
+            {metricCardData?.length > 0 && (
+              <MetricCards cards={metricCardData} />
+            )}
+            {complianceCards && (
+              <>
+                <div className="md:grid md:grid-cols-4 md:!gap-4 flex flex-col gap-4 items-center justify-center">
+                  {complianceCards?.map((card, index) => (
+                    <ComplianceCardSection key={index} {...card} />
+                  ))}
+                </div>
+                {tagLine === "Built for India" && (
+                  <div className="md:pt-[40px] max-md:w-full">
+                    <RedirectCta
+                      ctaText={
+                        isMobile
+                          ? "Discover How"
+                          : "Effortless keeps your business running—without the mess. Discover How."
+                      }
+                    />
+                  </div>
+                )}
+              </>
             )}
             {IdeasCard && (
               <div className="md:grid md:grid-cols-2 flex flex-col gap-8 items-center justify-center">
@@ -404,8 +497,8 @@ const ServiceSection = ({
                     />
                   ))}
                 </div>
-                <div className="flex flex-col md:flex-row md:gap-6 md:w-[70%] items-start">
-                  {growthFeaturesCard.slice(3, 5).map((team, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-3 w-full items-start ">
+                  {growthFeaturesCard.slice(3, 6).map((team, index) => (
                     <ValueCard
                       key={index + 3}
                       {...team}
@@ -577,7 +670,7 @@ const ServiceSection = ({
             )}{" "}
             {pricingCards && !isPricingPlanPage && (
               <div
-                className="flex max-md:flex-col max-xl:overflow-hidden w-full gap-6 md:hidden"
+                className="flex max-md:flex-col max-xl:overflow-hidden w-full gap-6 md:hidden max-md:mt-4"
                 id="pricing"
               >
                 {pricingCards?.map((cardContents, index) => (
@@ -633,7 +726,7 @@ const ServiceSection = ({
           </div>
         )}
         {officelocation && (
-          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
+          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0 mt-6 md:mt-8">
             <OfficeLocations locations={officelocation} />
           </div>
         )}
@@ -659,7 +752,7 @@ const ServiceSection = ({
           className={`${
             !isLastSection && "mb-[40px]"
           } h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]`}
-        ></div>
+        />
       )}
     </>
   );

@@ -150,11 +150,13 @@ const PricingFeatures = ({
       <div className="flex items-center justify-end px-6 mb-4 md:mt-[30px]">
         <input
           type="checkbox"
-          className="mr-2 accent-[#F08B32]"
+          className="mr-2 accent-[#F08B32] cursor-pointer"
           checked={Object.values(expandedSections).every((v) => v)}
           onChange={toggleExpandAll}
         />
-        <label className="text-[16px] text-white">Expand All</label>
+        <label className="text-[16px] text-white cursor-pointer">
+          Expand All
+        </label>
       </div>
 
       {/* DESKTOP VIEW */}

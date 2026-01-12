@@ -121,57 +121,32 @@ const Testimonials: React.FC<TestimonalProps> = ({
         <Slider {...sliderSettings} className="flex md:items-center">
           {testimonials?.map((card, index) => (
             <div
-              className="!flex gap-5 !items-center max-lg:justify-center !rounded-xl"
               key={index}
+              className="!flex h-full gap-5 items-stretch max-lg:justify-center"
             >
               <div
-                className={` ${
-                  card?.title
-                    ? `${
-                        bgColour
-                          ? "bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]"
-                          : "bg-[#121317]"
-                      } flex-col-reverse`
-                    : `${
-                        bgColour
-                          ? "bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]"
-                          : "bg-[#121317]"
-                      } flex-col `
-                } p-4 flex gap-3  !rounded-xl xl:!w-[95%] !w-[90%] lg:w-[70%]`}
+                className={`${
+                  bgColour
+                    ? "bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]"
+                    : "bg-[#121317]"
+                }  flex flex-col justify-between p-4 gap-3 rounded-xl xl:w-[95%] w-[90%] lg:w-[70%] h-full`}
               >
-                <div className="flex items-start gap-3 md:gap-4 ">
-                  {card?.profile && (
-                    <Image
-                      src={card?.profile}
-                      alt="profile"
-                      width={64}
-                      height={64}
-                      className="rounded-xl md:w-[64px] md:h-[64px]"
-                      unoptimized={true}
-                    />
-                  )}
-                  <div className="flex flex-col md:gap-1 items-start">
-                    <p className="text-[16px] leading-6 font-[400] text-[#FFFFFF]">
-                      {card?.name}
-                    </p>
-                    <div>
-                      <p className="text-[#E4E4E7] md:text-[16px] text-[13px] leading-5 !font-[300]">
-                        {card?.designation}
-                      </p>
-                      <p className="text-[#E4E4E7] md:text-[16px] text-[13px] leading-5 !font-[300] md:min-h-[40px]">
-                        {card?.contribution}
-                      </p>
-                    </div>
-                  </div>
-                </div>
                 <div className="flex flex-col gap-2">
                   {card?.title && (
-                    <p className="text-[16px] md:text-[20px] leading-6 font-[400] text-[#FFFFFF]">
-                      {card?.title}
+                    <p className="text-[16px] md:text-[20px] leading-6 font-[400] text-white">
+                      {card.title}
                     </p>
                   )}
-                  <p className="text-[14px] md:leading-[22px] font-[300] leading-[24px] text-[#E4E4E7] md:!min-h-[135px] !min-h-[140px]">
-                    {card?.review}
+
+                  <p className="text-[14px] font-[300] text-[#E4E4E7] flex-grow">
+                    {card.review}
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-1 items-start mt-4">
+                  <p className="text-base font-[400] text-white">{card.name}</p>
+                  <p className="text-[#E4E4E7] md:text-sm text-xs font-[300]">
+                    {card.designation}
                   </p>
                 </div>
               </div>

@@ -36,7 +36,7 @@ const Democta = ({
       {...(shouldAttachCal ? CalcomConfig : {})}
       id="democta"
       className={`group relative p-[10px] overflow-hidden transition-all duration-500 ease-in-out font-[500] cursor-pointer flex items-center justify-center gap-1 w-full ${
-        extraWidth ? "" : "md:w-[230px]"
+        extraWidth ? "" : "md:w-[260px]"
       } 
         ${
           customStyle
@@ -53,7 +53,7 @@ const Democta = ({
         </span>
         <span className="absolute max-md:hidden top-1/2 right-[-1.4rem] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out md:block hidden">
           <Image
-            src="/arrow-white.svg"
+            src="/newRightArrow.svg"
             alt="arrow"
             width={16}
             height={16}

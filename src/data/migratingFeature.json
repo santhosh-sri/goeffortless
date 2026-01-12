@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "title": "Effortless: Explore our Features",
+    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs built to simplify billing, expenses, and team operations as you scale.",
+    "og": {
+      "title": "Effortless: Explore our Features",
+      "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
+      "url": "https://www.goeffortless.ai/migratingFeature",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+
+  "serviceContent": [
+    {
+      "tagLine": "The “Value Anchor”",
+      "marginTop": true,
+      "Customtitle": "<span style='font-weight: 500'>Scale to ₹10,000 Cr. Keep Your Tally. Save the ERP Cost.</span>",
+      "description": "Why spend ₹2 Crores on SAP or disrupt your finance team with a Generic Cloud ERP, when you can get Enterprise Control in 7 days with Tally + Effortless?",
+      "metricCardData": [
+        {
+          "value": "7–10 Days",
+          "label": "Implementation"
+        },
+        {
+          "value": "< ₹20 Lakhs",
+          "label": "5-Year Cost"
+        },
+        {
+          "value": "Zero",
+          "label": "Disruption"
+        }
+      ]
+    },
+    {
+      "title": "The ",
+      "colouredTitle": "Reality Check",
+      "description": "Direct head-to-head comparison. No marketing fluff. Just hard numbers.",
+
+      "tableData": {
+        "tableHeader": [
+          { "key": "feature", "label": "Feature Category" },
+          { "key": "expenseType", "label": "Legacy ERP (SAP/Oracle)" },
+          {
+            "key": "singleThreshold",
+            "label": "Generic Cloud ERP (Modern SaaS Suites)"
+          },
+          {
+            "key": "aggregateThreshold",
+            "label": "Basic Tally Plugin (Viewers)"
+          },
+          {
+            "key": "tdsRateIndividual",
+            "label": "Effortless + Tally (The Enterprise Layer)"
+          }
+        ],
+        "tableBody": [
+          {
+            "feature": "Implementation",
+            "expenseType": "12 - 18 Months (High Disruption)",
+            "singleThreshold": "3 - 6 Months (Mid Disruption)",
+            "aggregateThreshold": "Immediate (Zero Depth)",
+            "tdsRateIndividual": "7 - 10 Days (Plug & Play)"
+          },
+          {
+            "feature": "Est. 5-Year Cost",
+            "expenseType": "₹1.5 Cr - ₹5 Cr",
+            "singleThreshold": "₹25L - ₹50L (+ Efficiency Loss)",
+            "aggregateThreshold": "< ₹1 Lakh",
+            "tdsRateIndividual": "< ₹20 Lakhs (High ROI)"
+          },
+          {
+            "feature": "Financial Core",
+            "expenseType": "World Class",
+            "singleThreshold": "Basic / Rigid (Replaces Tally)",
+            "aggregateThreshold": "Tally Prime",
+            "tdsRateIndividual": "Tally Prime (Concurrent Sync)"
+          },
+          {
+            "feature": "Data Control",
+            "expenseType": "Cloud Lock-in",
+            "singleThreshold": "Cloud Lock-in",
+            "aggregateThreshold": "Read Only",
+            "tdsRateIndividual": "Bi-Directional (Read & Write)"
+          },
+          {
+            "feature": "Customization",
+            "expenseType": "Expensive Consultants",
+            "singleThreshold": "Code-Heavy",
+            "aggregateThreshold": "None",
+            "tdsRateIndividual": "Configurable (APIs Available)"
+          },
+          {
+            "feature": "Mobile Capability",
+            "expenseType": "Paid Add-on",
+            "singleThreshold": "Standard App",
+            "aggregateThreshold": "View Only",
+            "tdsRateIndividual": "Native Fleet App (Live GPS)"
+          }
+        ]
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "The Feature Gap ",
+      "colouredTitle": "Analysis",
+      "description": "Not just a viewer. A full Operating System.",
+      "erpComparisonData": [
+        {
+          "id": "A",
+          "title": "Sales",
+          "subTitle": "The Revenue Engine",
+          "secondTitle": "“Complete Order-to-Cash Visibility.”",
+          "erpPromise": [
+            {
+              "key": "Real-Time Credit Control",
+              "val": "Check real-time customer credit limits in sync with books and restrict invoicing"
+            },
+            {
+              "key": "Scheme Management",
+              "val": "Create schemes (Buy 5 Get 10% off) for specific SKUs and customers, just like advanced ERPs"
+            },
+            {
+              "key": "GPS Discipline",
+              "val": "“Fleet on Street” tracking with Geo-fencing and Check-ins"
+            }
+          ],
+          "result": "Same Control. 1/10th the friction."
+        },
+        {
+          "id": "B",
+          "title": "Finance",
+          "subTitle": "The Profit Guardian",
+          "secondTitle": "“Budgetary Controls & Compliance.”",
+          "erpPromise": [
+            {
+              "key": "Policy Enforcement",
+              "val": "Amount-based approvals and multi-level approval workflows (up to 5 levels)¹"
+            },
+            {
+              "key": "Complete Compliance",
+              "val": "Avoid duplicate bills, Expense Leakages, Wrong TDS, Suspicious Vendors, Unchecked Policy Implementation "
+            },
+            {
+              "key": "Cost Center P&L",
+              "val": "Define multiple layers of cost centers and analyze real-time balance sheets¹"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "title": "Tech",
+          "subTitle": "The Integration Layer",
+          "secondTitle": "“Solid Data Engine.”",
+          "erpPromise": [
+            {
+              "key": "Bi-Directional Sync",
+              "val": "We offer concurrent Tally sync; we don’t just read, we bridge finance with intelligence¹"
+            },
+            {
+              "key": "Banking",
+              "val": "Bulk payment file generation for all leading banks"
+            },
+            {
+              "key": "API Access",
+              "val": "Enterprise-level connectivity with APIs available for custom integrations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Indicative ",
+      "colouredTitle": "ROI Calculator",
+      "description": "Use your own numbers to see the savings. We highlight the Hidden Cost of switching away from Tally.",
+      "roiCalculatorData": {
+        "title": "Output Visualization",
+        "fields": [
+          {
+            "id": "turnover",
+            "label": "Current Turnover (₹ Cr)",
+            "placeholder": "100"
+          },
+          {
+            "id": "financeUsers",
+            "label": "Number of finance & management users",
+            "placeholder": "12"
+          },
+          {
+            "id": "fieldStaff",
+            "label": "Field Staff",
+            "placeholder": "38"
+          }
+        ],
+
+        "bars": [
+          {
+            "label": "🔴 Legacy ERP (SAP)",
+            "value": 84.7,
+            "unit": "Lakhs",
+            "color": "#DC2626",
+            "percent": 85
+          },
+          {
+            "label": "🟠 Generic Cloud ERP",
+            "value": 22.85,
+            "unit": "Lakhs",
+            "color": "#F08B32",
+            "note": "Includes ₹9L Productivity Loss of switching to a Generic Cloud ERP",
+            "percent": 45
+          },
+          {
+            "label": "🟢 Effortless",
+            "value": 3.6,
+            "unit": "Lakhs",
+            "color": "#2F9682",
+            "percent": 30
+          }
+        ],
+        "lossDesc": "You also avoid the ₹9L Productivity Loss of switching to a Generic Cloud ERP.",
+        "spanText": "in Year 1 vs Legacy ERP.",
+        "productivityLoss": "You save ₹81.10 Lakhs ",
+        "breakdownTitle": "Your Total Year 1 Impact",
+        "breakdown": [
+          {
+            "label": "Hard Cost Savings",
+            "value": "₹81.10 Lakhs",
+            "desc": "Direct cash saved by choosing integration over migration"
+          },
+          {
+            "label": "Cash Flow Improvement",
+            "value": "₹16.44 Lakhs",
+            "desc": "Interest saved on working capital (12% OD rate)"
+          },
+          {
+            "label": "DSO Reduction Value",
+            "value": "₹1.37 Cr",
+            "desc": "Cash released by reducing receivables by 5 days"
+          },
+          {
+            "label": "Leakage Prevention",
+            "value": "₹10.00 Lakhs",
+            "desc": "Preventing just 0.1% of revenue leakage"
+          }
+        ],
+
+        "totalImpact": "₹1.08 Cr"
+      }
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "They Chose Integration ",
+      "colouredTitle": "Over Migration",
+      "description": "See how India's fastest-growing brands scaled without the disruption of an ERP.",
+      "demoCtaButton": "Book a Demo"
+    },
+    {
+      "title": "The Only “ERP”. ",
+      "colouredTitle": "Your Chartered Accountant Actually Likes",
+      "description": "Migrating to SAP or a Cloud ERP means forcing your finance team to learn a new language. With Effortless, they keep using Tally Prime. We just clean the data before it reaches them.",
+      "readinessCardsData": [
+        {
+          "title": "No change to Tally:",
+          "description": "Voucher Type and Series Selection remains as per Tally"
+        },
+        {
+          "title": "Compliance Ready:",
+          "description": "Auto-Reconciled GST & TDS Reports"
+        },
+        {
+          "title": "Audit Ready:",
+          "description": "Document Evidence Storage makes you audit-ready instantly"
+        }
+      ]
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "isLastSection": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Technical FAQ</span>",
+      "description": "For the CTO/IT Head",
+      "tdsFAQ": [
+        {
+          "question": "Do you replace Tally?",
+          "answer": "No. We are the Operational Layer. Tally remains your financial Golden Record via our plug-and-play concurrent sync."
+        },
+        {
+          "question": "Can you handle multi-branch?",
+          "answer": "Yes. We support Multi-Company Concurrent Sync and Multiple outlet/warehouse management."
+        },
+        {
+          "question": "What about security?",
+          "answer": "We use 8 Levels of Enterprise Grade Security from perimeter to core."
+        }
+      ]
+    },
+    {
+      "title": "Ready to Scale ",
+      "colouredTitle": "Without the Pain?",
+      "description": "Join 1000+ Indian mid-market businesses who chose integration over disruption.",
+      "demoCtaButton": "Book a Demo"
+    }
+  ]
+}

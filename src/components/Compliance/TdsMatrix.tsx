@@ -11,6 +11,7 @@ const TdsMatrix = (props: any) => {
         <TdsTableComponent
           tableHeader={tableData?.tableHeader}
           tableBody={tableData?.tableBody}
+          tdsMatrix={Object.keys(tdsMatrix)?.length > 0}
         />
       </div>
       {tdsMatrix && Object.keys(tdsMatrix)?.length > 0 && (

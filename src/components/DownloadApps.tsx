@@ -24,7 +24,7 @@ const DownloadApps = ({
             {appName}
           </div>
 
-          <h1 className="text-xl md:text-[32px] font-light leading-snug">
+          <h1 className="text-xl md:text-[32px] font-light leading-snug text-white">
             {title}{" "}
             <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
               {highlight}

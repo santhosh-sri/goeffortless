@@ -1,902 +1,902 @@
 {
-    "metadata": {
-        "title": "Custome Stories with Effortless: Earn More While Helping SMBs Grow",
-        "description": "Become an Effortless Customer and unlock new revenue while helping Indian SMBs automate finance, billing, and cashflow. Earn high commissions, bonuses, and recurring income.",
-        "og": {
-            "title": "Customer Stories with Effortless: Earn More While Helping SMBs Grow",
-            "description": "Join the Effortless Customer Program to simplify growth for ambitious businesses and unlock lucrative commissions, milestone rewards, and joint sales support.",
-            "url": "https://www.goeffortless.ai/case-studies",
-            "type": "website",
-            "image": "https://iili.io/F7C7h12.png"
-        }
-    },
-    "usecaseFold": {
-        "pageHeading": "Customer Stories",
-        "heading": "<span style=\"color: #FFFFFF; font-weight: 300;\">Transforming Ambition</span><span style=\"font-weight: 500;\"> into Achievement</span>",
-        "description": "See how businesses like yours transformed operations and finance with Effortless.",
-        "bannerImage": "/caseStudybanner.png",
-        "isCustomerPage": true
-    },
-    "serviceContent": [
+  "metadata": {
+    "title": "Custome Stories with Effortless: Earn More While Helping SMBs Grow",
+    "description": "Become an Effortless Customer and unlock new revenue while helping Indian SMBs automate finance, billing, and cashflow. Earn high commissions, bonuses, and recurring income.",
+    "og": {
+      "title": "Customer Stories with Effortless: Earn More While Helping SMBs Grow",
+      "description": "Join the Effortless Customer Program to simplify growth for ambitious businesses and unlock lucrative commissions, milestone rewards, and joint sales support.",
+      "url": "https://www.goeffortless.ai/case-studies",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "usecaseFold": {
+    "pageHeading": "Customer Stories",
+    "heading": "<span style=\"color: #FFFFFF; font-weight: 300;\">Transforming Ambition</span><span style=\"font-weight: 500;\"> into Achievement</span>",
+    "description": "See how businesses like yours transformed operations and finance with Effortless.",
+    "bannerImage": "/caseStudybanner.png",
+    "isCustomerPage": true
+  },
+  "serviceContent": [
+    {
+      "href": "caseStudies",
+      "caseStudies": [
         {
-            "href": "caseStudies",
-            "caseStudies": [
-                {
-                    "title": "Smarter finance, fewer leaks",
-                    "description": "A Jaipur based LED manufacturer reduced cash leaks by 88% and gained 60% daily finance visibility with Effortless.",
-                    "details": {
-                        "title": " How This Jaipur-based LED Manufacturer Gained Unified Finance Visibility <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Manual Finance Processes Causing Delays and Leaks",
-                        "fullDescription": "This manufacturer managed 100+ SKUs across two plants and exports to 30+ countries, but finance was buried in spreadsheets. With 20+ accountants chasing fragmented systems, reconciliations lagged, visibility was poor, and cash leaks left the CFO blind to compliance and working capital.",
-                        "challenges": [
-                            "Finance team stuck in spreadsheets with slow reconciliations",
-                            "High dependency on manual entries across plants and exports",
-                            "Poor visibility into expenses, receivables, and cashflow",
-                            "Compliance risks with fragmented GST/TDS tracking"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless streamlined finance with <span style=\"font-weight: 500\">Daily Bank Sync & Reconciliation</span> and <span style=\"font-weight: 500\">Smart Compliance Check (ITC, TDS).</span> Using the <span style=\"font-weight: 500\">Business Health Dashboard, Petty Cash Management, and Expense Approval Flows,</span> the CFO gained real-time visibility into cashflow and expenses.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Unified Reporting across plants and export markets",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "88%",
-                                "label": "Reductionin finance delays and cash leaks",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "60%",
-                                "label": "Faster daily visibility into financial data",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "₹50L",
-                                "label": "Tracked in bills and petty cash in one place",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Before Effortless, finance was stuck in spreadsheets and delays. Now, reporting is unified, cash leaks are down 88%, and I have real- time visibility. It’s like X-ray vision for my finances.",
-                            "author": "Chief Finance Officer"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goefortless.ai",
-                                "link": "https://www.goefortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goefortless.ai",
-                                "link": "mailto:hello@goefortless.ai"
-                            }
-                        ],
-                        "docName": "Instapower - Manufacturing",
-                        "fileName": "Manufacturing"
-                    },
-                    "type": "Manufacturing"
-                },
-                {
-                    "title": "Clear visibility, smarter sales",
-                    "description": "A Gurugram auto parts leader cut revenue leakage 25%, raised productivity 20%, and improved payment visibility 35% with Effortless.",
-                    "details": {
-                        "title": "How This Gurugram Auto Parts Maker Unified Sales Systems <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Disconnected Tools Created Gaps and Inefficiencies",
-                        "fullDescription": "This manufacturer relied on fragmented tools for order tracking, sales analytics, and collections. The IT team faced integration issues, data mismatches, and no central visibility into order flows. These inefficiencies slowed down sales, caused revenue leakage, and made scaling harder.",
-                        "challenges": [
-                            "Fragmented systems with no single source of truth",
-                            "Integration issues leading to mismatched order and payment data",
-                            "Limited real-time visibility into sales and collections",
-                            "Operational inefficiencies impacting IT and business teams",
-                            "High dependency on manual interventions for reporting"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless gave IT one platform for <span style=\"font-weight: 500\">sales tracking, order management, and collections.</span> With <span style=\"font-weight: 500\">Business Health Dashboard, Tally Sync, and Role-Based Access,</span> the team got real-time visibility, secure workflows, and fewer manual tasks.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Data Security with centralized, role-based access",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "35%",
-                                "label": "Better Visibility into orders and payments across systems",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "25%",
-                                "label": "Less Revenue Leakage with tighter order-to-collection tracking",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "40%",
-                                "label": "Productivity Gain from reduced manual reporting",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Before Effortless, our systems were fragmented. Now everything runs on one secure platform with full visibility for sales and finance.",
-                            "author": "IT Operations Manager"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goefortless.ai",
-                                "link": "https://www.goefortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goefortless.ai",
-                                "link": "mailto:hello@goefortless.ai"
-                            }
-                        ],
-                        "docName": "JP Minda - Manufacturing",
-                        "fileName": "Manufacturing"
-                    },
-                    "type": "Manufacturing"
-                },
-                {
-                    "title": "Faster payments, clearer finances",
-                    "description": "An Indore-based ceramic company cut reconciliation 70%, speed up payments 50%, and improved accuracy 80% with Effortless.",
-                    "details": {
-                        "title": "How This Indore-based Manufacturer Gained Full Control of Banking & Expenses <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Fragmented Finance Slowing Growth and Decisions",
-                        "fullDescription": "This specialty ceramics company managed multiple bank accounts and expenses manually, leaving the owner without clear visibility into cashflow or budgets. Scattered data delayed financial reporting and decision-making. Growth was slowed by inefficiency and lack of control.",
-                        "challenges": [
-                            "No centralized view of cashflow across accounts",
-                            "Delayed financial reporting from scattered data",
-                            "Slow, manual payment processing and reconciliations",
-                            "Hard to track and categorize expenses",
-                            "Limited visibility for growth decisions"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless unified <span style=\"font-weight: 500\">Banking & Expense Management</span> into one platform with <span style=\"font-weight: 500\">Daily Bank Sync, Petty Cash Management, and Business Health Dashboard.</span> The MD gained real-time visibility, faster decisions, and full control over finances—without the manual delays.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Visibility into cashflow and budgets",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "80%",
-                                "label": "More Accurate expense categorization",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "70%",
-                                "label": "Less manual reconciliation workload",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "50%",
-                                "label": "Faster payment processing",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Before Effortless, we were running blind on cash and expenses. Now I have everything in one place — real-time visibility, faster decisions, and complete control as MD.",
-                            "author": "Managing Director"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goefortless.ai",
-                                "link": "https://www.goefortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goefortless.ai",
-                                "link": "mailto:hello@goefortless.ai"
-                            }
-                        ],
-                        "docName": "Ceratattva - Manufacturing",
-                        "fileName": "Manufacturing"
-                    },
-                    "type": "Manufacturing"
-                },
-                {
-                    "title": "Faster payments, stronger control",
-                    "description": "A Hyderabad-based electrical brand cut errors 75%, improved payout accuracy 90%, and digitized ₹35L in payments with Effortless.",
-                    "details": {
-                        "title": "How This Hyderabad-based Manufacturer Fixed Cashflow Bottlenecks <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Finance Inefficiencies Slowing Growth and Cashflow",
-                        "fullDescription": "This manufacturer processed 200+ invoices monthly across multiple sites but was buried in paperwork, approvals, and delays. Errors and missed due dates stalled vendor payments and strained cashflow. The CEO lacked real-time visibility into payouts and working capital, putting growth at risk.",
-                        "challenges": [
-                            "Slow approvals and delayed vendor payments disrupted operations",
-                            "Errors from manual records increased compliance risks",
-                            "No centralized visibility into payouts and advances",
-                            "Working capital tied up due to inefficiencies",
-                            "Growth slowed by finance bottlenecks"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless digitized <span style=\"font-weight: 500\">Payment Approvals</span> and <span style=\"font-weight: 500\">Vendor Workflows,</span> giving leadership a single view of bills, claims, and advances. With <span style=\"font-weight: 500\">Real-Time Reconciliation</span> and the <span style=\"font-weight: 500\">Business Health Dashboard,</span> the CEO gained clarity, speed, and control over cashflow across sites.",
-                        "stats": [
-                            {
-                                "value": "90%",
-                                "label": "Accuracy in vendor payouts",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "75%",
-                                "label": "Fewer delays and manual errors",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "64%",
-                                "label": "Faster daily visibility into financial data",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "₹35L",
-                                "label": "Tracked digitally in payments and advances",
-                                "raiseType": "down"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Earlier, finance inefficiencies slowed down operations and cashflow. With Effortless, we now pay vendors on time, track every rupee, and run growth without financial confusion.",
-                            "author": "Chief Executive Officer"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goefortless.ai",
-                                "link": "https://www.goefortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goefortless.ai",
-                                "link": "mailto:hello@goefortless.ai"
-                            }
-                        ],
-                        "docName": "Meine Electric - Manufacturing",
-                        "fileName": "Manufacturing"
-                    },
-                    "type": "Manufacturing"
-                },
-                {
-                    "title": "Field sales, fully in sync",
-                    "description": "A Gurugram distributor gained 100% team visibility, cut manual coordination by 80%, and speed up order-to-billing 4× with Effortless.",
-                    "details": {
-                        "title": "How This Gurugram-based Business Brought Field Sales & Reimbursements Under One Roof",
-                        "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
-                        "fullDescription": "This customer was using a Tally-on-Mobile app for the past four years without any Approval Hierarchies or Live Field Team Tracking. They were managing reimbursements over Excel Sheets and Emails. This fragmented tools approach without holistic solutioning was costing them growth issues.",
-                        "challenges": [
-                            "Orders were processed incorrectly to ineligible parties",
-                            "No real-time team movement tracking",
-                            "Late and incorrect manual reimbursements",
-                            "Hard-to-track branch performance",
-                            "No reliable data for route planning"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless replaced this existing siloed approach with a holistic solution where orders were approved for credit-limit approved parties with a real-time app (Mobile and Desktop) streamlining field sales. <span style=\"font-weight: 500\">Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.</span>",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Visibility into team activities",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "4×",
-                                "label": "Faster order tracking and billing cycle"
-                            },
-                            {
-                                "value": "80%",
-                                "label": "Reduction in manual coordination",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "2x",
-                                "label": "Improvement in payment follow-ups"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "With Effortless, sales reps stick to planned routes, orders are tracked live, and reimbursements just happen. It’s like giving our field ops a command center.",
-                            "author": "IT Operations Head"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "Arvind Petroleoum-Distibution",
-                        "fileName": "Distribution Businesses"
-                    },
-                    "type": "Distribution Businesses"
-                },
-                {
-                    "title": "Faster orders, zero admin chaos",
-                    "description": "A Kochi bakery saved 25 weekly admin hours and doubled order processing speed by digitizing field sales with Effortless.",
-                    "details": {
-                        "title": "How This Kochi Bakery Fixed Field Sales Confusion & Order Delays <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Manual Sales Processes Slowing Growth & Deliveries",
-                        "fullDescription": "This bakery relied on sales reps taking orders manually across multiple cities, using paper notes and WhatsApp. With no real-time tracking or structured customer assignment, orders were often delayed or duplicated. The lack of visibility created bottlenecks, slowing growth and frustrating customers.",
-                        "challenges": [
-                            "Manual order-taking created frequent errors and delays",
-                            "No real-time tracking of reps, orders, or delivery status",
-                            "Territory overlaps led to customer assignment confusion",
-                            "Admin bottlenecks slowed fulfillment handoffs"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless digitized field sales with <span style=\"font-weight: 500\">Fleet-on-Street Selling, Auto Customer Assignment, and Real-Time Order Sync.</span> The owner gained complete visibility into sales activities, eliminated paperwork, and ensured faster, error-free order fulfillment.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Accuracy in Sales Rep-Customer Assignments",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "30%",
-                                "label": "Faster Deliveries boosting Sales & Repeat Orders",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "25+",
-                                "label": "Hours saved weekly in admin coordination",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "2x",
-                                "label": "Faster Order Processing from Field to Fulfilment",
-                                "raiseType": "down"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Our sales process is now twice as fast, error-free, and completely transparent. It’s transformed how I run the business as an owner.",
-                            "author": "Owner & Managing Director"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "Fores Iniyaa - Distribution",
-                        "fileName": "Distribution Businesses"
-                    },
-                    "type": "Distribution Businesses"
-                },
-                {
-                    "title": "Real-time receivables, faster closures",
-                    "description": "A Mumbai healthcare distributor saved 25 hours weekly and gave 600 reps 100% receivables visibility with Effortless.",
-                    "details": {
-                        "title": "How a 600+ Strong Sales Team in Mumbai Switched from Manual Orders to Real-Time Sync <span style=\"color: #F08B32\">with Effortless</span>",
-                        "subtitle": "The Growing Pain of Manual Order Tracking",
-                        "fullDescription": "This distribution-led business struggled with sales reps logging orders through WhatsApp and Excel spreadsheets. Finance teams were buried in manual entries with no real-time visibility—creating a reactive, chaotic environment.",
-                        "challenges": [
-                            "No visibility into multi-city sales",
-                            "Finance buried in manual data entry",
-                            "Missed or duplicate orders",
-                            "Delays in collections and dispatch"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless transformed operations with <span style=\"font-weight: 500\">mobile-first order automation, creating real-time synchronisation between sales and finance teams</span> through a central dashboard. This provided complete visibility across cities, enabled faster payment follow-ups, and eliminated manual data entry entirely.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Real-time receivables for multi-city sales teams",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "96%",
-                                "label": "Average order fulfilment time reduced from 24 hours to 1 hour",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "80%",
-                                "label": "Faster invoice approvals across branches",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "70%",
-                                "label": "Better visibility into stock and collections",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Before Effortless, tracking orders and approvals on the go was tough using email, WhatsApp, and Excel, with constant calls to the office. Now, real-time receivables on their phones speed up collections and keep cash flow steady, Effortless has united our sales and finance teams.",
-                            "author": "Head of Finance"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "MSI - Distribution",
-                        "fileName": "Distribution Businesses"
-                    },
-                    "type": "Distribution Businesses"
-                },
-                {
-                    "title": "Accurate claims, happier teams",
-                    "description": "A Hyderabad food service company improved claim accuracy 95%, freed 15+ weekly hours, and lifted employee satisfaction 40% with Effortless.",
-                    "details": {
-                        "title": "Food Service Company in Hyderabad Overcomes Reimbursement Leakages <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Manual Reimbursements Caused Delays, Errors, and Endless Leakages Hitting Profitability",
-                        "fullDescription": "A leading Hyderabad-based food service company known for meals faced major reimbursement issues of employee and staff travel-related expenses. Manual processes led to delays, errors, and leakage that impacted profitability and employee satisfaction.",
-                        "challenges": [
-                            "Managing reimbursements manually for a large team across India",
-                            "Delayed and error-prone reimbursement process",
-                            "No real-time tracking, leading to leakages",
-                            "No central visibility of reimbursement policy adherence"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless automated the reimbursement process as per the company’s policies with <span style=\"font-weight: 500\">easy claim submissions, real-time tracking, and streamlined multi-level approvals.</span> This accelerated reimbursements, minimized errors, enhanced transparency, and improved employee satisfaction, allowing the finance team to focus on more value-driven tasks.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Accuracy improved from ~70% to 100%",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "96",
-                                "label": "Finance team moved from wasting time to creating value",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "40%",
-                                "label": "Increased employee satisfaction scores related to reimbursements",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "60%",
-                                "label": "Reduction in manual follow-ups and errors",
-                                "raiseType": "down"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Effortless has completely transformed how we handle reimbursements. What used to take us a full week of chasing receipts and approvals now gets done in hours.",
-                            "author": "Managing Director"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "Rassense - Distribution",
-                        "fileName": "Distribution Businesses"
-                    },
-                    "type": "Distribution Businesses"
-                },
-                {
-                    "title": "Clearer finances, faster processes",
-                    "description": "A Bengaluru bathroom fittings wholesaler cut mismatches 95% and speed up bank and invoice processing 70% with Effortless.",
-                    "details": {
-                        "title": "How This Bengaluru Distributor Fixed Bank Reconciliation & Invoicing Chaos <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Errors and Delays Undermining Cashflow Visibility",
-                        "fullDescription": "This distributor was reconciling payments manually in Excel while raising invoices through emails and disconnected tools. The lack of real-time transaction matching caused constant mismatches and delays. Without financial visibility, the CFO struggled to track receivables and plan cashflow effectively.",
-                        "challenges": [
-                            "Bank reconciliations dragging for days every month-end",
-                            "Frequent mismatches between bank entries and invoices",
-                            "No real-time visibility into receivables and cash balances",
-                            "Delayed collections disrupting working capital and financial control"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless streamlined operations with <span style=\"font-weight: 500\">Banking & Cashflow Management, Automated Transaction Matching, and Digital Invoicing.</span> A unified <span style=\"font-weight: 500\">Business Health Dashboard</span> gave the CFO full visibility into receivables, reconciliations, and cashflow—removing errors and saving time.",
-                        "stats": [
-                            {
-                                "value": "95%",
-                                "label": "Fewer Reconciliation Mismatches",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "70%",
-                                "label": "Faster Month-End Reconciliations",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "50%",
-                                "label": "Reduction in Time to Close Books",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "30%",
-                                "label": "Faster Collections improving Working Capital",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Before Effortless, reconciling accounts was painfully slow and filled with errors. Today, everything—bank sync, invoices, collections—runs in real time. I finally have the visibility and control I need.",
-                            "author": "Chief Finance Officer"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "LUX - Distribution",
-                        "fileName": "Distribution Businesses"
-                    },
-                    "type": "Distribution Businesses"
-                },
-                {
-                    "title": "Faster claims, total expense control",
-                    "description": "A Surat Logistics Company Digitized Operations speed up reimbursements by 65% and achieved 98% claim-to-project accuracy with Effortless.",
-                    "details": {
-                        "title": "How This Surat Logistics Company Digitized Operations and Improved Efficiency <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Paper-Based Workflows Slowed IT and Finance Ops",
-                        "fullDescription": "This logistics provider managed reimbursements through scattered, paper-based submissions and manual approvals. The IT team struggled with no centralized system, poor visibility, and repeated errors. The lack of integration made it harder to scale operations smoothly.",
-                        "challenges": [
-                            "Paper-heavy reimbursement submissions with no automation",
-                            "No centralized platform for tracking approvals",
-                            "Errors and delays from manual processes",
-                            "Difficulty linking claims to projects and teams",
-                            "IT overhead in maintaining fragmented systems"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless gave IT one digital platform for <span style=\"font-weight: 500\">claims, approvals, and tracking,</span> replacing paper-heavy workflows. With <span style=\"font-weight: 500\">Multi-level Approvals and Expense Tracking,</span> the IT team reduced manual dependencies, improved data accuracy, and simplified adoption across finance and operations.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Visibility of pending, approved, and rejected claims",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "98%",
-                                "label": "Visibility in claim-to-client mapping",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "85%",
-                                "label": "Faster reimbursement processing",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "Zero",
-                                "label": "Integration Failures with Tally",
-                                "raiseType": "down"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Earlier, reimbursements meant scattered systems and endless follow-ups. With Effortless, everything runs on one secure platform—faster, accurate, and easy for IT to manage.",
-                            "author": "Manager, IT Department"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "CTRL M - Logistics",
-                        "fileName": "Logistics"
-                    },
-                    "type": "Logistics"
-                },
-                {
-                    "title": "Faster finance, zero paperwork",
-                    "description": "A Vijayawada-based logistics company cut all manual paperwork and made approvals 3× faster by digitizing treasury and banking with Effortless.",
-                    "details": {
-                        "title": "How This Vijayawada-based Logistics Business Gained Speed and Control <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Paperwork and Delays Blocking Growth Decisions",
-                        "fullDescription": "This logistics company struggled with slow treasury and payment approvals due to paper-based workflows. Manual invoices, sign-offs, and multi-team bottlenecks delayed operations and blocked cashflow visibility. The MD lacked real-time control, making it harder to drive growth with confidence.",
-                        "challenges": [
-                            "Delayed approvals slowed down treasury and payments",
-                            "No real-time visibility into cashflow and expenses",
-                            "Frequent errors from manual paperwork",
-                            "Multi-team bottlenecks blocking decisions",
-                            "Compliance risks from scattered approvals"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless digitized <span style=\"font-weight: 500\">Invoicing, Multi-Level Approvals, and Payment</span> Clearance on a single platform. With <span style=\"font-weight: 500\">Business Health Dashboard</span> and <span style=\"font-weight: 500\">full audit trails,</span> the MD gained speed, visibility, and confidence to run operations without paperwork bottlenecks.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Elimination of manual paperwork",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "3x",
-                                "label": "Faster approvals across teams",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "Zero",
-                                "label": "Delays in treasury and banking ops",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "20+",
-                                "label": "Hours saved in approvals and payments",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Before Effortless, paperwork slowed everything down. Now approvals move 3x faster, cashflow is visible in real time, and I have complete control now.",
-                            "author": "Managing Director"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goefortless.ai",
-                                "link": "mailto:hello@goefortless.ai"
-                            }
-                        ],
-                        "docName": "Integral Logistics - Logistics",
-                        "fileName": "Logistics"
-                    },
-                    "type": "Logistics"
-                },
-                {
-                    "title": "Zero chaos, full finance control",
-                    "description": "A Chennai retailer with 100+ stores cut manual work by 97% and gained 100% visibility into bills and petty cash with Effortless.",
-                    "details": {
-                        "title": "How This 100-store Chennai Retail Company Gained Visibility and Control <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Manual Entries and Delays Crippling Finance Ops",
-                        "fullDescription": "With 100+ stores and 30,000+ monthly bills, finance was drowning in manual entries and slow approvals. Errors and delays frustrated vendors, while petty cash lacked any audit trail. The Finance Head had no visibility or control, leaving the team stuck in firefighting mode.",
-                        "challenges": [
-                            "Thousands of manual bill and petty cash entries",
-                            "Errors and delays leading to vendor dissatisfaction",
-                            "No audit trail for petty cash usage",
-                            "Finance constantly in firefighting mode",
-                            "No bandwidth for planning or strategy"
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless automated <span style=\"font-weight: 500\">Petty Cash and Expense Management,</span> with <span style=\"font-weight: 500\">Multi-Level Approvals</span> and real-time visibility through the <span style=\"font-weight: 500\">Cost Center Reports.</span> The Finance Head gained complete control over cashflows, cut manual work, and synced all store-level operations seamlessly.",
-                        "stats": [
-                            {
-                                "value": "100%",
-                                "label": "Tracking of petty cash and bills in one place",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "100%",
-                                "label": "Reduction in manual entries",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "40%",
-                                "label": "Less Time spent on low-value finance tasks",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "Zero",
-                                "label": "Blind Spots in multi-store cashflows",
-                                "raiseType": "down"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Effortless has given us complete visibility across 100+ stores. Manual work is down 97%, every rupee is tracked, and I finally have the control and time to focus on strategy.",
-                            "author": "Finance Head"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "Neerus - Retail",
-                        "fileName": "Retail"
-                    },
-                    "type": "Retail"
-                },
-                {
-                    "title": "Accurate invoicing, faster cash flow",
-                    "description": "A Mumbai ESG company cut data errors by 90% and speed up invoicing by 60%, gaining 100% visibility into payments with Effortless.",
-                    "details": {
-                        "title": "Mumbai-based ESG Solutions Company Improves Invoicing Efficiency <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Slow Manual Processes Blocking Payments and Client Trust",
-                        "fullDescription": "A top Mumbai-based ESG solutions company struggled with manual invoicing, leading to delays, errors, and inadequate payment tracking, which impacted cash flow and client communication.",
-                        "challenges": [
-                            "Slow, manual invoice creation.",
-                            "Frequent data entry errors.",
-                            "No centralised payment tracking.",
-                            "Delays in sending invoices.",
-                            "Poor visibility of outstanding payments."
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless implemented a <span style=\"font-weight: 500\">customised invoicing system</span> enabling <span style=\"font-weight: 500\">digital invoice generation, automated sending, real-time payment tracking, and reminders,</span> with a <span style=\"font-weight: 500\">unified dashboard for full billing visibility</span> and <span style=\"font-weight: 500\">improved cash flow.</span>",
-                        "stats": [
-                            {
-                                "value": "90%",
-                                "label": "Fewer data entry errors",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "60%",
-                                "label": "Faster invoice creation & delivery.",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "100%",
-                                "label": "Hours saved weekly in admin coordination",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "75%",
-                                "label": "Improved cash flow & client trust",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Effortless has made our invoicing process accurate, quick, and transparent, which has improved both our cash flow and client relationships.",
-                            "author": "Finance Lead"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "Breathe ESG - B2B SaaS",
-                        "fileName": "B2B SaaS"
-                    },
-                    "type": "B2B SaaS"
-                },
-                {
-                    "title": "Automated invoicing, faster cash flow",
-                    "description": "A Chennai ISP saved 40+ hours weekly, invoiced 3× faster, and hit 100% accuracy with Effortless.",
-                    "details": {
-                        "title": "How a Leading Internet Service Provider in Chennai Streamlined Finance Operations <span style=\"color: #F08B32\"></br>with Effortless</span>",
-                        "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
-                        "fullDescription": "A leading Internet Service Provider faced manual recurring invoicing delays, slow cash flow, and finance team strain, with no automation for bulk invoice sharing—hurting customer communication and timely collections.",
-                        "challenges": [
-                            "Manual recurring invoice creation every month.",
-                            "Time-consuming bulk invoice sharing.",
-                            "Limited channels for quick follow-ups.",
-                            "Productivity loss from repetitive billing tasks.",
-                            "Errors in assigning invoices to the right sales rep or customer."
-                        ],
-                        "fixTitle": "The Effortless Fix",
-                        "fixDescription": "Effortless connected <span style=\"font-weight: 500\">Tally</span> with the <span style=\"font-weight: 500\">sales team’s mobile app, enabling real-time order tracking, instant invoicing, and payment link sharing.</span> This <span style=\"font-weight: 500\">eliminated manual updates, reduced delays, and improved cash flow.</span>",
-                        "stats": [
-                            {
-                                "value": "40 hrs",
-                                "label": "Weekly hours saved with automated invoicing",
-                                "raiseType": "down"
-                            },
-                            {
-                                "value": "100%",
-                                "label": "Accuracy in sales rep–customer assignment",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "3x",
-                                "label": "Faster Bulk invoice sharing via WhatsApp & Email",
-                                "raiseType": "up"
-                            },
-                            {
-                                "value": "70%",
-                                "label": "boost in team productivity by reducing repetitive billing tasks",
-                                "raiseType": "up"
-                            }
-                        ],
-                        "testimonial": {
-                            "quote": "Before Effortless, we were sending 8–10 payment reminders every week — manually. Now, the system does it for me. Recurring invoices go out automatically, and I’ve saved almost half a day every week just on follow-ups.",
-                            "author": "Finance Lead"
-                        },
-                        "contacts": [
-                            {
-                                "label": "Help Desk",
-                                "value": "+91 91765 44422"
-                            },
-                            {
-                                "label": "Website",
-                                "value": "www.goeffortless.ai",
-                                "link": "https://www.goeffortless.ai"
-                            },
-                            {
-                                "label": "Email",
-                                "value": "hello@goeffortless.ai",
-                                "link": "mailto:hello@goeffortless.ai"
-                            }
-                        ],
-                        "docName": "Precious Netcom - B2B SaaS",
-                        "fileName": "B2B SaaS"
-                    },
-                    "type": "B2B SaaS"
-                }
-            ]
+          "title": "Smarter finance, fewer leaks",
+          "description": "A Jaipur based LED manufacturer reduced cash leaks by 88% and gained 60% daily finance visibility with Effortless.",
+          "details": {
+            "title": " How This Jaipur-based LED Manufacturer Gained Unified Finance Visibility <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Manual Finance Processes Causing Delays and Leaks",
+            "fullDescription": "This manufacturer managed 100+ SKUs across two plants and exports to 30+ countries, but finance was buried in spreadsheets. With 20+ accountants chasing fragmented systems, reconciliations lagged, visibility was poor, and cash leaks left the CFO blind to compliance and working capital.",
+            "challenges": [
+              "Finance team stuck in spreadsheets with slow reconciliations",
+              "High dependency on manual entries across plants and exports",
+              "Poor visibility into expenses, receivables, and cashflow",
+              "Compliance risks with fragmented GST/TDS tracking"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless streamlined finance with <span style=\"font-weight: 500\">Daily Bank Sync & Reconciliation</span> and <span style=\"font-weight: 500\">Smart Compliance Check (ITC, TDS).</span> Using the <span style=\"font-weight: 500\">Business Health Dashboard, Petty Cash Management, and Expense Approval Flows,</span> the CFO gained real-time visibility into cashflow and expenses.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Unified Reporting across plants and export markets",
+                "raiseType": "down"
+              },
+              {
+                "value": "88%",
+                "label": "Reductionin finance delays and cash leaks",
+                "raiseType": "down"
+              },
+              {
+                "value": "60%",
+                "label": "Faster daily visibility into financial data",
+                "raiseType": "down"
+              },
+              {
+                "value": "₹50L",
+                "label": "Tracked in bills and petty cash in one place",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Before Effortless, finance was stuck in spreadsheets and delays. Now, reporting is unified, cash leaks are down 88%, and I have real- time visibility. It’s like X-ray vision for my finances.",
+              "author": "Chief Finance Officer"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Instapower - Manufacturing",
+            "fileName": "Manufacturing"
+          },
+          "type": "Manufacturing"
+        },
+        {
+          "title": "Clear visibility, smarter sales",
+          "description": "A Gurugram auto parts leader cut revenue leakage 25%, raised productivity 20%, and improved payment visibility 35% with Effortless.",
+          "details": {
+            "title": "How This Gurugram Auto Parts Maker Unified Sales Systems <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Disconnected Tools Created Gaps and Inefficiencies",
+            "fullDescription": "This manufacturer relied on fragmented tools for order tracking, sales analytics, and collections. The IT team faced integration issues, data mismatches, and no central visibility into order flows. These inefficiencies slowed down sales, caused revenue leakage, and made scaling harder.",
+            "challenges": [
+              "Fragmented systems with no single source of truth",
+              "Integration issues leading to mismatched order and payment data",
+              "Limited real-time visibility into sales and collections",
+              "Operational inefficiencies impacting IT and business teams",
+              "High dependency on manual interventions for reporting"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless gave IT one platform for <span style=\"font-weight: 500\">sales tracking, order management, and collections.</span> With <span style=\"font-weight: 500\">Business Health Dashboard, Tally Sync, and Role-Based Access,</span> the team got real-time visibility, secure workflows, and fewer manual tasks.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Data Security with centralized, role-based access",
+                "raiseType": "up"
+              },
+              {
+                "value": "35%",
+                "label": "Better Visibility into orders and payments across systems",
+                "raiseType": "down"
+              },
+              {
+                "value": "25%",
+                "label": "Less Revenue Leakage with tighter order-to-collection tracking",
+                "raiseType": "up"
+              },
+              {
+                "value": "40%",
+                "label": "Productivity Gain from reduced manual reporting",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Before Effortless, our systems were fragmented. Now everything runs on one secure platform with full visibility for sales and finance.",
+              "author": "IT Operations Manager"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "JP Minda - Manufacturing",
+            "fileName": "Manufacturing"
+          },
+          "type": "Manufacturing"
+        },
+        {
+          "title": "Faster payments, clearer finances",
+          "description": "An Indore-based ceramic company cut reconciliation 70%, speed up payments 50%, and improved accuracy 80% with Effortless.",
+          "details": {
+            "title": "How This Indore-based Manufacturer Gained Full Control of Banking & Expenses <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Fragmented Finance Slowing Growth and Decisions",
+            "fullDescription": "This specialty ceramics company managed multiple bank accounts and expenses manually, leaving the owner without clear visibility into cashflow or budgets. Scattered data delayed financial reporting and decision-making. Growth was slowed by inefficiency and lack of control.",
+            "challenges": [
+              "No centralized view of cashflow across accounts",
+              "Delayed financial reporting from scattered data",
+              "Slow, manual payment processing and reconciliations",
+              "Hard to track and categorize expenses",
+              "Limited visibility for growth decisions"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless unified <span style=\"font-weight: 500\">Banking & Expense Management</span> into one platform with <span style=\"font-weight: 500\">Daily Bank Sync, Petty Cash Management, and Business Health Dashboard.</span> The MD gained real-time visibility, faster decisions, and full control over finances—without the manual delays.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Visibility into cashflow and budgets",
+                "raiseType": "up"
+              },
+              {
+                "value": "80%",
+                "label": "More Accurate expense categorization",
+                "raiseType": "up"
+              },
+              {
+                "value": "70%",
+                "label": "Less manual reconciliation workload",
+                "raiseType": "down"
+              },
+              {
+                "value": "50%",
+                "label": "Faster payment processing",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Before Effortless, we were running blind on cash and expenses. Now I have everything in one place — real-time visibility, faster decisions, and complete control as MD.",
+              "author": "Managing Director"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Ceratattva - Manufacturing",
+            "fileName": "Manufacturing"
+          },
+          "type": "Manufacturing"
+        },
+        {
+          "title": "Faster payments, stronger control",
+          "description": "A Hyderabad-based electrical brand cut errors 75%, improved payout accuracy 90%, and digitized ₹35L in payments with Effortless.",
+          "details": {
+            "title": "How This Hyderabad-based Manufacturer Fixed Cashflow Bottlenecks <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Finance Inefficiencies Slowing Growth and Cashflow",
+            "fullDescription": "This manufacturer processed 200+ invoices monthly across multiple sites but was buried in paperwork, approvals, and delays. Errors and missed due dates stalled vendor payments and strained cashflow. The CEO lacked real-time visibility into payouts and working capital, putting growth at risk.",
+            "challenges": [
+              "Slow approvals and delayed vendor payments disrupted operations",
+              "Errors from manual records increased compliance risks",
+              "No centralized visibility into payouts and advances",
+              "Working capital tied up due to inefficiencies",
+              "Growth slowed by finance bottlenecks"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless digitized <span style=\"font-weight: 500\">Payment Approvals</span> and <span style=\"font-weight: 500\">Vendor Workflows,</span> giving leadership a single view of bills, claims, and advances. With <span style=\"font-weight: 500\">Real-Time Reconciliation</span> and the <span style=\"font-weight: 500\">Business Health Dashboard,</span> the CEO gained clarity, speed, and control over cashflow across sites.",
+            "stats": [
+              {
+                "value": "90%",
+                "label": "Accuracy in vendor payouts",
+                "raiseType": "down"
+              },
+              {
+                "value": "75%",
+                "label": "Fewer delays and manual errors",
+                "raiseType": "down"
+              },
+              {
+                "value": "64%",
+                "label": "Faster daily visibility into financial data",
+                "raiseType": "up"
+              },
+              {
+                "value": "₹35L",
+                "label": "Tracked digitally in payments and advances",
+                "raiseType": "down"
+              }
+            ],
+            "testimonial": {
+              "quote": "Earlier, finance inefficiencies slowed down operations and cashflow. With Effortless, we now pay vendors on time, track every rupee, and run growth without financial confusion.",
+              "author": "Chief Executive Officer"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Meine Electric - Manufacturing",
+            "fileName": "Manufacturing"
+          },
+          "type": "Manufacturing"
+        },
+        {
+          "title": "Field sales, fully in sync",
+          "description": "A Gurugram distributor gained 100% team visibility, cut manual coordination by 80%, and speed up order-to-billing 4× with Effortless.",
+          "details": {
+            "title": "How This Gurugram-based Business Brought Field Sales & Reimbursements Under One Roof",
+            "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
+            "fullDescription": "This customer was using a Tally-on-Mobile app for the past four years without any Approval Hierarchies or Live Field Team Tracking. They were managing reimbursements over Excel Sheets and Emails. This fragmented tools approach without holistic solutioning was costing them growth issues.",
+            "challenges": [
+              "Orders were processed incorrectly to ineligible parties",
+              "No real-time team movement tracking",
+              "Late and incorrect manual reimbursements",
+              "Hard-to-track branch performance",
+              "No reliable data for route planning"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless replaced this existing siloed approach with a holistic solution where orders were approved for credit-limit approved parties with a real-time app (Mobile and Desktop) streamlining field sales. <span style=\"font-weight: 500\">Teams now follow planned routes, place orders, and track reimbursements in sync—giving leadership full control and visibility.</span>",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Visibility into team activities",
+                "raiseType": "up"
+              },
+              {
+                "value": "4×",
+                "label": "Faster order tracking and billing cycle"
+              },
+              {
+                "value": "80%",
+                "label": "Reduction in manual coordination",
+                "raiseType": "up"
+              },
+              {
+                "value": "2x",
+                "label": "Improvement in payment follow-ups"
+              }
+            ],
+            "testimonial": {
+              "quote": "With Effortless, sales reps stick to planned routes, orders are tracked live, and reimbursements just happen. It’s like giving our field ops a command center.",
+              "author": "IT Operations Head"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Arvind Petroleoum-Distibution",
+            "fileName": "Distribution Businesses"
+          },
+          "type": "Distribution Businesses"
+        },
+        {
+          "title": "Faster orders, zero admin chaos",
+          "description": "A Kochi bakery saved 25 weekly admin hours and doubled order processing speed by digitizing field sales with Effortless.",
+          "details": {
+            "title": "How This Kochi Bakery Fixed Field Sales Confusion & Order Delays <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Manual Sales Processes Slowing Growth & Deliveries",
+            "fullDescription": "This bakery relied on sales reps taking orders manually across multiple cities, using paper notes and WhatsApp. With no real-time tracking or structured customer assignment, orders were often delayed or duplicated. The lack of visibility created bottlenecks, slowing growth and frustrating customers.",
+            "challenges": [
+              "Manual order-taking created frequent errors and delays",
+              "No real-time tracking of reps, orders, or delivery status",
+              "Territory overlaps led to customer assignment confusion",
+              "Admin bottlenecks slowed fulfillment handoffs"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless digitized field sales with <span style=\"font-weight: 500\">Fleet-on-Street Selling, Auto Customer Assignment, and Real-Time Order Sync.</span> The owner gained complete visibility into sales activities, eliminated paperwork, and ensured faster, error-free order fulfillment.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Accuracy in Sales Rep-Customer Assignments",
+                "raiseType": "down"
+              },
+              {
+                "value": "30%",
+                "label": "Faster Deliveries boosting Sales & Repeat Orders",
+                "raiseType": "down"
+              },
+              {
+                "value": "25+",
+                "label": "Hours saved weekly in admin coordination",
+                "raiseType": "down"
+              },
+              {
+                "value": "2x",
+                "label": "Faster Order Processing from Field to Fulfilment",
+                "raiseType": "down"
+              }
+            ],
+            "testimonial": {
+              "quote": "Our sales process is now twice as fast, error-free, and completely transparent. It’s transformed how I run the business as an owner.",
+              "author": "Owner & Managing Director"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Fores Iniyaa - Distribution",
+            "fileName": "Distribution Businesses"
+          },
+          "type": "Distribution Businesses"
+        },
+        {
+          "title": "Real-time receivables, faster closures",
+          "description": "A Mumbai healthcare distributor saved 25 hours weekly and gave 600 reps 100% receivables visibility with Effortless.",
+          "details": {
+            "title": "How a 600+ Strong Sales Team in Mumbai Switched from Manual Orders to Real-Time Sync <span style=\"color: #F08B32\">with Effortless</span>",
+            "subtitle": "The Growing Pain of Manual Order Tracking",
+            "fullDescription": "This distribution-led business struggled with sales reps logging orders through WhatsApp and Excel spreadsheets. Finance teams were buried in manual entries with no real-time visibility—creating a reactive, chaotic environment.",
+            "challenges": [
+              "No visibility into multi-city sales",
+              "Finance buried in manual data entry",
+              "Missed or duplicate orders",
+              "Delays in collections and dispatch"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless transformed operations with <span style=\"font-weight: 500\">mobile-first order automation, creating real-time synchronisation between sales and finance teams</span> through a central dashboard. This provided complete visibility across cities, enabled faster payment follow-ups, and eliminated manual data entry entirely.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Real-time receivables for multi-city sales teams",
+                "raiseType": "down"
+              },
+              {
+                "value": "96%",
+                "label": "Average order fulfilment time reduced from 24 hours to 1 hour",
+                "raiseType": "up"
+              },
+              {
+                "value": "80%",
+                "label": "Faster invoice approvals across branches",
+                "raiseType": "up"
+              },
+              {
+                "value": "70%",
+                "label": "Better visibility into stock and collections",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Before Effortless, tracking orders and approvals on the go was tough using email, WhatsApp, and Excel, with constant calls to the office. Now, real-time receivables on their phones speed up collections and keep cash flow steady, Effortless has united our sales and finance teams.",
+              "author": "Head of Finance"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "MSI - Distribution",
+            "fileName": "Distribution Businesses"
+          },
+          "type": "Distribution Businesses"
+        },
+        {
+          "title": "Accurate claims, happier teams",
+          "description": "A Hyderabad food service company improved claim accuracy 95%, freed 15+ weekly hours, and lifted employee satisfaction 40% with Effortless.",
+          "details": {
+            "title": "Food Service Company in Hyderabad Overcomes Reimbursement Leakages <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Manual Reimbursements Caused Delays, Errors, and Endless Leakages Hitting Profitability",
+            "fullDescription": "A leading Hyderabad-based food service company known for meals faced major reimbursement issues of employee and staff travel-related expenses. Manual processes led to delays, errors, and leakage that impacted profitability and employee satisfaction.",
+            "challenges": [
+              "Managing reimbursements manually for a large team across India",
+              "Delayed and error-prone reimbursement process",
+              "No real-time tracking, leading to leakages",
+              "No central visibility of reimbursement policy adherence"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless automated the reimbursement process as per the company’s policies with <span style=\"font-weight: 500\">easy claim submissions, real-time tracking, and streamlined multi-level approvals.</span> This accelerated reimbursements, minimized errors, enhanced transparency, and improved employee satisfaction, allowing the finance team to focus on more value-driven tasks.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Accuracy improved from ~70% to 100%",
+                "raiseType": "up"
+              },
+              {
+                "value": "96",
+                "label": "Finance team moved from wasting time to creating value",
+                "raiseType": "up"
+              },
+              {
+                "value": "40%",
+                "label": "Increased employee satisfaction scores related to reimbursements",
+                "raiseType": "up"
+              },
+              {
+                "value": "60%",
+                "label": "Reduction in manual follow-ups and errors",
+                "raiseType": "down"
+              }
+            ],
+            "testimonial": {
+              "quote": "Effortless has completely transformed how we handle reimbursements. What used to take us a full week of chasing receipts and approvals now gets done in hours.",
+              "author": "Managing Director"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Rassense - Distribution",
+            "fileName": "Distribution Businesses"
+          },
+          "type": "Distribution Businesses"
+        },
+        {
+          "title": "Clearer finances, faster processes",
+          "description": "A Bengaluru bathroom fittings wholesaler cut mismatches 95% and speed up bank and invoice processing 70% with Effortless.",
+          "details": {
+            "title": "How This Bengaluru Distributor Fixed Bank Reconciliation & Invoicing Chaos <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Errors and Delays Undermining Cashflow Visibility",
+            "fullDescription": "This distributor was reconciling payments manually in Excel while raising invoices through emails and disconnected tools. The lack of real-time transaction matching caused constant mismatches and delays. Without financial visibility, the CFO struggled to track receivables and plan cashflow effectively.",
+            "challenges": [
+              "Bank reconciliations dragging for days every month-end",
+              "Frequent mismatches between bank entries and invoices",
+              "No real-time visibility into receivables and cash balances",
+              "Delayed collections disrupting working capital and financial control"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless streamlined operations with <span style=\"font-weight: 500\">Banking & Cashflow Management, Automated Transaction Matching, and Digital Invoicing.</span> A unified <span style=\"font-weight: 500\">Business Health Dashboard</span> gave the CFO full visibility into receivables, reconciliations, and cashflow—removing errors and saving time.",
+            "stats": [
+              {
+                "value": "95%",
+                "label": "Fewer Reconciliation Mismatches",
+                "raiseType": "down"
+              },
+              {
+                "value": "70%",
+                "label": "Faster Month-End Reconciliations",
+                "raiseType": "up"
+              },
+              {
+                "value": "50%",
+                "label": "Reduction in Time to Close Books",
+                "raiseType": "down"
+              },
+              {
+                "value": "30%",
+                "label": "Faster Collections improving Working Capital",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Before Effortless, reconciling accounts was painfully slow and filled with errors. Today, everything—bank sync, invoices, collections—runs in real time. I finally have the visibility and control I need.",
+              "author": "Chief Finance Officer"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "LUX - Distribution",
+            "fileName": "Distribution Businesses"
+          },
+          "type": "Distribution Businesses"
+        },
+        {
+          "title": "Faster claims, total expense control",
+          "description": "A Surat Logistics Company Digitized Operations speed up reimbursements by 65% and achieved 98% claim-to-project accuracy with Effortless.",
+          "details": {
+            "title": "How This Surat Logistics Company Digitized Operations and Improved Efficiency <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Paper-Based Workflows Slowed IT and Finance Ops",
+            "fullDescription": "This logistics provider managed reimbursements through scattered, paper-based submissions and manual approvals. The IT team struggled with no centralized system, poor visibility, and repeated errors. The lack of integration made it harder to scale operations smoothly.",
+            "challenges": [
+              "Paper-heavy reimbursement submissions with no automation",
+              "No centralized platform for tracking approvals",
+              "Errors and delays from manual processes",
+              "Difficulty linking claims to projects and teams",
+              "IT overhead in maintaining fragmented systems"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless gave IT one digital platform for <span style=\"font-weight: 500\">claims, approvals, and tracking,</span> replacing paper-heavy workflows. With <span style=\"font-weight: 500\">Multi-level Approvals and Expense Tracking,</span> the IT team reduced manual dependencies, improved data accuracy, and simplified adoption across finance and operations.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Visibility of pending, approved, and rejected claims",
+                "raiseType": "up"
+              },
+              {
+                "value": "98%",
+                "label": "Visibility in claim-to-client mapping",
+                "raiseType": "up"
+              },
+              {
+                "value": "85%",
+                "label": "Faster reimbursement processing",
+                "raiseType": "up"
+              },
+              {
+                "value": "Zero",
+                "label": "Integration Failures with Tally",
+                "raiseType": "down"
+              }
+            ],
+            "testimonial": {
+              "quote": "Earlier, reimbursements meant scattered systems and endless follow-ups. With Effortless, everything runs on one secure platform—faster, accurate, and easy for IT to manage.",
+              "author": "Manager, IT Department"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "CTRL M - Logistics",
+            "fileName": "Logistics"
+          },
+          "type": "Logistics"
+        },
+        {
+          "title": "Faster finance, zero paperwork",
+          "description": "A Vijayawada-based logistics company cut all manual paperwork and made approvals 3× faster by digitizing treasury and banking with Effortless.",
+          "details": {
+            "title": "How This Vijayawada-based Logistics Business Gained Speed and Control <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Paperwork and Delays Blocking Growth Decisions",
+            "fullDescription": "This logistics company struggled with slow treasury and payment approvals due to paper-based workflows. Manual invoices, sign-offs, and multi-team bottlenecks delayed operations and blocked cashflow visibility. The MD lacked real-time control, making it harder to drive growth with confidence.",
+            "challenges": [
+              "Delayed approvals slowed down treasury and payments",
+              "No real-time visibility into cashflow and expenses",
+              "Frequent errors from manual paperwork",
+              "Multi-team bottlenecks blocking decisions",
+              "Compliance risks from scattered approvals"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless digitized <span style=\"font-weight: 500\">Invoicing, Multi-Level Approvals, and Payment</span> Clearance on a single platform. With <span style=\"font-weight: 500\">Business Health Dashboard</span> and <span style=\"font-weight: 500\">full audit trails,</span> the MD gained speed, visibility, and confidence to run operations without paperwork bottlenecks.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Elimination of manual paperwork",
+                "raiseType": "up"
+              },
+              {
+                "value": "3x",
+                "label": "Faster approvals across teams",
+                "raiseType": "up"
+              },
+              {
+                "value": "Zero",
+                "label": "Delays in treasury and banking ops",
+                "raiseType": "down"
+              },
+              {
+                "value": "20+",
+                "label": "Hours saved in approvals and payments",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Before Effortless, paperwork slowed everything down. Now approvals move 3x faster, cashflow is visible in real time, and I have complete control now.",
+              "author": "Managing Director"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Integral Logistics - Logistics",
+            "fileName": "Logistics"
+          },
+          "type": "Logistics"
+        },
+        {
+          "title": "Zero chaos, full finance control",
+          "description": "A Chennai retailer with 100+ stores cut manual work by 97% and gained 100% visibility into bills and petty cash with Effortless.",
+          "details": {
+            "title": "How This 100-store Chennai Retail Company Gained Visibility and Control <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Manual Entries and Delays Crippling Finance Ops",
+            "fullDescription": "With 100+ stores and 30,000+ monthly bills, finance was drowning in manual entries and slow approvals. Errors and delays frustrated vendors, while petty cash lacked any audit trail. The Finance Head had no visibility or control, leaving the team stuck in firefighting mode.",
+            "challenges": [
+              "Thousands of manual bill and petty cash entries",
+              "Errors and delays leading to vendor dissatisfaction",
+              "No audit trail for petty cash usage",
+              "Finance constantly in firefighting mode",
+              "No bandwidth for planning or strategy"
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless automated <span style=\"font-weight: 500\">Petty Cash and Expense Management,</span> with <span style=\"font-weight: 500\">Multi-Level Approvals</span> and real-time visibility through the <span style=\"font-weight: 500\">Cost Center Reports.</span> The Finance Head gained complete control over cashflows, cut manual work, and synced all store-level operations seamlessly.",
+            "stats": [
+              {
+                "value": "100%",
+                "label": "Tracking of petty cash and bills in one place",
+                "raiseType": "up"
+              },
+              {
+                "value": "100%",
+                "label": "Reduction in manual entries",
+                "raiseType": "down"
+              },
+              {
+                "value": "40%",
+                "label": "Less Time spent on low-value finance tasks",
+                "raiseType": "down"
+              },
+              {
+                "value": "Zero",
+                "label": "Blind Spots in multi-store cashflows",
+                "raiseType": "down"
+              }
+            ],
+            "testimonial": {
+              "quote": "Effortless has given us complete visibility across 100+ stores. Manual work is down 97%, every rupee is tracked, and I finally have the control and time to focus on strategy.",
+              "author": "Finance Head"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Neerus - Retail",
+            "fileName": "Retail"
+          },
+          "type": "Retail"
+        },
+        {
+          "title": "Accurate invoicing, faster cash flow",
+          "description": "A Mumbai ESG company cut data errors by 90% and speed up invoicing by 60%, gaining 100% visibility into payments with Effortless.",
+          "details": {
+            "title": "Mumbai-based ESG Solutions Company Improves Invoicing Efficiency <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Slow Manual Processes Blocking Payments and Client Trust",
+            "fullDescription": "A top Mumbai-based ESG solutions company struggled with manual invoicing, leading to delays, errors, and inadequate payment tracking, which impacted cash flow and client communication.",
+            "challenges": [
+              "Slow, manual invoice creation.",
+              "Frequent data entry errors.",
+              "No centralised payment tracking.",
+              "Delays in sending invoices.",
+              "Poor visibility of outstanding payments."
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless implemented a <span style=\"font-weight: 500\">customised invoicing system</span> enabling <span style=\"font-weight: 500\">digital invoice generation, automated sending, real-time payment tracking, and reminders,</span> with a <span style=\"font-weight: 500\">unified dashboard for full billing visibility</span> and <span style=\"font-weight: 500\">improved cash flow.</span>",
+            "stats": [
+              {
+                "value": "90%",
+                "label": "Fewer data entry errors",
+                "raiseType": "down"
+              },
+              {
+                "value": "60%",
+                "label": "Faster invoice creation & delivery.",
+                "raiseType": "up"
+              },
+              {
+                "value": "100%",
+                "label": "Hours saved weekly in admin coordination",
+                "raiseType": "up"
+              },
+              {
+                "value": "75%",
+                "label": "Improved cash flow & client trust",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Effortless has made our invoicing process accurate, quick, and transparent, which has improved both our cash flow and client relationships.",
+              "author": "Finance Lead"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Breathe ESG - B2B SaaS",
+            "fileName": "B2B SaaS"
+          },
+          "type": "B2B SaaS"
+        },
+        {
+          "title": "Automated invoicing, faster cash flow",
+          "description": "A Chennai ISP saved 40+ hours weekly, invoiced 3× faster, and hit 100% accuracy with Effortless.",
+          "details": {
+            "title": "How a Leading Internet Service Provider in Chennai Streamlined Finance Operations <span style=\"color: #F08B32\"></br>with Effortless</span>",
+            "subtitle": "Fragmented Sales Data Driving Confusion and Losses",
+            "fullDescription": "A leading Internet Service Provider faced manual recurring invoicing delays, slow cash flow, and finance team strain, with no automation for bulk invoice sharing—hurting customer communication and timely collections.",
+            "challenges": [
+              "Manual recurring invoice creation every month.",
+              "Time-consuming bulk invoice sharing.",
+              "Limited channels for quick follow-ups.",
+              "Productivity loss from repetitive billing tasks.",
+              "Errors in assigning invoices to the right sales rep or customer."
+            ],
+            "fixTitle": "The Effortless Fix",
+            "fixDescription": "Effortless connected <span style=\"font-weight: 500\">Tally</span> with the <span style=\"font-weight: 500\">sales team’s mobile app, enabling real-time order tracking, instant invoicing, and payment link sharing.</span> This <span style=\"font-weight: 500\">eliminated manual updates, reduced delays, and improved cash flow.</span>",
+            "stats": [
+              {
+                "value": "40 hrs",
+                "label": "Weekly hours saved with automated invoicing",
+                "raiseType": "down"
+              },
+              {
+                "value": "100%",
+                "label": "Accuracy in sales rep–customer assignment",
+                "raiseType": "up"
+              },
+              {
+                "value": "3x",
+                "label": "Faster Bulk invoice sharing via WhatsApp & Email",
+                "raiseType": "up"
+              },
+              {
+                "value": "70%",
+                "label": "boost in team productivity by reducing repetitive billing tasks",
+                "raiseType": "up"
+              }
+            ],
+            "testimonial": {
+              "quote": "Before Effortless, we were sending 8–10 payment reminders every week — manually. Now, the system does it for me. Recurring invoices go out automatically, and I’ve saved almost half a day every week just on follow-ups.",
+              "author": "Finance Lead"
+            },
+            "contacts": [
+              {
+                "label": "Help Desk",
+                "value": "+91 91765 44422"
+              },
+              {
+                "label": "Website",
+                "value": "www.goeffortless.ai",
+                "link": "https://www.goeffortless.ai"
+              },
+              {
+                "label": "Email",
+                "value": "hello@goeffortless.ai",
+                "link": "mailto:hello@goeffortless.ai"
+              }
+            ],
+            "docName": "Precious Netcom - B2B SaaS",
+            "fileName": "B2B SaaS"
+          },
+          "type": "B2B SaaS"
         }
-    ]
+      ]
+    }
+  ]
 }

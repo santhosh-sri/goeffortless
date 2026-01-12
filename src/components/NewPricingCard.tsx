@@ -112,6 +112,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
       <SecondaryCta
         secondaryCtaText={"View Detailed Comparison of Plans"}
         handleDirect={() => (window.location.href = "/pricing")}
+        isOrange={true}
       />
     </div>
   );

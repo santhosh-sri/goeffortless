@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "title": "Effortless: Explore our Features",
+    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs built to simplify billing, expenses, and team operations as you scale.",
+    "og": {
+      "title": "Effortless: Explore our Features",
+      "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
+      "url": "https://www.goeffortless.ai/sales",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
+  "usecaseFold": {
+    "pageHeading": "Say 👋 to Effortless",
+    "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>Reps Stop</span><br/><span style='color:#FFFFFFFF;font-weight: 300;'>Guessing.</span><br/> <span style='white-space: nowrap;font-weight: 500'>You Stop Chasing.</span>",
+    "description": "Give your field team the tool that ensures accurate orders, correct schemes, instant approvals, and real-time cash visibility — all from one mobile workspace.",
+    "bannerImage": "/iMockupMax.png",
+    "ctaText": "See the Field App",
+    "isFeaturePage": true
+  },
+  "isFeaturePage": true,
+
+  "serviceContent": [
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "tagLine": "Problem/Solution Split",
+      "title": "The ",
+      "colouredTitle": "Reality Check",
+      "description": "From unreliable messages to verified field intelligence",
+      "comparisonData": {
+        "left": {
+          "title": "The Old Way",
+          "subtitle": "Manual steps, slow updates, and constant follow-ups",
+          "chat": {
+            "avatar": "",
+            "label": "Sales Rep",
+            "message": "Sir, took the order. Will share details later.",
+            "time": "10:42 AM"
+          },
+          "points": [
+            "Unreliable",
+            "No stock view",
+            "No scheme check",
+            "No credit control",
+            "No collection control",
+            "No proactive workflow in place"
+          ]
+        },
+        "right": {
+          "title": "The Effortless Way",
+          "subtitle": "Clean handoffs, instant clarity, and faster decisions",
+          "images": "/comparison.png"
+        }
+      }
+    },
+
+    {
+      "tagLine": "Feature",
+      "title": "Feature ",
+      "colouredTitle": "Deep Dive",
+      "description": "Powerful capabilities that transform your field sales operation",
+      "salesFeature": [
+        {
+          "id": "account-creation",
+          "subtitle": "Protect Sensitive Customer Data",
+          "title": "Every Rep, One Assigned Customer",
+          "description": [
+            "Assign specific customers to your each rep. Overlap - No Confusion.",
+            "This ensures no overlaps and no missed visits."
+          ],
+          "points": [],
+          "image": "/sales001.png",
+          "alignment": "left"
+        },
+        {
+          "id": "mobile-checkin",
+          "subtitle": "The Sales Discipline",
+          "title": "No Wrong Practice. Ever.",
+          "description": [
+            "When a rep reaches the customer's location, he simply taps check-in.",
+            "You know the visit actually happened — no WhatsApp updates needed."
+          ],
+          "points": [],
+          "image": "/sales002.png",
+          "alignment": "right"
+        },
+        {
+          "id": "credit-limit-control",
+          "subtitle": "The Collections Firewall",
+          "title": "Get Paid Before You Sell.",
+          "description": [
+            "Reps see the client's Real-Time Outstanding & Credit Limit before they take an order. The system prompts collection immediately",
+            "If dues are high, the system prompts, — collect first, then order.",
+            "No more selling to bad paymasters."
+          ],
+          "points": [],
+          "image": "/sales003.png",
+          "alignment": "left"
+        },
+        {
+          "id": "smart-pricing",
+          "subtitle": "The Schemes Engine",
+          "title": "No Wrong Pricing. Ever.",
+          "description": [
+            "Buy 10 Get 1? 5% Discount on Cash? The app auto-applies schemes based on your Tally logic. No rep calculation errors.",
+            "Buy 10 Get 1?",
+            "5% discount for cash?",
+            "All items above ₹50,000 get slab pricing?",
+            "The app applies all schemes automatically based on your rules.",
+            "Reps never miscalculate. Orders stay accurate. Primary sales rise because schemes are used fully."
+          ],
+          "points": [],
+          "image": "/sales004.png",
+          "alignment": "right"
+        },
+        {
+          "id": "fast-approvals",
+          "subtitle": "Manager Instant Approval",
+          "title": "No Calls. No PDFs. Just Approve.",
+          "description": [
+            "Managers get order alerts instantly.",
+            "Approve or reject with one tap.",
+            "Fast approvals keep dispatch moving without delays."
+          ],
+          "points": [],
+          "image": "/sales005.png",
+          "alignment": "left"
+        },
+        {
+          "id": "auto-invoicing",
+          "subtitle": "One-Click Sync to Tally",
+          "title": "E-Invoices Flow In Automatically",
+          "description": [
+            "Approved orders convert to e-invoices and sync to Tally as sales vouchers instantly.",
+            "Have your Invoice Specific UPI QR Code on Invoice for Smoother Collections & Tracking.",
+            "Your accountant does zero typing.",
+            "Zero mismatch. Zero backlog."
+          ],
+          "points": [],
+          "image": "/sales006.png",
+          "alignment": "right"
+        },
+        {
+          "id": "sales-dashboard",
+          "subtitle": "Auto-Reconciliation with the Bank",
+          "title": "No One Asks, Has the Payment Come?",
+          "description": [
+            "When money lands in the bank, Effortless updates automatically.",
+            "Collections reflect instantly across the manager dashboard and owner's view.",
+            "Reps, finance, and leadership always see the same number."
+          ],
+          "points": [],
+          "image": "/sales007.png",
+          "alignment": "right"
+        },
+        {
+          "id": "tally-sync-sales",
+          "subtitle": "Owner Visibility Panel",
+          "title": "Orders. Dues. Cash. All in One Screen.",
+          "description": [
+            "Owners see",
+            "Today's orders",
+            "Today's collections",
+            "Pending by customer",
+            "Branch-wise and rep-wise performance",
+            "Scheme-driven sales lift",
+            "Cash stuck in overdue customers",
+            "Everything updates in real time."
+          ],
+          "points": [],
+          "image": "/sales008.png",
+          "alignment": "left"
+        },
+        {
+          "id": "final-truth",
+          "subtitle": "The Final Truth Remains True",
+          "title": "Tally Stays Updated. Always.",
+          "description": [
+            "Approved Orders, Invoices, and Collections move into Tally without typing.",
+            "Masters stay clean, reconciliations stay simple, and audit stays smooth."
+          ],
+          "points": [],
+          "image": "/sales009.png",
+          "alignment": "left"
+        }
+      ]
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Why This Matters</span>",
+      "FeatureItem": [
+        {
+          "title": "No lost orders",
+          "icon": "/salesorder.svg"
+        },
+        {
+          "title": "No discipline violations",
+          "icon": "/salesViolations.svg"
+        },
+        {
+          "title": "Enable Pro-Active Growth",
+          "icon": "salesGrowth.svg"
+        }
+      ]
+    },
+    {
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">See it in Action</span>",
+      "description": "Watch how field teams are transforming their sales operations",
+      "videoId": "NXLYR8d7Q8g"
+    },
+    {
+      "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "isLastSection": true,
+      "bgColour": "bg-[#15181B]",
+      "title": "<span style=\"background: linear-gradient(90deg, #F08B32 37.44%, #FFF 106.26%);background-clip: text; color: transparent; font-weight: 500\">Ready to Equip Your Field Team?</span>",
+      "description": "See how distributors are closing more deals with accurate orders and instant visibility",
+      "demoCtaButton": "Book Live Demo",
+      "demoSecButton": "See All Features"
+    }
+  ]
+}

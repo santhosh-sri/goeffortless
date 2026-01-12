@@ -9,7 +9,7 @@ type SearchBarProps = {
 
 export default function SearchBar({ onChange }: SearchBarProps) {
   return (
-    <div className="w-full max-w-[640px] mx-auto mb-16">
+    <div className="w-full max-w-[640px] mx-auto my-6">
       <div className="flex gap-2 items-center bg-[#2626264D] text-white rounded-lg px-3 py-2.5 shadow-md">
         <Image src={"/search-bar.svg"} alt="" width={20} height={20} />
         <input
