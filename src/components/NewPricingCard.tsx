@@ -1,5 +1,6 @@
 import { HomePagePricing } from "@/interface/type";
 import React from "react";
+import parse from "html-react-parser";
 import SecondaryCta from "./SecondaryCta";
 import { CalcomConfig } from "@/utils/calConfig";
 
@@ -50,13 +51,26 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                 [
                   { label: "Annual Price", key: "annualPrice" },
                   {
-                    label: "One-Time Implementation Fee",
+                    label:
+                      "One-Time Setup <span style='color: #F08B32'>(CA-Led Onboarding)</span>",
                     key: "oneTimeImplementationFee",
                   },
                   { label: "Number of Users (Up To)", key: "numberOfUsers" },
-                  { label: "OCR Scanning", key: "ocrScanning" },
-                  { label: "Document Evidence", key: "documentStorage" },
-                  { label: "Number of BRS", key: "numberOfBRS" },
+                  {
+                    label:
+                      "IDP Scans <span style='color: #F08B32'>(99.9% Accuracy)</span>",
+                    key: "ocrScanning",
+                  },
+                  {
+                    label:
+                      "Document Evidence Storage <span style='color: #F08B32'>(Bills, POs, DC, GRN, Contracts)</span>",
+                    key: "documentStorage",
+                  },
+                  {
+                    label:
+                      "Linked Bank Accounts <span style='color: #F08B32'>(Auto-BRS)</span>",
+                    key: "numberOfBRS",
+                  },
                   { label: "Additional User", key: "additionalUsersPrice" },
                   { label: "", key: "" },
                 ] as const
@@ -69,7 +83,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                         : "font-[400]"
                     }`}
                   >
-                    {row?.label}
+                    {parse(row?.label)}
                   </td>
                   {packageItems?.map((plan, planIndex) => (
                     <td

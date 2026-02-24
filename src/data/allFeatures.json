@@ -28,22 +28,37 @@
               "featureCards": [
                 {
                   "title": "Estimate, PI & Sales\n Order Creation",
-                  "description": "Send quotes, take orders instantly—no paperwork delays.",
+                  "description": "Send quotes and take orders on the spot. Sales don't get held up by paperwork.",
                   "img": "/bill 2.svg"
                 },
                 {
                   "title": "Scheme Creation and\n Management",
-                  "description": "Set SKU schemes by qty, period, or customer no manual setup.",
+                  "description": "Create SKU schemes by quantity and period, like Buy 5 get 10% off or slab discounts.",
                   "img": "/list-checkbox-2.svg"
                 },
                 {
                   "title": "Customer wise Credit\n Limit check",
-                  "description": "Check live credit limits synced with books, block invoices if exceeded.",
+                  "description": "Check Real time Customer Credit Limit in sync with your books and Set Restriction to Create Sales Invoices.",
                   "img": "/user.svg"
                 },
                 {
+                  "title": "Credit Days\n Restriction",
+                  "description": "Warn or block users when customers exceed credit limits.",
+                  "img": ""
+                },
+                {
+                  "title": "Custom Attachments for\n Orders, Invoices",
+                  "description": "Attach PDFs and images directly to Sales Orders, Invoices.",
+                  "img": ""
+                },
+                {
+                  "title": "Cut-Off Date\n Controls",
+                  "description": "Lock Accounting periods at Org or Voucher-type level.",
+                  "img": ""
+                },
+                {
                   "title": "Follow your own Voucher\n Type & Numbering",
-                  "description": "Select voucher type & series as in Tally continue using your existing setup.",
+                  "description": "Voucher Type and Series - Selection as per Tally to continue using the Tally Series / Voucher Type.",
                   "img": "/laptop-settings.svg"
                 },
                 {
@@ -58,12 +73,12 @@
                 },
                 {
                   "title": "Outstanding\n Receivables",
-                  "description": "See dues by customer or salesperson and make collections proactive.",
+                  "description": "Know what's due per customer, per salesperson. Collections become proactive.",
                   "img": "/hand-holding-coins.svg"
                 },
                 {
                   "title": "Collections\n",
-                  "description": "Record customer payments with details synced to your accountant.",
+                  "description": "Record Payments against customer and details are synced with your Accountant.",
                   "img": "/hand-holding-money 2.svg"
                 },
                 {
@@ -73,12 +88,12 @@
                 },
                 {
                   "title": "Customer Assignment to\n Team",
-                  "description": "Assign customers to specific teams with no overlap or confusion.",
+                  "description": "Assign customers to specific sales or support teams. No overlap. No confusion.",
                   "img": "/todo 2.svg"
                 },
                 {
                   "title": "Intelligent QR on\n Invoice",
-                  "description": "Add your Intelligent QR on Pro-forma or invoice for smother collections and reconciliation.",
+                  "description": "Get Transaction specific QR on your Sales orders or Invoice - collect faster. ",
                   "img": "/qrCode.svg"
                 }
               ]
@@ -96,13 +111,18 @@
                   "img": "/bill 2.svg"
                 },
                 {
+                  "title": "Custom Attachments for\n Bills Booking",
+                  "description": "Attach PDFs and images directly to bills. ",
+                  "img": "/circle-check.svg"
+                },
+                {
                   "title": "Multi GSTN Compliance\n Support",
                   "description": "Manage multiple branches and GSTNs centrally with hassle-free ITC.",
                   "img": "/circle-check.svg"
                 },
                 {
                   "title": "Vendor Purchase Invoice\n Email",
-                  "description": "AI auto email Vendor invoice bills are read, validated, and booked in no time.",
+                  "description": "AI auto email Vendor invoice — bills are read, validated, and booked in no time.",
                   "img": "/envelope-content.svg"
                 },
                 {
@@ -116,8 +136,8 @@
                   "img": "/hand-holding-money 2.svg"
                 },
                 {
-                  "title": "AI-Powered Bill\n Booking",
-                  "description": "Just click a photo bills are read, validated, and booked in no time.",
+                  "title": "AI-Powered Bills & Claims\n Booking",
+                  "description": "Just click a photo — bills are read, validated, and booked in no time.",
                   "img": "/receipt.svg"
                 },
                 {
@@ -127,12 +147,12 @@
                 },
                 {
                   "title": "Document Evidence\n Storage",
-                  "description": "Upload, store, and retrieve all financial proofs makes you audit ready.",
+                  "description": "Upload, store, and retrieve all financial proofs — makes you audit ready.",
                   "img": "/file-tree.svg"
                 },
                 {
                   "title": "Utility Bill\n Payments",
-                  "description": "Track and pay recurring expenses like mobile, internet, and electricity easily.",
+                  "description": "Track and Pay recurring office expenses effortlessly like mobile, internet, and electricity.",
                   "img": "/banking-mobile.svg"
                 }
               ]
@@ -151,27 +171,27 @@
                 },
                 {
                   "title": "Auto-categorisation of\n Bank Entries",
-                  "description": "Set once & forget the hassle - Let effortless AI do it next time.",
+                  "description": "Set once & forget the hassle - Let effortless AI do it next time. ",
                   "img": "/bell-filled 1.svg"
                 },
                 {
                   "title": "Collection Alerts to\n Owners",
-                  "description": "Get bank statement alerts by frequency know who paid and how much.",
+                  "description": "Get notified instantly basis the frequency of bank statement to your email. Know who paid and how much.",
                   "img": "/user-update.svg"
                 },
                 {
                   "title": "Party\n Collection",
-                  "description": "Map collections to customers and share data with your accountant.",
+                  "description": "Map collections to specific customers and ensure data is shared with your accountant.",
                   "img": "/circle-user-filled 1.svg"
                 },
                 {
                   "title": "Generate Bulk Payment\n Files for (All Leading Banks)",
-                  "description": "Handle approvals and generate bank payment files in Effortless.",
+                  "description": "Do all approvals and checks in Effortless, & generate payment file basis each bank for one shot payment via bank portal.",
                   "img": "/hand-holding-money 1.svg"
                 },
                 {
                   "title": "Petty Cash\n Management",
-                  "description": "Track small cash spends at branches or in the field with full control.",
+                  "description": "Track small cash spends at branches or in the field — with full control.",
                   "img": "/money-bill-coin.svg"
                 }
               ]
@@ -190,7 +210,7 @@
                 },
                 {
                   "title": "Approval for Purchases,\n Claims & Payments",
-                  "description": "Bring Visibility and Control to all your expenses",
+                  "description": "Bring Visibility and Control to all your expense approval flows.",
                   "img": "/list-check.svg"
                 },
                 {
@@ -200,7 +220,7 @@
                 },
                 {
                   "title": "Designation-based Claim\n Rule Setup",
-                  "description": "Define who can approve based on their role in your organization.",
+                  "description": "Define approval access basis designations you have in your organization.",
                   "img": "/user-check.svg"
                 },
                 {
@@ -210,12 +230,12 @@
                 },
                 {
                   "title": "Audit Trail",
-                  "description": "Track daily activity in Effortless and control who does what.",
+                  "description": "You may choose to track daily activity across effortless and have control on who is doing what!",
                   "img": "/calendar-check.svg"
                 },
                 {
                   "title": "Multiple outlet/\nwarehouse/company management",
-                  "description": "Multi Warehouse management support for Invoicing and bill booking",
+                  "description": "Multi Warehouse management support for Invoicing and bill booking.",
                   "img": "/storage-unit.svg"
                 },
                 {
@@ -238,6 +258,16 @@
                   "img": "/Live Gps Tracking.svg"
                 },
                 {
+                  "title": "Live Location check-in\n Photo – Not from Gallery",
+                  "description": "Ensure, the location Photo was taken there (not from image galary).",
+                  "img": "/Live Gps Tracking.svg"
+                },
+                {
+                  "title": "Multiple photos in a single\n customer point.",
+                  "description": "Capture Customer location photos for business needs.",
+                  "img": "/Live Gps Tracking.svg"
+                },
+                {
                   "title": "Fraud\n Prevention",
                   "description": "All Mobile GPS Hacks is prevented through our security measures",
                   "img": "/lock-2.svg"
@@ -256,6 +286,11 @@
                   "title": "Biometric\n Integration",
                   "description": "Add biometric hardware for secure check-ins with no proxy punching.",
                   "img": "/hold 1.svg"
+                },
+                {
+                  "title": "Time Spent in Market /\n Customer",
+                  "description": "Know time spent in market / Customer place by your sales resource.",
+                  "img": "/Geo fencing.svg"
                 },
                 {
                   "title": "Geo-Fencing",
@@ -317,12 +352,12 @@
                 },
                 {
                   "title": "Sales Order\n Report",
-                  "description": "View sales order reports by customer, item, or salesperson.",
+                  "description": "View Sales Order report By Customer / Customer Group / Item / Item Group / Sales Person Wise.",
                   "img": "/chart-bar-arrow-up.svg"
                 },
                 {
                   "title": "Sales Report ",
-                  "description": "View sales reports by customer, item, or salesperson.",
+                  "description": "View Sales report By Customer / Customer Group / Item / Item Group / Sales Person Wise.",
                   "img": "/chart-pie-4 1.svg"
                 },
                 {
@@ -337,7 +372,7 @@
                 },
                 {
                   "title": "Compliance Reports\n (TDS, ITC)",
-                  "description": "Get TDS and ITC reports to ensure accuracy and avoid losses.",
+                  "description": "TDS reports basis TDS rules set, and ITC reports to double ensure you don't lose out due to errors.",
                   "img": "/search-chart.svg"
                 },
                 {
@@ -360,19 +395,9 @@
             "featureCardsSection": {
               "featureCards": [
                 {
-                  "title": "Personalised SOA Portal",
-                  "description": "Each buyer gets an individual portal login where, they can download or view live SOA anytime.",
-                  "img": "/bank-statement 1.svg"
-                },
-                {
                   "title": "Product Catalog with In-\nStock Items",
                   "description": "Buyers see exactly what's available with photos, no back-and-forth.",
                   "img": "/cart-simple-add 1.svg"
-                },
-                {
-                  "title": "Dashboard with\n Transaction History",
-                  "description": "Buyers get full visibility into past orders and invoices all in one place.",
-                  "img": "/todo 1.svg"
                 },
                 {
                   "title": "Self-Serve Ordering\n & Tracking",
@@ -380,9 +405,19 @@
                   "img": "/cart-plus 1.svg"
                 },
                 {
+                  "title": "Dashboard with\n Transaction History",
+                  "description": "Buyers get full visibility into past orders and invoices all in one place.",
+                  "img": "/todo 1.svg"
+                },
+                {
                   "title": "Open\n Bills",
                   "description": "They can view pending payments and clear dues directly.",
                   "img": "/bill 3.svg"
+                },
+                {
+                  "title": "Statement of\n Accounts",
+                  "description": "Download or view SoA anytime — no need to contact finance.",
+                  "img": "/bank-statement 1.svg"
                 }
               ]
             }
@@ -426,7 +461,7 @@
                 },
                 {
                   "title": "Implementation &\n Onboarding Support",
-                  "description": "Your journey begins seamlessly with our Onboarding Experts and seasoned CAs.",
+                  "description": "Your journey starts smoothly with our Onboarding Experts supported by veteran CAs.",
                   "img": "/badge-check.svg"
                 },
                 {
@@ -471,7 +506,7 @@
     {
       "href": "#section4",
       "tagLine": "Pricing",
-      "title": "Pick the Plan ",
+      "title": "Pick a Plan ",
       "colouredTitle": "That Powers Your Growth",
       "description": "No hidden fees. No surprises. Plans that fit your stage.",
       "pricingCards": [
