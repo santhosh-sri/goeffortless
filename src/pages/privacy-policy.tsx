@@ -1,9 +1,8 @@
-import PrivacyPolicy from "@/components/PrivacyPolicy";
+import NewPrivacyPolicy from "@/components/NewPrivacyPolicy";
 import privacyData from "@/data/privacy-policy.json";
-import React from "react";
 
 const PrivacyPolicyPage = () => {
-  return <PrivacyPolicy {...privacyData} />;
+  return <NewPrivacyPolicy {...privacyData} />;
 };
 
-export default PrivacyPolicyPage; 
+export default PrivacyPolicyPage;
