@@ -14,31 +14,31 @@ export const pricingHeader = {
 export const pricingData = {
   Overview: [
     {
-      name: "One-Time Implementation Fee",
+      name: "One-Time Setup <span style='color: #F08B32'>(CA-Led Onboarding)</span>",
       premiumPro: "<span class='text-[#F08B32]'>₹1,24,000</span>",
       premium: "<span class='text-[#F08B32]'>₹48,000</span>",
       lite: "<span class='text-[#F08B32]'> Free</span>",
     },
     {
-      name: "Number of Free Users (with Base Plan)",
+      name: "Number of Free Users <span style='color: #F08B32'>(with Base Plan)</span>",
       premiumPro: "50",
       premium: "15",
       lite: "5",
     },
     {
-      name: "OCR Scanning",
+      name: "IDP Scans <span style='color: #F08B32'>(99.9% Accuracy)</span>",
       premiumPro: "20,000",
       premium: "5,000",
       lite: "N/A",
     },
     {
-      name: "Document Storage",
+      name: "Document Evidence Storage <span style='color: #F08B32'>(Bills, POs, DC, GRN, Contracts)</span>",
       premiumPro: "25GB",
       premium: "10GB",
       lite: "5GB",
     },
     {
-      name: "Number of BRS",
+      name: "Linked Bank Accounts <span style='color: #F08B32'>(Auto-BRS)</span>",
       premiumPro: "5",
       premium: "2",
       lite: "1",
@@ -67,6 +67,27 @@ export const pricingData = {
     },
     {
       name: "Customer wise Credit Limit check",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Credit Days Restriction",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Custom Attachments for Orders, Invoices",
+      premiumPro: "<span class='text-emerald-400'>✓</span> - Custom",
+      premium: "<span class='text-emerald-400'>✓</span> - Custom",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Cut-Off Date Controls",
       premiumPro: "✓",
       premium: "✓",
       lite: "✓",
@@ -126,7 +147,8 @@ export const pricingData = {
       premiumPro: "✓",
       premium: "✓",
       lite: "✕",
-      enterprise: "✓",}
+      enterprise: "✓",
+    }
   ],
   "Purchase & Expense Management": [
     {
@@ -134,6 +156,13 @@ export const pricingData = {
       premiumPro: "✓",
       premium: "✓",
       lite: "✕",
+      enterprise: "✓",
+    },
+    {
+      name: "Custom Attachments for Bills Booking",
+      premiumPro: "<span class='text-emerald-400'>✓</span> - Custom",
+      premium: "<span class='text-emerald-400'>✓</span> - Custom",
+      lite: "✓",
       enterprise: "✓",
     },
     {
@@ -166,8 +195,15 @@ export const pricingData = {
     },
     {
       name: "AI-Powered Bill Booking",
-      premiumPro: "✓",
-      premium: "✓",
+      premiumPro: "Upto 20k Pages AI Scans free",
+      premium: "Upto 5k Pages AI Scans free",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "AI-Powered Claim Booking",
+      premiumPro: "Upto 20k Pages AI Scans free",
+      premium: "Upto 5k Pages AI Scans free",
       lite: "✓",
       enterprise: "✓",
     },
@@ -304,6 +340,20 @@ export const pricingData = {
       enterprise: "✓",
     },
     {
+      name: "Live Location check-in Photo – Not from Gallery",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✕",
+      enterprise: "✓",
+    },
+    {
+      name: "Multiple photos in a single customer point.",
+      premiumPro: "✓",
+      premium: "✕",
+      lite: "✕",
+      enterprise: "✓",
+    },
+    {
       name: "Fraud Prevention",
       premiumPro: "✓",
       premium: "✕",
@@ -329,6 +379,27 @@ export const pricingData = {
       premiumPro: "✓",
       premium: "✓",
       lite: "✕",
+      enterprise: "✓",
+    },
+    {
+      name: "Kms Travelled",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Spend/ Visited More than 10+ Mins / per customer Report",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
+    },
+    {
+      name: "Time Spent in Market",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
       enterprise: "✓",
     },
     {

@@ -80,8 +80,8 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             Private Limited.
           </p>
           <p className="mb-6 leading-relaxed text-gray-300">
-            We, Agrya Consulting Private Limited, reserve the right to review
-            and amend any of these Terms of Service at our sole discretion. Upon
+            We, Agrya FinLabs Private Limited, reserve the right to review and
+            amend any of these Terms of Service at our sole discretion. Upon
             doing so, we will update this page. Any changes to these Terms of
             Service will take effect immediately from the date of publication.
           </p>
@@ -116,7 +116,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
           </h2>
           <p className="mb-6 leading-relaxed text-gray-300">
             The intellectual property in the materials contained in this website
-            are owned by or licensed to Agrya Consulting Private Limited and are
+            are owned by or licensed to Agrya FinLabs Private Limited and are
             protected by applicable copyright and trademark law.
           </p>
           <p className="mb-6 leading-relaxed text-gray-300">
@@ -127,7 +127,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             This constitutes the grant of a license, not a transfer of title.
             This license shall automatically terminate if you violate any of
             these restrictions or the Terms of Service, and may be terminated by
-            Agrya Consulting Private Limited at any time.
+            Agrya FinLabs Private Limited at any time.
           </p>
 
           <h2 className="text-2xl font-medium mt-8 mb-4">Liability</h2>
@@ -141,12 +141,12 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             intellectual property, or other violation of rights.
           </p>
           <p className="mb-6 leading-relaxed text-gray-300">
-            In no event shall Agrya Consulting Private Limited or its suppliers
-            be liable for any consequential loss suffered or incurred by you or
-            any third party arising from the use or inability to use this
-            website or the materials on this website, even if Agrya Consulting
-            Private Limited or an authorised representative has been notified,
-            orally or in writing, of the possibility of such damage.
+            In no event shall Agrya FinLabs Private Limited or its suppliers be
+            liable for any consequential loss suffered or incurred by you or any
+            third party arising from the use or inability to use this website or
+            the materials on this website, even if Agrya Consulting Private
+            Limited or an authorised representative has been notified, orally or
+            in writing, of the possibility of such damage.
           </p>
           <p className="mb-6 leading-relaxed text-gray-300">
             In the context of this agreement, "consequential loss" includes any
@@ -177,11 +177,11 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
 
           <h2 className="text-2xl font-medium mt-8 mb-4">Links</h2>
           <p className="mb-6 leading-relaxed text-gray-300">
-            Agrya Consulting Private Limited has not reviewed all of the sites
+            Agrya FinLabs Private Limited has not reviewed all of the sites
             linked to its website and is not responsible for the contents of any
             such linked site. The inclusion of any link does not imply
-            endorsement, approval or control by Agrya Consulting Private Limited
-            of the site. Use of any such linked site is at your own risk and we
+            endorsement, approval or control by Agrya FinLabs Private Limited of
+            the site. Use of any such linked site is at your own risk and we
             strongly advise you make your own investigations with respect to the
             suitability of those sites.
           </p>

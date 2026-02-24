@@ -86,7 +86,7 @@ const PricingFeatures = ({
               className="border-t-0 border-[#2D2D2D] box-shadow-[0px_0px_0px_1px_#1019280D] first:border-t-0"
             >
               <td className="py-4 pl-6 pr-4 text-[14px] font-[400] text-[#E4E4E7] md:text-[#fff] min-w-[300px] w-[40%] border-b border-r border-[#2D2D2D]">
-                {feature.name}
+                {parse(feature.name)}
               </td>
               {planOrder.map((tier, i) => (
                 <td

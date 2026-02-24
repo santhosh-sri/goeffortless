@@ -202,7 +202,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
               <Image
                 src={bannerImage}
                 alt="service-banner"
-                width={600}
+                width={620}
                 height={442}
                 priority
                 unoptimized={true}
@@ -211,8 +211,8 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                 }`}
               />
               {ishome && (
-                <div className="flex gap-2 items-center justify-center">
-                  <p className="text-xl font-[300] md:text-[32px] md:leading-8 leading-5 text-center text-[#F08B32]">
+                <div className="flex gap-2 items-end justify-center">
+                  <p className="text-xl font-[300] md:leading-8 leading-5 text-center text-[#F08B32]">
                     Work seamlessly with:
                   </p>
                   <Image
