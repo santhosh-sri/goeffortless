@@ -44,17 +44,17 @@
                 {
                   "title": "Credit Days\n Restriction",
                   "description": "Warn or block users when customers exceed credit limits.",
-                  "img": ""
+                  "img": "/credit-day.svg"
                 },
                 {
                   "title": "Custom Attachments for\n Orders, Invoices",
                   "description": "Attach PDFs and images directly to Sales Orders, Invoices.",
-                  "img": ""
+                  "img": "/attach-ment.svg"
                 },
                 {
                   "title": "Cut-Off Date\n Controls",
                   "description": "Lock Accounting periods at Org or Voucher-type level.",
-                  "img": ""
+                  "img": "/cut-off.svg"
                 },
                 {
                   "title": "Follow your own Voucher\n Type & Numbering",
@@ -113,7 +113,7 @@
                 {
                   "title": "Custom Attachments for\n Bills Booking",
                   "description": "Attach PDFs and images directly to bills. ",
-                  "img": "/circle-check.svg"
+                  "img": "/attach-pdf.svg"
                 },
                 {
                   "title": "Multi GSTN Compliance\n Support",
@@ -260,12 +260,12 @@
                 {
                   "title": "Live Location check-in\n Photo – Not from Gallery",
                   "description": "Ensure, the location Photo was taken there (not from image galary).",
-                  "img": "/Live Gps Tracking.svg"
+                  "img": "/photo-checkin.svg"
                 },
                 {
                   "title": "Multiple photos in a single\n customer point.",
                   "description": "Capture Customer location photos for business needs.",
-                  "img": "/Live Gps Tracking.svg"
+                  "img": "/multi-photo.svg"
                 },
                 {
                   "title": "Fraud\n Prevention",
@@ -290,7 +290,7 @@
                 {
                   "title": "Time Spent in Market /\n Customer",
                   "description": "Know time spent in market / Customer place by your sales resource.",
-                  "img": "/Geo fencing.svg"
+                  "img": "/time-spent.svg"
                 },
                 {
                   "title": "Geo-Fencing",
@@ -417,7 +417,7 @@
                 {
                   "title": "Statement of\n Accounts",
                   "description": "Download or view SoA anytime — no need to contact finance.",
-                  "img": "/bank-statement 1.svg"
+                  "img": "/statement.svg"
                 }
               ]
             }

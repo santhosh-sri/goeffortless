@@ -51,12 +51,15 @@ const NewPrivacyPolicy: React.FC<
           {/* 1. Introduction */}
           <h2 className="text-2xl font-medium mt-8 mb-4">1. Introduction</h2>
           <p className="mb-6 leading-relaxed text-[#e4e4e7]">
-            This Privacy Policy explains how Agrya FinLabs Private Limited
-            (<span className="font-medium text-white">&ldquo;Effortless,&rdquo;</span>{" "}
+            This Privacy Policy explains how Agrya FinLabs Private Limited (
+            <span className="font-medium text-white">
+              &ldquo;Effortless,&rdquo;
+            </span>{" "}
             <span className="font-medium text-white">&ldquo;we,&rdquo;</span>{" "}
             <span className="font-medium text-white">&ldquo;us,&rdquo;</span> or{" "}
-            <span className="font-medium text-white">&ldquo;our&rdquo;</span>) collects, uses, shares, and protects information
-            when you use our website (
+            <span className="font-medium text-white">&ldquo;our&rdquo;</span>)
+            collects, uses, shares, and protects information when you use our
+            website (
             <a
               href="https://www.goeffortless.ai"
               target="_blank"
@@ -65,10 +68,20 @@ const NewPrivacyPolicy: React.FC<
             >
               www.goeffortless.ai
             </a>
-            ), our cloud-based accounting platform (<span className="font-medium text-white">&ldquo;Effortless&rdquo;</span>),
-            our field workforce management application
-            (<span className="font-medium text-white">&ldquo;EffortlessGeo&rdquo;</span>), and any related services, mobile
-            applications, and tools (collectively, the <span className="font-medium text-white">&ldquo;Services&rdquo;</span>).
+            ), our Cloud-based finance and business operations platform (
+            <span className="font-medium text-white">
+              &ldquo;Effortless&rdquo;
+            </span>
+            ), our field workforce management application (
+            <span className="font-medium text-white">
+              &ldquo;EffortlessGeo&rdquo;
+            </span>
+            ), and any related services, mobile applications, and tools
+            (collectively, the{" "}
+            <span className="font-medium text-white">
+              &ldquo;Services&rdquo;
+            </span>
+            ).
           </p>
           <p className="mb-6 leading-relaxed text-[#e4e4e7]">
             This policy applies to all users of our Services, including
@@ -85,28 +98,33 @@ const NewPrivacyPolicy: React.FC<
           <h2 className="text-2xl font-medium mt-8 mb-4">2. Definitions</h2>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">Customer(s):</span> Businesses, firms, or organizations
-              that subscribe to and use the Services.
+              <span className="font-medium text-white">Customer(s):</span>{" "}
+              Businesses, firms, or organizations that subscribe to and use the
+              Services.
             </li>
             <li>
-              <span className="font-medium text-white">Administrator(s):</span> Individuals appointed by
-              Customers to manage the use of Services, configure settings, and
-              oversee user accounts.
+              <span className="font-medium text-white">Administrator(s):</span>{" "}
+              Individuals appointed by Customers to manage the use of Services,
+              configure settings, and oversee user accounts.
             </li>
             <li>
-              <span className="font-medium text-white">End User(s):</span> Employees, staff, or individuals of
-              Customers who use the Services as part of their work.
+              <span className="font-medium text-white">End User(s):</span>{" "}
+              Employees, staff, or individuals of Customers who use the Services
+              as part of their work.
             </li>
             <li>
-              <span className="font-medium text-white">Personal Information:</span> Information that identifies
-              or can be used to identify an individual, such as name, email
-              address, phone number, device identifiers, and location data.
+              <span className="font-medium text-white">
+                Personal Information:
+              </span>{" "}
+              Information that identifies or can be used to identify an
+              individual, such as name, email address, phone number, device
+              identifiers, and location data.
             </li>
             <li>
-              <span className="font-medium text-white">Business Data:</span> Data provided by Customers and
-              Administrators for the purpose of using the Services, including
-              financial records, invoices, transaction data, and employee
-              information.
+              <span className="font-medium text-white">Business Data:</span>{" "}
+              Data provided by Customers and Administrators for the purpose of
+              using the Services, including financial records, invoices,
+              transaction data, and employee information.
             </li>
           </ul>
 
@@ -174,36 +192,43 @@ const NewPrivacyPolicy: React.FC<
           </p>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">GPS Coordinates:</span> Real-time latitude and longitude
-              of your device when you punch in/out, log a visit, or when
-              location tracking is active.
+              <span className="font-medium text-white">GPS Coordinates:</span>{" "}
+              Real-time latitude and longitude of your device when you punch
+              in/out, log a visit, or when location tracking is active.
             </li>
             <li>
-              <span className="font-medium text-white">Background Location Data:</span> When enabled by your
-              Administrator, EffortlessGeo may collect your device&apos;s
-              location in the background (i.e., even when the app is not
-              actively in use) during the active tracking period configured by
-              your employer. Background tracking requires a daily check-in and
-              does not operate indefinitely without user action.
+              <span className="font-medium text-white">
+                Background Location Data:
+              </span>{" "}
+              When enabled by your Administrator, EffortlessGeo may collect your
+              device&apos;s location in the background (i.e., even when the app
+              is not actively in use) during the active tracking period
+              configured by your employer. Background tracking requires a daily
+              check-in and does not operate indefinitely without user action.
             </li>
             <li>
-              <span className="font-medium text-white">Geofence Events:</span> Entry and exit events when you
-              enter or leave a predefined geographic boundary such as office
-              premises, client sites, or warehouses.
+              <span className="font-medium text-white">Geofence Events:</span>{" "}
+              Entry and exit events when you enter or leave a predefined
+              geographic boundary such as office premises, client sites, or
+              warehouses.
             </li>
             <li>
-              <span className="font-medium text-white">Location Timestamps:</span> The date and time associated
-              with each location data point.
+              <span className="font-medium text-white">
+                Location Timestamps:
+              </span>{" "}
+              The date and time associated with each location data point.
             </li>
             <li>
-              <span className="font-medium text-white">Location Accuracy and Source:</span> Metadata about the
-              precision of the location fix and whether it was derived from GPS,
-              Wi-Fi, cell towers, or other sources.
+              <span className="font-medium text-white">
+                Location Accuracy and Source:
+              </span>{" "}
+              Metadata about the precision of the location fix and whether it
+              was derived from GPS, Wi-Fi, cell towers, or other sources.
             </li>
             <li>
-              <span className="font-medium text-white">Visit Photos:</span> Photographs captured through the
-              app during site visits, which may contain embedded location
-              metadata (EXIF data).
+              <span className="font-medium text-white">Visit Photos:</span>{" "}
+              Photographs captured through the app during site visits, which may
+              contain embedded location metadata (EXIF data).
             </li>
           </ul>
 
@@ -235,19 +260,21 @@ const NewPrivacyPolicy: React.FC<
           </p>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">Log Data:</span> IP address, pages/screens visited,
-              features used, actions taken, date and time of access, and
-              referring URLs.
+              <span className="font-medium text-white">Log Data:</span> IP
+              address, pages/screens visited, features used, actions taken, date
+              and time of access, and referring URLs.
             </li>
             <li>
-              <span className="font-medium text-white">Attendance and Visit Data (EffortlessGeo):</span>{" "}
+              <span className="font-medium text-white">
+                Attendance and Visit Data (EffortlessGeo):
+              </span>{" "}
               Punch-in/punch-out timestamps and locations, visit logs
               (client/site visited, check-in/check-out times, location), and
               distance travelled.
             </li>
             <li>
-              <span className="font-medium text-white">Feature Usage:</span> Which modules, reports, and tools
-              you access and how frequently.
+              <span className="font-medium text-white">Feature Usage:</span>{" "}
+              Which modules, reports, and tools you access and how frequently.
             </li>
           </ul>
 
@@ -312,52 +339,65 @@ const NewPrivacyPolicy: React.FC<
           </p>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">Directly from You:</span> When you create an account,
-              fill in forms, upload data, configure settings, or communicate
-              with us.
+              <span className="font-medium text-white">Directly from You:</span>{" "}
+              When you create an account, fill in forms, upload data, configure
+              settings, or communicate with us.
             </li>
             <li>
-              <span className="font-medium text-white">From Your Employer/Administrator:</span> When your
-              organization provides employee data to set up and manage Services.
+              <span className="font-medium text-white">
+                From Your Employer/Administrator:
+              </span>{" "}
+              When your organization provides employee data to set up and manage
+              Services.
             </li>
             <li>
-              <span className="font-medium text-white">Automatically from Your Device:</span> Log data and
-              usage analytics when you access our website or Services; device
-              information and identifiers when you install or use our mobile
-              apps; cookies and similar technologies when you browse our
-              website.
+              <span className="font-medium text-white">
+                Automatically from Your Device:
+              </span>{" "}
+              Log data and usage analytics when you access our website or
+              Services; device information and identifiers when you install or
+              use our mobile apps; cookies and similar technologies when you
+              browse our website.
             </li>
             <li>
-              <span className="font-medium text-white">Foreground Location (EffortlessGeo):</span> When you
-              actively use the app to punch in/out, log a visit, or interact
-              with map features.
+              <span className="font-medium text-white">
+                Foreground Location (EffortlessGeo):
+              </span>{" "}
+              When you actively use the app to punch in/out, log a visit, or
+              interact with map features.
             </li>
             <li>
-              <span className="font-medium text-white">Background Location (EffortlessGeo):</span> When your
-              Administrator enables continuous location tracking, the app
-              accesses your device&apos;s location in the background during the
-              configured active period. This requires a daily check-in and
+              <span className="font-medium text-white">
+                Background Location (EffortlessGeo):
+              </span>{" "}
+              When your Administrator enables continuous location tracking, the
+              app accesses your device&apos;s location in the background during
+              the configured active period. This requires a daily check-in and
               explicit device-level permission from you.
             </li>
             <li>
-              <span className="font-medium text-white">Geofence Monitoring (EffortlessGeo):</span> Your device
-              sends location updates when you cross the boundary of a geofenced
-              area configured by your Administrator.
+              <span className="font-medium text-white">
+                Geofence Monitoring (EffortlessGeo):
+              </span>{" "}
+              Your device sends location updates when you cross the boundary of
+              a geofenced area configured by your Administrator.
             </li>
             <li>
-              <span className="font-medium text-white">IP-Based Location:</span> We may use your IP address to
-              approximate your general location for security and fraud detection
-              purposes.
+              <span className="font-medium text-white">IP-Based Location:</span>{" "}
+              We may use your IP address to approximate your general location
+              for security and fraud detection purposes.
             </li>
             <li>
-              <span className="font-medium text-white">Third-Party Services and Integrations:</span> When you
-              connect external services (Google Workspace, Tally, banking APIs)
-              to your Effortless account.
+              <span className="font-medium text-white">
+                Third-Party Services and Integrations:
+              </span>{" "}
+              When you connect external services (Google Workspace, Tally,
+              banking APIs) to your Effortless account.
             </li>
             <li>
-              <span className="font-medium text-white">Communications:</span> When you contact us for support,
-              participate in surveys, or interact with our social media
-              accounts.
+              <span className="font-medium text-white">Communications:</span>{" "}
+              When you contact us for support, participate in surveys, or
+              interact with our social media accounts.
             </li>
           </ul>
 
@@ -405,36 +445,48 @@ const NewPrivacyPolicy: React.FC<
           </p>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">Attendance Verification:</span> Verify that attendance
-              punches are made from authorized or expected locations.
+              <span className="font-medium text-white">
+                Attendance Verification:
+              </span>{" "}
+              Verify that attendance punches are made from authorized or
+              expected locations.
             </li>
             <li>
-              <span className="font-medium text-white">Visit Tracking:</span> Confirm that field staff have
-              visited assigned client sites and log visit durations and photo
-              evidence.
+              <span className="font-medium text-white">Visit Tracking:</span>{" "}
+              Confirm that field staff have visited assigned client sites and
+              log visit durations and photo evidence.
             </li>
             <li>
-              <span className="font-medium text-white">Live Tracking:</span> Enable Administrators to view
-              real-time location of field staff during active tracking periods
-              for coordination and safety purposes.
+              <span className="font-medium text-white">Live Tracking:</span>{" "}
+              Enable Administrators to view real-time location of field staff
+              during active tracking periods for coordination and safety
+              purposes.
             </li>
             <li>
-              <span className="font-medium text-white">Route and Distance Tracking:</span> Calculate distance
-              travelled and display movement history for reimbursement,
-              reporting, and operational planning.
+              <span className="font-medium text-white">
+                Route and Distance Tracking:
+              </span>{" "}
+              Calculate distance travelled and display movement history for
+              reimbursement, reporting, and operational planning.
             </li>
             <li>
-              <span className="font-medium text-white">Geofence Alerts:</span> Notify Administrators when
-              employees enter or leave designated areas.
+              <span className="font-medium text-white">Geofence Alerts:</span>{" "}
+              Notify Administrators when employees enter or leave designated
+              areas.
             </li>
             <li>
-              <span className="font-medium text-white">Reports and Analytics:</span> Generate location-based
-              workforce management reports, including movement summaries, visit
-              reports, and attendance analytics.
+              <span className="font-medium text-white">
+                Reports and Analytics:
+              </span>{" "}
+              Generate location-based workforce management reports, including
+              movement summaries, visit reports, and attendance analytics.
             </li>
             <li>
-              <span className="font-medium text-white">Safety and Compliance:</span> Support employee safety
-              monitoring and regulatory compliance requirements of the employer.
+              <span className="font-medium text-white">
+                Safety and Compliance:
+              </span>{" "}
+              Support employee safety monitoring and regulatory compliance
+              requirements of the employer.
             </li>
           </ul>
 
@@ -613,30 +665,34 @@ const NewPrivacyPolicy: React.FC<
           </p>
           <ul className="list-disc list-inside mb-4 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">Encryption:</span> All data in transit is encrypted
-              using TLS. Data at rest is encrypted using AES-256 or equivalent
-              standards.
+              <span className="font-medium text-white">Encryption:</span> All
+              data in transit is encrypted using TLS. Data at rest is encrypted
+              using AES-256 or equivalent standards.
             </li>
             <li>
-              <span className="font-medium text-white">Access Controls:</span> Access to user data is
-              restricted to authorized personnel only, with multi-factor
-              authentication and role-based access controls.
+              <span className="font-medium text-white">Access Controls:</span>{" "}
+              Access to user data is restricted to authorized personnel only,
+              with multi-factor authentication and role-based access controls.
             </li>
             <li>
-              <span className="font-medium text-white">Infrastructure Security:</span> Our Services are hosted
-              on secure, certified cloud infrastructure with regular security
-              assessments.
+              <span className="font-medium text-white">
+                Infrastructure Security:
+              </span>{" "}
+              Our Services are hosted on secure, certified cloud infrastructure
+              with regular security assessments.
             </li>
             <li>
-              <span className="font-medium text-white">Monitoring and Auditing:</span> We continuously monitor
-              our systems for vulnerabilities and conduct periodic security
-              audits.
+              <span className="font-medium text-white">
+                Monitoring and Auditing:
+              </span>{" "}
+              We continuously monitor our systems for vulnerabilities and
+              conduct periodic security audits.
             </li>
             <li>
-              <span className="font-medium text-white">Incident Response:</span> We maintain a security
-              incident response process. In the event of a data breach, affected
-              users and Customers will be notified as required by applicable
-              law.
+              <span className="font-medium text-white">Incident Response:</span>{" "}
+              We maintain a security incident response process. In the event of
+              a data breach, affected users and Customers will be notified as
+              required by applicable law.
             </li>
           </ul>
           <p className="mb-6 leading-relaxed text-[#e4e4e7]">
@@ -653,24 +709,34 @@ const NewPrivacyPolicy: React.FC<
           <h3 className="text-xl font-medium mt-6 mb-3">9.1 Retention</h3>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">Business Data and Account Data:</span> Retained for as
-              long as the Customer&apos;s account is active and as required by
-              the Customer&apos;s subscription and applicable laws (e.g., tax
-              and financial record-keeping requirements under Indian law).
+              <span className="font-medium text-white">
+                Business Data and Account Data:
+              </span>{" "}
+              Retained for as long as the Customer&apos;s account is active and
+              as required by the Customer&apos;s subscription and applicable
+              laws (e.g., tax and financial record-keeping requirements under
+              Indian law).
             </li>
             <li>
-              <span className="font-medium text-white">Location Data (EffortlessGeo):</span> Retained for as
-              long as the Customer&apos;s account is active and in accordance
-              with the Customer&apos;s data retention policies.
+              <span className="font-medium text-white">
+                Location Data (EffortlessGeo):
+              </span>{" "}
+              Retained for as long as the Customer&apos;s account is active and
+              in accordance with the Customer&apos;s data retention policies.
             </li>
             <li>
-              <span className="font-medium text-white">Usage Logs and Analytics:</span> Retained for a
-              reasonable period to support product improvement, security
-              monitoring, and troubleshooting.
+              <span className="font-medium text-white">
+                Usage Logs and Analytics:
+              </span>{" "}
+              Retained for a reasonable period to support product improvement,
+              security monitoring, and troubleshooting.
             </li>
             <li>
-              <span className="font-medium text-white">Google Workspace Data:</span> Retained only for as long
-              as necessary to provide the Services you have consented to.
+              <span className="font-medium text-white">
+                Google Workspace Data:
+              </span>{" "}
+              Retained only for as long as necessary to provide the Services you
+              have consented to.
             </li>
           </ul>
 
@@ -734,15 +800,17 @@ const NewPrivacyPolicy: React.FC<
           </p>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">Service Providers</span> who perform specific functions
-              for us and are bound by data protection agreements.
+              <span className="font-medium text-white">Service Providers</span>{" "}
+              who perform specific functions for us and are bound by data
+              protection agreements.
             </li>
             <li>
-              <span className="font-medium text-white">Legal Compliance</span> requirements as described in
-              Section 7.4.
+              <span className="font-medium text-white">Legal Compliance</span>{" "}
+              requirements as described in Section 7.4.
             </li>
             <li>
-              <span className="font-medium text-white">Business Transfers</span> as described in Section 7.5.
+              <span className="font-medium text-white">Business Transfers</span>{" "}
+              as described in Section 7.5.
             </li>
           </ul>
 
@@ -750,33 +818,44 @@ const NewPrivacyPolicy: React.FC<
           <h2 className="text-2xl font-medium mt-8 mb-4">
             11. EffortlessGeo — Google Play Prominent Disclosure
           </h2>
+          <p className="mb-6 leading-relaxed text-[#e4e4e7] italic border-l border-[#818181] pl-4 ml-4">
+            Note for dev team: This section’s content must also be displayed as
+            an in-app disclosure screen before requesting background location
+            permission, as required by Google Play policy.
+          </p>
           <p className="mb-6 leading-relaxed text-[#e4e4e7]">
-            EffortlessGeo collects your device&apos;s location data in the
-            background to enable your employer to track attendance, verify field
-            visits, and monitor workforce movement during active tracking
-            periods. This data collection occurs even when the app is closed or
-            not in use, but requires a daily check-in to remain active.
+            EffortlessGeo collects your device&apos;s location data{" "}
+            <span className="font-medium text-white">in the background</span> to
+            enable your employer to track attendance, verify field visits, and
+            monitor workforce movement during active tracking periods. This data
+            collection occurs even when the app is closed or not in use, but
+            requires a daily check-in to remain active.
           </p>
           <ul className="list-disc list-inside mb-4 space-y-2 text-[#e4e4e7]">
             <li>
-              <span className="font-medium text-white">What is collected:</span> GPS coordinates, timestamps,
-              movement data, and visit photographs.
+              <span className="font-medium text-white">What is collected:</span>{" "}
+              GPS coordinates, timestamps, movement data, and visit photographs.
             </li>
             <li>
-              <span className="font-medium text-white">Why:</span> To provide attendance tracking, visit
-              verification, live tracking, and route history services to your
-              employer.
+              <span className="font-medium text-white">Why:</span> To provide
+              attendance tracking, visit verification, live tracking, and route
+              history services to your employer.
             </li>
             <li>
-              <span className="font-medium text-white">Who has access:</span> Your employer&apos;s authorized
-              Administrators and Effortless (as the service provider).
+              <span className="font-medium text-white">Who has access:</span>{" "}
+              Your employer&apos;s authorized Administrators and Effortless (as
+              the service provider).
             </li>
           </ul>
           <p className="mb-6 leading-relaxed text-[#e4e4e7]">
             You can disable background location access at any time through your
-            device&apos;s Settings &gt; Apps &gt; EffortlessGeo &gt; Permissions
-            &gt; Location. Disabling background location may prevent features
-            like live tracking and automated attendance from working correctly.
+            device&apos;s{" "}
+            <span className="font-medium text-white">
+              Settings &gt; Apps &gt; EffortlessGeo &gt; Permissions &gt;
+              Location.
+            </span>{" "}
+            Disabling background location may prevent features like live
+            tracking and automated attendance from working correctly.
           </p>
 
           {/* 12. Children's Privacy */}
@@ -820,7 +899,7 @@ const NewPrivacyPolicy: React.FC<
             changes in our practices, technology, legal requirements, or for
             other operational reasons. When we make material changes, we will
             notify you through the Services, via email, or by updating the
-            <span className="font-medium text-white">&ldquo;Last Updated&rdquo;</span> date at the top of this page. Continued
+            &ldquo;Last Updated&rdquo; date at the top of this page. Continued
             use of the Services after such changes constitutes acceptance of the
             revised policy.
           </p>
@@ -831,21 +910,31 @@ const NewPrivacyPolicy: React.FC<
             Subject to applicable law, you have the right to:
           </p>
           <ul className="list-disc list-inside mb-4 space-y-2 text-[#e4e4e7]">
-            <li>Access the Personal Information we hold about you.</li>
-            <li>Correct inaccurate or incomplete Personal Information.</li>
             <li>
-              Delete your Personal Information, subject to legal retention
-              requirements.
+              <span className="font-medium text-white">Access</span> the
+              Personal Information we hold about you.
             </li>
             <li>
-              Withdraw Consent for data processing where consent is the basis
-              for processing.
+              <span className="font-medium text-white">Correct</span> inaccurate
+              or incomplete Personal Information.
             </li>
             <li>
-              Data Portability — request a copy of your data in a commonly used,
-              machine-readable format.
+              <span className="font-medium text-white">Delete</span> your
+              Personal Information, subject to legal retention requirements.
             </li>
-            <li>Object to certain types of data processing.</li>
+            <li>
+              <span className="font-medium text-white">Withdraw Consent</span>{" "}
+              for data processing where consent is the basis for processing.
+            </li>
+            <li>
+              <span className="font-medium text-white">Data Portability</span> —
+              request a copy of your data in a commonly used, machine-readable
+              format.
+            </li>
+            <li>
+              <span className="font-medium text-white">Object</span> to certain
+              types of data processing.
+            </li>
           </ul>
           <p className="mb-6 leading-relaxed text-[#e4e4e7]">
             End Users should contact their organization&apos;s Administrator for
@@ -857,8 +946,11 @@ const NewPrivacyPolicy: React.FC<
             >
               security@goeffortless.ai
             </a>
-            . We will respond to valid requests within a reasonable timeframe
-            and in accordance with applicable law.
+            .
+          </p>
+          <p className="mb-6 leading-relaxed text-[#e4e4e7]">
+            We will respond to valid requests within a reasonable timeframe and
+            in accordance with applicable law.
           </p>
 
           {/* 16. Governing Law */}
@@ -877,7 +969,9 @@ const NewPrivacyPolicy: React.FC<
             Policy or your data, please contact:
           </p>
           <p className="mb-2 leading-relaxed text-[#e4e4e7]">
-            <span className="font-medium text-white">Agrya FinLabs Private Limited</span>
+            <span className="font-medium text-white">
+              Agrya FinLabs Private Limited
+            </span>
           </p>
           <p className="mb-2 leading-relaxed text-[#e4e4e7]">
             Email:{" "}
