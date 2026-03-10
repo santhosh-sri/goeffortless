@@ -1,7 +1,7 @@
-import { CaseStudyProps, ServiceContent } from "@/interface/type";
+import { ServiceContent } from "@/interface/type";
 import parse from "html-react-parser";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import AccordionComponeny from "./AccordionComponeny";
 import BusineesCardSection from "./BusineesCardSection";
 import CallbackCardSection from "./CallBackCardSection";
@@ -25,7 +25,7 @@ import PartnerForm from "./PartnerForm";
 import PartnerList from "./PartnerList";
 import PentCard from "./pentCard";
 import PricingFeatures from "./PricingFeatures";
-import PricingSection from "./PricingSection";
+import { PricingCardsGroup } from "./PricingSection";
 import ProductDetails from "./ProductCard";
 import RedirectCta from "./RedirectCta";
 import ServiceListCard from "./ServiceList";
@@ -104,6 +104,7 @@ const ServiceSection = ({
   useCases,
   pentaCards,
   pricingCards,
+  pricingCardsHalf,
   newPricingCards,
   missionCard,
   showGreyTopBorder,
@@ -668,19 +669,12 @@ const ServiceSection = ({
             {pricingFeatures && (isPricingPlanPage || !isMobile) && (
               <PricingFeatures setSelectedPlan={setSelectedPlan} />
             )}{" "}
-            {pricingCards && !isPricingPlanPage && (
-              <div
-                className="flex max-md:flex-col max-xl:overflow-hidden w-full gap-6 md:hidden max-md:mt-4"
-                id="pricing"
-              >
-                {pricingCards?.map((cardContents, index) => (
-                  <PricingSection
-                    key={index}
-                    {...cardContents}
-                    setSelectedPlan={setSelectedPlan}
-                  />
-                ))}
-              </div>
+            {pricingCards && pricingCardsHalf && !isPricingPlanPage && (
+              <PricingCardsGroup
+                pricingCards={pricingCards}
+                pricingCardsHalf={pricingCardsHalf}
+                setSelectedPlan={setSelectedPlan}
+              />
             )}
             {pricingFeatures && !isHomePage && isMobile && isPricingPage && (
               <div className={`w-full`}>

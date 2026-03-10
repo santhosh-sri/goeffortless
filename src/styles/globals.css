@@ -804,17 +804,20 @@ body {
   .htmlContainer h1 {
     font-size: 24px;
     font-weight: 500;
+    color: #FFFFFF
   }
 
   .htmlContainer h2 {
     font-size: 20px;
     font-weight: 500;
     padding-top: 12px;
+    color: #FFFFFF
   }
 
   .htmlContainer h3 {
     font-size: 18px;
     font-weight: 500;
+    color: #FFFFFF
   }
 
   .htmlContainer p {

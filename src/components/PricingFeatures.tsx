@@ -1,7 +1,13 @@
 import parse from "html-react-parser";
 import { useRef, useState } from "react";
-import { pricingData, pricingHeader } from "../data/pricingFeatures";
+import {
+  pricingData,
+  pricingHeader,
+  pricingHeaderHalf,
+  pricingDataHalf,
+} from "../data/pricingFeatures";
 import { CalcomConfig } from "@/utils/calConfig";
+import TabComponent from "./TabComponent";
 
 // Type definitions
 interface Feature {
@@ -16,6 +22,8 @@ interface PlanData {
   name?: string;
   price: string;
   trial?: string;
+  tag?: string;
+  billed?: string;
 }
 
 interface PricingHeader {
@@ -35,7 +43,7 @@ const PricingFeatures = ({
     Record<string, boolean>
   >({
     Overview: true,
-    "Integrations, Security & Support": false,
+    "Integrations, Data Exchange, Security & Support": false,
     "Fleet on Street Selling": false,
     "Purchase & Expense Management": false,
     "Banking and Cashflow Management": false,
@@ -47,6 +55,15 @@ const PricingFeatures = ({
   });
 
   const scrollRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeTab, setActiveTab] = useState<any>("annually");
+  const commonHeader =
+    activeTab === "annually" ? pricingHeader : pricingHeaderHalf;
+  const commonData = activeTab === "annually" ? pricingData : pricingDataHalf;
+
+  const tabList = [
+    { val: "annually", label: "Billed Annually — Best Value" },
+    { val: "halfyearly", label: "Billed Half-Yearly" },
+  ];
 
   const toggleSection = (section: string) => {
     setExpandedSections((prev) => ({
@@ -73,7 +90,7 @@ const PricingFeatures = ({
     });
   };
 
-  const planOrder = Object.keys(pricingHeader);
+  const planOrder = Object.keys(commonHeader);
 
   // Desktop table render
   const renderDesktopTable = (features: Feature[]) => (
@@ -146,6 +163,13 @@ const PricingFeatures = ({
         }
       `}</style>
 
+      <div className="mt-[32px] md:mt-[64px] max-md:mb-4">
+        <TabComponent
+          tabArr={tabList}
+          activeTab={activeTab}
+          setActiveTab={(val) => setActiveTab(val)}
+        />
+      </div>
       {/* Expand All Toggle */}
       <div className="flex items-center justify-end px-6 mb-4 md:mt-[30px]">
         <input
@@ -168,11 +192,11 @@ const PricingFeatures = ({
               Features
             </h2>
           </div>
-          {Object.entries(pricingHeader as PricingHeader).map(
+          {Object.entries(commonHeader as PricingHeader).map(
             ([key, data], index) => (
               <div
                 key={key}
-                className={`p-[16px] text-center ${"border-l [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"}`}
+                className={`flex flex-col gap-3 p-[16px] items-center text-center ${"border-l [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"}`}
               >
                 <h3 className="text-[24px] font-[300] text-[#E4E4E7] md:text-white capitalize">
                   {data.name || key.replace(/([A-Z])/g, " $1").trim()}
@@ -180,12 +204,24 @@ const PricingFeatures = ({
                 <p className="text-[#F08B32] text-2xl font-[500]">
                   {parse(data.price)}
                 </p>
+                <p
+                  style={{
+                    background:
+                      "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
+                  }}
+                  className="flex items-center justify-center px-3 py-1.5 rounded-[42px] text-[13px] font-normal w-fit  border border-white/10"
+                >
+                  {data.tag}
+                </p>
+                <p className="text-sm font-light text-[#E4E4E7]">
+                  {data.billed}
+                </p>
                 <button
                   onClick={() => {
                     setSelectedPlan(data.name || key);
                   }}
                   {...CalcomConfig}
-                  className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[125px] text-white font-[400] cursor-pointer whitespace-nowrap"
+                  className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] max-w-[125px] text-white font-[400] cursor-pointer whitespace-nowrap"
                 >
                   Schedule Demo
                 </button>
@@ -196,7 +232,7 @@ const PricingFeatures = ({
 
         {/* Desktop Features Sections */}
         <div className="grid grid-cols-[60%_repeat(3,1fr)] box-shadow-[0px_0px_0px_1px_#1019280D]">
-          {Object.entries(pricingData as PricingData).map(([key, features]) => (
+          {Object.entries(commonData as PricingData).map(([key, features]) => (
             <div key={key} className="col-span-full">
               <button
                 onClick={() => toggleSection(key)}
@@ -256,13 +292,13 @@ const PricingFeatures = ({
                 className="flex min-w-max h-full"
               >
                 {/* Dynamic Plan Components */}
-                {Object.entries(pricingHeader as PricingHeader).map(
+                {Object.entries(commonHeader as PricingHeader).map(
                   ([planKey, planData], index) => (
                     <div
                       key={planKey}
-                      className={`w-[160px] h-full p-2 sm:p-3 text-center flex-shrink-0 ${
+                      className={`w-[160px] h-full p-2 sm:p-3 text-center flex-shrink-0 flex flex-col gap-2 ${
                         index <
-                        Object.keys(pricingHeader as PricingHeader).length - 1
+                        Object.keys(commonHeader as PricingHeader).length - 1
                           ? "border-r [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                           : ""
                       }`}
@@ -271,15 +307,27 @@ const PricingFeatures = ({
                         {planData.name ||
                           planKey.replace(/([A-Z])/g, " $1").trim()}
                       </h3>
-                      <p className="text-[#F08B32] text-[18px] font-[500] my-1">
+                      <p className="text-[#F08B32] text-[18px] font-[500]">
                         {parse(planData.price)}
+                      </p>
+                      <p
+                        style={{
+                          background:
+                            "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
+                        }}
+                        className="flex items-center justify-center px-3 py-1.5 rounded-[42px] text-[9px] font-normal w-fit  border border-white/10"
+                      >
+                        {planData.tag}
+                      </p>
+                      <p className="text-xs font-light text-[#E4E4E7]">
+                        {planData.billed}
                       </p>
                       <button
                         onClick={() => {
                           setSelectedPlan(planData.name || planKey);
                         }}
                         {...CalcomConfig}
-                        className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] mt-[8px] max-w-[150px] text-white font-[400] cursor-pointer whitespace-nowrap"
+                        className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] max-w-[150px] text-white font-[400] cursor-pointer whitespace-nowrap"
                       >
                         {planData.trial || "Schedule Demo"}
                       </button>
@@ -293,7 +341,7 @@ const PricingFeatures = ({
 
         {/* Mobile Features List */}
         <div className="pb-4 w-full">
-          {Object.entries(pricingData as PricingData).map(
+          {Object.entries(commonData as PricingData).map(
             ([sectionName, features]) => (
               <div key={sectionName} className="border-b border-[#2D2D2D]">
                 {/* Mobile Section Header */}
@@ -333,7 +381,9 @@ const PricingFeatures = ({
                           }}
                           className="w-[190px] px-[20px] p-2 sm:p-3 text-xs sm:text-sm flex-shrink-0 border-r border-[#2D2D2D] flex items-center"
                         >
-                          <span className="line-clamp-3 ">{feature.name}</span>
+                          <span className="line-clamp-3 ">
+                            {parse(feature.name)}
+                          </span>
                         </div>
 
                         {/* Feature Values - Synchronized scroll */}
