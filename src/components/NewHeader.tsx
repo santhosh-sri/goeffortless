@@ -15,7 +15,7 @@ const Header = ({
 }: {
   isMobile: boolean;
   closeBanner: boolean;
-  setCloseBanner: any;
+  setCloseBanner: (value: boolean) => void;
 }) => {
   const [expandedSections, setExpandedSections] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -32,6 +32,7 @@ const Header = ({
 
   const resourcePath =
     pathname === "/pricing" ||
+    pathname === "/pricing-plan" ||
     pathname === "/case-studies" ||
     pathname === "/" ||
     pathname === "/partners" ||
@@ -45,15 +46,17 @@ const Header = ({
 
   const productPath =
     pathname === "/pricing" ||
+    pathname === "/pricing-plan" ||
     pathname === "/case-studies" ||
     pathname === "/" ||
     pathname === "/partners" ||
     pathname === "/blogs" ||
+    pathname.startsWith("/blogs/") ||
     pathname === "/compliance" ||
     pathname === "/faqs" ||
     pathname === "/download-apps" ||
     pathname === "/certifications-awards" ||
-    pathname === "/calculator.svg" ||
+    // pathname === "/calculator.svg" ||
     pathname === "/about-us" ||
     pathname === "/migratingFeature" ||
     pathname === "/contact-us" ||
@@ -172,7 +175,7 @@ const Header = ({
         },
         {
           label: "Automation ROI",
-          link: " ",
+          link: "#",
           icon: "/calculator.svg",
           activeIcon: "/calculator-active.svg",
           soon: true,
@@ -412,7 +415,7 @@ const Header = ({
                                     onMouseLeave={() => setHoveredIndex(null)}
                                     className={`group flex justify-between items-start gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
            hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out ${
-             isHovered && "bg-[#23292F]"
+             isHovered ? "bg-[#23292F]" : ""
            }`}
                                   >
                                     <span className="flex flex-col gap-2">
@@ -558,7 +561,7 @@ const Header = ({
                                     onMouseLeave={() => setHoveredIndex(null)}
                                     className={`group flex items-center gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
              hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out ${
-               isHovered && "bg-[#23292F]"
+               isHovered ? "bg-[#23292F]" : ""
              }`}
                                   >
                                     <span className="flex flex-col gap-2 w-full">
@@ -629,7 +632,9 @@ const Header = ({
                 <Link
                   href="/pricing"
                   className={`text-base font-normal ${
-                    pathname === "/pricing" ? "text-white" : "text-[#A8A8A8]"
+                    pathname === "/pricing" || pathname === "/pricing-plan"
+                      ? "text-white"
+                      : "text-[#A8A8A8]"
                   } hover:text-white cursor-pointer`}
                 >
                   Pricing

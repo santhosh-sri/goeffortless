@@ -41,7 +41,7 @@ const Featurecard: React.FC<FeatureCard> = ({
         </div>
       </div>
       {description && (
-        <p className="text-[13px] font-[300] leading-[17px] md:text-[14px] md:leading-[18px] md:min-h-[54px] flex-grow">
+        <p className="text-[13px] font-[300] leading-[17px] md:text-[14px] md:leading-[18px] flex-grow">
           {parse(description)}
         </p>
       )}
