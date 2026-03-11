@@ -22,7 +22,8 @@ const PricingSection: React.FC<PricingSectionProps> = ({
   activeTab: externalActiveTab,
   setActiveTab: externalSetActiveTab,
 }) => {
-  const [internalActiveTab, setInternalActiveTab] = React.useState<any>("annually");
+  const [internalActiveTab, setInternalActiveTab] =
+    React.useState<any>("annually");
   const activeTab = externalActiveTab ?? internalActiveTab;
   const setActiveTab = externalSetActiveTab ?? setInternalActiveTab;
   const currentData = activeTab === "annually" ? annualData : halfYearlyData;
@@ -38,8 +39,8 @@ const PricingSection: React.FC<PricingSectionProps> = ({
   } = currentData;
 
   const tabList = [
-    { val: "annually", label: "Billed Annually — Best Value" },
-    { val: "halfyearly", label: "Billed Half-Yearly" },
+    { val: "annually", label: "Annually", tooltip: "Best Value 👌" },
+    { val: "halfyearly", label: "Half-Yearly" },
   ];
   return (
     <div>
@@ -88,7 +89,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               </p>
             ))}
           </div>
-          <div className="flex flex-col p-5 gap-4 text-[#FFFF] lg:min-h-[530px] xl:min-h-[400px]">
+          <div className="flex flex-col p-5 gap-3 text-[#FFFF] lg:min-h-[530px] xl:min-h-[400px]">
             {packageDescription && (
               <p className="md:text-[15px]  text-[14px] font-bold leading-[22px] text-[#F08B32]">
                 {packageDescription}
@@ -107,7 +108,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               </div>
             ))}
             <button
-              className="bg-[#F08B32] text-white px-4 py-2 rounded-[4px] hover:bg-[#D87A2C] transition-colors duration-300 text-[14px] font-[500]"
+              className="bg-[#F08B32] text-white px-4 py-2 mt-2 rounded-[4px] hover:bg-[#D87A2C] transition-colors duration-300 text-[14px] font-[500]"
               onClick={() => {
                 if (setSelectedPlan) {
                   if (packageTitle) {

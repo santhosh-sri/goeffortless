@@ -21,8 +21,12 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
   const commonItems =
     activeTab === "annually" ? packageItems : packageItemsHalf;
   const tabList = [
-    { val: "annually", label: "Billed Annually — Best Value" },
-    { val: "halfyearly", label: "Billed Half-Yearly" },
+    {
+      val: "annually",
+      label: "Annually",
+      tooltip: "Best Value 👌",
+    },
+    { val: "halfyearly", label: "Half-Yearly" },
   ];
   return (
     <div className="flex flex-col items-center md:gap-[48px]">
@@ -48,6 +52,9 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                   >
                     <div className="flex flex-col gap-3 items-center">
                       <div>{plan.name}</div>
+                      <p className="text-[#F08B32] text-[500] my-0 text-xl">
+                        {plan.annualPrice}
+                      </p>
                       <p
                         style={{
                           background:
@@ -79,7 +86,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
               {/* Rows will be dynamically generated based on the feature types */}
               {(
                 [
-                  { label: "Annual Price", key: "annualPrice" },
+                  // { label: "Annual Price", key: "annualPrice" },
                   {
                     label:
                       "One-Time Setup <span style='color: #F08B32'>(CA-Led Onboarding)</span>",

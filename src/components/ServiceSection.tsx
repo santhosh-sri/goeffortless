@@ -661,10 +661,11 @@ const ServiceSection = ({
         )}
         {pricingCards && (
           <div
-            className={` ${isHomePage == true ? "md:hidden" : "md:block"} 
-          ${isPricingPlanPage ? "" : "max-md:px-5 "} ${
+            className={` ${isHomePage == true ? "md:hidden" : "md:block"} ${
               isPricingPage ? "md:pb-[64px]" : "md:pb-[80px] "
-            } flex flex-col md:gap-[4.5rem] gap-8 !w-full max-md:pb-[32px] md:max-w-[1360px] md:mx-auto`}
+            } flex flex-col md:gap-[4.5rem] gap-8 !w-full ${
+              pricingFeatures ? "" : " max-md:pb-[32px]"
+            } md:max-w-[1360px] md:mx-auto`}
           >
             {pricingFeatures && (isPricingPlanPage || !isMobile) && (
               <PricingFeatures setSelectedPlan={setSelectedPlan} />

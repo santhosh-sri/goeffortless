@@ -301,6 +301,11 @@
                   "title": "Attendance & Leave\n Management",
                   "description": "Leave requests, approvals, and balances — all managed digitally.",
                   "img": "/ballot-rect 1.svg"
+                },
+                {
+                  "title": "Custom Forms\n with Tasks",
+                  "description": "Create Custom Tasks for Custom for Sales, Delivery, & Support Teams.",
+                  "img": "/customforms.svg"
                 }
               ]
             }
@@ -521,7 +526,7 @@
           "Recommended": false,
           "packageDescription": "Everything in Premium and:",
           "packageDetails": [
-            "Per month billed annually",
+            "<span style='color:#F08B32'>Per month billed annually</span>",
             "<b>₹3,60,000</b> billed yearly",
             "One-Time Setup Cost: <b>₹1,24,000</b>",
             "Users (Up To): <b>50</b>",
@@ -542,7 +547,7 @@
           "packageSubTitle": "₹12,833",
           "packageDescription": "Premium includes:",
           "packageDetails": [
-            "Per month billed annually",
+            "<span style='color:#F08B32'>Per month billed annually</span>",
             "<b>₹1,54,000</b> billed yearly",
             "One-Time Setup Cost: <b>₹48,000</b>",
             "Users (Up To): <b>15</b>",
@@ -566,7 +571,7 @@
           "Recommended": false,
           "packageDescription": "Everything in Premium and:",
           "packageDetails": [
-            "Per month billed every 6 months",
+            "<span style='color:#F08B32'>Per month billed every 6 months</span>",
             "<b>₹2,01,600</b> billed every 6 months",
             "One-Time Setup Cost: <b>₹1,24,000</b>",
             "Users (Up To): <b>50</b>",
@@ -587,7 +592,7 @@
           "packageSubTitle": "₹14,373",
           "packageDescription": "Premium includes:",
           "packageDetails": [
-            "Per month billed every 6 months",
+            "<span style='color:#F08B32'>Per month billed every 6 months</span>",
             "<b>₹86,238</b> billed every 6 months",
             "One-Time Setup Cost: <b>₹48,000</b>",
             "Users (Up To): <b>15</b>",
