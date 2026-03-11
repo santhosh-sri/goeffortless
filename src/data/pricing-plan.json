@@ -88,7 +88,6 @@
   "serviceContent": [
     {
       "href": "#section4",
-      "showGreyBoderLine": true,
       "Customtitle": "<span style='color:#FFFFFF'>Pick a plan that's</span><span style='font-weight: 500'> right for you</span>",
       "description": "Simple Plans. Powerful Features. Zero Finance Headaches.",
       "pricingFeatures": true,
@@ -137,6 +136,8 @@
     },
     {
       "showGreyBoderLine": true,
+      "showGreyTopBorder": true,
+      "isLastSection": true,
       "tagLine": "Get Started",
       "bgColour": "bg-[#15181B]",
       "title": "Ready to Experience ",

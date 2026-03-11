@@ -1,5 +1,5 @@
 import parse from "html-react-parser";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import {
   pricingData,
   pricingHeader,
@@ -54,15 +54,14 @@ const PricingFeatures = ({
     "Buyer Portal (Unlimited)": false,
   });
 
-  const scrollRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeTab, setActiveTab] = useState<any>("annually");
   const commonHeader =
     activeTab === "annually" ? pricingHeader : pricingHeaderHalf;
   const commonData = activeTab === "annually" ? pricingData : pricingDataHalf;
 
   const tabList = [
-    { val: "annually", label: "Billed Annually — Best Value" },
-    { val: "halfyearly", label: "Billed Half-Yearly" },
+    { val: "annually", label: "Annually", tooltip: "Best Value 👌" },
+    { val: "halfyearly", label: "Half-Yearly" },
   ];
 
   const toggleSection = (section: string) => {
@@ -79,15 +78,6 @@ const PricingFeatures = ({
         Object.entries(expandedSections).map(([k]) => [k, !allExpanded])
       )
     );
-  };
-
-  // Synchronize scroll across all horizontal scroll containers (mobile)
-  const handleScroll = (scrollLeft: number): void => {
-    scrollRefs.current.forEach((ref) => {
-      if (ref && ref.scrollLeft !== scrollLeft) {
-        ref.scrollLeft = scrollLeft;
-      }
-    });
   };
 
   const planOrder = Object.keys(commonHeader);
@@ -108,7 +98,7 @@ const PricingFeatures = ({
               {planOrder.map((tier, i) => (
                 <td
                   key={tier}
-                  className={`py-4 text-center w-[15%] border-[#2D2D2D] border-b-[1px] ${
+                  className={`py-4 text-center w-[20%] border-[#2D2D2D] border-b-[1px] ${
                     i !== planOrder.length
                       ? " border-l-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
                       : ""
@@ -141,6 +131,7 @@ const PricingFeatures = ({
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
+          scroll-behavior: smooth;
         }
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
@@ -186,59 +177,55 @@ const PricingFeatures = ({
       {/* DESKTOP VIEW */}
       <div className="w-full rounded-xl  bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] hidden md:block">
         {/* Desktop Pricing Header - Made Sticky */}
-        <div className="desktop-sticky-header z-[999]  bg-black grid grid-cols-[57%_repeat(2,1fr)] items-end min-h-[150px] bg-[linear-gradient(111.18deg,rgba(255,255,255,0.15)_-28.62%,rgba(255,255,255,0.05)_104.36%)] border border-[#2D2D2D]">
+        <div className="desktop-sticky-header z-[999]  bg-black grid grid-cols-[50%_repeat(2,1fr)] items-end min-h-[150px] bg-[linear-gradient(111.18deg,rgba(255,255,255,0.15)_-28.62%,rgba(255,255,255,0.05)_104.36%)] border border-[#2D2D2D]">
           <div className="p-3">
             <h2 className="text-[13px] md:text-[24px] font-semibold text-[#E4E4E7] md:text-white ml-3">
               Features
             </h2>
           </div>
-          {Object.entries(commonHeader as PricingHeader).map(
-            ([key, data], index) => (
-              <div
-                key={key}
-                className={`flex flex-col gap-3 p-[16px] items-center text-center ${"border-l [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"}`}
+          {Object.entries(commonHeader as PricingHeader).map(([key, data]) => (
+            <div
+              key={key}
+              className={`flex flex-col gap-3 p-[16px] items-center text-center ${"border-l [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"}`}
+            >
+              <h3 className="text-[24px] font-[300] text-[#E4E4E7] md:text-white capitalize">
+                {data.name || key.replace(/([A-Z])/g, " $1").trim()}
+              </h3>
+              <p className="text-[#F08B32] text-2xl font-[500]">
+                {parse(data.price)}
+              </p>
+              <p
+                style={{
+                  background:
+                    "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
+                }}
+                className="flex items-center justify-center px-3 py-1.5 rounded-[42px] text-[13px] font-normal w-fit  border border-white/10"
               >
-                <h3 className="text-[24px] font-[300] text-[#E4E4E7] md:text-white capitalize">
-                  {data.name || key.replace(/([A-Z])/g, " $1").trim()}
-                </h3>
-                <p className="text-[#F08B32] text-2xl font-[500]">
-                  {parse(data.price)}
-                </p>
-                <p
-                  style={{
-                    background:
-                      "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
-                  }}
-                  className="flex items-center justify-center px-3 py-1.5 rounded-[42px] text-[13px] font-normal w-fit  border border-white/10"
-                >
-                  {data.tag}
-                </p>
-                <p className="text-sm font-light text-[#E4E4E7]">
-                  {data.billed}
-                </p>
-                <button
-                  onClick={() => {
-                    setSelectedPlan(data.name || key);
-                  }}
-                  {...CalcomConfig}
-                  className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] max-w-[125px] text-white font-[400] cursor-pointer whitespace-nowrap"
-                >
-                  Schedule Demo
-                </button>
-              </div>
-            )
-          )}
+                {data.tag}
+              </p>
+              <p className="text-sm font-light text-[#E4E4E7]">{data.billed}</p>
+              <button
+                onClick={() => {
+                  setSelectedPlan(data.name || key);
+                }}
+                {...CalcomConfig}
+                className="bg-[#F08B32] hover:bg-[#DD781F] p-[8px] w-full rounded text-[13px] md:text-[14px] max-w-[125px] text-white font-[400] cursor-pointer whitespace-nowrap"
+              >
+                Schedule Demo
+              </button>
+            </div>
+          ))}
         </div>
 
         {/* Desktop Features Sections */}
-        <div className="grid grid-cols-[60%_repeat(3,1fr)] box-shadow-[0px_0px_0px_1px_#1019280D]">
+        <div className="grid grid-cols-[50%_repeat(2,1fr)] box-shadow-[0px_0px_0px_1px_#1019280D]">
           {Object.entries(commonData as PricingData).map(([key, features]) => (
             <div key={key} className="col-span-full">
               <button
                 onClick={() => toggleSection(key)}
                 className={`${
                   expandedSections[key]
-                    ? "bg-black border-t border-b [border-image-source:linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)] [border-image-slice:1]"
+                    ? "bg-black border-t border-b [border-image-source:linear-gradient(270deg,#333333_0%,#b1b1b1_50%,#333333_100%)] [border-image-slice:1]"
                     : "border border-[#2D2D2D] border-t-0"
                 } w-full flex items-center justify-between py-5 text-white transition-colors`}
               >
@@ -258,107 +245,91 @@ const PricingFeatures = ({
       {/* MOBILE VIEW */}
       <div className="md:hidden">
         {/* Mobile Header - Made Sticky */}
-        <div className="sticky-header border-b border-[#2D2D2D] bg-[linear-gradient(111.18deg,rgba(255,255,255,0.15)_-28.62%,rgba(255,255,255,0.05)_104.36%)]">
-          {/* Mobile Pricing Header - Fixed Layout */}
-          <div className="flex w-full bg-black z-[99] relative">
-            {/* Left sticky column for Features label */}
-            <div
+        <div className="sticky-header bg-[linear-gradient(111.18deg,rgba(255,255,255,0.15)_-28.62%,rgba(255,255,255,0.05)_104.36%)]">
+          <div className="grid grid-cols-2 w-full bg-black z-[99] relative border-b [border-image-source:linear-gradient(270deg,#333333_0%,#b1b1b1_50%,#333333_100%)] [border-image-slice:1]">
+            {/* Features label */}
+            {/* <div
               style={{
                 background:
                   "linear-gradient(111.18deg, rgba(255, 255, 255, 0.2) -28.62%, rgba(255, 255, 255, 0) 104.36%)",
               }}
-              className="w-[190px] px-[20px] p-2 sm:p-3 flex-shrink-0 flex flex-col justify-end border-r border-[#2D2D2D]"
+              className="flex-1 px-4 py-3 flex flex-col justify-end border-r border-[#2D2D2D]"
             >
-              <div className="text-[#E4E4E7] text-[20px]">Features</div>
-            </div>
+              <div className="text-[#E4E4E7] text-[16px]">Features</div>
+            </div> */}
 
-            {/* Right scrollable area for pricing plans */}
-            <div
-              className="flex-1 overflow-x-auto scrollbar-hide"
-              ref={(el: HTMLDivElement | null) => {
-                if (el && !scrollRefs.current.includes(el)) {
-                  scrollRefs.current.push(el);
-                }
-              }}
-              onScroll={(e) =>
-                handleScroll((e.target as HTMLDivElement).scrollLeft)
-              }
-            >
-              <div
-                style={{
-                  background:
-                    "linear-gradient(95.6deg, rgba(255, 255, 255, 0.2) -30%, rgba(255, 255, 255, 0) 183.85%)",
-                }}
-                className="flex min-w-max h-full"
-              >
-                {/* Dynamic Plan Components */}
-                {Object.entries(commonHeader as PricingHeader).map(
-                  ([planKey, planData], index) => (
-                    <div
-                      key={planKey}
-                      className={`w-[160px] h-full p-2 sm:p-3 text-center flex-shrink-0 flex flex-col gap-2 ${
-                        index <
-                        Object.keys(commonHeader as PricingHeader).length - 1
-                          ? "border-r [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
-                          : ""
-                      }`}
-                    >
-                      <h3 className="text-[#E4E4E7] text-[16px] font-[500] capitalize">
-                        {planData.name ||
-                          planKey.replace(/([A-Z])/g, " $1").trim()}
-                      </h3>
-                      <p className="text-[#F08B32] text-[18px] font-[500]">
-                        {parse(planData.price)}
-                      </p>
-                      <p
-                        style={{
-                          background:
-                            "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
-                        }}
-                        className="flex items-center justify-center px-3 py-1.5 rounded-[42px] text-[9px] font-normal w-fit  border border-white/10"
-                      >
-                        {planData.tag}
-                      </p>
-                      <p className="text-xs font-light text-[#E4E4E7]">
-                        {planData.billed}
-                      </p>
-                      <button
-                        onClick={() => {
-                          setSelectedPlan(planData.name || planKey);
-                        }}
-                        {...CalcomConfig}
-                        className="bg-[#F08B32] py-[8px] px-4 w-full rounded text-[13px] md:text-[14px] max-w-[150px] text-white font-[400] cursor-pointer whitespace-nowrap"
-                      >
-                        {planData.trial || "Schedule Demo"}
-                      </button>
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
+            {/* Plan headers - fixed width columns, no scroll */}
+            {Object.entries(commonHeader as PricingHeader).map(
+              ([planKey, planData], index) => (
+                <div
+                  key={planKey}
+                  style={{
+                    background:
+                      "linear-gradient(95.6deg, rgba(255, 255, 255, 0.2) -30%, rgba(255, 255, 255, 0) 183.85%)",
+                  }}
+                  className={`flex-shrink-0 py-4 px-3 text-center flex flex-col gap-1.5 ${
+                    index <
+                    Object.keys(commonHeader as PricingHeader).length - 1
+                      ? "border-r [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
+                      : ""
+                  }`}
+                >
+                  <h3 className="text-[#E4E4E7] text-[13px] font-[500] capitalize">
+                    {planData.name || planKey.replace(/([A-Z])/g, " $1").trim()}
+                  </h3>
+                  <p className="text-[#F08B32] text-[14px] font-[500]">
+                    {parse(planData.price)}
+                  </p>
+                  <p
+                    style={{
+                      background:
+                        "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
+                    }}
+                    className="flex items-center justify-center px-2 py-1 rounded-[42px] text-[8px] font-normal w-fit border border-white/10 mx-auto"
+                  >
+                    {planData.tag}
+                  </p>
+                  <p className="text-[10px] font-light text-[#E4E4E7]">
+                    {planData.billed}
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSelectedPlan(planData.name || planKey);
+                    }}
+                    {...CalcomConfig}
+                    className="bg-[#F08B32] py-1.5 px-2 w-full rounded text-[11px] text-white font-[400] cursor-pointer"
+                  >
+                    {planData.trial || "Schedule Demo"}
+                  </button>
+                </div>
+              )
+            )}
           </div>
         </div>
 
         {/* Mobile Features List */}
-        <div className="pb-4 w-full">
+        <div className="w-full">
           {Object.entries(commonData as PricingData).map(
             ([sectionName, features]) => (
-              <div key={sectionName} className="border-b border-[#2D2D2D]">
+              <div
+                key={sectionName}
+                className="border-b [border-image-source:linear-gradient(270deg,#333333_0%,#b1b1b1_50%,#333333_100%)] [border-image-slice:1]"
+              >
                 {/* Mobile Section Header */}
                 <button
                   onClick={() => toggleSection(sectionName)}
                   className={`${
                     expandedSections[sectionName]
-                      ? "bg-black border-t border-b [border-image-source:linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)] [border-image-slice:1]"
-                      : "border border-[#2D2D2D] border-t-0"
-                  } w-full flex items-center justify-between p-3 sm:p-4 transition-colors`}
+                      ? "bg-black border-b [border-image-source:linear-gradient(270deg,#333333_0%,#b1b1b1_50%,#333333_100%)] [border-image-slice:1]"
+                      : "border border-[#2D2D2D] border-t-0 border-x-0"
+                  } w-full flex items-center justify-between px-2 py-3 transition-colors`}
                 >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-base sm:text-lg">
-                      {expandedSections[sectionName] ? "−" : "+"}
-                    </span>
+                  <div className="flex items-center justify-between w-full">
                     <span className="text-left font-medium text-sm sm:text-base">
                       {sectionName}
+                    </span>
+                    <span className="text-base sm:text-lg">
+                      {expandedSections[sectionName] ? "−" : "+"}
                     </span>
                   </div>
                 </button>
@@ -369,66 +340,49 @@ const PricingFeatures = ({
                     {features.map((feature, index) => (
                       <div
                         key={index}
-                        className="flex border-t border-[#2D2D2D]"
+                        className="grid grid-cols-2 border-b last:border-b-0 [border-image-source:linear-gradient(270deg,#333333_0%,#b1b1b1_50%,#333333_100%)] [border-image-slice:1]"
                       >
-                        {/* Feature Name - Sticky */}
-                        <div
+                        {/* Feature Name */}
+                        {/* <div
                           style={{
                             background:
                               "linear-gradient(111deg, rgba(255, 255, 255, 0.20) -28.62%, rgba(255, 255, 255, 0.00) 104.36%)",
-                            boxShadow:
-                              "0px 2px 5px -2px rgba(16, 25, 40, 0.06), 0px 2px 7px 0px rgba(16, 25, 40, 0.05), 0px 0px 0px 1px rgba(16, 25, 40, 0.05)",
                           }}
-                          className="w-[190px] px-[20px] p-2 sm:p-3 text-xs sm:text-sm flex-shrink-0 border-r border-[#2D2D2D] flex items-center"
+                          className="flex-1 px-3 py-3 text-xs text-[#E4E4E7] border-r border-[#2D2D2D] flex items-center"
                         >
-                          <span className="line-clamp-3 ">
-                            {parse(feature.name)}
-                          </span>
-                        </div>
+                          <span>{parse(feature.name)}</span>
+                        </div> */}
 
-                        {/* Feature Values - Synchronized scroll */}
-                        <div
-                          className="flex-1 overflow-x-auto scrollbar-hide"
-                          style={{
-                            background:
-                              "linear-gradient(116deg, rgba(255, 255, 255, 0.20) -120.31%, rgba(255, 255, 255, 0.00) 127.83%)",
-                          }}
-                          ref={(el: HTMLDivElement | null) => {
-                            if (el && !scrollRefs.current.includes(el)) {
-                              scrollRefs.current.push(el);
-                            }
-                          }}
-                          onScroll={(e) =>
-                            handleScroll(
-                              (e.target as HTMLDivElement).scrollLeft
-                            )
-                          }
-                        >
-                          <div className="flex min-w-max h-full">
-                            {planOrder.map((tier, tierIndex) => (
-                              <div
-                                key={tier}
-                                className={`w-[160px] py-3 text-center flex-shrink-0 ${
-                                  tierIndex < planOrder.length - 1
-                                    ? " border-r-[1px] last:border-b-none [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
-                                    : ""
-                                } flex items-center justify-center`}
-                              >
-                                <span
-                                  className={`text-[16px] font-[500] max-md:text-[13px] ${
-                                    feature[tier] === "✓"
-                                      ? "text-emerald-400"
-                                      : feature[tier] === "✕"
-                                      ? "text-red-500"
-                                      : "text-[#E4E4E7]"
-                                  }`}
-                                >
-                                  {parse(feature[tier])}
-                                </span>
-                              </div>
-                            ))}
+                        {/* Plan Values - fixed width, no scroll */}
+
+                        <span className="text-left font-light text-[13px] leading-4 col-span-2 p-2">
+                          {parse(feature.name)}
+                        </span>
+                        {planOrder.map((tier, tierIndex) => (
+                          <div
+                            key={tier}
+                            className={`flex-shrink-0 text-center flex items-center justify-center p-3 ${
+                              tierIndex < planOrder.length - 1
+                                ? "border-r [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"
+                                : ""
+                            }`}
+                            style={{
+                              background: "#121314",
+                            }}
+                          >
+                            <span
+                              className={`text-[13px] font-[500] ${
+                                feature[tier] === "✓"
+                                  ? "text-emerald-400"
+                                  : feature[tier] === "✕"
+                                  ? "text-red-500"
+                                  : "text-[#E4E4E7]"
+                              }`}
+                            >
+                              {parse(feature[tier])}
+                            </span>
                           </div>
-                        </div>
+                        ))}
                       </div>
                     ))}
                   </div>

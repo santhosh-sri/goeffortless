@@ -436,6 +436,13 @@ export const pricingData = {
       premium: "✓",
       lite: "✓",
       enterprise: "✓",
+    },
+    {
+      name: "Custom Forms with Tasks",
+      premiumPro: "✓",
+      premium: "✓",
+      lite: "✓",
+      enterprise: "✓",
     }
   ],
   "Customer Workflows":[
