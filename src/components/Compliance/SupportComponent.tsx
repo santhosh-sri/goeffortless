@@ -2,6 +2,7 @@ import React from "react";
 import Democta from "../Democta";
 import { TrackDataProps } from "@/interface/type";
 import Image from "next/image";
+import { CalcomConfig } from "@/utils/calConfig";
 
 const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
   return (
@@ -10,6 +11,7 @@ const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
         <Democta customStyle={true} ctaText={"Book Demo"} />
         <button
           id="democta"
+          {...CalcomConfig}
           className="py-[14px] max-md:w-full cursor-pointer border border-[#F08B32] text-[#F08B32] font-medium px-5 rounded flex items-center justify-center text-[14px]"
         >
           <span className="flex items-center gap-2">
@@ -23,7 +25,7 @@ const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
               />
             </span>
             <span className="whitespace-nowrap ">
-              Talk to an Expert (CA Support Available)"
+              Talk to an Expert (CA Support Available)
             </span>
           </span>
         </button>
