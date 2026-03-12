@@ -112,6 +112,8 @@ export interface PricingSectionContents {
   Recommended?: boolean;
   setShowForm?: React.Dispatch<React.SetStateAction<boolean>>;
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
+  annualData?: any,
+  halfYearlyData?: any,
 }
 
 export interface TestimonalProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -195,6 +197,7 @@ export interface FeatureProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 export interface HomePagePricing extends React.HTMLAttributes<HTMLDivElement> {
   packageItems?: PricingPackage[];
+  packageItemsHalf?: PricingPackage[];
 }
 export interface PricingPackage {
   name: string;
@@ -206,6 +209,8 @@ export interface PricingPackage {
   numberOfBRS: string;
   additionalUsersPrice: string;
   features: string[];
+  tag?: string;
+  billed?: string;
 }
 export interface GrowthCardsContent {
   title?: string;
@@ -245,6 +250,7 @@ export interface ServiceContent {
   servicesList?: servicesList[];
   pentaCards?: PentaCard[];
   pricingCards?: PricingSectionContents[];
+  pricingCardsHalf?: PricingSectionContents[];
   newPricingCards?: HomePagePricing;
   growthCards?: GrowthCardsContent[];
   founderTestominial?: FounderTestimonial[];

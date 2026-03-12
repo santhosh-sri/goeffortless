@@ -301,6 +301,11 @@
                   "title": "Attendance & Leave\n Management",
                   "description": "Leave requests, approvals, and balances — all managed digitally.",
                   "img": "/ballot-rect 1.svg"
+                },
+                {
+                  "title": "Custom Forms\n with Tasks",
+                  "description": "Create Custom Tasks for Custom for Sales, Delivery, & Support Teams.",
+                  "img": "/customforms.svg"
                 }
               ]
             }
@@ -435,9 +440,14 @@
                   "img": "/plug.svg"
                 },
                 {
-                  "title": "Paid API integrations for\n Oracle & SAP",
-                  "description": "Enterprise level connectivity. Tailored API access.",
-                  "img": "/algorithm.svg"
+                  "title": "Custom Development at\n Additional Cost (Basis Feasibility)",
+                  "description": "Enterprise level, Tailored Experience.",
+                  "img": "/customdev.svg"
+                },
+                {
+                  "title": "Bulk Upload",
+                  "description": "Bulk upload Invoices, Sales Orders, & Estimates. Auto-map Part Numbers to Tally Masters.",
+                  "img": "/bulkupload.svg"
                 },
                 {
                   "title": "Multi-Company\n Concurrent Sync",
@@ -512,13 +522,15 @@
       "pricingCards": [
         {
           "packageTitle": "Premium Pro",
-          "packageSubTitle": "₹3,60,000",
+          "packageSubTitle": "₹30,000",
           "Recommended": false,
           "packageDescription": "Everything in Premium and:",
           "packageDetails": [
+            "<span style='color:#F08B32'>Per month billed annually</span>",
+            "<b>₹3,60,000</b> billed yearly",
             "One-Time Setup Cost: <b>₹1,24,000</b>",
             "Users (Up To): <b>50</b>",
-            "Additional User Price: <b>₹2,400</b>/user"
+            "Additional User Price: <b>₹2,400</b>/user/yearly"
           ],
           "packageItems": [
             "Buyer Portal (Unlimited)",
@@ -532,12 +544,59 @@
         },
         {
           "packageTitle": "Premium",
-          "packageSubTitle": "₹1,54,000",
+          "packageSubTitle": "₹12,833",
           "packageDescription": "Premium includes:",
           "packageDetails": [
+            "<span style='color:#F08B32'>Per month billed annually</span>",
+            "<b>₹1,54,000</b> billed yearly",
             "One-Time Setup Cost: <b>₹48,000</b>",
             "Users (Up To): <b>15</b>",
-            "Additional User Price: <b>₹3,000</b>/user"
+            "Additional User Price: <b>₹3,000</b>/user/yearly"
+          ],
+          "packageItems": [
+            "Tally (Concurrent & Bi-Directional)",
+            "8 Levels of Enterprise Grade Security",
+            "Role Based Access Control, Multi-level Approvals (2 Levels)",
+            "Order Management, Scheme Creation and Collections Management",
+            "E-Invoicing & e-Way Billing on the Go",
+            "AI-Powered Bill Booking, Expense, Petty Cash, Reimbursement",
+            "Check-in & Live-GPS Tracking"
+          ]
+        }
+      ],
+      "pricingCardsHalf": [
+        {
+          "packageTitle": "Premium Pro",
+          "packageSubTitle": "₹33,600",
+          "Recommended": false,
+          "packageDescription": "Everything in Premium and:",
+          "packageDetails": [
+            "<span style='color:#F08B32'>Per month billed every 6 months</span>",
+            "<b>₹2,01,600</b> billed every 6 months",
+            "One-Time Setup Cost: <b>₹1,24,000</b>",
+            "Users (Up To): <b>50</b>",
+            "Additional User Price: <b>₹1344</b>/user/Half-Yearly"
+          ],
+          "packageItems": [
+            "Buyer Portal (Unlimited)",
+            "Multi-level Approval (5 Levels)",
+            "Geo-Fencing",
+            "Anti-Fraud Measures",
+            "Biometric Integration",
+            "APIs at additional Cost available for Custom integrations with Oracle and SAP",
+            "Dedicated Account Support"
+          ]
+        },
+        {
+          "packageTitle": "Premium",
+          "packageSubTitle": "₹14,373",
+          "packageDescription": "Premium includes:",
+          "packageDetails": [
+            "<span style='color:#F08B32'>Per month billed every 6 months</span>",
+            "<b>₹86,238</b> billed every 6 months",
+            "One-Time Setup Cost: <b>₹48,000</b>",
+            "Users (Up To): <b>15</b>",
+            "Additional User Price: <b>₹1680</b>/user/Half-Yearly"
           ],
           "packageItems": [
             "Tally (Concurrent & Bi-Directional)",
@@ -554,13 +613,15 @@
         "packageItems": [
           {
             "name": "Premium Pro",
-            "annualPrice": "₹3,60,000",
+            "tag": "Per month billed annually",
+            "billed": "₹3,60,000 billed yearly",
+            "annualPrice": "₹30,000",
             "oneTimeImplementationFee": "₹1,24,000",
             "numberOfUsers": 50,
             "ocrScanning": "20,000",
             "documentStorage": "25 GB",
             "numberOfBRS": "5",
-            "additionalUsersPrice": "₹2,400/user",
+            "additionalUsersPrice": "₹2,400/user/yearly",
             "features": [
               "Everything in Premium and:",
               "Buyer Portal (Unlimited)",
@@ -574,13 +635,61 @@
           },
           {
             "name": "Premium",
-            "annualPrice": "₹1,54,000",
+            "tag": "Per month billed annually",
+            "billed": "₹1,54,000 billed yearly",
+            "annualPrice": "₹12,833",
             "oneTimeImplementationFee": "₹48,000",
             "numberOfUsers": 15,
             "ocrScanning": "5,000",
             "documentStorage": "10 GB",
             "numberOfBRS": "2",
-            "additionalUsersPrice": "₹3,000/user",
+            "additionalUsersPrice": "₹3,000/user/yearly",
+            "features": [
+              "Premium includes:",
+              "Tally (Concurrent & Bi-Directional)",
+              "8 Levels of Enterprise Grade Security",
+              "Role Based Access Control, Multi-level Approvals (2 Levels)",
+              "Order Management, Scheme Creation and Collections Management",
+              "E-Invoicing & e-Way Billing on the Go",
+              "AI-Powered Bill Booking, Expense, Petty Cash, Reimbursement",
+              "Check-in & Live-GPS Tracking"
+            ]
+          }
+        ],
+        "packageItemsHalf": [
+          {
+            "name": "Premium Pro",
+            "tag": "Per month billed every 6 months",
+            "billed": "₹2,01,600 billed every 6 months",
+            "annualPrice": "₹33,600",
+            "oneTimeImplementationFee": "₹1,24,000",
+            "numberOfUsers": 50,
+            "ocrScanning": "20,000",
+            "documentStorage": "25 GB",
+            "numberOfBRS": "5",
+            "additionalUsersPrice": "₹1344/user/Half-Yearly",
+            "features": [
+              "Everything in Premium and:",
+              "Buyer Portal (Unlimited)",
+              "Multi-level Approval (5 Levels)",
+              "Geo-Fencing",
+              "Anti-Fraud Measures",
+              "Biometric Integration",
+              "APIs at additional Cost available for Custom integrations with Oracle and SAP",
+              "Dedicated Account Support"
+            ]
+          },
+          {
+            "name": "Premium",
+            "tag": "Per month billed every 6 months",
+            "billed": "₹86,238 billed every 6 months",
+            "annualPrice": "14,373",
+            "oneTimeImplementationFee": "₹48,000",
+            "numberOfUsers": 15,
+            "ocrScanning": "5,000",
+            "documentStorage": "10 GB",
+            "numberOfBRS": "2",
+            "additionalUsersPrice": "₹1680/user/Half-Yearly",
             "features": [
               "Premium includes:",
               "Tally (Concurrent & Bi-Directional)",
