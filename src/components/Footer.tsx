@@ -77,15 +77,15 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
             </div>
           </div>
           <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 md:gap-8 gap-x-1 gap-y-6 items-start  justify-center w-full">
+          <div className="grid grid-cols-2 md:grid-cols-4 md:gap-8 gap-x-1 gap-y-4 items-start  justify-center w-full">
             {footerItem?.map((section, index) => (
               <div
                 key={index}
                 className={`${
                   section?.border
                     ? index == 1
-                      ? "gradient-border-left dashed min-h-[130px] md:min-h-[200px] md:pr-8"
-                      : "gradient-border-left dashed md:min-h-[200px] md:pr-8"
+                      ? "gradient-border-left dashed  md:pr-8"
+                      : "gradient-border-left dashed  md:pr-8"
                     : "border-none"
                 }`}
               >
@@ -129,7 +129,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                 <Image
                   src={logo?.src}
                   alt={logo.alt ?? ""}
-                  className="!w-[188px] !h-[48px] cursor-pointer max-md:w-[106px] max-md:h-[96px]"
+                  className="md:w-[188px] md:h-[48px] cursor-pointer w-[150px] h-[40px]"
                   width={188}
                   height={48}
                   unoptimized={true}
