@@ -74,11 +74,11 @@ const PricingSection: React.FC<PricingSectionProps> = ({
             </div>
             <p className="md:text-[26px] text-[20px] leading-6 font-semibold text-[#F08B32]">
               {packageSubTitle}{" "}
-              {showAnnum && (
+              {/* {showAnnum && (
                 <span className="text-[#FFFFFF] text-[12px] font-[300] self-center text-center">
                   {activeTab === "annually" ? "per Annum" : "half yearly"}
                 </span>
-              )}
+              )} */}
             </p>
             {packageDetails?.map((item, index) => (
               <p
