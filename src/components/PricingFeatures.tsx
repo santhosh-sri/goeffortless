@@ -162,14 +162,14 @@ const PricingFeatures = ({
         />
       </div>
       {/* Expand All Toggle */}
-      <div className="flex items-center justify-end px-6 mb-4 md:mt-[30px]">
+      <div className="flex items-center justify-end max-md:px-0 px-6 mb-4 md:mt-[30px]">
         <input
           type="checkbox"
           className="mr-2 accent-[#F08B32] cursor-pointer"
           checked={Object.values(expandedSections).every((v) => v)}
           onChange={toggleExpandAll}
         />
-        <label className="text-[16px] text-white cursor-pointer">
+        <label className="text-[13px] md:text-base text-white cursor-pointer">
           Expand All
         </label>
       </div>
@@ -274,10 +274,10 @@ const PricingFeatures = ({
                       : ""
                   }`}
                 >
-                  <h3 className="text-[#E4E4E7] text-[13px] font-[500] capitalize">
+                  <h3 className="text-[#E4E4E7] text-base font-light capitalize">
                     {planData.name || planKey.replace(/([A-Z])/g, " $1").trim()}
                   </h3>
-                  <p className="text-[#F08B32] text-[14px] font-[500]">
+                  <p className="text-[#F08B32] text-xl font-medium">
                     {parse(planData.price)}
                   </p>
                   <p
@@ -297,7 +297,7 @@ const PricingFeatures = ({
                       setSelectedPlan(planData.name || planKey);
                     }}
                     {...CalcomConfig}
-                    className="bg-[#F08B32] py-1.5 px-2 w-full rounded text-[11px] text-white font-[400] cursor-pointer"
+                    className="bg-[#F08B32] py-1.5 px-2 w-full rounded text-sm text-white font-medium cursor-pointer"
                   >
                     {planData.trial || "Schedule Demo"}
                   </button>
@@ -355,7 +355,7 @@ const PricingFeatures = ({
 
                         {/* Plan Values - fixed width, no scroll */}
 
-                        <span className="text-left font-light text-[13px] leading-4 col-span-2 p-2">
+                        <span className="text-left font-light text-[13px] leading-4 col-span-2 px-2 py-3">
                           {parse(feature.name)}
                         </span>
                         {planOrder.map((tier, tierIndex) => (
