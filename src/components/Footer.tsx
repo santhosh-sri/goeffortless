@@ -3,6 +3,37 @@ import parse from "html-react-parser";
 import Image from "next/image";
 import Link from "next/link";
 
+const FooterLink = ({
+  item,
+  className,
+}: {
+  item: { title: string; url: string; external?: boolean; soon?: boolean };
+  className: string;
+}) => {
+  if (item.soon) {
+    return (
+      <li className={`${className} cursor-default flex items-center gap-2`}>
+        {item.title}
+        <span className="text-[10px] text-[#F08B32] leading-tight whitespace-nowrap">
+          Coming Soon
+        </span>
+      </li>
+    );
+  }
+  if (item.external) {
+    return (
+      <a href={item.url} target="_blank" rel="noopener noreferrer">
+        <li className={className}>{item.title}</li>
+      </a>
+    );
+  }
+  return (
+    <Link href={item.url || ""}>
+      <li className={className}>{item.title}</li>
+    </Link>
+  );
+};
+
 const Footer = ({ isMobile }: { isMobile?: boolean }) => {
   const { sections, logo, social_links, mwebsections, officeLocation } =
     footerData;
@@ -109,11 +140,11 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                               </h3>
                               <ul>
                                 {group.items.map((item, iIdx) => (
-                                  <Link href={item.url || ""} key={iIdx}>
-                                    <li className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px]">
-                                      {item.title}
-                                    </li>
-                                  </Link>
+                                  <FooterLink
+                                    key={iIdx}
+                                    item={item}
+                                    className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px]"
+                                  />
                                 ))}
                               </ul>
                             </div>
@@ -157,11 +188,11 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                                 </h4>
                                 <ul>
                                   {col.items.map((item, iIdx) => (
-                                    <Link href={item.url || ""} key={iIdx}>
-                                      <li className="text-[#A8A8A8] hover:text-white text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]">
-                                        {item.title}
-                                      </li>
-                                    </Link>
+                                    <FooterLink
+                                      key={iIdx}
+                                      item={item}
+                                      className="text-[#A8A8A8] hover:text-white text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
+                                    />
                                   ))}
                                 </ul>
                               </div>
@@ -186,24 +217,13 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                         </h3>
                       )}
                       <ul>
-                        {section.items?.map((item, idx) =>
-                          typeof item === "object" &&
-                          item !== null &&
-                          "url" in item ? (
-                            <Link href={item.url || ""} key={idx}>
-                              <li className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px] gap-[12px]">
-                                {item.title ?? ""}
-                              </li>
-                            </Link>
-                          ) : (
-                            <li
-                              className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] leading-5 md:leading-normal"
-                              key={idx}
-                            >
-                              {typeof item === "string" ? parse(item) : item}
-                            </li>
-                          )
-                        )}
+                        {section.items?.map((item, idx) => (
+                          <FooterLink
+                            key={idx}
+                            item={item}
+                            className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
+                          />
+                        ))}
                       </ul>
                     </div>
                   );
@@ -224,11 +244,11 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                     <ul>
                       {mwebsections?.[0]?.items?.map(
                         (item: { title: string; url: string }, idx: number) => (
-                          <Link href={item.url || ""} key={idx}>
-                            <li className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1">
-                              {item.title}
-                            </li>
-                          </Link>
+                          <FooterLink
+                            key={idx}
+                            item={item}
+                            className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                          />
                         )
                       )}
                     </ul>
@@ -249,11 +269,11 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                           </h3>
                           <ul>
                             {group.items.map((item, iIdx) => (
-                              <Link href={item.url || ""} key={iIdx}>
-                                <li className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1">
-                                  {item.title}
-                                </li>
-                              </Link>
+                              <FooterLink
+                                key={iIdx}
+                                item={item}
+                                className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                              />
                             ))}
                           </ul>
                         </div>
@@ -279,9 +299,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                         <div
                           key={cIdx}
                           className={
-                            cIdx % 2 !== 0
-                              ? "gradient-border-left dashed"
-                              : ""
+                            cIdx % 2 !== 0 ? "gradient-border-left dashed" : ""
                           }
                         >
                           <h4 className="text-[#F08B32] text-sm font-normal mb-1">
@@ -289,11 +307,11 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                           </h4>
                           <ul>
                             {col.items.map((item, iIdx) => (
-                              <Link href={item.url || ""} key={iIdx}>
-                                <li className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1">
-                                  {item.title}
-                                </li>
-                              </Link>
+                              <FooterLink
+                                key={iIdx}
+                                item={item}
+                                className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                              />
                             ))}
                           </ul>
                         </div>
@@ -310,11 +328,11 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                   <ul>
                     {mwebsections?.[3]?.items?.map(
                       (item: { title: string; url: string }, idx: number) => (
-                        <Link href={item.url || ""} key={idx}>
-                          <li className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1">
-                            {item.title ?? ""}
-                          </li>
-                        </Link>
+                        <FooterLink
+                          key={idx}
+                          item={item}
+                          className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                        />
                       )
                     )}
                   </ul>

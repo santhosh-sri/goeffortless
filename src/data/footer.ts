@@ -3,10 +3,10 @@ export const footerData = {
     {
       title: "Products",
       items: [
-        { title: "Sales & Collections", url: "/sales-and-collections" },
-        { title: "Expense & Claims", url: "/expense-and-claims" },
-        { title: "Contract & Billing", url: "/contract-and-billing" },
-        { title: "All Product Features", url: "/all-features" },
+        { title: "Sales & Collections", url: "/sales" },
+        { title: "Expense & Claims", url: "/expenses" },
+        { title: "Contract & Billing", url: "/contracts" },
+        { title: "All Product Features", url: "/allFeatures" },
       ],
     },
     {
@@ -30,16 +30,16 @@ export const footerData = {
           title: "Learn",
           items: [
             { title: "Blog", url: "/blogs" },
-            { title: "Webinars", url: "/webinars" },
-            { title: "Compliance Basics", url: "/compliance-basics" },
+            { title: "Webinars", url: "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform", external: true },
+            { title: "Compliance Basics", url: "/compliance" },
             { title: "FAQs", url: "/faqs" },
           ],
         },
         {
           title: "Tools",
           items: [
-            { title: "Download Apps", url: "/download" },
-            { title: "ROI Calculator", url: "/roi-calculator" },
+            { title: "Download Apps", url: "/download-apps" },
+            { title: "Automation ROI", url: "#", soon: true },
           ],
         },
         {
@@ -55,7 +55,7 @@ export const footerData = {
           items: [
             {
               title: "Thinking of Migrating?",
-              url: "/thinking-of-migrating",
+              url: "/migratingFeature",
             },
           ],
         },
@@ -74,10 +74,10 @@ export const footerData = {
     {
       title: "Products",
       items: [
-        { title: "Sales & Collections", url: "/sales-and-collections" },
-        { title: "Expense & Claims", url: "/expense-and-claims" },
-        { title: "Contract & Billing", url: "/contract-and-billing" },
-        { title: "All Product Features", url: "/all-features" },
+        { title: "Sales & Collections", url: "/sales" },
+        { title: "Expense & Claims", url: "/expenses" },
+        { title: "Contract & Billing", url: "/contracts" },
+        { title: "All Product Features", url: "/allFeatures" },
       ],
     },
     {
@@ -101,16 +101,16 @@ export const footerData = {
           title: "Learn",
           items: [
             { title: "Blog", url: "/blogs" },
-            { title: "Webinars", url: "/webinars" },
-            { title: "Compliance Basics", url: "/compliance-basics" },
+            { title: "Webinars", url: "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform", external: true },
+            { title: "Compliance Basics", url: "/compliance" },
             { title: "FAQs", url: "/faqs" },
           ],
         },
         {
           title: "Tools",
           items: [
-            { title: "Download Apps", url: "/download" },
-            { title: "ROI Calculator", url: "/roi-calculator" },
+            { title: "Download Apps", url: "/download-apps" },
+            { title: "Automation ROI", url: "#", soon: true },
           ],
         },
         {
@@ -126,7 +126,7 @@ export const footerData = {
           items: [
             {
               title: "Thinking of Migrating?",
-              url: "/thinking-of-migrating",
+              url: "/migratingFeature",
             },
           ],
         },
