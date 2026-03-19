@@ -12,9 +12,11 @@ const FooterLink = ({
 }) => {
   if (item.soon) {
     return (
-      <li className={`${className} cursor-default flex items-center gap-2`}>
+      <li
+        className={`${className} group cursor-default flex flex-col items-start gap-0.5`}
+      >
         {item.title}
-        <span className="text-[10px] text-[#F08B32] leading-tight whitespace-nowrap">
+        <span className="hidden group-hover:block text-[10px] text-[#F08B32] leading-tight whitespace-nowrap">
           Coming Soon
         </span>
       </li>
@@ -60,7 +62,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
           />
           <div>
             {" "}
-            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-3">
+            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
               Our Offices{" "}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-x-4 gap-y-6 justify-center w-full">
@@ -116,7 +118,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
 
           {/* Desktop Footer Menu */}
           {!isMobile && (
-            <div className="hidden md:flex gap-6 items-start w-full">
+            <div className="hidden md:flex gap-6 items-stretch w-full">
               {sections?.map((section, index) => {
                 // Grouped section (Our Customers + Ecosystem stacked)
                 if ("groups" in section && section.groups) {
@@ -135,8 +137,8 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                           },
                           gIdx: number
                         ) => (
-                          <div key={gIdx} className={gIdx > 0 ? "mt-4" : ""}>
-                            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-3">
+                          <div key={gIdx} className={gIdx > 0 ? "mt-2" : ""}>
+                            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-2">
                               {group.title}
                             </h3>
                             <ul>
@@ -144,7 +146,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                                 <FooterLink
                                   key={iIdx}
                                   item={item}
-                                  className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px]"
+                                  className="text-[#A8A8A8] hover:text-white text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
                                 />
                               ))}
                             </ul>
@@ -160,14 +162,14 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                   return (
                     <div
                       key={index}
-                      className={`flex-1 md:pr-0 ${
+                      className={`flex-1 md:pr-0 flex flex-col ${
                         section.border ? "gradient-border-left dashed" : ""
                       }`}
                     >
-                      <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-3">
+                      <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-2">
                         {section.title}
                       </h3>
-                      <div className="grid grid-cols-4 gap-4">
+                      <div className="grid grid-cols-4 gap-4 flex-1">
                         {section.subColumns.map(
                           (
                             col: {
@@ -222,7 +224,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                         <FooterLink
                           key={idx}
                           item={item}
-                          className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
+                          className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[14px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
                         />
                       ))}
                     </ul>
