@@ -20,6 +20,10 @@ export const footerData = {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],
         },
+        {
+          title: "Find Your Fit",
+          items: [{ title: "Pricing", url: "/pricing" }],
+        },
       ],
     },
     {
@@ -90,6 +94,10 @@ export const footerData = {
         {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],
+        },
+        {
+          title: "Find Your Fit",
+          items: [{ title: "Pricing", url: "/pricing" }],
         },
       ],
     },
