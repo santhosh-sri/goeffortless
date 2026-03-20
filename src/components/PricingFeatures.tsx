@@ -162,7 +162,7 @@ const PricingFeatures = ({
         />
       </div>
       {/* Expand All Toggle */}
-      <div className="flex items-center justify-end max-md:px-0 px-6 mb-4 md:mt-[30px]">
+      <div className="flex items-center justify-end max-md:px-0 px-0 mb-4 md:mt-[30px]">
         <input
           type="checkbox"
           className="mr-2 accent-[#F08B32] cursor-pointer"

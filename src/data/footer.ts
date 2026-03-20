@@ -1,103 +1,142 @@
-import { title } from "process";
-
 export const footerData = {
   mwebsections: [
-    // {
-    //   items: [
-    //     "Agrya FinLabs Pvt. Ltd.<br/>Maan Sarovar Tower, <br/>First Floor 375271A, Scheme Rd,<br/>Teynampet, Chennai,<br/>Tamil Nadu - 600018‍",
-    //     "<br/><span class='font-[500]'>Phone:</span> 91-7654-4422",
-    //     "<span class='font-[500]'>Email:</span> hello@goeffortless.ai",
-    //     ,
-    //   ],
-    // },
     {
-      title: "About",
-      // border: true,
+      title: "Products",
       items: [
+        { title: "Sales & Collections", url: "/sales" },
+        { title: "Expense & Claims", url: "/expenses" },
+        { title: "Contract & Billing", url: "/contracts" },
+        { title: "All Product Features", url: "/allFeatures" },
+      ],
+    },
+    {
+      border: true,
+      groups: [
         {
-          title: "Company",
-          url: "/about-us",
+          title: "Our Customers",
+          items: [{ title: "Case Studies", url: "/case-studies" }],
         },
         {
-          title: "Pricing",
-          url: "/pricing",
+          title: "Ecosystem",
+          items: [{ title: "Partners", url: "/partners" }],
+        },
+        {
+          title: "Find Your Fit",
+          items: [{ title: "Pricing", url: "/pricing" }],
         },
       ],
     },
     {
       title: "Resources",
       border: true,
-      items: [
+      subColumns: [
         {
-          title: "Partners",
-          url: "/partners",
+          title: "Learn",
+          items: [
+            { title: "Blog", url: "/blogs" },
+            { title: "Webinars", url: "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform", external: true },
+            { title: "Compliance Basics", url: "/compliance" },
+            { title: "FAQs", url: "/faqs" },
+          ],
         },
         {
-          title: "Certifications & Awards",
-          url: "/certifications-awards",
+          title: "Tools",
+          items: [
+            { title: "Download Apps", url: "/download-apps" },
+            { title: "Automation ROI", url: "#", soon: true },
+          ],
         },
         {
-          title: "Case Studies",
-          url: "/case-studies",
+          title: "Company",
+          items: [
+            { title: "About Us", url: "/about-us" },
+            { title: "Certifications", url: "/certifications-awards" },
+            { title: "Contact Us", url: "/contact-us" },
+          ],
+        },
+        {
+          title: "Featured",
+          items: [
+            {
+              title: "Thinking of Migrating?",
+              url: "/migratingFeature",
+            },
+          ],
         },
       ],
     },
     {
       title: "Legal",
-      // border: true,
       items: [
-        {
-          title: "Privacy Policy",
-          url: "/privacy-policy",
-        },
-        {
-          title: "Terms of Service",
-          url: "/terms-of-service",
-        },
-        {
-          title: "Security Practices",
-          url: "/security-practices",
-        },
+        { title: "Privacy Policy", url: "/privacy-policy" },
+        { title: "Terms of Service", url: "/terms-of-service" },
+        { title: "Security Practices", url: "/security-practices" },
       ],
     },
   ],
   sections: [
-    // {
-    //   items: [
-    //     "Agrya FinLabs Pvt. Ltd.<br/>Maan Sarovar Tower,<br/>First Floor 375271A, Scheme Rd,<br/>Teynampet, Chennai,<br/>Tamil Nadu - 600018‍<br/><br/>",
-    //     "<span class='font-[500]'>Phone:</span> 91-7654-4422",
-    //     "<span class='font-[500]'>Email:</span> hello@goeffortless.ai",
-    //   ],
-    // },
     {
-      title: "About",
-      // border: true,
+      title: "Products",
       items: [
+        { title: "Sales & Collections", url: "/sales" },
+        { title: "Expense & Claims", url: "/expenses" },
+        { title: "Contract & Billing", url: "/contracts" },
+        { title: "All Product Features", url: "/allFeatures" },
+      ],
+    },
+    {
+      border: true,
+      groups: [
         {
-          title: "Company",
-          url: "/about-us",
+          title: "Our Customers",
+          items: [{ title: "Case Studies", url: "/case-studies" }],
         },
         {
-          title: "Pricing",
-          url: "/pricing",
+          title: "Ecosystem",
+          items: [{ title: "Partners", url: "/partners" }],
+        },
+        {
+          title: "Find Your Fit",
+          items: [{ title: "Pricing", url: "/pricing" }],
         },
       ],
     },
     {
       title: "Resources",
       border: true,
-      items: [
+      subColumns: [
         {
-          title: "Partners",
-          url: "/partners",
+          title: "Learn",
+          items: [
+            { title: "Blog", url: "/blogs" },
+            { title: "Webinars", url: "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform", external: true },
+            { title: "Compliance Basics", url: "/compliance" },
+            { title: "FAQs", url: "/faqs" },
+          ],
         },
         {
-          title: "Certifications & Awards",
-          url: "/certifications-awards",
+          title: "Tools",
+          items: [
+            { title: "Download Apps", url: "/download-apps" },
+            { title: "Automation ROI", url: "#", soon: true },
+          ],
         },
         {
-          title: "Case Studies",
-          url: "/case-studies",
+          title: "Company",
+          items: [
+            { title: "About Us", url: "/about-us" },
+            { title: "Certifications", url: "/certifications-awards" },
+            { title: "Contact Us", url: "/contact-us" },
+          ],
+        },
+        {
+          title: "Featured",
+          items: [
+            {
+              title: "Thinking of Migrating?",
+              url: "/migratingFeature",
+            },
+          ],
         },
       ],
     },
@@ -105,18 +144,9 @@ export const footerData = {
       title: "Legal",
       border: true,
       items: [
-        {
-          title: "Privacy Policy",
-          url: "/privacy-policy",
-        },
-        {
-          title: "Terms of Service",
-          url: "/terms-of-service",
-        },
-        {
-          title: "Security Practices",
-          url: "/security-practices",
-        },
+        { title: "Privacy Policy", url: "/privacy-policy" },
+        { title: "Terms of Service", url: "/terms-of-service" },
+        { title: "Security Practices", url: "/security-practices" },
       ],
     },
   ],
@@ -149,9 +179,7 @@ export const footerData = {
   officeLocation: [
     {
       title: "Chennai HQ",
-      desc: "Agrya FinLabs Pvt. Ltd.<br/>Maan Sarovar Tower, First Floor 375271A,<br/> Scheme Rd, Teynampet, Chennai,<br/>Tamil Nadu - 600018‍",
-      // "<br/><span class='font-[500]'>Phone:</span> 91-7654-4422",
-      // "<span class='font-[500]'>Email:</span> hello@goeffortless.ai",
+      desc: "Agrya FinLabs Pvt. Ltd.<br/>Maan Sarovar Tower, First Floor 375/271A,<br/> Scheme Rd, Teynampet, Chennai,<br/>Tamil Nadu - 600018",
       url: `https://maps.app.goo.gl/ZU1JDbuuFzVWnRZg9`,
     },
     {
@@ -165,14 +193,14 @@ export const footerData = {
       title: "Mumbai",
       isMobile: false,
       border: true,
-      desc: "1206-07, Ajmera Sikova, LBS Marg, Ashok Silk<br/>Mills Ln, Ghatkopar, Mumbai<br/>Maharashtra - 400086",
+      desc: "1206-07, Ajmera Sikova, LBS Marg, Ashok Silk<br/>Mills Ln, Ghatkopar, Mumbai,<br/>Maharashtra - 400086",
       url: `https://maps.app.goo.gl/KzuyVBkWb6CkeA5Q6`,
     },
     {
       title: "Hyderabad",
       isMobile: true,
       border: true,
-      desc: "7th Floor, Vasavi MPM Grand, 824, beside<br/>Ameerpet Metro, Hyderabad<br/>Telangana - 500073",
+      desc: "7th Floor, Vasavi MPM Grand, 824, beside<br/>Ameerpet Metro, Hyderabad,<br/>Telangana - 500073",
       url: `https://maps.app.goo.gl/oYDrhUz1kiL7X8jM6`,
     },
   ],

@@ -3,12 +3,50 @@ import parse from "html-react-parser";
 import Image from "next/image";
 import Link from "next/link";
 
+const FooterLink = ({
+  item,
+  className,
+}: {
+  item: { title: string; url: string; external?: boolean; soon?: boolean };
+  className: string;
+}) => {
+  if (item.soon) {
+    return (
+      <li
+        className={`${className} group cursor-default flex flex-col items-start gap-0.5`}
+      >
+        {item.title}
+        <span className="hidden group-hover:block text-[10px] text-[#F08B32] leading-tight whitespace-nowrap">
+          Coming Soon
+        </span>
+      </li>
+    );
+  }
+  if (item.external) {
+    return (
+      <a href={item.url} target="_blank" rel="noopener noreferrer">
+        <li className={className}>{item.title}</li>
+      </a>
+    );
+  }
+  return (
+    <Link href={item.url || ""}>
+      <li className={className}>{item.title}</li>
+    </Link>
+  );
+};
+
 const Footer = ({ isMobile }: { isMobile?: boolean }) => {
   const { sections, logo, social_links, mwebsections, officeLocation } =
     footerData;
-  const footerItem = isMobile ? mwebsections : sections;
   return (
-    <div className="bg-[#15181B] max-md:p-4 p-[80px] !pb-0 !pt-[40px]">
+    // <div className="relative">
+    //   <div className="absolute top-0 left-0 right-0 h-[10px] bg-gradient-to-b from-[#15181B] to-transparent -translate-y-full pointer-events-none"></div>
+    <div
+      className="bg-[#15181B] max-md:p-4 p-[80px] !pb-0 !pt-[40px]"
+      // bg-bottom bg-no-repeat bg-cover
+      // style={{ backgroundImage: "url('/footerbg.svg')" }}
+    >
       <footer
         className=" text-white flex flex-col  gap-4 md:gap-8 max-w-[1350px] mx-auto"
         id="footer"
@@ -24,7 +62,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
           />
           <div>
             {" "}
-            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-3">
+            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
               Our Offices{" "}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-x-4 gap-y-6 justify-center w-full">
@@ -77,49 +115,233 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
             </div>
           </div>
           <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 md:gap-8 gap-x-1 gap-y-4 items-start  justify-center w-full">
-            {footerItem?.map((section, index) => (
-              <div
-                key={index}
-                className={`${
-                  section?.border
-                    ? index == 1
-                      ? "gradient-border-left dashed  md:pr-8"
-                      : "gradient-border-left dashed  md:pr-8"
-                    : "border-none"
-                }`}
-              >
-                {section?.title && (
-                  <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-3">
-                    {section?.title ?? ""}
-                  </h3>
-                )}
-                <ul className="">
-                  {section.items?.map((item, idx) =>
-                    typeof item === "object" &&
-                    item !== null &&
-                    "url" in item ? (
-                      <Link href={item.url || ""} key={idx}>
-                        <li
-                          className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
+
+          {/* Desktop Footer Menu */}
+          {!isMobile && (
+            <div className="hidden md:flex gap-6 items-stretch w-full">
+              {sections?.map((section, index) => {
+                // Grouped section (Our Customers + Ecosystem stacked)
+                if ("groups" in section && section.groups) {
+                  return (
+                    <div
+                      key={index}
+                      className={`md:pr-0 ${
+                        section.border ? "gradient-border-left dashed" : ""
+                      }`}
+                    >
+                      {section.groups.map(
+                        (
+                          group: {
+                            title: string;
+                            items: { title: string; url: string }[];
+                          },
+                          gIdx: number
+                        ) => (
+                          <div key={gIdx} className={gIdx > 0 ? "mt-2" : ""}>
+                            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-2">
+                              {group.title}
+                            </h3>
+                            <ul>
+                              {group.items.map((item, iIdx) => (
+                                <FooterLink
+                                  key={iIdx}
+                                  item={item}
+                                  className="text-[#A8A8A8] hover:text-white text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
+                                />
+                              ))}
+                            </ul>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  );
+                }
+
+                // Resources section with sub-columns
+                if ("subColumns" in section && section.subColumns) {
+                  return (
+                    <div
+                      key={index}
+                      className={`flex-1 md:pr-0 flex flex-col ${
+                        section.border ? "gradient-border-left dashed" : ""
+                      }`}
+                    >
+                      <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-2">
+                        {section.title}
+                      </h3>
+                      <div className="grid grid-cols-4 gap-4 flex-1">
+                        {section.subColumns.map(
+                          (
+                            col: {
+                              title: string;
+                              items: { title: string; url: string }[];
+                            },
+                            cIdx: number
+                          ) => (
+                            <div
+                              key={cIdx}
+                              className={`md:pr-0 ${
+                                cIdx === 0
+                                  ? "border-none"
+                                  : "gradient-border-left dashed"
+                              }`}
+                            >
+                              <h4 className="text-[#F08B32] text-sm font-normal mb-1 md:mb-3">
+                                {col.title}
+                              </h4>
+                              <ul>
+                                {col.items.map((item, iIdx) => (
+                                  <FooterLink
+                                    key={iIdx}
+                                    item={item}
+                                    className="text-[#A8A8A8] hover:text-white text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
+                                  />
+                                ))}
+                              </ul>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    </div>
+                  );
+                }
+
+                // Regular section (Products, Legal)
+                return (
+                  <div
+                    key={index}
+                    className={`md:pr-0 ${
+                      section.border ? "gradient-border-left dashed" : ""
+                    }`}
+                  >
+                    {section?.title && (
+                      <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-3">
+                        {section.title}
+                      </h3>
+                    )}
+                    <ul>
+                      {section.items?.map((item, idx) => (
+                        <FooterLink
                           key={idx}
-                        >
-                          {item.title ?? ""}
-                        </li>
-                      </Link>
-                    ) : (
-                      <li
-                        className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[16px] font-[300] leading-5 md:leading-normal"
-                        key={idx}
+                          item={item}
+                          className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[14px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
+                        />
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Mobile Footer Menu */}
+          {isMobile && (
+            <div className="flex flex-col gap-4 w-full">
+              {/* Row 1: Products | Our Customers + Ecosystem */}
+              <div className="grid grid-cols-2 gap-x-1">
+                {/* Products */}
+                <div>
+                  <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
+                    Products
+                  </h3>
+                  <ul>
+                    {mwebsections?.[0]?.items?.map(
+                      (item: { title: string; url: string }, idx: number) => (
+                        <FooterLink
+                          key={idx}
+                          item={item}
+                          className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                        />
+                      )
+                    )}
+                  </ul>
+                </div>
+                {/* Our Customers + Ecosystem */}
+                <div className="gradient-border-left dashed">
+                  {(mwebsections?.[1] as any)?.groups?.map(
+                    (
+                      group: {
+                        title: string;
+                        items: { title: string; url: string }[];
+                      },
+                      gIdx: number
+                    ) => (
+                      <div key={gIdx} className={gIdx > 0 ? "mt-3" : ""}>
+                        <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
+                          {group.title}
+                        </h3>
+                        <ul>
+                          {group.items.map((item, iIdx) => (
+                            <FooterLink
+                              key={iIdx}
+                              item={item}
+                              className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                            />
+                          ))}
+                        </ul>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+
+              {/* Row 2: Resources with subtitles (2-col grid) */}
+              <div>
+                <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-2">
+                  Resources
+                </h3>
+                <div className="grid grid-cols-2 gap-x-1 gap-y-3">
+                  {(mwebsections?.[2] as any)?.subColumns?.map(
+                    (
+                      col: {
+                        title: string;
+                        items: { title: string; url: string }[];
+                      },
+                      cIdx: number
+                    ) => (
+                      <div
+                        key={cIdx}
+                        className={
+                          cIdx % 2 !== 0 ? "gradient-border-left dashed" : ""
+                        }
                       >
-                        {typeof item === "string" ? parse(item) : item}
-                      </li>
+                        <h4 className="text-[#F08B32] text-sm font-normal mb-1">
+                          {col.title}
+                        </h4>
+                        <ul>
+                          {col.items.map((item, iIdx) => (
+                            <FooterLink
+                              key={iIdx}
+                              item={item}
+                              className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                            />
+                          ))}
+                        </ul>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+
+              {/* Row 3: Legal */}
+              <div>
+                <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
+                  Legal
+                </h3>
+                <ul>
+                  {mwebsections?.[3]?.items?.map(
+                    (item: { title: string; url: string }, idx: number) => (
+                      <FooterLink
+                        key={idx}
+                        item={item}
+                        className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                      />
                     )
                   )}
                 </ul>
               </div>
-            ))}
-          </div>
+            </div>
+          )}
 
           {/* Bottom Section */}
           <div className="flex items-center justify-between">
@@ -158,6 +380,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
         </div>
       </footer>
     </div>
+    // </div>
   );
 };
 
