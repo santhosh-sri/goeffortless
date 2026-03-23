@@ -13,7 +13,6 @@ const Timeline: React.FC<TimelineStep> = ({ dayLabel, title, points }) => {
           width={16}
           height={16}
           className="z-[999]"
-          unoptimized={true}
         />
 
         {/* Day Label */}

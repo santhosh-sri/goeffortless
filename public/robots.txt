@@ -1,0 +1,28 @@
+# Robots.txt for goeffortless.ai
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /demo/
+
+# Sitemap
+Sitemap: https://www.goeffortless.ai/sitemap.xml
+
+# AI Crawlers - Allow for AIO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Allow: /

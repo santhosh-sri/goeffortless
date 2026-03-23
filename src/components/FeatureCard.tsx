@@ -35,7 +35,6 @@ const Featurecard: React.FC<FeatureCard> = ({
               alt="Icon"
               width={24}
               height={24}
-              unoptimized={true}
             />
           )}
         </div>

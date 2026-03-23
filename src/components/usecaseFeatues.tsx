@@ -34,7 +34,6 @@ const UsecaseFeatures: React.FC<USeCaseSection> = (card) => {
               height={212}
               alt="bannerImage"
               className={`h-[320px] ${position ? "max-md:hidden" : "block"} `}
-              unoptimized={true}
             />
           )}
           <div className="md:min-h-[110px] flex flex-col gap-3">
@@ -61,7 +60,6 @@ const UsecaseFeatures: React.FC<USeCaseSection> = (card) => {
               height={212}
               alt="bannerImage"
               className={`md:h-[320px] ${position ? "md:hidden" : "block"} `}
-              unoptimized={true}
             />
           )}
         </section>

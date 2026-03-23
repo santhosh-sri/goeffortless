@@ -80,7 +80,6 @@ const Logocarousel = () => {
                 width={logos?.width}
                 height={logos?.height}
                 className="md:max-w-[140px] md:max-h-[64px] max-w-[80px] max-h-[40px] object-contain w-auto h-auto"
-                unoptimized={true}
               />
             </div>
           </div>

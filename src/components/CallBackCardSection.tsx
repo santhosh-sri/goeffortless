@@ -80,7 +80,6 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
                   width={16}
                   height={16}
                   className="block"
-                  unoptimized={true}
                 />
               </span>
             </span>

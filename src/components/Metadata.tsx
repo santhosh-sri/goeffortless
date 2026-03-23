@@ -4,6 +4,7 @@ import React from "react";
 interface MetadataProps {
   title?: string;
   description?: string;
+  keywords?: string;
   og?: {
     title?: string;
     description?: string;
@@ -14,24 +15,39 @@ interface MetadataProps {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const Metadata: React.FC<MetadataProps> = ({ title, description, og, jsonLd }) => {
+const Metadata: React.FC<MetadataProps> = ({
+  title,
+  description,
+  keywords,
+  og,
+  jsonLd,
+}) => {
   return (
     <Head>
       {/* Basic Meta Tags */}
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
+      {keywords && <meta name="keywords" content={keywords} />}
+
+      {/* Robots */}
+      <meta name="robots" content="index, follow" />
 
       {/* Open Graph Meta Tags */}
       {og?.title && <meta property="og:title" content={og.title} />}
-      {og?.description && <meta property="og:description" content={og.description} />}
+      {og?.description && (
+        <meta property="og:description" content={og.description} />
+      )}
       {og?.url && <meta property="og:url" content={og.url} />}
       {og?.type && <meta property="og:type" content={og.type} />}
       {og?.image && <meta property="og:image" content={og.image} />}
+      <meta property="og:site_name" content="Effortless" />
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       {og?.title && <meta name="twitter:title" content={og.title} />}
-      {og?.description && <meta name="twitter:description" content={og.description} />}
+      {og?.description && (
+        <meta name="twitter:description" content={og.description} />
+      )}
       {og?.image && <meta name="twitter:image" content={og.image} />}
 
       {/* Additional SEO Meta Tags */}

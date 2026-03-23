@@ -37,7 +37,6 @@ const GrowthCards: React.FC<GrowthCardsContent> = ({
               alt="Icon"
               width={width}
               height={height}
-              unoptimized={true}
               className="w-full h-auto"
             />
           )}{" "}

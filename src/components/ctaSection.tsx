@@ -12,7 +12,7 @@ const CtaSection = ({
       ? ctaLink
       : secondaryCtaLink
       ? secondaryCtaLink
-      : "/demo";
+      : "/contact-us";
     window.location.href = redirectScreen;
   };
   return (
