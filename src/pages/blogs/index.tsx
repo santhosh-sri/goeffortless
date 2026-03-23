@@ -81,6 +81,7 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
           name="description"
           content="Stay ahead with The Effortless Edge — your source for insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses."
         />
+        <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
           content="Effortless Blogs: The Effortless Edge — AI Automation & Sales Insights"
@@ -92,7 +93,56 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
         <meta property="og:url" content="https://www.goeffortless.ai/blogs" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://iili.io/F7C7h12.png" />
+        <meta property="og:site_name" content="Effortless" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Effortless Blogs: The Effortless Edge — AI Automation & Sales Insights" />
+        <meta name="twitter:description" content="Stay ahead with The Effortless Edge — your source for insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses." />
+        <meta name="twitter:image" content="https://iili.io/F7C7h12.png" />
         <link rel="canonical" href="https://www.goeffortless.ai/blogs" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "The Effortless Edge — Blog",
+              "description": "Insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses.",
+              "url": "https://www.goeffortless.ai/blogs",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Effortless",
+                "url": "https://www.goeffortless.ai",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.goeffortless.ai/logo.svg"
+                }
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.goeffortless.ai"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Blogs",
+                  "item": "https://www.goeffortless.ai/blogs"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
       <div className={`fixed top-0 w-full z-[999]`}>
         <Header

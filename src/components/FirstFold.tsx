@@ -55,10 +55,9 @@ const FirstFold: React.FC<FirstFoldContent> = ({
           {bannerImage && (
             <Image
               src={bannerImage}
-              alt="service-banner"
+              alt={`Effortless ${pageHeading || "platform"} - product dashboard screenshot`}
               width={1200}
               height={700}
-              unoptimized={true}
               priority
               className="w-full h-auto object-cover hidden md:block"
             />
@@ -66,10 +65,9 @@ const FirstFold: React.FC<FirstFoldContent> = ({
           {mobileBannerImage && (
             <Image
               src={mobileBannerImage}
-              alt="service-banner"
+              alt={`Effortless ${pageHeading || "platform"} - mobile view`}
               width={1200}
               height={700}
-              unoptimized={true}
               priority
               className="w-full h-auto object-cover md:hidden"
             />
@@ -101,7 +99,7 @@ const FirstFold: React.FC<FirstFoldContent> = ({
           <Image
             key={index}
             src={logos?.src || ""}
-            alt="service-banner"
+            alt={(logos?.src || "partner logo").replace(/\.(png|svg|jpg|jpeg|webp)$/i, "").replace(/^\//, "").replace(/[-_]/g, " ")}
             width={logos?.width}
             height={logos?.height}
             className="flex-shrink-0 w-auto h-10 md:h-12"

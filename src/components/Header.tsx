@@ -75,7 +75,6 @@ const Header = ({
                 width={110}
                 height={isMobile ? 28 : 70}
                 priority
-                unoptimized={true}
               />
             </Link>
           </div>
@@ -89,7 +88,6 @@ const Header = ({
                 width={16}
                 height={16}
                 className="w-[20px] h-[20px]"
-                unoptimized={true}
               />
               <p className="mr-3 text-[14px] font-[400] cursor-pointer">
                 +91 91765 44422{" "}
@@ -114,7 +112,6 @@ const Header = ({
                 width={16}
                 height={16}
                 className="w-[20px] h-[20px]"
-                unoptimized={true}
               />
               <p className="mr-3 text-[16px] font-[400] cursor-pointer max-lg:hidden">
                 +91 91765 44422{" "}
@@ -140,7 +137,6 @@ const Header = ({
                 width={24}
                 height={24}
                 priority
-                unoptimized={true}
               />
             </div>
             {!isMobile && (
@@ -182,8 +178,7 @@ const Header = ({
                     width={16}
                     height={16}
                     className="opacity-70"
-                    unoptimized={true}
-                  />
+                      />
                 </Link>
               ))}
             </div>

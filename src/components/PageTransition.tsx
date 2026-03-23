@@ -56,7 +56,6 @@ export default function PageTransition({
               width={150}
               height={50}
               className="w-[188px] h-[48px]"
-              unoptimized={true}
             />
           </div>
         </div>

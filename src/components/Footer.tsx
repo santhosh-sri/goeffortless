@@ -58,7 +58,6 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
             height={400}
             width={300}
             className="w-full"
-            unoptimized={true}
           />
           <div>
             {" "}
@@ -354,7 +353,6 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                   className="md:w-[188px] md:h-[48px] cursor-pointer w-[150px] h-[40px]"
                   width={188}
                   height={48}
-                  unoptimized={true}
                 />
               </Link>
             )}

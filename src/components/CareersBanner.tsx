@@ -31,7 +31,6 @@ const CareersSection: FC<CareersSectionContent> = ({
               height={32}
               className="w-[32px] h-[32px] md:w-[48px] md:h-[48px]"
               priority
-              unoptimized={true}
             />
             {highlightWords?.text && (
               <span className=" text-center border-[1px] border-[#F08B32] rounded-[50px] px-4 md:px-8 bg-gradient-to-r from-[#F08B32] to-[#FFFFFF] bg-clip-text text-transparent font-[400] text-[32px] md:text-[72px] md:leading-[86px]">
@@ -66,7 +65,6 @@ const CareersSection: FC<CareersSectionContent> = ({
           alt={teamImage.alt}
           width={1200}
           height={700}
-          unoptimized={true}
           priority
           className="w-full h-auto object-cover"
         />

@@ -6,7 +6,7 @@ const USeCaseCard: React.FC<UseCaseCard> = ({ title, description, img }) => {
   return (
     <div className="text-[#FFF] flex flex-col gap-[32px] md:gap-[56px] p-[42px] md:p-9 rounded-xl bg-[#121316] items-center justify-center">
       {img && (
-        <Image src={img} alt="Icon" width={48} height={48} unoptimized={true} />
+        <Image src={img} alt="Icon" width={48} height={48} />
       )}
       <div className="flex flex-col gap-[18px] items-center justify-between text-center">
         <p className="text-[18px] leading-[23px] md:text-[26px] md:h-[90px]">

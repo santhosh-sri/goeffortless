@@ -103,7 +103,6 @@ const PricingSection: React.FC<PricingSectionProps> = ({
                   alt="tick"
                   width={16}
                   height={16}
-                  unoptimized={true}
                 />
                 <p className="text-[14px] font-[300] leading-[22px]">{item}</p>
               </div>

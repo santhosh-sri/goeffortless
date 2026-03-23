@@ -60,7 +60,6 @@ const RedirectCta = ({
           alt="arrow"
           width={16}
           height={16}
-          unoptimized={true}
           className=""
         />
       </div>

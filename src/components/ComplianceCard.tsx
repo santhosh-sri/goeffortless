@@ -18,7 +18,6 @@ const ComplianceCardSection: React.FC<ComplianceCard> = ({
             width={48}
             height={48}
             className="w-[32px] h-[32px] md:!w-[48px] md:!h-[48px]"
-            unoptimized={true}
           />
         )}
         <p className="text-[16px] leading-[23px] md:text-[20px] md:leading-[30px] font-[500] text-[#F08B32] text-center">

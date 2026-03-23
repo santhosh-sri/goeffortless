@@ -205,7 +205,6 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                 width={620}
                 height={442}
                 priority
-                unoptimized={true}
                 className={`2xl:w-[712px] ${
                   isPartnerPage ? "md:relative md:top-[22px]" : ""
                 }`}
@@ -220,8 +219,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                     alt="tallyprime-logo"
                     width={171}
                     height={40}
-                    unoptimized={true}
-                  />
+                      />
                 </div>
               )}
             </div>

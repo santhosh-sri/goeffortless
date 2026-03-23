@@ -345,7 +345,6 @@ const Header = ({
                 width={110}
                 height={isMobile ? 28 : 70}
                 priority
-                unoptimized={true}
               />
             </Link>
           </div>
@@ -657,7 +656,6 @@ const Header = ({
                 width={16}
                 height={16}
                 className="w-[20px] h-[20px]"
-                unoptimized={true}
               />
               <p className="mr-3 text-[14px] md:text-[16px] font-[400] cursor-pointer">
                 +91 91765 44422
@@ -688,8 +686,7 @@ const Header = ({
                   width={24}
                   height={24}
                   priority
-                  unoptimized={true}
-                />
+                  />
               </div>
             )}
 

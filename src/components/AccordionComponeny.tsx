@@ -53,7 +53,6 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
                           ? "invert(66%) sepia(94%) saturate(2000%) hue-rotate(15deg) brightness(141.8%) contrast(100%)"
                           : "",
                     }}
-                    unoptimized={true}
                   />
                 )}
 

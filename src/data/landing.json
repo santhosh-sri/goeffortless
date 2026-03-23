@@ -17,14 +17,41 @@
         "url": "https://www.goeffortless.ai",
         "logo": "https://www.goeffortless.ai/logo.svg",
         "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs — automating billing, expenses, sales operations, contracts, and cash flow management.",
-        "sameAs": [
-          "https://www.linkedin.com/company/goeffortless"
-        ],
+        "sameAs": ["https://www.linkedin.com/company/goeffortless"],
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "url": "https://www.goeffortless.ai/demo"
-        }
+          "url": "https://www.goeffortless.ai/contact-us"
+        },
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Hyderabad",
+            "addressCountry": "IN"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Effortless",
+        "url": "https://www.goeffortless.ai",
+        "description": "The All-In-One Growth Platform for Indian SMBs"
       },
       {
         "@context": "https://schema.org",
@@ -40,7 +67,13 @@
           "priceCurrency": "INR",
           "category": "Subscription"
         },
-        "featureList": "Order-to-Cash Automation, Expense Management, Field Sales Tracking, Buyer Portal, Banking & Cash Flow Visibility, Business Health Dashboard, Tally Integration, GST Compliance"
+        "featureList": "Order-to-Cash Automation, Expense Management, Field Sales Tracking, Buyer Portal, Banking & Cash Flow Visibility, Business Health Dashboard, Tally Integration, GST Compliance",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "1000",
+          "bestRating": "5"
+        }
       }
     ]
   },
