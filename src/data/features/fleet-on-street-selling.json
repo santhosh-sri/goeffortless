@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Fleet on Street Selling — Field Sales & Billing App | Effortless",
+    "description": "Turn every field visit into a closed order — with billing, collections, and team performance tracked in one powerful flow. Built for Indian field sales teams.",
+    "og": {
+      "title": "Fleet on Street Selling — Field Sales & Billing App | Effortless",
+      "description": "Turn every field visit into a closed order — billing, collections, and team performance tracked in one flow.",
+      "url": "https://www.goeffortless.ai/features/fleet-on-street-selling",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "firstFold": {
     "pageHeading": "Fleet on Street Selling",
     "heading": "<span style='color:#FFFFFFFF'>Sell Smarter. Collect Faster. </span><br/>Stay on Track.",

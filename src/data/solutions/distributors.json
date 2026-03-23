@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Distributor Network Management Software | Effortless",
+    "description": "From order to payout, your entire distribution chain runs on one clean system. Distributor management, billing, and logistics automation by Effortless.",
+    "og": {
+      "title": "Distributor Network Management Software | Effortless",
+      "description": "From order to payout, your entire distribution chain on one clean system. Built for Indian distributors.",
+      "url": "https://www.goeffortless.ai/solutions/distributors",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "usecaseFold": {
     "pageHeading": "Distributor Network",
     "heading": "<span style='color:#FFFFFFFF'>Scattered Orders.</span>One System.",

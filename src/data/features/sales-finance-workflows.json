@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Sales & Finance Workflow Automation | Effortless",
+    "description": "Automate billing, collections, and expense sync — so your finance team spends less time chasing data and more time driving growth. Effortless sales-finance workflows.",
+    "og": {
+      "title": "Sales & Finance Workflow Automation | Effortless",
+      "description": "Automate billing, collections, and expense sync so your finance team drives growth instead of chasing data.",
+      "url": "https://www.goeffortless.ai/features/sales-finance-workflows",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "firstFold": {
     "pageHeading": "Sales Finance Workflows",
     "heading": "<span style='color:#FFFFFFFF'>From Order to Money in the Bank — </span>on Autopilot",

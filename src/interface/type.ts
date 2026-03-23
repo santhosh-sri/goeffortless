@@ -429,6 +429,7 @@ export interface MetadataType {
     type?: string;
     image?: string;
   };
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 export interface Content {
   headerItems?: HeaderItemsProps;

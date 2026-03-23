@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Banking & Cash Flow Visibility for SMBs | Effortless",
+    "description": "Auto-sync all your bank accounts, track inflows and outflows, and get a live view of working capital — no delays, no surprises. Real-time cash flow visibility.",
+    "og": {
+      "title": "Banking & Cash Flow Visibility for SMBs | Effortless",
+      "description": "Auto-sync bank accounts, track cash inflows and outflows, and get live working capital visibility. No delays, no surprises.",
+      "url": "https://www.goeffortless.ai/features/banking-and-cashflow-visibility",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "firstFold": {
     "pageHeading": "Banking and Cashflow Visibility ",
     "heading": "<span style='color:#FFFFFFFF'>Know Where Every Rupee Is — </span> In Real Time",
