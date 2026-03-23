@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "B2B Buyer Commerce & Vendor Payment Automation | Effortless",
+    "description": "Automate vendor payments, approvals, and finance workflows so you can scale faster and stay in control. B2B buyer commerce platform by Effortless.",
+    "og": {
+      "title": "B2B Buyer Commerce & Vendor Payment Automation | Effortless",
+      "description": "Automate vendor payments, approvals, and finance workflows. Scale faster and stay in control.",
+      "url": "https://www.goeffortless.ai/solutions/buyer-commerce",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "usecaseFold": {
     "pageHeading": "Buyer Commerce",
     "heading": "<span style='color:#FFFFFFFF'>Grow Without Backend</span> Bottlenecks",

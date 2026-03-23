@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "B2B Buyer Portal for Self-Service Orders & Payments | Effortless",
+    "description": "Let your B2B customers place orders, track deliveries, view invoices, and make payments — all without calling your sales team. Self-service buyer portal by Effortless.",
+    "og": {
+      "title": "B2B Buyer Portal for Self-Service Orders & Payments | Effortless",
+      "description": "Self-service B2B buyer portal — your customers can place orders, track delivery, view invoices, and pay online without calling your sales team.",
+      "url": "https://www.goeffortless.ai/features/buyer-portal",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "firstFold": {
     "pageHeading": "Buyer Portal",
     "heading": "<span style='color:#FFFFFFFF'>Your Dealers,</span>Now Self-Sufficient.",

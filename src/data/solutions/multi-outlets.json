@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Multi-Branch & Multi-Outlet Management Software | Effortless",
+    "description": "Get real-time control over stock, margins, and payments across all your branches — so growth doesn't come at the cost of confusion. Multi-outlet management by Effortless.",
+    "og": {
+      "title": "Multi-Branch & Multi-Outlet Management Software | Effortless",
+      "description": "Real-time control over stock, margins, and payments across all your branches. Growth without confusion.",
+      "url": "https://www.goeffortless.ai/solutions/multi-outlets",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "usecaseFold": {
     "pageHeading": "Multiple Branches",
     "heading": "<span style='color:#FFFFFFFF'>More Outlets.</span>No More Chaos.",

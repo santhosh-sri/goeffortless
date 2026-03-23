@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Real-Time Business Health Dashboard | Effortless",
+    "description": "Monitor key business metrics as they happen, identify trends before they become challenges, and make confident decisions — all from one real-time dashboard.",
+    "og": {
+      "title": "Real-Time Business Health Dashboard | Effortless",
+      "description": "Monitor key business metrics in real time. Identify trends, track KPIs, and make data-driven decisions from one dashboard.",
+      "url": "https://www.goeffortless.ai/features/business-health-dashboard",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "firstFold": {
     "pageHeading": "Business Health Dashboard",
     "heading": "<span style='color:#FFFFFFFF'>Your Business, At a Glance. </span> In Real Time",
