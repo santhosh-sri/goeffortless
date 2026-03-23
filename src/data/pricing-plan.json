@@ -1,4 +1,15 @@
 {
+  "metadata": {
+    "title": "Pricing Plans — Effortless Growth Platform for Indian SMBs",
+    "description": "Transparent pricing for Effortless — the all-in-one growth platform. Choose the plan that fits your business. Sales, expenses, contracts, and cash flow automation.",
+    "og": {
+      "title": "Pricing Plans — Effortless Growth Platform for Indian SMBs",
+      "description": "Transparent pricing for India's all-in-one growth platform. Sales, expenses, contracts, and cash flow automation — choose your plan.",
+      "url": "https://www.goeffortless.ai/pricing",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "isPricingPlanPage": true,
   "headerItems": {
     "headerMenus": [

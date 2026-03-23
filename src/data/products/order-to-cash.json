@@ -1,4 +1,15 @@
 {
+  "metadata": {
+    "title": "Order-to-Cash Automation for Indian SMBs | Effortless",
+    "description": "Automate your entire order-to-cash cycle — from invoicing and collections to inventory sync and cash flow management. AI-powered platform built for Indian SMBs.",
+    "og": {
+      "title": "Order-to-Cash Automation for Indian SMBs | Effortless",
+      "description": "Automate your entire order-to-cash cycle — from invoicing and collections to inventory sync and cash flow management. AI-powered platform built for Indian SMBs.",
+      "url": "https://www.goeffortless.ai/products/order-to-cash",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "headerItems": {
     "headerMenus": [
       {

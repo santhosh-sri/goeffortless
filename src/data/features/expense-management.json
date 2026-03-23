@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Expense Management & Approval Automation | Effortless",
+    "description": "Automate expense approvals, categorisation, and accounting — from field claims to vendor bills. Control every rupee without micromanaging.",
+    "og": {
+      "title": "Expense Management & Approval Automation | Effortless",
+      "description": "From field claims to vendor bills, Effortless automates approvals, categorisation, and accounting — so you can scale spend without losing control.",
+      "url": "https://www.goeffortless.ai/features/expense-management",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "firstFold": {
     "pageHeading": "Expense Management",
     "heading": "<span style='color:#FFFFFFFF'>Control Every Rupee.</span>  Without Micromanaging.",

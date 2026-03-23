@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Field Sales Management App for Indian Sales Teams | Effortless",
+    "description": "Raise invoices, send payment links, and track collections — right from your sales team's phone. Mobile-first field sales management for Indian SMBs.",
+    "og": {
+      "title": "Field Sales Management App for Indian Sales Teams | Effortless",
+      "description": "Raise invoices, send payment links, and track collections — right from your sales team's phone.",
+      "url": "https://www.goeffortless.ai/solutions/field-sales",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "usecaseFold": {
     "pageHeading": "Field Sales",
     "heading": "<span style='color:#FFFFFFFF'>Close Deals in the Field.</span>Get Paid Without Delay.",

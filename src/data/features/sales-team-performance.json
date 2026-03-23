@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Sales Team Performance Tracking & Analytics | Effortless",
+    "description": "Track every rep's orders, visits, collections, and field activity in real time. Coach underperformers, reward top talent, and build a performance-first sales culture.",
+    "og": {
+      "title": "Sales Team Performance Tracking & Analytics | Effortless",
+      "description": "Track every rep's orders, visits, collections, and field activity in real time. Build a performance-first sales culture with Effortless.",
+      "url": "https://www.goeffortless.ai/features/sales-team-performance",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "firstFold": {
     "pageHeading": "Sales Team Performance",
     "heading": "<span style='color:#FFFFFFFF'>Know Who's Driving Revenue — and  In</span> Who's Just Clocking In",

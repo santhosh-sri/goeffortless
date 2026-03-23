@@ -1,5 +1,15 @@
 {
-
+  "metadata": {
+    "title": "Effortless for Startups — Sales, Billing & Operations in One Platform",
+    "description": "Add customers, close deals, grow revenue — without adding chaos to your operations. Effortless is the all-in-one growth platform built for Indian startups.",
+    "og": {
+      "title": "Effortless for Startups — Sales, Billing & Operations in One Platform",
+      "description": "Add customers, close deals, grow revenue — without adding chaos. Built for Indian startups scaling fast.",
+      "url": "https://www.goeffortless.ai/solutions/startups",
+      "type": "website",
+      "image": "https://iili.io/F7C7h12.png"
+    }
+  },
   "usecaseFold": {
     "pageHeading": "Startups",
     "heading": "<span style='color:#FFFFFFFF'>Move Fast.</span> Stay in Control.",
