@@ -13,14 +13,20 @@ export default async function handler(
     { url: "/expenses", priority: "0.9", changefreq: "monthly" },
     { url: "/contracts", priority: "0.9", changefreq: "monthly" },
     { url: "/pricing", priority: "0.9", changefreq: "monthly" },
+    { url: "/pricing-plan", priority: "0.8", changefreq: "monthly" },
     { url: "/about-us", priority: "0.7", changefreq: "monthly" },
     { url: "/blogs", priority: "0.8", changefreq: "daily" },
+    { url: "/case-studies", priority: "0.8", changefreq: "monthly" },
+    { url: "/faqs", priority: "0.7", changefreq: "monthly" },
     { url: "/compliance", priority: "0.7", changefreq: "monthly" },
     { url: "/partners", priority: "0.6", changefreq: "monthly" },
     { url: "/contact-us", priority: "0.6", changefreq: "monthly" },
-    { url: "/privacy-policy", priority: "0.3", changefreq: "yearly" },
-    { url: "/terms-of-service", priority: "0.3", changefreq: "yearly" },
-    { url: "/security-practices", priority: "0.3", changefreq: "yearly" },
+    { url: "/download-apps", priority: "0.5", changefreq: "monthly" },
+    { url: "/certifications-awards", priority: "0.5", changefreq: "monthly" },
+    { url: "/allFeatures", priority: "0.8", changefreq: "monthly" },
+    { url: "/privacy-policy", priority: "0.5", changefreq: "yearly" },
+    { url: "/terms-of-service", priority: "0.5", changefreq: "yearly" },
+    { url: "/security-practices", priority: "0.5", changefreq: "yearly" },
   ];
 
   // Fetch blog slugs dynamically

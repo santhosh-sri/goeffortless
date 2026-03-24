@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import PageTitle from "@/components/PageTitle";
 import Header from "@/components/NewHeader";
 import Footer from "@/components/Footer";
-import BlogPageSkeleton from "@/components/BlogPageSkeleton";
 import CallbackCardSection from "@/components/CallBackCardSection";
+import { GetStaticProps, GetStaticPaths } from "next";
 
 interface BlogData {
   title?: string;
@@ -65,9 +64,14 @@ const callBackCards = [
 interface BlogDetailProps {
   blog: BlogResponse;
   slug: string;
+  htmlContent: string;
 }
 
-export default function BlogDetail({ blog, slug }: BlogDetailProps) {
+export default function BlogDetail({
+  blog,
+  slug,
+  htmlContent,
+}: BlogDetailProps) {
   const {
     title: metaTitle,
     description,
@@ -78,18 +82,11 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
     listDescription,
   } = blog?.blog || {};
 
-  const router = useRouter();
-  const { id } = router.query;
-
   const [isMobile, setIsMobile] = useState(false);
-  const [htmlContent, setHtmlContent] = useState<string>("");
-  const [title, setTitle] = useState<string>(metaTitle || "");
-  const [desc, setDesc] = useState<string>(
-    listDescription || description || ""
-  );
-  const [isLoading, setIsLoading] = useState(true);
   const [closeBanner, setCloseBanner] = useState(true);
 
+  const title = metaTitle || "Untitled";
+  const desc = listDescription || description || "Read the full article";
   const canonicalUrl = `https://www.goeffortless.ai/blogs/${slug}`;
 
   // Format publish date for structured data
@@ -112,7 +109,7 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: metaTitle || title,
+    headline: title,
     description: description || listDescription || desc,
     image: imageUrl || "https://iili.io/F7C7h12.png",
     url: canonicalUrl,
@@ -159,61 +156,33 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
       {
         "@type": "ListItem",
         position: 3,
-        name: metaTitle || title || "Blog Post",
+        name: title,
         item: canonicalUrl,
       },
     ],
   };
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-  };
-
   useEffect(() => {
-    if (!id) return;
-
-    const fetchBlogHTML = async () => {
-      try {
-        const res = await fetch(
-          `https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs/${id}?format=html`
-        );
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data: BlogResponse = await res.json();
-        setHtmlContent(data.blog?.content || "");
-        setTitle(data.blog?.title || "Untitled");
-        setDesc(data.blog?.description || "Read the full article");
-      } catch (err: any) {
-        console.error(err.message || "Failed to fetch blog");
-      } finally {
-        setIsLoading(false);
-      }
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
-
-    fetchBlogHTML();
-  }, [id]);
-
-  useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const cleanHTML = (html: string) => {
-    return (
-      html
-        // remove empty tags EXCEPT iframe
-        .replace(/<(?!iframe)(\w+)[^>]*>\s*<\/\1>/gi, "")
-        .replace(/<(?!iframe)(\w+)[^>]*>(?:\s|&nbsp;)*<\/\1>/gi, "")
-    );
+    return html
+      .replace(/<(?!iframe)(\w+)[^>]*>\s*<\/\1>/gi, "")
+      .replace(/<(?!iframe)(\w+)[^>]*>(?:\s|&nbsp;)*<\/\1>/gi, "");
   };
 
   return (
     <>
       <Head>
-        <title>{`${metaTitle || title} | Effortless Blog`}</title>
+        <title>{`${title} | Effortless Blog`}</title>
         <meta
           name="description"
           content={description || listDescription || desc}
@@ -224,10 +193,7 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
         <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph */}
-        <meta
-          property="og:title"
-          content={`${metaTitle || title} | Effortless Blog`}
-        />
+        <meta property="og:title" content={`${title} | Effortless Blog`} />
         <meta
           property="og:description"
           content={description || listDescription || desc}
@@ -238,6 +204,8 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
           property="og:image"
           content={imageUrl || "https://iili.io/F7C7h12.png"}
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Effortless" />
         {publishDate && (
           <meta property="article:published_time" content={publishDate} />
@@ -246,10 +214,8 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={`${metaTitle || title} | Effortless Blog`}
-        />
+        <meta name="twitter:site" content="@goaborad" />
+        <meta name="twitter:title" content={`${title} | Effortless Blog`} />
         <meta
           name="twitter:description"
           content={description || listDescription || desc}
@@ -284,11 +250,7 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
         />
       </div>
       <div className={`bg-[#08090A] md:px-[80px]`}>
-        {isLoading ? (
-          <div className="">
-            <BlogPageSkeleton />
-          </div>
-        ) : htmlContent ? (
+        {htmlContent ? (
           <>
             <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-8 md:mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
               <PageTitle pageHeading={"Blogs"} />
@@ -362,23 +324,54 @@ export default function BlogDetail({ blog, slug }: BlogDetailProps) {
   );
 }
 
-export async function getServerSideProps({ params }: any) {
-  const slug = Array.isArray(params.id) ? params.id[0] : params.id;
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    const res = await fetch(
+      "https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs"
+    );
+    const data = await res.json();
+    const paths = (data.blogs || []).map((blog: { slug: string }) => ({
+      params: { id: blog.slug },
+    }));
+    return {
+      paths,
+      fallback: "blocking", // SSR on first request for new posts, then cache
+    };
+  } catch {
+    return {
+      paths: [],
+      fallback: "blocking",
+    };
+  }
+};
 
-  const res = await fetch(
-    `https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs/${slug}?format=html`
-  );
-  const blog = await res.json();
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = Array.isArray(params?.id) ? params.id[0] : params?.id;
 
-  // Return 404 if blog not found
-  if (!blog?.blog) {
+  try {
+    const res = await fetch(
+      `https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs/${slug}?format=html`
+    );
+
+    if (!res.ok) {
+      return { notFound: true };
+    }
+
+    const blog: BlogResponse = await res.json();
+
+    if (!blog?.blog) {
+      return { notFound: true };
+    }
+
+    return {
+      props: {
+        blog,
+        slug,
+        htmlContent: blog.blog.content || "",
+      },
+      revalidate: 3600, // Re-generate page every hour
+    };
+  } catch {
     return { notFound: true };
   }
-
-  return {
-    props: {
-      blog,
-      slug,
-    },
-  };
-}
+};

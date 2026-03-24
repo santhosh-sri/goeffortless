@@ -1,20 +1,45 @@
 {
   "metadata": {
-    "title": "Effortless Expenses: AI-Powered Expense Management with GST & TDS Compliance",
-    "description": "Stop expense leakage with AI-powered bill verification, GST defaulter alerts, multi-level approvals, and automated TDS compliance. Built for Indian SMBs.",
+    "title": "Expense Management & GST Compliance Software for Indian SMBs | Effortless",
+    "description": "Automate vendor bill booking, GST/TDS compliance checks, employee claims, and multi-level approvals. AI-powered IDP with 99.9% accuracy. Tally-synced.",
     "og": {
-      "title": "Effortless Expenses: AI-Powered Expense Management & Compliance",
-      "description": "AI-powered IDP, GST defaulter alerts, policy enforcement, and automated approval workflows for Indian businesses.",
+      "title": "Expense Management & GST Compliance Software for Indian SMBs | Effortless",
+      "description": "AI-powered expense management with GST defaulter alerts, TDS automation, multi-level approvals, and Tally sync. Stop every rupee leak.",
       "url": "https://www.goeffortless.ai/expenses",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
-    }
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Effortless Expenses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Effortless Expenses automates vendor bill booking, GST/TDS compliance checks, employee claims, and petty cash management for Indian SMBs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Effortless check GST compliance automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The AI-powered IDP extracts bill data and checks each vendor's GSTR-1 filing status in real-time, alerting finance before a non-compliant bill is approved."
+            }
+          }
+        ]
+      }
+    ]
   },
   "usecaseFold": {
     "pageHeading": "Say 👋 to Effortless",
     "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>Every Rupee</span><br/><span style='color:#FFFFFFFF;font-weight: 300;'>Verified.</span><br/><span style='font-weight: 500'>Before It Leaves</span><br/><span style='color:#F08B32;font-weight: 500'>the Bank</span>",
     "description": "End the pile of paper bills. Automate vendor bill booking, employee claims, and petty cash with built-in policy checks.",
     "bannerImage": "/expensesbanner.png",
+    "bannerAlt": "Effortless expense management dashboard with GST compliance checks",
     "ctaText": "Automate Your Expenses",
     "isFeaturePage": true
   },
@@ -176,7 +201,7 @@
             "A real-time dashboard shows:",
             "Total vendor bills",
             "Total employee claims",
-            "Delayed claimss",
+            "Delayed claims",
             "Branch-wise and department-wise spends",
             "Budget vs actual",
             "Everything can be exported instantly for audit or monthly close."

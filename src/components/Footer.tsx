@@ -367,7 +367,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                 >
                   <Image
                     src={social?.icon ?? ""}
-                    alt="Icon"
+                    alt={social?.alt || "Social media icon"}
                     width={24}
                     height={24}
                   />

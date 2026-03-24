@@ -256,14 +256,14 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   </button>
                 </div>
               </div>
-              <h1 className="hidden md:block text-[#000000] text-base xl:text-[26px] xl:leading-[32px] font-normal">
+              <h3 className="hidden md:block text-[#000000] text-base xl:text-[26px] xl:leading-[32px] font-normal">
                 {parse(title)}
-              </h1>
+              </h3>
             </div>
 
-            <h1 className="md:hidden mt-2 text-[#000000] text-base xl:text-[26px] font-normal">
+            <h3 className="md:hidden mt-2 text-[#000000] text-base xl:text-[26px] font-normal">
               {parse(title)}
-            </h1>
+            </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-4">
               <div className="">

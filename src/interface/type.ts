@@ -31,6 +31,7 @@ export interface FirstFoldContent {
   isCareersPage?: boolean;
   languageModalConfig?: any;
   secondaryIcon?: string;
+  bannerAlt?: string;
 }
 export interface FeatureCard {
   title?: string;

@@ -61,6 +61,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   languageModalConfig,
   isFeaturePage = false,
   secondaryIcon,
+  bannerAlt,
 }) => {
   const [openDemoModal, setOpenDemoModal] = useState(false);
   const [demoStep, setDemoStep] = useState<DemoModalStep>("language");
@@ -201,7 +202,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
             >
               <Image
                 src={bannerImage}
-                alt="service-banner"
+                alt={bannerAlt || "Effortless platform dashboard"}
                 width={620}
                 height={442}
                 priority

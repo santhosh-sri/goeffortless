@@ -1,0 +1,52 @@
+# Effortless
+
+> Effortless is the All-In-One Growth Platform for Indian SMBs — automating billing, expenses, sales operations, contracts, and cash flow management.
+
+## About
+
+Effortless is a B2B SaaS platform built for fast-growing Indian businesses with field sales teams, multi-branch operations, or distribution networks. It replaces fragmented tools (spreadsheets, legacy software) with a single platform covering order-to-cash, expense management, field sales tracking, compliance, and banking visibility.
+
+Founded by Chartered Accountants and backed by deep domain expertise, Effortless is trusted by 1,000+ businesses across India with offices in Chennai, Bangalore, Mumbai, and Hyderabad.
+
+## Core Products
+
+- **Effortless Sales**: Field sales tracking, order-to-cash automation, scheme management, GPS check-ins, fleet-on-street selling
+- **Effortless Expenses**: AI-powered bill booking, expense claims, reimbursements, petty cash management, policy-based approvals
+- **Effortless Contracts**: Contracts & billing automation, recurring invoicing, GST e-invoicing, e-way bills, buyer portal
+
+## Key Features
+
+- Tally Integration (concurrent & bi-directional)
+- GST & TDS Compliance
+- Business Health Dashboard
+- WhatsApp Alerts & Reports
+- Banking & Cash Flow Visibility
+- Role-Based Access Control
+- Enterprise-Grade Security (8 levels)
+- Multi-level Approvals
+
+## Key Pages
+
+- Homepage: https://www.goeffortless.ai/
+- Sales: https://www.goeffortless.ai/sales
+- Expenses: https://www.goeffortless.ai/expenses
+- Contracts: https://www.goeffortless.ai/contracts
+- Pricing: https://www.goeffortless.ai/pricing
+- Case Studies: https://www.goeffortless.ai/case-studies
+- Blog: https://www.goeffortless.ai/blogs
+- About Us: https://www.goeffortless.ai/about-us
+- FAQs: https://www.goeffortless.ai/faqs
+- Partners: https://www.goeffortless.ai/partners
+- Contact: https://www.goeffortless.ai/contact-us
+- Compliance: https://www.goeffortless.ai/compliance
+
+## Pricing
+
+- **Premium Pro**: Starting at INR 30,000/month (billed annually), up to 50 users, includes geo-fencing, fraud prevention, biometric integration, buyer portal, dedicated support
+- **Premium**: Starting at INR 12,833/month (billed annually), up to 15 users, includes Tally integration, e-invoicing, expense management, GPS tracking
+
+## Contact
+
+- Website: https://www.goeffortless.ai
+- Demo: https://www.goeffortless.ai/contact-us
+- LinkedIn: https://www.linkedin.com/company/goeffortless

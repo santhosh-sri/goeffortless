@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Effortless: The All-In-One Growth Platform for Indian SMBs",
-    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs — simplify billing, expenses, sales operations, and cash flow as you scale. Trusted by 1,000+ businesses.",
+    "description": "Effortless is the all-in-one growth platform for Indian SMBs. Automate field sales, expense management, and recurring billing — all synced to TallyPrime.",
     "og": {
       "title": "Effortless: The All-In-One Growth Platform for Indian SMBs",
       "description": "More Business means More Jhanjhat. Effortless brings control — automating billing, expenses, team productivity, and cashflow for India's fastest-growing businesses.",
@@ -15,9 +15,15 @@
         "@type": "Organization",
         "name": "Effortless",
         "url": "https://www.goeffortless.ai",
-        "logo": "https://www.goeffortless.ai/logo.svg",
-        "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs — automating billing, expenses, sales operations, contracts, and cash flow management.",
-        "sameAs": ["https://www.linkedin.com/company/goeffortless"],
+        "logo": "https://www.goeffortless.ai/header-logo.svg",
+        "description": "All-in-one growth platform for Indian SMBs covering field sales, expense management, and recurring billing with Tally integration.",
+        "sameAs": [
+          "https://www.linkedin.com/company/goeffortless",
+          "https://www.instagram.com/goeffortless",
+          "https://x.com/goeffortless",
+          "https://www.youtube.com/@goeffortless",
+          "https://www.facebook.com/goeffortless"
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "sales",
@@ -26,22 +32,28 @@
         "address": [
           {
             "@type": "PostalAddress",
+            "streetAddress": "Maan Sarovar Tower, First Floor 375/271A, Scheme Rd",
             "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "postalCode": "600018",
             "addressCountry": "IN"
           },
           {
             "@type": "PostalAddress",
             "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
             "addressCountry": "IN"
           },
           {
             "@type": "PostalAddress",
             "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
             "addressCountry": "IN"
           },
           {
             "@type": "PostalAddress",
             "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
             "addressCountry": "IN"
           }
         ]
@@ -74,6 +86,49 @@
           "ratingCount": "1000",
           "bestRating": "5"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Effortless",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "3",
+          "bestRating": "5"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Gautham Jain" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Effortless transformed our finance operations at Krish Fashion. Complete visibility into cash flow and expenses."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Ritesh Menon" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "As SVP Finance at Hansa CEquity, Effortless gave us the real-time compliance and expense visibility we needed."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Gaurav Sharma" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Effortless automated our billing and collections at Precious Netcom. The Tally integration alone saved us hours every day."
+          }
+        ]
       }
     ]
   },
@@ -83,6 +138,7 @@
     "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>The All-In-One Growth Platform for </span><span  style='font-weight: 500;'>Indian Business.</span>",
     "description": "Growth breaks your old tools. Effortless handles Sales, Approvals, Schemes, Expenses, Contracts, Cash, and Operational chaos — all in one place.",
     "bannerImage": "/Home_page.png",
+    "bannerAlt": "Effortless growth platform dashboard for Indian SMBs",
     "mobileBannerImage": "/Home_page.png",
     "ctaText": "Get Started",
     "secondaryCtaUrl": "https://www.goeffortless.ai/pricing",

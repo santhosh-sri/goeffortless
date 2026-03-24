@@ -16,7 +16,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
       <div className="">
         <Image
           src={"/blur.png"}
-          alt="r-arrow"
+          alt={`${title} case study`}
           height={64}
           width={144}
           className="h-[40px] md:h-[64px] blur-lg"
@@ -34,7 +34,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
         </span>
         <Image
           src={"/read-arrow.svg"}
-          alt="r-arrow"
+          alt="Read more arrow"
           height={16}
           width={16}
           className="h-[14px] md:h-4 w-[14px] md:w-4"
