@@ -73,9 +73,9 @@ export const partnerFormSchema = z.object({
 
 export type PartnerFormValues = z.infer<typeof partnerFormSchema>;
 
-const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID!;
-const PARTNER_TEMPLATE_ID = process.env.NEXT_PUBLIC_PARTNER_TEMPLATE_ID!;
-const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY!;
+const SERVICE_ID: any = process.env.SERVICE_ID;
+const PARTNER_TEMPLATE_ID: any = process.env.PARTNER_TEMPLATE_ID;
+const PUBLIC_KEY: any = process.env.PUBLIC_KEY;
 
 const PartnerForm = () => {
   const {
