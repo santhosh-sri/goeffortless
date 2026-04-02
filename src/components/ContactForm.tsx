@@ -43,9 +43,9 @@ const ContactForm = () => {
 
   const [showSucessPopup, setShowSucessPopup] = useState(false);
 
-  const SERVICE_ID: any = process.env.SERVICE_ID;
-  const TEMPLATE_ID: any = process.env.TEMPLATE_ID;
-  const PUBLIC_KEY: any = process.env.PUBLIC_KEY;
+  const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID!;
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
+  const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY!;
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {

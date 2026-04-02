@@ -7,10 +7,6 @@ const nextConfig: NextConfig = {
     GTM_ID: "GTM-3388VMGJ",
     HUBSPOT_ACCESS_TOKEN: process.env.HUBSPOT_ACCESS_TOKEN,
     HUBSPOT_API_URL: process.env.HUBSPOT_API_URL,
-    SERVICE_ID: process.env.NEXT_PUBLIC_SERVICE_ID,
-    TEMPLATE_ID: process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    PARTNER_TEMPLATE_ID: process.env.NEXT_PUBLIC_PARTNER_TEMPLATE_ID,
-    PUBLIC_KEY: process.env.NEXT_PUBLIC_PUBLIC_KEY
   },
   images: {
     unoptimized: true,
