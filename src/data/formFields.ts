@@ -79,7 +79,7 @@ export const formFields = [
 export const partnerFormFields = [
   {
     name: "firstName",
-    label: "First Name",
+    label: "Full Name",
     type: "text",
     colSpan: 2,
     validation: {
@@ -87,16 +87,16 @@ export const partnerFormFields = [
       minLength: { value: 2, message: "Minimum 2 characters" },
     },
   },
-  {
-    name: "lastName",
-    label: "Last Name",
-    type: "text",
-    colSpan: 2,
-    validation: {
-      required: "Last Name is required",
-      minLength: { value: 2, message: "Minimum 2 characters" },
-    },
-  },
+  // {
+  //   name: "lastName",
+  //   label: "Last Name",
+  //   type: "text",
+  //   colSpan: 2,
+  //   validation: {
+  //     required: "Last Name is required",
+  //     minLength: { value: 2, message: "Minimum 2 characters" },
+  //   },
+  // },
   {
     name: "workMail",
     label: "Work Mail",

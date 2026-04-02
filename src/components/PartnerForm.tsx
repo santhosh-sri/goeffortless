@@ -1,6 +1,6 @@
 import { partnerFormFields } from "@/data/formFields";
 import { zodResolver } from "@hookform/resolvers/zod";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import parse from "html-react-parser";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -59,7 +59,7 @@ const validatePhone = (phone: string) => {
 // Zod validation schema with enhanced phone validation
 export const partnerFormSchema = z.object({
   firstName: z.string().min(2, "First Name is required"),
-  lastName: z.string().min(2, "Last Name is required"),
+  // lastName: z.string().min(2, "Last Name is required"),
   workMail: z.string().email("Invalid email format"),
   phone: z.string().min(1, "Phone number is required").refine(validatePhone, {
     message: "Please enter a valid mobile number",
@@ -73,12 +73,16 @@ export const partnerFormSchema = z.object({
 
 export type PartnerFormValues = z.infer<typeof partnerFormSchema>;
 
+const SERVICE_ID: any = process.env.SERVICE_ID;
+const PARTNER_TEMPLATE_ID: any = process.env.PARTNER_TEMPLATE_ID;
+const PUBLIC_KEY: any = process.env.PUBLIC_KEY;
+
 const PartnerForm = () => {
   const {
-    setValue,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema),
     mode: "onSubmit",
@@ -86,36 +90,27 @@ const PartnerForm = () => {
   const [showSucessPopup, setShowSucessPopup] = useState<boolean>(false);
 
   const onSubmit: SubmitHandler<PartnerFormValues> = async (data) => {
-    const {
-      workMail,
-      phone,
-      firstName,
-      lastName,
-      companyName,
-      numberOfClients,
-      companyWebsite,
-      companyDescription,
-      hearAboutUs,
-    } = data;
     try {
-      const payload = {
-        email: workMail,
-        firstname: firstName,
-        lastname: lastName,
-        company: companyName,
-        no_of_clients: numberOfClients,
-        phone,
-        website: companyWebsite,
-        company_description: companyDescription,
-        source: hearAboutUs,
-      };
-
-      const response = await axios.post("/api/processlead", payload);
-      // Reset form values
-      partnerFormFields.forEach(({ name }) =>
-        setValue(name as keyof PartnerFormValues, "")
+      await emailjs.send(
+        SERVICE_ID,
+        PARTNER_TEMPLATE_ID,
+        {
+          firstName: data.firstName,
+          // lastName: data.lastName,
+          workMail: data.workMail,
+          phone: data.phone,
+          companyName: data.companyName,
+          numberOfClients: data.numberOfClients,
+          companyWebsite: data.companyWebsite,
+          companyDescription: data.companyDescription,
+          hearAboutUs: data.hearAboutUs,
+        },
+        PUBLIC_KEY
       );
+
+      toast.success("Email sent successfully!");
       setShowSucessPopup(true);
+      reset();
     } catch (error) {
       console.error("Submission error:", error);
       toast.error("Error submitting form, please try again.", {

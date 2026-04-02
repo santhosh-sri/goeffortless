@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     HUBSPOT_API_URL: process.env.HUBSPOT_API_URL,
     SERVICE_ID: process.env.SERVICE_ID,
     TEMPLATE_ID: process.env.TEMPLATE_ID,
+    PARTNER_TEMPLATE_ID: process.env.PARTNER_TEMPLATE_ID,
     PUBLIC_KEY: process.env.PUBLIC_KEY
   },
   images: {
