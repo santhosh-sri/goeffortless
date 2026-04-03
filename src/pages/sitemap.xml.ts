@@ -4,7 +4,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const baseUrl = "https://www.goeffortless.ai";
+  const baseUrl = "https://goeffortless.vercel.app/";
 
   // Static pages
   const staticPages = [
