@@ -97,7 +97,7 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Effortless" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@goaborad" />
+        <meta name="twitter:site" content="@go_effortless" />
         <meta name="twitter:title" content="Effortless Blogs: The Effortless Edge — AI Automation & Sales Insights" />
         <meta name="twitter:description" content="Stay ahead with The Effortless Edge — your source for insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses." />
         <meta name="twitter:image" content="https://iili.io/F7C7h12.png" />

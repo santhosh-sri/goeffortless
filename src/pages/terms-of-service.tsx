@@ -28,6 +28,9 @@ const TermsOfServicePage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Effortless" />
+        <meta property="og:image" content="https://iili.io/F7C7h12.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <TermsOfService {...termsData} />
     </>

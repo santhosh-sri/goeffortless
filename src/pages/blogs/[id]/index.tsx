@@ -116,8 +116,8 @@ export default function BlogDetail({
     ...(publishDate && { datePublished: publishDate }),
     ...(publishDate && { dateModified: publishDate }),
     author: {
-      "@type": "Organization",
-      name: author || "Effortless",
+      "@type": "Person",
+      name: author || "Effortless Team",
       url: "https://www.goeffortless.ai",
     },
     publisher: {
@@ -211,10 +211,14 @@ export default function BlogDetail({
           <meta property="article:published_time" content={publishDate} />
         )}
         <meta property="article:author" content="https://www.goeffortless.ai" />
+        <meta property="article:section" content="Business & Technology" />
+        {seoMetaKeywords && seoMetaKeywords.split(',').slice(0, 5).map((tag, i) => (
+          <meta property="article:tag" content={tag.trim()} key={`tag-${i}`} />
+        ))}
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@goaborad" />
+        <meta name="twitter:site" content="@go_effortless" />
         <meta name="twitter:title" content={`${title} | Effortless Blog`} />
         <meta
           name="twitter:description"

@@ -65,7 +65,7 @@ const Metadata: React.FC<MetadataProps> = ({
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@goaborad" />
+      <meta name="twitter:site" content="@go_effortless" />
       {og?.title && <meta name="twitter:title" content={og.title} />}
       {og?.description && (
         <meta name="twitter:description" content={og.description} />
@@ -85,7 +85,17 @@ const Metadata: React.FC<MetadataProps> = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(Array.isArray(jsonLd) ? jsonLd : jsonLd),
+            __html: JSON.stringify(
+              Array.isArray(jsonLd)
+                ? {
+                    "@context": "https://schema.org",
+                    "@graph": jsonLd.map(
+                      ({ "@context": _, ...rest }: Record<string, unknown>) =>
+                        rest
+                    ),
+                  }
+                : jsonLd
+            ),
           }}
         />
       )}
