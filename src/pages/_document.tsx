@@ -25,6 +25,10 @@ export default function Document() {
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
+        <meta
+          name="google-site-verification"
+          content="ixwYKeWv5u8KQUQ06uHWMyOOw_6DPszLPW_YTMezo4I"
+        />
       </Head>
       <body className="antialiased">
         <Main />
