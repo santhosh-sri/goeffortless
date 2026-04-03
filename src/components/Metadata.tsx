@@ -1,37 +1,75 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 
 interface MetadataProps {
   title?: string;
   description?: string;
+  keywords?: string;
+  robots?: string;
   og?: {
     title?: string;
     description?: string;
     url?: string;
     type?: string;
     image?: string;
+    imageWidth?: string;
+    imageHeight?: string;
   };
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const Metadata: React.FC<MetadataProps> = ({ title, description, og, jsonLd }) => {
+const Metadata: React.FC<MetadataProps> = ({
+  title,
+  description,
+  keywords,
+  robots = "index, follow",
+  og,
+  jsonLd,
+}) => {
+  const router = useRouter();
+  const canonicalUrl =
+    og?.url || `https://www.goeffortless.ai${router.asPath.split("?")[0]}`;
+
   return (
     <Head>
       {/* Basic Meta Tags */}
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
+      {keywords && <meta name="keywords" content={keywords} />}
+
+      {/* Robots */}
+      <meta name="robots" content={robots} />
 
       {/* Open Graph Meta Tags */}
       {og?.title && <meta property="og:title" content={og.title} />}
-      {og?.description && <meta property="og:description" content={og.description} />}
-      {og?.url && <meta property="og:url" content={og.url} />}
+      {og?.description && (
+        <meta property="og:description" content={og.description} />
+      )}
+      <meta property="og:url" content={canonicalUrl} />
       {og?.type && <meta property="og:type" content={og.type} />}
       {og?.image && <meta property="og:image" content={og.image} />}
+      {og?.image && (
+        <meta
+          property="og:image:width"
+          content={og.imageWidth || "1200"}
+        />
+      )}
+      {og?.image && (
+        <meta
+          property="og:image:height"
+          content={og.imageHeight || "630"}
+        />
+      )}
+      <meta property="og:site_name" content="Effortless" />
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@go_effortless" />
       {og?.title && <meta name="twitter:title" content={og.title} />}
-      {og?.description && <meta name="twitter:description" content={og.description} />}
+      {og?.description && (
+        <meta name="twitter:description" content={og.description} />
+      )}
       {og?.image && <meta name="twitter:image" content={og.image} />}
 
       {/* Additional SEO Meta Tags */}
@@ -40,14 +78,24 @@ const Metadata: React.FC<MetadataProps> = ({ title, description, og, jsonLd }) =
       <link rel="icon" href="/favicon.ico" />
 
       {/* Canonical URL */}
-      {og?.url && <link rel="canonical" href={og.url} />}
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* JSON-LD Structured Data */}
       {jsonLd && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(Array.isArray(jsonLd) ? jsonLd : jsonLd),
+            __html: JSON.stringify(
+              Array.isArray(jsonLd)
+                ? {
+                    "@context": "https://schema.org",
+                    "@graph": jsonLd.map(
+                      ({ "@context": _, ...rest }: Record<string, unknown>) =>
+                        rest
+                    ),
+                  }
+                : jsonLd
+            ),
           }}
         />
       )}

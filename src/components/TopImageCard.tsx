@@ -21,7 +21,6 @@ const TopImagecard: React.FC<TopImagecards> = ({
             width={32}
             height={32}
             className="md:w-[40px] md:h-[40px]"
-            unoptimized={true}
           />
         )}
         <p

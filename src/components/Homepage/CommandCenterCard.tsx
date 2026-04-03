@@ -26,7 +26,6 @@ const CommandCenterCard: React.FC<CommandCenterCardProps> = ({
             width={48}
             height={48}
             className="w-[32px] h-[32px] md:!w-[48px] md:!h-[48px]"
-            unoptimized={true}
           />
         </div>
 

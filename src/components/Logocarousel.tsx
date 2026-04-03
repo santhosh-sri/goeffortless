@@ -3,26 +3,24 @@ import Slider from "react-slick";
 
 const Logocarousel = () => {
   const businessPartnersLogo = [
-    { src: "/arvindpet.png", width: 137, height: 48 },
-    { src: "/Galla.png", width: 74, height: 48 },
-    { src: "/rassense-logo.svg", width: 158, height: 48 },
-    { src: "/Contraminds_Labs.png", width: 176, height: 48 },
-    { src: "/nalashaa.png", width: 133, height: 48 },
-    { src: "/Pepul.png", width: 130, height: 48 },
-    { src: "/meine-electric-logo.svg", width: 172, height: 48 },
-    { src: "/CTRLm.png", width: 176, height: 48 },
-    { src: "/MPL.png", width: 60, height: 48 },
-    // { src: "/Insta.png", width: 150, height: 48 },
-    // { src: "/InnBuilt-logo 1.png", width: 48, height: 19 },
-    { src: "/hansa-quality-logo.svg", width: 91, height: 48 },
-    { src: "/iris.png", width: 154, height: 48 },
-    { src: "/integral.svg", width: 57, height: 48 },
-    { src: "/mithaicana-logo.png", width: 182, height: 48 },
-    { src: "/GS-logo.png", width: 180, height: 48 },
-    { src: "/kanvar-logo.png", width: 76, height: 48 },
-    { src: "/kria.png", width: 117, height: 48 },
-    { src: "/image.png", width: 68, height: 48 },
-    { src: "/krish_fashion.png", width: 150, height: 48 },
+    { src: "/arvindpet.png", width: 137, height: 48, name: "Arvind Petrochem" },
+    { src: "/Galla.png", width: 74, height: 48, name: "Galla Foods" },
+    { src: "/rassense-logo.svg", width: 158, height: 48, name: "Rassense" },
+    { src: "/Contraminds_Labs.png", width: 176, height: 48, name: "Contraminds Labs" },
+    { src: "/nalashaa.png", width: 133, height: 48, name: "Nalashaa" },
+    { src: "/Pepul.png", width: 130, height: 48, name: "Pepul" },
+    { src: "/meine-electric-logo.svg", width: 172, height: 48, name: "Meine Electric" },
+    { src: "/CTRLm.png", width: 176, height: 48, name: "CTRLm" },
+    { src: "/MPL.png", width: 60, height: 48, name: "MPL" },
+    { src: "/hansa-quality-logo.svg", width: 91, height: 48, name: "Hansa CEquity" },
+    { src: "/iris.png", width: 154, height: 48, name: "Iris" },
+    { src: "/integral.svg", width: 57, height: 48, name: "Integral" },
+    { src: "/mithaicana-logo.png", width: 182, height: 48, name: "Mithaicana" },
+    { src: "/GS-logo.png", width: 180, height: 48, name: "GS Group" },
+    { src: "/kanvar-logo.png", width: 76, height: 48, name: "Kanvar" },
+    { src: "/kria.png", width: 117, height: 48, name: "Kria Law" },
+    { src: "/image.png", width: 68, height: 48, name: "Partner" },
+    { src: "/krish_fashion.png", width: 150, height: 48, name: "Krish Fashion" },
   ];
 
   const logosliderSettings = {
@@ -76,11 +74,10 @@ const Logocarousel = () => {
             <div className="flex items-center justify-center w-full h-full">
               <Image
                 src={logos?.src || ""}
-                alt={`Partner logo ${index + 1}`}
+                alt={`${logos?.name} logo — Effortless customer`}
                 width={logos?.width}
                 height={logos?.height}
                 className="md:max-w-[140px] md:max-h-[64px] max-w-[80px] max-h-[40px] object-contain w-auto h-auto"
-                unoptimized={true}
               />
             </div>
           </div>

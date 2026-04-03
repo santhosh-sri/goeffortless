@@ -17,7 +17,6 @@ const ProductsSection: React.FC<ProductsCardSection> = ({
             alt="Effortless-logo"
             width={82}
             height={12}
-            unoptimized={true}
           />
           <h3 className="text-[34px] font-[600] leading-8 md:text-[64px]">
             {title}

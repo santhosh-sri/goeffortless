@@ -45,7 +45,6 @@ const HomePageCarousel: FC<HomePageVerticalSlider> = ({
                           : "",
                     }}
                     className="w-5 h-5"
-                    unoptimized={true}
                   />
                 )}
                 <h2

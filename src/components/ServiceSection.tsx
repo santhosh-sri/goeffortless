@@ -185,7 +185,7 @@ const ServiceSection = ({
               <PageTitle pageHeading={tagLine} pageName={colouredTagLine} />
             )}
             {Customtitle && (
-              <h1
+              <h2
                 className={`${
                   marginTop ? "" : "max-md:pt-[80px]"
                 } font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
@@ -196,11 +196,11 @@ const ServiceSection = ({
                 }}
               >
                 {parse(Customtitle)}
-              </h1>
+              </h2>
             )}
             {title && (
               <div className="flex gap-2 md:gap-[16px]">
-                <h3 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-8 text-center text-[#FFFFFF]">
+                <h2 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-8 text-center text-[#FFFFFF]">
                   {parse(title)}
                   {colouredTitle && (
                     <span
@@ -214,7 +214,7 @@ const ServiceSection = ({
                       {parse(colouredTitle)}
                     </span>
                   )}
-                </h3>
+                </h2>
               </div>
             )}
             {description && (

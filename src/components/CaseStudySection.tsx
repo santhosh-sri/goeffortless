@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { printPdf } from "@/utils/printPdf";
 import { CaseStudyCardProps, CaseStudyProps } from "@/interface/type";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 import CategoryTabs from "./CategoryTabs";
 import CaseStudyCard from "./CaseStudyCard";
@@ -13,7 +13,6 @@ interface Props {
 
 const CaseStudiesSection: React.FC<Props> = ({ caseStudies }) => {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const [selectedStudy, setSelectedStudy] = useState<CaseStudyProps | null>(
     null
   );
@@ -39,14 +38,15 @@ const CaseStudiesSection: React.FC<Props> = ({ caseStudies }) => {
       params.set("type", activeTab);
     }
     const hash = window.location.hash;
-    // Build URL without hash
-    const newUrl = activeTab === "All" ? `${window.location.pathname}${hash}` : `${window.location.pathname}?${params.toString()}${hash}`;
+    const newUrl =
+      activeTab === "All"
+        ? `${window.location.pathname}${hash}`
+        : `${window.location.pathname}?${params.toString()}${hash}`;
 
-    // Only replace if URL changed
     if (newUrl !== window.location.href) {
-      router.replace(newUrl, { scroll: false });
+      window.history.replaceState(null, "", newUrl);
     }
-  }, [activeTab, router]);
+  }, [activeTab]);
 
   useEffect(() => {
     if (selectedStudy) {

@@ -1,5 +1,3 @@
-"use client";
-
 import { BlogCardProps } from "@/interface/type";
 import Image from "next/image";
 import Link from "next/link";

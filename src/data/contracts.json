@@ -1,20 +1,45 @@
 {
   "metadata": {
-    "title": "Effortless: Explore our Features",
-    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs built to simplify billing, expenses, and team operations as you scale.",
+    "title": "Recurring Billing & Contract Management Software India | Effortless",
+    "description": "Automate AMC billing, recurring invoices, and contract renewals. Create once, bill forever. WhatsApp reminders + Tally sync for Indian businesses.",
     "og": {
-      "title": "Effortless: Explore our Features",
-      "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
+      "title": "Recurring Billing & Contract Management Software India | Effortless",
+      "description": "Automate AMC billing and recurring invoices. Create once, bill forever. WhatsApp reminders, Tally sync, and revenue forecasting — built for India.",
       "url": "https://www.goeffortless.ai/contracts",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
-    }
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Effortless Contracts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Effortless Contracts automates recurring billing for AMCs, rentals, and retainers. Create a contract once and Effortless generates invoices, sends WhatsApp reminders, and syncs to Tally automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Effortless handle recurring invoices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Effortless supports both Proforma-first and Invoice-first recurring billing modes, with automated delivery via WhatsApp and email."
+            }
+          }
+        ]
+      }
+    ]
   },
   "usecaseFold": {
     "pageHeading": "Say 👋 to Effortless",
     "heading": "<span style='white-space: nowrap;color:#FFFFFFFF;font-weight: 300;'>Put Your Revenue on</span><br/> <span style='color:#F08B32;font-weight: 500'>Autopilot.</span>",
     "description": "Never miss a renewal. Automate recurring Proformas, Invoices, and Reminders. Perfect for AMCs, Rentals, and Retainers.",
     "bannerImage": "/contractbanner.png",
+    "bannerAlt": "Effortless recurring billing and contract management dashboard",
     "ctaText": "Automate Your Billing",
     "isFeaturePage": true
   },

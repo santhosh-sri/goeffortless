@@ -21,7 +21,6 @@ const MissionSection: FC<MissionSectionContent> = ({
         alt={image.alt}
         width={660}
         height={470}
-        unoptimized={true}
         priority
         className="md:w-[616px] md:!h-[416px] hidden md:block"
       />
@@ -49,7 +48,6 @@ const MissionSection: FC<MissionSectionContent> = ({
             alt={mobileImage.alt}
             width={660}
             height={470}
-            unoptimized={true}
             priority
             className="md:w-[616px] md:!h-[416px] md:hidden"
           />

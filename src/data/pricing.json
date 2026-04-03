@@ -1,14 +1,74 @@
 {
   "metadata": {
     "title": "Effortless Pricing: Plans for Every Growing Business",
-    "description": "Choose from simple, powerful plans to automate billing, expenses, and team operations. Try Effortless free for 7 days. No credit card required.",
+    "description": "Simple, transparent pricing for Effortless. Premium from ₹12,833/month. Includes Tally integration, 15 users, and CA-led onboarding.",
     "og": {
       "title": "Effortless Pricing: Plans for Every Growing Business",
       "description": "Pick the plan that fits your Growth. From Premium Pro to Lite, automate your billing, cashflow, and sales operations with Effortless.",
       "url": "https://www.goeffortless.ai/pricing",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
-    }
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Effortless Premium Pro",
+        "description": "All-in-one growth platform for Indian SMBs with advanced controls — geo-fencing, fraud prevention, biometric attendance, buyer portal, and multi-level approvals.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Effortless"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.goeffortless.ai/pricing",
+          "priceCurrency": "INR",
+          "price": "30000",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "unitCode": "MON",
+          "description": "Per month billed annually. Up to 50 users. Includes Buyer Portal, Geo-Fencing, Anti-Fraud Measures, Biometric Integration, and Dedicated Account Support."
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Effortless Premium",
+        "description": "All-in-one growth platform for Indian SMBs — automate invoicing, expenses, sales tracking, compliance, and Tally integration.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Effortless"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.goeffortless.ai/pricing",
+          "priceCurrency": "INR",
+          "price": "12833",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "unitCode": "MON",
+          "description": "Per month billed annually. Up to 15 users. Includes Tally Integration, E-Invoicing, Expense Management, GPS Tracking, and Role-Based Access Control."
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.goeffortless.ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": "https://www.goeffortless.ai/pricing"
+          }
+        ]
+      }
+    ]
   },
   "isPricingPage": true,
   "headerItems": {

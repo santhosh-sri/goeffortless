@@ -158,22 +158,27 @@ export const footerData = {
     {
       icon: "/instagram.svg",
       url: "https://www.instagram.com/goeffortless.ai/",
+      alt: "Effortless on Instagram",
     },
     {
       icon: "/x.svg",
       url: "https://x.com/go_effortless",
+      alt: "Effortless on X (Twitter)",
     },
     {
       icon: "/linkedIn.svg",
       url: "https://www.linkedin.com/company/igoeffortless/",
+      alt: "Effortless on LinkedIn",
     },
     {
       icon: "/youtube.svg",
       url: "https://www.youtube.com/@Effortless_official",
+      alt: "Effortless on YouTube",
     },
     {
       icon: "/facebook.svg",
       url: "https://www.facebook.com/GoEffortlessOfficial",
+      alt: "Effortless on Facebook",
     },
   ],
   officeLocation: [

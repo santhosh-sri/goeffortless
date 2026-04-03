@@ -50,7 +50,6 @@ const Verticalslider: FC<VerticalSliderProps> = ({ section }) => {
                 className="h-10"
                 width={158}
                 height={58}
-                unoptimized={true}
               />
             </a>
           ))}
@@ -73,7 +72,6 @@ const Verticalslider: FC<VerticalSliderProps> = ({ section }) => {
           width={228}
           height={458}
           className="w-48 mt-6 md:mt-0"
-          unoptimized={true}
         />
       </div>
     </div>

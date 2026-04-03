@@ -1,14 +1,136 @@
 {
   "metadata": {
-    "title": "FAQs Effortless: The Team Making Growth more manageable for Ambitious SMBs",
-    "description": "Effortless is a Team of Problem-Solvers on a Mission to solve the jhanjhat that comes with Growth for Ambitious Indian SMBs. Crafted by CAs, driven by Purpose. Join us and help reshape how India does business.",
+    "title": "FAQs | Effortless — All-In-One Growth Platform for Indian SMBs",
+    "description": "Find answers to common questions about Effortless — pricing, features, onboarding, security, Tally integration, GST compliance, and more for growing Indian businesses.",
     "og": {
-      "title": "FAQs Effortless: The Team Making Growth more manageable for Ambitious SMBs",
-      "description": "Built by Founders who understand the complexity that comes with Growth, at Effortless, we're solving real-world problems with smart automation and a bias for action. Come build what matters.",
+      "title": "FAQs | Effortless — All-In-One Growth Platform for Indian SMBs",
+      "description": "Get answers to the most common questions about Effortless platform — from pricing and onboarding to security, compliance, and field sales tracking.",
       "url": "https://www.goeffortless.ai/faqs",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
-    }
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Effortless and who should use it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Effortless is an all-in-one growth platform designed for fast-growing businesses (50 Cr to 5000 Cr turnover, field sales teams (15+ to 1000+ team size) or multi-branch companies or distribution networks, or buyer eCommerce startups. It automates sales, invoicing, payments, compliance, team tracking, and expense management so businesses can scale with control."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between Effortless Premium and Premium Pro plans?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both plans include core features like invoicing, compliance, expense management, and banking. Premium Pro adds advanced controls such as geo-fencing, fraud prevention, biometric attendance, buyer portal, supervisor entry, and multi-level approvals, making it suitable for larger enterprises."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is customer support and onboarding handled?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We follow an industry leading 5 steps onboarding process: Account Setup, Documentation, Platform/Service Configuration, Training & Walkthrough Session, and Go-Live. Typical smooth onboarding of Premium Plan takes 7 working days, for Premium Pro Plan around 14 working days. Customers also get Dedicated Account Support via call/email/chat at no extra cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a free trial or demo available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can schedule or book a personalized demo online at www.goeffortless.ai or by our nearest partner. Trial can be provided by the team upon request."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Effortless generate GST e-invoices and e-way bills?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Effortless supports estimate & order creation, GST-compliant e-invoicing on the go, and e-way bill generation on the go. It also offers recurring invoices, automated reminders via WhatsApp/email, and Pay Now links for faster collections."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Effortless track field sales teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Effortless enables live GPS tracking, GPS-based check-ins, fleet-on-street selling, and geo-fencing for fraud prevention. Supervisors can monitor field expenses, attendance, and leave management, ensuring accountability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Effortless simplify expense management?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Effortless automates purchase approvals, reimbursement claims, utility bill tracking, and policy-based approvals. Bills can be uploaded with document evidence, and expenses flow seamlessly into compliance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What banking and cashflow features does Effortless offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With daily bank sync, reconciliation, petty cash tracking, and real-time collection alerts, Effortless gives a complete grip on cash flow. Owners also get daily business snapshots on WhatsApp, making decision-making faster."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much time can businesses save using Effortless?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On average, Effortless saves 300+ hours per month for high-growth companies by eliminating manual invoicing, collections, expense tracking, and compliance tasks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Effortless software secure for financial data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Effortless offers enterprise-grade security with 8 levels of protection and is trusted by thousands of companies. It ensures all data is safe with ISO standards and secure role-based access control, and audit trails to ensure financial data security."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Effortless compliant with regulatory changes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Built-in compliance modules for GST & TDS that adapt to Indian laws. The team has Chartered Accountants as founders/advisors who stay on top of regulations. All product updates are delivered automatically to your product login."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Tally slow down after installation of Effortless?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In most cases, Users haven't noticed any slowdown. However, in a few cases, there may be some slowness if the system has low RAM (e.g., 2GB), older processors, or if multiple users are accessing Tally simultaneously on the same machine."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.goeffortless.ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQs",
+            "item": "https://www.goeffortless.ai/faqs"
+          }
+        ]
+      }
+    ]
   },
   "serviceContent": [
     {

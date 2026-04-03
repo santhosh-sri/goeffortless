@@ -37,7 +37,6 @@ const ValueCard: FC<CompanyValue & { className?: string }> = ({
         width={isMobile ? 32 : 48}
         height={isMobile ? 32 : 48}
         className={isMobile ? `w-[32px] h-[32px]` : `w-[48px] h-[48px]`}
-        unoptimized={true}
       />
       <h3
         className={`md:text-[24px] text-[16px] font-[400] leading-[30px] md:mt-3 ${

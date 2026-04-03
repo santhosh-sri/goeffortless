@@ -20,7 +20,6 @@ const SecondaryCta: React.FC<SecondaryCtaProps> = ({
   secondaryIcon,
   isFeaturePage,
 }) => {
-  console.log(isFeaturePage, "isFeaturePage");
   return (
     <button
       onClick={handleDirect}

@@ -1,14 +1,24 @@
 {
   "metadata": {
     "title": "About Effortless: The Team Making Growth more manageable for Ambitious SMBs",
-    "description": "Effortless is a Team of Problem-Solvers on a Mission to solve the jhanjhat that comes with Growth for Ambitious Indian SMBs. Crafted by CAs, driven by Purpose. Join us and help reshape how India does business.",
+    "description": "Founded by ex-Deloitte CAs. Effortless is built by Agrya FinLabs to simplify sales, expenses, and billing for India's fastest-growing SMBs.",
     "og": {
       "title": "About Effortless: The Team Making Growth more manageable for Ambitious SMBs",
       "description": "Built by Founders who understand the complexity that comes with Growth, at Effortless, we're solving real-world problems with smart automation and a bias for action. Come build what matters.",
       "url": "https://www.goeffortless.ai/about-us",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
-    }
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.goeffortless.ai" },
+          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.goeffortless.ai/about-us" }
+        ]
+      }
+    ]
   },
   "careersBanner": {
     "href": "ourstory",

@@ -13,9 +13,33 @@ const nextConfig: NextConfig = {
     PUBLIC_KEY: process.env.PUBLIC_KEY
   },
   images: {
-    unoptimized: true,
+    formats: ["image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "iili.io",
+      },
+      {
+        protocol: "https",
+        hostname: "us-central1-effortless-admin.cloudfunctions.net",
+      },
+      {
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com"
+      }
+    ],
   },
-  
+
+  // Rewrite sitemap.xml to API route
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/api/sitemap.xml",
+      },
+    ];
+  },
+
   // Add 301 redirects
   async redirects() {
     return [

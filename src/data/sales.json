@@ -1,20 +1,53 @@
 {
   "metadata": {
-    "title": "Effortless: Explore our Features",
-    "description": "Effortless is the All-In-One Growth Platform for ambitious Indian SMBs built to simplify billing, expenses, and team operations as you scale.",
+    "title": "Field Sales & Order Management Software for Indian Distributors | Effortless",
+    "description": "Effortless Sales gives your field reps GPS check-ins, auto-applied schemes, real-time outstanding visibility, and one-click Tally sync. Trusted by 1,000+ Indian SMBs.",
     "og": {
-      "title": "Effortless: Explore our Features",
-      "description": "Explore features built to handle your sales, cash, team, and growing pains - all in one platform.",
+      "title": "Field Sales & Order Management Software for Indian Distributors | Effortless",
+      "description": "GPS check-ins, auto-applied schemes, Tally sync, and real-time collections visibility for Indian field sales teams. Trusted by 1,000+ businesses.",
       "url": "https://www.goeffortless.ai/sales",
       "type": "website",
       "image": "https://iili.io/F7C7h12.png"
-    }
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Effortless Sales?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Effortless Sales is a field sales management app for Indian distributors. It gives reps GPS check-ins, auto-applied pricing schemes, real-time outstanding visibility, and syncs orders to Tally instantly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Effortless integrate with TallyPrime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Effortless has bi-directional, concurrent Tally sync. Orders, invoices, and collections flow into Tally automatically — zero manual entry."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Effortless suitable for distribution businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Effortless is built specifically for Indian distributors, manufacturers, and field sales teams managing 10 to 500+ reps."
+            }
+          }
+        ]
+      }
+    ]
   },
   "usecaseFold": {
     "pageHeading": "Say 👋 to Effortless",
     "heading": "<span style='color:#FFFFFFFF;font-weight: 300;'>Reps Stop</span><br/><span style='color:#FFFFFFFF;font-weight: 300;'>Guessing.</span><br/> <span style='white-space: nowrap;font-weight: 500'>You Stop Chasing.</span>",
     "description": "Give your field team the tool that ensures accurate orders, correct schemes, instant approvals, and real-time cash visibility — all from one mobile workspace.",
     "bannerImage": "/iMockupMax.png",
+    "bannerAlt": "Effortless field sales mobile app with GPS check-in and Tally sync",
     "ctaText": "See the Field App",
     "isFeaturePage": true
   },
