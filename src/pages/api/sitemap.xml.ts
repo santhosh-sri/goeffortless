@@ -1,9 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+const escapeXml = (str: string) =>
+  str
+    .replace(/&/g, '&amp;')
+    .replace(/'/g, '&apos;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+type SitemapPage = {
+  url: string;
+  priority: string;
+  changefreq: string;
+  lastmod?: string;
+};
+
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   const baseUrl = 'https://goeffortless.vercel.app';
 
-  const staticPages = [
+  const staticPages: SitemapPage[] = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
     { url: '/sales', priority: '0.9', changefreq: 'monthly' },
     { url: '/expenses', priority: '0.9', changefreq: 'monthly' },
@@ -25,46 +40,57 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     { url: '/security-practices', priority: '0.5', changefreq: 'yearly' },
   ];
 
-  let blogPages: { url: string; priority: string; changefreq: string; lastmod?: string }[] = [];
+  let blogPages: SitemapPage[] = [];
   try {
     const blogRes = await fetch(
       'https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs'
     );
     if (blogRes.ok) {
       const data = await blogRes.json();
-      blogPages = (data.blogs || []).map((blog: { slug: string; publishedAt?: string }) => ({
-        url: `/blogs/${blog.slug}`,
-        priority: '0.7',
-        changefreq: 'monthly',
-        lastmod: blog.publishedAt
-          ? new Date(blog.publishedAt.split('-').reverse().join('-'))
-              .toISOString()
-              .split('T')[0]
-          : undefined,
-      }));
+      blogPages = (data.blogs || []).map((blog: { slug: string; publishedAt?: string }): SitemapPage => {
+        let lastmod: string | undefined;
+        if (blog.publishedAt) {
+          try {
+            const parts = blog.publishedAt.split('-');
+            const date =
+              parts[0].length === 4
+                ? new Date(blog.publishedAt)
+                : new Date(parts.reverse().join('-'));
+            lastmod = isNaN(date.getTime()) ? undefined : date.toISOString().split('T')[0];
+          } catch {
+            lastmod = undefined;
+          }
+        }
+        return {
+          url: `/blogs/${blog.slug.trim()}`,
+          priority: '0.7',
+          changefreq: 'monthly',
+          lastmod,
+        };
+      });
     }
   } catch (err) {
     console.error('Failed to fetch blogs for sitemap:', err);
   }
 
-  const allPages = [...staticPages, ...blogPages];
+  const allPages: SitemapPage[] = [...staticPages, ...blogPages];
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages
-  .map(
-    (page: any) => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
+  const urlEntries = allPages
+    .map((page) => {
+      const loc = escapeXml(`${baseUrl}${page.url}`);
+      return `  <url>
+    <loc>${loc}</loc>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>${
       page.lastmod ? `\n    <lastmod>${page.lastmod}</lastmod>` : ''
     }
-  </url>`
-  )
-  .join('\n')}
-</urlset>`;
+  </url>`;
+    })
+    .join('\n');
 
-  res.setHeader('Content-Type', 'application/xml');
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlEntries}\n</urlset>`;
+
+  res.setHeader('Content-Type', 'application/xml; charset=utf-8');
   res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
   res.status(200).send(sitemap);
 }
