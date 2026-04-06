@@ -66,7 +66,7 @@ const CareersSection: FC<CareersSectionContent> = ({
           width={1200}
           height={700}
           priority
-          className="w-full h-auto object-cover"
+          className="h-auto object-cover"
         />
       </div>
 

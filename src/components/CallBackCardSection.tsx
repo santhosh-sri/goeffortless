@@ -37,7 +37,7 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
         )}
         {icon && (
           <div className="bg-white bg-opacity-10 p-2 block md:hidden h-[40px] w-[40px]">
-            <Image src={icon} alt={"callback-icon"} width={24} height={24} />
+            <Image src={icon} alt={title || "callback-icon"} width={24} height={24} />
           </div>
         )}
         <p className="text-[16px] md:text-[24px] md:leading-[30px] font-[500] leading-[23px] text-[#FFFFFF]">

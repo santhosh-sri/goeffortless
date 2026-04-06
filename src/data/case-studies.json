@@ -17,6 +17,99 @@
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.goeffortless.ai" },
           { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.goeffortless.ai/case-studies" }
         ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Effortless Customer Stories",
+        "description": "How Indian SMBs transformed operations and finance with Effortless.",
+        "numberOfItems": 14,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Smarter finance, fewer leaks",
+            "description": "A Jaipur based LED manufacturer reduced cash leaks by 88% and gained 60% daily finance visibility with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Clear visibility, smarter sales",
+            "description": "A Gurugram auto parts leader cut revenue leakage 25%, raised productivity 20%, and improved payment visibility 35% with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Faster payments, clearer finances",
+            "description": "An Indore-based ceramic company cut reconciliation 70%, speed up payments 50%, and improved accuracy 80% with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Faster payments, stronger control",
+            "description": "A Hyderabad-based electrical brand cut errors 75%, improved payout accuracy 90%, and digitized ₹35L in payments with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Field sales, fully in sync",
+            "description": "A Gurugram distributor gained 100% team visibility, cut manual coordination by 80%, and speed up order-to-billing 4× with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Faster orders, zero admin chaos",
+            "description": "A Kochi bakery saved 25 weekly admin hours and doubled order processing speed by digitizing field sales with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Real-time receivables, faster closures",
+            "description": "A Mumbai healthcare distributor saved 25 hours weekly and gave 600 reps 100% receivables visibility with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Accurate claims, happier teams",
+            "description": "A Hyderabad food service company improved claim accuracy 95%, freed 15+ weekly hours, and lifted employee satisfaction 40% with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Clearer finances, faster processes",
+            "description": "A Bengaluru bathroom fittings wholesaler cut mismatches 95% and speed up bank and invoice processing 70% with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Faster claims, total expense control",
+            "description": "A Surat Logistics Company Digitized Operations speed up reimbursements by 65% and achieved 98% claim-to-project accuracy with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "Faster finance, zero paperwork",
+            "description": "A Vijayawada-based logistics company cut all manual paperwork and made approvals 3× faster by digitizing treasury and banking with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Zero chaos, full finance control",
+            "description": "A Chennai retailer with 100+ stores cut manual work by 97% and gained 100% visibility into bills and petty cash with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "Accurate invoicing, faster cash flow",
+            "description": "A Mumbai ESG company cut data errors by 90% and speed up invoicing by 60%, gaining 100% visibility into payments with Effortless."
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Automated invoicing, faster cash flow",
+            "description": "A Chennai ISP saved 40+ hours weekly, invoiced 3× faster, and hit 100% accuracy with Effortless."
+          }
+        ]
       }
     ]
   },

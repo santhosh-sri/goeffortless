@@ -501,7 +501,7 @@
             "Get your specific questions answered",
             "Discuss your unique business challenges"
           ],
-          "icon": "/calendar-days 1.svg"
+          "icon": "/calendar-days.svg"
         },
         {
           "title": "Experience Effortless",
@@ -513,7 +513,7 @@
             "Focus on your specific challenges",
             "Get a clear picture of your potential ROI"
           ],
-          "icon": "/cinema 1.svg"
+          "icon": "/cinema.svg"
         },
         {
           "title": "Your Growth Engine Starts Here",
@@ -526,7 +526,7 @@
             "Track sales team performance",
             "Get cashflow clarity in real-time"
           ],
-          "icon": "/customer-support 2.svg"
+          "icon": "/customer-support.svg"
         }
       ]
     }

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -10,6 +11,7 @@ import { contactFormFields } from "../data/formFields";
 import InputField from "./InputField";
 import SearchableDropdown from "./SearchableDropdown";
 import SuccessToast from "./SuccessToast";
+import ErrorToast from "./ErrorToast";
 
 // ✅ Define Form Schema using Zod (Validation)
 export const formSchema = z.object({
@@ -19,10 +21,10 @@ export const formSchema = z.object({
   email: z.string().email("Invalid email format"),
   phone: z.string().regex(/^\d{10}$/, "Invalid mobile number"),
   your_current_erp: z.string().min(1, "Please select your ERP"),
+  other_erp: z.string().optional(),
   preferred_contact_time: z
     .string()
     .min(1, "Please select a preferred contact time"),
-  // subject: z.string().min(2, "Subject is required"),
   message: z.string(),
 });
 
@@ -42,6 +44,7 @@ const ContactForm = () => {
   });
 
   const [showSucessPopup, setShowSucessPopup] = useState(false);
+  const [showErrorPopup, setShowErrorPopup] = useState(false);
 
   const SERVICE_ID: any = process.env.SERVICE_ID;
   const TEMPLATE_ID: any = process.env.TEMPLATE_ID;
@@ -58,9 +61,11 @@ const ContactForm = () => {
           location: data.location,
           email: data.email,
           phone: data.phone,
-          your_current_erp: data.your_current_erp,
+          your_current_erp:
+            data.your_current_erp === "Others" && data.other_erp
+              ? data.other_erp
+              : data.your_current_erp,
           preferred_contact_time: data.preferred_contact_time,
-          // subject: data.subject,
           message: data.message,
         },
         PUBLIC_KEY
@@ -71,9 +76,7 @@ const ContactForm = () => {
       reset();
     } catch (error) {
       console.error("Error sending email:", error);
-      toast.error("Error submitting form, please try again later.", {
-        position: "top-right",
-      });
+      setShowErrorPopup(true);
     }
   };
 
@@ -99,55 +102,76 @@ const ContactForm = () => {
             className="grid grid-cols-2 gap-4 md:gap-6"
           >
             {contactFormFields.map((field) => (
-              <div
-                key={field.name}
-                className={`md:col-span-${field.colSpan} max-md:col-span-2 w-full flex flex-col gap-[11px]`}
-              >
-                <p className="text-[#FFFFFF] font-normal text-[14px]">
-                  {field.label}
-                  {field?.type !== "textArea" && (
-                    <span className="text-[#F08B32]">*</span>
+              <React.Fragment key={field.name}>
+                <div
+                  className={`md:col-span-${field.colSpan} max-md:col-span-2 w-full flex flex-col gap-[11px]`}
+                >
+                  <p className="text-[#FFFFFF] font-normal text-[14px]">
+                    {field.label}
+                    {field?.type !== "textArea" && (
+                      <span className="text-[#F08B32]">*</span>
+                    )}
+                  </p>
+
+                  {["text", "number", "email"].includes(field.type) && (
+                    <InputField
+                      field={field}
+                      register={register}
+                      error={errors[field.name as keyof FormValues]?.message}
+                    />
                   )}
-                </p>
 
-                {["text", "number", "email"].includes(field.type) && (
-                  <InputField
-                    field={field}
-                    register={register}
-                    error={errors[field.name as keyof FormValues]?.message}
-                  />
-                )}
+                  {field?.type === "textArea" && (
+                    <textarea
+                      {...register(field.name as keyof FormValues)}
+                      placeholder="Tell us more about your inquiry..."
+                      rows={4}
+                      style={{
+                        background:
+                          "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
+                      }}
+                      className={`w-full rounded-[4px] border px-2 py-[9px] md:px-3 md:py-[7px] text-[#B1B1B1] text-[12px] md:text-[13px] placeholder-[#B1B1B1] focus:outline-none resize-none ${
+                        errors[field.name as keyof FormValues]
+                          ? "border-red-500"
+                          : "border-[#E5E5E533]"
+                      }`}
+                    />
+                  )}
 
-                {field?.type === "textArea" && (
-                  <textarea
-                    {...register(field.name as keyof FormValues)}
-                    placeholder="Tell us more about your inquiry..."
-                    rows={4}
-                    style={{
-                      background:
-                        "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
-                    }}
-                    className={`w-full rounded-[4px] border px-2 py-[9px] md:px-3 md:py-[7px] text-[#B1B1B1] text-[12px] md:text-[13px] placeholder-[#B1B1B1] focus:outline-none resize-none ${
-                      errors[field.name as keyof FormValues]
-                        ? "border-red-500"
-                        : "border-[#E5E5E533]"
-                    }`}
-                  />
-                )}
+                  {field.type === "select" && field?.options?.length ? (
+                    <SearchableDropdown
+                      field={{
+                        ...field,
+                        name: field.name as keyof FormValues,
+                      }}
+                      setValue={setValue}
+                      register={register}
+                      watch={watch}
+                      errors={errors}
+                    />
+                  ) : null}
+                </div>
 
-                {field.type === "select" && field?.options?.length ? (
-                  <SearchableDropdown
-                    field={{
-                      ...field,
-                      name: field.name as keyof FormValues,
-                    }}
-                    setValue={setValue}
-                    register={register}
-                    watch={watch}
-                    errors={errors}
-                  />
-                ) : null}
-              </div>
+                {field.name === "your_current_erp" &&
+                  watch("your_current_erp") === "Others" && (
+                    <div className="col-span-1 w-full flex flex-col gap-[11px]">
+                      <p className="text-[#FFFFFF] font-normal text-[14px]">
+                        Please specify your ERP
+                        {/* <span className="text-[#F08B32]">*</span> */}
+                      </p>
+                      <InputField
+                        field={{
+                          name: "other_erp",
+                          label: "Please specify your ERP",
+                          type: "text",
+                        }}
+                        register={register}
+                        error={errors.other_erp?.message}
+                        placeholder="Enter your ERP name"
+                      />
+                    </div>
+                  )}
+              </React.Fragment>
             ))}
 
             {/* Submit Button inside form so it triggers handleSubmit properly */}
@@ -167,6 +191,7 @@ const ContactForm = () => {
       {showSucessPopup && (
         <SuccessToast setShowSucessPopup={setShowSucessPopup} />
       )}
+      {showErrorPopup && <ErrorToast setShowErrorPopup={setShowErrorPopup} />}
     </>
   );
 };

@@ -6,14 +6,22 @@ const Democta = ({
   ctaUrl = "",
   customStyle = false,
   extraWidth,
+  onTrialRequest,
 }: {
   ctaText?: string;
   ctaUrl?: string;
   customStyle?: boolean;
   extraWidth?: boolean;
+  onTrialRequest?: () => void;
 }) => {
-  const shouldAttachCal = !ctaText.toLowerCase().includes("partner");
+  const isTrialCta = ctaText.toLowerCase().includes("trial");
+  const shouldAttachCal =
+    !ctaText.toLowerCase().includes("partner") && !isTrialCta;
   const handleDirect = () => {
+    if (isTrialCta && onTrialRequest) {
+      onTrialRequest();
+      return;
+    }
     if (ctaText?.toLowerCase() === "partner with us") {
       const section = document.getElementById("PartnerForm");
       if (section) {

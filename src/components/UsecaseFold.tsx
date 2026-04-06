@@ -37,6 +37,7 @@ interface UsecaseFoldProps extends FirstFoldContent {
   activeTab?: string;
   setActiveTab?: any;
   isFeaturePage?: boolean;
+  onTrialRequest?: () => void;
 }
 const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   pageHeading = "",
@@ -62,6 +63,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   isFeaturePage = false,
   secondaryIcon,
   bannerAlt,
+  onTrialRequest,
 }) => {
   const [openDemoModal, setOpenDemoModal] = useState(false);
   const [demoStep, setDemoStep] = useState<DemoModalStep>("language");
@@ -166,7 +168,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                       : "max-md:grid grid-cols-1 max-md:w-full max-md:[@media(min-width:439px)]:grid-cols-2 md:flex md:flex-row-reverse md:mt-[20px]"
                   } max-md:flex-col gap-[24px]`}
                 >
-                  {ctaText && <Democta customStyle={true} ctaText={ctaText} />}{" "}
+                  {ctaText && <Democta customStyle={true} ctaText={ctaText} onTrialRequest={onTrialRequest} />}{" "}
                   {secondaryCtaText && (
                     <SecondaryCta
                       customStyle={true}
@@ -244,7 +246,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                 />
               )}
               <div className="w-[100%] text-[13px]">
-                {ctaText && <Democta customStyle={true} ctaText={ctaText} />}{" "}
+                {ctaText && <Democta customStyle={true} ctaText={ctaText} onTrialRequest={onTrialRequest} />}{" "}
               </div>
             </div>
           )}

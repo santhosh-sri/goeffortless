@@ -2,39 +2,41 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
   FieldErrors,
+  FieldValues,
   UseFormRegister,
   UseFormSetValue,
   UseFormWatch,
 } from "react-hook-form";
-import { FormValues } from "./ContactForm";
 
-type SearchableDropdownProps = {
+type SearchableDropdownProps<T extends FieldValues = FieldValues> = {
   field: {
-    name: keyof FormValues;
+    name: keyof T & string;
     label: string;
     options?: string[];
     colSpan?: number;
+    placeholder?: string;
   };
-  register: UseFormRegister<FormValues>;
-  setValue: UseFormSetValue<FormValues>;
-  watch: UseFormWatch<FormValues>;
-  errors: FieldErrors<FormValues>;
+  register: UseFormRegister<T>;
+  setValue: UseFormSetValue<T>;
+  watch: UseFormWatch<T>;
+  errors: FieldErrors<T>;
 };
 
-const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
+const SearchableDropdown = <T extends FieldValues = FieldValues>({
   field,
   register,
   setValue,
   watch,
   errors,
-}) => {
+}: SearchableDropdownProps<T>) => {
   const [search, setSearch] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Watch the form value to sync with external changes
-  const formValue = watch(field.name);
+  const fieldName = field.name as any;
+  const formValue = watch(fieldName);
 
   // Update local state when form value changes
   useEffect(() => {
@@ -60,7 +62,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
   }, [selectedValue]);
 
   const handleSelect = (value: string) => {
-    setValue(field.name, value, { shouldValidate: true });
+    setValue(fieldName, value as any, { shouldValidate: true });
     setSelectedValue(value);
     setSearch(value);
     setShowDropdown(false);
@@ -98,15 +100,15 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           autoComplete="off"
           value={search}
           onFocus={handleInputFocus}
-          placeholder={`Select ${field.label}`}
+          placeholder={field.placeholder || `Select ${field.label}`}
           style={{
             background:
               "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
           }}
           className={`w-full px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-[#B1B1B1] placeholder-[#B1B1B1] cursor-pointer hover:border-[#606162] focus:outline-none ${
-            errors[field.name] ? "border-red-500" : "border-[#E5E5E533]"
+            errors[fieldName] ? "border-red-500" : "border-[#E5E5E533]"
           }`}
-          {...register(field.name)}
+          {...register(fieldName)}
         />
         <div
           className="absolute right-4 cursor-pointer"
@@ -115,8 +117,8 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           <Image
             src="/dropdown-orange.svg"
             alt="arrow"
-            width={16}
-            height={16}
+            width={12}
+            height={12}
           />
         </div>
 
@@ -144,10 +146,10 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           </div>
         )}
       </div>
-      {errors[field.name] && (
+      {errors[fieldName] && (
         <div className="col-span-2">
           <p className="text-red-500 text-xs">
-            {errors[field.name]?.message?.toString()}
+            {(errors[fieldName] as any)?.message?.toString()}
           </p>
         </div>
       )}

@@ -14,6 +14,7 @@ import ServiceSection from "./ServiceSection";
 import UsecaseFold from "./UsecaseFold";
 import BlogWithSidebar from "./BlogWithSidebar";
 import HeaderBanner from "./HeaderBanner";
+// import TrialForm from "./TrialForm";
 
 //Landing component
 const Landing: React.FC<Content> = ({
@@ -114,6 +115,7 @@ const Landing: React.FC<Content> = ({
               isMobile={isMobile}
               activeTab={activeTab}
               setActiveTab={setActiveTab}
+              // onTrialRequest={handleShowForm}
             />
           )}
           {isBlogPage && <BlogWithSidebar />}
@@ -164,6 +166,7 @@ const Landing: React.FC<Content> = ({
             </div>
           )} */}
       </div>
+      {/* {showForm && <TrialForm setShowForm={setShowForm} />} */}
     </>
   );
 };

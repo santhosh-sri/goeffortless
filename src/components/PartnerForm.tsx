@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { z } from "zod";
 import InputField from "./InputField";
 import SuccessToast from "./SuccessToast";
+import ErrorToast from "./ErrorToast";
 
 declare global {
   interface Window {
@@ -88,6 +89,7 @@ const PartnerForm = () => {
     mode: "onSubmit",
   });
   const [showSucessPopup, setShowSucessPopup] = useState<boolean>(false);
+  const [showErrorPopup, setShowErrorPopup] = useState<boolean>(false);
 
   const onSubmit: SubmitHandler<PartnerFormValues> = async (data) => {
     try {
@@ -96,7 +98,6 @@ const PartnerForm = () => {
         PARTNER_TEMPLATE_ID,
         {
           firstName: data.firstName,
-          // lastName: data.lastName,
           workMail: data.workMail,
           phone: data.phone,
           companyName: data.companyName,
@@ -113,9 +114,7 @@ const PartnerForm = () => {
       reset();
     } catch (error) {
       console.error("Submission error:", error);
-      toast.error("Error submitting form, please try again.", {
-        position: "top-right",
-      });
+      setShowErrorPopup(true);
     }
   };
 
@@ -123,6 +122,9 @@ const PartnerForm = () => {
     <>
       {showSucessPopup && (
         <SuccessToast setShowSucessPopup={setShowSucessPopup} />
+      )}
+      {showErrorPopup && (
+        <ErrorToast setShowErrorPopup={setShowErrorPopup} />
       )}
       <div className="md:max-w-[777px] md:mx-auto p-5 md:p-[40px] bg-[#08090A] border-[1px] border-[#E5E5E533] rounded-md text-white max-md:mt-2">
         <form
@@ -136,7 +138,7 @@ const PartnerForm = () => {
             const fieldName = name as keyof PartnerFormValues;
 
             return (
-              <div key={name} className={`col-span-${colSpan}`}>
+              <div key={name} className={`${colSpan === 1 ? "md:col-span-1" : "md:col-span-2"} col-span-2`}>
                 <label
                   htmlFor={name}
                   className="block md:mb-3 mb-2 font-medium text-sm"

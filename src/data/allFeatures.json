@@ -14,8 +14,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.goeffortless.ai" },
-          { "@type": "ListItem", "position": 2, "name": "All Features", "item": "https://www.goeffortless.ai/allFeatures" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.goeffortless.ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "All Features",
+            "item": "https://www.goeffortless.ai/allFeatures"
+          }
         ]
       }
     ]
@@ -310,7 +320,7 @@
                 {
                   "title": "Attendance & Leave\n Management",
                   "description": "Leave requests, approvals, and balances — all managed digitally.",
-                  "img": "/ballot-rect 1.svg"
+                  "img": "/ballot-rect1.svg"
                 },
                 {
                   "title": "Custom Forms\n with Tasks",
