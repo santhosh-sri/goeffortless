@@ -212,9 +212,17 @@ export default function BlogDetail({
         )}
         <meta property="article:author" content="https://www.goeffortless.ai" />
         <meta property="article:section" content="Business & Technology" />
-        {seoMetaKeywords && seoMetaKeywords.split(',').slice(0, 5).map((tag, i) => (
-          <meta property="article:tag" content={tag.trim()} key={`tag-${i}`} />
-        ))}
+        {seoMetaKeywords &&
+          seoMetaKeywords
+            .split(",")
+            .slice(0, 5)
+            .map((tag, i) => (
+              <meta
+                property="article:tag"
+                content={tag.trim()}
+                key={`tag-${i}`}
+              />
+            ))}
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -331,7 +339,7 @@ export default function BlogDetail({
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const res = await fetch(
-      "https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs"
+      "https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs?limit=1000"
     );
     const data = await res.json();
     const paths = (data.blogs || []).map((blog: { slug: string }) => ({

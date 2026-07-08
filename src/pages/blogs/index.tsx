@@ -32,7 +32,7 @@ const transformBlogs = (data: any[]): BlogCardProps[] => {
 export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
   try {
     const res = await fetch(
-      "https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs"
+      "https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs?limit=1000"
     );
 
     if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
@@ -76,7 +76,9 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
   return (
     <>
       <Head>
-        <title>Effortless Blogs: The Effortless Edge — AI Automation & Sales Insights</title>
+        <title>
+          Effortless Blogs: The Effortless Edge — AI Automation & Sales Insights
+        </title>
         <meta
           name="description"
           content="Stay ahead with The Effortless Edge — your source for insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses."
@@ -98,8 +100,14 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
         <meta property="og:site_name" content="Effortless" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@go_effortless" />
-        <meta name="twitter:title" content="Effortless Blogs: The Effortless Edge — AI Automation & Sales Insights" />
-        <meta name="twitter:description" content="Stay ahead with The Effortless Edge — your source for insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses." />
+        <meta
+          name="twitter:title"
+          content="Effortless Blogs: The Effortless Edge — AI Automation & Sales Insights"
+        />
+        <meta
+          name="twitter:description"
+          content="Stay ahead with The Effortless Edge — your source for insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses."
+        />
         <meta name="twitter:image" content="https://iili.io/F7C7h12.png" />
         <link rel="canonical" href="https://www.goeffortless.ai/blogs" />
         <script
@@ -108,19 +116,20 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CollectionPage",
-              "name": "The Effortless Edge — Blog",
-              "description": "Insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses.",
-              "url": "https://www.goeffortless.ai/blogs",
-              "publisher": {
+              name: "The Effortless Edge — Blog",
+              description:
+                "Insights on AI-driven automation, smarter sales, and efficient financial workflows for growing Indian businesses.",
+              url: "https://www.goeffortless.ai/blogs",
+              publisher: {
                 "@type": "Organization",
-                "name": "Effortless",
-                "url": "https://www.goeffortless.ai",
-                "logo": {
+                name: "Effortless",
+                url: "https://www.goeffortless.ai",
+                logo: {
                   "@type": "ImageObject",
-                  "url": "https://www.goeffortless.ai/logo.svg"
-                }
-              }
-            })
+                  url: "https://www.goeffortless.ai/logo.svg",
+                },
+              },
+            }),
           }}
         />
         <script
@@ -129,21 +138,21 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
-              "itemListElement": [
+              itemListElement: [
                 {
                   "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://www.goeffortless.ai"
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.goeffortless.ai",
                 },
                 {
                   "@type": "ListItem",
-                  "position": 2,
-                  "name": "Blogs",
-                  "item": "https://www.goeffortless.ai/blogs"
-                }
-              ]
-            })
+                  position: 2,
+                  name: "Blogs",
+                  item: "https://www.goeffortless.ai/blogs",
+                },
+              ],
+            }),
           }}
         />
       </Head>

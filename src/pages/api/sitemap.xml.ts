@@ -33,7 +33,7 @@ export default async function handler(
   let blogPages: { url: string; priority: string; changefreq: string }[] = [];
   try {
     const blogRes = await fetch(
-      "https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs"
+      "https://us-central1-effortless-admin.cloudfunctions.net/api/v1/blogs?limit=1000"
     );
     if (blogRes.ok) {
       const data = await blogRes.json();
