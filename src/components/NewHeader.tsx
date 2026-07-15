@@ -31,8 +31,8 @@ const Header = ({
   const [mounted, setMounted] = useState(false);
 
   const resourcePath =
-    pathname === "/pricing" ||
-    pathname === "/pricing-plan" ||
+    // pathname === "/pricing" ||
+    // pathname === "/pricing-plan" ||
     pathname === "/case-studies" ||
     pathname === "/" ||
     pathname === "/partners" ||
@@ -45,8 +45,8 @@ const Header = ({
     pathname === "/security-practices";
 
   const productPath =
-    pathname === "/pricing" ||
-    pathname === "/pricing-plan" ||
+    // pathname === "/pricing" ||
+    // pathname === "/pricing-plan" ||
     pathname === "/case-studies" ||
     pathname === "/" ||
     pathname === "/partners" ||
@@ -242,7 +242,7 @@ const Header = ({
       hasBottomBorder: true,
       subMenu: headerResources,
     },
-    { href: "/pricing", label: "Pricing", hasBottomBorder: true },
+    // { href: "/pricing", label: "Pricing", hasBottomBorder: true },
   ];
 
   const handleMouseEnter = (menuName: string) => {
@@ -627,7 +627,7 @@ const Header = ({
                   </div>
                 )}
               </div>
-              <div>
+              {/* <div>
                 <Link
                   href="/pricing"
                   className={`text-base font-normal ${
@@ -638,7 +638,7 @@ const Header = ({
                 >
                   Pricing
                 </Link>
-              </div>
+              </div> */}
             </div>
           )}
 

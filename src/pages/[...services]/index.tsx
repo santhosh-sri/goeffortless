@@ -24,6 +24,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   const service = Array.isArray(context?.params?.services)
     ? context?.params?.services.join("/")
     : context?.params?.services;
+
+  // Current pricing pages are hidden while the new pricing page is built.
+  const HIDDEN_SLUGS = ["pricing", "pricing-plan"];
+  if (service && HIDDEN_SLUGS.includes(service)) {
+    return { notFound: true };
+  }
+
   try {
     const content = await fetchServiceData(service);
 

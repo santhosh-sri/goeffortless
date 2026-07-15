@@ -65,12 +65,12 @@ export default function Custom404() {
           >
             Contracts
           </Link>
-          <Link
+          {/* <Link
             href="/pricing"
             className="hover:text-[#F08B32] transition-colors"
           >
             Pricing
-          </Link>
+          </Link> */}
           <Link
             href="/contact-us"
             className="hover:text-[#F08B32] transition-colors"

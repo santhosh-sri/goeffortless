@@ -4,7 +4,7 @@ import parse from "html-react-parser";
 import Image from "next/image";
 import React from "react";
 import TabComponent from "./TabComponent";
-import Link from "next/link";
+// import Link from "next/link";
 
 interface PricingSectionProps {
   annualData: PricingSectionContents;
@@ -153,13 +153,13 @@ export const PricingCardsGroup = ({
           setActiveTab={setActiveTab}
         />
       ))}
-      <div className={`w-full`}>
+      {/* <div className={`w-full`}>
         <Link href="/pricing-plan">
           <button className="border-[1px] border-[#F08B32] text-[#F08B32] px-4 py-2 rounded-[4px] w-full md:text-[16px] text-[14px] font-[500]">
             Compare all Plans in Detail
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

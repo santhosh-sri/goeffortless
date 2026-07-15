@@ -1,9 +1,9 @@
 import { HomePagePricing } from "@/interface/type";
 import React, { useState } from "react";
 import parse from "html-react-parser";
-import SecondaryCta from "./SecondaryCta";
+// import SecondaryCta from "./SecondaryCta";
 import { CalcomConfig } from "@/utils/calConfig";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import TabComponent from "./TabComponent";
 
 type NewPricingCardProps = HomePagePricing & {
@@ -15,7 +15,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
   packageItemsHalf,
   setSelectedPlan = () => {},
 }) => {
-  const router = useRouter();
+  // const router = useRouter();
   const colouredText = ["annualPrice", "oneTimeImplementationFee"];
   const [activeTab, setActiveTab] = useState<any>("annually");
   const commonItems =
@@ -168,11 +168,11 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
         </div>
       </div>
 
-      <SecondaryCta
+      {/* <SecondaryCta
         secondaryCtaText={"View Detailed Comparison of Plans"}
         handleDirect={() => router.push("/pricing")}
         isOrange={true}
-      />
+      /> */}
     </div>
   );
 };
