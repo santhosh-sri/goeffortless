@@ -106,13 +106,20 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-line-subtle bg-bg/90 backdrop-blur-[32px]">
-      <Container className="flex items-center justify-between gap-4 py-3 lg:pb-5 lg:pt-10">
+      <Container className="flex items-center justify-between gap-4 py-3 xl:pb-5 xl:pt-10">
         <Logo />
 
+        {/*
+          The full nav switches in at xl, not lg. At exactly 1024px the logo
+          (176), nav (542) and actions (239) need 957px but the gutter leaves
+          896, so the "Schedule Demo" button pushed 29px past the viewport and
+          every page scrolled sideways. The drawer covers 1024-1279 instead,
+          which also avoids cramming five dropdown panels into that width.
+        */}
         {/* ---- Desktop navigation ---- */}
         <div
           ref={navRef}
-          className="hidden items-center gap-8 lg:flex"
+          className="hidden items-center gap-8 xl:flex"
           onMouseLeave={closeWithDelay}
         >
           <nav aria-label="Main">
@@ -172,7 +179,7 @@ export function SiteHeader() {
         </div>
 
         {/* ---- Desktop actions ---- */}
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-4 xl:flex">
           <ThemeToggle />
           <Button
             href={LOGIN_URL}
@@ -189,7 +196,7 @@ export function SiteHeader() {
         </div>
 
         {/* ---- Mobile / tablet actions ---- */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <ThemeToggle />
           <button
             type="button"
@@ -228,7 +235,7 @@ export function SiteHeader() {
           viewport edge. */}
       {openMenuItem?.menu && (
         <div
-          className="absolute inset-x-0 top-full hidden animate-fadeIn lg:block"
+          className="absolute inset-x-0 top-full hidden animate-fadeIn xl:block"
           onMouseEnter={() => openWithHover(openMenuItem.label)}
           onMouseLeave={closeWithDelay}
         >
@@ -242,7 +249,7 @@ export function SiteHeader() {
       {drawerOpen && (
         <div
           id="mobile-nav"
-          className="max-h-[calc(100dvh-64px)] overflow-y-auto border-t border-line bg-bg lg:hidden"
+          className="max-h-[calc(100dvh-64px)] overflow-y-auto border-t border-line bg-bg xl:hidden"
         >
           <Container className="py-4">
             <nav aria-label="Mobile">
