@@ -2,18 +2,19 @@ import React from "react";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import YoutubeVideoCard from "@/components/YoutubeVideoCard";
-import { salesSeeItInAction as data } from "@/data/sales";
+import type { ProductVideoData } from "./types";
 
 /**
- * "See it in Action" — Figma node 1886:41801.
+ * "See it in Action" — Figma 1886:41801 (Sales), 1943:71170 (Purchase).
  *
- * The design's player area is an empty white placeholder, so this reuses the
- * existing "Effortless Sales" video from landing.json, presented in the new
- * section UI. The embed itself is the existing YoutubeVideoCard, so playback
- * behaviour matches the rest of the site. The guard stays in place so an empty
- * `videoId` renders the heading alone rather than a blank box.
+ * The design leaves the player area an empty white placeholder on every product
+ * page, so each page passes the video already referenced for that product in
+ * the CMS, presented in the new section UI. The embed is the existing
+ * YoutubeVideoCard so playback behaviour matches the rest of the site; the
+ * guard keeps an empty videoId rendering the heading alone rather than a
+ * blank box.
  */
-export function SeeItInActionSection() {
+export function ProductSeeItInAction({ data }: { data: ProductVideoData }) {
   return (
     <Section tone="subtle" spacing="md">
       <div className="flex flex-col items-center gap-8">
@@ -33,4 +34,4 @@ export function SeeItInActionSection() {
   );
 }
 
-export default SeeItInActionSection;
+export default ProductSeeItInAction;

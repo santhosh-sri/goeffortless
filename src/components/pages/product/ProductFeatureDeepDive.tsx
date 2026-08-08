@@ -3,32 +3,39 @@ import React from "react";
 import { cn } from "@/lib/cn";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { salesFeatureHeading, salesFeatureRows } from "@/data/sales";
+import type { ProductFeatureHeading, ProductFeatureRow } from "./types";
 
 /**
- * "Feature Deep Dive" — Figma nodes 1699:17373 (heading) + 1699:17380 (rows).
+ * "Feature Deep Dive" — Figma 1699:17373 + 1699:17380 (Sales), 1943:64659 +
+ * 1943:64666 (Purchase), and the equivalent frames on the other product pages.
  *
- * Ten uniform 520px rows, media alternating left/right, 48px apart.
- * Copy column: accent eyebrow (16 semibold), 24/30 semibold title,
- * 20px muted body paragraphs.
+ * Uniform 520px rows, media alternating left/right starting on the left,
+ * 48px apart. Copy column: accent eyebrow, 24/30 semibold title, 20px muted
+ * body paragraphs.
  *
  * Media ships as the per-row Figma export. Each row's decorative dot field is
  * ~2,600 individual <star> nodes in Figma — far past what is sane to emit as
  * DOM, and already baked into the export at the right position and opacity.
  */
-export function FeatureDeepDiveSection() {
+export function ProductFeatureDeepDive({
+  heading,
+  rows,
+}: {
+  heading: ProductFeatureHeading;
+  rows: ProductFeatureRow[];
+}) {
   return (
     <Section spacing="lg">
       <div className="flex flex-col gap-10 lg:gap-12">
         <SectionHeading
-          eyebrow={salesFeatureHeading.eyebrow}
-          title={salesFeatureHeading.title}
-          accentTitle={salesFeatureHeading.accentTitle}
-          description={salesFeatureHeading.description}
+          eyebrow={heading.eyebrow}
+          title={heading.title}
+          accentTitle={heading.accentTitle}
+          description={heading.description}
         />
 
         <ul className="flex flex-col gap-10 lg:gap-12">
-          {salesFeatureRows.map((row, index) => {
+          {rows.map((row, index) => {
             const mediaRight = index % 2 === 1;
 
             return (
@@ -37,10 +44,7 @@ export function FeatureDeepDiveSection() {
                 className="flex flex-col items-center gap-6 lg:flex-row lg:gap-12"
               >
                 <div
-                  className={cn(
-                    "w-full lg:w-1/2",
-                    mediaRight && "lg:order-2"
-                  )}
+                  className={cn("w-full lg:w-1/2", mediaRight && "lg:order-2")}
                 >
                   <Image
                     src={row.media}
@@ -85,4 +89,4 @@ export function FeatureDeepDiveSection() {
   );
 }
 
-export default FeatureDeepDiveSection;
+export default ProductFeatureDeepDive;
