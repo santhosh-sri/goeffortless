@@ -1,0 +1,77 @@
+import Image from "next/image";
+import React from "react";
+import { cn } from "@/lib/cn";
+import Section from "@/components/ui/Section";
+import SectionHeading from "@/components/ui/SectionHeading";
+import type { ProductProblemSolutionData } from "./types";
+
+/**
+ * "Problem/Solution Split" — Figma 1864:24118 (Field Staff Claims) and
+ * 1864:16668 (Buyer Portal), which are the same frame with different copy.
+ *
+ * Two columns separated by a vertical dashed rule: the status quo on the left,
+ * the Effortless equivalent on the right, each a heading, a one-line subtitle
+ * and a single image. The rule is a CSS dashed border rather than an exported
+ * asset, and collapses to a horizontal rule when the columns stack.
+ *
+ * The Sales page has its own richer version of this band (a chat card plus a
+ * warning list), so that one stays under sales/ rather than folding extra
+ * variants into this component.
+ */
+export function ProductProblemSolution({
+  data,
+}: {
+  data: ProductProblemSolutionData;
+}) {
+  return (
+    <Section tone="subtle" spacing="lg">
+      <div className="flex flex-col gap-10 lg:gap-12">
+        <SectionHeading
+          eyebrow={data.eyebrow}
+          title={data.title}
+          accentTitle={data.accentTitle}
+          titleSuffix={data.titleSuffix}
+          description={data.description}
+        />
+
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
+          {data.sides.map((side, index) => (
+            <div
+              key={side.title}
+              className={cn(
+                "flex flex-col items-center gap-6",
+                index === 0
+                  ? "lg:pr-12"
+                  : "border-t border-dashed border-line pt-10 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0"
+              )}
+            >
+              <div className="flex flex-col items-center gap-2 text-center">
+                <h3
+                  className={cn(
+                    "text-heading-sm font-semibold",
+                    side.accent ? "text-accent" : "text-content"
+                  )}
+                >
+                  {side.title}
+                </h3>
+                <p className="text-body text-content-muted">{side.subtitle}</p>
+              </div>
+
+              <Image
+                src={side.media.src}
+                alt={side.media.alt}
+                width={side.media.width}
+                height={side.media.height}
+                loading="lazy"
+                sizes="(min-width: 1024px) 608px, 100vw"
+                className="h-auto w-full max-w-[608px] rounded-card"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+export default ProductProblemSolution;

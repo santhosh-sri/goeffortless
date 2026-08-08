@@ -79,6 +79,25 @@ export function ProductFeatureDeepDive({
                       {paragraph}
                     </p>
                   ))}
+
+                  {row.checks && (
+                    <ul className="mt-2 flex flex-col gap-3">
+                      {row.checks.map((check) => (
+                        <li key={check} className="flex items-center gap-3">
+                          <Image
+                            src="/assets/shared/check-circle.svg"
+                            alt=""
+                            width={20}
+                            height={20}
+                            className="h-5 w-5 shrink-0"
+                          />
+                          <span className="text-body text-content md:text-body-lg">
+                            {check}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </li>
             );

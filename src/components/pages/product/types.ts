@@ -36,8 +36,31 @@ export interface ProductFeatureRow {
   title: string;
   /** One paragraph per entry, matching the design's stacked copy blocks. */
   body: string[];
+  /**
+   * Green-tick capability list under the body. Contracts & Billing is the only
+   * page whose rows carry one, so it is optional rather than a separate row
+   * variant.
+   */
+  checks?: string[];
   media: string;
   mediaAlt: string;
+}
+
+export interface ProductProblemSolutionData {
+  eyebrow: string;
+  title: string;
+  accentTitle: string;
+  /** Text after the accent clause — 'The "Expense Leak" Audit'. */
+  titleSuffix?: string;
+  description: string;
+  /** Exactly two: the status quo, then the Effortless equivalent. */
+  sides: {
+    title: string;
+    /** Render the heading in the brand accent (the Effortless side). */
+    accent?: boolean;
+    subtitle: string;
+    media: ProductMedia;
+  }[];
 }
 
 export interface ProductWhyThisMattersData {
