@@ -14,6 +14,7 @@ export function SectionHeading({
   eyebrow,
   title,
   accentTitle,
+  titleSuffix,
   description,
   align = "center",
   as: Heading = "h2",
@@ -22,8 +23,13 @@ export function SectionHeading({
   eyebrow?: string;
   /** Leading, non-accented part of the heading. Accepts inline HTML. */
   title: string;
-  /** Trailing clause rendered in the brand accent. Accepts inline HTML. */
+  /** Accented clause. Accepts inline HTML. */
   accentTitle?: string;
+  /**
+   * Non-accented text after the accent clause, for headings where the accent
+   * sits mid-sentence — 'The "Expense Leak" Audit'. Accepts inline HTML.
+   */
+  titleSuffix?: string;
   description?: string;
   align?: "center" | "start";
   as?: "h1" | "h2" | "h3";
@@ -53,6 +59,7 @@ export function SectionHeading({
         {accentTitle && (
           <>{" "}<span className="font-bold text-accent">{parse(accentTitle)}</span></>
         )}
+        {titleSuffix && <>{" "}{parse(titleSuffix)}</>}
       </Heading>
 
       {description && (
