@@ -94,7 +94,14 @@ const Landing: React.FC<Content> = ({
     <>
       {/* Render Metadata component */}
       <Metadata {...metadata} />
-      <div>
+      {/*
+        Every page still rendered through <Landing> predates the redesign and
+        hardcodes the dark palette. Pinning data-theme="dark" here scopes the
+        dark tokens to this subtree, so shared components (cards, tabs, inputs)
+        can be migrated to tokens without changing how these pages look. Remove
+        the attribute from a page once it has been rebuilt against the new design.
+      */}
+      <div data-theme="dark">
         <div className={`fixed top-0 w-full z-[999]`}>
           {/* {!closeBanner && <HeaderBanner setCloseBanner={handleCloseBanner} />} */}
           <Header
