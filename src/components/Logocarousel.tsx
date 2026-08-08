@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Slider from "react-slick";
+import type { CustomerLogo } from "@/data/customerLogos";
 
-const Logocarousel = () => {
-  const businessPartnersLogo = [
+/**
+ * `logos` is optional so the pre-redesign dark pages keep rendering the
+ * white-on-transparent set below unchanged, while the redesigned light pages
+ * pass the full-colour set from src/data/customerLogos.ts.
+ */
+const Logocarousel = ({ logos }: { logos?: CustomerLogo[] } = {}) => {
+  const defaultLogos = [
     { src: "/arvindpet.png", width: 137, height: 48, name: "Arvind Petrochem" },
     { src: "/Galla.png", width: 74, height: 48, name: "Galla Foods" },
     { src: "/rassense-logo.svg", width: 158, height: 48, name: "Rassense" },
@@ -22,6 +28,8 @@ const Logocarousel = () => {
     { src: "/image.png", width: 68, height: 48, name: "Partner" },
     { src: "/krish_fashion.png", width: 150, height: 48, name: "Krish Fashion" },
   ];
+
+  const businessPartnersLogo = logos ?? defaultLogos;
 
   const logosliderSettings = {
     infinite: true,
@@ -74,10 +82,28 @@ const Logocarousel = () => {
             <div className="flex items-center justify-center w-full h-full">
               <Image
                 src={logos?.src || ""}
-                alt={`${logos?.name} logo — Effortless customer`}
+                alt={
+                  "alt" in logos
+                    ? (logos as CustomerLogo).alt
+                    : `${(logos as { name?: string })?.name} logo — Effortless customer`
+                }
                 width={logos?.width}
                 height={logos?.height}
-                className="md:max-w-[140px] md:max-h-[64px] max-w-[80px] max-h-[40px] object-contain w-auto h-auto"
+                className={`md:max-w-[140px] md:max-h-[64px] max-w-[80px] max-h-[40px] object-contain w-auto h-auto ${
+                  (logos as CustomerLogo)?.keepColors
+                    ? // Artwork carries filled shapes (an opaque tile, or a
+                      // coloured plate behind the wordmark), so the dark-theme
+                      // silhouette below would collapse it into a solid block.
+                      ""
+                    : (logos as CustomerLogo)?.invertOnLight
+                    ? // Source is white-on-transparent: darken it on light,
+                      // leave it alone on dark.
+                      "invert dark:invert-0"
+                    : // Full-colour source: shown as-is on light. On dark it is
+                      // flattened to white, because several brand marks are
+                      // near-black and would vanish against the dark surface.
+                      "dark:brightness-0 dark:invert"
+                }`}
               />
             </div>
           </div>
