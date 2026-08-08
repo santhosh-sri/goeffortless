@@ -6,6 +6,12 @@ interface YoutubeVideoCardProps {
   onClose?: () => void;
   onBack?: () => void;
   type?: string;
+  /**
+   * Hold a true 16:9 box instead of the fixed 630px desktop height. The fixed
+   * height works out to roughly 1.93:1, so YouTube pillarboxes the player with
+   * black bars. Opt-in, to leave the pages built against the old height alone.
+   */
+  widescreen?: boolean;
 }
 
 const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
@@ -13,6 +19,7 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
   onClose,
   onBack,
   type = "",
+  widescreen = false,
 }) => {
   const [play, setPlay] = useState(false);
 
@@ -21,7 +28,9 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
       {type === "page" ? (
         <div className="w-full">
           <div
-            className="relative aspect-video md:aspect-auto md:h-[630px] w-full rounded-xl bg-[#0F1113] overflow-hidden cursor-pointer"
+            className={`relative aspect-video w-full rounded-xl bg-[#0F1113] overflow-hidden cursor-pointer ${
+              widescreen ? "" : "md:aspect-auto md:h-[630px]"
+            }`}
             onClick={() => setPlay(true)}
           >
             {!play ? (
@@ -32,13 +41,25 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
                   className="h-full w-full object-cover contrast-110"
                 />
 
+                {/*
+                  The glyph is white, so on a thumbnail with a light centre it
+                  used to disappear completely. The scrim and the dark disc
+                  behind it guarantee contrast whatever the poster looks like.
+                */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div>
+                  <button
+                    type="button"
+                    aria-label="Play video"
+                    className="flex h-20 w-20 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm transition hover:scale-105 hover:bg-black/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  >
                     <svg
-                      width="64"
-                      height="64"
+                      width="40"
+                      height="40"
                       viewBox="0 0 64 64"
                       fill="none"
+                      aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -46,7 +67,7 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
                         fill="white"
                       />
                     </svg>
-                  </div>
+                  </button>
                 </div>
               </>
             ) : (

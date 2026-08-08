@@ -981,3 +981,17 @@ body {
   display: flex;
   height: 100%;
 }
+
+/* react-slick guard.
+   `.slick-track` is sized in px by JS and relies on `.slick-list` clipping it.
+   The overrides above (display:flex on track/slide) can let it escape, which
+   shows up as horizontal page overflow on narrow viewports. Pin the clipping
+   explicitly so a carousel can never widen the document. */
+.slick-slider,
+.slick-list {
+  max-width: 100%;
+}
+
+.slick-list {
+  overflow: hidden !important;
+}
