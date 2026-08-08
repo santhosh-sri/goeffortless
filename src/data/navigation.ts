@@ -406,21 +406,14 @@ export const resourceMenu: NavMenu = {
 
 /* ------------------------------------------------------------------ */
 
-/**
- * Order matches Figma node 2514:80690.
- *
- * `Pricing` is in the design but `/pricing` is currently routed to a 404 by
- * HIDDEN_SLUGS in `pages/[...services]/index.tsx` while the new pricing page
- * is built. It stays here, hidden, so re-enabling it is a one-line change —
- * rendering it now would ship a broken nav link.
- */
+/** Order matches Figma node 2514:80690. */
 export const primaryNav: NavItem[] = [
   { label: "Products", menu: productMenu },
   { label: "Solutions", menu: solutionMenu },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Partners", href: "/partners" },
   { label: "Resources", menu: resourceMenu },
-  { label: "Pricing", href: "/pricing", hidden: true },
+  { label: "Pricing", href: "/pricing" },
 ];
 
 export const visibleNav = primaryNav.filter((item) => !item.hidden);
