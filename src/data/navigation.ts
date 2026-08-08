@@ -91,7 +91,7 @@ export const productMenu: NavMenu = {
             tagline: "Control Employee Expenses",
             description:
               "Streamline travel claims, enforce policy limits, approvals & reimbursements.",
-            href: "/expenses",
+            href: "/claims",
           },
         ],
       },
@@ -106,7 +106,7 @@ export const productMenu: NavMenu = {
             tagline: "24×7 Customer Ordering",
             description:
               "Let your buyers order, track, and manage transactions anytime, anywhere.",
-            href: "/allFeatures",
+            href: "/buyer-portal",
           },
           {
             emoji: "📄",
