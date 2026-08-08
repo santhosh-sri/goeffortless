@@ -2,9 +2,17 @@
  * Sales & Collections page content — Figma
  * "Sales & Collections (The Revenue Engine)", node 1636:2296.
  */
+import type {
+  ProductHeroData,
+  ProductFeatureHeading,
+  ProductFeatureRow,
+  ProductWhyThisMattersData,
+  ProductVideoData,
+  ProductClosingCtaData,
+} from "@/components/pages/product";
 
 /** Hero — Figma node 1699:2449. */
-export const salesHero = {
+export const salesHero: ProductHeroData = {
   badges: [
     { label: "Primary Product", tone: "success" as const },
     { label: "The Revenue Engine", tone: "surface" as const },
@@ -23,21 +31,12 @@ export const salesHero = {
 };
 
 /** Feature Deep Dive heading — Figma node 1699:17373. */
-export const salesFeatureHeading = {
+export const salesFeatureHeading: ProductFeatureHeading = {
   eyebrow: "Feature",
   title: "Feature",
   accentTitle: "Deep Dive",
   description: "Layers of protection for every rupee that leaves your company",
 };
-
-export interface SalesFeatureRow {
-  eyebrow: string;
-  title: string;
-  /** One paragraph per entry, matching the design's stacked copy blocks. */
-  body: string[];
-  media: string;
-  mediaAlt: string;
-}
 
 /**
  * Ten 520px feature rows — Figma nodes under 1699:17380, in order:
@@ -46,7 +45,7 @@ export interface SalesFeatureRow {
  *
  * Rows alternate media side, starting with media on the left.
  */
-export const salesFeatureRows: SalesFeatureRow[] = [
+export const salesFeatureRows: ProductFeatureRow[] = [
   {
     eyebrow: "Do Customer KYC",
     title: "Every Customer, Verified to the Core.",
@@ -189,7 +188,7 @@ export const salesRealityCheck = {
 };
 
 /** "Why This Matters" — Figma node 1886:41780. */
-export const salesWhyThisMatters = {
+export const salesWhyThisMatters: ProductWhyThisMattersData = {
   title: "Why This",
   accentTitle: "Matters",
   items: [
@@ -219,7 +218,7 @@ export const salesWhyThisMatters = {
  * "Effortless Sales — Faster Cash, Full Confidence" video already referenced in
  * src/data/landing.json, rendered in the new section's UI.
  */
-export const salesSeeItInAction = {
+export const salesSeeItInAction: ProductVideoData = {
   title: "See it in",
   accentTitle: "Action",
   description: "Watch how field teams are transforming their sales operations",
@@ -227,7 +226,7 @@ export const salesSeeItInAction = {
 };
 
 /** Closing CTA — Figma node 1893:45937. */
-export const salesClosingCta = {
+export const salesClosingCta: ProductClosingCtaData = {
   title: "Ready to Equip Your",
   accentTitle: "Field Team?",
   description:

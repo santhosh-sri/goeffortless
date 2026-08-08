@@ -2,10 +2,10 @@ import React from "react";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { salesClosingCta as data } from "@/data/sales";
+import type { ProductClosingCtaData } from "./types";
 
-/** Closing CTA — Figma node 1893:45937. */
-export function ClosingCtaSection() {
+/** Closing CTA — Figma 1893:45937 (Sales), 1943:71175 (Purchase). */
+export function ProductClosingCta({ data }: { data: ProductClosingCtaData }) {
   return (
     <Section spacing="md">
       <div className="flex flex-col items-center gap-8">
@@ -34,4 +34,4 @@ export function ClosingCtaSection() {
   );
 }
 
-export default ClosingCtaSection;
+export default ProductClosingCta;

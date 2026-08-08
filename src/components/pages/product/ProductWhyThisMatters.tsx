@@ -3,14 +3,14 @@ import React from "react";
 import { cn } from "@/lib/cn";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { salesWhyThisMatters as data } from "@/data/sales";
+import type { ProductWhyThisMattersData } from "./types";
 
 /**
- * "Why This Matters" — Figma node 1886:41780.
+ * "Why This Matters" — Figma 1886:41780 (Sales), 1943:71149 (Purchase).
  *
  * Three centred items, each a 48px filled circle with a white glyph.
- * The violet is a one-off in this section, so it stays local rather than
- * becoming a global token.
+ * The violet is a one-off across the product pages, so it stays local rather
+ * than becoming a global token.
  */
 const TONE = {
   accent: "bg-accent",
@@ -18,7 +18,11 @@ const TONE = {
   success: "bg-success",
 } as const;
 
-export function WhyThisMattersSection() {
+export function ProductWhyThisMatters({
+  data,
+}: {
+  data: ProductWhyThisMattersData;
+}) {
   return (
     <Section spacing="md">
       <div className="flex flex-col items-center gap-8 lg:gap-10">
@@ -60,4 +64,4 @@ export function WhyThisMattersSection() {
   );
 }
 
-export default WhyThisMattersSection;
+export default ProductWhyThisMatters;
