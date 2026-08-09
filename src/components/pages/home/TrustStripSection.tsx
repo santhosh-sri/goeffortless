@@ -1,3 +1,4 @@
+import parse from "html-react-parser";
 import React from "react";
 import Container from "@/components/ui/Container";
 import Logocarousel from "@/components/Logocarousel";
@@ -19,7 +20,7 @@ export function TrustStripSection() {
     <section className="bg-bg py-10 lg:py-14">
       <Container>
         <p className="text-center text-body text-content-muted md:text-body-lg">
-          {trustStrip.statement}
+          {parse(trustStrip.statement)}
         </p>
       </Container>
 

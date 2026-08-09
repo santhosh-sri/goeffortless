@@ -62,8 +62,13 @@ export const growingPains = {
 
 /** Strip under the hero — Figma node 1548:28520. */
 export const trustStrip = {
+  /**
+   * The design sets three phrases in the darker heading colour against muted
+   * body text (visible in the prototype, not in a flat frame export), so this
+   * carries inline emphasis rather than being one uniform string.
+   */
   statement:
-    "Complete operational control for Indian Founders, MDs, and CFOs. Unlock sales, plug expense leakages, ensure 100% automated Tally sync, and manage multi-entity compliance effortlessly.",
+    'Complete operational control for <strong class="font-medium text-content">Indian Founders, MDs, and CFOs.</strong> Unlock sales, plug expense leakages, ensure <strong class="font-medium text-content">100% automated Tally sync,</strong> and manage multi-entity compliance effortlessly.',
 };
 
 /** Section "Tally Prime - Native" — Figma node 1694:1539. */
