@@ -66,8 +66,11 @@ function NavGroupBlock({
                 <span className="text-body font-normal text-content">
                   {link.label}
                 </span>
+                {/* Filled green pill in the Figma panel (1746:23989), not an
+                    accent tint — it matches the "Primary Product" chip on the
+                    product page heroes. */}
                 {link.badge && (
-                  <span className="rounded-sm bg-accent-subtle px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent">
+                  <span className="rounded-sm bg-success px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
                     {link.badge}
                   </span>
                 )}
