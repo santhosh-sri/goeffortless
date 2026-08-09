@@ -135,7 +135,7 @@ export function CommandCentersSection() {
           </div>
 
           {/* ---- Feature grid ---- */}
-          <ul className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-[640px] lg:shrink-0">
+          <ul className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 xl:w-[640px] xl:shrink-0">
             {panel.features.map((feature, index) => (
               <li key={feature.title} className="flex">
                 <div

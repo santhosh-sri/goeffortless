@@ -61,7 +61,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="flex w-full flex-col gap-4 sm:flex-row lg:w-[504px] lg:gap-5">
+          <div className="flex w-full flex-col gap-4 sm:flex-row xl:w-[504px] lg:gap-5">
             <Button
               calBooking
               size="lg"
@@ -86,7 +86,7 @@ export function HeroSection() {
         </div>
 
         {/* ---- Media ---- */}
-        <div className="flex w-full flex-col items-center justify-center gap-6 lg:w-[596px] lg:shrink-0 lg:gap-8 lg:pl-5">
+        <div className="flex w-full flex-col items-center justify-center gap-6 xl:w-[596px] xl:shrink-0 lg:gap-8 lg:pl-5">
           <div className="relative aspect-[682/418] w-full shadow-media">
             <Image
               src="/assets/home/hero-dashboard.png"

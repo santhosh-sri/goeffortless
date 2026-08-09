@@ -65,7 +65,7 @@ export function ProductHero({ data }: { data: ProductHeroData }) {
         </div>
 
         {/* ---- Media ---- */}
-        <div className="w-full lg:w-[554px] lg:shrink-0">
+        <div className="w-full xl:w-[554px] xl:shrink-0">
           <Image
             src={data.media.src}
             alt={data.media.alt}
