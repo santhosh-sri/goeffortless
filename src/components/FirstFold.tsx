@@ -25,7 +25,7 @@ const FirstFold: React.FC<FirstFoldContent> = ({
   founderTestominial = [],
 }) => {
   return (
-    <div className="text-[#FFFFFF] p-4 pt-[40px] flex flex-col gap-8  md:gap-[60px] items-center justify-center md:pt-[90px]">
+    <div className="text-content p-4 pt-[40px] flex flex-col gap-8  md:gap-[60px] items-center justify-center md:pt-[90px]">
       <div className="flex flex-col gap-4 items-center justify-center md:gap-[40px] max-w-[1350px] mx-auto">
         <PageTitle
           pageHeading={pageHeading}
@@ -34,12 +34,12 @@ const FirstFold: React.FC<FirstFoldContent> = ({
           ishome={ishome}
         />
         {mheading && (
-          <h1 className="md:hidden block font-[600] text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFFFFF]">
+          <h1 className="md:hidden block font-[600] text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-content">
             {parse(mheading)}
           </h1>
         )}
         {heading && (
-          <h1 className="max-md:hidden  block font-[600] text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFFFFF]">
+          <h1 className="max-md:hidden  block font-[600] text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-content">
             {parse(heading)}
           </h1>
         )}

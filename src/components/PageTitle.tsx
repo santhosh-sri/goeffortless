@@ -40,7 +40,7 @@ const PageTitle: React.FC<FirstFoldContent> = ({
           />
         )}
         {pageName && (
-          <p className="text-[14px] md:text-[15px] leading-5 text-[#F08B32] font-[400]">
+          <p className="text-[14px] md:text-[15px] leading-5 text-accent font-[400]">
             {pageName}
           </p>
         )}
@@ -48,7 +48,7 @@ const PageTitle: React.FC<FirstFoldContent> = ({
           <p
             className={`text-[14px] ${
               ishome ? "md:text-[14px]" : "md:text-[15px]"
-            } leading-5 font-[400]`}
+            } leading-5 font-[400] text-content`}
           >
             {pageHeading}
           </p>

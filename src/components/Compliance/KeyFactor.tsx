@@ -19,7 +19,7 @@ const KeyFactor = ({ keyFactor }: { keyFactor: string[] }) => {
               className="transition-transform duration-300"
               unoptimized
             />
-            <p className="text-sm md:text-base font-normal text-white">
+            <p className="text-sm md:text-base font-normal text-content">
               {item}
             </p>
           </div>

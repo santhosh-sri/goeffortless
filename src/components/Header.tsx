@@ -30,7 +30,7 @@ const Header = ({
   };
 
   const primaryCTA =
-    "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-[#fff] md:py-[12px] py-[7px] px-[20px] rounded font-lexend";
+    "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-content md:py-[12px] py-[7px] px-[20px] rounded font-lexend";
   const secondaryCTA =
     "bg-[#FFFFFF] text-[16px] font-[600] text-[#52525B] py-[12px] md:px-[36px] px-3 rounded ";
 
@@ -59,7 +59,7 @@ const Header = ({
         />
       )}
 
-      <header className="bg-[#08090A] text-white md:pt-[40px] relative z-40">
+      <header className="bg-bg text-content md:pt-[40px] relative z-40">
         <div
           className={`md:max-w-[1080px] mx-auto flex justify-between items-center px-4 py-3 ${
             isMobile ? "pt-[32px] pb-[16px]" : "bg-[#FFFFFF14]"
@@ -157,14 +157,14 @@ const Header = ({
 
         {/* Mobile Menu Panel */}
         {isMobile && expandedSections && (
-          <div className="absolute top-full left-0 right-0 bg-[#08090A] z-50 rounded-b-lg">
+          <div className="absolute top-full left-0 right-0 bg-bg z-50 rounded-b-lg">
             {/* Navigation Menu */}
             <div className="space-y-0">
               {navigationItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className={`flex items-center justify-between py-4 px-[24px] text-white hover:text-[#F08B32] transition-colors ${
+                  className={`flex items-center justify-between py-4 px-[24px] text-content hover:text-accent transition-colors ${
                     item.hasBottomBorder
                       ? "border-b-[2px] border-[#E5E5E533] border-dashed"
                       : ""
@@ -206,7 +206,7 @@ const Header = ({
               >
                 <a target="_blank" rel="noopener noreferrer">
                   <button
-                    className="w-full bg-transparent border border-[#F08B32] text-[#F08B32] py-3 px-4 rounded-lg text-[14px] font-[600] transition-colors hover:text-white"
+                    className="w-full bg-transparent border border-accent text-accent py-3 px-4 rounded-lg text-[14px] font-[600] transition-colors hover:text-content"
                     onClick={() => setExpandedSections(false)}
                   >
                     Login

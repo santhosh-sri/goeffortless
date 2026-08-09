@@ -18,7 +18,7 @@ const ValueCard: FC<CompanyValue & { className?: string }> = ({
   return (
     <div
       className={`
-        w-[100%] text-white py-5 md:min-h-[200px] 
+        w-[100%] text-content py-5 md:min-h-[200px] 
         flex flex-col items-center text-center gap-1 md:gap-3 
         ${
           customLength
@@ -50,7 +50,7 @@ const ValueCard: FC<CompanyValue & { className?: string }> = ({
           customLength
             ? "md:leading-[32px] leading-[20px] md:!min-h-[96px]"
             : "leading-[20px] md:min-h-[60px]"
-        } text-[13px] font-[300] text-[#FFFFFF] `}
+        } text-[13px] font-[300] text-content `}
       >
         {description}
       </p>

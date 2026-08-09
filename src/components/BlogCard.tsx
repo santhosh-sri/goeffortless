@@ -28,21 +28,21 @@ const BlogCard: React.FC<BlogCardProps> = ({
         </div>
       ) : (
         <>
-          <div className="relative w-full h-[300px] md:h-[350px] bg-[#15181B]" />
+          <div className="relative w-full h-[300px] md:h-[350px] bg-surface" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_65.38%,#000_100%)]" />
         </>
       )}
 
       <div className="absolute bottom-0 left-0 right-0 p-5 ">
-        <h3 className="text-lg md:text-xl text-white font-normal capitalize">
+        <h3 className="text-lg md:text-xl text-content font-normal capitalize">
           {title}
         </h3>
         <div className="flex gap-3 items-center justify-between">
           <div>
-            <p className="hidden opacity-0 group-hover:block group-hover:opacity-100 text-base text-[#E5E5E5] font-light transition-opacity duration-300 ease-in-out capitalize">
+            <p className="hidden opacity-0 group-hover:block group-hover:opacity-100 text-base text-content font-light transition-opacity duration-300 ease-in-out capitalize">
               {desc}
             </p>
-            <p className="text-base font-normal text-[#F08B32] mt-2">{date}</p>
+            <p className="text-base font-normal text-accent mt-2">{date}</p>
           </div>
           <div>
             <div className="w-10 h-10 bg-[#FFFFFF] rounded-lg hidden opacity-0 group-hover:flex group-hover:opacity-100 justify-center items-center transition-opacity duration-300 ease-in-out">

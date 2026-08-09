@@ -124,17 +124,17 @@ const BlogWithSidebar = () => {
         <h1
           className={`font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
           style={{
-            background: "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
+            background: "linear-gradient(90deg, rgb(var(--color-accent)) 59.38%, rgb(var(--color-text)) 96.86%)",
             WebkitBackgroundClip: "text",
           }}
         >
-          <span className="text-white font-light">
+          <span className="text-content font-light">
             10 Common Challenges of{" "}
           </span>
           <br /> <span className="font-medium">Field Sales in India</span>
         </h1>
         <p
-          className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+          className={`md:text-2xl text-sm md:mt-[4px] text-content-muted text-center font-[400] md:font-[300]`}
         >
           Discover the top 10 challenges faced by field sales teams in India,
           from delayed collections to inefficient tracking, and learn proven
@@ -143,13 +143,13 @@ const BlogWithSidebar = () => {
       </div>
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 max-w-7xl mx-auto px-4 py-10">
         <aside className="md:w-1/4 w-full md:sticky md:top-20 h-fit p-5 pt-0">
-          <h3 className="font-medium text-xl text-white mb-3">In this Blog</h3>
+          <h3 className="font-medium text-xl text-content mb-3">In this Blog</h3>
           <ul className="flex flex-col gap-4">
             {sections.map((section) => (
               <li key={section.id}>
                 <button
                   onClick={() => scrollToSection(section.id)}
-                  className={`text-left w-full text-white text-base font-normal py-2 px-3 rounded ${
+                  className={`text-left w-full text-content text-base font-normal py-2 px-3 rounded ${
                     activeId === section.id &&
                     "border-t-0 bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5 drop-shadow-sm"
                   }`}
@@ -175,12 +175,12 @@ const BlogWithSidebar = () => {
                 }}
                 className="scroll-mt-24"
               >
-                <h2 className="text-2xl font-medium text-[#FFFFFF] mb-4 flex items-start gap-1">
+                <h2 className="text-2xl font-medium text-content mb-4 flex items-start gap-1">
                   <span>{displayNumber}</span>
                   {section.title}
                 </h2>
                 {section.content && (
-                  <div className="text-[#E4E4E7] text-xl font-light space-y-5">
+                  <div className="text-content-muted text-xl font-light space-y-5">
                     {section.content.map((paragraph, pIndex) => {
                       const [beforeColon, afterColon] = paragraph.split(":\n");
                       const hasBullets = paragraph.includes(":\n");
@@ -207,18 +207,18 @@ const BlogWithSidebar = () => {
 
                 {section.challenge && (
                   <div>
-                    <h3 className="text-xl font-medium text-white">
+                    <h3 className="text-xl font-medium text-content">
                       The Challenge:
                     </h3>
-                    <p className="text-[#E4E4E7] text-xl font-light">
+                    <p className="text-content-muted text-xl font-light">
                       {section.challenge}
                     </p>
                   </div>
                 )}
                 {section.fix && (
                   <div>
-                    <h3 className="text-xl font-medium text-white">The Fix:</h3>
-                    <p className="text-[#E4E4E7] text-xl font-light">
+                    <h3 className="text-xl font-medium text-content">The Fix:</h3>
+                    <p className="text-content-muted text-xl font-light">
                       {parse(section.fix)}
                     </p>
                   </div>

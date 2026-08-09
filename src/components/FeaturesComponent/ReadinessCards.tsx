@@ -9,7 +9,7 @@ interface Props {
 const ReadinessCards: React.FC<Props> = ({ cards }) => {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-[#15181B] border border-[#E5E5E533] rounded-2xl p-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-surface border border-[#E5E5E533] rounded-2xl p-5">
         {cards.map((card, idx) => (
           <div
             key={idx}
@@ -41,13 +41,13 @@ const ReadinessCards: React.FC<Props> = ({ cards }) => {
 
             {/* Content */}
             <div className="flex flex-col gap-2">
-              <p className="text-white font-normal text-base leading-5 -tracking-[0.48px]">
+              <p className="text-content font-normal text-base leading-5 -tracking-[0.48px]">
                 {card.title}
               </p>
-              <p className="text-white text-sm font-light leading-[18px]">
+              <p className="text-content text-sm font-light leading-[18px]">
                 {card.description}
                 {card.footnote && (
-                  <sup className="ml-1 text-xs text-white">{card.footnote}</sup>
+                  <sup className="ml-1 text-xs text-content">{card.footnote}</sup>
                 )}
               </p>
             </div>

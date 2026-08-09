@@ -17,11 +17,11 @@ const CareersSection: FC<CareersSectionContent> = ({
   return (
     <div
       id={href}
-      className={`text-[#FFFFFF] flex flex-col md:gap-[72px] gap-[40px] items-center justify-center md:pt-[64px] mx-auto max-md:px-5 max-md:pt-[112px] md:px-[80px] scroll-mt-20`}
+      className={`text-content flex flex-col md:gap-[72px] gap-[40px] items-center justify-center md:pt-[64px] mx-auto max-md:px-5 max-md:pt-[112px] md:px-[80px] scroll-mt-20`}
     >
       <div className="flex flex-col !gap-6 items-center justify-center">
         <PageTitle pageHeading={label} />
-        <h1 className="font-[300] md:font-[400] text-[32px] md:text-[72px] md:leading-[90px] leading-[42px] text-center text-white flex flex-col items- gap-2 md:gap-4 md:max-w-[1000px]">
+        <h1 className="font-[300] md:font-[400] text-[32px] md:text-[72px] md:leading-[90px] leading-[42px] text-center text-content flex flex-col items- gap-2 md:gap-4 md:max-w-[1000px]">
           <div className="flex items-center justify-center md:gap-4 gap-2 flex-wrap">
             <span>We’re </span>
             <Image
@@ -33,11 +33,11 @@ const CareersSection: FC<CareersSectionContent> = ({
               priority
             />
             {highlightWords?.text && (
-              <span className=" text-center border-[1px] border-[#F08B32] rounded-[50px] px-4 md:px-8 bg-gradient-to-r from-[#F08B32] to-[#FFFFFF] bg-clip-text text-transparent font-[400] text-[32px] md:text-[72px] md:leading-[86px]">
+              <span className=" text-center border-[1px] border-accent rounded-[50px] px-4 md:px-8 bg-gradient-to-r from-accent to-content bg-clip-text text-transparent font-[400] text-[32px] md:text-[72px] md:leading-[86px]">
                 {highlightWords?.text}
               </span>
             )}
-            <span className="text-[32px] md:text-[72px] md:leading-[90px] font-[300] md:font-[400] text-white md:-ml-4">
+            <span className="text-[32px] md:text-[72px] md:leading-[90px] font-[300] md:font-[400] text-content md:-ml-4">
               difference
             </span>
             <Image
@@ -48,13 +48,13 @@ const CareersSection: FC<CareersSectionContent> = ({
               priority
               className="w-[32px] h-[32px] md:w-[56px] md:h-[56px]"
             />
-            <span className="text-[32px] md:text-[72px] md:leading-[90px] font-[300] md:font-[400] text-white">
+            <span className="text-[32px] md:text-[72px] md:leading-[90px] font-[300] md:font-[400] text-content">
               makers
             </span>
           </div>
         </h1>
 
-        <p className="text-[#E4E4E7] font-[300] md:text-[24px] text-[14px] md:mt-[14px] text-center">
+        <p className="text-content-muted font-[300] md:text-[24px] text-[14px] md:mt-[14px] text-center">
           {subheadline}
         </p>
       </div>
@@ -71,13 +71,13 @@ const CareersSection: FC<CareersSectionContent> = ({
       </div>
 
       <div className="grid grid-cols-5 w-full max-w-[1350px] mx-auto">
-        <div className="col-span-2 w-full text-[#FFFFFF] md:text-[32px] text-[16px] leading-[28px] md:!leading-[42px] font-[500]">
+        <div className="col-span-2 w-full text-content md:text-[32px] text-[16px] leading-[28px] md:!leading-[42px] font-[500]">
           {missionHeading?.map((line, i) => (
             <p key={i}>{line}</p>
           ))}
         </div>
 
-        <div className="col-span-3 w-full text-[#E4E4E7] !font-[300] leading-[20px] md:text-[22px] text-[13px] md:leading-[28px] pt-[4px]">
+        <div className="col-span-3 w-full text-content-muted !font-[300] leading-[20px] md:text-[22px] text-[13px] md:leading-[28px] pt-[4px]">
           {missionDescription}
         </div>
       </div>

@@ -167,11 +167,11 @@ const ServiceSection = ({
   return (
     <>
       {showGreyTopBorder && (
-        <div className="mt-[40px] h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
+        <div className="mt-[40px] h-[1px] w-full bg-[linear-gradient(270deg,rgb(var(--color-border))_0%,rgb(var(--color-text))_50%,rgb(var(--color-border))_100%)]"></div>
       )}
       <div
         className={`${
-          bgColour ? bgColour : "bg-[#08090A]"
+          bgColour ? bgColour : "bg-bg"
         } max-md:px-5 md:px-[80px] py-8 md:py-[60px]`}
       >
         {caseStudies?.length === 0 && (
@@ -191,7 +191,7 @@ const ServiceSection = ({
                 } font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
                 style={{
                   background:
-                    "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
+                    "linear-gradient(90deg, rgb(var(--color-accent)) 59.38%, rgb(var(--color-text)) 96.86%)",
                   WebkitBackgroundClip: "text", // For Safari and some Webkit browsers
                 }}
               >
@@ -200,11 +200,11 @@ const ServiceSection = ({
             )}
             {title && (
               <div className="flex gap-2 md:gap-[16px]">
-                <h2 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-8 text-center text-[#FFFFFF]">
+                <h2 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-8 text-center text-content">
                   {parse(title)}
                   {colouredTitle && (
                     <span
-                      className={`${"!font-[500]"} text-[24px] md:text-[32px] md:leading-[43px] leading-[32px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFF]`}
+                      className={`${"!font-[500]"} text-[24px] md:text-[32px] md:leading-[43px] leading-[32px] text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-content`}
                     >
                       {tagLine === "Ideal Partners" && isMobile ? (
                         <div></div>
@@ -225,7 +225,7 @@ const ServiceSection = ({
                     : Customtitle
                     ? "md:text-2xl text-sm md:font-[300] md:mt-[4px]"
                     : "md:text-xl text-base"
-                } text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+                } text-content-muted text-center font-[400] md:font-[300]`}
               >
                 {description}
               </p>
@@ -244,7 +244,7 @@ const ServiceSection = ({
               <div className="flex max-md:flex-col gap-6 max-md:items-center justify-center">
                 <ProductDetails producttabs={producttabs} />
                 {servicesList && (
-                  <div className="grid grid-cols-3  md:grid-cols-4 gap-5 items-center justify-center bg-[#121316] p-4 rounded-xl border border-gray-700">
+                  <div className="grid grid-cols-3  md:grid-cols-4 gap-5 items-center justify-center bg-surface p-4 rounded-xl border border-gray-700">
                     {servicesList?.map((card, index) => (
                       <ServiceListCard key={index} {...card} />
                     ))}
@@ -254,7 +254,7 @@ const ServiceSection = ({
             )}{" "}
             {growthCards && (
               <div className="flex flex-col gap-8 md:gap-[48px] items-center justify-center">
-                <div className="flex max-md:flex-col md:grid md:grid-cols-2 max-md:gap-8 gap-4 items-center justify-center bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] md:px-[60px] p-5 md:pt-8 md:py-[40px] rounded-lg shadow-[0px_2px_7px_0px_#1019280D]">
+                <div className="flex max-md:flex-col md:grid md:grid-cols-2 max-md:gap-8 gap-4 items-center justify-center bg-[linear-gradient(111.18deg,rgb(var(--color-text)/0.06)_-28.62%,rgb(var(--color-text)/0)_104.36%)] md:px-[60px] p-5 md:pt-8 md:py-[40px] rounded-lg shadow-[0px_2px_7px_0px_#1019280D]">
                   {growthCards?.map((card, index) => (
                     <GrowthCards
                       key={index}
@@ -434,7 +434,7 @@ const ServiceSection = ({
             )}
             {founderTeams && (
               <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pt-[40px]">
-                <p className="font-[500] text-[32px] leading-[24px] text-[#FFFFFF] text-left">
+                <p className="font-[500] text-[32px] leading-[24px] text-content text-left">
                   Leadership Team
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 !gap-6 w-full items-start">
@@ -446,7 +446,7 @@ const ServiceSection = ({
             )}
             {mangementTeams && (
               <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full items-start">
-                <p className="font-[500] text-[32px] leading-[24px] text-[#FFFFFF] text-left">
+                <p className="font-[500] text-[32px] leading-[24px] text-content text-left">
                   Management Team
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full">
@@ -458,7 +458,7 @@ const ServiceSection = ({
             )}
             {mentorsCard && (
               <>
-                <p className="font-[500] text-[32px] leading-[32px] text-[#FFFFFF] self-start">
+                <p className="font-[500] text-[32px] leading-[32px] text-content self-start">
                   Well-Wishers & Advisors{" "}
                 </p>
                 <div className="">
@@ -472,7 +472,7 @@ const ServiceSection = ({
             )}
             {investors && (
               <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pb-[40px]">
-                <p className="font-[500] text-[32px] leading-[24px] text-[#FFFFFF] text-left">
+                <p className="font-[500] text-[32px] leading-[24px] text-content text-left">
                   Angel Investors
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full">
@@ -730,7 +730,7 @@ const ServiceSection = ({
         <div
           className={`${
             !isLastSection && "mb-[40px]"
-          } h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]`}
+          } h-[1px] w-full bg-[linear-gradient(270deg,rgb(var(--color-border))_0%,rgb(var(--color-text))_50%,rgb(var(--color-border))_100%)]`}
         />
       )}
     </>

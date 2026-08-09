@@ -7,8 +7,8 @@ import {
 } from "@/interface/type";
 import React, { useEffect, useState } from "react";
 import CareersSection from "./CareersBanner";
-import Footer from "./Footer";
-import Header from "./NewHeader";
+import SiteFooter from "./layout/SiteFooter";
+import SiteHeader from "./layout/SiteHeader";
 import Metadata from "./Metadata";
 import ServiceSection from "./ServiceSection";
 import UsecaseFold from "./UsecaseFold";
@@ -95,25 +95,15 @@ const Landing: React.FC<Content> = ({
       {/* Render Metadata component */}
       <Metadata {...metadata} />
       {/*
-        Every page still rendered through <Landing> predates the redesign and
-        hardcodes the dark palette. Pinning data-theme="dark" here scopes the
-        dark tokens to this subtree, so shared components (cards, tabs, inputs)
-        can be migrated to tokens without changing how these pages look. Remove
-        the attribute from a page once it has been rebuilt against the new design.
+        These pages are still CMS-driven and predate the redesign, but they no
+        longer pin data-theme="dark": their colours come from the token layer
+        now, so they follow the light/dark toggle like the rebuilt pages. The
+        chrome is the redesigned SiteHeader/SiteFooter, which is sticky rather
+        than fixed, so the old top-offset spacers are gone with it.
       */}
-      <div data-theme="dark">
-        <div className={`fixed top-0 w-full z-[999]`}>
-          {/* {!closeBanner && <HeaderBanner setCloseBanner={handleCloseBanner} />} */}
-          <Header
-            {...headerItems}
-            isMobile={isMobile}
-            closeBanner={closeBanner}
-            setCloseBanner={setCloseBanner}
-          />
-        </div>
-        <div
-          className={`bg-[#08090A] ${!closeBanner ? "md:mt-24" : "md:mt-20"}`}
-        >
+      <div className="min-h-screen bg-bg text-content" data-cms-content>
+        <SiteHeader />
+        <div>
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}
           {usecaseFold && (
@@ -144,28 +134,14 @@ const Landing: React.FC<Content> = ({
               />
             ))}
         </div>
-        <div
-          className={`${
-            (isHomePage ||
-              isPricingPlanPage ||
-              isPricingPage ||
-              isCareersPage ||
-              isDownloadPage ||
-              isBlogPage ||
-              isCompliancePage ||
-              isFeaturePage) &&
-            "pt-[60px] md:pt-[120px] bg-black"
-          }`}
-        >
-          <Footer isMobile={isMobile} />
-        </div>
+        <SiteFooter />
         {/* {isFormVisible &&
           isCtaVisible &&
           hideCta &&
           !careersBanner &&
           !showForm && (
             <div
-              className={` md:hidden fixed bottom-0 w-full p-4 bg-[#08090A] shadow-md z-[999]`}
+              className={` md:hidden fixed bottom-0 w-full p-4 bg-bg shadow-md z-[999]`}
             >
               <Democta
                 ctaText={firstFold?.ctaText || usecaseFold?.ctaText}

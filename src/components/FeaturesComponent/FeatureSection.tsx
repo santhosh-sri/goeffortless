@@ -28,16 +28,16 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
         >
           <div className="flex flex-col gap-2">
             {subtitle && (
-              <span className="text-[#F08B32] text-base font-normal">
+              <span className="text-accent text-base font-normal">
                 {subtitle}
               </span>
             )}
-            <h2 className="text-xl md:text-2xl font-medium text-[#EEEFFC]">
+            <h2 className="text-xl md:text-2xl font-medium text-content">
               {title}
             </h2>
           </div>
           {description?.map((item: string) => (
-            <p className="text-[#FFFFFF] text-base md:text-xl font-light leading-6 md:leading-8">
+            <p className="text-content text-base md:text-xl font-light leading-6 md:leading-8">
               {item}
             </p>
           ))}
@@ -45,7 +45,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             <div>
               <ul className="space-y-3">
                 {points.map((item: any, i: any) => (
-                  <li key={i} className="flex items-start gap-2 text-white">
+                  <li key={i} className="flex items-start gap-2 text-content">
                     <Image
                       src="/pointsTick.svg"
                       alt="pointsTick"

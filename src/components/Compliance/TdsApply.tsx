@@ -25,11 +25,11 @@ const TdsApply = ({ tdsApply }: { tdsApply: TrackDataProps[] }) => {
               unoptimized
             />
             <div className="flex flex-col gap-2">
-              <h2 className="text-white font-medium text-base md:text-xl">
+              <h2 className="text-content font-medium text-base md:text-xl">
                 {item?.title}
               </h2>
               {item.desc && (
-                <p className="text-[#E4E4E7] text-sm font-light">
+                <p className="text-content-muted text-sm font-light">
                   {parse(item.desc)}
                 </p>
               )}

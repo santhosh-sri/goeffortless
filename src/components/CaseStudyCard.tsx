@@ -22,14 +22,14 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
           className="h-[40px] md:h-[64px] blur-lg"
         />
       </div>
-      <h2 className="font-medium text-white text-base md:text-xl leading-[100%] tracking-[0] mt-1">
+      <h2 className="font-medium text-content text-base md:text-xl leading-[100%] tracking-[0] mt-1">
         {title}
       </h2>
-      <p className="font-light text-sm md:text-base text-white">
+      <p className="font-light text-sm md:text-base text-content">
         {description}
       </p>
       <p className="flex items-center gap-1 mt-1">
-        <span className="font-light text-[#F08B32] text-sm md:text-base leading-[100%] tracking-[1%]">
+        <span className="font-light text-accent text-sm md:text-base leading-[100%] tracking-[1%]">
           Read more
         </span>
         <Image

@@ -16,7 +16,7 @@ const FooterLink = ({
         className={`${className} group cursor-default flex flex-col items-start gap-0.5`}
       >
         {item.title}
-        <span className="hidden group-hover:block text-[10px] text-[#F08B32] leading-tight whitespace-nowrap">
+        <span className="hidden group-hover:block text-[10px] text-accent leading-tight whitespace-nowrap">
           Coming Soon
         </span>
       </li>
@@ -43,12 +43,12 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
     // <div className="relative">
     //   <div className="absolute top-0 left-0 right-0 h-[10px] bg-gradient-to-b from-[#15181B] to-transparent -translate-y-full pointer-events-none"></div>
     <div
-      className="bg-[#15181B] max-md:p-4 p-[80px] !pb-0 !pt-[40px]"
+      className="bg-surface max-md:p-4 p-[80px] !pb-0 !pt-[40px]"
       // bg-bottom bg-no-repeat bg-cover
       // style={{ backgroundImage: "url('/footerbg.svg')" }}
     >
       <footer
-        className=" text-white flex flex-col  gap-4 md:gap-8 max-w-[1350px] mx-auto"
+        className=" text-content flex flex-col  gap-4 md:gap-8 max-w-[1350px] mx-auto"
         id="footer"
       >
         <div className="flex flex-col-reverse w-full gap-4 md:gap-[40px]">
@@ -61,7 +61,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
           />
           <div>
             {" "}
-            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
+            <h3 className="text-content text-[16px] font-[600] mb-1">
               Our Offices{" "}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-x-4 gap-y-6 justify-center w-full">
@@ -81,19 +81,19 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                     <div className="flex-1">
                       {" "}
                       {section?.title && (
-                        <h4 className="text-[#F08B32] text-sm font-normal mb-1 md:mb-3">
+                        <h4 className="text-accent text-sm font-normal mb-1 md:mb-3">
                           {section?.title ?? ""}
                         </h4>
                       )}
                       {section.desc && (
-                        <div className="text-[#FFFFFF] text-[12px] font-[300]">
+                        <div className="text-content text-[12px] font-[300]">
                           {typeof section.desc === "string"
                             ? parse(section.desc)
                             : section.desc}
                         </div>
                       )}
                     </div>
-                    <div className="md:hover:bg-[#08090a] md:p-2 md:rounded">
+                    <div className="md:hover:bg-bg md:p-2 md:rounded">
                       <a
                         href={section.url}
                         target="_blank"
@@ -137,7 +137,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                           gIdx: number
                         ) => (
                           <div key={gIdx} className={gIdx > 0 ? "mt-2" : ""}>
-                            <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-2">
+                            <h3 className="text-content text-[16px] font-[600] mb-1 md:mb-2">
                               {group.title}
                             </h3>
                             <ul>
@@ -145,7 +145,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                                 <FooterLink
                                   key={iIdx}
                                   item={item}
-                                  className="text-[#A8A8A8] hover:text-white text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
+                                  className="text-content-muted hover:text-content text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
                                 />
                               ))}
                             </ul>
@@ -165,7 +165,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                         section.border ? "gradient-border-left dashed" : ""
                       }`}
                     >
-                      <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-2">
+                      <h3 className="text-content text-[16px] font-[600] mb-1 md:mb-2">
                         {section.title}
                       </h3>
                       <div className="grid grid-cols-4 gap-4 flex-1">
@@ -185,7 +185,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                                   : "gradient-border-left dashed"
                               }`}
                             >
-                              <h4 className="text-[#F08B32] text-sm font-normal mb-1 md:mb-3">
+                              <h4 className="text-accent text-sm font-normal mb-1 md:mb-3">
                                 {col.title}
                               </h4>
                               <ul>
@@ -193,7 +193,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                                   <FooterLink
                                     key={iIdx}
                                     item={item}
-                                    className="text-[#A8A8A8] hover:text-white text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
+                                    className="text-content-muted hover:text-content text-[12px] md:text-[14px] font-[300] mb-1 md:mb-[10px]"
                                   />
                                 ))}
                               </ul>
@@ -214,7 +214,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                     }`}
                   >
                     {section?.title && (
-                      <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1 md:mb-3">
+                      <h3 className="text-content text-[16px] font-[600] mb-1 md:mb-3">
                         {section.title}
                       </h3>
                     )}
@@ -223,7 +223,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                         <FooterLink
                           key={idx}
                           item={item}
-                          className="text-[#A8A8A8] hover:text-white text-[13px] md:text-[14px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
+                          className="text-content-muted hover:text-content text-[13px] md:text-[14px] font-[300] mb-1 md:mb-[10px] gap-[12px]"
                         />
                       ))}
                     </ul>
@@ -240,7 +240,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
               <div className="grid grid-cols-2 gap-x-1">
                 {/* Products */}
                 <div>
-                  <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
+                  <h3 className="text-content text-[16px] font-[600] mb-1">
                     Products
                   </h3>
                   <ul>
@@ -249,7 +249,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                         <FooterLink
                           key={idx}
                           item={item}
-                          className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                          className="text-content-muted hover:text-content text-[13px] font-[300] mb-1"
                         />
                       )
                     )}
@@ -266,7 +266,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                       gIdx: number
                     ) => (
                       <div key={gIdx} className={gIdx > 0 ? "mt-3" : ""}>
-                        <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
+                        <h3 className="text-content text-[16px] font-[600] mb-1">
                           {group.title}
                         </h3>
                         <ul>
@@ -274,7 +274,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                             <FooterLink
                               key={iIdx}
                               item={item}
-                              className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                              className="text-content-muted hover:text-content text-[13px] font-[300] mb-1"
                             />
                           ))}
                         </ul>
@@ -286,7 +286,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
 
               {/* Row 2: Resources with subtitles (2-col grid) */}
               <div>
-                <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-2">
+                <h3 className="text-content text-[16px] font-[600] mb-2">
                   Resources
                 </h3>
                 <div className="grid grid-cols-2 gap-x-1 gap-y-3">
@@ -304,7 +304,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                           cIdx % 2 !== 0 ? "gradient-border-left dashed" : ""
                         }
                       >
-                        <h4 className="text-[#F08B32] text-sm font-normal mb-1">
+                        <h4 className="text-accent text-sm font-normal mb-1">
                           {col.title}
                         </h4>
                         <ul>
@@ -312,7 +312,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                             <FooterLink
                               key={iIdx}
                               item={item}
-                              className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                              className="text-content-muted hover:text-content text-[13px] font-[300] mb-1"
                             />
                           ))}
                         </ul>
@@ -324,7 +324,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
 
               {/* Row 3: Legal */}
               <div>
-                <h3 className="text-[#FFFFFF] text-[16px] font-[600] mb-1">
+                <h3 className="text-content text-[16px] font-[600] mb-1">
                   Legal
                 </h3>
                 <ul>
@@ -333,7 +333,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                       <FooterLink
                         key={idx}
                         item={item}
-                        className="text-[#A8A8A8] hover:text-white text-[13px] font-[300] mb-1"
+                        className="text-content-muted hover:text-content text-[13px] font-[300] mb-1"
                       />
                     )
                   )}
@@ -363,7 +363,7 @@ const Footer = ({ isMobile }: { isMobile?: boolean }) => {
                 <div
                   key={idx}
                   onClick={() => window.open(social?.url ?? "")}
-                  className="md:hover:bg-[#08090a] md:p-1 md:rounded"
+                  className="md:hover:bg-bg md:p-1 md:rounded"
                 >
                   <Image
                     src={social?.icon ?? ""}

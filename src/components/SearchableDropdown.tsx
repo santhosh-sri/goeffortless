@@ -105,7 +105,7 @@ const SearchableDropdown = <T extends FieldValues = FieldValues>({
             background:
               "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
           }}
-          className={`w-full px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-[#B1B1B1] placeholder-[#B1B1B1] cursor-pointer hover:border-[#606162] focus:outline-none ${
+          className={`w-full px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-content-muted placeholder-[#B1B1B1] cursor-pointer hover:border-[#606162] focus:outline-none ${
             errors[fieldName] ? "border-red-500" : "border-[#E5E5E533]"
           }`}
           {...register(fieldName)}
@@ -134,7 +134,7 @@ const SearchableDropdown = <T extends FieldValues = FieldValues>({
               filteredOptions?.map((option) => (
                 <div
                   key={option}
-                  className={`px-3 py-2 cursor-pointer hover:bg-gray-800 transition text-[12px] text-[#B1B1B1] ${
+                  className={`px-3 py-2 cursor-pointer hover:bg-gray-800 transition text-[12px] text-content-muted ${
                     selectedValue === option ? "bg-gray-700" : ""
                   }`}
                   onClick={() => handleSelect(option)}

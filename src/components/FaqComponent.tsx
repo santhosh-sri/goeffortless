@@ -80,7 +80,7 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
                     unoptimized
                   />
                 </div>
-                <h2 className="text-[#FAFAFA] py-3 text-lg font-semibold">
+                <h2 className="text-content py-3 text-lg font-semibold">
                   {category}
                 </h2>
               </div>
@@ -96,7 +96,7 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
             drop-shadow-sm select-none cursor-pointer"
                     >
                       <div className="w-full px-4 py-4 flex items-center justify-between gap-3">
-                        <span className="text-left text-base text-[#FAFAFA] font-normal">
+                        <span className="text-left text-base text-content font-normal">
                           {item.question}
                         </span>
 
@@ -111,17 +111,17 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
                       </div>
                       {isOpen && (
                         <div className="px-4 pb-4 flex flex-col gap-3 transition-all duration-700 ease-in-out">
-                          <div className="text-base font-light text-[#E5E5E5]">
+                          <div className="text-base font-light text-content">
                             {item.answer}
                           </div>
-                          <div className="text-xs md:text-sm text-[#A1A1A1] font-normal flex justify-between items-center border-t border-[#26262699] pt-2">
+                          <div className="text-xs md:text-sm text-content-muted font-normal flex justify-between items-center border-t border-[#26262699] pt-2">
                             <p>Was this helpful?</p>
                             <div className="flex gap-1">
                               <button
                                 className={`px-2 py-1 transition-colors duration-300 flex gap-1 items-center rounded ${
                                   currentFeedback === "yes"
                                     ? "bg-[#FFFFFF] text-[#171717]"
-                                    : "bg-transparent text-white"
+                                    : "bg-transparent text-content"
                                 }`}
                                 onClick={(e) =>
                                   handleFeedback(e, category, index, "yes")
@@ -145,7 +145,7 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
                                 className={`px-2 py-1 transition-colors duration-300 flex gap-1 items-center rounded ${
                                   currentFeedback === "no"
                                     ? "bg-[#82181A99] text-white"
-                                    : "bg-transparent text-white"
+                                    : "bg-transparent text-content"
                                 }`}
                                 onClick={(e) =>
                                   handleFeedback(e, category, index, "no")

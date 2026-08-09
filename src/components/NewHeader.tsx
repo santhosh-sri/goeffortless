@@ -285,7 +285,7 @@ const Header = ({
   }, [expandedSections, isMobile]);
 
   const primaryCTA =
-    "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-[#fff] md:py-[12px] py-[7px] px-[20px] rounded font-lexend";
+    "bg-[#F08B32] md:text-[16px] text-[14px] md:font-[600] font-[400] text-content md:py-[12px] py-[7px] px-[20px] rounded font-lexend";
   const secondaryCTA =
     "bg-[#FFFFFF] text-[16px] font-[600] text-[#52525B] py-[12px] md:px-[36px] px-3 rounded";
 
@@ -331,7 +331,7 @@ const Header = ({
       {!closeBanner && <HeaderBanner setCloseBanner={handleCloseBanner} />}
 
       <header
-        className={`bg-[#08090A] text-white ${
+        className={`bg-bg text-content ${
           isMobile ? "pt-[20px] pb-[16px] px-4" : "py-[20px] px-[80px]"
         } relative z-50`}
       >
@@ -361,10 +361,10 @@ const Header = ({
                     setOpenMenu("products");
                     setHoveredIndex(null);
                   }}
-                  className={`text-base font-normal hover:text-white cursor-pointer flex items-center gap-2 ${
+                  className={`text-base font-normal hover:text-content cursor-pointer flex items-center gap-2 ${
                     openMenu === "products" || !productPath
-                      ? "text-white"
-                      : "text-[#A8A8A8]"
+                      ? "text-content"
+                      : "text-content-muted"
                   }`}
                 >
                   <span>Products</span>
@@ -387,7 +387,7 @@ const Header = ({
                       <div className="">
                         {headerProducts.map((section, sectionIdx) => (
                           <div key={sectionIdx}>
-                            <h3 className="text-white font-semibold border-b border-[#A0A0A01A] pb-2">
+                            <h3 className="text-content font-semibold border-b border-[#A0A0A01A] pb-2">
                               {section.title}
                             </h3>
                             <div className="">
@@ -412,13 +412,13 @@ const Header = ({
                                       })
                                     }
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className={`group flex justify-between items-start gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
+                                    className={`group flex justify-between items-start gap-2 p-4 text-base text-content-muted whitespace-nowrap 
            hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out ${
              isHovered ? "bg-[#23292F]" : ""
            }`}
                                   >
                                     <span className="flex flex-col gap-2">
-                                      <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] text-base leading-5 font-normal flex gap-2 items-center group-hover:text-white">
+                                      <span className="flex-1 transition-colors duration-300 text-content text-base leading-5 font-normal flex gap-2 items-center group-hover:text-content">
                                         <Image
                                           src={link.activeIcon}
                                           alt="menu_icon"
@@ -428,12 +428,12 @@ const Header = ({
                                         />
                                         {link.label}
                                         {link.spl && (
-                                          <span className="text-xs font-light text-[#F08B32] group-hover:text-[#F08B32]">
+                                          <span className="text-xs font-light text-accent group-hover:text-accent">
                                             {link.spl}
                                           </span>
                                         )}
                                       </span>
-                                      <span className="text-[#B0B6BF] group-hover:text-white text-[13px] leading-4 font-light">
+                                      <span className="text-content-muted group-hover:text-content text-[13px] leading-4 font-light">
                                         {link.desc}
                                       </span>
                                     </span>
@@ -467,9 +467,9 @@ const Header = ({
                   href="/case-studies"
                   className={`text-base font-normal ${
                     pathname === "/case-studies"
-                      ? "text-white"
-                      : "text-[#A8A8A8]"
-                  } hover:text-white cursor-pointer`}
+                      ? "text-content"
+                      : "text-content-muted"
+                  } hover:text-content cursor-pointer`}
                 >
                   Case Studies
                 </Link>
@@ -478,8 +478,8 @@ const Header = ({
                 <Link
                   href="/partners"
                   className={`text-base font-normal ${
-                    pathname === "/partners" ? "text-white" : "text-[#A8A8A8]"
-                  } hover:text-white cursor-pointer`}
+                    pathname === "/partners" ? "text-content" : "text-content-muted"
+                  } hover:text-content cursor-pointer`}
                 >
                   Partners
                 </Link>
@@ -495,10 +495,10 @@ const Header = ({
                     setOpenMenu("resources");
                     setHoveredIndex(null);
                   }}
-                  className={`text-base font-normal hover:text-white cursor-pointer flex items-center gap-2 ${
+                  className={`text-base font-normal hover:text-content cursor-pointer flex items-center gap-2 ${
                     openMenu === "resources" || !resourcePath
-                      ? "text-white"
-                      : "text-[#A8A8A8]"
+                      ? "text-content"
+                      : "text-content-muted"
                   }`}
                 >
                   <span>Resources</span>
@@ -521,7 +521,7 @@ const Header = ({
                       <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
                         {headerResources.map((section, sectionIdx) => (
                           <div key={sectionIdx}>
-                            <h3 className="text-white font-semibold border-b border-[#A0A0A01A] pb-2">
+                            <h3 className="text-content font-semibold border-b border-[#A0A0A01A] pb-2">
                               {section.title}
                             </h3>
                             <div className="">
@@ -558,14 +558,14 @@ const Header = ({
                                       })
                                     }
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className={`group flex items-center gap-2 p-4 text-base text-[#A0A0A0] whitespace-nowrap 
+                                    className={`group flex items-center gap-2 p-4 text-base text-content-muted whitespace-nowrap 
              hover:text-white hover:bg-[#23292F] rounded relative transition-transform duration-300 ease-out ${
                isHovered ? "bg-[#23292F]" : ""
              }`}
                                   >
                                     <span className="flex flex-col gap-2 w-full">
                                       <span className="flex justify-between items-center">
-                                        <span className="flex-1 transition-colors duration-300 text-[#F1F3F5] text-base leading-5 font-normal flex gap-2 items-center group-hover:text-white">
+                                        <span className="flex-1 transition-colors duration-300 text-content text-base leading-5 font-normal flex gap-2 items-center group-hover:text-content">
                                           <Image
                                             src={link.activeIcon}
                                             alt="menu_icon"
@@ -591,13 +591,13 @@ const Header = ({
                                         className={`${
                                           link.label ===
                                           "Thinking of Migrating?"
-                                            ? "text-[#F08B32] group-hover:text-[#FFA043] "
-                                            : "text-[#B0B6BF] group-hover:text-white"
+                                            ? "text-accent group-hover:text-[#FFA043] "
+                                            : "text-content-muted group-hover:text-content"
                                         } text-[13px] leading-4 font-light`}
                                       >
                                         {parse(link.desc)}{" "}
                                         {link.soon && (
-                                          <span className="text-[#B0B6BF] group-hover:text-white">
+                                          <span className="text-content-muted group-hover:text-content">
                                             -{" "}
                                             <span className="capitalize text-xs font-lexend  font-normal text-[#FFA043] group-hover:text-[#FFA043]">
                                               coming soon
@@ -632,9 +632,9 @@ const Header = ({
                   href="/pricing"
                   className={`text-base font-normal ${
                     pathname === "/pricing" || pathname === "/pricing-plan"
-                      ? "text-white"
-                      : "text-[#A8A8A8]"
-                  } hover:text-white cursor-pointer`}
+                      ? "text-content"
+                      : "text-content-muted"
+                  } hover:text-content cursor-pointer`}
                 >
                   Pricing
                 </Link>
@@ -724,10 +724,10 @@ const Header = ({
                   className="border-b border-[#E5E5E533] border-dashed"
                 >
                   <div
-                    className={`flex items-center justify-between py-3 px-[24px] text-white cursor-pointer transition-colors ${
+                    className={`flex items-center justify-between py-3 px-[24px] text-content cursor-pointer transition-colors ${
                       openSubMenu === item.label
-                        ? "!text-[#F08B32]"
-                        : "text-white"
+                        ? "!text-accent"
+                        : "text-content"
                     }`}
                     onClick={() => {
                       if (item.subMenu) {
@@ -777,7 +777,7 @@ const Header = ({
                     >
                       {item.subMenu.map((section, sectionIdx) => (
                         <div key={sectionIdx}>
-                          <h3 className="text-[#A0A0A0] my-1 border-t border-[#E5E5E533] border-dashed pt-2 pb-1">
+                          <h3 className="text-content-muted my-1 border-t border-[#E5E5E533] border-dashed pt-2 pb-1">
                             {section.title}
                           </h3>
                           <div className="space-y-3">
@@ -811,7 +811,7 @@ const Header = ({
                                     })
                                   }
                                   onMouseLeave={() => setHoveredIndex(null)}
-                                  className="group flex items-center gap-2 px-2 py-1 text-base text-[#A0A0A0] whitespace-nowrap 
+                                  className="group flex items-center gap-2 px-2 py-1 text-base text-content-muted whitespace-nowrap 
                   rounded relative transition-transform duration-300 ease-out select-none"
                                 >
                                   <Image
@@ -821,7 +821,7 @@ const Header = ({
                                     height={20}
                                     className="transition-opacity duration-300"
                                   />
-                                  <span className="flex-1 transition-colors duration-300 text-white font-light">
+                                  <span className="flex-1 transition-colors duration-300 text-content font-light">
                                     {link.label}
                                   </span>
                                   {link.soon && (
@@ -870,7 +870,7 @@ const Header = ({
               >
                 <a target="_blank" rel="noopener noreferrer">
                   <button
-                    className="w-full bg-transparent border border-[#F08B32] text-[#F08B32] py-3 px-4 rounded-sm text-[14px] font-[600] transition-colors hover:text-white"
+                    className="w-full bg-transparent border border-accent text-accent py-3 px-4 rounded-sm text-[14px] font-[600] transition-colors hover:text-content"
                     onClick={() => {
                       setExpandedSections(false);
                       setOpenSubMenu(null);

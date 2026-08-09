@@ -27,7 +27,7 @@ const CertificationGrid: React.FC<Props> = ({ certificate }: any) => {
           <div
             key={index}
             onClick={() => setSelectedImage(item?.view)}
-            className={`flex items-center justify-center bg-[#15181B] rounded-3xl p-10 cursor-pointer border border-[#2A2D31]
+            className={`flex items-center justify-center bg-surface rounded-3xl p-10 cursor-pointer border border-[#2A2D31]
               ${item?.big ? "md:row-span-2 md:col-span-2" : ""} ${
               item?.col ? "md:row-span-1 md:col-span-2" : ""
             }`}
@@ -45,7 +45,7 @@ const CertificationGrid: React.FC<Props> = ({ certificate }: any) => {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-[#15181B] backdrop-blur-md z-[999]"
+          className="fixed inset-0 flex items-center justify-center bg-surface backdrop-blur-md z-[999]"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative w-full h-full flex flex-col items-center">

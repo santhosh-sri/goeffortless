@@ -84,13 +84,13 @@ const ContactForm = () => {
     <>
       <div>
         <div className="pb-6">
-          <h2 className="text-white text-[18px] md:text-[32px] font-[300]">
+          <h2 className="text-content text-[18px] md:text-[32px] font-[300]">
             Send us a{" "}
             <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">
               Message{" "}
             </span>
           </h2>
-          <p className="text-white text-base md:text-2xl font-light">
+          <p className="text-content text-base md:text-2xl font-light">
             Fill out the form below and we'll get back to you within 2 hours
             during business hours.
           </p>
@@ -106,10 +106,10 @@ const ContactForm = () => {
                 <div
                   className={`md:col-span-${field.colSpan} max-md:col-span-2 w-full flex flex-col gap-[11px]`}
                 >
-                  <p className="text-[#FFFFFF] font-normal text-[14px]">
+                  <p className="text-content font-normal text-[14px]">
                     {field.label}
                     {field?.type !== "textArea" && (
-                      <span className="text-[#F08B32]">*</span>
+                      <span className="text-accent">*</span>
                     )}
                   </p>
 
@@ -130,7 +130,7 @@ const ContactForm = () => {
                         background:
                           "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
                       }}
-                      className={`w-full rounded-[4px] border px-2 py-[9px] md:px-3 md:py-[7px] text-[#B1B1B1] text-[12px] md:text-[13px] placeholder-[#B1B1B1] focus:outline-none resize-none ${
+                      className={`w-full rounded-[4px] border px-2 py-[9px] md:px-3 md:py-[7px] text-content-muted text-[12px] md:text-[13px] placeholder-[#B1B1B1] focus:outline-none resize-none ${
                         errors[field.name as keyof FormValues]
                           ? "border-red-500"
                           : "border-[#E5E5E533]"
@@ -155,9 +155,9 @@ const ContactForm = () => {
                 {field.name === "your_current_erp" &&
                   watch("your_current_erp") === "Others" && (
                     <div className="col-span-1 w-full flex flex-col gap-[11px]">
-                      <p className="text-[#FFFFFF] font-normal text-[14px]">
+                      <p className="text-content font-normal text-[14px]">
                         Please specify your ERP
-                        {/* <span className="text-[#F08B32]">*</span> */}
+                        {/* <span className="text-accent">*</span> */}
                       </p>
                       <InputField
                         field={{

@@ -15,7 +15,7 @@ const FoundingTeamCard: FC<TeamMember> = ({
   return (
     <div
       className={`text-white shadow-md w-full ${
-        isColoured ? "p-[6px] rounded-3xl md:rounded-2xl bg-[#15181B]" : ""
+        isColoured ? "p-[6px] rounded-3xl md:rounded-2xl bg-surface" : ""
       }`}
     >
       <div className={`relative w-full overflow-hidden rounded-2xl`}>
@@ -34,7 +34,7 @@ const FoundingTeamCard: FC<TeamMember> = ({
         />
       </div>
       <p
-        className={`text-[13px] font-[300] leading-[20px] md:leading-[26px] text-[#E4E4E7] mt-4 whitespace-pre-line ${
+        className={`text-[13px] font-[300] leading-[20px] md:leading-[26px] text-content-muted mt-4 whitespace-pre-line ${
           isColoured
             ? "p-3 md:p-1.5 md:text-[14px] md:min-h-[240px]"
             : "md:text-[20px] "

@@ -14,7 +14,7 @@ const MentorsCard: FC<TeamMember> = ({
 }) => {
   return (
     <div
-      className={`text-white rounded-2xl shadow-md w-full grid md:grid-cols-2 gap-5 p-0 md:p-5 md:bg-[#15181B]`}
+      className={`text-white rounded-2xl shadow-md w-full grid md:grid-cols-2 gap-5 p-0 md:p-5 md:bg-surface`}
     >
       <div className="relative w-full overflow-hidden rounded-2xl">
         <Image
@@ -35,7 +35,7 @@ const MentorsCard: FC<TeamMember> = ({
         )}
       </div>
       <p
-        className={`text-[13px] md:text-[20px] font-[300] leading-[20px] md:leading-[26px] text-[#E4E4E7] whitespace-pre-line`}
+        className={`text-[13px] md:text-[20px] font-[300] leading-[20px] md:leading-[26px] text-content-muted whitespace-pre-line`}
       >
         {description}
       </p>

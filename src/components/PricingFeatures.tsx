@@ -92,7 +92,7 @@ const PricingFeatures = ({
               key={index}
               className="border-t-0 border-[#2D2D2D] box-shadow-[0px_0px_0px_1px_#1019280D] first:border-t-0"
             >
-              <td className="py-4 pl-6 pr-4 text-[14px] font-[400] text-[#E4E4E7] md:text-[#fff] min-w-[300px] w-[40%] border-b border-r border-[#2D2D2D]">
+              <td className="py-4 pl-6 pr-4 text-[14px] font-[400] text-content-muted md:text-content min-w-[300px] w-[40%] border-b border-r border-[#2D2D2D]">
                 {parse(feature.name)}
               </td>
               {planOrder.map((tier, i) => (
@@ -125,7 +125,7 @@ const PricingFeatures = ({
   );
 
   return (
-    <div className="text-[#E4E4E7] text-[13px] w-full">
+    <div className="text-content-muted text-[13px] w-full">
       {/* Mobile Styles */}
       <style jsx>{`
         .scrollbar-hide {
@@ -169,7 +169,7 @@ const PricingFeatures = ({
           checked={Object.values(expandedSections).every((v) => v)}
           onChange={toggleExpandAll}
         />
-        <label className="text-[13px] md:text-base text-white cursor-pointer">
+        <label className="text-[13px] md:text-base text-content cursor-pointer">
           Expand All
         </label>
       </div>
@@ -179,7 +179,7 @@ const PricingFeatures = ({
         {/* Desktop Pricing Header - Made Sticky */}
         <div className="desktop-sticky-header z-[999]  bg-black grid grid-cols-[50%_repeat(2,1fr)] items-end min-h-[150px] bg-[linear-gradient(111.18deg,rgba(255,255,255,0.15)_-28.62%,rgba(255,255,255,0.05)_104.36%)] border border-[#2D2D2D]">
           <div className="p-3">
-            <h2 className="text-[13px] md:text-[24px] font-semibold text-[#E4E4E7] md:text-white ml-3">
+            <h2 className="text-[13px] md:text-[24px] font-semibold text-content-muted md:text-content ml-3">
               Features
             </h2>
           </div>
@@ -188,10 +188,10 @@ const PricingFeatures = ({
               key={key}
               className={`flex flex-col gap-3 p-[16px] items-center text-center ${"border-l [border-image-source:linear-gradient(180deg,#333333_0%,#B1B1B1_50%,#333333_100%)] [border-image-slice:1]"}`}
             >
-              <h3 className="text-[24px] font-[300] text-[#E4E4E7] md:text-white capitalize">
+              <h3 className="text-[24px] font-[300] text-content-muted md:text-content capitalize">
                 {data.name || key.replace(/([A-Z])/g, " $1").trim()}
               </h3>
-              <p className="text-[#F08B32] text-2xl font-[500]">
+              <p className="text-accent text-2xl font-[500]">
                 {parse(data.price)}
               </p>
               <p
@@ -203,7 +203,7 @@ const PricingFeatures = ({
               >
                 {data.tag}
               </p>
-              <p className="text-sm font-light text-[#E4E4E7]">{data.billed}</p>
+              <p className="text-sm font-light text-content-muted">{data.billed}</p>
               <button
                 onClick={() => {
                   setSelectedPlan(data.name || key);
@@ -229,10 +229,10 @@ const PricingFeatures = ({
                     : "border border-[#2D2D2D] border-t-0"
                 } w-full flex items-center justify-between py-5 text-white transition-colors`}
               >
-                <span className="text-[20px] font-[500] text-[#FFFFFF] px-6">
+                <span className="text-[20px] font-[500] text-content px-6">
                   {key}
                 </span>
-                <span className="text-[20px] text-[#FFFFFF] leading-[24px] font-[500] pr-6">
+                <span className="text-[20px] text-content leading-[24px] font-[500] pr-6">
                   {expandedSections[key] ? "−" : "+"}
                 </span>
               </button>
@@ -255,7 +255,7 @@ const PricingFeatures = ({
               }}
               className="flex-1 px-4 py-3 flex flex-col justify-end border-r border-[#2D2D2D]"
             >
-              <div className="text-[#E4E4E7] text-[16px]">Features</div>
+              <div className="text-content-muted text-[16px]">Features</div>
             </div> */}
 
             {/* Plan headers - fixed width columns, no scroll */}
@@ -274,10 +274,10 @@ const PricingFeatures = ({
                       : ""
                   }`}
                 >
-                  <h3 className="text-[#E4E4E7] text-base font-light capitalize">
+                  <h3 className="text-content-muted text-base font-light capitalize">
                     {planData.name || planKey.replace(/([A-Z])/g, " $1").trim()}
                   </h3>
-                  <p className="text-[#F08B32] text-xl font-medium">
+                  <p className="text-accent text-xl font-medium">
                     {parse(planData.price)}
                   </p>
                   <p
@@ -289,7 +289,7 @@ const PricingFeatures = ({
                   >
                     {planData.tag}
                   </p>
-                  <p className="text-[10px] font-light text-[#E4E4E7]">
+                  <p className="text-[10px] font-light text-content-muted">
                     {planData.billed}
                   </p>
                   <button
@@ -348,7 +348,7 @@ const PricingFeatures = ({
                             background:
                               "linear-gradient(111deg, rgba(255, 255, 255, 0.20) -28.62%, rgba(255, 255, 255, 0.00) 104.36%)",
                           }}
-                          className="flex-1 px-3 py-3 text-xs text-[#E4E4E7] border-r border-[#2D2D2D] flex items-center"
+                          className="flex-1 px-3 py-3 text-xs text-content-muted border-r border-[#2D2D2D] flex items-center"
                         >
                           <span>{parse(feature.name)}</span>
                         </div> */}
@@ -376,7 +376,7 @@ const PricingFeatures = ({
                                   ? "text-emerald-400"
                                   : feature[tier] === "✕"
                                   ? "text-red-500"
-                                  : "text-[#E4E4E7]"
+                                  : "text-content-muted"
                               }`}
                             >
                               {parse(feature[tier])}
