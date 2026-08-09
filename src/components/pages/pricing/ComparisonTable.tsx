@@ -100,7 +100,12 @@ export function ComparisonTable({
         </label>
       </div>
 
-      <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
+      {/* Full-bleed on mobile so the table uses the whole screen width, and
+          min-w-0 because this is a flex item. Note that a scroll container
+          inflates documentElement.scrollWidth without the page actually being
+          scrollable — check document.body.scrollWidth when testing for
+          horizontal overflow here. */}
+      <div className="-mx-5 min-w-0 overflow-x-auto px-5 md:mx-0 md:px-0">
         <table className="w-full min-w-[720px] border-collapse text-left">
           <thead>
             <tr className="border-b border-line">

@@ -69,7 +69,7 @@ export function CommandCenterSection() {
           </div>
         </div>
 
-        <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
+        <div className="-mx-5 min-w-0 overflow-x-auto px-5 md:mx-0 md:px-0">
           <Image
             src={data.integrations.media}
             alt={data.integrations.mediaAlt}
