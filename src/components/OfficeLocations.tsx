@@ -48,11 +48,14 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
                       href={loc.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      // Icon-only link: the pin is decorative, so the name has
+                      // to come from the office it points at.
+                      aria-label={`Open ${loc.locationName} in Google Maps`}
                       className="inline-flex w-6 h-6 items-center justify-center"
                     >
                       <Image
                         src="/location-2.svg"
-                        alt="Location"
+                        alt=""
                         width={24}
                         height={24}
                         className="cursor-pointer object-contain"

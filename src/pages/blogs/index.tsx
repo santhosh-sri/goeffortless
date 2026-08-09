@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import BlogCard from "@/components/BlogCard";
-import Footer from "@/components/Footer";
-import Header from "@/components/NewHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
+import SiteHeader from "@/components/layout/SiteHeader";
 import PageTitle from "@/components/PageTitle";
 import { BlogCardProps } from "@/interface/type";
 import { GetStaticProps } from "next";
@@ -156,14 +156,8 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
           }}
         />
       </Head>
-      <div className={`fixed top-0 w-full z-[999]`}>
-        <Header
-          isMobile={isMobile}
-          closeBanner={closeBanner}
-          setCloseBanner={setCloseBanner}
-        />
-      </div>
-      <div className={`bg-bg md:px-[80px] mt-8 md:mt-[60px]`}>
+      <SiteHeader />
+      <main className={`bg-bg md:px-[80px] mt-8 md:mt-[60px]`}>
         <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
           <PageTitle pageHeading={"Blogs"} />
           <h1
@@ -197,8 +191,8 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
             </div>
           )}
         </div>
-      </div>
-      <Footer isMobile={isMobile} />
+      </main>
+      <SiteFooter />
     </>
   );
 };

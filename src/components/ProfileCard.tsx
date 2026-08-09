@@ -32,11 +32,14 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           href={linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
+          // The image is decorative, so the link needs its own name: without
+          // one a screen reader announces a row of identical "link" items.
+          aria-label={`${name} on LinkedIn`}
           className=""
         >
           <Image
             src={"linkedIn.svg"}
-            alt="Icon"
+            alt=""
             width={`${isColoured ? 26 : 40}`}
             height={`${isColoured ? 26 : 40}`}
           />

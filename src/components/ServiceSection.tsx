@@ -74,6 +74,8 @@ interface ServiceSectionProps extends ServiceContent {
   setSelectedPlan?: React.Dispatch<React.SetStateAction<string>>;
   isDownloadPage?: boolean;
   isCompliancePage?: boolean;
+  /** Render this section's title as the page <h1> (CMS pages have no hero). */
+  isPageHeading?: boolean;
   isLastSection?: boolean;
   complianceAuditData?: any;
   billingModesData?: any;
@@ -163,7 +165,10 @@ const ServiceSection = ({
   metricCardData = [],
   demoCtaButton,
   demoSecButton,
+  isPageHeading = false,
 }: ServiceSectionProps) => {
+  const PageHeadingTag = isPageHeading ? "h1" : "h2";
+
   return (
     <>
       {showGreyTopBorder && (
@@ -185,7 +190,9 @@ const ServiceSection = ({
               <PageTitle pageHeading={tagLine} pageName={colouredTagLine} />
             )}
             {Customtitle && (
-              <h2
+              // The CMS pages have no hero fold, so the first section's title
+              // is the page heading and must be an h1, not an h2.
+              <PageHeadingTag
                 className={`${
                   marginTop ? "" : "max-md:pt-[80px]"
                 } font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
@@ -196,7 +203,7 @@ const ServiceSection = ({
                 }}
               >
                 {parse(Customtitle)}
-              </h2>
+              </PageHeadingTag>
             )}
             {title && (
               <div className="flex gap-2 md:gap-[16px]">
