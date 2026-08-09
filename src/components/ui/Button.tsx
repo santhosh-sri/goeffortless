@@ -27,7 +27,9 @@ const VARIANT: Record<ButtonVariant, string> = {
 
 /** Figma: compact CTA px-24/py-12 @16px; hero CTA h-64 @20px. */
 const SIZE: Record<ButtonSize, string> = {
-  sm: "h-9 px-4 text-label gap-1.5",
+  // Figma header component 2514:80690: 20px inline padding, 8px block,
+  // 16px/20 label — 36px tall. Only the header uses this size.
+  sm: "h-9 px-5 text-body gap-1.5",
   md: "min-h-[44px] px-6 py-3 text-body gap-2",
   lg: "min-h-[56px] lg:min-h-[64px] px-5 py-3.5 text-body lg:text-body-lg gap-2",
 };
