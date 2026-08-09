@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Footer from "./Footer";
-import Header from "./NewHeader";
+import SiteFooter from "./layout/SiteFooter";
+import SiteHeader from "./layout/SiteHeader";
 import { Content } from "@/interface/type";
 
 const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
@@ -26,12 +26,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
   return (
     <div>
       <div className={`fixed top-0 w-full z-[999]`}>
-        <Header
-          {...headerItems}
-          isMobile={isMobile}
-          closeBanner={closeBanner}
-          setCloseBanner={setCloseBanner}
-        />
+        <SiteHeader />
       </div>
       <div className="bg-bg text-content">
         <div className="container mx-auto px-4 text-center pt-32 pb-16 md:pt-40 md:pb-20">
@@ -251,7 +246,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
           </p>
         </div>
       </div>
-      <Footer {...footerData} isMobile={isMobile} />
+      <SiteFooter />
     </div>
   );
 };

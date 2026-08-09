@@ -103,7 +103,8 @@ const Landing: React.FC<Content> = ({
       */}
       <div className="min-h-screen bg-bg text-content" data-cms-content>
         <SiteHeader />
-        <div>
+        {/* Landmark for assistive tech — the CMS pages had no <main>. */}
+        <main>
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}
           {usecaseFold && (
@@ -131,9 +132,12 @@ const Landing: React.FC<Content> = ({
                 isCareersPage={isCareersPage}
                 isDownloadPage={isDownloadPage}
                 isCompliancePage={isCompliancePage}
+                // Only the first section carries the page title, and
+                // only when nothing above it already provided an h1.
+                isPageHeading={index === 0 && !firstFold && !careersBanner}
               />
             ))}
-        </div>
+        </main>
         <SiteFooter />
         {/* {isFormVisible &&
           isCtaVisible &&

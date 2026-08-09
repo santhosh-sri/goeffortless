@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import PageTitle from "@/components/PageTitle";
-import Header from "@/components/NewHeader";
-import Footer from "@/components/Footer";
+import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
 import CallbackCardSection from "@/components/CallBackCardSection";
 import { GetStaticProps, GetStaticPaths } from "next";
 
@@ -255,11 +255,7 @@ export default function BlogDetail({
         />
       </Head>
       <div className={`fixed top-0 w-full z-[999]`}>
-        <Header
-          isMobile={isMobile}
-          closeBanner={closeBanner}
-          setCloseBanner={setCloseBanner}
-        />
+        <SiteHeader />
       </div>
       <div className={`bg-bg md:px-[80px]`}>
         {htmlContent ? (
@@ -330,7 +326,7 @@ export default function BlogDetail({
         <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       </div>
       <div className="md:pt-[100px] pt-[60px] bg-bg">
-        <Footer isMobile={isMobile} />
+        <SiteFooter />
       </div>
     </>
   );
