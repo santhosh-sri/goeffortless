@@ -50,7 +50,7 @@ const FeatureWrapper: React.FC<FeatureProps> = ({
           {!showMore && (
             <button
               onClick={() => setShowMore(true)}
-              className="text-[#F08B32] py-2 px-4 rounded-md mr-2"
+              className="text-accent py-2 px-4 rounded-md mr-2"
             >
               View More
             </button>
@@ -58,7 +58,7 @@ const FeatureWrapper: React.FC<FeatureProps> = ({
           {showMore && (
             <button
               onClick={() => setShowMore(false)}
-              className="text-[#F08B32] py-2 px-4 rounded-md mr-2"
+              className="text-accent py-2 px-4 rounded-md mr-2"
             >
               View Less
             </button>

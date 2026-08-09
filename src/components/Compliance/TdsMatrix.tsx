@@ -21,10 +21,10 @@ const TdsMatrix = (props: any) => {
     drop-shadow-sm"
           >
             <div className="p-5 flex flex-col gap-4">
-              <h2 className="text-base md:text-xl text-white font-medium">
+              <h2 className="text-base md:text-xl text-content font-medium">
                 Threshold Rule Clarification
               </h2>
-              <p className="text-sm md:text-base font-normal text-[#E4E4E7]">
+              <p className="text-sm md:text-base font-normal text-content-muted">
                 Once the total payments to a vendor cross the threshold in the
                 financial year, TDS applies on the entire applicable amount, not
                 just the excess.
@@ -37,10 +37,10 @@ const TdsMatrix = (props: any) => {
           >
             <div className="p-5">
               <div className="flex flex-col gap-4">
-                <h2 className="text-base md:text-xl text-white font-medium">
+                <h2 className="text-base md:text-xl text-content font-medium">
                   Higher Rate if PAN Not Linked to Aadhaar
                 </h2>
-                <p className="text-sm md:text-base font-normal text-[#E4E4E7]">
+                <p className="text-sm md:text-base font-normal text-content-muted">
                   If the vendor's PAN is missing or inoperative:
                 </p>
                 <div
@@ -48,13 +48,13 @@ const TdsMatrix = (props: any) => {
     drop-shadow-sm border-l-[8px] border-l-[#F08B32]"
                 >
                   <div className="p-5 flex flex-col gap-4">
-                    <p className="text-sm md:text-base font-normal text-[#E4E4E7]">
+                    <p className="text-sm md:text-base font-normal text-content-muted">
                       TDS must be deducted at{" "}
-                      <span className="text-[#F08B32]">
+                      <span className="text-accent">
                         20% or higher rate (Sec 206AA / 206AB)
                       </span>
                     </p>
-                    <p className="text-sm md:text-base font-normal text-[#E4E4E7]">
+                    <p className="text-sm md:text-base font-normal text-content-muted">
                       Effortless automatically flags & applies this if PAN
                       validation is enabled.
                     </p>
@@ -69,7 +69,7 @@ const TdsMatrix = (props: any) => {
     drop-shadow-sm p-5"
             >
               <div className="flex flex-col gap-4">
-                <h3 className="text-base md:text-xl text-white font-medium">
+                <h3 className="text-base md:text-xl text-content font-medium">
                   Compliance Requirements
                 </h3>
                 {tdsMatrix &&
@@ -83,7 +83,7 @@ const TdsMatrix = (props: any) => {
                         className="transition-transform duration-300"
                         unoptimized
                       />
-                      <p className="text-sm md:text-base font-normal text-[#E4E4E7]">
+                      <p className="text-sm md:text-base font-normal text-content-muted">
                         {item}
                       </p>
                     </div>
@@ -95,7 +95,7 @@ const TdsMatrix = (props: any) => {
     drop-shadow-sm p-5"
             >
               <div className="flex flex-col gap-4">
-                <h3 className="text-base md:text-xl text-white font-medium">
+                <h3 className="text-base md:text-xl text-content font-medium">
                   Consequences of Non-Compliance
                 </h3>
                 {tdsMatrix &&
@@ -109,7 +109,7 @@ const TdsMatrix = (props: any) => {
                         className="transition-transform duration-300"
                         unoptimized
                       />
-                      <p className="text-sm md:text-base font-normal text-[#E4E4E7]">
+                      <p className="text-sm md:text-base font-normal text-content-muted">
                         {item}
                       </p>
                     </div>

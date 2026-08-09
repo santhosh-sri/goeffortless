@@ -109,12 +109,12 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   return (
     <>
       <div
-        className={`text-[#FFFFFF] p-4 flex flex-col md:gap-10 items-center justify-center md:pt-[60px] mx-auto max-md:mt-[64px] ${
+        className={`text-content p-4 flex flex-col md:gap-10 items-center justify-center md:pt-[60px] mx-auto max-md:mt-[64px] ${
           isMobile ? "px-[15px] pt-[24px]" : "px-[60px]"
         }`}
       >
         <div
-          className={`text-[#FFFFFF] max-md:flex max-md:flex-col gap-10 w-full ${
+          className={`text-content max-md:flex max-md:flex-col gap-10 w-full ${
             isPartnerPage ? "md:gap-[10px]" : "md:gap-[65px]"
           } items-center justify-between relative`}
         >
@@ -135,7 +135,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
                           isPartnerPage
                             ? "font-[500] md:leading-[80px] md:max-w-[80%] "
                             : "font-[300] md:leading-[90px]"
-                        } bg-gradient-to-r from-[#F08B32] to-[#FFFFFF]`
+                        } bg-gradient-to-r from-accent to-content`
                   } max-md:text-center text-[32px] md:text-[70px] leading-[35px] bg-clip-text text-transparent`}
                 >
                   {parse(heading)}
@@ -214,7 +214,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
               />
               {ishome && (
                 <div className="flex gap-2 items-end justify-center">
-                  <p className="text-xl font-[300] md:leading-8 leading-5 text-center text-[#F08B32]">
+                  <p className="text-xl font-[300] md:leading-8 leading-5 text-center text-accent">
                     Work seamlessly with:
                   </p>
                   <Image
@@ -260,7 +260,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
         </div>
         {businessTagline && (
           <div
-            className={`text-[#FFFFFF] flex flex-col gap-10  md:gap-[40px] items-center justify-center ${
+            className={`text-content flex flex-col gap-10  md:gap-[40px] items-center justify-center ${
               isPartnerPage && !isMobile ? "pt-[24px]" : ""
             }`}
           >

@@ -37,14 +37,14 @@ const UsecaseFeatures: React.FC<USeCaseSection> = (card) => {
             />
           )}
           <div className="md:min-h-[110px] flex flex-col gap-3">
-            <h2 className="md:font-[400] text-[#EEEFFC] md:text-[20px] text-[18px] leading-[20px] md:leading-[26px]">
+            <h2 className="md:font-[400] text-content md:text-[20px] text-[18px] leading-[20px] md:leading-[26px]">
               {title}
             </h2>
             {solution && (
               <ol>
                 {solution?.map((item, index) => (
                   <li
-                    className="ml-4 list-disc pb-3 text-[14px] md:text-[16px] font-[300] leading-[20px] md:leading-[24px] text-[#E4E4E7]"
+                    className="ml-4 list-disc pb-3 text-[14px] md:text-[16px] font-[300] leading-[20px] md:leading-[24px] text-content-muted"
                     key={index}
                   >
                     {item}

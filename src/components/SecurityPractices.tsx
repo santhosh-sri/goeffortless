@@ -32,7 +32,7 @@ const SecurityPractices: React.FC<
           setCloseBanner={setCloseBanner}
         />
       </div>
-      <div className="bg-[#08090A] text-[#EAEBEB]">
+      <div className="bg-bg text-content">
         <div className="container mx-auto px-4 text-center pt-32 pb-16 md:pt-40 md:pb-20">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Security at Effortless

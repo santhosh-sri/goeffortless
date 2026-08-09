@@ -12,7 +12,7 @@ const ServiceListCard: React.FC<servicesList> = ({ src, text }) => {
         height={40}
         className="rounded-xl md:w-10 md:h-10"
       />
-      <p className="text-[11px] font-[400] leading-[16px] text-[#FFFFFF] text-center max-md:min-h-[50px]">
+      <p className="text-[11px] font-[400] leading-[16px] text-content text-center max-md:min-h-[50px]">
         {text}
       </p>
     </div>

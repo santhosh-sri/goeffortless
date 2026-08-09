@@ -33,7 +33,7 @@ const GrowthVideosContent: React.FC<GrowthVideosContentProps> = ({
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-white hover:opacity-80"
+          className="flex items-center gap-2 text-content hover:opacity-80"
         >
           <svg
             width="24"
@@ -96,7 +96,7 @@ const GrowthVideosContent: React.FC<GrowthVideosContentProps> = ({
 
       {/* Title */}
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl md:text-[32px] font-medium text-white leading-10">
+        <h2 className="text-2xl md:text-[32px] font-medium text-content leading-10">
           Effortless Growth Videos
         </h2>
 
@@ -126,10 +126,10 @@ const VideoCard = ({ title, subtitle, videoId, onClick }: VideoCardProps) => {
   return (
     <div className="flex flex-col gap-4 cursor-pointer" onClick={onClick}>
       <div className="flex flex-col gap-2">
-        <p className="text-[#F08B32] text-lg md:text-xl font-medium leading-6">
+        <p className="text-accent text-lg md:text-xl font-medium leading-6">
           {title}
         </p>
-        <p className="text-white text-sm md:text-base font-light leading-5">
+        <p className="text-content text-sm md:text-base font-light leading-5">
           {subtitle}
         </p>
       </div>

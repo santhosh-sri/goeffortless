@@ -132,19 +132,19 @@ const Testimonials: React.FC<TestimonalProps> = ({
               >
                 <div className="flex flex-col gap-2">
                   {card?.title && (
-                    <p className="text-[16px] md:text-[20px] leading-6 font-[400] text-white">
+                    <p className="text-[16px] md:text-[20px] leading-6 font-[400] text-content">
                       {card.title}
                     </p>
                   )}
 
-                  <p className="text-[14px] font-[300] text-[#E4E4E7] flex-grow">
+                  <p className="text-[14px] font-[300] text-content-muted flex-grow">
                     {card.review}
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-1 items-start mt-4">
-                  <p className="text-base font-[400] text-white">{card.name}</p>
-                  <p className="text-[#E4E4E7] md:text-sm text-xs font-[300]">
+                  <p className="text-base font-[400] text-content">{card.name}</p>
+                  <p className="text-content-muted md:text-sm text-xs font-[300]">
                     {card.designation}
                   </p>
                 </div>

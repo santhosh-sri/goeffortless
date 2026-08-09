@@ -13,7 +13,7 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
   return (
     <section className="w-full pb-10">
       <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
-        <h2 className="text-xl md:text-[32px]  font-light text-white mb-4 md:mb-8">
+        <h2 className="text-xl md:text-[32px]  font-light text-content mb-4 md:mb-8">
           Office{" "}
           <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
             Locations
@@ -36,8 +36,8 @@ const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
                 />
               </div>
 
-              <div className="md:absolute bottom-0 left-0 right-0 md:bg-[linear-gradient(180deg,_rgba(0,0,0,0.1)_0%,_#000000_50%)] p-2 md:p-5 text-white">
-                <h2 className="text-base font-medium text-[#F08B32]">
+              <div className="md:absolute bottom-0 left-0 right-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.1)_0%,_#000000_50%)] p-2 md:p-5 text-white">
+                <h2 className="text-base font-medium text-accent">
                   {loc.locationName}
                 </h2>
                 <div className="flex justify-between gap-3">

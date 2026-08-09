@@ -11,7 +11,7 @@ const ErrorToast = ({
   return (
     <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999]">
       <div
-        className={`bg-[#08090A] border border-[#E5E5E533] absolute rounded-2xl m-4 md:w-[400px] max-md:w-[90%]`}
+        className={`bg-bg border border-[#E5E5E533] absolute rounded-2xl m-4 md:w-[400px] max-md:w-[90%]`}
       >
         <div className="flex flex-col gap-6 p-4 items-center justify-center">
           <div className="w-[50px] h-[50px] rounded-full bg-red-500/20 flex items-center justify-center">
@@ -34,7 +34,7 @@ const ErrorToast = ({
           <p className="text-[24px] font-[400] text-[#EF4444] leading-[32px]">
             Submission Failed
           </p>
-          <p className="text-[16px] text-[#E4E4E7] leading-[23px] font-[300] text-center">
+          <p className="text-[16px] text-content-muted leading-[23px] font-[300] text-center">
             Something went wrong. Please try again.
           </p>
           <button

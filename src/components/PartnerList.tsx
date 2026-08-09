@@ -40,7 +40,7 @@ const PartnerList: FC<CompanyValue> = ({
 
       <h3
         className={`
-          flex-shrink-0 w-full
+          flex-shrink-0 w-full text-content
           ${
             icon
               ? "md:text-[30px] text-[16px] leading-[26px] md:leading-[38px] font-[500] md:min-h-[76px]"
@@ -55,7 +55,7 @@ const PartnerList: FC<CompanyValue> = ({
 
       <p
         className={`
-          flex-1 leading-[20px] md:leading-[32px] text-[#FFFFFF] font-[300] w-full
+          flex-1 leading-[20px] md:leading-[32px] text-content font-[300] w-full
           ${
             icon
               ? "md:text-[20px] text-[13px] md:h-[250px] md:font-[400] md:pb-8 pb-4"

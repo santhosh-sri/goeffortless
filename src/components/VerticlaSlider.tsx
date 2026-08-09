@@ -13,7 +13,7 @@ const Verticalslider: FC<VerticalSliderProps> = ({ section }) => {
   );
 
   return (
-    <div className="text-white flex max-md:flex-col">
+    <div className="text-content flex max-md:flex-col">
       {/* Left panel */}
       <div className="md:w-1/3 space-y-6 p-6">
         <h2 className="md:text-[30px] font-[400] text-[20px] md:leading-[32px] leading-[28px]">
@@ -28,7 +28,7 @@ const Verticalslider: FC<VerticalSliderProps> = ({ section }) => {
               className={`cursor-pointer transition-all ${
                 feature?.key === activeFeature?.key
                   ? "text-orange-400 border-l-2 border-orange-400 pl-2"
-                  : "pl-2 text-white"
+                  : "pl-2 text-content"
               }`}
             >
               {feature.title}
@@ -57,12 +57,12 @@ const Verticalslider: FC<VerticalSliderProps> = ({ section }) => {
       </div>
 
       {/* Right panel */}
-      <div className="md:w-2/3 flex flex-col md:flex-row border-[1px] rounded-lg border-[#E5E5E533] justify-between p-6 bg-[#15181B]">
+      <div className="md:w-2/3 flex flex-col md:flex-row border-[1px] rounded-lg border-[#E5E5E533] justify-between p-6 bg-surface">
         <div className="max-w-xl flex flex-col gap-2">
           <h3 className="md:text-[24px] font-[400] text-[20px] leading-[28px]">
             {activeFeature.title}
           </h3>
-          <p className="text-[#E4E4E7] md:text-[17px] text-[14px] font-[300] leading-[28px]">
+          <p className="text-content-muted md:text-[17px] text-[14px] font-[300] leading-[28px]">
             {activeFeature.description}
           </p>
         </div>

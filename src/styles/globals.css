@@ -995,3 +995,19 @@ body {
 .slick-list {
   overflow: hidden !important;
 }
+
+/* CMS content written for the old dark theme.
+   Several entries in src/data/*.json carry inline `color:#FFFFFF` on headings
+   and paragraphs. Inline styles beat class-based tokens, so on the light theme
+   that copy rendered white on white. No component change can reach it — the
+   colour is in the content, not the markup — so it is neutralised here and
+   allowed through unchanged when the dark theme is active.
+
+   Scoped to the CMS-rendered body so it can never touch the redesigned pages,
+   which set their colours from tokens. */
+:root:not([data-theme="dark"]) [data-cms-content] [style*="color:#FFFFFF"],
+:root:not([data-theme="dark"]) [data-cms-content] [style*="color: #FFFFFF"],
+:root:not([data-theme="dark"]) [data-cms-content] [style*="color:#ffffff"],
+:root:not([data-theme="dark"]) [data-cms-content] [style*="color: #ffffff"] {
+  color: rgb(var(--color-text)) !important;
+}

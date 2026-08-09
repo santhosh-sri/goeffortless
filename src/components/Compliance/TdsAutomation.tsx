@@ -18,7 +18,7 @@ const TdsAutomation = ({ tdsAutomation }: { tdsAutomation: string[] }) => {
               height={48}
               unoptimized
             />
-            <p className="text-sm md:text-xl font-normal text-white">{item}</p>
+            <p className="text-sm md:text-xl font-normal text-content">{item}</p>
           </div>
         </div>
       ))}

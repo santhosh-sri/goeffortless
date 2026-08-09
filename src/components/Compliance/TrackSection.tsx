@@ -15,10 +15,10 @@ const TrackSection: React.FC<TrackData> = ({ trackData }) => {
     drop-shadow-sm even:border-l-[8px] even:border-l-[#F08B32]"
         >
           <div className="p-5 flex flex-col gap-4">
-            <h2 className="text-base md:text-xl text-white font-medium">
+            <h2 className="text-base md:text-xl text-content font-medium">
               {item.title}
             </h2>
-            <p className="text-sm md:text-base font-normal text-[#E4E4E7]">
+            <p className="text-sm md:text-base font-normal text-content-muted">
               {item.desc}
             </p>
           </div>

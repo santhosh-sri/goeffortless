@@ -16,7 +16,7 @@ const Featurecard: React.FC<FeatureCard> = ({
         bg
           ? bg
           : "bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] border-[1px] border-[#393939]"
-      } text-[#FFF] flex flex-col  p-4 md:p-3 rounded-lg md:gap-3 `}
+      } text-content flex flex-col  p-4 md:p-3 rounded-lg md:gap-3 `}
     >
       <div
         className={`pb-4 md:pb-[[1px] flex items-start justify-between ${

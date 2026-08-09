@@ -17,25 +17,25 @@ const ERPComparisonCards: React.FC<Props> = ({ cards }) => {
           >
             {/* Header */}
             <div className="flex flex-col gap-3">
-              <p className="text-xs leading-4 font-light text-[#E4E4E7]">
+              <p className="text-xs leading-4 font-light text-content-muted">
                 {card.id}. {card.subTitle}
               </p>
-              <p className="text-2xl font-semibold leading-[31px] text-white">
+              <p className="text-2xl font-semibold leading-[31px] text-content">
                 {card.title}
               </p>
             </div>
             {/* ERP Promise */}
             <div className="flex flex-col gap-2">
-              <p className="text-sm leading-[18px] font-light text-[#E4E4E7]">
+              <p className="text-sm leading-[18px] font-light text-content-muted">
                 The ERP Promise:
               </p>
-              <p className="text-base leading-5 font-normal text-white">
+              <p className="text-base leading-5 font-normal text-content">
                 {card.secondTitle}
               </p>
             </div>
             {/* Effortless Reality */}
             <div className="flex flex-col gap-4">
-              <p className="text-[#F08B32] font-semibold text-sm leading-5">
+              <p className="text-accent font-semibold text-sm leading-5">
                 The Effortless Reality:
               </p>
 
@@ -49,10 +49,10 @@ const ERPComparisonCards: React.FC<Props> = ({ cards }) => {
                       height={20}
                     />
                     <div className="flex flex-col gap-2">
-                      <p className="text-white text-sm leading-[18px] font-semibold">
+                      <p className="text-content text-sm leading-[18px] font-semibold">
                         {item.key}
                       </p>
-                      <p className="text-[#E4E4E7] text-sm leading-[18px] font-light">
+                      <p className="text-content-muted text-sm leading-[18px] font-light">
                         {item.val}
                       </p>
                     </div>
@@ -64,7 +64,7 @@ const ERPComparisonCards: React.FC<Props> = ({ cards }) => {
             {/* Result */}
             {card.result && (
               <div className="border-t border-t-[#424242] py-4">
-                <p className="text-[#F08B32] font-medium text-base leading-5">
+                <p className="text-accent font-medium text-base leading-5">
                   Result: {card.result}
                 </p>
               </div>

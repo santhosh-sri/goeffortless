@@ -16,7 +16,7 @@ const Timeline: React.FC<TimelineStep> = ({ dayLabel, title, points }) => {
         />
 
         {/* Day Label */}
-        <h4 className="text-[#F08B32] text-[16px] md:text-[18px] font-semibold">
+        <h4 className="text-accent text-[16px] md:text-[18px] font-semibold">
           {dayLabel}
         </h4>
       </div>

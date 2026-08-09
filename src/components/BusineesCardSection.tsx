@@ -16,7 +16,7 @@ const BusineesCardSection = ({ isMobile }: { isMobile?: boolean }) => {
       className={`flex flex-col gap-4 md:gap-[48px] items-center justify-center`}
     >
       {" "}
-      <p className="text-[#E4E4E7] text-[13px] md:text-[24px] font-[400] leading-[24px] text-center">
+      <p className="text-content-muted text-[13px] md:text-[24px] font-[400] leading-[24px] text-center">
         Designed to work seamlessly with tools you already use:
       </p>
       <div className="grid grid-cols-3 items-center lg:grid-cols-6">

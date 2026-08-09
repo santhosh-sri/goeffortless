@@ -15,19 +15,19 @@ const FounderTestimonialCard: React.FC<FounderTestimonial> = ({
         rating ? "md:max-w-[600px]" : "w-full"
       }`}
     >
-      <div className="bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] text-[#FFFFFF] p-6 rounded-md shadow-md">
+      <div className="bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] text-content p-6 rounded-md shadow-md">
         <p className="text-[16px] font-semibold mb-4 md:text-[20px] md:leading-[26px]">
           {title}
         </p>
         {rating && (
-          <div className="flex items-center mb-3 text-[#F08B32] h-4 w-4 text-[16px]">
+          <div className="flex items-center mb-3 text-accent h-4 w-4 text-[16px]">
             {Array?.from({ length: rating ?? 0 }).map((_, idx) => (
               <Image
                 src={"/orangstar.svg"}
                 alt="star"
                 width={16}
                 height={16}
-                className="h-4 w-4 text-[#F08B32]"
+                className="h-4 w-4 text-accent"
                 key={idx}
               />
             ))}
@@ -43,10 +43,10 @@ const FounderTestimonialCard: React.FC<FounderTestimonial> = ({
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gray-400 rounded-full"></div>
           <div className="flex flex-col gap-1">
-            <p className="text-[14px] font-medium md:text-[16px] md:leading-[20px] text-[#FFFFFF]">
+            <p className="text-[14px] font-medium md:text-[16px] md:leading-[20px] text-content">
               {name}
             </p>
-            <p className="text-[12px] font-[300] md:text-[14px] md:leading-[18px] text-[#FFFFFF]">
+            <p className="text-[12px] font-[300] md:text-[14px] md:leading-[18px] text-content">
               {designation}
             </p>
           </div>

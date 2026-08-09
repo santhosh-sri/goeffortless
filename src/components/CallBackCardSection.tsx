@@ -25,7 +25,7 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
 
   return (
     <div className="rounded-lg shadow-md">
-      <div className="text-[#FFF] flex flex-col justify-between gap-2 p-4 rounded-xl bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] md:h-[346px]">
+      <div className="text-content flex flex-col justify-between gap-2 p-4 rounded-xl bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] md:h-[346px]">
         {image && (
           <Image
             src={image}
@@ -40,7 +40,7 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
             <Image src={icon} alt={title || "callback-icon"} width={24} height={24} />
           </div>
         )}
-        <p className="text-[16px] md:text-[24px] md:leading-[30px] font-[500] leading-[23px] text-[#FFFFFF]">
+        <p className="text-[16px] md:text-[24px] md:leading-[30px] font-[500] leading-[23px] text-content">
           {title}
         </p>
 
@@ -67,7 +67,7 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
             ${
               primary
                 ? "bg-[#F08B32] text-white"
-                : "border border-[#F08B32] text-[#F08B32]"
+                : "border border-accent text-accent"
             }
           `}
           >
@@ -85,7 +85,7 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
             </span>
           </button>
 
-          <p className="text-[13px] leading-[17px] md:text-[14px] font-[300] md:leading-6 text-center text-[#E4E4E7]">
+          <p className="text-[13px] leading-[17px] md:text-[14px] font-[300] md:leading-6 text-center text-content-muted">
             {subText}
           </p>
         </div>

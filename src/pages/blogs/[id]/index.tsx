@@ -261,7 +261,7 @@ export default function BlogDetail({
           setCloseBanner={setCloseBanner}
         />
       </div>
-      <div className={`bg-[#08090A] md:px-[80px]`}>
+      <div className={`bg-bg md:px-[80px]`}>
         {htmlContent ? (
           <>
             <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-8 md:mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
@@ -277,25 +277,25 @@ export default function BlogDetail({
                 <span className="font-medium">{title}</span>
               </h1>
               <p
-                className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[300] md:font-[400] capitalize`}
+                className={`md:text-2xl text-sm md:mt-[4px] text-content-muted text-center font-[300] md:font-[400] capitalize`}
               >
                 {desc}
               </p>
             </div>
             <article className="md:pb-[100px] pb-[60px] max-md:py-[32px] max-md:px-5">
               <div
-                className="text-[#E4E4E7] flex flex-col gap-3 htmlContainer"
+                className="text-content-muted flex flex-col gap-3 htmlContainer"
                 dangerouslySetInnerHTML={{ __html: cleanHTML(htmlContent) }}
               />
             </article>
           </>
         ) : (
-          <div className="flex flex-col md:gap-6 text-[#E4E4E7] gap-4 items-center justify-center mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
+          <div className="flex flex-col md:gap-6 text-content-muted gap-4 items-center justify-center mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
             Blog not found
           </div>
         )}
       </div>
-      <div className="bg-[#15181B]">
+      <div className="bg-surface">
         <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
         <div className={`md:px-[80px]`}>
           <div className="flex flex-col md:gap-6 gap-4 items-center justify-center  py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[64px] scroll-mt-20">
@@ -308,13 +308,13 @@ export default function BlogDetail({
                 WebkitBackgroundClip: "text",
               }}
             >
-              <span className="text-white font-light">
+              <span className="text-content font-light">
                 Growth Doesn&apos;t Wait.{" "}
               </span>
               <span className="font-medium">Why Should You?</span>
             </h2>
             <p
-              className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+              className={`md:text-2xl text-sm md:mt-[4px] text-content-muted text-center font-[400] md:font-[300]`}
             >
               Let Effortless help you scale—without the scramble.
             </p>
@@ -329,7 +329,7 @@ export default function BlogDetail({
         </div>
         <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
       </div>
-      <div className="md:pt-[100px] pt-[60px] bg-[#08090A]">
+      <div className="md:pt-[100px] pt-[60px] bg-bg">
         <Footer isMobile={isMobile} />
       </div>
     </>

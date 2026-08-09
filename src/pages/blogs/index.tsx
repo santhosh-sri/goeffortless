@@ -163,7 +163,7 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
           setCloseBanner={setCloseBanner}
         />
       </div>
-      <div className={`bg-[#08090A] md:px-[80px] mt-8 md:mt-[60px]`}>
+      <div className={`bg-bg md:px-[80px] mt-8 md:mt-[60px]`}>
         <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
           <PageTitle pageHeading={"Blogs"} />
           <h1
@@ -173,11 +173,11 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
               WebkitBackgroundClip: "text",
             }}
           >
-            <span className="text-white font-light">The </span>
+            <span className="text-content font-light">The </span>
             <span className="font-medium">Effortless Edge</span>
           </h1>
           <p
-            className={`md:text-2xl text-sm md:mt-[4px] text-[#E4E4E7] text-center font-[400] md:font-[300]`}
+            className={`md:text-2xl text-sm md:mt-[4px] text-content-muted text-center font-[400] md:font-[300]`}
           >
             Stay ahead with The Effortless Edge - your source for insights on
             AI-driven automation, smarter sales, and efficient financial
@@ -192,7 +192,7 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-10 text-[#E4E4E7]">
+            <div className="text-center py-10 text-content-muted">
               No blogs found
             </div>
           )}

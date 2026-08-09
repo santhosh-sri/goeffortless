@@ -61,7 +61,7 @@ const LanguageModalContent: React.FC<Props> = ({ data, onSelect, onClose }) => {
         <h2 className="text-2xl md:text-[32px] font-medium bg-custom-gradient bg-clip-text text-transparent">
           {data.title}
         </h2>
-        <p className="text-white text-lg md:text-2xl font-light my-0">
+        <p className="text-content text-lg md:text-2xl font-light my-0">
           {data.subtitle}
         </p>
 
@@ -77,7 +77,7 @@ const LanguageModalContent: React.FC<Props> = ({ data, onSelect, onClose }) => {
             "
             >
               <Image src={item.flag} alt="flag" width={48} height={48} />
-              <span className="text-base md:text-lg text-white">
+              <span className="text-base md:text-lg text-content">
                 {item.label}
               </span>
             </button>

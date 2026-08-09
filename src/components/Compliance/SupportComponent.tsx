@@ -12,7 +12,7 @@ const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
         <button
           id="democta"
           {...CalcomConfig}
-          className="py-[14px] max-md:w-full cursor-pointer border border-[#F08B32] text-[#F08B32] font-medium px-5 rounded flex items-center justify-center text-[14px]"
+          className="py-[14px] max-md:w-full cursor-pointer border border-accent text-accent font-medium px-5 rounded flex items-center justify-center text-[14px]"
         >
           <span className="flex items-center gap-2">
             <span className="">
@@ -33,17 +33,17 @@ const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
       <div className="flex justify-center items-center gap-x-[120px] gap-y-6 flex-wrap">
         {keyvalues.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
-            <h2 className="text-[#F08B32] font-normal text-3xl">
+            <h2 className="text-accent font-normal text-3xl">
               {item?.title}
             </h2>
-            <p className="text-[#E4E4E7] text-sm md:text-base font-normal">
+            <p className="text-content-muted text-sm md:text-base font-normal">
               {item?.desc}
             </p>
           </div>
         ))}
       </div>
       <div>
-        <p className="text-[#E4E4E7] text-sm md:text-base font-light text-center">
+        <p className="text-content-muted text-sm md:text-base font-light text-center">
           TDS automation software • GST reconciliation app • Purchase invoice
           app • Expense claim software India • Multi-GSTIN accounting • Cost
           centre reporting • Vendor bill booking • Tally integrated finance

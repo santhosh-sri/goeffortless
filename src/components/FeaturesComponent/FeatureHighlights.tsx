@@ -16,7 +16,7 @@ const FeatureHighlights: React.FC<FeatureHighlightItem> = ({ title, icon }) => {
           />
         </div>
 
-        <h3 className="text-white text-base md:text-xl font-normal md:font-semibold">
+        <h3 className="text-content text-base md:text-xl font-normal md:font-semibold">
           {title}
         </h3>
       </div>

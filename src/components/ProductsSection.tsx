@@ -10,8 +10,8 @@ const ProductsSection: React.FC<ProductsCardSection> = ({
 }) => {
   return (
     <div id={href}>
-      <div className="bg-[#121316] p-4 rounded-xl flex flex-col gap-4 md:gap-5">
-        <div className="bg-[#000000] p-4 rounded-xl flex flex-col gap-2 md:gap-8 text-[#FFF] items-center justify-center">
+      <div className="bg-surface p-4 rounded-xl flex flex-col gap-4 md:gap-5">
+        <div className="bg-[#000000] p-4 rounded-xl flex flex-col gap-2 md:gap-8 text-content items-center justify-center">
           <Image
             src={"/effortless-logo.svg"}
             alt="Effortless-logo"
@@ -29,7 +29,7 @@ const ProductsSection: React.FC<ProductsCardSection> = ({
           {description}
         </p>
         {/* <div className="flex gap-2 items-center cursor-pointer">
-          <p className="text-[11px] leading-3 font-[300] text-[#FFFF] md:text-[20px]">
+          <p className="text-[11px] leading-3 font-[300] text-content md:text-[20px]">
             Explore Now
           </p>
           <Image

@@ -25,7 +25,7 @@ const SecondaryCta: React.FC<SecondaryCtaProps> = ({
       onClick={handleDirect}
       id="democta"
       className={`group relative overflow-hidden transition-all duration-500 ease-in-out
-        py-[12px] md:text-[16px] cursor-pointer border border-[#F08B32] text-[#F08B32] font-[500]
+        py-[12px] md:text-[16px] cursor-pointer border border-accent text-accent font-[500]
         md:px-6 px-[16px] rounded flex items-center justify-center  md:hover:pr-7
         ${customStyle ? "text-[14px]" : "md:text-[16px] text-[14px]"}
         ${

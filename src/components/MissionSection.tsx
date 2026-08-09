@@ -15,7 +15,7 @@ const MissionSection: FC<MissionSectionContent> = ({
   cta,
 }) => {
   return (
-    <section className="text-white grid grid-cols-1 md:grid-cols-2  gap-5 md:gap-[24px] justify-center">
+    <section className="text-content grid grid-cols-1 md:grid-cols-2  gap-5 md:gap-[24px] justify-center">
       <Image
         src={image.src}
         alt={image.alt}
@@ -27,17 +27,17 @@ const MissionSection: FC<MissionSectionContent> = ({
       <div className="flex flex-col gap-5 max-md:items-center">
         <h2 className="text-[24px] md:text-[32px] font-[300] leading-[26px] max-md:text-center">
           {title}
-          <span className="!bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFF] font-[500]">
+          <span className="!bg-clip-text text-transparent bg-gradient-to-r from-accent to-content font-[500]">
             {colouredTitle}
           </span>
         </h2>
-        <p className="text-[#E4E4E7] md:text-[18px] text-[13px] font-[300] leading-[20px] md:leading-[24px] max-md:text-center">
+        <p className="text-content-muted md:text-[18px] text-[13px] font-[300] leading-[20px] md:leading-[24px] max-md:text-center">
           {intro}
         </p>
         {paragraphs.map((para, idx) => (
           <p
             key={idx}
-            className="text-[#E4E4E7] md:text-[18px] text-[13px] font-[300] leading-[20px] md:leading-[24px] max-md:text-center"
+            className="text-content-muted md:text-[18px] text-[13px] font-[300] leading-[20px] md:leading-[24px] max-md:text-center"
           >
             {parse(para)}
           </p>

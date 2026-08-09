@@ -37,7 +37,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
           setActiveTab={(val) => setActiveTab(val)}
         />
       </div>
-      <div className="overflow-x-auto md:overflow-x-hidden text-white !w-full">
+      <div className="overflow-x-auto md:overflow-x-hidden text-content !w-full">
         {/* Add rounded-[8px] and overflow-hidden to clip table borders */}
         <div className="rounded-[12px] overflow-hidden border border-[#414141]">
           <table className="table-auto border-collapse text-center w-full">
@@ -52,7 +52,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                   >
                     <div className="flex flex-col gap-3 items-center">
                       <div>{plan.name}</div>
-                      <p className="text-[#F08B32] text-[500] my-0 text-xl">
+                      <p className="text-accent text-[500] my-0 text-xl">
                         {plan.annualPrice}
                       </p>
                       <p
@@ -64,7 +64,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                       >
                         {plan.tag}
                       </p>
-                      <p className="text-sm font-light text-[#E4E4E7]">
+                      <p className="text-sm font-light text-content-muted">
                         {plan.billed}
                       </p>
                       <button
@@ -124,7 +124,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                   <td
                     className={`p-3 text-[13px] md:text-[16px] text-left md:w-[438px] leading-5 border-r border-[#363636] ${
                       colouredText.includes(row.label)
-                        ? "text-[#F08B32] text-[500]"
+                        ? "text-accent text-[500]"
                         : "font-[400]"
                     }`}
                   >
@@ -135,7 +135,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                       key={planIndex}
                       className={`text-[13px] md:text-[16px] md:w-[438px] border-r border-[#363636] last:border-r-0 ${
                         colouredText.includes(row.key)
-                          ? "text-[#F08B32] font-[500] leading-5"
+                          ? "text-accent font-[500] leading-5"
                           : "font-[300]"
                       }`}
                     >
@@ -146,7 +146,7 @@ const NewPricingCard: React.FC<NewPricingCardProps> = ({
                               key={idx}
                               className={`${
                                 idx == 0
-                                  ? "text-[#F08B32] font-[500]"
+                                  ? "text-accent font-[500]"
                                   : "font-[300]"
                               } border-b border-[#363636] p-3 text-[13px] md:text-[16px] last:border-b-0 text-left leading-5 h-[65px] content-center`}
                             >

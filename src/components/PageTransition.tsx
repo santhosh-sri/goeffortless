@@ -48,7 +48,7 @@ export default function PageTransition({
     <>
       {children}
       {loading && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#15181B] animate-fadeIn">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-surface animate-fadeIn">
           <div className="animate-logo">
             <Image
               src={"/header-logo.svg"}

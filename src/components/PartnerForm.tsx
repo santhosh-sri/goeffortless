@@ -126,7 +126,7 @@ const PartnerForm = () => {
       {showErrorPopup && (
         <ErrorToast setShowErrorPopup={setShowErrorPopup} />
       )}
-      <div className="md:max-w-[777px] md:mx-auto p-5 md:p-[40px] bg-[#08090A] border-[1px] border-[#E5E5E533] rounded-md text-white max-md:mt-2">
+      <div className="md:max-w-[777px] md:mx-auto p-5 md:p-[40px] bg-bg border-[1px] border-[#E5E5E533] rounded-md text-content max-md:mt-2">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="grid grid-cols-2 md:gap-6 gap-4"
@@ -145,7 +145,7 @@ const PartnerForm = () => {
                 >
                   {parse(label)}{" "}
                   {validation?.required && (
-                    <span className="text-[#F08B32]">*</span>
+                    <span className="text-accent">*</span>
                   )}
                 </label>
 
@@ -162,7 +162,7 @@ const PartnerForm = () => {
                       borderImage:
                         "linear-gradient(128.65deg, rgba(255, 255, 255, 0.2) -75.81%, rgba(255, 255, 255, 0) 154.59%) 1",
                     }}
-                    className={`w-full rounded border px-3 py-2 text-[#B1B1B1] placeholder:text-[13px] focus:outline-none text-[13px] ${
+                    className={`w-full rounded border px-3 py-2 text-content-muted placeholder:text-[13px] focus:outline-none text-[13px] ${
                       errors[fieldName]
                         ? "border-red-500"
                         : "border-[#E5E5E533]"

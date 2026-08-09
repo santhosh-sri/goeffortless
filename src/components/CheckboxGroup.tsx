@@ -31,7 +31,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ field, watch, setValue, e
             onChange={() => handleCheckboxChange(option)}
             className="h-4 w-4  !bg-[linear-gradient(125.31deg,rgba(255,255,255,0.1)_-56.15%,rgba(255,255,255,0)_104.12%)]  border-gray-400 focus:ring-0 checked:border-black cursor-pointer"
           />
-          <span className="text-[#B1B1B1] text-[13px]">{option}</span>
+          <span className="text-content-muted text-[13px]">{option}</span>
         </label>
       ))}
       {errors[field?.name] && (
