@@ -257,6 +257,25 @@ export interface CommandCenterTab {
   };
 }
 
+/**
+ * Section "One Platform. Five Command Centers." — Figma component 1746:24067.
+ *
+ * All five panels exist in the component (variants 1614:1319, 1614:1318,
+ * 1614:1317, 1694:2159, 1694:2248) — earlier they looked missing because the
+ * home page frame only instantiates one.
+ *
+ * The variants are offset by one against the tab strip: the panel shown under
+ * "Effortless Purchases" carries Sales copy, the one under "Effortless Staff
+ * Claims" carries Procurement copy, and so on. Each panel's eyebrow and
+ * headline match a product page hero exactly ("The Profit Guardian" /
+ * "Every Corporate Rupee Audited" is the Purchase & Expenses hero), so the
+ * panels are paired here with the tab they actually describe rather than the
+ * one they sit under in the file. Worth confirming with the designer.
+ *
+ * Every panel's body copy in Figma is the same placeholder line ("Give your
+ * field team the tools they need to move f…"), so each tab uses the real
+ * description from its product page hero instead.
+ */
 export const commandCenters: {
   eyebrow: string;
   title: string;
@@ -271,8 +290,65 @@ export const commandCenters: {
       id: "purchases",
       label: "Effortless Purchases",
       panel: {
+        eyebrow: "The Profit Guardian",
+        title: "Every Corporate Rupee Audited. Before It Leaves the Bank",
+        description:
+          "Master your full procurement loop. Create Purchase Orders, Effortless AI Auto maps directly to incoming Vendor Bills & pending customer orders (3-way match) , flag Variances from PO, Billable customer Order against received qty, vendor compliance threats, and manage hard departmental budgets easily.",
+        ctaLabel: "Explore Purchases",
+        ctaHref: "/expenses",
+        stat: {
+          illustration: "/assets/home/cc-stat-illustration.svg",
+          lead: "Achieve up to",
+          value: "10X",
+          headline: "Stronger Profit Protection from Expense Leakages",
+          support: "to reduce unnecessary spending",
+        },
+        features: [
+          {
+            icon: "/assets/home/cc-price-lists.svg",
+            title: "Purchase Order & Cost Centre Tagging",
+            description:
+              "Track expenses accurately with PO and cost centre tagging.",
+          },
+          {
+            icon: "/assets/home/cc-schemes.svg",
+            title: "AI-Powered 3-Way Reconciliation",
+            description:
+              "Match every bill against its purchase order and goods receipt.",
+          },
+          {
+            icon: "/assets/home/cc-outstanding.svg",
+            title: "AI Powered Tax guard",
+            description:
+              "Stay compliant with AI-powered tax validation and controls.",
+          },
+          {
+            icon: "/assets/home/cc-collections.svg",
+            title: "Governance & Approvals",
+            description:
+              "Strengthen control with structured approvals and governance workflows.",
+          },
+          {
+            icon: "/assets/home/cc-gps.svg",
+            title: "The CFO's Consolidated Payment Deck",
+            description:
+              "Get a consolidated view of all payment requests in one place.",
+          },
+          {
+            icon: "/assets/home/cc-visibility.svg",
+            title: "CFO Dashboard",
+            description:
+              "Track cash flow, payables, and key financial metrics in real time.",
+          },
+        ],
+      },
+    },
+    {
+      id: "sales",
+      label: "Effortless Sales",
+      panel: {
         eyebrow: "The Revenue Engine",
-        title: "Stop Asking “Where is the Order?”",
+        title: "Stop Asking \u201CWhere is the Order?\u201D",
         description:
           "Arm your fleet-on-street with an AI Powered mobile command center. Track live visits with authenticated check-ins, automate complex scheme logic on the fly, automate collections and instantly block orders for non-paying accounts.",
         ctaLabel: "Explore Sales",
@@ -304,7 +380,8 @@ export const commandCenters: {
           {
             icon: "/assets/home/cc-schemes.svg",
             title: "AI Powered The Schemes Engine",
-            description: "Automate complex schemes with an AI-powered engine.",
+            description:
+              "Automate complex schemes with an AI-powered engine.",
           },
           {
             icon: "/assets/home/cc-collections.svg",
@@ -320,10 +397,176 @@ export const commandCenters: {
         ],
       },
     },
-    { id: "sales", label: "Effortless Sales" },
-    { id: "buyer-commerce", label: "Effortless Buyer Commerce" },
-    { id: "staff-claims", label: "Effortless Staff Claims" },
-    { id: "contracts", label: "Effortless Contracts" },
+    {
+      id: "buyer-commerce",
+      label: "Effortless Buyer Commerce",
+      panel: {
+        eyebrow: "The Self-Service Engine",
+        title: "Stop Being Your Customer\u2019s Help-Desk",
+        description:
+          "Stop WhatsApp chaos. Transition your regular B2B buyers to a white-labeled, 24/7 web and mobile ordering portal. Let them browse your inventory catalogue, self-place orders within your predefined MoQ Or Price rules, and track their own invoices/payables/statements.",
+        ctaLabel: "Explore Buyer Commerce",
+        ctaHref: "/buyer-portal",
+        stat: {
+          illustration: "/assets/home/cc-stat-illustration.svg",
+          lead: "Built to drive",
+          value: "10X",
+          headline: "Count of Buyers Growth without Loosing control",
+          support: "Powered by automation & visibility",
+        },
+        features: [
+          {
+            icon: "/assets/home/cc-price-lists.svg",
+            title: "Branded Catalogues & Smart Self-Ordering",
+            description:
+              "Share branded catalogues and enable hassle-free self-ordering.",
+          },
+          {
+            icon: "/assets/home/cc-gps.svg",
+            title: "Buyer Portal and Mobile App",
+            description:
+              "Give buyers a portal and app of their own, on web and mobile.",
+          },
+          {
+            icon: "/assets/home/cc-outstanding.svg",
+            title: "The On-Demand Digital Ledger (SOA)",
+            description:
+              "Give customers instant access to their statements and account details.",
+          },
+          {
+            icon: "/assets/home/cc-collections.svg",
+            title: "Real-time Payables Tracking",
+            description:
+              "Track payables in real time and stay on top of every due payment.",
+          },
+          {
+            icon: "/assets/home/cc-schemes.svg",
+            title: "Real-Time Approval Checkpoints",
+            description:
+              "Ensure every transaction passes through the right approvals in real time.",
+          },
+          {
+            icon: "/assets/home/cc-visibility.svg",
+            title: "AI Powered Owner Visibility Panel",
+            description:
+              "Monitor business performance in real time with an AI-powered owner dashboard.",
+          },
+        ],
+      },
+    },
+    {
+      id: "staff-claims",
+      label: "Effortless Staff Claims",
+      panel: {
+        eyebrow: "The Frictionless Fleet",
+        title: "Happy Field Teams. Zero Expense Leakage",
+        description:
+          "Put an end to crumpled fuel receipts, fabricated mileage logs, and painful Excel calculation sheets. Automate local conveyance, travel claims, and daily allowances with robust compliance safeguards.",
+        ctaLabel: "Explore Staff Claims",
+        ctaHref: "/claims",
+        stat: {
+          illustration: "/assets/home/cc-stat-illustration.svg",
+          lead: "Powering up to",
+          value: "10X",
+          headline: "Faster Claims Process - Happy Employees",
+          support: "With paperless claim processing",
+        },
+        features: [
+          {
+            icon: "/assets/home/cc-price-lists.svg",
+            title: "Role-Based Policy Limit Frameworks",
+            description:
+              "Enforce role-based limits and policies across every transaction.",
+          },
+          {
+            icon: "/assets/home/cc-gps.svg",
+            title: "My Bill Box",
+            description:
+              "Let staff gather receipts privately before anything reaches finance.",
+          },
+          {
+            icon: "/assets/home/cc-schemes.svg",
+            title: "AI Powered Policy Enforcements",
+            description:
+              "Automatically enforce business policies with AI-driven controls.",
+          },
+          {
+            icon: "/assets/home/cc-collections.svg",
+            title: "Manager Approvals with Admin-Overrides",
+            description:
+              "Enable manager approvals with admin override controls when needed.",
+          },
+          {
+            icon: "/assets/home/cc-outstanding.svg",
+            title: "The Integrated Single Payment Flow",
+            description:
+              "Streamline collections with a seamless end-to-end payment flow.",
+          },
+          {
+            icon: "/assets/home/cc-visibility.svg",
+            title: "CFO Dashboard",
+            description:
+              "Get complete financial visibility with a unified CFO dashboard.",
+          },
+        ],
+      },
+    },
+    {
+      id: "contracts",
+      label: "Effortless Contracts",
+      panel: {
+        eyebrow: "The Recurring Revenue Module",
+        title: "Put Your Recurring Revenue on AI Autopilot",
+        description:
+          "Never miss a renewal. Automate recurring Proformas, Invoices, and Reminders. Perfect for AMCs, Rentals, and Retainers.",
+        ctaLabel: "Explore Contracts",
+        ctaHref: "/contracts",
+        stat: {
+          illustration: "/assets/home/cc-stat-illustration.svg",
+          lead: "Achieve up to",
+          value: "10X",
+          headline: "Protection against Customer & Revenue churn",
+          support: "without manual follow-ups",
+        },
+        features: [
+          {
+            icon: "/assets/home/cc-price-lists.svg",
+            title: "Create Once, Bill Forever",
+            description: "Set up a contract once and billing runs itself.",
+          },
+          {
+            icon: "/assets/home/cc-collections.svg",
+            title: "Smart Reminders",
+            description:
+              "WhatsApp and email reminders fire on their own, every cycle.",
+          },
+          {
+            icon: "/assets/home/cc-schemes.svg",
+            title: "Two Billing Styles, One System",
+            description:
+              "Milestone-based or recurring \u2014 handled the same way.",
+          },
+          {
+            icon: "/assets/home/cc-gps.svg",
+            title: "Multi-Branch Visibility",
+            description:
+              "See all contracts across every location in one place.",
+          },
+          {
+            icon: "/assets/home/cc-outstanding.svg",
+            title: "Forecast in One Screen",
+            description:
+              "Know exactly what revenue to expect next month.",
+          },
+          {
+            icon: "/assets/home/cc-visibility.svg",
+            title: "Tally Sync",
+            description:
+              "Every invoice flows to Tally without a single manual entry.",
+          },
+        ],
+      },
+    },
   ],
 };
 

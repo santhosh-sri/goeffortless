@@ -14,7 +14,8 @@ import { commandCenters } from "@/data/home";
  * Panel: copy + stat card on the left, a 2×3 feature grid (310px cards,
  * 32px accent-tinted icon tiles) on the right. First feature card is featured.
  *
- * Only tabs that have panel content are rendered — see the note in data/home.ts.
+ * All five panels come from the Figma component 1746:24067. The filter below
+ * is kept as a guard so a tab can never render an empty panel.
  */
 export function CommandCentersSection() {
   const tabs = useMemo(
