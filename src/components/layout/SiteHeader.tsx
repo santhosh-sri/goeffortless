@@ -28,7 +28,9 @@ const CHEVRON = (
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden="true"
-    className="shrink-0 transition-transform duration-200 group-aria-expanded:rotate-180"
+    // The Figma header component applies -rotate-90 to a chevron-down, so it
+    // points right when closed; it rotates down while the panel is open.
+    className="shrink-0 transition-transform duration-200 -rotate-90 group-aria-expanded:rotate-0"
   >
     <path d="m4 6 4 4 4-4" />
   </svg>
