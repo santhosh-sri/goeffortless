@@ -10,7 +10,7 @@ import { commandCenters } from "@/data/home";
  * "One Platform. Five Command Centers." — Figma nodes 1694:2020 / 1614:1477.
  *
  * Tab bar: 8px radius, 20/11 padding, 14/16 semibold. Active pill is
- * `--color-success` (#16BA84) with an accent-tinted drop shadow.
+ * `--color-success` (#16BA84) with a drop shadow tinted the same green.
  * Panel: copy + stat card on the left, a 2×3 feature grid (310px cards,
  * 32px accent-tinted icon tiles) on the right. First feature card is featured.
  *
@@ -31,7 +31,7 @@ export function CommandCentersSection() {
   const showTabs = tabs.length > 1;
 
   return (
-    <Section tone="subtle" spacing="lg">
+    <Section spacing="lg">
       <div className="flex flex-col items-center gap-8 lg:gap-12">
         <SectionHeading
           eyebrow={commandCenters.eyebrow}
@@ -61,8 +61,10 @@ export function CommandCentersSection() {
                     "transition-colors duration-200",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
                     selected
-                      ? "bg-success text-white shadow-[0px_4px_7px_rgba(240,139,50,0.25)]"
-                      : "border border-line-subtle bg-surface text-content-muted hover:text-content"
+                      ? // The glow is tinted with the pill's own green
+                        // (#16BA84 at 25%), not the accent orange.
+                        "bg-success text-white shadow-[0px_4px_7px_rgba(22,186,132,0.25)]"
+                      : "border border-line bg-surface text-content-muted hover:text-content"
                   )}
                 >
                   {tab.label}
@@ -94,16 +96,19 @@ export function CommandCentersSection() {
               </p>
             </div>
 
+            {/* Figma renders this hug-width (168×46), not stretched across the
+                column — the exported `w-full` sits on a wrapper that itself
+                hugs. Full width is kept below lg, where the column is narrow. */}
             <Button
               href={panel.ctaHref}
               fullWidth
-              className="rounded-lg font-bold"
+              className="h-[46px] rounded-lg text-[15px] font-bold lg:w-auto lg:self-start"
               trailingIcon={<span aria-hidden="true">→</span>}
             >
               {panel.ctaLabel}
             </Button>
 
-            <div className="flex w-full flex-col items-center gap-5 rounded-card border border-line bg-accent/10 p-[21px] sm:flex-row">
+            <div className="flex w-full flex-col items-center gap-5 rounded-card bg-accent-surface p-5 sm:flex-row">
               <Image
                 src={panel.stat.illustration}
                 alt=""
@@ -146,7 +151,7 @@ export function CommandCentersSection() {
                       : "border border-line"
                   )}
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-accent/[0.12]">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-accent/[0.15]">
                     <Image
                       src={feature.icon}
                       alt=""

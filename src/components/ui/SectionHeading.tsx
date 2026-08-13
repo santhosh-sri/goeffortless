@@ -19,6 +19,8 @@ export function SectionHeading({
   align = "center",
   as: Heading = "h2",
   className,
+  headingClassName,
+  accentOnNewLine,
 }: {
   eyebrow?: string;
   /** Leading, non-accented part of the heading. Accepts inline HTML. */
@@ -34,6 +36,14 @@ export function SectionHeading({
   align?: "center" | "start";
   as?: "h1" | "h2" | "h3";
   className?: string;
+  /** Extra classes on the heading element itself, e.g. a one-off line-height. */
+  headingClassName?: string;
+  /**
+   * Break before the accent clause instead of letting it wrap naturally.
+   * The pricing hero (Figma 2426:60821) carries a literal <br> there, so
+   * "Expand as you grow." always starts its own line.
+   */
+  accentOnNewLine?: boolean;
 }) {
   const centered = align === "center";
 
@@ -52,13 +62,27 @@ export function SectionHeading({
           "font-light text-content",
           Heading === "h1"
             ? "text-heading-md md:text-heading-lg lg:text-display"
-            : "text-heading-sm md:text-heading-md"
+            : "text-heading-sm md:text-heading-md",
+          headingClassName
         )}
       >
         {parse(title)}
-        {accentTitle && (
-          <>{" "}<span className="font-bold text-accent">{parse(accentTitle)}</span></>
-        )}
+        {accentTitle &&
+          (accentOnNewLine ? (
+            // Only forced from the `lg` breakpoint up: below it the heading is
+            // small enough that an early break leaves a short, ragged line.
+            <span className="font-bold text-accent lg:block">
+              {" "}
+              {parse(accentTitle)}
+            </span>
+          ) : (
+            <>
+              {" "}
+              <span className="font-bold text-accent">
+                {parse(accentTitle)}
+              </span>
+            </>
+          ))}
         {titleSuffix && <>{" "}{parse(titleSuffix)}</>}
       </Heading>
 

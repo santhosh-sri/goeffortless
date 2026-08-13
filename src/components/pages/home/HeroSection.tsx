@@ -36,7 +36,7 @@ const PLAY = (
 
 export function HeroSection() {
   return (
-    <section className="bg-bg pt-10 lg:pt-9">
+    <section className="bg-bg-subtle pt-10 lg:pt-9">
       <Container className="flex flex-col items-start gap-10 lg:flex-row lg:gap-0">
         {/* ---- Copy ---- */}
         <div className="flex w-full flex-col justify-center gap-8 lg:flex-1 lg:pr-5">
@@ -87,14 +87,23 @@ export function HeroSection() {
 
         {/* ---- Media ---- */}
         <div className="flex w-full flex-col items-center justify-center gap-6 xl:w-[596px] xl:shrink-0 lg:gap-8 lg:pl-5">
-          <div className="relative aspect-[682/418] w-full shadow-media">
+          {/*
+            The shadow belongs on the artwork, not the box. `object-contain`
+            letterboxes this transparent PNG inside the aspect box, so a
+            box-shadow here cast a hard-edged rectangle up and to the right of
+            a frame nothing actually fills — clearly visible once the hero band
+            went grey. `drop-shadow` follows the image's alpha instead, which
+            is what Figma shows: soft shading above and right of the devices,
+            and nothing below them.
+          */}
+          <div className="relative aspect-[682/418] w-full">
             <Image
               src="/assets/home/hero-dashboard.png"
               alt="Effortless dashboard shown on a tablet and a phone"
               fill
               priority
               sizes="(min-width: 1024px) 576px, 100vw"
-              className="object-contain"
+              className="object-contain drop-shadow-media"
             />
           </div>
 

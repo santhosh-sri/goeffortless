@@ -17,7 +17,7 @@ import { growingPains } from "@/data/home";
  */
 export function GrowingPainsSection() {
   return (
-    <Section spacing="lg" className="lg:pt-0">
+    <Section tone="subtle" spacing="lg" className="lg:pt-0">
       <div className="flex flex-col items-center gap-8 lg:gap-12">
         <div className="flex w-full flex-col items-center gap-8">
           <SectionHeading

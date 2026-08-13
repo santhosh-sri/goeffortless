@@ -12,7 +12,7 @@ import { pricingGetStarted as data } from "@/data/pricing";
  */
 export function GetStartedSection() {
   return (
-    <Section spacing="lg">
+    <Section tone="subtle" spacing="lg">
       <div className="flex flex-col gap-10">
         <SectionHeading
           eyebrow={data.eyebrow}

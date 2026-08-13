@@ -39,12 +39,16 @@ export function PricingDetailPage({
         <main>
           <Section tone="subtle" spacing="md">
             <div className="flex flex-col gap-10">
+              {/* Same hero as /pricing — Figma 2410:56886 repeats it verbatim,
+                  hard line break before the accent clause included. */}
               <SectionHeading
                 as="h1"
                 eyebrow={pricingHero.eyebrow}
                 title={pricingHero.title}
                 accentTitle={pricingHero.accentTitle}
                 description={pricingHero.description}
+                accentOnNewLine
+                headingClassName="lg:leading-[80px]"
               />
 
               {/* Only this platform's card, per the design. */}

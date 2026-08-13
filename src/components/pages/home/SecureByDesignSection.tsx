@@ -12,7 +12,7 @@ import { secureByDesign } from "@/data/home";
  */
 export function SecureByDesignSection() {
   return (
-    <Section tone="subtle" spacing="lg">
+    <Section spacing="lg">
       <div className="flex flex-col items-center gap-8 lg:gap-10">
         <SectionHeading
           eyebrow={secureByDesign.eyebrow}
