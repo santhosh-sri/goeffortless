@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 import { LOGIN_URL, visibleNav } from "@/data/navigation";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import ThemeToggle from "@/components/ui/ThemeToggle";
+// import ThemeToggle from "@/components/ui/ThemeToggle";
 import Logo from "./Logo";
 import NavDropdown from "./NavDropdown";
 
@@ -42,12 +42,22 @@ export function SiteHeader() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const navRef = useRef<HTMLDivElement | null>(null);
+  // Click-away is measured against the whole header, not just the nav row.
+  // The dropdown panel is a sibling of the nav row (see the comment on the
+  // panel below), so a nav-only ref treated every click *inside* the panel as
+  // an outside click: `pointerdown` unmounted the panel before the link's
+  // `click` could fire, and no dropdown link ever navigated.
+  const headerRef = useRef<HTMLElement | null>(null);
+  // Tracks what opened the current menu. Hovering a nav item already opens it,
+  // so a plain `expanded ? null : label` toggle read the hover-opened state and
+  // closed the panel on the very click meant to open it.
+  const openedBy = useRef<"hover" | "click" | null>(null);
 
   const closeAll = useCallback(() => {
     setOpenMenu(null);
     setDrawerOpen(false);
     setExpandedGroup(null);
+    openedBy.current = null;
   }, []);
 
   // Close menus on route change.
@@ -61,8 +71,9 @@ export function SiteHeader() {
       if (e.key === "Escape") closeAll();
     };
     const onPointerDown = (e: PointerEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
         setOpenMenu(null);
+        openedBy.current = null;
       }
     };
 
@@ -86,12 +97,37 @@ export function SiteHeader() {
 
   const openWithHover = (label: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    setOpenMenu(label);
+    setOpenMenu((current) => {
+      if (current !== label) openedBy.current = "hover";
+      return label;
+    });
+  };
+
+  /**
+   * Click on a nav trigger. A menu the pointer merely hovered open is *kept*
+   * open and promoted to "click"; only a second, deliberate click closes it.
+   */
+  const toggleWithClick = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenMenu((current) => {
+      if (current === label && openedBy.current === "click") {
+        openedBy.current = null;
+        return null;
+      }
+      openedBy.current = "click";
+      return label;
+    });
   };
 
   const closeWithDelay = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => setOpenMenu(null), 300);
+    closeTimer.current = setTimeout(() => {
+      // A menu the user deliberately clicked open stays open until they click
+      // away or press Escape; only hover-opened menus time out.
+      if (openedBy.current === "click") return;
+      setOpenMenu(null);
+      openedBy.current = null;
+    }, 300);
   };
 
   useEffect(
@@ -107,7 +143,10 @@ export function SiteHeader() {
     !!href && (pathname === href || pathname?.startsWith(`${href}/`));
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-line-subtle bg-bg/90 backdrop-blur-[32px]">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 w-full border-b border-line-subtle bg-bg/90 backdrop-blur-[32px]"
+    >
       <Container className="flex items-center justify-between gap-4 py-3 xl:pb-5 xl:pt-10">
         <Logo />
 
@@ -118,14 +157,21 @@ export function SiteHeader() {
           every page scrolled sideways. The drawer covers 1024-1279 instead,
           which also avoids cramming five dropdown panels into that width.
         */}
+        {/*
+          Figma's 32px nav gap is a 1440 measurement. Between 1280 and ~1400
+          the same gap overflows the 1172px of content the gutters leave, and
+          flex resolved it by wrapping "Case Studies" and "Schedule Demo" onto
+          two lines. Hold 32px from 1440 up — the frame the design was measured
+          on — and fall back to 24px below it. The breakpoint is written out
+          rather than using `2xl:`, which is 1536 and would miss 1440 itself.
+        */}
         {/* ---- Desktop navigation ---- */}
         <div
-          ref={navRef}
-          className="hidden items-center gap-8 xl:flex"
+          className="hidden shrink-0 items-center gap-6 xl:flex min-[1440px]:gap-8"
           onMouseLeave={closeWithDelay}
         >
           <nav aria-label="Main">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-6 min-[1440px]:gap-8">
               {visibleNav.map((item) => {
                 if (!item.menu) {
                   return (
@@ -134,7 +180,7 @@ export function SiteHeader() {
                         href={item.href ?? "#"}
                         aria-current={isActive(item.href) ? "page" : undefined}
                         className={cn(
-                          "rounded-sm text-body transition-colors duration-200",
+                          "whitespace-nowrap rounded-sm text-body transition-colors duration-200",
                           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-4 focus-visible:ring-offset-bg",
                           isActive(item.href)
                             ? "text-accent"
@@ -158,11 +204,9 @@ export function SiteHeader() {
                       type="button"
                       aria-expanded={expanded}
                       aria-haspopup="true"
-                      onClick={() =>
-                        setOpenMenu(expanded ? null : item.label)
-                      }
+                      onClick={() => toggleWithClick(item.label)}
                       className={cn(
-                        "group flex items-center gap-2 rounded-sm text-body transition-colors duration-200",
+                        "group flex items-center gap-2 whitespace-nowrap rounded-sm text-body transition-colors duration-200",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-4 focus-visible:ring-offset-bg",
                         expanded
                           ? "text-content"
@@ -181,25 +225,31 @@ export function SiteHeader() {
         </div>
 
         {/* ---- Desktop actions ---- */}
-        <div className="hidden items-center gap-4 xl:flex">
-          <ThemeToggle />
+        <div className="hidden shrink-0 items-center gap-3 xl:flex min-[1440px]:gap-4">
+          {/* Theme switch parked while the site is locked to the white theme —
+              see THEME_LOCKED_LIGHT in ThemeProvider. */}
+          {/* <ThemeToggle /> */}
           <Button
             href={LOGIN_URL}
             external
             variant="secondary"
             size="sm"
-            className="font-semibold"
+            className="whitespace-nowrap font-semibold"
           >
             Login
           </Button>
-          <Button calBooking size="sm" className="font-semibold">
+          <Button
+            calBooking
+            size="sm"
+            className="whitespace-nowrap font-semibold"
+          >
             Schedule Demo
           </Button>
         </div>
 
         {/* ---- Mobile / tablet actions ---- */}
         <div className="flex items-center gap-2 xl:hidden">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <button
             type="button"
             aria-expanded={drawerOpen}
