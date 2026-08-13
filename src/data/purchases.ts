@@ -28,6 +28,13 @@ export const purchasesHero: ProductHeroData = {
     width: 1336,
     height: 1252,
   },
+  video: {
+    mp4: "/assets/purchases/hero-demo.mp4",
+    webm: "/assets/purchases/hero-demo.webm",
+    poster: "/assets/purchases/hero-demo-poster.jpg",
+    device: { left: 2.4, top: 21.01, width: 92.14, height: 55.75 },
+    inset: { x: 0.1156, y: 0.1083, w: 0.7695, h: 0.7903 },
+  },
 };
 
 /**

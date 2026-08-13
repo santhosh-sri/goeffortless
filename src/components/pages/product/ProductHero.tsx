@@ -3,6 +3,7 @@ import React from "react";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import ProductHeroMedia from "./ProductHeroMedia";
 import type { ProductHeroData } from "./types";
 
 /**
@@ -66,15 +67,7 @@ export function ProductHero({ data }: { data: ProductHeroData }) {
 
         {/* ---- Media ---- */}
         <div className="w-full xl:w-[554px] xl:shrink-0">
-          <Image
-            src={data.media.src}
-            alt={data.media.alt}
-            width={data.media.width}
-            height={data.media.height}
-            priority
-            sizes="(min-width: 1024px) 554px, 100vw"
-            className="h-auto w-full rounded-card"
-          />
+          <ProductHeroMedia media={data.media} video={data.video} />
         </div>
       </Container>
     </section>
