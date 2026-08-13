@@ -29,12 +29,17 @@ export function PricingPage({
         <main>
           <Section tone="subtle" spacing="md">
             <div className="flex flex-col gap-10">
+              {/* Figma 2426:60821 sets the hero at 64/80 with a hard break
+                  before the accent clause; the shared 64/72 `display` step and
+                  a natural wrap put "Expand as" on the first line instead. */}
               <SectionHeading
                 as="h1"
                 eyebrow={pricingHero.eyebrow}
                 title={pricingHero.title}
                 accentTitle={pricingHero.accentTitle}
                 description={pricingHero.description}
+                accentOnNewLine
+                headingClassName="lg:leading-[80px]"
               />
 
               <PlatformCards platforms={pricingPlatforms} />

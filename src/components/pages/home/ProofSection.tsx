@@ -17,7 +17,7 @@ import { customerLogos } from "@/data/customerLogos";
  */
 export function ProofSection() {
   return (
-    <section className="bg-bg py-12 lg:py-section-y-lg">
+    <section className="bg-bg-subtle py-12 lg:py-section-y-lg">
       <Container>
         <SectionHeading
           eyebrow={proof.eyebrow}

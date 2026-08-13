@@ -54,6 +54,7 @@ export default {
           DEFAULT: withOpacity("--color-accent"),
           hover: withOpacity("--color-accent-hover"),
           subtle: withOpacity("--color-accent-subtle"),
+          surface: withOpacity("--color-accent-surface"),
         },
         // Status
         success: withOpacity("--color-success"),
@@ -73,6 +74,12 @@ export default {
         raised: "var(--shadow-raised)",
         overlay: "var(--shadow-overlay)",
         media: "var(--shadow-media)",
+      },
+
+      // For transparent artwork, where a box-shadow would outline the element
+      // box rather than the image itself.
+      dropShadow: {
+        media: "var(--drop-shadow-media)",
       },
 
       borderRadius: {

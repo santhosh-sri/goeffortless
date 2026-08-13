@@ -13,7 +13,7 @@ import { growthCta } from "@/data/home";
  */
 export function GrowthCtaSection() {
   return (
-    <Section spacing="lg">
+    <Section tone="subtle" spacing="lg">
       <div className="flex flex-col items-center gap-8 lg:gap-12">
         <SectionHeading
           eyebrow={growthCta.eyebrow}

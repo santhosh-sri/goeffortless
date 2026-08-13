@@ -39,6 +39,7 @@
   --color-accent: 240 139 50; /* #F08B32  primary orange             */
   --color-accent-hover: 221 120 31; /* #DD781F                             */
   --color-accent-subtle: 254 243 233; /* #FEF3E9  accent-tinted background   */
+  --color-accent-surface: 255 238 224; /* #FFEEE0  stat/highlight card fill   */
 
   /* ---- Status ----------------------------------------------------------- */
   --color-success: 22 186 132; /* #16BA84                             */
@@ -54,6 +55,10 @@
   --shadow-raised: 0 4px 16px 0 rgb(16 25 40 / 0.1);
   --shadow-overlay: 0 12px 32px 0 rgb(16 25 40 / 0.16);
   --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.12);
+  /* Same shadow as a filter, for transparent artwork: box-shadow traces
+     the element box, drop-shadow traces the image's alpha. The blur is
+     halved because drop-shadow reads it as a standard deviation. */
+  --drop-shadow-media: 32px -32px 20px rgb(0 0 0 / 0.12);
 }
 
 [data-theme="dark"] {
@@ -83,6 +88,7 @@
   --color-accent: 240 139 50; /* #F08B32  brand is theme-invariant   */
   --color-accent-hover: 255 160 67; /* #FFA043  lighten on dark            */
   --color-accent-subtle: 40 25 12; /* #28190C                             */
+  --color-accent-surface: 48 30 14; /* #301E0E                             */
 
   /* ---- Status ----------------------------------------------------------- */
   --color-success: 22 186 132;
@@ -98,6 +104,7 @@
   --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.5);
   --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
   --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);
+  --drop-shadow-media: 32px -32px 20px rgb(0 0 0 / 0.5);
 }
 
 /* Respect the OS preference until the user makes an explicit choice.
@@ -119,6 +126,7 @@
     --color-border-strong: 100 100 100;
     --color-accent-hover: 255 160 67;
     --color-accent-subtle: 40 25 12;
+    --color-accent-surface: 48 30 14;
     --color-danger: 255 82 82;
     --color-focus: 255 160 67;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
@@ -126,6 +134,7 @@
     --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.5);
     --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
     --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);
+    --drop-shadow-media: 32px -32px 20px rgb(0 0 0 / 0.5);
   }
 }
 

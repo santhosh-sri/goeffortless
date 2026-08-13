@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { cn } from "@/lib/cn";
 import Badge from "@/components/ui/Badge";
 import type { PricingPlatform } from "@/data/pricing";
 
@@ -16,8 +17,16 @@ export function PlatformCards({
 }: {
   platforms: PricingPlatform[];
 }) {
+  // /pricing shows both cards side by side (646px each); a detail page shows
+  // only its own, and Figma draws that one full-bleed at 1312 rather than
+  // leaving the second column empty (e.g. 2410:59310 on the procurement page).
   return (
-    <ul className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+    <ul
+      className={cn(
+        "grid grid-cols-1 gap-5",
+        platforms.length > 1 && "lg:grid-cols-2"
+      )}
+    >
       {platforms.map((platform) => (
         <li key={platform.name} className="flex">
           <div className="flex w-full flex-col overflow-hidden rounded-card bg-surface shadow-card">
