@@ -15,6 +15,32 @@ export interface ProductMedia {
   height: number;
 }
 
+/**
+ * A product recording shown in the hero mockup.
+ *
+ * The recordings are not raw screen captures — each one is already composited
+ * inside its own device mockup (a phone, or a MacBook for Purchase & Expenses)
+ * on a white field. Dropping one into the panel's screen would therefore nest a
+ * phone inside a phone, so instead the clip is scaled and offset until *its*
+ * device lands exactly on the panel's device, and its white margin is clipped.
+ *
+ * `device` is the device's rect as a percentage of the panel image, measured
+ * off the export's own silhouette so the clip lands exactly on the mockup Figma
+ * drew. Measure both sides the same way: reading the panel's laptop from its
+ * dark screen alone while the clip's bounding box included the base once made
+ * the laptop render oversized and burst out of the panel.
+ *
+ * `inset` is where the device sits inside the recording, as 0-1 fractions of
+ * the video frame.
+ */
+export interface ProductScreenVideo {
+  mp4: string;
+  webm: string;
+  poster: string;
+  device: { left: number; top: number; width: number; height: number };
+  inset: { x: number; y: number; w: number; h: number };
+}
+
 export interface ProductHeroData {
   badges: { label: string; tone: "subtle" | "surface" | "accent" | "success" }[];
   title: string;
@@ -22,6 +48,8 @@ export interface ProductHeroData {
   description: string;
   ctaLabel: string;
   media: ProductMedia;
+  /** Recording layered into the mockup's screen, when the page has one. */
+  video?: ProductScreenVideo;
 }
 
 export interface ProductFeatureHeading {

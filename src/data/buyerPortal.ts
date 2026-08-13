@@ -28,6 +28,13 @@ export const buyerPortalHero: ProductHeroData = {
     width: 1336,
     height: 1144,
   },
+  video: {
+    mp4: "/assets/buyer-portal/hero-demo.mp4",
+    webm: "/assets/buyer-portal/hero-demo.webm",
+    poster: "/assets/buyer-portal/hero-demo-poster.jpg",
+    device: { left: 34.43, top: 10.49, width: 31.06, height: 77.45 },
+    inset: { x: 0.0852, y: 0.0167, w: 0.8278, h: 0.9656 },
+  },
 };
 
 /** 'The "Dependency" Flip' — Figma node 1864:16668. */

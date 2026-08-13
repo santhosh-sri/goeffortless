@@ -28,6 +28,13 @@ export const salesHero: ProductHeroData = {
     width: 586,
     height: 572,
   },
+  video: {
+    mp4: "/assets/sales/hero-demo.mp4",
+    webm: "/assets/sales/hero-demo.webm",
+    poster: "/assets/sales/hero-demo-poster.jpg",
+    device: { left: 32.42, top: 10.84, width: 35.15, height: 76.57 },
+    inset: { x: 0.0852, y: 0.0167, w: 0.8278, h: 0.9656 },
+  },
 };
 
 /** Feature Deep Dive heading — Figma node 1699:17373. */
