@@ -12,11 +12,22 @@ export type Theme = "light" | "dark";
 export const THEME_STORAGE_KEY = "efl-theme";
 
 /**
+ * The site is currently locked to the light theme: the header's theme switch
+ * is commented out and every page is signed off against the white Figma
+ * frames. Flip this to `false` to restore the stored/OS-driven behaviour —
+ * nothing else has to change, and the `<ThemeToggle />` calls in SiteHeader
+ * only need uncommenting.
+ */
+export const THEME_LOCKED_LIGHT = true;
+
+/**
  * Runs before paint in _document.tsx to stamp data-theme on <html>, so the
  * first frame is already correct and there is no light/dark flash.
  * Kept as a string because it is injected via dangerouslySetInnerHTML.
  */
-export const THEME_INIT_SCRIPT = `(function(){try{var s=localStorage.getItem("${THEME_STORAGE_KEY}");var t=s==="light"||s==="dark"?s:(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
+export const THEME_INIT_SCRIPT = THEME_LOCKED_LIGHT
+  ? `(function(){try{document.documentElement.setAttribute("data-theme","light");document.documentElement.style.colorScheme="light";}catch(e){}})();`
+  : `(function(){try{var s=localStorage.getItem("${THEME_STORAGE_KEY}");var t=s==="light"||s==="dark"?s:(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
 
 interface ThemeContextValue {
   theme: Theme;
@@ -29,6 +40,7 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 function readInitialTheme(): Theme {
+  if (THEME_LOCKED_LIGHT) return "light";
   if (typeof document === "undefined") return "light";
   const attr = document.documentElement.getAttribute("data-theme");
   return attr === "dark" ? "dark" : "light";
@@ -52,6 +64,7 @@ export function ThemeProvider({
   }, []);
 
   const applyTheme = useCallback((next: Theme) => {
+    if (THEME_LOCKED_LIGHT) return;
     const root = document.documentElement;
 
     // Freeze transitions for one frame so the swap doesn't animate.
@@ -74,6 +87,7 @@ export function ThemeProvider({
 
   const setTheme = useCallback(
     (next: Theme) => {
+      if (THEME_LOCKED_LIGHT) return;
       setThemeState(next);
       applyTheme(next);
     },
@@ -86,6 +100,7 @@ export function ThemeProvider({
 
   // Follow the OS only while the user has expressed no preference.
   useEffect(() => {
+    if (THEME_LOCKED_LIGHT) return;
     const media = window.matchMedia("(prefers-color-scheme: dark)");
 
     const onChange = (event: MediaQueryListEvent) => {
