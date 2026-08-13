@@ -6,16 +6,23 @@
  * earlier "Problems We Fix" panel (node 982:32835), which the redesign
  * replaced with the Your Challenges / Your Industry / Your Role model.
  *
- * Item glyphs in the Figma panels are emoji rendered as text, not exported
- * vectors (`download_assets` on 1746:24062 returns no SVG assets), so they are
- * carried here as `emoji` rather than icon paths.
+ * Item glyphs are the orange vector icons exported from the dropdown nodes
+ * (2359:51640 Products, 1746:24019 Solutions, 1746:23990 Resources) into
+ * `/public/assets/nav`, referenced by basename via `icon`. They replace the
+ * emoji placeholders an earlier pass used after `download_assets` was called
+ * against 1746:24062, a node that happens to hold no vectors of its own.
  */
 
 export interface NavLink {
   label: string;
   href: string;
-  /** Emoji glyph shown before the label. */
-  emoji?: string;
+  /** Basename of the icon in `/public/assets/nav`, exported from Figma. */
+  icon?: string;
+  /**
+   * Illustration below the copy, as on the Resources "Featured" card
+   * (Figma 1568:30487 — 152×160).
+   */
+  image?: { src: string; width: number; height: number };
   /** Short accent-coloured qualifier under the label. */
   tagline?: string;
   /** Supporting copy. May contain inline HTML. */
@@ -28,6 +35,8 @@ export interface NavLink {
 
 export interface NavGroup {
   title: string;
+  /** Basename of the group-header icon in `/public/assets/nav`. */
+  icon?: string;
   /** Muted line under the group title. */
   subtitle?: string;
   /** Accent-coloured qualifier beside the group title, e.g. "(Add-on)". */
@@ -39,6 +48,13 @@ export interface NavGroup {
 export interface NavMenu {
   columns: NavGroup[][];
   cta?: { label: string; href: string };
+  /**
+   * Group-header icon box. Products (2359:51640) draws these at 40px; every
+   * other panel uses the 20px default.
+   */
+  groupIconSize?: number;
+  /** Dashed rule between columns — only Products has one in Figma. */
+  columnDividers?: boolean;
 }
 
 export interface NavItem {
@@ -58,10 +74,11 @@ export const productMenu: NavMenu = {
     [
       {
         title: "Primary Products",
+        icon: "grp-primary-products",
         subtitle: "Core platforms to run your business operations.",
         links: [
           {
-            emoji: "🧾",
+            icon: "procurement",
             label: "Effortless Procurement",
             badge: "Primary Product",
             tagline: "Procure-to-Pay made simple",
@@ -70,7 +87,7 @@ export const productMenu: NavMenu = {
             href: "/expenses",
           },
           {
-            emoji: "📈",
+            icon: "sales",
             label: "Effortless Sales",
             badge: "Primary Product",
             tagline: "India’s complete Order-to-Cash platform",
@@ -82,11 +99,12 @@ export const productMenu: NavMenu = {
       },
       {
         title: "Extensions for Both Primary Products",
+        icon: "grp-extensions-both",
         note: "(Add-on)",
         subtitle: "Power up your primary product engine with these add-ons",
         links: [
           {
-            emoji: "🧳",
+            icon: "claims",
             label: "Effortless Claims: Field Expense Reimbursement",
             tagline: "Control Employee Expenses",
             description:
@@ -97,11 +115,12 @@ export const productMenu: NavMenu = {
       },
       {
         title: "Extensions for Effortless Sales",
+        icon: "grp-extensions-sales",
         note: "(Add-on)",
         subtitle: "Power up your primary product engine with these add-ons",
         links: [
           {
-            emoji: "🛒",
+            icon: "commerce",
             label: "Effortless Commerce: Self Serve Portal & App (Unlimited)",
             tagline: "24×7 Customer Ordering",
             description:
@@ -109,7 +128,7 @@ export const productMenu: NavMenu = {
             href: "/buyer-portal",
           },
           {
-            emoji: "📄",
+            icon: "contracts",
             label: "Effortless Contracts: Auto billing & Collections.",
             tagline: "Predictable Recurring Revenue",
             description:
@@ -122,45 +141,46 @@ export const productMenu: NavMenu = {
     [
       {
         title: "Other Platform Capabilities",
+        icon: "grp-other-capabilities",
         subtitle: "Built-in modules that strengthen your business.",
         links: [
           {
-            emoji: "🏦",
+            icon: "banking",
             label: "Banking & Cash Flow Management",
             description:
               "Real-time bank feeds, reconciliation, cash flow visibility & collections.",
             href: "/allFeatures",
           },
           {
-            emoji: "🔄",
+            icon: "cross-team-workflows",
             label: "Cross-Team Workflows",
             description:
               "Approvals, audit trails, role-based access & 1-click invoice creation.",
             href: "/allFeatures",
           },
           {
-            emoji: "📍",
+            icon: "field-tracking",
             label: "Office & Live Field Team Tracking",
             description:
               "GPS tracking, attendance, field check-ins, geo-fencing & more.",
             href: "/allFeatures",
           },
           {
-            emoji: "💬",
+            icon: "customer-workflows",
             label: "Customer Workflows",
             description:
               "Automated emails, reminders, payment links & customer communications.",
             href: "/allFeatures",
           },
           {
-            emoji: "📊",
+            icon: "business-health",
             label: "Business Health Dashboard & Reports",
             description:
               "360° dashboards, KPIs, financial statements, reports & compliance insights.",
             href: "/allFeatures",
           },
           {
-            emoji: "🔌",
+            icon: "integrations",
             label: "Integrations, Data Exchange, Security & Support",
             description:
               "Tally sync, multi-company, bulk imports, enterprise security & expert support.",
@@ -170,22 +190,23 @@ export const productMenu: NavMenu = {
       },
       {
         title: "One Platform. Endless Possibilities.",
+        icon: "grp-primary-products",
         subtitle: "Everything you need to run your business, in one place.",
         links: [
           {
-            emoji: "🗂️",
+            icon: "unified-data",
             label: "Unified Data",
             description: "Work on accurate, real-time data.",
             href: "/allFeatures",
           },
           {
-            emoji: "⚡",
+            icon: "faster-decisions",
             label: "Faster Decisions",
             description: "Real insights. Real impact. Right when you need it.",
             href: "/allFeatures",
           },
           {
-            emoji: "🔒",
+            icon: "secure-reliable",
             label: "Secure & Reliable",
             description: "Enterprise-grade security you can trust.",
             href: "/allFeatures",
@@ -195,6 +216,8 @@ export const productMenu: NavMenu = {
     ],
   ],
   cta: { label: "Explore All Features", href: "/allFeatures" },
+  groupIconSize: 40,
+  columnDividers: true,
 };
 
 /* ------------------------------------------------------------------ *
@@ -209,30 +232,31 @@ export const solutionMenu: NavMenu = {
     [
       {
         title: "Your Challenges",
+        icon: "grp-your-challenges",
         subtitle: "What do you want to fix?",
         links: [
           {
-            emoji: "📍",
+            icon: "field-force",
             label: "Field Force & Logistics Governance",
             href: "/sales",
           },
           {
-            emoji: "💳",
+            icon: "spend-control",
             label: "Spend Control & AP Automation",
             href: "/expenses",
           },
           {
-            emoji: "📈",
+            icon: "revenue-collection",
             label: "Revenue & Collection Acceleration",
             href: "/sales",
           },
           {
-            emoji: "🛡️",
+            icon: "data-integrity",
             label: "Data Integrity & Compliance Firewalls",
             href: "/compliance",
           },
           {
-            emoji: "⚙️",
+            icon: "operational-velocity",
             label: "Operational Velocity Automation",
             href: "/allFeatures",
           },
@@ -242,25 +266,26 @@ export const solutionMenu: NavMenu = {
     [
       {
         title: "Your Industry",
+        icon: "grp-your-industry",
         subtitle: "Where do you operate?",
         links: [
           {
-            emoji: "📦",
+            icon: "industry-wholesale",
             label: "Wholesale, FMCG & Distribution",
             href: "/case-studies",
           },
           {
-            emoji: "🏭",
+            icon: "industry-manufacturing",
             label: "Mid-Market Manufacturing & Logistics",
             href: "/case-studies",
           },
           {
-            emoji: "🏬",
+            icon: "industry-retail",
             label: "Multi-Outlet Retail & Hospitality Chains",
             href: "/case-studies",
           },
           {
-            emoji: "💼",
+            icon: "industry-services",
             label: "Professional Services, Tech & Agencies",
             href: "/case-studies",
           },
@@ -270,30 +295,31 @@ export const solutionMenu: NavMenu = {
     [
       {
         title: "Your Role",
+        icon: "grp-your-role",
         subtitle: "Who are you?",
         links: [
           {
-            emoji: "🧮",
+            icon: "role-cfo",
             label: "For the CFO & Finance Controller",
             description: "Capital protection, audit trails, and data hygiene",
             href: "/allFeatures",
           },
           {
-            emoji: "🚀",
+            icon: "role-vp-sales",
             label: "For the VP of Sales & Commercial Ops",
             description:
               "Revenue velocity, team output, and friction-free ordering",
             href: "/sales",
           },
           {
-            emoji: "🏆",
+            icon: "role-promoter",
             label: "For the Business Promoter / Founder / CEO",
             description:
               "Growth blockades, operational scale, and internal alignment",
             href: "/about-us",
           },
           {
-            emoji: "🤝",
+            icon: "role-partners",
             label: "For Managing Partners & Project Operations",
             description:
               "Project-level margin protection and billable cost containment",
@@ -314,28 +340,29 @@ export const resourceMenu: NavMenu = {
     [
       {
         title: "Learn",
+        icon: "group-learn",
         links: [
           {
-            emoji: "📝",
+            icon: "blog",
             label: "Blog",
             description: "Strategies for growth & control",
             href: "/blogs",
           },
           {
-            emoji: "🎥",
+            icon: "webinars",
             label: "Webinars",
             description: "Live sessions & masterclasses",
             href: "https://docs.google.com/forms/d/e/1FAIpQLScY9QisYn1E8Sj1vxXwvkQv6qZltjCqWzdg_DLiwtpZbak3ww/viewform",
             external: true,
           },
           {
-            emoji: "📋",
+            icon: "compliance-basics",
             label: "Compliance Basics",
             description: "TDS, GST & Cost Center",
             href: "/compliance",
           },
           {
-            emoji: "❓",
+            icon: "faqs",
             label: "FAQs",
             description: "Common questions answered",
             href: "/faqs",
@@ -346,15 +373,16 @@ export const resourceMenu: NavMenu = {
     [
       {
         title: "Tools",
+        icon: "group-tools",
         links: [
           {
-            emoji: "📱",
+            icon: "download-apps",
             label: "Download Apps",
             description: "iOS & Android App",
             href: "/download-apps",
           },
           {
-            emoji: "🧮",
+            icon: "roi-calculator",
             label: "ROI Calculator",
             description: "Calculate your savings —",
             href: "#",
@@ -366,21 +394,22 @@ export const resourceMenu: NavMenu = {
     [
       {
         title: "Company",
+        icon: "group-company",
         links: [
           {
-            emoji: "✨",
+            icon: "about-us",
             label: "About Us",
             description: "Our mission & leadership",
             href: "/about-us",
           },
           {
-            emoji: "🏅",
+            icon: "certifications",
             label: "Certifications",
             description: "ISO 27001 & Security",
             href: "/certifications-awards",
           },
           {
-            emoji: "📞",
+            icon: "contact-us",
             label: "Contact Us",
             description: "Get in touch with us",
             href: "/contact-us",
@@ -391,11 +420,17 @@ export const resourceMenu: NavMenu = {
     [
       {
         title: "Featured",
+        icon: "group-featured",
         links: [
           {
-            emoji: "🚀",
+            icon: "migrating",
             label: "Thinking of Migrating?",
             description: "Effortless vs <br/>SAP/Oracle/ERPs/Tally Plugins",
+            image: {
+              src: "/assets/nav/migrating-illustration.png",
+              width: 152,
+              height: 160,
+            },
             href: "/migratingFeature",
           },
         ],
