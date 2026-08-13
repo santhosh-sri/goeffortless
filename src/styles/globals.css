@@ -12,11 +12,17 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* The legacy `--background`/`--foreground` pair predates the token system and
+   used to follow `prefers-color-scheme`, independently of the `data-theme`
+   attribute ThemeProvider stamps on <html>. With the site locked to the white
+   theme that meant `body` still painted #0A0A0A for anyone whose OS is in dark
+   mode — invisible behind the redesigned pages' own surfaces, but showing
+   through on short pages and in overscroll. Drive them from `data-theme` so
+   they track the real theme; restore the media query alongside
+   THEME_LOCKED_LIGHT if the switch ever comes back. */
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
