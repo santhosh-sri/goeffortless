@@ -1,9 +1,14 @@
 import { CallBackcards } from "@/interface/type";
-import { CalcomConfig } from "@/utils/calConfig";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import React from "react";
+import { cn } from "@/lib/cn";
+import Button from "./ui/Button";
 
+/**
+ * "Get Started" card trio (blog detail, CMS pages). White card with a `line`
+ * stroke; the featured card carries the lift shadow and a primary CTA, the
+ * others a secondary one.
+ */
 const CallbackCardSection: React.FC<CallBackcards> = ({
   title,
   description,
@@ -15,7 +20,6 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
   redirectUrl,
   icon,
 }) => {
-  const router = useRouter();
   const handleClick = () => {
     if (redirectUrl) {
       window.location.href = redirectUrl;
@@ -24,71 +28,51 @@ const CallbackCardSection: React.FC<CallBackcards> = ({
   };
 
   return (
-    <div className="rounded-lg shadow-md">
-      <div className="text-content flex flex-col justify-between gap-2 p-4 rounded-xl bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] md:h-[346px]">
-        {image && (
-          <Image
-            src={image}
-            alt={image}
-            width={40}
-            height={40}
-            className="md:hidden"
-          />
-        )}
-        {icon && (
-          <div className="bg-white bg-opacity-10 p-2 block md:hidden h-[40px] w-[40px]">
-            <Image src={icon} alt={title || "callback-icon"} width={24} height={24} />
-          </div>
-        )}
-        <p className="text-[16px] md:text-[24px] md:leading-[30px] font-[500] leading-[23px] text-content">
-          {title}
-        </p>
+    <div
+      className={cn(
+        "flex h-full w-full flex-col gap-3 rounded-xl border border-line bg-surface p-5 text-content",
+        primary && "shadow-lift"
+      )}
+    >
+      {image && (
+        <Image src={image} alt="" width={40} height={40} className="md:hidden" />
+      )}
+      {icon && (
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-sm bg-icon-tile md:hidden">
+          <Image src={icon} alt="" width={24} height={24} />
+        </span>
+      )}
+      <p className="text-body-lg font-semibold text-content md:text-heading-sm">
+        {title}
+      </p>
 
-        <p className="text-[14px] leading-[20px] md:text-[16px] font-[300] md:leading-6 md:min-h-[65px] pb-2">
-          {description}
-        </p>
-        <ol className="ml-1">
-          {list?.map((item, index) => (
-            <li
-              key={index}
-              className="text-[13px] leading-[17px] md:text-[16px] font-[300] md:leading-[26px] list-disc ml-4 pb-1"
-            >
-              {item}
-            </li>
-          ))}
-        </ol>
-        <div className="mt-auto flex flex-col items-center gap-[8px]">
-          <button
-            onClick={handleClick}
-            {...CalcomConfig}
-            className={`group relative overflow-hidden transition-all duration-500 ease-in-out
-            mt-4 py-2 px-4 rounded flex items-center justify-center
-            text-[14px] md:text-[16px] font-[500] w-[100%]
-            ${
-              primary
-                ? "bg-[#F08B32] text-white"
-                : "border border-accent text-accent"
-            }
-          `}
+      <p className="text-label text-content-muted md:text-body md:leading-6">
+        {description}
+      </p>
+      <ul className="ml-5 list-disc">
+        {list?.map((item, index) => (
+          <li
+            key={index}
+            className="pb-1 text-label text-content-muted md:text-body md:leading-6"
           >
-            <span className="relative flex items-center md:group-hover:translate-x-[-10px] transition-transform duration-300 ease-in-out">
-              {ctaText}
-              <span className="absolute right-[-1.5rem] top-1/2 -translate-y-1/2 opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                <Image
-                  src={!primary ? "/newHeader.svg" : "/newRightArrow.svg"}
-                  alt="arrow"
-                  width={16}
-                  height={16}
-                  className="block"
-                />
-              </span>
-            </span>
-          </button>
+            {item}
+          </li>
+        ))}
+      </ul>
+      <div className="mt-auto flex flex-col items-center gap-2 pt-3">
+        <Button
+          calBooking={!redirectUrl}
+          onClick={handleClick}
+          variant={primary ? "primary" : "secondary"}
+          fullWidth
+          className="font-semibold"
+        >
+          {ctaText}
+        </Button>
 
-          <p className="text-[13px] leading-[17px] md:text-[14px] font-[300] md:leading-6 text-center text-content-muted">
-            {subText}
-          </p>
-        </div>
+        <p className="text-center text-caption text-content-muted md:text-label">
+          {subText}
+        </p>
       </div>
     </div>
   );

@@ -4,74 +4,68 @@ import { Location } from "@/interface/type";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
 import ContactSection from "./ContactSection";
+import MaskIcon from "./ui/MaskIcon";
 
 interface OfficeLocationsProps {
   locations: Location[];
 }
 
+/**
+ * /contact-us body: office photo cards, the quick-contact pair, then the
+ * form — each a white card with a `line` stroke, stacked 32px apart.
+ */
 const OfficeLocations: React.FC<OfficeLocationsProps> = ({ locations }) => {
   return (
-    <section className="w-full pb-10">
-      <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
-        <h2 className="text-xl md:text-[32px]  font-light text-content mb-4 md:mb-8">
-          Office{" "}
-          <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
-            Locations
-          </span>
+    <section className="flex w-full flex-col gap-6 md:gap-8">
+      <div className="rounded-xl border border-line bg-surface p-5 md:p-8">
+        <h2 className="mb-5 text-heading-sm font-light text-content md:mb-8 md:text-heading-md">
+          Office <span className="font-bold text-accent">Locations</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {locations.map((loc, index) => (
             <div
               key={index}
-              className="relative rounded-lg overflow-hidden md:h-[320px]"
+              className="flex flex-col overflow-hidden rounded-xl border border-line bg-surface"
             >
-              <div className="overflow-hidden max-md:h-[188px]">
+              <div className="overflow-hidden">
                 <Image
                   src={loc.locationSrc}
                   alt={loc.locationName}
                   width={632}
                   height={320}
-                  className="transition-transform duration-500 ease-in-out hover:scale-105 object-cover object-top w-full"
+                  className="h-[188px] w-full object-cover object-top transition-transform duration-500 ease-in-out hover:scale-105 md:h-[240px]"
                 />
               </div>
 
-              <div className="md:absolute bottom-0 left-0 right-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.1)_0%,_#000000_50%)] p-2 md:p-5 text-white">
-                <h2 className="text-base font-medium text-accent">
-                  {loc.locationName}
-                </h2>
-                <div className="flex justify-between gap-3">
-                  <p className="text-sm mt-1">{loc.details}</p>
-
-                  <div className="self-end">
-                    <a
-                      href={loc.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      // Icon-only link: the pin is decorative, so the name has
-                      // to come from the office it points at.
-                      aria-label={`Open ${loc.locationName} in Google Maps`}
-                      className="inline-flex w-6 h-6 items-center justify-center"
-                    >
-                      <Image
-                        src="/location-2.svg"
-                        alt=""
-                        width={24}
-                        height={24}
-                        className="cursor-pointer object-contain"
-                      />
-                    </a>
-                  </div>
+              <div className="flex items-start justify-between gap-3 p-4 md:p-5">
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-body font-medium text-accent">
+                    {loc.locationName}
+                  </h3>
+                  <p className="text-label text-content-muted">{loc.details}</p>
                 </div>
+
+                <a
+                  href={loc.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  // Icon-only link: the pin is decorative, so the name has
+                  // to come from the office it points at.
+                  aria-label={`Open ${loc.locationName} in Google Maps`}
+                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-sm transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+                >
+                  <MaskIcon src="/location-2.svg" tone="muted" className="h-5 w-5" />
+                </a>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="mt-6 md:mt-8">
-        <ContactSection />
-      </div>
-      <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl mt-6 md:mt-8">
+
+      <ContactSection />
+
+      <div className="rounded-xl border border-line bg-surface p-5 md:p-8">
         <ContactForm />
       </div>
     </section>

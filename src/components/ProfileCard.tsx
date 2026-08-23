@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { cn } from "@/lib/cn";
 
 type ProfileCardProps = {
   name?: string;
@@ -8,6 +9,11 @@ type ProfileCardProps = {
   isColoured?: boolean;
 };
 
+/**
+ * Name plate over a team photo. The translucent dark plate is deliberate on
+ * both themes — it sits on the photograph, not the page — so the white text
+ * and the white LinkedIn glyph stay.
+ */
 const ProfileCard: React.FC<ProfileCardProps> = ({
   name,
   title,
@@ -15,19 +21,16 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   isColoured,
 }) => {
   return (
-    <div
-      className="flex items-center justify-between bg-[#00000080] backdrop-blur-lg overflow-hidden
- text-white p-2 w-full absolute bottom-0"
-    >
-      <div className="flex flex-col gap-1 !w-[80%]">
-        <h2 className={`${isColoured ? "text-sm" : "text-2xl"} font-normal`}>
+    <div className="absolute bottom-0 flex w-full items-center justify-between gap-3 overflow-hidden bg-black/50 p-3 text-white backdrop-blur-lg">
+      <div className="flex min-w-0 flex-col gap-0.5">
+        <h3 className={cn("truncate font-medium", isColoured ? "text-label" : "text-body-lg")}>
           {name}
-        </h2>
-        <p className={`${isColoured ? "text-xs" : "text-lg"} font-light`}>
+        </h3>
+        <p className={cn("truncate text-white/80", isColoured ? "text-caption" : "text-body")}>
           {title}
         </p>
       </div>
-      <div className={`!w-[20%] flex justify-end`}>
+      {linkedinUrl && (
         <a
           href={linkedinUrl}
           target="_blank"
@@ -35,16 +38,16 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           // The image is decorative, so the link needs its own name: without
           // one a screen reader announces a row of identical "link" items.
           aria-label={`${name} on LinkedIn`}
-          className=""
+          className="inline-flex shrink-0 rounded-sm transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           <Image
-            src={"linkedIn.svg"}
+            src="/linkedIn.svg"
             alt=""
-            width={`${isColoured ? 26 : 40}`}
-            height={`${isColoured ? 26 : 40}`}
+            width={isColoured ? 26 : 36}
+            height={isColoured ? 26 : 36}
           />
         </a>
-      </div>
+      )}
     </div>
   );
 };

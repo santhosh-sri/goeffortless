@@ -1,55 +1,50 @@
 import React from "react";
-import Democta from "../Democta";
-import { TrackDataProps } from "@/interface/type";
 import Image from "next/image";
-import { CalcomConfig } from "@/utils/calConfig";
+import Democta from "../Democta";
+import Button from "../ui/Button";
+import { TrackDataProps } from "@/interface/type";
 
 const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
   return (
-    <div className="flex flex-col gap-10 pt-4">
-      <div className="flex justify-center items-center flex-wrap gap-8">
+    <div className="flex w-full flex-col gap-10">
+      <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
         <Democta customStyle={true} ctaText={"Book Demo"} />
-        <button
-          id="democta"
-          {...CalcomConfig}
-          className="py-[14px] max-md:w-full cursor-pointer border border-accent text-accent font-medium px-5 rounded flex items-center justify-center text-[14px]"
+        <Button
+          variant="secondary"
+          size="hero"
+          calBooking
+          leadingIcon={
+            <Image
+              src={"/supportcall.svg"}
+              alt=""
+              width={20}
+              height={20}
+              className="h-5 w-5"
+              unoptimized
+            />
+          }
+          className="w-full font-semibold sm:w-auto"
         >
-          <span className="flex items-center gap-2">
-            <span className="">
-              <Image
-                src={"/supportcall.svg"}
-                alt="tel"
-                width={16}
-                height={16}
-                unoptimized
-              />
-            </span>
-            <span className="whitespace-nowrap ">
-              Talk to an Expert (CA Support Available)
-            </span>
-          </span>
-        </button>
+          Talk to an Expert (CA Support Available)
+        </Button>
       </div>
-      <div className="flex justify-center items-center gap-x-[120px] gap-y-6 flex-wrap">
+      <div className="flex flex-wrap items-start justify-center gap-x-[120px] gap-y-6">
         {keyvalues.map((item, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <h2 className="text-accent font-normal text-3xl">
+          <div key={index} className="flex flex-col items-center gap-1 text-center">
+            <p className="text-heading-md font-bold text-accent md:text-heading-lg">
               {item?.title}
-            </h2>
-            <p className="text-content-muted text-sm md:text-base font-normal">
+            </p>
+            <p className="text-label text-content-muted md:text-body">
               {item?.desc}
             </p>
           </div>
         ))}
       </div>
-      <div>
-        <p className="text-content-muted text-sm md:text-base font-light text-center">
-          TDS automation software • GST reconciliation app • Purchase invoice
-          app • Expense claim software India • Multi-GSTIN accounting • Cost
-          centre reporting • Vendor bill booking • Tally integrated finance
-          automation
-        </p>
-      </div>
+      <p className="text-center text-label text-content-subtle md:text-body">
+        TDS automation software • GST reconciliation app • Purchase invoice app
+        • Expense claim software India • Multi-GSTIN accounting • Cost centre
+        reporting • Vendor bill booking • Tally integrated finance automation
+      </p>
     </div>
   );
 };

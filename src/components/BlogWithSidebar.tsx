@@ -151,7 +151,7 @@ const BlogWithSidebar = () => {
                   onClick={() => scrollToSection(section.id)}
                   className={`text-left w-full text-content text-base font-normal py-2 px-3 rounded ${
                     activeId === section.id &&
-                    "border-t-0 bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5 drop-shadow-sm"
+                    "bg-accent-subtle text-accent"
                   }`}
                 >
                   {section.title}

@@ -1,5 +1,7 @@
 import React from "react";
 import { TrackDataProps } from "@/interface/type";
+import { cn } from "@/lib/cn";
+import { COMPLIANCE_CARD, COMPLIANCE_CARD_ACCENT } from "./card";
 
 interface TrackData {
   trackData: TrackDataProps[];
@@ -7,18 +9,17 @@ interface TrackData {
 
 const TrackSection: React.FC<TrackData> = ({ trackData }) => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex w-full flex-col gap-6">
       {trackData.map((item, index) => (
         <div
           key={index}
-          className="rounded-lg border-t-0 bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5
-    drop-shadow-sm even:border-l-[8px] even:border-l-[#F08B32]"
+          className={cn(index % 2 === 1 ? COMPLIANCE_CARD_ACCENT : COMPLIANCE_CARD)}
         >
-          <div className="p-5 flex flex-col gap-4">
-            <h2 className="text-base md:text-xl text-content font-medium">
+          <div className="flex flex-col gap-3 p-5">
+            <h3 className="text-body font-medium text-content md:text-body-lg">
               {item.title}
-            </h2>
-            <p className="text-sm md:text-base font-normal text-content-muted">
+            </h3>
+            <p className="text-label text-content-muted md:text-body">
               {item.desc}
             </p>
           </div>

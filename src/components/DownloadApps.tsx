@@ -1,9 +1,16 @@
 "use client";
 
 import { DownloadSectionProps } from "@/interface/type";
-import { CalcomConfig } from "@/utils/calConfig";
 import Image from "next/image";
+import Badge from "./ui/Badge";
+import Button from "./ui/Button";
+import Section from "./ui/Section";
 
+/**
+ * One app block on /download-apps — copy beside the phone render, laid out
+ * like the product hero. The two blocks alternate bands (`tone`), so the page
+ * runs white heading → grey → white → grey strip → footer.
+ */
 const DownloadApps = ({
   appName = "Effortless",
   title = "All Your Sales & Finance in",
@@ -14,85 +21,92 @@ const DownloadApps = ({
   playStoreLink = "#",
   imageSrc,
   option,
-}: DownloadSectionProps) => {
+  tone = "subtle",
+}: DownloadSectionProps & { tone?: "default" | "subtle" }) => {
   return (
-    <div>
-      <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-      <section className="w-full bg-surface flex flex-col gap-6 lg:flex-row max-lg:items-center justify-between lg:px-[80px] md:pt-20">
-        <div className="max-w-3xl space-y-6 max-md:py-8 max-md:px-5">
-          <div className="inline-block bg-[linear-gradient(124.77deg,rgba(255,255,255,0.1)_-5.51%,rgba(255,255,255,0)_104.11%)] text-sm px-3 py-1 rounded-full text-white">
-            {appName}
+    <Section
+      tone={tone}
+      spacing="lg"
+      containerClassName="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between"
+    >
+      <div className="flex w-full flex-col gap-8 lg:max-w-[700px]">
+        <div className="flex flex-col items-start gap-6">
+          <div className="flex flex-col items-start gap-4">
+            <Badge tone={tone === "subtle" ? "surface" : "subtle"}>{appName}</Badge>
+            <h2 className="text-heading-md font-light text-content md:text-heading-lg">
+              {title} <span className="font-bold text-accent">{highlight}</span>
+            </h2>
           </div>
-
-          <h2 className="text-xl md:text-[32px] font-light leading-snug text-content">
-            {title}{" "}
-            <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
-              {highlight}
-            </span>
-          </h2>
-
-          <p className="text-content-muted text-sm md:text-xl font-light">
+          <p className="text-body text-content-muted md:text-body-lg md:leading-6">
             {description}
           </p>
-
-          <p className="text-content-muted text-sm md:text-xl font-light">
+          <p className="text-body text-content-muted md:text-body-lg md:leading-6">
             {subDescription}
-          </p>
-
-          <div className="md:hidden">
-            <Image
-              src={imageSrc}
-              alt="App preview"
-              width={357}
-              height={740}
-              className="justify-self-center"
-            />
-          </div>
-
-          <div className="flex max-lg:justify-center gap-8 pt-4">
-            <a href={appStoreLink} target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/appstore.png"
-                alt="Download on the App Store"
-                width={188}
-                height={56}
-              />
-            </a>
-            <a href={playStoreLink} target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/googlePlay.png"
-                alt="Get it on Google Play"
-                width={188}
-                height={56}
-              />
-            </a>
-          </div>
-          <div className=" flex max-lg:justify-center">
-            <button
-              {...CalcomConfig}
-              className="bg-[#F08B32] text-white text-sm md:text-xl font-medium p-2 md:p-4 rounded hover:bg-[#F08B32] transition-all w-full md:w-[412px]"
-            >
-              Book a Demo
-            </button>
-          </div>
-
-          <p className="text-content-muted text-sm md:text-xl font-light md:pb-4 !md:mb-6">
-            {option}
           </p>
         </div>
 
-        <div className="hidden md:block">
+        <div className="w-full md:hidden">
           <Image
             src={imageSrc}
             alt="App preview"
             width={357}
             height={740}
-            className="justify-self-center"
+            className="mx-auto h-auto w-full max-w-[300px]"
           />
         </div>
-      </section>
-      <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-    </div>
+
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+          <a
+            href={appStoreLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+          >
+            <Image
+              src="/appstore.png"
+              alt="Download on the App Store"
+              width={188}
+              height={56}
+              className="h-12 w-auto md:h-14"
+            />
+          </a>
+          <a
+            href={playStoreLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+          >
+            <Image
+              src="/googlePlay.png"
+              alt="Get it on Google Play"
+              width={188}
+              height={56}
+              className="h-12 w-auto md:h-14"
+            />
+          </a>
+        </div>
+
+        <Button calBooking size="hero" className="w-full font-semibold sm:w-auto sm:min-w-[260px] sm:self-start">
+          Book a Demo
+        </Button>
+
+        {option && (
+          <p className="text-body text-content-muted md:text-body-lg md:leading-6">
+            {option}
+          </p>
+        )}
+      </div>
+
+      <div className="hidden w-full md:block lg:w-[357px] lg:shrink-0">
+        <Image
+          src={imageSrc}
+          alt="App preview"
+          width={357}
+          height={740}
+          className="mx-auto h-auto w-full max-w-[357px]"
+        />
+      </div>
+    </Section>
   );
 };
 

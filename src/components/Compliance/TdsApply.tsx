@@ -1,36 +1,44 @@
 import { TrackDataProps } from "@/interface/type";
-import parse from "html-react-parser";
 import Image from "next/image";
 import React from "react";
+import { parseCms } from "@/lib/cmsHtml";
+import { COMPLIANCE_CARD } from "./card";
+
+/**
+ * Recolours white artwork to the accent orange (#F08B32). Used for the TDS
+ * section glyphs (/194A.svg …), which mix filled silhouettes with cut-outs
+ * and so cannot be used as a mask the way plain glyph icons can.
+ */
+export const TINT_ACCENT =
+  "[filter:brightness(0)_saturate(100%)_invert(63%)_sepia(49%)_saturate(1364%)_hue-rotate(337deg)_brightness(98%)_contrast(92%)]";
 
 const TdsApply = ({ tdsApply }: { tdsApply: TrackDataProps[] }) => {
   return (
     <div
-      className={`grid grid-cols-1 ${
+      className={`grid w-full grid-cols-1 gap-6 ${
         tdsApply?.length > 4 ? "md:grid-cols-3" : "md:grid-cols-2"
-      } gap-6`}
+      }`}
     >
       {tdsApply?.map((item, index) => (
-        <div
-          key={index}
-          className="rounded-lg border-t-0 bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5
-    drop-shadow-sm p-5"
-        >
+        <div key={index} className={`${COMPLIANCE_CARD} p-5`}>
           <div className="flex items-center gap-4">
-            <Image
-              src={item.icon || "/tdstick.svg"}
-              alt="resource"
-              width={48}
-              height={48}
-              unoptimized
-            />
-            <div className="flex flex-col gap-2">
-              <h2 className="text-content font-medium text-base md:text-xl">
+            <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-icon-tile">
+              <Image
+                src={item.icon || "/tdstick.svg"}
+                alt=""
+                width={48}
+                height={48}
+                className={`h-12 w-12 ${TINT_ACCENT}`}
+                unoptimized
+              />
+            </span>
+            <div className="flex flex-col gap-1.5">
+              <h3 className="text-body font-medium text-content md:text-body-lg">
                 {item?.title}
-              </h2>
+              </h3>
               {item.desc && (
-                <p className="text-content-muted text-sm font-light">
-                  {parse(item.desc)}
+                <p className="text-label text-content-muted">
+                  {parseCms(item.desc)}
                 </p>
               )}
             </div>

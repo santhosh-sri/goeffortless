@@ -1,70 +1,58 @@
 import { CompanyValue } from "@/interface/type";
-import parse from "html-react-parser";
-import Image from "next/image";
 import { FC } from "react";
+import { cn } from "@/lib/cn";
+import { parseCms } from "@/lib/cmsHtml";
+import MaskIcon from "./ui/MaskIcon";
 
+/**
+ * One cell of the "Ideal Partners" (no icon, 4-up) and "Partner Benefits"
+ * (icon, 3-up) grids. The dark site separated cells with white gradient
+ * rules; on the light theme they are dashed `line` dividers, as on the
+ * product pages' Billing Modes cards.
+ */
 const PartnerList: FC<CompanyValue> = ({
-  index,
+  index = 0,
   icon,
   title,
   description,
   topBottomBorder,
 }) => {
+  const withIcon = Boolean(icon);
+  const columns = withIcon ? 3 : 4;
+  const firstInRow = index % columns === 0;
+
   return (
     <div
-      className={`
-        text-white relative
-        flex flex-col md:gap-5 gap-3 
-        items-start text-start w-full
-       
-        ${
-          icon
-            ? `${topBottomBorder ? "md:gradient-border-top-bottom" : "md:gradient-border-top md:min-h-[450px]"} !min-h-0 md:!h-[515px]  max-md:gradient-border-bottom md:px-8 py-4`
-            : `md:gradient-border-left md:!min-h-[310px] max-md:gradient-border-bottom md:first:before:hidden py-4 pt-2`
-        }
-      `
-        .trim()
-        .replace(/\s+/g, " ")}
+      className={cn(
+        "relative flex w-full flex-col items-start gap-4 py-6 text-start md:gap-5",
+        withIcon ? "md:px-8 md:py-8" : "md:px-6",
+        // Vertical rule between columns, horizontal rule between stacked cells.
+        "border-t border-dashed border-line first:border-t-0 md:border-t-0",
+        !firstInRow && "md:border-l md:border-dashed md:border-line",
+        topBottomBorder && "md:border-t"
+      )}
     >
       {icon && (
-        <div className="flex-shrink-0 md:pt-8 pt-2">
-          <Image
-            src={icon}
-            alt={title}
-            width={46}
-            height={46}
-            className="md:h-[46px] md:w-[46px] w-[44px] h-[44px] object-contain"
-          />
-        </div>
+        // The CMS icons are white-on-transparent artwork drawn for the dark
+        // site, so they are used as a mask and painted accent, as the product
+        // pages' icon tiles are.
+        <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-sm bg-icon-tile">
+          <MaskIcon src={icon} className="h-8 w-8" />
+        </span>
       )}
 
       <h3
-        className={`
-          flex-shrink-0 w-full text-content
-          ${
-            icon
-              ? "md:text-[30px] text-[16px] leading-[26px] md:leading-[38px] font-[500] md:min-h-[76px]"
-              : "md:text-[40px] font-[400] md:leading-[48px] md:min-h-[96px] text-[20px] leading-[24px]"
-          }
-        `
-          .trim()
-          .replace(/\s+/g, " ")}
+        className={cn(
+          "w-full text-content",
+          withIcon
+            ? "text-heading-sm font-medium"
+            : "text-heading-sm font-normal md:text-heading-md"
+        )}
       >
-        {parse(title)}
+        {parseCms(title)}
       </h3>
 
-      <p
-        className={`
-          flex-1 leading-[20px] md:leading-[32px] text-content font-[300] w-full
-          ${
-            icon
-              ? "md:text-[20px] text-[13px] md:h-[250px] md:font-[400] md:pb-8 pb-4"
-              : "md:text-[18px] text-[13px] md:pb-8 max-md:pb-[10px]"
-          }
-        `
-          .trim()
-          .replace(/\s+/g, " ")}
-      >
+      <p className="w-full text-body text-content-muted md:text-body-lg md:leading-7">
         {description}
       </p>
     </div>

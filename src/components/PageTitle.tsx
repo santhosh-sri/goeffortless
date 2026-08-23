@@ -1,60 +1,33 @@
 import { FirstFoldContent } from "@/interface/type";
 import Image from "next/image";
 import React from "react";
+import Badge from "./ui/Badge";
 
-const PageTitle: React.FC<FirstFoldContent> = ({
-  pageHeading,
-  pageName,
-  logo,
-  ishome,
-}) => {
+/**
+ * The eyebrow chip above a CMS page's heading.
+ *
+ * Previously a dark #303032 pill with a white gradient sheen; now the same
+ * `Badge` the redesigned pages use. `tone` lets the caller match the band
+ * (white chip on grey, grey chip on white — see Badge).
+ */
+const PageTitle: React.FC<
+  FirstFoldContent & { tone?: React.ComponentProps<typeof Badge>["tone"] }
+> = ({ pageHeading, pageName, logo, ishome, tone = "surface" }) => {
   return (
-    <div
-      style={{
-        background:
-          "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
-      }}
-      className=" rounded-[42px]"
-    >
-      <div
-        style={{
-          background:
-            "linear-gradient(124.77deg, rgba(255, 255, 255, 0.1) -5.51%, rgba(255, 255, 255, 0) 104.11%)",
-        }}
-        className={`flex ${
-          ishome ? "gap-1" : "gap-2"
-        } bg-[#303032] p-2 px-[10px] py-[6px]  w-fit items-center justify-center rounded-[42px] text-[#ffff]`}
-      >
-        {ishome && (
-          <p className="text-[14px] md:text-[14px] leading-5 font-[400]">
-            Say 👋 to
-          </p>
-        )}{" "}
-        {logo && (
-          <Image
-            src={logo}
-            alt="Effortless-logo"
-            width={20}
-            height={20}
-            className="mt-[-2px]"
-          />
-        )}
-        {pageName && (
-          <p className="text-[14px] md:text-[15px] leading-5 text-accent font-[400]">
-            {pageName}
-          </p>
-        )}
-        {pageHeading && (
-          <p
-            className={`text-[14px] ${
-              ishome ? "md:text-[14px]" : "md:text-[15px]"
-            } leading-5 font-[400] text-content`}
-          >
-            {pageHeading}
-          </p>
-        )}
-      </div>
-    </div>
+    <Badge tone={tone}>
+      {ishome && <span>Say 👋 to</span>}
+      {logo && (
+        <Image
+          src={logo}
+          alt=""
+          width={16}
+          height={16}
+          className="h-4 w-4"
+        />
+      )}
+      {pageName && <span className="text-accent">{pageName}</span>}
+      {pageHeading && <span>{pageHeading}</span>}
+    </Badge>
   );
 };
 

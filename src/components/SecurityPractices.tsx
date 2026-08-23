@@ -23,27 +23,30 @@ const SecurityPractices: React.FC<
   }, []);
 
   return (
-    <div>
-      <div className={`fixed top-0 w-full z-[999]`}>
-        <SiteHeader />
-      </div>
-      <div className="bg-bg text-content">
-        <div className="container mx-auto px-4 text-center pt-32 pb-16 md:pt-40 md:pb-20">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+    // Same band rhythm as the product pages: grey hero (48 under the header,
+    // 80 above the body), white body, 80px grey strip, footer.
+    <div className="min-h-screen bg-bg text-content">
+      <SiteHeader />
+      <main>
+        <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+          <div className="mx-auto w-full max-w-frame px-5 text-center md:px-10 lg:px-gutter">
+          <h1 className="mb-4 text-heading-md font-normal text-content md:text-heading-lg lg:text-display">
             Security at Effortless
           </h1>
-          <p className="text-lg text-gray-300 mb-2 max-w-3xl mx-auto">
+          <p className="text-body-lg text-content-muted mb-2 max-w-3xl mx-auto">
             Protecting and empowering your business to grow and thrive.
           </p>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-body-lg text-content-muted max-w-3xl mx-auto">
             Last Updated on: <span className="font-bold">10th May 2024</span>
           </p>
-        </div>
-        <div className="container mx-auto px-4 pb-24 max-w-4xl">
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          </div>
+        </section>
+        <section className="bg-bg py-12 lg:py-20">
+          <div className="mx-auto w-full max-w-4xl px-5 md:px-10">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Organizational Security
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             At Effortless, we ensure that each customer's data is logically
             segregated from others, maintaining strict data isolation. We employ
             state-of-the-art encryption both at rest and in transit, and our
@@ -51,10 +54,10 @@ const SecurityPractices: React.FC<
             provide the highest level of data protection.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-2 text-gray-100">
+          <h3 className="mb-2 mt-6 text-body-lg font-semibold text-content">
             Employee Background Checks
           </h3>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             We conduct comprehensive background checks on all employees,
             performed by reputable external agencies. These checks are crucial
             to verifying no criminal history, confirming past employment, and
@@ -63,10 +66,10 @@ const SecurityPractices: React.FC<
             pose no security risks.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-2 text-gray-100">
+          <h3 className="mb-2 mt-6 text-body-lg font-semibold text-content">
             Security Awareness Training
           </h3>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             Security training begins at induction, with each employee signing
             confidentiality and acceptable use agreements. Ongoing education on
             information security, privacy, and compliance is provided, tailored
@@ -74,10 +77,10 @@ const SecurityPractices: React.FC<
             to measure their knowledge and identify areas for improvement.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-2 text-gray-100">
+          <h3 className="mb-2 mt-6 text-body-lg font-semibold text-content">
             Dedicated Security and Privacy Teams
           </h3>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             Our specialized teams are tasked with implementing and managing our
             security and privacy programs. They develop our security
             architecture, run regular security assessments, and monitor our
@@ -85,20 +88,20 @@ const SecurityPractices: React.FC<
             round-the-clock protection.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-2 text-gray-100">
+          <h3 className="mb-2 mt-6 text-body-lg font-semibold text-content">
             Internal Audit and Compliance
           </h3>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             Effortless has a dedicated team to ensure our policies and
             procedures meet industry standards. This team performs regular
             internal audits and supports external audits, ensuring we comply
             with regulatory requirements and best practices.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-2 text-gray-100">
+          <h3 className="mb-2 mt-6 text-body-lg font-semibold text-content">
             Endpoint Security
           </h3>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             All employee workstations and mobile devices are secured with
             up-to-date operating systems, antivirus software, and are configured
             according to our strict security standards. This includes data
@@ -106,23 +109,23 @@ const SecurityPractices: React.FC<
             automatic locking during periods of inactivity.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Physical Security</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">At the Workplace:</strong> Access
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Physical Security</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">At the Workplace:</strong> Access
             to our facilities is regulated through the use of programmed access
             cards, which are monitored and managed by our HR team. Detailed logs
             are maintained to quickly identify and rectify any access
             discrepancies.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">At Data Centers:</strong> Physical
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">At Data Centers:</strong> Physical
             security at our data centers is managed by trusted co-location
             providers, with Effortless handling server and storage management.
             Access is limited to authorized personnel only, with two-factor
             authentication and biometric checks required for entry.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">
               Network and Infrastructure Security:
             </strong>
             Our network is protected by firewalls and segmented to secure
@@ -132,21 +135,21 @@ const SecurityPractices: React.FC<
             alerts on network security.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Advanced Security Measures
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">DDoS Prevention:</strong> We use
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">DDoS Prevention:</strong> We use
             advanced DDoS mitigation tools to protect our services from
             distributed denial-of-service attacks.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">Server Hardening:</strong> Servers
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">Server Hardening:</strong> Servers
             are hardened to eliminate any unnecessary services, close unused
             ports, and change default settings to enhance security.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">
               Intrusion Detection and Prevention:
             </strong>{" "}
             We employ systems to detect and prevent unauthorized access,
@@ -154,10 +157,10 @@ const SecurityPractices: React.FC<
             suspicious patterns.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Single Sign-On (SSO)
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             Effortless provides Single Sign-On (SSO) functionality, allowing
             users to access multiple services through the same sign-in page and
             authentication credentials. Our integrated Identity and Access
@@ -167,7 +170,7 @@ const SecurityPractices: React.FC<
             enabling users to authenticate using their existing Google or Apple
             ID credentials when accessing Effortless services.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             Utilizing Google Sign-In and Apple ID sign-in not only streamlines
             the authentication process but also enhances security and
             compliance. These platforms are known for their robust security
@@ -177,52 +180,54 @@ const SecurityPractices: React.FC<
             management of user identities and permissions.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Data Security Practices
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">Encryption:</strong> We use robust
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">Encryption:</strong> We use robust
             encryption protocols for data in transit and at rest, ensuring that
             sensitive information is securely encoded.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">Data Isolation:</strong> Our
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">Data Isolation:</strong> Our
             architecture ensures that no client can access another's data, with
             strict controls and auditing to enforce this segregation.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
-            <strong className="text-gray-100">Secure Data Handling:</strong> All
+          <p className="mb-6 leading-relaxed text-content-muted">
+            <strong className="text-content">Secure Data Handling:</strong> All
             changes to systems go through a rigorous change management process,
             and any new features are thoroughly tested against security
             vulnerabilities.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Incident Response and Breach Notification
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             We have a formal incident response protocol to handle security
             breaches effectively. This includes immediate investigation,
             mitigation measures, and compliance with legal obligations to notify
             affected parties and regulatory bodies.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Conclusion</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Conclusion</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             At Effortless, we are committed to maintaining the highest standards
             of security. We continuously strive to enhance our security measures
             and protocols. For any questions or additional information, please
             contact our security team at{" "}
             <a
               href="mailto:security@goeffortless.ai"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               security@goeffortless.ai
             </a>
             . Thank you for trusting Effortless with your business needs.
           </p>
-        </div>
-      </div>
+          </div>
+        </section>
+      </main>
+      <div aria-hidden="true" className="h-12 bg-bg-subtle lg:h-20" />
       <SiteFooter />
     </div>
   );

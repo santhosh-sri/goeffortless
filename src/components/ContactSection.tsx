@@ -1,97 +1,84 @@
 import Image from "next/image";
+import MaskIcon from "./ui/MaskIcon";
 
+const CARD = "rounded-xl border border-line bg-surface p-5 md:p-8";
+const ROW =
+  "flex w-full items-center gap-4 rounded-lg bg-bg-subtle p-4 text-left transition-colors duration-200 hover:bg-accent-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus";
+
+/** Quick Contact + Connect With Us cards on /contact-us. */
 export default function ContactSection() {
+  const socials = [
+    {
+      icon: "/assets/footer/instagram.svg",
+      url: "https://www.instagram.com/goeffortless.ai/",
+      name: "Instagram",
+    },
+    {
+      icon: "/assets/footer/x.svg",
+      url: "https://x.com/go_effortless",
+      name: "Twitter",
+    },
+    {
+      icon: "/assets/footer/linkedin.svg",
+      url: "https://www.linkedin.com/company/igoeffortless/",
+      name: "LinkedIn",
+    },
+  ];
+
   return (
-    <section className="">
-      <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+    <section className="w-full">
+      <div className="grid gap-6 md:grid-cols-2 md:gap-8">
         {/* Quick Contact */}
-        <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
-          <h2 className="text-lg md:text-[32px] text-content font-light mb-4 md:mb-8">
-            Quick{" "}
-            <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">
-              Contact
-            </span>
+        <div className={CARD}>
+          <h2 className="mb-5 text-heading-sm font-light text-content md:mb-6 md:text-heading-md">
+            Quick <span className="font-bold text-accent">Contact</span>
           </h2>
 
-          <div className="space-y-5">
-            {/* Email */}
-            <div className="flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-3 md:p-5">
-              <Image src={"/envelope.svg"} alt="Icon" width={24} height={24} />
-              <div>
-                <p className="font-normal text-base text-content">
+          <div className="flex flex-col gap-4">
+            <a href="mailto:hello@goeffortless.ai" className={ROW}>
+              <MaskIcon src="/envelope.svg" className="h-6 w-6" />
+              <span>
+                <span className="block text-body text-content">
                   hello@goeffortless.ai
-                </p>
-                <p className="text-content-muted font-light text-sm">
+                </span>
+                <span className="block text-label text-content-muted">
                   General inquiries
-                </p>
-              </div>
-            </div>
+                </span>
+              </span>
+            </a>
 
-            {/* Phone */}
-            <div
-              className="flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-3 md:p-5"
-              onClick={() => {
-                window.location.href = `tel:+919176544422`;
-              }}
-            >
-              <Image
-                src={"/phone.svg"}
-                alt="Icon"
-                width={24}
-                height={24}
-                className="invert brightness-0"
-              />
-              <div>
-                <p className="font-normal text-base text-content">
+            <a href="tel:+919176544422" className={ROW}>
+              <MaskIcon src="/phone.svg" className="h-6 w-6" />
+              <span>
+                <span className="block text-body text-content">
                   +91 91765 44422
-                </p>
-                <p className="text-content-muted text-sm">Mon–Sat, 11AM–7PM IST</p>
-              </div>
-            </div>
+                </span>
+                <span className="block text-label text-content-muted">
+                  Mon–Sat, 11AM–7PM IST
+                </span>
+              </span>
+            </a>
           </div>
         </div>
 
         {/* Connect With Us */}
-        <div className="border border-[#E5E5E533] p-4 md:p-8 rounded-xl">
-          <h2 className="text-lg md:text-[32px] text-content font-light mb-4 md:mb-8">
-            Connect{" "}
-            <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">
-              With Us
-            </span>
+        <div className={CARD}>
+          <h2 className="mb-5 text-heading-sm font-light text-content md:mb-6 md:text-heading-md">
+            Connect <span className="font-bold text-accent">With Us</span>
           </h2>
 
-          <div className="space-y-5">
-            {[
-              {
-                icon: "instagram.svg",
-                url: "https://www.instagram.com/goeffortless.ai/",
-                name: "Instagram",
-              },
-              {
-                icon: "x.svg",
-                url: "https://x.com/go_effortless",
-                name: "Twitter",
-              },
-              {
-                icon: "linkedIn.svg",
-                url: "https://www.linkedin.com/company/igoeffortless/",
-                name: "LinkedIn",
-              },
-            ].map((social) => (
-              <button
+          <div className="flex flex-col gap-4">
+            {socials.map((social) => (
+              <a
                 key={social.name}
-                className="w-full flex gap-4 items-center bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-lg p-3 md:p-5 hover:bg-neutral-800 transition"
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={ROW}
               >
-                <div onClick={() => window.open(social?.url ?? "")}>
-                  <Image
-                    src={social?.icon ?? ""}
-                    alt="Icon"
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <p className="font-normal text-content">{social.name}</p>
-              </button>
+                <Image src={social.icon} alt="" width={24} height={24} className="h-6 w-6" />
+                <span className="text-body text-content">{social.name}</span>
+              </a>
             ))}
           </div>
         </div>

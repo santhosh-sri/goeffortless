@@ -39,15 +39,15 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
   const maxValue = Math.max(...data.bars.map((b) => b.value));
 
   return (
-    <div className=" bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] rounded-lg p-8 md:p-10 border border-white/10">
+    <div className="w-full rounded-xl border border-line bg-surface p-5 md:p-10">
       <div className="flex flex-col gap-6 md:gap-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {data.fields.map((field) => (
             <div key={field.id} className="flex flex-col gap-2">
-              <p className="text-content font-normal text-base leading-6">
+              <p className="text-body text-content">
                 {field.label}
               </p>
-              <div className="text-content-muted bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] w-full rounded p-3 py-2 md:p-4 text-base font-light shadow-md border border-white/10">
+              <div className="w-full rounded-sm border border-line bg-bg-subtle p-3 text-body text-content-muted md:p-4">
                 {field.placeholder}
               </div>
             </div>
@@ -55,7 +55,7 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
         </div>
         {/* Header */}
         <div className="text-center">
-          <h2 className="text-lg md:text-2xl font-semibold text-content leading-[31px]">
+          <h2 className="text-body-lg font-semibold text-content md:text-heading-sm">
             {data.title}
           </h2>
         </div>
@@ -64,12 +64,12 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
         <div className="flex flex-col gap-4 md:gap-6">
           {data.bars.map((bar, i) => (
             <div key={i} className="flex flex-col gap-3">
-              <p className="text-sm md:text-base leading-[25px] text-content font-semibold">
+              <p className="text-label font-semibold text-content md:text-body">
                 {bar.label}
               </p>
 
               <div
-                className="rounded-lg px-4 py-3 text-content md:text-base text-xs font-medium whitespace-nowrap"
+                className="whitespace-nowrap rounded-lg px-4 py-3 text-caption font-medium text-white md:text-body"
                 style={{
                   backgroundColor: bar.color,
                   width: `${(bar.percent / maxValue) * 100}%`,
@@ -79,7 +79,7 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
               </div>
 
               {bar.note && (
-                <p className="text-xs text-accent leading-4 font-normal">
+                <p className="text-caption text-accent">
                   {bar.note}
                 </p>
               )}
@@ -88,12 +88,12 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
         </div>
 
         {/* Productivity Loss */}
-        <div className=" shadow-md border border-white/10 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] py-5 md:py-10 px-4 rounded-lg flex flex-col gap-4">
-          <p className="md:text-base text-sm font-medium text-content text-center">
+        <div className="flex flex-col gap-4 rounded-xl border border-line bg-bg-subtle px-4 py-5 md:py-10">
+          <p className="text-center text-label font-medium text-content md:text-body">
             {data.productivityLoss}{" "}
-            <span className="font-light">{data.spanText}</span>
+            <span className="font-normal text-content-muted">{data.spanText}</span>
           </p>
-          <p className="text-sm md:text-base font-light text-content text-center">
+          <p className="text-center text-label text-content-muted md:text-body">
             You also avoid the{" "}
             <span className="text-accent font-medium">
               ₹9L Productivity Loss
@@ -103,7 +103,7 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
         </div>
 
         {/* Breakdown */}
-        <p className="text-center text-xl md:text-2xl font-semibold text-content leading-[31px]">
+        <p className="text-center text-body-lg font-semibold text-content md:text-heading-sm">
           {data.breakdownTitle}
         </p>
         <div>
@@ -111,15 +111,15 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
             {data.breakdown.map((item, i) => (
               <div
                 key={i}
-                className=" shadow-md border border-white/10 rounded-xl p-4 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] flex flex-col gap-[9px]"
+                className="flex flex-col gap-2 rounded-xl border border-line bg-bg-subtle p-4"
               >
-                <p className="text-content text-sm leading-5 font-normal">
+                <p className="text-label text-content-muted">
                   {item.label}
                 </p>
-                <p className="text-accent text-xl md:text-2xl font-medium leading-8">
+                <p className="text-body-lg font-bold text-accent md:text-heading-sm">
                   {item.value}
                 </p>
-                <p className="text-content text-sm leading-4 font-normal">
+                <p className="text-label text-content-muted">
                   {item.desc}
                 </p>
               </div>
@@ -127,15 +127,15 @@ const ROICalculator: React.FC<Props> = ({ data }) => {
           </div>
         </div>
         {/* Total Impact */}
-        <div className=" shadow-md border border-white/10 rounded-xl p-4 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]">
-          <p className="text-accent text-xl md:text-3xl font-medium">
+        <div className="flex flex-col gap-2 rounded-xl border border-line bg-bg-subtle p-4">
+          <p className="text-body-lg font-bold text-accent md:text-heading-md">
             Total Impact: {data.totalImpact}
           </p>
-          <p className="text-base md:text-[18px] leading-[28px] font-light text-content">
+          <p className="text-body text-content-muted md:text-body-lg md:leading-7">
             By choosing integration over migration, you save ₹81.10 Lakhs in
             upfront capital.
           </p>
-          <p className="text-base md:text-[18px] leading-[28px] font-light text-content">
+          <p className="text-body text-content-muted md:text-body-lg md:leading-7">
             Plus, with improved cash flow and leakage control, your Total Year 1
             Impact is{" "}
             <span className="text-accent font-medium">₹1.08 Cr</span> added

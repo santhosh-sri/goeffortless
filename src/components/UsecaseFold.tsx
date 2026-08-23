@@ -1,7 +1,8 @@
 import { FirstFoldContent } from "@/interface/type";
-import parse from "html-react-parser";
 import Image from "next/image";
 import React, { useState } from "react";
+import { parseCms } from "@/lib/cmsHtml";
+import Container from "./ui/Container";
 import Democta from "./Democta";
 import FounderTestimonialCard from "./FounderTestimonials";
 import Logocarousel from "./Logocarousel";
@@ -39,6 +40,16 @@ interface UsecaseFoldProps extends FirstFoldContent {
   isFeaturePage?: boolean;
   onTrialRequest?: () => void;
 }
+
+/**
+ * Hero fold of the CMS pages (Partners, Compliance).
+ *
+ * Laid out like the product-page hero (`ProductHero`): a `bg-subtle` band,
+ * 48px under the header and 80 above the next band, copy column beside a
+ * 636px media column, chip 16px over a 64/80 H1, 20px body, 56px CTAs.
+ * The old fold pinned the image with absolute positioning and painted the
+ * heading with a gradient; both are gone.
+ */
 const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   pageHeading = "",
   pageName = "",
@@ -51,10 +62,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   ctaText = "",
   secondaryCtaText = "",
   secondaryCtaUrl = "",
-  businessPartnersLogo = [],
   founderTestominial = [],
-  isMobile,
-  isPartnerPage,
   isCustomerPage,
   isCompliancePage,
   activeTab,
@@ -106,180 +114,124 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
     { val: "costCenters", label: "Cost Center" },
     { val: "gst", label: "GST" },
   ];
+
+  // The legacy markup highlights by leaving the accent words *unstyled* and
+  // painting the rest white — see parseCms.
+  const legacyHighlight = /#fff(fff)?\b/i.test(heading);
+  const showLogos = !isCustomerPage && !isFeaturePage && !isCompliancePage;
+
   return (
     <>
-      <div
-        className={`text-content p-4 flex flex-col md:gap-10 items-center justify-center md:pt-[60px] mx-auto max-md:mt-[64px] ${
-          isMobile ? "px-[15px] pt-[24px]" : "px-[60px]"
-        }`}
-      >
-        <div
-          className={`text-content max-md:flex max-md:flex-col gap-10 w-full ${
-            isPartnerPage ? "md:gap-[10px]" : "md:gap-[65px]"
-          } items-center justify-between relative`}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 max-md:gap-5 w-full items-center">
-            <div className="flex flex-col gap-4 md:items-start items-center justify-center md:gap-[20px] w-full">
-              <PageTitle
-                pageHeading={pageHeading}
-                logo={logo}
-                pageName={pageName}
-                ishome={ishome}
-              />
-              {heading && (
-                <h1
-                  className={` ${
-                    ishome
-                      ? "font-[400] bg-custom-gradient md:leading-[90px]"
-                      : `${
-                          isPartnerPage
-                            ? "font-[500] md:leading-[80px] md:max-w-[80%] "
-                            : "font-[300] md:leading-[90px]"
-                        } bg-gradient-to-r from-accent to-content`
-                  } max-md:text-center text-[32px] md:text-[70px] leading-[35px] bg-clip-text text-transparent`}
-                >
-                  {parse(heading)}
-                </h1>
-              )}
-              <p
-                className={` ${
-                  ishome || isFeaturePage
-                    ? "md:leading-8 leading-5"
-                    : "md:max-w-[90%] leading-normal"
-                } ${
-                  isPartnerPage
-                    ? "md:text-[20px] md:font-[300]"
-                    : "md:text-[24px] font-[300]"
-                } max-md:text-center text-[14px]`}
-              >
-                {description}
-              </p>
-              <div
-                className={
-                  ishome || isFeaturePage
-                    ? "flex flex-col gap-[2rem] w-full"
-                    : ""
-                }
-              >
-                <div
-                  className={`${
-                    ishome || isFeaturePage
-                      ? "flex"
-                      : "max-md:grid grid-cols-1 max-md:w-full max-md:[@media(min-width:439px)]:grid-cols-2 md:flex md:flex-row-reverse md:mt-[20px]"
-                  } max-md:flex-col gap-[24px]`}
-                >
-                  {ctaText && <Democta customStyle={true} ctaText={ctaText} onTrialRequest={onTrialRequest} />}{" "}
-                  {secondaryCtaText && (
-                    <SecondaryCta
-                      customStyle={true}
-                      handleDirect={handleDirect}
-                      secondaryCtaText={secondaryCtaText}
-                      isOrange={isPartnerPage || ishome ? true : false}
-                      ishome={ishome}
-                      isFeaturePage={isFeaturePage}
-                      secondaryIcon={secondaryIcon}
-                    />
-                  )}
-                </div>
+      <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+        <Container className="flex flex-col items-start gap-10 lg:flex-row lg:items-center">
+          {/* ---- Copy ---- */}
+          <div className="flex w-full flex-col gap-8 lg:flex-1">
+            <div className="flex flex-col items-start gap-6">
+              <div className="flex flex-col items-start gap-4">
+                {(pageHeading || pageName || ishome) && (
+                  <PageTitle
+                    pageHeading={pageHeading}
+                    logo={logo}
+                    pageName={pageName}
+                    ishome={ishome}
+                    tone="surface"
+                  />
+                )}
+                {heading && (
+                  <h1 className="text-heading-md font-normal text-content md:text-heading-lg lg:text-display lg:leading-[80px]">
+                    {parseCms(heading, { bareTextAccent: legacyHighlight })}
+                  </h1>
+                )}
               </div>
+              {description && (
+                <p className="text-body text-content-muted md:text-body-lg md:leading-6">
+                  {description}
+                </p>
+              )}
             </div>
-            <div
-              className={
-                !ishome
-                  ? `${
-                      (isPartnerPage ||
-                        isCustomerPage ||
-                        isCompliancePage ||
-                        isFeaturePage) &&
-                      !isMobile
-                        ? "top-1/2 transform -translate-y-1/2 right-0 absolute"
-                        : ""
-                    }`
-                  : ` ${
-                      isMobile
-                        ? ""
-                        : "top-1/2 transform -translate-y-1/2 right-0 absolute"
-                    }  flex justify-center ${ishome && "flex-col gap-10"}`
-              }
-            >
+
+            {(ctaText || secondaryCtaText) && (
+              <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center">
+                {ctaText && (
+                  <Democta
+                    customStyle={true}
+                    ctaText={ctaText}
+                    onTrialRequest={onTrialRequest}
+                  />
+                )}
+                {secondaryCtaText && (
+                  <SecondaryCta
+                    customStyle={true}
+                    handleDirect={handleDirect}
+                    secondaryCtaText={secondaryCtaText}
+                    secondaryIcon={secondaryIcon}
+                  />
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* ---- Media ---- */}
+          {bannerImage && (
+            <div className="flex w-full flex-col gap-10 lg:w-[636px] lg:shrink-0">
               <Image
                 src={bannerImage}
                 alt={bannerAlt || "Effortless platform dashboard"}
-                width={620}
-                height={442}
+                width={636}
+                height={454}
                 priority
-                className={`2xl:w-[712px] ${
-                  isPartnerPage ? "md:relative md:top-[22px]" : ""
-                }`}
+                className="h-auto w-full rounded-xl"
               />
               {ishome && (
-                <div className="flex gap-2 items-end justify-center">
-                  <p className="text-xl font-[300] md:leading-8 leading-5 text-center text-accent">
-                    Work seamlessly with:
-                  </p>
+                <div className="flex items-end justify-center gap-2">
+                  <p className="text-body-lg text-accent">Work seamlessly with:</p>
                   <Image
                     src={"/tallylogo.png"}
                     alt="tallyprime-logo"
                     width={171}
                     height={40}
-                      />
+                  />
                 </div>
               )}
             </div>
-          </div>
-          {isPartnerPage && !isMobile && (
-            <div
-              className={` ${
-                ishome ? "flex" : "!max-md:hidden"
-              } md:hidden w-full gap-2 items-center`}
-              id="firstFold"
-            >
-              {!ishome && (
-                <SecondaryCta
-                  customStyle={true}
-                  secondaryCtaText={secondaryCtaText}
-                  handleDirect={handleDirect}
-                  ishome={ishome}
-                  isOrange={isPartnerPage || ishome ? true : false}
-                  secondaryIcon={secondaryIcon}
-                  isFeaturePage={isFeaturePage}
-                />
-              )}
-              <div className="w-[100%] text-[13px]">
-                {ctaText && <Democta customStyle={true} ctaText={ctaText} onTrialRequest={onTrialRequest} />}{" "}
-              </div>
-            </div>
           )}
-          {founderTestominial && (
-            <div className="flex flex-col md:grid md:grid-cols-2 gap-6 max-w-[1350px] mx-auto items-center justify-center">
-              {founderTestominial?.map((testimonial, index) => (
-                <FounderTestimonialCard key={index} {...testimonial} />
-              ))}
-            </div>
-          )}
-        </div>
-        {businessTagline && (
-          <div
-            className={`text-content flex flex-col gap-10  md:gap-[40px] items-center justify-center ${
-              isPartnerPage && !isMobile ? "pt-[24px]" : ""
-            }`}
-          >
-            <p className="text-[14px] text-center md:text-2xl max-w-[1350px] mx-auto">
-              {businessTagline}
-            </p>
-          </div>
+        </Container>
+
+        {founderTestominial?.length > 0 && (
+          <Container className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-12">
+            {founderTestominial.map((testimonial, index) => (
+              <FounderTestimonialCard key={index} {...testimonial} />
+            ))}
+          </Container>
         )}
-      </div>
-      {!isCustomerPage && !isFeaturePage && !isCompliancePage && (
-        <Logocarousel />
+      </section>
+
+      {showLogos && (
+        // Statement + customer logo marquee, as the home page's TrustStrip.
+        <section className="flex flex-col gap-10 bg-bg py-10">
+          {businessTagline && (
+            <Container>
+              <p className="text-center text-body text-content-muted md:text-body-lg">
+                {businessTagline}
+              </p>
+            </Container>
+          )}
+          <div className="overflow-hidden">
+            <Logocarousel />
+          </div>
+        </section>
       )}
+
       {isCompliancePage && (
-        <TabComponent
-          tabArr={tabList}
-          activeTab={activeTab}
-          setActiveTab={(val) => setActiveTab(val)}
-        />
+        <div className="bg-bg pt-10">
+          <TabComponent
+            tabArr={tabList}
+            activeTab={activeTab}
+            setActiveTab={(val) => setActiveTab(val)}
+          />
+        </div>
       )}
+
       <Modal open={openDemoModal} onClose={closeDemoModal}>
         {demoStep === "language" && (
           <LanguageModalContent

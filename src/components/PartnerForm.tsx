@@ -6,7 +6,9 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { z } from "zod";
-import InputField from "./InputField";
+import InputField, { INPUT_CLASSES } from "./InputField";
+import { cn } from "@/lib/cn";
+import Button from "./ui/Button";
 import SuccessToast from "./SuccessToast";
 import ErrorToast from "./ErrorToast";
 
@@ -126,7 +128,7 @@ const PartnerForm = () => {
       {showErrorPopup && (
         <ErrorToast setShowErrorPopup={setShowErrorPopup} />
       )}
-      <div className="md:max-w-[777px] md:mx-auto p-5 md:p-[40px] bg-bg border-[1px] border-[#E5E5E533] rounded-md text-content max-md:mt-2">
+      <div className="mx-auto w-full max-w-[777px] rounded-xl border border-line bg-surface p-5 text-content shadow-lift md:p-10">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="grid grid-cols-2 md:gap-6 gap-4"
@@ -141,7 +143,7 @@ const PartnerForm = () => {
               <div key={name} className={`${colSpan === 1 ? "md:col-span-1" : "md:col-span-2"} col-span-2`}>
                 <label
                   htmlFor={name}
-                  className="block md:mb-3 mb-2 font-medium text-sm"
+                  className="mb-2 block text-label font-medium text-content"
                 >
                   {parse(label)}{" "}
                   {validation?.required && (
@@ -153,20 +155,14 @@ const PartnerForm = () => {
                   <textarea
                     id={name}
                     {...register(fieldName)}
-                    placeholder={label}
-                    rows={1}
-                    style={{
-                      background:
-                        "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
-                      border: "1px solid transparent",
-                      borderImage:
-                        "linear-gradient(128.65deg, rgba(255, 255, 255, 0.2) -75.81%, rgba(255, 255, 255, 0) 154.59%) 1",
-                    }}
-                    className={`w-full rounded border px-3 py-2 text-content-muted placeholder:text-[13px] focus:outline-none text-[13px] ${
-                      errors[fieldName]
-                        ? "border-red-500"
-                        : "border-[#E5E5E533]"
-                    }`}
+                    placeholder={placeholder ?? label}
+                    rows={3}
+                    aria-invalid={errors[fieldName] ? true : undefined}
+                    className={cn(
+                      INPUT_CLASSES,
+                      "resize-y",
+                      errors[fieldName] && "border-danger focus:border-danger focus:ring-danger/20"
+                    )}
                   />
                 ) : (
                   <InputField
@@ -186,16 +182,10 @@ const PartnerForm = () => {
             );
           })}
 
-          <div className="col-span-2 text-center mt-4">
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-fit group relative overflow-hidden max-md:!w-full bg-[#F08B32] text-white font-[500] px-8 py-3 rounded transition-all duration-500 disabled:opacity-50 flex items-center justify-center self-center mx-auto md:text-[16px] text-[14px]"
-            >
-              <span className="relative inline-flex items-center">
-                {isSubmitting ? "Submitting..." : "Become a Partner"}
-              </span>
-            </button>
+          <div className="col-span-2 mt-2 flex justify-center">
+            <Button type="submit" disabled={isSubmitting} className="w-full font-semibold sm:w-auto sm:min-w-[220px]">
+              {isSubmitting ? "Submitting..." : "Become a Partner"}
+            </Button>
           </div>
         </form>
       </div>

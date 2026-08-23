@@ -24,29 +24,32 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
   }, []);
 
   return (
-    <div>
-      <div className={`fixed top-0 w-full z-[999]`}>
-        <SiteHeader />
-      </div>
-      <div className="bg-bg text-content">
-        <div className="container mx-auto px-4 text-center pt-32 pb-16 md:pt-40 md:pb-20">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+    // Same band rhythm as the product pages: grey hero (48 under the header,
+    // 80 above the body), white body, 80px grey strip, footer.
+    <div className="min-h-screen bg-bg text-content">
+      <SiteHeader />
+      <main>
+        <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+          <div className="mx-auto w-full max-w-frame px-5 text-center md:px-10 lg:px-gutter">
+          <h1 className="mb-4 text-heading-md font-normal text-content md:text-heading-lg lg:text-display">
             Terms of Service
           </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-body-lg text-content-muted mb-8 max-w-3xl mx-auto">
             This Terms of Service governs your use of the website located, any
             related services provided by Agrya FinLabs Private Limited.
           </p>
-        </div>
-        <div className="container mx-auto px-4 pb-24 max-w-4xl">
-          <h2 className="text-2xl font-medium mt-8 mb-4">Overview</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          </div>
+        </section>
+        <section className="bg-bg py-12 lg:py-20">
+          <div className="mx-auto w-full max-w-4xl px-5 md:px-10">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Overview</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             By accessing{" "}
             <a
               href="https://www.agrya.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               www.agrya.in
             </a>
@@ -55,7 +58,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
               href="https://www.myactionboard.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               www.myactionboard.com
             </a>
@@ -64,7 +67,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
               href="https://www.goeffortless.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               www.goeffortless.ai
             </a>
@@ -74,18 +77,18 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             website or using any other services provided by Agrya Consulting
             Private Limited.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             We, Agrya FinLabs Private Limited, reserve the right to review and
             amend any of these Terms of Service at our sole discretion. Upon
             doing so, we will update this page. Any changes to these Terms of
             Service will take effect immediately from the date of publication.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             These Terms of Service were last updated on 21 June 2021.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Limitations of Use</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Limitations of Use</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             By using this website, you warrant on behalf of yourself, your
             users, and other parties you represent that you will not: modify,
             copy, prepare derivative works of, decompile, or reverse engineer
@@ -106,27 +109,27 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             intellectual property rights, or other rights of third parties.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Intellectual Property
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             The intellectual property in the materials contained in this website
             are owned by or licensed to Agrya FinLabs Private Limited and are
             protected by applicable copyright and trademark law.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             We grant our users permission to download one copy of the materials
             for personal, non-commercial transitory use.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             This constitutes the grant of a license, not a transfer of title.
             This license shall automatically terminate if you violate any of
             these restrictions or the Terms of Service, and may be terminated by
             Agrya FinLabs Private Limited at any time.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Liability</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Liability</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             Our website and the materials on our website are provided on an 'as
             is' basis. To the extent permitted by law, Agrya Consulting Private
             Limited makes no warranties, expressed or implied, and hereby
@@ -135,7 +138,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             fitness for a particular purpose, or non-infringement of
             intellectual property, or other violation of rights.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             In no event shall Agrya FinLabs Private Limited or its suppliers be
             liable for any consequential loss suffered or incurred by you or any
             third party arising from the use or inability to use this website or
@@ -143,7 +146,7 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             Limited or an authorised representative has been notified, orally or
             in writing, of the possibility of such damage.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             In the context of this agreement, "consequential loss" includes any
             consequential loss, indirect loss, real or anticipated loss of
             profit, loss of benefit, loss of revenue, loss of business, loss of
@@ -152,16 +155,16 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             statute, contract, equity, tort (including negligence), indemnity or
             otherwise.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             Because some jurisdictions do not allow limitations on implied
             warranties, or limitations of liability for consequential or
             incidental damages, these limitations may not apply to you.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Accuracy of Materials
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             The materials appearing on our website are not comprehensive and are
             for general information purposes only. Agrya Consulting Private
             Limited does not warrant or make any representations concerning the
@@ -170,8 +173,8 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             resources linked to this website.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Links</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Links</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             Agrya FinLabs Private Limited has not reviewed all of the sites
             linked to its website and is not responsible for the contents of any
             such linked site. The inclusion of any link does not imply
@@ -181,15 +184,15 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             suitability of those sites.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Right to Terminate</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Right to Terminate</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             We may suspend or terminate your right to use our website/product
             and terminate these Terms of Service immediately upon written notice
             to you for any breach of these Terms of Service.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Fees and Payments</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Fees and Payments</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             Agrya's services are available under different subscription plans.
             Payments for the specific subscription plans can be made through
             various online payment modes such as UPI, credit card, account
@@ -198,54 +201,56 @@ const TermsOfService: React.FC<Pick<Content, "headerItems" | "footerData">> = ({
             basis and the customer has to clear the payment within 7 days from
             the date of the invoice to avoid any termination of services.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             The customer can give notice of 30 days to cancel their Service
             Agreement.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Severance</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Severance</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             Any term of these Terms of Service which is wholly or partially void
             or unenforceable is severed to the extent that it is void or
             unenforceable. The validity of the remainder of these Terms of
             Service is not affected.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">Governing Law</h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">Governing Law</h2>
+          <p className="mb-6 leading-relaxed text-content-muted">
             These Terms of Service are governed by and construed in accordance
             with the laws of India. You irrevocably submit to the exclusive
             jurisdiction of the courts in that State or location.
           </p>
 
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             Subscription to Communications
           </h2>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             By creating an account with Effortless, you agree to subscribe
             automatically to our newsletter, The Cashflow Chronicles, which
             provides insights and updates on financial management and related
             topics. The newsletter is delivered periodically to the email
             address you provide during registration.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             Furthermore, you consent to receive other related communications
             from Effortless, which may include updates on services, promotions,
             and informational content relevant to your business needs. These
             communications are designed to enhance your experience with our
             platform and to keep you informed about significant developments.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             You may opt-out of receiving The Cashflow Chronicles or other
             marketing communications from us at any time by following the
             unsubscribe link located at the bottom of each email.
           </p>
-          <p className="mb-6 leading-relaxed text-gray-300">
+          <p className="mb-6 leading-relaxed text-content-muted">
             For more details on how we manage your personal information, please
             refer to our Privacy Policy.
           </p>
-        </div>
-      </div>
+          </div>
+        </section>
+      </main>
+      <div aria-hidden="true" className="h-12 bg-bg-subtle lg:h-20" />
       <SiteFooter />
     </div>
   );
