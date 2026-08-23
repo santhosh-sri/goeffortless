@@ -1,56 +1,43 @@
 import { CompanyValue } from "@/interface/type";
-import Image from "next/image";
 import { FC } from "react";
+import { cn } from "@/lib/cn";
+import MaskIcon from "./ui/MaskIcon";
 
+/**
+ * One cell of the Values / growth-features grid. Cells are divided by dashed
+ * `line` rules (left of every cell but the first in a row on desktop, above
+ * every cell but the first when stacked); the white CMS icons are painted
+ * accent on an icon tile.
+ */
 const ValueCard: FC<CompanyValue & { className?: string }> = ({
   icon,
   title,
   description,
-  width,
-  height,
-  isMobile,
-  hidetopBorder,
   growthFeatures,
   customLength = false,
-  hideLastBorder = false,
-  className = "", // Add className prop
+  className = "",
 }) => {
   return (
     <div
-      className={`
-        w-[100%] text-content py-5 md:min-h-[200px] 
-        flex flex-col items-center text-center gap-1 md:gap-3 
-        ${
-          customLength
-            ? "md:px-[16px] md:py-[20px] md:tracking-negative"
-            : "md:p-5 md:py-[32px]"
-        }
-        ${hideLastBorder ? "max-md:last:before:hidden" : ""}
-        max-md:gradient-border-bottom
-        md:gradient-border-left 
-        ${className} // Apply the additional className
-      `}
+      className={cn(
+        "flex w-full flex-col items-center gap-3 py-6 text-center md:py-8",
+        customLength ? "md:px-4" : "md:px-5",
+        "border-t border-dashed border-line first:border-t-0 md:border-t-0",
+        "md:border-l md:border-dashed md:border-line md:first:border-l-0",
+        className
+      )}
     >
-      <Image
-        src={icon}
-        alt={title}
-        width={isMobile ? 32 : 48}
-        height={isMobile ? 32 : 48}
-        className={isMobile ? `w-[32px] h-[32px]` : `w-[48px] h-[48px]`}
-      />
-      <h3
-        className={`md:text-[24px] text-[16px] font-[400] leading-[30px] md:mt-3 ${
-          customLength ? "md:min-h-[60px] xl:min-h-[20px]" : ""
-        }`}
-      >
+      <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-sm bg-icon-tile">
+        <MaskIcon src={icon} className="h-8 w-8" />
+      </span>
+      <h3 className="text-body font-medium text-content md:text-heading-sm">
         {title}
       </h3>
       <p
-        className={`${growthFeatures ? "md:text-[16px]" : "md:text-[18px]"} ${
-          customLength
-            ? "md:leading-[32px] leading-[20px] md:!min-h-[96px]"
-            : "leading-[20px] md:min-h-[60px]"
-        } text-[13px] font-[300] text-content `}
+        className={cn(
+          "text-label text-content-muted md:leading-6",
+          growthFeatures ? "md:text-body" : "md:text-body-lg"
+        )}
       >
         {description}
       </p>

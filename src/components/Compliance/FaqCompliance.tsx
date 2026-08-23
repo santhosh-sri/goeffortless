@@ -1,6 +1,9 @@
 import { faqs } from "@/interface/type";
 import Image from "next/image";
 import React, { useState } from "react";
+import { cn } from "@/lib/cn";
+import MaskIcon from "../ui/MaskIcon";
+import { COMPLIANCE_CARD } from "./card";
 
 interface Props {
   faqs: faqs[];
@@ -26,88 +29,83 @@ const FaqCompliance: React.FC<Props> = ({ faqs }) => {
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex w-full flex-col gap-3">
       {faqs.map((item, index) => {
         const currentFeedback = feedbacks[index];
         const isOpen = openIndexes.includes(index);
 
         return (
-          <div
-            key={index}
-            onClick={() => toggleFAQ(index)}
-            className="rounded-[8px] border border-white/10 border-r-white/0 border-t-0
-              bg-gradient-to-tr from-white/10 via-white/5 to-white/0
-              shadow-sm shadow-black/5 drop-shadow-sm select-none cursor-pointer"
-          >
-            <div className="w-full px-4 py-4 flex justify-between">
-              <span className="text-content">{item.question}</span>
+          <div key={index} className={cn(COMPLIANCE_CARD, "select-none")}>
+            <button
+              type="button"
+              aria-expanded={isOpen}
+              onClick={() => toggleFAQ(index)}
+              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+            >
+              <span className="text-body font-medium text-content">
+                {item.question}
+              </span>
               <Image
-                src={"/resource-right.svg"}
-                alt="resource"
+                src={"/assets/shared/chevron-down.svg"}
+                alt=""
                 width={16}
                 height={16}
-                className="transition-transform duration-300"
+                className={cn(
+                  "h-4 w-4 shrink-0 transition-transform duration-300",
+                  isOpen && "rotate-180"
+                )}
                 unoptimized
               />
-            </div>
+            </button>
 
             {isOpen && (
-              <div className="px-4 pb-4 flex flex-col gap-3">
-                <div className="text-base font-light text-content">
-                  {item.answer}
-                </div>
+              <div className="flex flex-col gap-3 px-5 pb-5">
+                <div className="text-body text-content-muted">{item.answer}</div>
 
-                <div className="text-xs md:text-sm text-content-muted font-normal flex justify-between items-center border-t border-[#26262699] pt-2">
+                <div className="flex items-center justify-between border-t border-line pt-3 text-caption text-content-muted md:text-label">
                   <p>Was this helpful?</p>
                   <div className="flex gap-1">
                     <button
-                      className={`px-2 py-1 transition-colors duration-300 flex gap-1 items-center rounded ${
+                      type="button"
+                      className={cn(
+                        "flex items-center gap-1 rounded-sm px-2 py-1 transition-colors duration-300",
                         currentFeedback === "yes"
-                          ? "bg-[#FFFFFF] text-[#171717]"
-                          : "bg-transparent text-content"
-                      }`}
+                          ? "bg-success/15 text-success"
+                          : "text-content hover:bg-surface-hover"
+                      )}
                       onClick={(e) => handleFeedback(e, index, "yes")}
                     >
-                      <Image
-                        src={`${
-                          currentFeedback === "yes"
-                            ? "/yes-active.svg"
-                            : "/yes.svg"
-                        }`}
-                        alt="resource"
-                        width={16}
-                        height={16}
-                        className="transition-transform duration-300"
-                        unoptimized
+                      <MaskIcon
+                        src="/yes.svg"
+                        tone={currentFeedback === "yes" ? "success" : "content"}
+                        className="h-4 w-4"
                       />
                       <span>Yes</span>
                     </button>
                     <button
-                      className={`px-2 py-1 transition-colors duration-300 flex gap-1 items-center rounded ${
+                      type="button"
+                      className={cn(
+                        "flex items-center gap-1 rounded-sm px-2 py-1 transition-colors duration-300",
                         currentFeedback === "no"
-                          ? "bg-[#82181A99] text-white"
-                          : "bg-transparent text-content"
-                      }`}
+                          ? "bg-danger/10 text-danger"
+                          : "text-content hover:bg-surface-hover"
+                      )}
                       onClick={(e) => handleFeedback(e, index, "no")}
                     >
-                      <Image
-                        src={"/no.svg"}
-                        alt="resource"
-                        width={16}
-                        height={16}
-                        className="transition-transform duration-300"
-                        unoptimized
+                      <MaskIcon
+                        src="/no.svg"
+                        tone={currentFeedback === "no" ? "content" : "content"}
+                        className={cn("h-4 w-4", currentFeedback === "no" && "!bg-danger")}
                       />
                       <span>No</span>
                     </button>
                   </div>
                 </div>
                 {currentFeedback && (
-                  <div className="bg-[#26262666] px-2 py-1 transition-opacity duration-300">
+                  <div className="rounded-sm bg-bg-subtle px-3 py-2 text-label text-content-muted">
                     {currentFeedback === "yes"
                       ? "Thank you for your feedback!"
-                      : `Thank you. Please contact
-                        support for more help.`}
+                      : "Thank you. Please contact support for more help."}
                   </div>
                 )}
               </div>

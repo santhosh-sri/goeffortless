@@ -1,10 +1,14 @@
 // components/MissionSection.tsx
 import { MissionSectionContent } from "@/interface/type";
-import parse from "html-react-parser";
 import Image from "next/image";
 import { FC } from "react";
+import { parseCms } from "@/lib/cmsHtml";
 import SecondaryCta from "./SecondaryCta";
 
+/**
+ * "About Effortless" split — team photo beside the story. Follows the product
+ * pages' two-column rhythm: 40px between columns, 32/40 heading, 20px body.
+ */
 const MissionSection: FC<MissionSectionContent> = ({
   image,
   mobileImage,
@@ -15,31 +19,31 @@ const MissionSection: FC<MissionSectionContent> = ({
   cta,
 }) => {
   return (
-    <section className="text-content grid grid-cols-1 md:grid-cols-2  gap-5 md:gap-[24px] justify-center">
+    <section className="grid w-full grid-cols-1 items-center gap-8 text-content md:grid-cols-2 lg:gap-10">
       <Image
         src={image.src}
         alt={image.alt}
         width={660}
         height={470}
         priority
-        className="md:w-[616px] md:!h-[416px] hidden md:block"
+        className="hidden h-auto w-full rounded-xl md:block"
       />
       <div className="flex flex-col gap-5 max-md:items-center">
-        <h2 className="text-[24px] md:text-[32px] font-[300] leading-[26px] max-md:text-center">
+        <h2 className="text-heading-sm font-light text-content max-md:text-center md:text-heading-md">
           {title}
-          <span className="!bg-clip-text text-transparent bg-gradient-to-r from-accent to-content font-[500]">
-            {colouredTitle}
-          </span>
+          {colouredTitle && (
+            <span className="font-bold text-accent">{colouredTitle}</span>
+          )}
         </h2>
-        <p className="text-content-muted md:text-[18px] text-[13px] font-[300] leading-[20px] md:leading-[24px] max-md:text-center">
+        <p className="text-body text-content-muted max-md:text-center md:text-body-lg md:leading-6">
           {intro}
         </p>
         {paragraphs.map((para, idx) => (
           <p
             key={idx}
-            className="text-content-muted md:text-[18px] text-[13px] font-[300] leading-[20px] md:leading-[24px] max-md:text-center"
+            className="text-body text-content-muted max-md:text-center md:text-body-lg md:leading-6 [&_b]:font-semibold [&_b]:text-content [&_strong]:font-semibold [&_strong]:text-content"
           >
-            {parse(para)}
+            {parseCms(para)}
           </p>
         ))}
         {mobileImage && (
@@ -49,10 +53,10 @@ const MissionSection: FC<MissionSectionContent> = ({
             width={660}
             height={470}
             priority
-            className="md:w-[616px] md:!h-[416px] md:hidden"
+            className="h-auto w-full rounded-xl md:hidden"
           />
         )}
-        <div className="w-fit items-center md:mt-[34px]">
+        <div className="w-fit md:mt-3">
           <SecondaryCta
             isOrange={true}
             handleDirect={() => {

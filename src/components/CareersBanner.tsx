@@ -2,12 +2,16 @@
 import { CareersSectionContent } from "@/interface/type";
 import Image from "next/image";
 import { FC } from "react";
+import Container from "./ui/Container";
 import PageTitle from "./PageTitle";
 
+/**
+ * About Us hero — the "We're 🔍 [difference] → makers" headline, team photo
+ * and mission split. Sits on the grey hero band like the product pages.
+ */
 const CareersSection: FC<CareersSectionContent> = ({
   label,
   href,
-  headline,
   subheadline,
   highlightWords,
   teamImage,
@@ -15,73 +19,68 @@ const CareersSection: FC<CareersSectionContent> = ({
   missionDescription,
 }) => {
   return (
-    <div
-      id={href}
-      className={`text-content flex flex-col md:gap-[72px] gap-[40px] items-center justify-center md:pt-[64px] mx-auto max-md:px-5 max-md:pt-[112px] md:px-[80px] scroll-mt-20`}
-    >
-      <div className="flex flex-col !gap-6 items-center justify-center">
-        <PageTitle pageHeading={label} />
-        <h1 className="font-[300] md:font-[400] text-[32px] md:text-[72px] md:leading-[90px] leading-[42px] text-center text-content flex flex-col items- gap-2 md:gap-4 md:max-w-[1000px]">
-          <div className="flex items-center justify-center md:gap-4 gap-2 flex-wrap">
-            <span>We’re </span>
-            <Image
-              src="/orange-search.svg"
-              alt="search"
-              width={32}
-              height={32}
-              className="w-[32px] h-[32px] md:w-[48px] md:h-[48px]"
-              priority
-            />
-            {highlightWords?.text && (
-              <span className=" text-center border-[1px] border-accent rounded-[50px] px-4 md:px-8 bg-gradient-to-r from-accent to-content bg-clip-text text-transparent font-[400] text-[32px] md:text-[72px] md:leading-[86px]">
-                {highlightWords?.text}
+    <section id={href} className="scroll-mt-24 bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+      <Container className="flex flex-col items-center gap-10 lg:gap-12">
+        <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-4">
+            <PageTitle pageHeading={label} tone="surface" />
+            <h1 className="max-w-[1000px] text-center text-heading-md font-normal text-content md:text-heading-lg lg:text-display lg:leading-[80px]">
+              <span className="inline-flex flex-wrap items-center justify-center gap-2 md:gap-4">
+                <span>We’re</span>
+                <Image
+                  src="/orange-search.svg"
+                  alt=""
+                  width={48}
+                  height={48}
+                  className="h-8 w-8 md:h-12 md:w-12"
+                  priority
+                />
+                {highlightWords?.text && (
+                  <span className="rounded-full border border-accent px-4 font-bold text-accent md:px-8">
+                    {highlightWords?.text}
+                  </span>
+                )}
+                <span>difference</span>
+                <Image
+                  src="/greeen-arrow.svg"
+                  alt=""
+                  width={56}
+                  height={56}
+                  className="h-8 w-8 md:h-14 md:w-14"
+                  priority
+                />
+                <span>makers</span>
               </span>
-            )}
-            <span className="text-[32px] md:text-[72px] md:leading-[90px] font-[300] md:font-[400] text-content md:-ml-4">
-              difference
-            </span>
-            <Image
-              src="/greeen-arrow.svg"
-              alt="arrow"
-              width={48}
-              height={48}
-              priority
-              className="w-[32px] h-[32px] md:w-[56px] md:h-[56px]"
-            />
-            <span className="text-[32px] md:text-[72px] md:leading-[90px] font-[300] md:font-[400] text-content">
-              makers
-            </span>
+            </h1>
           </div>
-        </h1>
 
-        <p className="text-content-muted font-[300] md:text-[24px] text-[14px] md:mt-[14px] text-center">
-          {subheadline}
-        </p>
-      </div>
+          <p className="max-w-[1036px] text-center text-body text-content-muted md:text-body-lg md:leading-6">
+            {subheadline}
+          </p>
+        </div>
 
-      <div className="rounded-lg">
         <Image
           src={teamImage.src}
           alt={teamImage.alt}
           width={1200}
           height={700}
           priority
-          className="h-auto object-cover"
+          className="h-auto w-full rounded-xl object-cover"
         />
-      </div>
 
-      <div className="grid grid-cols-5 w-full max-w-[1350px] mx-auto">
-        <div className="col-span-2 w-full text-content md:text-[32px] text-[16px] leading-[28px] md:!leading-[42px] font-[500]">
-          {missionHeading?.map((line, i) => (
-            <p key={i}>{line}</p>
-          ))}
-        </div>
+        <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-5 lg:gap-10">
+          <div className="text-heading-sm font-medium text-content md:text-heading-md lg:col-span-2">
+            {missionHeading?.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
+          </div>
 
-        <div className="col-span-3 w-full text-content-muted !font-[300] leading-[20px] md:text-[22px] text-[13px] md:leading-[28px] pt-[4px]">
-          {missionDescription}
+          <div className="text-body text-content-muted md:text-body-lg md:leading-7 lg:col-span-3">
+            {missionDescription}
+          </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </section>
   );
 };
 

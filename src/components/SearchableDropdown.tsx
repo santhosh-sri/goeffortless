@@ -7,6 +7,8 @@ import {
   UseFormSetValue,
   UseFormWatch,
 } from "react-hook-form";
+import { cn } from "@/lib/cn";
+import { INPUT_CLASSES } from "./InputField";
 
 type SearchableDropdownProps<T extends FieldValues = FieldValues> = {
   field: {
@@ -85,15 +87,10 @@ const SearchableDropdown = <T extends FieldValues = FieldValues>({
     return option?.toLowerCase()?.includes(search?.toLowerCase());
   });
 
+  const error = (errors[fieldName] as any)?.message?.toString();
+
   return (
-    <div
-      style={{
-        background:
-          "linear-gradient(128.65deg, rgba(255, 255, 255, 0.2) -75.81%, rgba(255, 255, 255, 0) 154.59%) 1",
-      }}
-      className={`relative w-full rounded-[4px]`}
-      ref={dropdownRef}
-    >
+    <div className="relative w-full" ref={dropdownRef}>
       <div className="relative flex items-center">
         <input
           type="text"
@@ -101,42 +98,44 @@ const SearchableDropdown = <T extends FieldValues = FieldValues>({
           value={search}
           onFocus={handleInputFocus}
           placeholder={field.placeholder || `Select ${field.label}`}
-          style={{
-            background:
-              "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
-          }}
-          className={`w-full px-2 py-[9px] md:px-3 md:py-[7px] border rounded-[4px]  text-[12px] md:text-[13px] text-content-muted placeholder-[#B1B1B1] cursor-pointer hover:border-[#606162] focus:outline-none ${
-            errors[fieldName] ? "border-red-500" : "border-[#E5E5E533]"
-          }`}
+          aria-invalid={error ? true : undefined}
+          className={cn(
+            INPUT_CLASSES,
+            "cursor-pointer pr-9",
+            error && "border-danger focus:border-danger focus:ring-danger/20"
+          )}
           {...register(fieldName)}
+          onChange={handleInputChange}
         />
-        <div
-          className="absolute right-4 cursor-pointer"
+        <button
+          type="button"
+          aria-label="Toggle options"
+          className="absolute right-3 inline-flex h-6 w-6 items-center justify-center"
           onClick={() => setShowDropdown(!showDropdown)}
         >
           <Image
             src="/dropdown-orange.svg"
-            alt="arrow"
+            alt=""
             width={12}
             height={12}
+            className={cn("transition-transform duration-200", showDropdown && "rotate-180")}
           />
-        </div>
+        </button>
 
         {showDropdown && (
-          <div
-            className={`absolute top-8 bg-[#121212] rounded-md shadow-md max-h-40 overflow-y-auto z-10 w-full rounded-tl-none rounded-tr-none`}
-          >
+          <div className="absolute left-0 top-full z-10 mt-1 max-h-40 w-full overflow-y-auto rounded-sm border border-line bg-surface-raised shadow-lift">
             {filteredOptions?.length === 0 ? (
-              <div className="px-3 py-2 text-[12px] text-gray-500">
+              <div className="px-3 py-2 text-label text-content-subtle">
                 No options found
               </div>
             ) : (
               filteredOptions?.map((option) => (
                 <div
                   key={option}
-                  className={`px-3 py-2 cursor-pointer hover:bg-gray-800 transition text-[12px] text-content-muted ${
-                    selectedValue === option ? "bg-gray-700" : ""
-                  }`}
+                  className={cn(
+                    "cursor-pointer px-3 py-2 text-label text-content transition-colors hover:bg-surface-hover",
+                    selectedValue === option && "bg-accent-subtle text-accent"
+                  )}
                   onClick={() => handleSelect(option)}
                 >
                   {option}
@@ -146,13 +145,7 @@ const SearchableDropdown = <T extends FieldValues = FieldValues>({
           </div>
         )}
       </div>
-      {errors[fieldName] && (
-        <div className="col-span-2">
-          <p className="text-red-500 text-xs">
-            {(errors[fieldName] as any)?.message?.toString()}
-          </p>
-        </div>
-      )}
+      {error && <p className="mt-1 text-caption text-danger">{error}</p>}
     </div>
   );
 };

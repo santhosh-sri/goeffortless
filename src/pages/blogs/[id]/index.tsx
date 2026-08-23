@@ -4,6 +4,8 @@ import PageTitle from "@/components/PageTitle";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import CallbackCardSection from "@/components/CallBackCardSection";
+import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
 import { GetStaticProps, GetStaticPaths } from "next";
 
 interface BlogData {
@@ -254,78 +256,62 @@ export default function BlogDetail({
           }}
         />
       </Head>
-      <div className={`fixed top-0 w-full z-[999]`}>
+      <div className="min-h-screen bg-bg text-content">
         <SiteHeader />
-      </div>
-      <div className={`bg-bg md:px-[80px]`}>
-        {htmlContent ? (
-          <>
-            <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-8 md:mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
-              <PageTitle pageHeading={"Blogs"} />
-              <h1
-                className={`font-[300] md:font-medium text-[24px] md:text-[70px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
-                style={{
-                  background:
-                    "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
-                  WebkitBackgroundClip: "text",
-                }}
-              >
-                <span className="font-medium">{title}</span>
-              </h1>
-              <p
-                className={`md:text-2xl text-sm md:mt-[4px] text-content-muted text-center font-[300] md:font-[400] capitalize`}
-              >
-                {desc}
+        <main>
+          {htmlContent ? (
+            <>
+              {/* Grey hero band, as on the product pages. */}
+              <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+                <Container className="flex flex-col items-center gap-6 text-center">
+                  <div className="flex flex-col items-center gap-4">
+                    <PageTitle pageHeading={"Blogs"} tone="surface" />
+                    <h1 className="max-w-[1036px] text-heading-md font-normal text-content md:text-heading-lg lg:text-display lg:leading-[72px]">
+                      {title}
+                    </h1>
+                  </div>
+                  <p className="max-w-[1036px] text-body capitalize text-content-muted md:text-body-lg md:leading-6">
+                    {desc}
+                  </p>
+                </Container>
+              </section>
+              <Section spacing="lg" as="article">
+                <div
+                  className="htmlContainer mx-auto flex max-w-4xl flex-col gap-3 text-content-muted"
+                  dangerouslySetInnerHTML={{ __html: cleanHTML(htmlContent) }}
+                />
+              </Section>
+            </>
+          ) : (
+            <Section spacing="lg">
+              <p className="text-center text-body text-content-muted">
+                Blog not found
               </p>
-            </div>
-            <article className="md:pb-[100px] pb-[60px] max-md:py-[32px] max-md:px-5">
-              <div
-                className="text-content-muted flex flex-col gap-3 htmlContainer"
-                dangerouslySetInnerHTML={{ __html: cleanHTML(htmlContent) }}
-              />
-            </article>
-          </>
-        ) : (
-          <div className="flex flex-col md:gap-6 text-content-muted gap-4 items-center justify-center mt-[64px] py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
-            Blog not found
-          </div>
-        )}
-      </div>
-      <div className="bg-surface">
-        <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-        <div className={`md:px-[80px]`}>
-          <div className="flex flex-col md:gap-6 gap-4 items-center justify-center  py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[64px] scroll-mt-20">
-            <PageTitle pageHeading={"Get Started"} />
-            <h2
-              className={`font-[300] md:font-medium  text-[24px] md:text-[32px] text-center bg-clip-text text-transparent`}
-              style={{
-                background:
-                  "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
-                WebkitBackgroundClip: "text",
-              }}
-            >
-              <span className="text-content font-light">
-                Growth Doesn&apos;t Wait.{" "}
-              </span>
-              <span className="font-medium">Why Should You?</span>
-            </h2>
-            <p
-              className={`md:text-2xl text-sm md:mt-[4px] text-content-muted text-center font-[400] md:font-[300]`}
-            >
-              Let Effortless help you scale—without the scramble.
-            </p>
-            {callBackCards && (
-              <div className="md:grid md:grid-cols-3 gap-4 flex flex-col items-center justify-center">
-                {callBackCards?.map((card, index) => (
+            </Section>
+          )}
+
+          <Section tone="subtle" spacing="lg">
+            <div className="flex flex-col items-center gap-10 lg:gap-12">
+              <div className="flex flex-col items-center gap-6 text-center">
+                <div className="flex flex-col items-center gap-4">
+                  <PageTitle pageHeading={"Get Started"} tone="surface" />
+                  <h2 className="text-heading-sm font-light text-content md:text-heading-md">
+                    Growth Doesn&apos;t Wait.{" "}
+                    <span className="font-bold text-accent">Why Should You?</span>
+                  </h2>
+                </div>
+                <p className="text-body text-content-muted md:text-body-lg">
+                  Let Effortless help you scale—without the scramble.
+                </p>
+              </div>
+              <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
+                {callBackCards.map((card, index) => (
                   <CallbackCardSection key={index} {...card} />
                 ))}
               </div>
-            )}
-          </div>
-        </div>
-        <div className="h-[1px] w-full bg-[linear-gradient(270deg,#282828_0%,#FFFFFF_50%,#282828_100%)]"></div>
-      </div>
-      <div className="md:pt-[100px] pt-[60px] bg-bg">
+            </div>
+          </Section>
+        </main>
         <SiteFooter />
       </div>
     </>

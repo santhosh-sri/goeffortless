@@ -1,9 +1,23 @@
-import { CalcomConfig } from "@/utils/calConfig";
 import Image from "next/image";
+import Button from "./ui/Button";
 
+const ARROW = (
+  <Image
+    src="/assets/shared/arrow-right.svg"
+    alt=""
+    width={24}
+    height={24}
+    className="h-6 w-6 shrink-0"
+  />
+);
+
+/**
+ * Primary CTA on the CMS pages. Visually it is the shared `Button`; what
+ * remains here is the legacy label-sniffing routing (partner scroll, partner
+ * portal, Cal.com booking) the JSON content still relies on.
+ */
 const Democta = ({
   ctaText = "Request a Demo",
-  ctaUrl = "",
   customStyle = false,
   extraWidth,
   onTrialRequest,
@@ -14,24 +28,21 @@ const Democta = ({
   extraWidth?: boolean;
   onTrialRequest?: () => void;
 }) => {
-  const isTrialCta = ctaText.toLowerCase().includes("trial");
-  const shouldAttachCal =
-    !ctaText.toLowerCase().includes("partner") && !isTrialCta;
+  const lower = ctaText.toLowerCase();
+  const isTrialCta = lower.includes("trial");
+  const shouldAttachCal = !lower.includes("partner") && !isTrialCta;
+
   const handleDirect = () => {
     if (isTrialCta && onTrialRequest) {
       onTrialRequest();
       return;
     }
-    if (ctaText?.toLowerCase() === "partner with us") {
+    if (lower === "partner with us") {
       const section = document.getElementById("PartnerForm");
       if (section) {
-        const offset = 250;
         const sectionTop =
           section.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: sectionTop - offset,
-          behavior: "smooth",
-        });
+        window.scrollTo({ top: sectionTop - 120, behavior: "smooth" });
       }
     } else if (ctaText === "Partner Portal Login") {
       window.open("https://partner.goeffortless.ai/auth/login", "_blank");
@@ -39,38 +50,19 @@ const Democta = ({
   };
 
   return (
-    <button
+    <Button
       onClick={handleDirect}
-      {...(shouldAttachCal ? CalcomConfig : {})}
-      id="democta"
-      className={`group relative p-[10px] overflow-hidden transition-all duration-500 ease-in-out font-[500] cursor-pointer flex items-center justify-center gap-1 w-full ${
-        extraWidth ? "" : "md:w-[260px]"
-      } 
-        ${
-          customStyle
-            ? "max-md:py-[12px] max-md:px-[16px] rounded max-md:text-[14px] md:px-[24px]"
-            : "py-[12px] px-6 rounded"
-        } 
-        bg-[#F08B32] text-white md:text-[16px] text-[14px] ${
-          extraWidth && "md:hover:!pl-[24px] md:hover:!pr-[40px]"
-        }`}
+      calBooking={shouldAttachCal}
+      size={customStyle ? "hero" : "md"}
+      trailingIcon={customStyle ? ARROW : undefined}
+      className={
+        extraWidth
+          ? "w-full font-semibold sm:w-auto"
+          : "w-full font-semibold sm:w-auto sm:min-w-[220px]"
+      }
     >
-      <span className="relative inline-flex items-center ">
-        <span className="md:group-hover:mr-1 transition-all duration-500">
-          {ctaText}
-        </span>
-        <span className="absolute max-md:hidden top-1/2 right-[-1.4rem] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out md:block hidden">
-          <Image
-            src="/newRightArrow.svg"
-            alt="arrow"
-            width={16}
-            height={16}
-            className="block"
-            unoptimized
-          />
-        </span>
-      </span>
-    </button>
+      {ctaText}
+    </Button>
   );
 };
 

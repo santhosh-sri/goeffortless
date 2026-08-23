@@ -1,24 +1,19 @@
-import Image from "next/image";
 import React from "react";
+import MaskIcon from "../ui/MaskIcon";
+import { COMPLIANCE_CARD } from "./card";
 
 const TdsAutomation = ({ tdsAutomation }: { tdsAutomation: string[] }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
       {tdsAutomation.map((item, index) => (
-        <div
-          key={index}
-          className="rounded-lg border-t-0 bg-gradient-to-tr from-white/10 via-white/5 to-white/0 border border-white/10 border-r-white/0 shadow-sm shadow-black/5
-        drop-shadow-sm p-5"
-        >
-          <div className="flex items-center gap-3">
-            <Image
-              src={"/tdstick.svg"}
-              alt="resource"
-              width={48}
-              height={48}
-              unoptimized
-            />
-            <p className="text-sm md:text-xl font-normal text-content">{item}</p>
+        <div key={index} className={`${COMPLIANCE_CARD} p-5`}>
+          <div className="flex items-center gap-4">
+            <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-icon-tile">
+              <MaskIcon src="/tdstick.svg" className="h-7 w-7" />
+            </span>
+            <p className="text-label text-content md:text-body-lg md:leading-6">
+              {item}
+            </p>
           </div>
         </div>
       ))}

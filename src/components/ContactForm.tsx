@@ -8,7 +8,9 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { z } from "zod";
 import { contactFormFields } from "../data/formFields";
-import InputField from "./InputField";
+import InputField, { INPUT_CLASSES } from "./InputField";
+import { cn } from "@/lib/cn";
+import Button from "./ui/Button";
 import SearchableDropdown from "./SearchableDropdown";
 import SuccessToast from "./SuccessToast";
 import ErrorToast from "./ErrorToast";
@@ -83,15 +85,12 @@ const ContactForm = () => {
   return (
     <>
       <div>
-        <div className="pb-6">
-          <h2 className="text-content text-[18px] md:text-[32px] font-[300]">
-            Send us a{" "}
-            <span className="font-medium bg-custom-gradient bg-clip-text text-transparent">
-              Message{" "}
-            </span>
+        <div className="mb-6 flex flex-col gap-3 md:mb-8">
+          <h2 className="text-heading-sm font-light text-content md:text-heading-md">
+            Send us a <span className="font-bold text-accent">Message</span>
           </h2>
-          <p className="text-content text-base md:text-2xl font-light">
-            Fill out the form below and we'll get back to you within 2 hours
+          <p className="text-body text-content-muted md:text-body-lg">
+            Fill out the form below and we&apos;ll get back to you within 2 hours
             during business hours.
           </p>
         </div>
@@ -104,9 +103,12 @@ const ContactForm = () => {
             {contactFormFields.map((field) => (
               <React.Fragment key={field.name}>
                 <div
-                  className={`md:col-span-${field.colSpan} max-md:col-span-2 w-full flex flex-col gap-[11px]`}
+                  className={cn(
+                    "col-span-2 flex w-full flex-col gap-2",
+                    field.colSpan === 1 ? "md:col-span-1" : "md:col-span-2"
+                  )}
                 >
-                  <p className="text-content font-normal text-[14px]">
+                  <p className="text-label font-medium text-content">
                     {field.label}
                     {field?.type !== "textArea" && (
                       <span className="text-accent">*</span>
@@ -126,15 +128,13 @@ const ContactForm = () => {
                       {...register(field.name as keyof FormValues)}
                       placeholder="Tell us more about your inquiry..."
                       rows={4}
-                      style={{
-                        background:
-                          "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
-                      }}
-                      className={`w-full rounded-[4px] border px-2 py-[9px] md:px-3 md:py-[7px] text-content-muted text-[12px] md:text-[13px] placeholder-[#B1B1B1] focus:outline-none resize-none ${
-                        errors[field.name as keyof FormValues]
-                          ? "border-red-500"
-                          : "border-[#E5E5E533]"
-                      }`}
+                      aria-invalid={errors[field.name as keyof FormValues] ? true : undefined}
+                      className={cn(
+                        INPUT_CLASSES,
+                        "resize-y",
+                        errors[field.name as keyof FormValues] &&
+                          "border-danger focus:border-danger focus:ring-danger/20"
+                      )}
                     />
                   )}
 
@@ -154,8 +154,8 @@ const ContactForm = () => {
 
                 {field.name === "your_current_erp" &&
                   watch("your_current_erp") === "Others" && (
-                    <div className="col-span-1 w-full flex flex-col gap-[11px]">
-                      <p className="text-content font-normal text-[14px]">
+                    <div className="col-span-2 flex w-full flex-col gap-2 md:col-span-1">
+                      <p className="text-label font-medium text-content">
                         Please specify your ERP
                         {/* <span className="text-accent">*</span> */}
                       </p>
@@ -175,14 +175,10 @@ const ContactForm = () => {
             ))}
 
             {/* Submit Button inside form so it triggers handleSubmit properly */}
-            <div className="flex justify-center col-span-2 mt-4">
-              <button
-                type="submit"
-                className="bg-[#F08B32] py-[12px] px-[2.5rem] rounded text-[14px] md:text-[16px] text-white font-[500] w-full md:w-auto disabled:opacity-50"
-                disabled={isSubmitting}
-              >
+            <div className="col-span-2 mt-2 flex justify-center">
+              <Button type="submit" disabled={isSubmitting} className="w-full font-semibold sm:w-auto sm:min-w-[220px]">
                 {isSubmitting ? "Submitting..." : "Send"}
-              </button>
+              </Button>
             </div>
           </form>
         </div>

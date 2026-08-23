@@ -23,28 +23,31 @@ const NewPrivacyPolicy: React.FC<
   }, []);
 
   return (
-    <div>
-      <div className={`fixed top-0 w-full z-[999]`}>
-        <SiteHeader />
-      </div>
-      <div className="bg-bg text-content">
-        <div className="container mx-auto px-4 text-center pt-32 pb-16 md:pt-40 md:pb-20">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+    // Same band rhythm as the product pages: grey hero (48 under the header,
+    // 80 above the body), white body, 80px grey strip, footer.
+    <div className="min-h-screen bg-bg text-content">
+      <SiteHeader />
+      <main>
+        <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+          <div className="mx-auto w-full max-w-frame px-5 text-center md:px-10 lg:px-gutter">
+          <h1 className="mb-4 text-heading-md font-normal text-content md:text-heading-lg lg:text-display">
             Privacy Policy
           </h1>
-          <p className="text-lg text-content-muted mb-2">
+          <p className="text-body-lg text-content-muted mb-2">
             Effortless &amp; EffortlessGeo
           </p>
-          <p className="text-lg text-content-muted mb-2">
+          <p className="text-body-lg text-content-muted mb-2">
             Agrya FinLabs Private Limited
           </p>
-          <p className="text-sm text-content-muted">
+          <p className="text-label text-content-muted">
             Last Updated: 24 February 2026
           </p>
-        </div>
-        <div className="container mx-auto px-4 pb-24 max-w-4xl font-light">
+          </div>
+        </section>
+        <section className="bg-bg py-12 lg:py-20">
+          <div className="mx-auto w-full max-w-4xl px-5 md:px-10">
           {/* 1. Introduction */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">1. Introduction</h2>
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">1. Introduction</h2>
           <p className="mb-6 leading-relaxed text-content-muted">
             This Privacy Policy explains how Agrya FinLabs Private Limited (
             <span className="font-medium text-content">
@@ -59,7 +62,7 @@ const NewPrivacyPolicy: React.FC<
               href="https://www.goeffortless.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               www.goeffortless.ai
             </a>
@@ -90,7 +93,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 2. Definitions */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">2. Definitions</h2>
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">2. Definitions</h2>
           <ul className="list-disc list-inside mb-6 space-y-2 text-content-muted">
             <li>
               <span className="font-medium text-content">Customer(s):</span>{" "}
@@ -124,11 +127,11 @@ const NewPrivacyPolicy: React.FC<
           </ul>
 
           {/* 3. Information We Collect */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             3. Information We Collect
           </h2>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.1 Account Information
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -146,7 +149,7 @@ const NewPrivacyPolicy: React.FC<
             <li>Profile photo (if provided)</li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.2 Business and Financial Data
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -178,7 +181,7 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.3 Location Information (EffortlessGeo)
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -227,7 +230,7 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.4 Device Information
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -246,7 +249,7 @@ const NewPrivacyPolicy: React.FC<
             <li>Language and timezone settings</li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.5 Usage Information
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -273,7 +276,7 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.6 Google Workspace Data
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -292,7 +295,7 @@ const NewPrivacyPolicy: React.FC<
             User Data Policy.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.7 Cookies and Similar Technologies
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -303,7 +306,7 @@ const NewPrivacyPolicy: React.FC<
             through your browser settings.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             3.8 Information from Third Parties
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -326,7 +329,7 @@ const NewPrivacyPolicy: React.FC<
           </ul>
 
           {/* 4. How We Collect Information */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             4. How We Collect Information
           </h2>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -397,11 +400,11 @@ const NewPrivacyPolicy: React.FC<
           </ul>
 
           {/* 5. How We Use Information */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             5. How We Use Information
           </h2>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             5.1 Effortless Platform
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -434,7 +437,7 @@ const NewPrivacyPolicy: React.FC<
             <li>Administer billing, subscriptions, and account management</li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">5.2 EffortlessGeo</h3>
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">5.2 EffortlessGeo</h3>
           <p className="mb-3 leading-relaxed text-content-muted">
             We use location and related data to:
           </p>
@@ -485,7 +488,7 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             5.3 Google Workspace Data
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -497,11 +500,11 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 6. Consent and Control */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             6. Consent and Control
           </h2>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             6.1 Employer as Data Controller
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -512,7 +515,7 @@ const NewPrivacyPolicy: React.FC<
             be directed to your organization&apos;s Administrator.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             6.2 Device-Level Permissions (EffortlessGeo)
           </h3>
           <ul className="list-disc list-inside mb-6 space-y-2 text-content-muted">
@@ -538,7 +541,7 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             6.3 Background Location Tracking (EffortlessGeo)
           </h3>
           <ul className="list-disc list-inside mb-6 space-y-2 text-content-muted">
@@ -558,7 +561,7 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">6.4 Transparency</h3>
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">6.4 Transparency</h3>
           <ul className="list-disc list-inside mb-6 space-y-2 text-content-muted">
             <li>
               End Users can view their own location history, punch locations,
@@ -570,7 +573,7 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             6.5 Communication Preferences
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -582,7 +585,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 7. Data Sharing and Disclosure */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             7. Data Sharing and Disclosure
           </h2>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -591,7 +594,7 @@ const NewPrivacyPolicy: React.FC<
             may share information in the following circumstances:
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             7.1 With Your Employer/Administrator
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -600,7 +603,7 @@ const NewPrivacyPolicy: React.FC<
             your organization for workforce and business management purposes.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             7.2 Service Providers
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -623,7 +626,7 @@ const NewPrivacyPolicy: React.FC<
             applicable data protection requirements.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             7.3 Third-Party Integrations
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -633,7 +636,7 @@ const NewPrivacyPolicy: React.FC<
             review the privacy policies of those third-party services.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             7.4 Legal Compliance
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -642,7 +645,7 @@ const NewPrivacyPolicy: React.FC<
             property, or safety of Effortless, our users, or others.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             7.5 Business Transfers
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -653,7 +656,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 8. Data Security */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">8. Data Security</h2>
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">8. Data Security</h2>
           <p className="mb-3 leading-relaxed text-content-muted">
             We implement industry-standard security measures to protect your
             data, including:
@@ -697,11 +700,11 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 9. Data Retention and Deletion */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             9. Data Retention and Deletion
           </h2>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">9.1 Retention</h3>
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">9.1 Retention</h3>
           <ul className="list-disc list-inside mb-6 space-y-2 text-content-muted">
             <li>
               <span className="font-medium text-content">
@@ -735,14 +738,14 @@ const NewPrivacyPolicy: React.FC<
             </li>
           </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">9.2 Deletion</h3>
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">9.2 Deletion</h3>
           <ul className="list-disc list-inside mb-6 space-y-2 text-content-muted">
             <li>
               Users may request deletion of their data by contacting their
               Administrator or by writing to us at{" "}
               <a
                 href="mailto:security@goeffortless.ai"
-                className="text-[#00A3FF]"
+                className="text-info underline-offset-4 hover:underline"
               >
                 security@goeffortless.ai
               </a>
@@ -762,11 +765,11 @@ const NewPrivacyPolicy: React.FC<
           </ul>
 
           {/* 10. Google Workspace API Data */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             10. Google Workspace API Data
           </h2>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">10.1 Limited Use</h3>
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">10.1 Limited Use</h3>
           <p className="mb-6 leading-relaxed text-content-muted">
             Effortless does not retain, store, or use any data obtained through
             Google Workspace APIs, including Gmail, for developing, improving,
@@ -775,7 +778,7 @@ const NewPrivacyPolicy: React.FC<
             providing the requested Services directly to the user.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             10.2 Scope of Access
           </h3>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -787,7 +790,7 @@ const NewPrivacyPolicy: React.FC<
             Policy.
           </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-3">
+          <h3 className="mb-3 mt-6 text-body-lg font-semibold text-content">
             10.3 No Third-Party Sharing for Non-Service Purposes
           </h3>
           <p className="mb-3 leading-relaxed text-content-muted">
@@ -810,10 +813,10 @@ const NewPrivacyPolicy: React.FC<
           </ul>
 
           {/* 11. EffortlessGeo — Google Play Prominent Disclosure */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             11. EffortlessGeo — Google Play Prominent Disclosure
           </h2>
-          <p className="mb-6 leading-relaxed text-content-muted italic border-l border-[#818181] pl-4 ml-4">
+          <p className="mb-6 leading-relaxed text-content-muted italic border-l border-line pl-4 ml-4">
             Note for dev team: This section’s content must also be displayed as
             an in-app disclosure screen before requesting background location
             permission, as required by Google Play policy.
@@ -854,7 +857,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 12. Children's Privacy */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             12. Children&apos;s Privacy
           </h2>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -866,7 +869,7 @@ const NewPrivacyPolicy: React.FC<
             at{" "}
             <a
               href="mailto:security@goeffortless.ai"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               security@goeffortless.ai
             </a>
@@ -874,7 +877,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 13. Third-Party Links and Services */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             13. Third-Party Links and Services
           </h2>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -886,7 +889,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 14. Changes to This Privacy Policy */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">
             14. Changes to This Privacy Policy
           </h2>
           <p className="mb-6 leading-relaxed text-content-muted">
@@ -900,7 +903,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 15. Your Rights */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">15. Your Rights</h2>
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">15. Your Rights</h2>
           <p className="mb-3 leading-relaxed text-content-muted">
             Subject to applicable law, you have the right to:
           </p>
@@ -937,7 +940,7 @@ const NewPrivacyPolicy: React.FC<
             us at{" "}
             <a
               href="mailto:security@goeffortless.ai"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               security@goeffortless.ai
             </a>
@@ -949,7 +952,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 16. Governing Law */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">16. Governing Law</h2>
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">16. Governing Law</h2>
           <p className="mb-6 leading-relaxed text-content-muted">
             This Privacy Policy is governed by and construed in accordance with
             the laws of India. Any disputes arising under this policy shall be
@@ -958,7 +961,7 @@ const NewPrivacyPolicy: React.FC<
           </p>
 
           {/* 17. Contact Us */}
-          <h2 className="text-2xl font-medium mt-8 mb-4">17. Contact Us</h2>
+          <h2 className="mb-4 mt-10 text-heading-sm font-semibold text-content">17. Contact Us</h2>
           <p className="mb-3 leading-relaxed text-content-muted">
             For any questions, concerns, or requests related to this Privacy
             Policy or your data, please contact:
@@ -972,7 +975,7 @@ const NewPrivacyPolicy: React.FC<
             Email:{" "}
             <a
               href="mailto:security@goeffortless.ai"
-              className="text-[#00A3FF]"
+              className="text-info underline-offset-4 hover:underline"
             >
               security@goeffortless.ai
             </a>
@@ -981,8 +984,10 @@ const NewPrivacyPolicy: React.FC<
             Address: Maan Sarovar Tower, First Floor, 375/271A, Scheme Road,
             Teynampet, Chennai, Tamil Nadu - 600018, India
           </p>
-        </div>
-      </div>
+          </div>
+        </section>
+      </main>
+      <div aria-hidden="true" className="h-12 bg-bg-subtle lg:h-20" />
       <SiteFooter />
     </div>
   );

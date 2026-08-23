@@ -138,6 +138,12 @@ const Landing: React.FC<Content> = ({
               />
             ))}
         </main>
+        {/* The product pages end on a white band and put an 80px grey strip
+            before the footer (see ProductClosingCta); the CMS pages do the
+            same unless their last band is already grey. */}
+        {!activeServiceContent?.[activeServiceContent.length - 1]?.bgColour && (
+          <div aria-hidden="true" className="h-12 bg-bg-subtle lg:h-20" />
+        )}
         <SiteFooter />
         {/* {isFormVisible &&
           isCtaVisible &&

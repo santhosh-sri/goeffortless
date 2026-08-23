@@ -1,4 +1,5 @@
 import { UseFormRegister } from "react-hook-form";
+import { cn } from "@/lib/cn";
 
 type InputFieldProps = {
   field: {
@@ -11,6 +12,10 @@ type InputFieldProps = {
   error?: string; // Error passed as prop
   placeholder?: string;
 };
+
+/** Shared field chrome for the CMS forms: white well, `line` stroke, accent focus ring. */
+export const INPUT_CLASSES =
+  "w-full rounded-sm border border-line bg-surface px-3 py-2.5 text-body text-content placeholder:text-content-subtle transition-colors duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20";
 
 const InputField: React.FC<InputFieldProps> = ({
   field,
@@ -49,33 +54,18 @@ const InputField: React.FC<InputFieldProps> = ({
   };
 
   return (
-    <div
-      style={{
-        background:
-          "linear-gradient(128.65deg, rgba(255, 255, 255, 0.2) -75.81%, rgba(255, 255, 255, 0) 154.59%) 1",
-      }}
-      className="rounded-[4px]"
-    >
+    <div>
       <input
         type="text"
         {...register(field.name)}
         maxLength={field.maxLength}
         placeholder={placeholder ?? field.label}
         autoComplete="off"
-        style={{
-          background:
-            "linear-gradient(125.31deg, rgba(255, 255, 255, 0.1) -56.15%, rgba(255, 255, 255, 0) 104.12%)",
-        }}
-        className={`w-full rounded-[4px] border px-2 py-[9px] md:px-3 md:py-[7px] text-content-muted placeholder-[#B1B1B1] text-[12px] md:text-[13px] focus:outline-none ${
-          error ? "border-red-500" : "border-[#E5E5E533]"
-        }`}
+        aria-invalid={error ? true : undefined}
+        className={cn(INPUT_CLASSES, error && "border-danger focus:border-danger focus:ring-danger/20")}
         onKeyDown={handleKeyDown}
       />
-      {error && (
-        <div className="col-span-2">
-          <p className="text-red-500 text-xs">{error}</p>
-        </div>
-      )}
+      {error && <p className="mt-1 text-caption text-danger">{error}</p>}
     </div>
   );
 };

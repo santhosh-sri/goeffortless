@@ -14,9 +14,9 @@ const SuccessToast = ({
     setShowForm(false);
   };
   return (
-    <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999]">
-      <div className={`bg-bg border border-[#E5E5E533] absolute rounded-2xl m-4 md:w-[400px] max-md:w-[90%]`}>
-        <div className="flex flex-col gap-6 p-4 items-center justify-center">
+    <div className="fixed left-0 top-0 z-[999] flex h-dvh w-dvw items-center justify-center bg-content/60">
+      <div className={`absolute m-4 rounded-2xl border border-line bg-surface-raised shadow-raised max-md:w-[90%] md:w-[400px]`}>
+        <div className="flex flex-col items-center justify-center gap-6 p-6">
           <Image
             src={"/sucesstick.svg"}
             alt="Effortless-logo"
@@ -24,16 +24,16 @@ const SuccessToast = ({
             height={50}
             //   className="w-[188px] h-[48px]"
           />{" "}
-          <p className="text-[24px] font-[400] text-accent leading-[32px]">
+          <p className="text-heading-sm font-medium text-accent">
             Request Submitted!
           </p>
-          <p className="text-[16px] text-content-muted leading-[23px] font-[300] text-center">
+          <p className="text-center text-body text-content-muted">
             Thank you for your interest. Our team will get in touch with you
             shortly.{" "}
           </p>
           <button
             onClick={handleClick}
-            className="min-w-[260px] bg-[#F08B32] hover:bg-[#DD781F] py-[12px] rounded text-white text-[16px] font-[600] md:max-w-[30%] cursor-pointer"
+            className="inline-flex min-h-[44px] min-w-[260px] cursor-pointer items-center justify-center rounded-sm bg-accent px-6 py-3 text-body font-semibold text-content-on-accent transition-colors hover:bg-accent-hover"
           >
             Close
           </button>

@@ -1,8 +1,12 @@
 import { BlogCardProps } from "@/interface/type";
 import Image from "next/image";
 import Link from "next/link";
-import BlogWithSidebar from "./BlogWithSidebar";
 
+/**
+ * Blog listing tile: cover image over a white card body with the date,
+ * title and summary — the product pages' card (12px radius, `line` stroke,
+ * lift shadow on hover) instead of the dark gradient overlay.
+ */
 const BlogCard: React.FC<BlogCardProps> = ({
   imageUrl,
   title,
@@ -13,49 +17,36 @@ const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <Link
       href={href}
-      className="group relative block w-full rounded-xl rounded-b-none overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+      className="group flex h-full w-full flex-col overflow-hidden rounded-xl border border-line bg-surface transition-shadow duration-300 hover:shadow-lift focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2"
     >
-      {imageUrl ? (
-        <div className="relative w-full h-[300px] md:h-[350px]">
+      <div className="relative h-[220px] w-full overflow-hidden bg-bg-subtle">
+        {imageUrl && (
           <Image
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_65.38%,#000_100%)]" />
-        </div>
-      ) : (
-        <>
-          <div className="relative w-full h-[300px] md:h-[350px] bg-surface" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_65.38%,#000_100%)]" />
-        </>
-      )}
+        )}
+      </div>
 
-      <div className="absolute bottom-0 left-0 right-0 p-5 ">
-        <h3 className="text-lg md:text-xl text-content font-normal capitalize">
+      <div className="flex flex-1 flex-col gap-3 p-5">
+        <p className="text-label font-medium text-accent">{date}</p>
+        <h3 className="text-body-lg font-semibold capitalize text-content">
           {title}
         </h3>
-        <div className="flex gap-3 items-center justify-between">
-          <div>
-            <p className="hidden opacity-0 group-hover:block group-hover:opacity-100 text-base text-content font-light transition-opacity duration-300 ease-in-out capitalize">
-              {desc}
-            </p>
-            <p className="text-base font-normal text-accent mt-2">{date}</p>
-          </div>
-          <div>
-            <div className="w-10 h-10 bg-[#FFFFFF] rounded-lg hidden opacity-0 group-hover:flex group-hover:opacity-100 justify-center items-center transition-opacity duration-300 ease-in-out">
-              <Image
-                src="/arrow-up-right.svg"
-                alt="arrow-up"
-                width={24}
-                height={24}
-                className="cursor-pointer object-contain"
-              />
-            </div>
-          </div>
-        </div>
+        <p className="line-clamp-3 text-body text-content-muted">{desc}</p>
+        <span className="mt-auto inline-flex items-center gap-2 pt-2 text-label font-semibold text-content transition-colors group-hover:text-accent">
+          Read article
+          <Image
+            src="/assets/shared/arrow-right.svg"
+            alt=""
+            width={20}
+            height={20}
+            className="h-5 w-5"
+          />
+        </span>
       </div>
     </Link>
   );

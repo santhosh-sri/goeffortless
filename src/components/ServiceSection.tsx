@@ -1,7 +1,9 @@
 import { ServiceContent } from "@/interface/type";
-import parse from "html-react-parser";
 import Link from "next/link";
 import React from "react";
+import { cn } from "@/lib/cn";
+import { parseCms } from "@/lib/cmsHtml";
+import Section from "./ui/Section";
 import AccordionComponeny from "./AccordionComponeny";
 import BusineesCardSection from "./BusineesCardSection";
 import CallbackCardSection from "./CallBackCardSection";
@@ -168,74 +170,65 @@ const ServiceSection = ({
   isPageHeading = false,
 }: ServiceSectionProps) => {
   const PageHeadingTag = isPageHeading ? "h1" : "h2";
+  // `title` is the page heading only when no Customtitle already took it.
+  const SecondaryHeadingTag = isPageHeading && !Customtitle ? "h1" : "h2";
 
   return (
     <>
-      {showGreyTopBorder && (
-        <div className="mt-[40px] h-[1px] w-full bg-[linear-gradient(270deg,rgb(var(--color-border))_0%,rgb(var(--color-text))_50%,rgb(var(--color-border))_100%)]"></div>
-      )}
-      <div
-        className={`${
-          bgColour ? bgColour : "bg-bg"
-        } max-md:px-5 md:px-[80px] py-8 md:py-[60px]`}
+      {/*
+        The CMS alternates bands with `bgColour` (the dark site's #15181B);
+        on the light theme that is the grey `subtle` band, and its absence the
+        white page — the same white/grey rhythm the product pages follow. The
+        gradient hairlines that used to top and tail the dark bands are gone.
+      */}
+      <Section
+        tone={bgColour ? "subtle" : "default"}
+        spacing="lg"
+        id={href}
+        containerClassName="flex flex-col gap-10 lg:gap-12"
       >
         {caseStudies?.length === 0 && (
-          <div
-            className={`flex flex-col md:gap-6 gap-4 items-center justify-center ${
-              marginTop ? "mt-[64px] md:mt-0" : ""
-            } max-w-[1350px] mx-auto scroll-mt-20`}
-            id={href}
-          >
-            {(colouredTagLine || tagLine) && (
-              <PageTitle pageHeading={tagLine} pageName={colouredTagLine} />
-            )}
-            {Customtitle && (
-              // The CMS pages have no hero fold, so the first section's title
-              // is the page heading and must be an h1, not an h2.
-              <PageHeadingTag
-                className={`${
-                  marginTop ? "" : "max-md:pt-[80px]"
-                } font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
-                style={{
-                  background:
-                    "linear-gradient(90deg, rgb(var(--color-accent)) 59.38%, rgb(var(--color-text)) 96.86%)",
-                  WebkitBackgroundClip: "text", // For Safari and some Webkit browsers
-                }}
-              >
-                {parse(Customtitle)}
-              </PageHeadingTag>
-            )}
-            {title && (
-              <div className="flex gap-2 md:gap-[16px]">
-                <h2 className="!font-[300] text-[24px] md:text-[32px] md:leading-[43px] leading-8 text-center text-content">
-                  {parse(title)}
-                  {colouredTitle && (
-                    <span
-                      className={`${"!font-[500]"} text-[24px] md:text-[32px] md:leading-[43px] leading-[32px] text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-content`}
-                    >
-                      {tagLine === "Ideal Partners" && isMobile ? (
-                        <div></div>
-                      ) : (
-                        ""
-                      )}
-                      {parse(colouredTitle)}
-                    </span>
+          <div className="flex w-full flex-col items-center justify-center gap-10 lg:gap-12">
+            {(colouredTagLine || tagLine || Customtitle || title || description) && (
+              // Same anatomy as SectionHeading: chip 16 over the title, the
+              // description 24 below that pair. Built inline because the CMS
+              // titles carry markup that parseCms has to rewrite.
+              <div className="flex w-full flex-col items-center gap-6 text-center">
+                <div className="flex w-full flex-col items-center gap-4">
+                  {(colouredTagLine || tagLine) && (
+                    <PageTitle
+                      pageHeading={tagLine}
+                      pageName={colouredTagLine}
+                      tone={bgColour ? "surface" : "subtle"}
+                    />
                   )}
-                </h2>
+                  {Customtitle && (
+                    // The CMS pages have no hero fold, so the first section's
+                    // title is the page heading and must be an h1, not an h2.
+                    <PageHeadingTag className="text-heading-md font-normal text-content md:text-heading-lg lg:text-display">
+                      {parseCms(Customtitle)}
+                    </PageHeadingTag>
+                  )}
+                  {title && (
+                    <SecondaryHeadingTag className="text-heading-sm font-light text-content md:text-heading-md">
+                      {parseCms(title)}
+                      {colouredTitle && (
+                        <>
+                          {" "}
+                          <span className="font-bold text-accent">
+                            {parseCms(colouredTitle)}
+                          </span>
+                        </>
+                      )}
+                    </SecondaryHeadingTag>
+                  )}
+                </div>
+                {description && (
+                  <p className="max-w-[1036px] text-body text-content-muted md:text-body-lg">
+                    {description}
+                  </p>
+                )}
               </div>
-            )}
-            {description && (
-              <p
-                className={` ${
-                  isHomePage
-                    ? "md:text-2xl"
-                    : Customtitle
-                    ? "md:text-2xl text-sm md:font-[300] md:mt-[4px]"
-                    : "md:text-xl text-base"
-                } text-content-muted text-center font-[400] md:font-[300]`}
-              >
-                {description}
-              </p>
             )}
             {featureCardsSection && (
               <FeatureWrapper GridCols={GridCols} {...featureCardsSection} />
@@ -433,15 +426,15 @@ const ServiceSection = ({
               </div>
             )}
             {founderTestominial && (
-              <div className="flex flex-col gap-10 max-w-[1350px] mx-auto w-full items-start">
+              <div className="flex w-full flex-col items-start gap-10">
                 {founderTestominial?.map((testimonial, index) => (
                   <FounderTestimonialCard key={index} {...testimonial} />
                 ))}
               </div>
             )}
             {founderTeams && (
-              <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pt-[40px]">
-                <p className="font-[500] text-[32px] leading-[24px] text-content text-left">
+              <div className="flex w-full flex-col gap-6 md:gap-10">
+                <p className="text-heading-md font-medium text-content">
                   Leadership Team
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 !gap-6 w-full items-start">
@@ -452,8 +445,8 @@ const ServiceSection = ({
               </div>
             )}
             {mangementTeams && (
-              <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full items-start">
-                <p className="font-[500] text-[32px] leading-[24px] text-content text-left">
+              <div className="flex w-full flex-col items-start gap-6 md:gap-10">
+                <p className="text-heading-md font-medium text-content">
                   Management Team
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full">
@@ -465,7 +458,7 @@ const ServiceSection = ({
             )}
             {mentorsCard && (
               <>
-                <p className="font-[500] text-[32px] leading-[32px] text-content self-start">
+                <p className="self-start text-heading-md font-medium text-content">
                   Well-Wishers & Advisors{" "}
                 </p>
                 <div className="">
@@ -478,8 +471,8 @@ const ServiceSection = ({
               </>
             )}
             {investors && (
-              <div className="flex flex-col md:gap-10 gap-6 max-w-[1350px] mx-auto w-full md:pb-[40px]">
-                <p className="font-[500] text-[32px] leading-[24px] text-content text-left">
+              <div className="flex w-full flex-col gap-6 md:gap-10">
+                <p className="text-heading-md font-medium text-content">
                   Angel Investors
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full">
@@ -498,10 +491,6 @@ const ServiceSection = ({
                       {...team}
                       isMobile={isMobile}
                       growthFeatures
-                      // Add right border to the last item (index 2) in the 3-column grid
-                      className={
-                        index === 2 ? "gradient-border-right-special" : ""
-                      }
                     />
                   ))}
                 </div>
@@ -513,10 +502,6 @@ const ServiceSection = ({
                       isMobile={isMobile}
                       hideLastBorder={true}
                       growthFeatures
-                      // Add right border to the last item (index 1) in the 2-column flex
-                      className={
-                        index === 1 ? "gradient-border-right-special" : ""
-                      }
                     />
                   ))}
                 </div>
@@ -534,8 +519,8 @@ const ServiceSection = ({
               </div>
             )}
             {companyValuesItems && (
-              <div className="md:flex md:flex-col md:gap-[42px] items-center">
-                <div className="grid grid-cols-1 md:grid-cols-4 md:gap-6 w-full items-start md:flex-row">
+              <div className="flex w-full flex-col items-center md:gap-6">
+                <div className="grid w-full grid-cols-1 items-start md:grid-cols-4 md:gap-6">
                   {companyValuesItems.slice(0, 4).map((team, index) => (
                     <ValueCard
                       key={index}
@@ -545,7 +530,7 @@ const ServiceSection = ({
                     />
                   ))}
                 </div>
-                <div className="flex flex-col md:flex-row md:gap-6 md:w-[100%] items-start ">
+                <div className="grid w-full grid-cols-1 items-start md:grid-cols-3 md:gap-6">
                   {companyValuesItems.slice(4, 7).map((team, index) => (
                     <ValueCard key={index} {...team} customLength={true} />
                   ))}
@@ -553,8 +538,8 @@ const ServiceSection = ({
               </div>
             )}
             {partnerList && (
-              <div className="flex flex-col md:gap-[60px] gap-5 items-center">
-                <div className="grid grid-cols-1 md:grid-cols-4 w-full items-start max-md:gradient-border-top">
+              <div className="flex w-full flex-col items-center gap-8 lg:gap-12">
+                <div className="grid w-full grid-cols-1 items-start md:grid-cols-4">
                   {partnerList?.map((team, index) => (
                     <PartnerList key={index} {...team} index={index} />
                   ))}
@@ -565,7 +550,7 @@ const ServiceSection = ({
               </div>
             )}
             {partnerBenifits && (
-              <div className="flex flex-col md:gap-[60px] gap-5 items-center md:mt-4">
+              <div className="flex w-full flex-col items-center gap-8 lg:gap-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 w-full items-start">
                   {partnerBenifits?.slice(0, 3).map((team, index) => (
                     <PartnerList key={index} {...team} index={index} />
@@ -618,7 +603,7 @@ const ServiceSection = ({
               </div>
             )}
             {showForm && (
-              <div id="PartnerForm" className="w-full max-w-[777px] md:mt-4">
+              <div id="PartnerForm" className="w-full scroll-mt-28">
                 <PartnerForm />
               </div>
             )}{" "}
@@ -668,11 +653,7 @@ const ServiceSection = ({
         )}
         {pricingCards && (
           <div
-            className={` ${isHomePage == true ? "md:hidden" : "md:block"} ${
-              isPricingPage ? "md:pb-[64px]" : "md:pb-[80px] "
-            } flex flex-col md:gap-[4.5rem] gap-8 !w-full ${
-              pricingFeatures ? "" : " max-md:pb-[32px]"
-            } md:max-w-[1360px] md:mx-auto`}
+            className={` ${isHomePage == true ? "md:hidden" : "md:block"} flex flex-col md:gap-[4.5rem] gap-8 w-full`}
           >
             {pricingFeatures && (isPricingPlanPage || !isMobile) && (
               <PricingFeatures setSelectedPlan={setSelectedPlan} />
@@ -687,59 +668,40 @@ const ServiceSection = ({
           </div>
         )}
         {faqsSection?.length > 0 && (
-          <div className="md:pb-[100px] pb-[60px]">
+          <div>
             {faqsSection?.map((items, index) => (
               <FaqSection key={index} {...items} />
             ))}
           </div>
         )}
-        {certificate && (
-          <div className="md:pb-[100px] pb-[60px]">
-            <CertificationGrid certificate={certificate} />
-          </div>
-        )}
+        {certificate && <CertificationGrid certificate={certificate} />}
         {caseStudies?.length > 0 && (
-          <div
-            id={href}
-            className="md:pb-[100px] pb-[60px] px-5 md:p-0 scroll-mt-20"
-          >
+          <div className="scroll-mt-20">
             <CaseStudiesSection caseStudies={caseStudies} />
           </div>
         )}
-        {faqs && (
-          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0">
-            <FaqComponent faqs={faqs} />
-          </div>
-        )}
-        {officelocation && (
-          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0 mt-6 md:mt-8">
-            <OfficeLocations locations={officelocation} />
-          </div>
-        )}
+        {faqs && <FaqComponent faqs={faqs} />}
+        {officelocation && <OfficeLocations locations={officelocation} />}
         {blogs?.length > 0 && (
-          <div className="md:pb-[100px] pb-[60px] px-5 md:p-0 grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {blogs?.map((items, index) => (
               <BlogCard key={index} {...items} />
             ))}
           </div>
         )}
-      </div>
+      </Section>
 
-      {downloadApps?.length > 0 && (
-        <div className="flex flex-col gap-20">
-          {downloadApps?.map((items, index) => (
-            <DownloadApps key={index} {...items} />
-          ))}
-        </div>
-      )}
+      {downloadApps?.length > 0 &&
+        downloadApps.map((items, index) => (
+          // Each app block is its own band, alternating from grey so the
+          // white heading section above is followed by grey → white.
+          <DownloadApps
+            key={index}
+            {...items}
+            tone={index % 2 === 0 ? "subtle" : "default"}
+          />
+        ))}
 
-      {showGreyBoderLine && (
-        <div
-          className={`${
-            !isLastSection && "mb-[40px]"
-          } h-[1px] w-full bg-[linear-gradient(270deg,rgb(var(--color-border))_0%,rgb(var(--color-text))_50%,rgb(var(--color-border))_100%)]`}
-        />
-      )}
     </>
   );
 };

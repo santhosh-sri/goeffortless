@@ -8,34 +8,30 @@ interface Props {
 
 const ERPComparisonCards: React.FC<Props> = ({ cards }) => {
   return (
-    <section className="">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {cards.map((card, idx) => (
+    <section className="w-full">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
+        {cards.map((card) => (
           <div
             key={card.id}
-            className="border border-white/10 rounded-lg p-5 flex flex-col gap-4 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]"
+            className="flex flex-col gap-5 rounded-xl border border-line bg-surface p-5"
           >
             {/* Header */}
-            <div className="flex flex-col gap-3">
-              <p className="text-xs leading-4 font-light text-content-muted">
+            <div className="flex flex-col gap-2">
+              <p className="text-caption text-content-subtle">
                 {card.id}. {card.subTitle}
               </p>
-              <p className="text-2xl font-semibold leading-[31px] text-content">
+              <p className="text-heading-sm font-semibold text-content">
                 {card.title}
               </p>
             </div>
             {/* ERP Promise */}
-            <div className="flex flex-col gap-2">
-              <p className="text-sm leading-[18px] font-light text-content-muted">
-                The ERP Promise:
-              </p>
-              <p className="text-base leading-5 font-normal text-content">
-                {card.secondTitle}
-              </p>
+            <div className="flex flex-col gap-1.5">
+              <p className="text-label text-content-subtle">The ERP Promise:</p>
+              <p className="text-body text-content">{card.secondTitle}</p>
             </div>
             {/* Effortless Reality */}
             <div className="flex flex-col gap-4">
-              <p className="text-accent font-semibold text-sm leading-5">
+              <p className="text-label font-semibold text-accent">
                 The Effortless Reality:
               </p>
 
@@ -44,17 +40,16 @@ const ERPComparisonCards: React.FC<Props> = ({ cards }) => {
                   <div key={i} className="flex items-start gap-2">
                     <Image
                       src="/orangeTick.svg"
-                      alt="orangeTick"
+                      alt=""
                       width={20}
                       height={20}
+                      className="mt-0.5 h-5 w-5 shrink-0"
                     />
-                    <div className="flex flex-col gap-2">
-                      <p className="text-content text-sm leading-[18px] font-semibold">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-label font-semibold text-content">
                         {item.key}
                       </p>
-                      <p className="text-content-muted text-sm leading-[18px] font-light">
-                        {item.val}
-                      </p>
+                      <p className="text-label text-content-muted">{item.val}</p>
                     </div>
                   </div>
                 ))}
@@ -63,8 +58,8 @@ const ERPComparisonCards: React.FC<Props> = ({ cards }) => {
 
             {/* Result */}
             {card.result && (
-              <div className="border-t border-t-[#424242] py-4">
-                <p className="text-accent font-medium text-base leading-5">
+              <div className="mt-auto border-t border-line pt-4">
+                <p className="text-body font-medium text-accent">
                   Result: {card.result}
                 </p>
               </div>

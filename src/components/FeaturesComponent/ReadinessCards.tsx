@@ -8,46 +8,42 @@ interface Props {
 
 const ReadinessCards: React.FC<Props> = ({ cards }) => {
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-surface border border-[#E5E5E533] rounded-2xl p-5">
+    <div className="w-full">
+      <div className="grid grid-cols-1 gap-6 rounded-xl border border-line bg-surface p-5 md:grid-cols-3">
         {cards.map((card, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-3 bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] rounded-lg p-4 shadow-md"
+            className="flex items-center gap-4 rounded-lg bg-bg-subtle p-4"
           >
             {/* Icon */}
-            <div className="">
+            <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-icon-tile">
               <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
-                  d="M0 4C0 1.79086 1.79086 0 4 0H44C46.2091 0 48 1.79086 48 4V44C48 46.2091 46.2091 48 44 48H4C1.79086 48 0 46.2091 0 44V4Z"
-                  fill="white"
-                  fill-opacity="0.1"
-                />
-                <path
-                  d="M32 18L21 29L16 24"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  d="M20 6L9 17L4 12"
+                  stroke="rgb(var(--color-accent))"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
-            </div>
+            </span>
 
             {/* Content */}
-            <div className="flex flex-col gap-2">
-              <p className="text-content font-normal text-base leading-5 -tracking-[0.48px]">
-                {card.title}
-              </p>
-              <p className="text-content text-sm font-light leading-[18px]">
+            <div className="flex flex-col gap-1.5">
+              <p className="text-body font-medium text-content">{card.title}</p>
+              <p className="text-label text-content-muted">
                 {card.description}
                 {card.footnote && (
-                  <sup className="ml-1 text-xs text-content">{card.footnote}</sup>
+                  <sup className="ml-1 text-caption text-content-subtle">
+                    {card.footnote}
+                  </sup>
                 )}
               </p>
             </div>

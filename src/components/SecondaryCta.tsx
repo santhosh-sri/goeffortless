@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Button from "./ui/Button";
 
 interface SecondaryCtaProps {
   handleDirect: () => void;
@@ -11,48 +12,31 @@ interface SecondaryCtaProps {
   isFeaturePage?: boolean;
 }
 
+/**
+ * Secondary (outlined) CTA on the CMS pages — the shared `Button` in its
+ * `secondary` variant. `customStyle` marks the hero placement, which uses the
+ * 56px hero size to sit level with the primary CTA beside it.
+ */
 const SecondaryCta: React.FC<SecondaryCtaProps> = ({
   handleDirect,
   secondaryCtaText,
   customStyle = false,
-  ishome,
-  isOrange,
   secondaryIcon,
-  isFeaturePage,
 }) => {
   return (
-    <button
+    <Button
+      variant="secondary"
+      size={customStyle ? "hero" : "md"}
       onClick={handleDirect}
-      id="democta"
-      className={`group relative overflow-hidden transition-all duration-500 ease-in-out
-        py-[12px] md:text-[16px] cursor-pointer border border-accent text-accent font-[500]
-        md:px-6 px-[16px] rounded flex items-center justify-center  md:hover:pr-7
-        ${customStyle ? "text-[14px]" : "md:text-[16px] text-[14px]"}
-        ${
-          ishome || isFeaturePage ? "w-[220px] max-md:w-full" : ""
-        }  md:hover:!pr-[36px]`}
+      leadingIcon={
+        secondaryIcon ? (
+          <Image src={secondaryIcon} alt="" width={24} height={24} className="h-6 w-6" />
+        ) : undefined
+      }
+      className="w-full font-semibold sm:w-auto"
     >
-      <span className="relative inline-flex items-center ">
-        {secondaryIcon && (
-          <span className="mr-2">
-            <Image src={secondaryIcon} alt="secIcon" width={24} height={24} />
-          </span>
-        )}
-        <span className="md:group-hover:mr-1 whitespace-nowrap transition-all duration-500">
-          {secondaryCtaText}
-        </span>
-        <span className="absolute max-md:hidden top-1/2 right-[-1.4rem] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out md:block hidden">
-          <Image
-            src={isOrange ? "/newHeader.svg" : "/newRightArrow.svg"}
-            alt="arrow"
-            width={16}
-            height={16}
-            className="block"
-            unoptimized
-          />
-        </span>
-      </span>
-    </button>
+      {secondaryCtaText}
+    </Button>
   );
 };
 

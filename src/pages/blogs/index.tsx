@@ -4,6 +4,8 @@ import BlogCard from "@/components/BlogCard";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
 import PageTitle from "@/components/PageTitle";
+import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
 import { BlogCardProps } from "@/interface/type";
 import { GetStaticProps } from "next";
 
@@ -156,43 +158,43 @@ const Index = ({ initialBlogs }: BlogPageProps) => {
           }}
         />
       </Head>
-      <SiteHeader />
-      <main className={`bg-bg md:px-[80px] mt-8 md:mt-[60px]`}>
-        <div className="flex flex-col md:gap-6 gap-4 items-center justify-center mt-[64px] md:mt-0 py-[32px] max-w-[1350px] mx-auto max-md:px-5 md:py-[90px] scroll-mt-20">
-          <PageTitle pageHeading={"Blogs"} />
-          <h1
-            className={`font-[300] md:font-medium text-[24px] md:text-[72px] md:leading-[90px] leading-[30px] text-center md:tracking-[-3px] bg-clip-text text-transparent`}
-            style={{
-              background: "linear-gradient(90deg, #F08B32 59.38%, #FFF 96.86%)",
-              WebkitBackgroundClip: "text",
-            }}
-          >
-            <span className="text-content font-light">The </span>
-            <span className="font-medium">Effortless Edge</span>
-          </h1>
-          <p
-            className={`md:text-2xl text-sm md:mt-[4px] text-content-muted text-center font-[400] md:font-[300]`}
-          >
-            Stay ahead with The Effortless Edge - your source for insights on
-            AI-driven automation, smarter sales, and efficient financial
-            workflows for growing businesses.
-          </p>
-        </div>
-        <div className="max-md:px-5">
-          {blogs?.length > 0 ? (
-            <div className="md:pb-[100px] pb-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {blogs.map((items, index) => (
-                <BlogCard key={index} {...items} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-10 text-content-muted">
-              No blogs found
-            </div>
-          )}
-        </div>
-      </main>
-      <SiteFooter />
+      <div className="min-h-screen bg-bg text-content">
+        <SiteHeader />
+        <main>
+          {/* Grey hero band, as on the product pages. */}
+          <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+            <Container className="flex flex-col items-center gap-6 text-center">
+              <div className="flex flex-col items-center gap-4">
+                <PageTitle pageHeading={"Blogs"} tone="surface" />
+                <h1 className="text-heading-md font-normal text-content md:text-heading-lg lg:text-display lg:leading-[80px]">
+                  The <span className="font-bold text-accent">Effortless Edge</span>
+                </h1>
+              </div>
+              <p className="max-w-[1036px] text-body text-content-muted md:text-body-lg md:leading-6">
+                Stay ahead with The Effortless Edge - your source for insights
+                on AI-driven automation, smarter sales, and efficient financial
+                workflows for growing businesses.
+              </p>
+            </Container>
+          </section>
+
+          <Section spacing="lg">
+            {blogs?.length > 0 ? (
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {blogs.map((items, index) => (
+                  <BlogCard key={index} {...items} />
+                ))}
+              </div>
+            ) : (
+              <div className="py-10 text-center text-body text-content-muted">
+                No blogs found
+              </div>
+            )}
+          </Section>
+        </main>
+        <div aria-hidden="true" className="h-12 bg-bg-subtle lg:h-20" />
+        <SiteFooter />
+      </div>
     </>
   );
 };
