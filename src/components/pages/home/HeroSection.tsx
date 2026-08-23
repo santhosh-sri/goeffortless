@@ -36,7 +36,7 @@ const PLAY = (
 
 export function HeroSection() {
   return (
-    <section className="bg-bg-subtle pt-10 lg:pt-9">
+    <section className="bg-bg-subtle py-[48px]">
       <Container className="flex flex-col items-start gap-10 lg:flex-row lg:gap-0">
         {/* ---- Copy ---- */}
         <div className="flex w-full flex-col justify-center gap-8 lg:flex-1 lg:pr-5">

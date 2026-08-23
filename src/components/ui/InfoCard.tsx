@@ -95,7 +95,7 @@ export function InfoCard({
     >
       {icon &&
         (tiled ? (
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-accent/15 p-1">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-icon-tile p-1">
             {iconNode}
           </span>
         ) : (

@@ -6,7 +6,8 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { allFeaturesCommandCenter as data } from "@/data/allFeaturesPage";
 
 /**
- * "No More Broken Pipes Between Systems" — Figma node 2426:65526.
+ * "No More Broken Pipes Between Systems" — Figma node 2426:65526, the white
+ * band that closes the catalogue.
  *
  * Two columns separated by a vertical dashed rule, then a full-width strip of
  * integration logos and a CTA.
@@ -18,13 +19,19 @@ import { allFeaturesCommandCenter as data } from "@/data/allFeaturesPage";
  */
 export function CommandCenterSection() {
   return (
-    <Section tone="subtle" spacing="lg">
-      <div className="flex flex-col gap-10 lg:gap-12">
+    // Component 969 (2426:65526) is a white block with 40px padding, and the
+    // page's grey shows for 80px on either side of it — so the band is grey
+    // with the white painted inside it, not a white section.
+    <Section tone="subtle" spacing="none" className="lg:py-20">
+      <div className="-mx-gutter bg-bg px-gutter py-10">
+      <div className="flex flex-col gap-10">
         <SectionHeading
           eyebrow={data.eyebrow}
           title={data.title}
           accentTitle={data.accentTitle}
           description={data.description}
+          eyebrowTone="subtle"
+          descriptionSize="lg"
         />
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[520fr_712fr] lg:gap-0">
@@ -86,6 +93,7 @@ export function CommandCenterSection() {
             {data.ctaLabel}
           </Button>
         </div>
+      </div>
       </div>
     </Section>
   );

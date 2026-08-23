@@ -17,16 +17,13 @@ import { customerLogos } from "@/data/customerLogos";
  */
 export function TrustStripSection() {
   return (
-    <section className="bg-bg py-10 lg:py-14">
+    <section className="bg-bg py-[40px] flex flex-col gap-[40px]">
       <Container>
         <p className="text-center text-body text-content-muted md:text-body-lg">
           {parse(trustStrip.statement)}
         </p>
       </Container>
-
-      {/* Full-colour brand originals exported from Figma (1822:6049); the
-          previous set was white-on-transparent and invisible on light. */}
-      <div className="mt-8 overflow-hidden">
+      <div className="overflow-hidden">
         <Logocarousel logos={customerLogos} />
       </div>
     </section>

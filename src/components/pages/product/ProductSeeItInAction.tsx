@@ -16,12 +16,16 @@ import type { ProductVideoData } from "./types";
  */
 export function ProductSeeItInAction({ data }: { data: ProductVideoData }) {
   return (
-    <Section tone="subtle" spacing="md">
-      <div className="flex flex-col items-center gap-8">
+    // Figma 1886:41801: on the grey band, 80 above and below, 40 between the
+    // heading and the player.
+    <Section tone="subtle" spacing="lg">
+      <div className="flex flex-col items-center gap-10">
         <SectionHeading
           title={data.title}
           accentTitle={data.accentTitle}
           description={data.description}
+          headingClassName="font-medium"
+          descriptionClassName="md:leading-6"
         />
 
         {data.videoId && (

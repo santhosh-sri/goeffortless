@@ -298,7 +298,7 @@ export const commandCenters: {
         eyebrow: "The Profit Guardian",
         title: "Every Corporate Rupee Audited. Before It Leaves the Bank",
         description:
-          "Master your full procurement loop. Create Purchase Orders, Effortless AI Auto maps directly to incoming Vendor Bills & pending customer orders (3-way match) , flag Variances from PO, Billable customer Order against received qty, vendor compliance threats, and manage hard departmental budgets easily.",
+          "Master your full procurement loop. Create Purchase Orders, Effortless AI Auto maps directly to incoming Vendor Bills & pending customer orders (3-way map) , flag Variances from PO, vendor compliance threats, and manage hard departmental budgets easily.",
         ctaLabel: "Explore Purchases",
         ctaHref: "/expenses",
         stat: {
@@ -319,7 +319,7 @@ export const commandCenters: {
             icon: "/assets/home/cc-schemes.svg",
             title: "AI-Powered 3-Way Reconciliation",
             description:
-              "Match every bill against its purchase order and goods receipt.",
+              "Automatically match POs, GRNs, and vendor bills with AI-powered reconciliation.",
           },
           {
             icon: "/assets/home/cc-outstanding.svg",
@@ -409,7 +409,7 @@ export const commandCenters: {
         eyebrow: "The Self-Service Engine",
         title: "Stop Being Your Customer\u2019s Help-Desk",
         description:
-          "Stop WhatsApp chaos. Transition your regular B2B buyers to a white-labeled, 24/7 web and mobile ordering portal. Let them browse your inventory catalogue, self-place orders within your predefined MoQ Or Price rules, and track their own invoices/payables/statements.",
+          "Stop WhatsApp chaos. Transition your regular B2B buyers to a white-labeled, AI Powered 24/7 web and mobile ordering App.",
         ctaLabel: "Explore Buyer Commerce",
         ctaHref: "/buyer-portal",
         stat: {
@@ -430,7 +430,7 @@ export const commandCenters: {
             icon: "/assets/home/cc-gps.svg",
             title: "Buyer Portal and Mobile App",
             description:
-              "Give buyers a portal and app of their own, on web and mobile.",
+              "Empower buyers to place orders and track transactions anytime, anywhere.",
           },
           {
             icon: "/assets/home/cc-outstanding.svg",
@@ -487,7 +487,7 @@ export const commandCenters: {
             icon: "/assets/home/cc-gps.svg",
             title: "My Bill Box",
             description:
-              "Let staff gather receipts privately before anything reaches finance.",
+              "Keep all your bills securely organized and easily accessible.",
           },
           {
             icon: "/assets/home/cc-schemes.svg",
@@ -523,7 +523,7 @@ export const commandCenters: {
         eyebrow: "The Recurring Revenue Module",
         title: "Put Your Recurring Revenue on AI Autopilot",
         description:
-          "Never miss a renewal. Automate recurring Proformas, Invoices, and Reminders. Perfect for AMCs, Rentals, and Retainers.",
+          "Never drop the ball on an AMC renewal, maintenance contract, or subscription milestone again. Automate complex pro-forma generations, compliant tax invoicing cycles, and collections tracking.",
         ctaLabel: "Explore Contracts",
         ctaHref: "/contracts",
         stat: {
@@ -543,7 +543,7 @@ export const commandCenters: {
             icon: "/assets/home/cc-collections.svg",
             title: "Smart Reminders",
             description:
-              "WhatsApp and email reminders fire on their own, every cycle.",
+              "Auto-alerts for renewals, expirations, and pending dues.",
           },
           {
             icon: "/assets/home/cc-schemes.svg",
