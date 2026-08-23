@@ -21,6 +21,10 @@ export function SectionHeading({
   className,
   headingClassName,
   accentOnNewLine,
+  eyebrowTone = "surface",
+  descriptionGap = "md",
+  descriptionSize = "md",
+  descriptionClassName,
 }: {
   eyebrow?: string;
   /** Leading, non-accented part of the heading. Accepts inline HTML. */
@@ -44,18 +48,41 @@ export function SectionHeading({
    * "Expand as you grow." always starts its own line.
    */
   accentOnNewLine?: boolean;
+  /**
+   * The eyebrow chip's fill is the opposite of the band it sits on (palette
+   * "Tag in white bg" / "Tag in grey bg"): `subtle` on white sections,
+   * `surface` on grey ones, `plain` where Figma drops the stroke.
+   */
+  eyebrowTone?: React.ComponentProps<typeof Badge>["tone"];
+  /**
+   * Title → description distance. Figma uses 24 on most headings and 20 on
+   * the Feature Deep Dive and closing CTA ones.
+   */
+  descriptionGap?: "sm" | "md";
+  /** `lg` is the 24px/0.24 tracking description on Compliance Shield, Billing Modes and the Command Center. */
+  descriptionSize?: "md" | "lg";
+  descriptionClassName?: string;
 }) {
   const centered = align === "center";
 
   return (
+    // Eyebrow and title sit 16px apart; the description hangs 24 (or 20)
+    // below that pair — two gaps, so two boxes.
     <div
       className={cn(
-        "flex w-full flex-col gap-4",
+        "flex w-full flex-col",
+        descriptionGap === "sm" ? "gap-5" : "gap-6",
         centered ? "items-center text-center" : "items-start text-left",
         className
       )}
     >
-      {eyebrow && <Badge>{eyebrow}</Badge>}
+      <div
+        className={cn(
+          "flex w-full flex-col gap-4",
+          centered ? "items-center" : "items-start"
+        )}
+      >
+      {eyebrow && <Badge tone={eyebrowTone}>{eyebrow}</Badge>}
 
       <Heading
         className={cn(
@@ -85,12 +112,17 @@ export function SectionHeading({
           ))}
         {titleSuffix && <>{" "}{parse(titleSuffix)}</>}
       </Heading>
+      </div>
 
       {description && (
         <p
           className={cn(
-            "max-w-[1036px] text-body font-normal text-content-muted md:text-body-lg",
-            centered && "mx-auto"
+            "max-w-[1036px] font-normal text-content-muted",
+            descriptionSize === "lg"
+              ? "text-body-lg md:text-[24px] md:leading-[30px] md:tracking-[0.24px]"
+              : "text-body md:text-body-lg",
+            centered && "mx-auto",
+            descriptionClassName
           )}
         >
           {description}

@@ -4,9 +4,12 @@
  * Values are stored as space-separated RGB channels so Tailwind can apply
  * opacity modifiers, e.g. `bg-surface/60` -> rgb(var(--color-surface) / 0.6).
  *
- * Light theme  : Figma "EFL Website Final | v4.0" (node 1548:28466).
- * Dark theme   : the palette shipped on the current production site, remapped
- *                onto the new layout. See docs/redesign/01-codebase-audit.md §7.
+ * Light theme  : Figma "EFL Website Final | v4.0" — home frame 1548:28466,
+ *                reconciled with the designer's "White Pallet" (2682:25297).
+ * Dark theme   : the production dark palette remapped onto the new layout
+ *                (docs/redesign/01-codebase-audit.md §7), reconciled with the
+ *                "Black Pallet" (2694:25363). The two palettes are the source
+ *                of truth wherever they and an older frame disagree.
  *
  * Never hardcode a colour in a component. Add a token here instead.
  */
@@ -15,13 +18,14 @@
 [data-theme="light"] {
   /* ---- Backgrounds ------------------------------------------------------ */
   --color-bg: 255 255 255; /* #FFFFFF  page                       */
-  --color-bg-subtle: 244 245 247; /* #F4F5F7  alternating band, pills    */
+  --color-bg-subtle: 245 245 247; /* #F5F5F7  alternating band — Pallet "Primary Background" */
   --color-bg-inset: 238 239 242; /* #EEEFF2  wells, inputs              */
 
   /* ---- Surfaces (cards, menus, sheets) ---------------------------------- */
   --color-surface: 255 255 255; /* #FFFFFF  card                       */
   --color-surface-raised: 255 255 255; /* #FFFFFF  dropdown / modal           */
   --color-surface-hover: 249 250 251; /* #F9FAFB  card hover                 */
+  --color-surface-muted: 216 216 216; /* #D8D8D8  neutral card header bar    */
 
   /* ---- Text ------------------------------------------------------------- */
   --color-text: 26 26 26; /* #1A1A1A  headings, card titles      */
@@ -41,10 +45,36 @@
   --color-accent-subtle: 254 243 233; /* #FEF3E9  accent-tinted background   */
   --color-accent-surface: 255 238 224; /* #FFEEE0  stat/highlight card fill   */
 
+  /* ---- Icon tile — the square behind a card/feature icon ---------------- */
+  /* White Pallet "Icon Background": #F08B32 @ 15%. Dark swaps the hue, not
+     just the alpha, so this is its own token rather than `accent/15`. */
+  --color-icon-tile: 240 139 50;
+  --color-icon-tile-alpha: 0.15;
+
+  /* ---- Tag / pill eyebrow ------------------------------------------------ */
+  /* White Pallet "Tag in white bg" #F4F5F7 and "Tag in grey bg" #FFFFFF: the
+     fill is the opposite of the band it sits on. `--tag-bg` is the on-white
+     fill; the on-grey fill is `--color-surface`. Both are full `background`
+     values, not channels, because the dark theme uses gradients here. The
+     stroke is painted by `.tag-stroke` (globals.css) for the same reason. */
+  --tag-bg: rgb(244 245 247);
+  --tag-stroke: rgb(0 0 0 / 0.08);
+
+  /* ---- Secondary button -------------------------------------------------- */
+  /* White Pallet: #FFFFFF fill, #F08B32 stroke. Filled, not transparent — on
+     a grey band the button stays white. */
+  --color-btn-secondary: 255 255 255;
+  --color-btn-secondary-line: 240 139 50;
+  --color-btn-secondary-ink: 240 139 50;
+
   /* ---- Status ----------------------------------------------------------- */
-  --color-success: 22 186 132; /* #16BA84                             */
+  --color-success: 22 186 132; /* #16BA84  Pallet "Green"             */
   --color-danger: 220 38 38; /* #DC2626                             */
   --color-info: 0 163 255; /* #00A3FF                             */
+
+  /* ---- Palette accents — illustration/status fills, theme-invariant ------ */
+  --color-blue: 59 130 246; /* #3B82F6  Pallet "Blue"              */
+  --color-purple: 138 56 245; /* #8A38F5  Pallet "Purple"            */
 
   /* ---- Focus ring ------------------------------------------------------- */
   --color-focus: 240 139 50; /* matches accent                      */
@@ -52,7 +82,14 @@
   /* ---- Shadows (full declarations — they carry colour) ------------------ */
   --shadow-sm: 0 1px 2px 0 rgb(16 25 40 / 0.05);
   --shadow-card: 0 2px 7px 0 rgb(16 25 40 / 0.05);
-  --shadow-raised: 0 4px 16px 0 rgb(16 25 40 / 0.1);
+  /* Two-stop lift used by the All Features catalogue cards (Figma 2426:64129). */
+  --shadow-card-raised: 0 4px 8px 0 rgb(0 0 0 / 0.08), 0 12px 16px 0 rgb(0 0 0 / 0.06);
+  /* Pallet "Card Shadow": X0 Y4 B16 S0, #000000 @ 10% — pure black, not the
+     navy tint the other shadows carry. */
+  --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.1);
+  /* Tighter lift on small cards — Billing Modes, Command Center feature
+     cards (Figma drop-shadow 0 4 8 black @ 10%). */
+  --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
   --shadow-overlay: 0 12px 32px 0 rgb(16 25 40 / 0.16);
   --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.12);
   /* Same shadow as a filter, for transparent artwork: box-shadow traces
@@ -71,6 +108,7 @@
   --color-surface: 21 24 27; /* #15181B                             */
   --color-surface-raised: 24 27 31; /* #181B1F                             */
   --color-surface-hover: 35 41 47; /* #23292F                             */
+  --color-surface-muted: 45 50 56; /* #2D3238                             */
 
   /* ---- Text ------------------------------------------------------------- */
   --color-text: 255 255 255; /* #FFFFFF                             */
@@ -90,10 +128,28 @@
   --color-accent-subtle: 40 25 12; /* #28190C                             */
   --color-accent-surface: 48 30 14; /* #301E0E                             */
 
+  /* ---- Icon tile — Black Pallet "Icon Background": #FFFFFF @ 10% -------- */
+  --color-icon-tile: 255 255 255;
+  --color-icon-tile-alpha: 0.1;
+
+  /* ---- Tag — Black Pallet: fill white 10% → 0%, stroke #282828 → #FFFFFF
+     (50%) → #282828. The palette gives stops but no angle; both run
+     left-to-right. */
+  --tag-bg: linear-gradient(90deg, rgb(255 255 255 / 0.1), rgb(255 255 255 / 0));
+  --tag-stroke: linear-gradient(90deg, #282828, #ffffff 50%, #282828);
+
+  /* ---- Secondary button — Black Pallet: #FFFFFF fill, #C3C9D1 stroke. The
+     label colour is not on the palette; dark ink on the white fill. --------- */
+  --color-btn-secondary: 255 255 255;
+  --color-btn-secondary-line: 195 201 209;
+  --color-btn-secondary-ink: 26 26 26;
+
   /* ---- Status ----------------------------------------------------------- */
   --color-success: 22 186 132;
   --color-danger: 255 82 82; /* #FF5252  lifted for dark contrast   */
   --color-info: 0 163 255;
+  --color-blue: 59 130 246;
+  --color-purple: 138 56 245;
 
   /* ---- Focus ring ------------------------------------------------------- */
   --color-focus: 255 160 67;
@@ -101,7 +157,11 @@
   /* ---- Shadows — deepened; light shadows vanish on dark ----------------- */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
   --shadow-card: 0 2px 7px 0 rgb(0 0 0 / 0.45);
-  --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.5);
+  --shadow-card-raised: 0 4px 8px 0 rgb(0 0 0 / 0.5), 0 12px 16px 0 rgb(0 0 0 / 0.4);
+  /* Black Pallet specifies the same card shadow as light — 10%, not
+     deepened — so this one is left at the designed value. */
+  --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.1);
+  --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
   --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
   --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);
   --drop-shadow-media: 32px -32px 20px rgb(0 0 0 / 0.5);
@@ -117,6 +177,7 @@
     --color-surface: 21 24 27;
     --color-surface-raised: 24 27 31;
     --color-surface-hover: 35 41 47;
+    --color-surface-muted: 45 50 56;
     --color-text: 255 255 255;
     --color-text-muted: 228 228 231;
     --color-text-subtle: 177 177 177;
@@ -127,11 +188,19 @@
     --color-accent-hover: 255 160 67;
     --color-accent-subtle: 40 25 12;
     --color-accent-surface: 48 30 14;
+    --color-icon-tile: 255 255 255;
+    --color-icon-tile-alpha: 0.1;
+    --tag-bg: linear-gradient(90deg, rgb(255 255 255 / 0.1), rgb(255 255 255 / 0));
+    --tag-stroke: linear-gradient(90deg, #282828, #ffffff 50%, #282828);
+    --color-btn-secondary-line: 195 201 209;
+    --color-btn-secondary-ink: 26 26 26;
     --color-danger: 255 82 82;
     --color-focus: 255 160 67;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
     --shadow-card: 0 2px 7px 0 rgb(0 0 0 / 0.45);
-    --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.5);
+    --shadow-card-raised: 0 4px 8px 0 rgb(0 0 0 / 0.5), 0 12px 16px 0 rgb(0 0 0 / 0.4);
+    --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.1);
+    --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
     --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
     --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);
     --drop-shadow-media: 32px -32px 20px rgb(0 0 0 / 0.5);

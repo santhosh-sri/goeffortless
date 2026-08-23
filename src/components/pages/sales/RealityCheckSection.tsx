@@ -14,13 +14,17 @@ import { salesRealityCheck as data } from "@/data/sales";
  */
 export function RealityCheckSection() {
   return (
-    <Section tone="subtle" spacing="lg">
+    // Figma 1699:2638 paints this band white, not on the grey `subtle` band
+    // — the three-phone composite sits straight on the section.
+    <Section spacing="lg">
       <div className="flex flex-col gap-10 lg:gap-12">
         <SectionHeading
           eyebrow={data.eyebrow}
           title={data.title}
           accentTitle={data.accentTitle}
           description={data.description}
+          eyebrowTone="subtle"
+          descriptionClassName="md:leading-6"
         />
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
@@ -88,11 +92,13 @@ export function RealityCheckSection() {
             <Image
               src={data.effortlessWay.media}
               alt={data.effortlessWay.mediaAlt}
-              width={560}
-              height={500}
+              // Figma group 1699:2791: three mockups, 510×448, transparent
+              // around the devices.
+              width={510}
+              height={448}
               loading="lazy"
-              sizes="(min-width: 1024px) 560px, 100vw"
-              className="h-auto w-full max-w-[560px]"
+              sizes="(min-width: 1024px) 510px, 100vw"
+              className="h-auto w-full max-w-[510px]"
             />
           </div>
         </div>

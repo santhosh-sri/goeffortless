@@ -22,18 +22,13 @@ export const buyerPortalHero: ProductHeroData = {
   description:
     "Stop WhatsApp chaos. Transition your regular B2B buyers to a white-labeled, 24/7 web and mobile ordering portal. Let them browse your inventory catalogue, self-place orders within your predefined MoQ Or Price rules, and track their own invoices/payables/statements—without distracting your sales staff.",
   ctaLabel: "See the Field App in Action",
-  media: {
-    src: "/assets/buyer-portal/hero-panel.png",
-    alt: "Effortless buyer portal showing catalogue and order screens",
-    width: 1336,
-    height: 1144,
-  },
-  video: {
-    mp4: "/assets/buyer-portal/hero-demo.mp4",
+  demo: {
     webm: "/assets/buyer-portal/hero-demo.webm",
-    poster: "/assets/buyer-portal/hero-demo-poster.jpg",
-    device: { left: 34.43, top: 10.49, width: 31.06, height: 77.45 },
-    inset: { x: 0.0852, y: 0.0167, w: 0.8278, h: 0.9656 },
+    mov: "/assets/buyer-portal/hero-demo.mov",
+    poster: "/assets/buyer-portal/hero-demo-poster.png",
+    width: 480,
+    height: 854,
+    card: "phone",
   },
 };
 

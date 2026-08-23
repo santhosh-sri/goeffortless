@@ -9,8 +9,9 @@ import { commandCenters } from "@/data/home";
 /**
  * "One Platform. Five Command Centers." — Figma nodes 1694:2020 / 1614:1477.
  *
- * Tab bar: 8px radius, 20/11 padding, 14/16 semibold. Active pill is
- * `--color-success` (#16BA84) with a drop shadow tinted the same green.
+ * Tab bar: 8px radius, 20/11 padding, 14/16 semibold. The active pill is green
+ * (`--color-success`, #16BA84) on the first two tabs and accent orange
+ * (#F08B32) on the last three, each with a drop shadow tinted to match.
  * Panel: copy + stat card on the left, a 2×3 feature grid (310px cards,
  * 32px accent-tinted icon tiles) on the right. First feature card is featured.
  *
@@ -45,8 +46,16 @@ export function CommandCentersSection() {
             aria-label="Command centers"
             className="flex w-full flex-wrap items-start justify-center gap-3 max-lg:overflow-x-auto"
           >
-            {tabs.map((tab) => {
+            {tabs.map((tab, index) => {
               const selected = tab.id === active.id;
+              /*
+               * The active pill is not one colour: Figma greens the first two
+               * tabs (1694:2138 Purchases, 1606:2274 Sales, both #16BA84) and
+               * oranges the rest (1614:1015 Buyer Commerce, 1694:2172 Staff
+               * Claims, 1694:2265 Contracts, all #F08B32). Every tab had been
+               * green. The glow is always the pill's own colour at 25%.
+               */
+              const activeIsGreen = index < 2;
               return (
                 <button
                   key={tab.id}
@@ -61,9 +70,9 @@ export function CommandCentersSection() {
                     "transition-colors duration-200",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
                     selected
-                      ? // The glow is tinted with the pill's own green
-                        // (#16BA84 at 25%), not the accent orange.
-                        "bg-success text-white shadow-[0px_4px_7px_rgba(22,186,132,0.25)]"
+                      ? activeIsGreen
+                        ? "bg-success text-white shadow-[0px_4px_7px_rgba(22,186,132,0.25)]"
+                        : "bg-accent text-white shadow-[0px_4px_7px_rgba(240,139,50,0.25)]"
                       : "border border-line bg-surface text-content-muted hover:text-content"
                   )}
                 >
@@ -147,11 +156,11 @@ export function CommandCentersSection() {
                   className={cn(
                     "flex h-full w-full flex-col justify-between gap-3 rounded-card bg-surface p-5",
                     index === 0
-                      ? "shadow-[0px_4px_8px_rgba(0,0,0,0.1)]"
+                      ? "shadow-lift"
                       : "border border-line"
                   )}
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-accent/[0.15]">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-icon-tile">
                     <Image
                       src={feature.icon}
                       alt=""

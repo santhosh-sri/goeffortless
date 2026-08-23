@@ -16,13 +16,15 @@ import { contractsBillingModes as data } from "@/data/contracts";
  */
 export function BillingModesSection() {
   return (
-    <Section tone="subtle" spacing="lg">
+    <Section spacing="lg">
       <div className="flex flex-col gap-10 lg:gap-12">
         <SectionHeading
           eyebrow={data.eyebrow}
           title={data.title}
           accentTitle={data.accentTitle}
           description={data.description}
+          eyebrowTone="subtle"
+          descriptionSize="lg"
         />
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
@@ -30,7 +32,7 @@ export function BillingModesSection() {
             <div
               key={mode.title}
               className={cn(
-                "flex flex-col gap-6",
+                "flex flex-col gap-8",
                 index === 0
                   ? "lg:pr-12"
                   : "border-t border-dashed border-line pt-10 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0"
@@ -38,55 +40,62 @@ export function BillingModesSection() {
             >
               <h3
                 className={cn(
-                  "text-center text-heading-sm font-semibold",
+                  "text-center text-[20px] font-semibold leading-[26px]",
                   mode.accent ? "text-accent" : "text-content"
                 )}
               >
                 {mode.title}
               </h3>
 
-              {/* Numbered steps */}
-              <ol className="flex flex-col gap-4 rounded-card border border-line-subtle p-5">
-                {mode.steps.map((step, stepIndex) => (
-                  <li key={step} className="flex items-center gap-4">
-                    <span
-                      aria-hidden="true"
-                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-pill bg-accent-subtle text-body font-semibold text-accent"
-                    >
-                      {stepIndex + 1}
-                    </span>
-                    <span className="text-body text-content">{step}</span>
-                  </li>
-                ))}
-              </ol>
-
-              <div className="flex flex-col gap-2">
-                <p className="text-body font-semibold text-accent">
-                  {data.reasonLabel}
-                </p>
-                <p className="text-body text-content-muted">{mode.reason}</p>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <p className="text-body font-semibold text-accent">
-                  {data.supportsLabel}
-                </p>
-                <ul className="flex flex-col gap-3">
-                  {mode.supports.map((item) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <Image
-                        src="/assets/shared/check-circle.svg"
-                        alt=""
-                        width={20}
-                        height={20}
-                        className="h-5 w-5 shrink-0"
-                      />
-                      <span className="text-body text-content md:text-body-lg">
-                        {item}
+              {/* 1985:112340: a white 18px card with the 0/4/8 lift, 20px
+                  padding, holding the dashed step box and the two notes. */}
+              <div className="flex flex-col gap-5 rounded-card bg-surface p-5 shadow-lift">
+                <ol className="flex flex-col gap-4 rounded-lg border border-dashed border-line p-5">
+                  {mode.steps.map((step, stepIndex) => (
+                    <li key={step} className="flex items-center gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-pill bg-accent/20 text-label font-medium text-accent"
+                      >
+                        {stepIndex + 1}
+                      </span>
+                      <span className="text-label font-medium text-content">
+                        {step}
                       </span>
                     </li>
                   ))}
-                </ul>
+                </ol>
+
+                <div className="flex flex-col gap-5">
+                  <div className="flex flex-col gap-3">
+                    <p className="text-body font-medium text-accent">
+                      {data.reasonLabel}
+                    </p>
+                    <p className="text-body text-content">{mode.reason}</p>
+                  </div>
+
+                  <div className="flex flex-col gap-3">
+                    <p className="text-body font-medium text-accent">
+                      {data.supportsLabel}
+                    </p>
+                    <ul className="flex flex-col gap-3">
+                      {mode.supports.map((item) => (
+                        <li key={item} className="flex items-center gap-2">
+                          <Image
+                            src="/assets/shared/check-circle.svg"
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="h-6 w-6 shrink-0"
+                          />
+                          <span className="text-[20px] leading-6 text-content">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

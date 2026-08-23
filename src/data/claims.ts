@@ -23,18 +23,13 @@ export const claimsHero: ProductHeroData = {
   description:
     "Put an end to crumpled fuel receipts, fabricated mileage logs, and painful Excel calculation sheets. Automate local conveyance, travel claims, and daily allowances with robust compliance safeguards.",
   ctaLabel: "See the Field App in Action",
-  media: {
-    src: "/assets/claims/hero-panel.png",
-    alt: "Effortless claims app showing expense reimbursement screens",
-    width: 1336,
-    height: 1144,
-  },
-  video: {
-    mp4: "/assets/claims/hero-demo.mp4",
+  demo: {
     webm: "/assets/claims/hero-demo.webm",
-    poster: "/assets/claims/hero-demo-poster.jpg",
-    device: { left: 34.43, top: 10.49, width: 31.06, height: 77.45 },
-    inset: { x: 0.0852, y: 0.0167, w: 0.8278, h: 0.9656 },
+    mov: "/assets/claims/hero-demo.mov",
+    poster: "/assets/claims/hero-demo-poster.png",
+    width: 480,
+    height: 854,
+    card: "phone",
   },
 };
 
@@ -124,6 +119,7 @@ export const claimsFeatureRows: ProductFeatureRow[] = [
       "Managers review team expenditure logs natively inside a centralized feed. If a field emergency occurs, the system permits structured management overrides with clean mandatory reason-logging to preserve compliance audits.",
     ],
     media: "/assets/claims/feature-04.png",
+    mediaHeight: 596,
     mediaAlt: "Expense approvals queue with claim review panel",
   },
   {
@@ -133,6 +129,7 @@ export const claimsFeatureRows: ProductFeatureRow[] = [
       "Once claims clear validation checkpoints, they don't sit waiting for manual processing. Run streamlined, bulk batch reimbursement distributions out to employee accounts instantly using direct, connected bank portal flow.",
     ],
     media: "/assets/claims/feature-05.png",
+    mediaHeight: 596,
     mediaAlt: "Bulk reimbursement settlement screen",
   },
   {
@@ -144,6 +141,7 @@ export const claimsFeatureRows: ProductFeatureRow[] = [
       "Buyer can see, Live Status of placed Orders (Pending / Partially fulfilled / Fulfilled).",
     ],
     media: "/assets/claims/feature-06.png",
+    mediaHeight: 596,
     mediaAlt: "Report centre with reimbursement categories",
   },
   {
@@ -155,6 +153,7 @@ export const claimsFeatureRows: ProductFeatureRow[] = [
       "To  keep your books pristine, we have 'Cut-Off Date Controls.' Once you close a month, the system physically blocks employees from submitting backdated travel expenses from two months ago. No more 'Month-End Mess'.”",
     ],
     media: "/assets/claims/feature-07.png",
+    mediaHeight: 548,
     mediaAlt: "Two-way sync between Effortless and Tally Prime",
   },
 ];

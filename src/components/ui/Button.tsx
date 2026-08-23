@@ -13,13 +13,17 @@ import { CalcomConfig } from "@/utils/calConfig";
  */
 
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "link";
-export type ButtonSize = "sm" | "md" | "lg";
+export type ButtonSize = "sm" | "md" | "lg" | "hero";
 
 const VARIANT: Record<ButtonVariant, string> = {
   primary:
     "bg-accent text-content-on-accent border border-accent hover:bg-accent-hover hover:border-accent-hover",
+  // Figma "White Pallet" secondary button: #FFFFFF fill, #F08B32 stroke. It is
+  // filled, not transparent, so it stays white on a grey band. The dark
+  // palette keeps the white fill and swaps the stroke/ink — see the
+  // `btn-secondary` tokens.
   secondary:
-    "bg-transparent text-accent border border-accent hover:bg-accent hover:text-content-on-accent",
+    "bg-btn-secondary text-btn-secondary-ink border border-btn-secondary-line hover:bg-accent hover:text-content-on-accent hover:border-accent",
   ghost:
     "bg-transparent text-content-muted border border-transparent hover:bg-surface-hover hover:text-content",
   link: "bg-transparent text-accent border-0 p-0 h-auto hover:underline underline-offset-4",
@@ -32,6 +36,10 @@ const SIZE: Record<ButtonSize, string> = {
   sm: "h-9 px-5 text-body gap-1.5",
   md: "min-h-[44px] px-6 py-3 text-body gap-2",
   lg: "min-h-[56px] lg:min-h-[64px] px-5 py-3.5 text-body lg:text-body-lg gap-2",
+  // Product-page hero CTA (Figma 1699:2459): a fixed 56px, 16px inline
+  // padding, 20px label, 24px trailing icon 8px away — it does not grow to 64
+  // at `lg` the way the home hero's does.
+  hero: "h-14 px-4 py-3.5 text-body-lg gap-2",
 };
 
 interface CommonProps {

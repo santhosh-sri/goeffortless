@@ -22,18 +22,13 @@ export const salesHero: ProductHeroData = {
   description:
     "Arm your fleet-on-street with an AI Powered mobile command center. Track live visits with authenticated check-ins, automate complex scheme logic on the fly, automate collections and instantly block orders for non-paying accounts.",
   ctaLabel: "See the Field App in Action",
-  media: {
-    src: "/assets/sales/hero-panel.png",
-    alt: "Effortless field app showing a GPS mobile check-in screen",
-    width: 586,
-    height: 572,
-  },
-  video: {
-    mp4: "/assets/sales/hero-demo.mp4",
+  demo: {
     webm: "/assets/sales/hero-demo.webm",
-    poster: "/assets/sales/hero-demo-poster.jpg",
-    device: { left: 32.42, top: 10.84, width: 35.15, height: 76.57 },
-    inset: { x: 0.0852, y: 0.0167, w: 0.8278, h: 0.9656 },
+    mov: "/assets/sales/hero-demo.mov",
+    poster: "/assets/sales/hero-demo-poster.png",
+    width: 480,
+    height: 854,
+    card: "phone",
   },
 };
 
@@ -111,6 +106,8 @@ export const salesFeatureRows: ProductFeatureRow[] = [
       "Want to use schemes like “Buy 10 Get 1 Free? 5% Cash Discount? Tiered volume slabs?” Buy A get B Free, Or Bundle like: Buyer A + B Get C free.",
       "The mobile app auto-calculates and applies intricate scheme matrices directly on SKUs, also suggests the next available slab to drive up-sells.",
       "Drive 100s of concurrent schemes based on Product category, time of the day, days of the month - You decide.",
+      // Figma 1699:24671 ends mid-sentence; kept verbatim at the designer's request.
+      "The app applies all schemes automatically based on",
     ],
     media: "/assets/sales/feature-06.png",
     mediaAlt: "Automatic scheme calculation on an order",

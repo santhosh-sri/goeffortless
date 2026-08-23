@@ -20,10 +20,10 @@ export const footerData = {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],
         },
-        // {
-        //   title: "Find Your Fit",
-        //   items: [{ title: "Pricing", url: "/pricing" }],
-        // },
+        {
+          title: "Find Your Fit",
+          items: [{ title: "Pricing", url: "/pricing" }],
+        },
       ],
     },
     {
@@ -43,7 +43,7 @@ export const footerData = {
           title: "Tools",
           items: [
             { title: "Download Apps", url: "/download-apps" },
-            { title: "Automation ROI", url: "#", soon: true },
+            { title: "ROI Calculator", url: "#", soon: true },
           ],
         },
         {
@@ -95,10 +95,10 @@ export const footerData = {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],
         },
-        // {
-        //   title: "Find Your Fit",
-        //   items: [{ title: "Pricing", url: "/pricing" }],
-        // },
+        {
+          title: "Find Your Fit",
+          items: [{ title: "Pricing", url: "/pricing" }],
+        },
       ],
     },
     {
@@ -118,7 +118,7 @@ export const footerData = {
           title: "Tools",
           items: [
             { title: "Download Apps", url: "/download-apps" },
-            { title: "Automation ROI", url: "#", soon: true },
+            { title: "ROI Calculator", url: "#", soon: true },
           ],
         },
         {
@@ -156,27 +156,27 @@ export const footerData = {
   },
   social_links: [
     {
-      icon: "/instagram.svg",
+      icon: "/assets/footer/instagram.svg",
       url: "https://www.instagram.com/goeffortless.ai/",
       alt: "Effortless on Instagram",
     },
     {
-      icon: "/x.svg",
+      icon: "/assets/footer/x.svg",
       url: "https://x.com/go_effortless",
       alt: "Effortless on X (Twitter)",
     },
     {
-      icon: "/linkedIn.svg",
+      icon: "/assets/footer/linkedin.svg",
       url: "https://www.linkedin.com/company/igoeffortless/",
       alt: "Effortless on LinkedIn",
     },
     {
-      icon: "/youtube.svg",
+      icon: "/assets/footer/youtube.svg",
       url: "https://www.youtube.com/@Effortless_official",
       alt: "Effortless on YouTube",
     },
     {
-      icon: "/facebook.svg",
+      icon: "/assets/footer/facebook.svg",
       url: "https://www.facebook.com/GoEffortlessOfficial",
       alt: "Effortless on Facebook",
     },
@@ -184,28 +184,28 @@ export const footerData = {
   officeLocation: [
     {
       title: "Chennai HQ",
-      desc: "Agrya FinLabs Pvt. Ltd.<br/>Maan Sarovar Tower, First Floor 375/271A,<br/> Scheme Rd, Teynampet, Chennai,<br/>Tamil Nadu - 600018",
+      desc: "Agrya FinLabs Pvt. Ltd.<br/>Maan Sarovar Tower, First Floor 375/271A, Scheme Rd, Teynampet, Chennai, Tamil Nadu - 600018",
       url: `https://maps.app.goo.gl/ZU1JDbuuFzVWnRZg9`,
     },
     {
       title: "Bangalore",
       isMobile: true,
       border: true,
-      desc: "4th floor, 241, Tribe CoWorking, above LG<br/>showroom, Sector 6, HSR Layout, Bengaluru, <br/>Karnataka - 560102",
+      desc: "4th floor, 241, Tribe CoWorking, above LG showroom, Sector 6, HSR Layout, Bengaluru, Karnataka - 560102",
       url: `https://maps.app.goo.gl/29sAA2a3pFsMqywB6`,
     },
     {
       title: "Mumbai",
       isMobile: false,
       border: true,
-      desc: "1206-07, Ajmera Sikova, LBS Marg, Ashok Silk<br/>Mills Ln, Ghatkopar, Mumbai,<br/>Maharashtra - 400086",
+      desc: "1206-07, Ajmera Sikova, LBS Marg, Ashok Silk Mills Ln, Ghatkopar, Mumbai, Maharashtra - 400086",
       url: `https://maps.app.goo.gl/KzuyVBkWb6CkeA5Q6`,
     },
     {
       title: "Hyderabad",
       isMobile: true,
       border: true,
-      desc: "7th Floor, Vasavi MPM Grand, 824, beside<br/>Ameerpet Metro, Hyderabad,<br/>Telangana - 500073",
+      desc: "7th Floor, Vasavi MPM Grand, 824, beside Ameerpet Metro, Hyderabad, Telangana - 500073",
       url: `https://maps.app.goo.gl/oYDrhUz1kiL7X8jM6`,
     },
   ],

@@ -10,13 +10,12 @@ import type { ProductHeroData } from "./types";
  * Product page hero — Figma 1699:2449 (Sales), 1943:63654 (Purchase), and the
  * same frame on every other product page.
  *
- * Desktop: copy column beside a 554px media panel on the `bg-subtle` band.
- * Two chips, a two-tone H1, 20px body and a single 56px-tall CTA.
- *
- * The media panel ships as the flattened Figma export. In Figma the decorative
- * dot field behind it is ~2,600 individual <star> nodes; rendering those as DOM
- * would be absurd, and they are baked into the export at the right position.
+ * Desktop: copy column beside the demo card on the `bg-subtle` band, 40px
+ * apart. The card is 554px on the phone pages and 636px on Purchase &
+ * Expenses, whose laptop is landscape — `demo.card` carries which. Two chips,
+ * a two-tone H1, 20px body and a single 56px-tall CTA.
  */
+const CARD_WIDTH = { phone: 554, laptop: 636 } as const;
 const ARROW = (
   <Image
     src="/assets/shared/arrow-right.svg"
@@ -29,33 +28,40 @@ const ARROW = (
 
 export function ProductHero({ data }: { data: ProductHeroData }) {
   return (
-    <section className="bg-bg-subtle py-10 lg:py-16">
-      <Container className="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:gap-8">
+    // 48px under the header and 80 above the next band (Figma 1699:2449 sits
+    // at y=144 under a 96px header; the next frame starts 80 below it).
+    <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+      <Container className="flex flex-col items-start gap-10 lg:flex-row lg:items-center">
         {/* ---- Copy ---- */}
         <div className="flex w-full flex-col gap-8 lg:flex-1">
           <div className="flex flex-col items-start gap-6">
-            <div className="flex flex-wrap items-center gap-3">
-              {data.badges.map((badge) => (
-                <Badge key={badge.label} tone={badge.tone}>
-                  {badge.label}
-                </Badge>
-              ))}
+            {/* Chips sit 16px over the H1; the paragraph hangs 24 below. */}
+            <div className="flex flex-col items-start gap-4">
+              <div className="flex flex-wrap items-center gap-3">
+                {data.badges.map((badge) => (
+                  <Badge key={badge.label} tone={badge.tone}>
+                    {badge.label}
+                  </Badge>
+                ))}
+              </div>
+
+              {/* Figma sets the 64px H1 on an 80px line, not the display
+                  token's 72. */}
+              <h1 className="text-heading-md font-normal text-content md:text-heading-lg lg:text-display lg:leading-[80px]">
+                {data.title}
+                <br />
+                <span className="font-bold text-accent">{data.accentTitle}</span>
+              </h1>
             </div>
 
-            <h1 className="text-heading-md font-normal text-content md:text-heading-lg lg:text-display">
-              {data.title}
-              <br />
-              <span className="font-bold text-accent">{data.accentTitle}</span>
-            </h1>
-
-            <p className="text-body text-content-muted md:text-body-lg">
+            <p className="text-body text-content-muted md:text-body-lg md:leading-6">
               {data.description}
             </p>
           </div>
 
           <Button
             calBooking
-            size="lg"
+            size="hero"
             trailingIcon={ARROW}
             // sm:self-start as well as sm:w-auto — the column is a flex-col,
             // so without it `align-self: stretch` overrides the width.
@@ -66,8 +72,19 @@ export function ProductHero({ data }: { data: ProductHeroData }) {
         </div>
 
         {/* ---- Media ---- */}
-        <div className="w-full xl:w-[554px] xl:shrink-0">
-          <ProductHeroMedia media={data.media} video={data.video} />
+        {/*
+          The width travels as a custom property rather than an interpolated
+          class so Tailwind's scanner still sees a static utility.
+        */}
+        <div
+          className="w-full xl:w-[var(--hero-media-w)] xl:shrink-0"
+          style={
+            {
+              "--hero-media-w": `${CARD_WIDTH[data.demo.card]}px`,
+            } as React.CSSProperties
+          }
+        >
+          <ProductHeroMedia demo={data.demo} />
         </div>
       </Container>
     </section>

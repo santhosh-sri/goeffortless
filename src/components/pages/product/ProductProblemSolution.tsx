@@ -14,6 +14,11 @@ import type { ProductProblemSolutionData } from "./types";
  * and a single image. The rule is a CSS dashed border rather than an exported
  * asset, and collapses to a horizontal rule when the columns stack.
  *
+ * The band is white in Figma (`bg-white` on both frames), not the grey
+ * `subtle` band. Only the first side's photo is a 12px-rounded rectangle; the
+ * phone composite on the right is transparent around the devices and carries
+ * no radius.
+ *
  * The Sales page has its own richer version of this band (a chat card plus a
  * warning list), so that one stays under sales/ rather than folding extra
  * variants into this component.
@@ -24,7 +29,7 @@ export function ProductProblemSolution({
   data: ProductProblemSolutionData;
 }) {
   return (
-    <Section tone="subtle" spacing="lg">
+    <Section spacing="lg">
       <div className="flex flex-col gap-10 lg:gap-12">
         <SectionHeading
           eyebrow={data.eyebrow}
@@ -32,6 +37,8 @@ export function ProductProblemSolution({
           accentTitle={data.accentTitle}
           titleSuffix={data.titleSuffix}
           description={data.description}
+          eyebrowTone="subtle"
+          descriptionClassName="md:leading-6"
         />
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
@@ -64,7 +71,10 @@ export function ProductProblemSolution({
                 height={side.media.height}
                 loading="lazy"
                 sizes="(min-width: 1024px) 608px, 100vw"
-                className="h-auto w-full max-w-[608px] rounded-card"
+                className={cn(
+                  "h-auto w-full max-w-[608px]",
+                  index === 0 && "rounded-xl"
+                )}
               />
             </div>
           ))}

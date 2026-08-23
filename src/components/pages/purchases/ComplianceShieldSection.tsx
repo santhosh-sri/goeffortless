@@ -14,14 +14,14 @@ import { purchasesComplianceShield as data } from "@/data/purchases";
  * status cards on the right. The rule is a CSS dashed border rather than an
  * exported asset, and it collapses to a horizontal rule when the columns stack.
  *
- * See the note in src/data/purchases.ts for why the four card colours are
- * literals rather than tokens.
+ * The four card colours are the palette's Green / Orange / Blue / Purple
+ * swatches (2682:25297), all tokens.
  */
 const TONE = {
-  green: "bg-[#28B463]",
-  orange: "bg-[#F1923E]",
-  blue: "bg-[#3B82F6]",
-  purple: "bg-[#8A38F5]",
+  green: "bg-success",
+  orange: "bg-accent",
+  blue: "bg-palette-blue",
+  purple: "bg-palette-purple",
 } as const;
 
 export function ComplianceShieldSection() {
@@ -33,13 +33,15 @@ export function ComplianceShieldSection() {
           title={data.title}
           accentTitle={data.accentTitle}
           description={data.description}
+          eyebrowTone="subtle"
+          descriptionSize="lg"
         />
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
           {/* ---- Before: the manual upload ---- */}
-          <div className="flex flex-col items-center gap-6 lg:pr-12">
-            <div className="flex flex-col items-center gap-2 text-center">
-              <h3 className="text-heading-sm font-semibold text-content">
+          <div className="flex flex-col items-center gap-5 lg:pr-10">
+            <div className="flex flex-col items-center gap-3 text-center">
+              <h3 className="text-[20px] font-semibold leading-[26px] text-content">
                 {data.before.title}
               </h3>
               <p className="text-body text-content-muted">
@@ -54,14 +56,16 @@ export function ComplianceShieldSection() {
               height={data.before.mediaHeight}
               loading="lazy"
               sizes="(min-width: 1024px) 616px, 100vw"
-              className="h-auto w-full rounded-card"
+              // 2014:113759: 1px #CECECF stroke, 12px radius. The stroke is
+              // drawn here, not baked — the export is cropped to the inside.
+              className="h-auto w-full rounded-xl border border-line"
             />
           </div>
 
           {/* ---- After: the automated checks ---- */}
-          <div className="flex flex-col items-center gap-6 border-t border-dashed border-line pt-10 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+          <div className="flex flex-col items-center gap-5 border-t border-dashed border-line pt-10 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
             <div className="flex flex-col items-center gap-2 text-center">
-              <h3 className="text-heading-sm font-semibold text-accent">
+              <h3 className="text-[20px] font-semibold leading-[26px] text-accent">
                 {data.after.title}
               </h3>
               <p className="text-body text-content-muted">
@@ -74,7 +78,7 @@ export function ComplianceShieldSection() {
                 <li
                   key={check.title}
                   className={cn(
-                    "flex items-start gap-3 rounded-card p-4",
+                    "flex items-center gap-3 rounded-xl p-4",
                     TONE[check.tone]
                   )}
                 >
@@ -87,10 +91,10 @@ export function ComplianceShieldSection() {
                   />
 
                   <div className="flex flex-col gap-1">
-                    <p className="text-body font-semibold text-white">
+                    <p className="text-body font-bold text-white">
                       {check.title}
                     </p>
-                    <p className="text-[14px] leading-[20px] text-white/90">
+                    <p className="text-[14px] leading-[20px] text-white">
                       {check.description}
                     </p>
                   </div>

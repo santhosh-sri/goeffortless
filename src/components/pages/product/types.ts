@@ -16,29 +16,33 @@ export interface ProductMedia {
 }
 
 /**
- * A product recording shown in the hero mockup.
+ * The looping product demo in the hero.
  *
- * The recordings are not raw screen captures — each one is already composited
- * inside its own device mockup (a phone, or a MacBook for Purchase & Expenses)
- * on a white field. Dropping one into the panel's screen would therefore nest a
- * phone inside a phone, so instead the clip is scaled and offset until *its*
- * device lands exactly on the panel's device, and its white margin is clipped.
+ * Figma places the recording itself on the card — a rectangle named after the
+ * GIF ("GIF Sales & Compliance Page 1", 1904:46170; "Gif Purchase & Expenses
+ * 1", 2036:113796) — and nothing else: no device drawn underneath, no static
+ * screenshot. The GIFs held in the Figma file are transparent outside the
+ * device, so the card's dot pattern runs up to its edge (prototype
+ * 1943:63635). The site plays them as alpha video instead of GIF: a VP9 WebM
+ * for Chromium and Firefox and an HEVC-with-alpha MOV for Safari, ~300 KB each
+ * where the GIF was 4-6 MB. Both are encoded from the Figma GIFs — not the
+ * desktop exports, which flatten the ground to white.
  *
- * `device` is the device's rect as a percentage of the panel image, measured
- * off the export's own silhouette so the clip lands exactly on the mockup Figma
- * drew. Measure both sides the same way: reading the panel's laptop from its
- * dark screen alone while the clip's bounding box included the base once made
- * the laptop render oversized and burst out of the panel.
- *
- * `inset` is where the device sits inside the recording, as 0-1 fractions of
- * the video frame.
+ * `card` picks the backdrop: `phone` is 2697:25466 (554×540) with the
+ * 258.75×460 recording centred 40px from the top; `laptop` is 2726:9342
+ * (636×594), used by Purchase & Expenses, with the recording cropped into a
+ * 596×380 window.
  */
-export interface ProductScreenVideo {
-  mp4: string;
+export interface ProductHeroDemo {
   webm: string;
+  /** HEVC with alpha in a QuickTime container, for Safari. */
+  mov: string;
+  /** Transparent PNG of the first frame. */
   poster: string;
-  device: { left: number; top: number; width: number; height: number };
-  inset: { x: number; y: number; w: number; h: number };
+  /** Intrinsic size of the recording, for the video element. */
+  width: number;
+  height: number;
+  card: "phone" | "laptop";
 }
 
 export interface ProductHeroData {
@@ -47,9 +51,7 @@ export interface ProductHeroData {
   accentTitle: string;
   description: string;
   ctaLabel: string;
-  media: ProductMedia;
-  /** Recording layered into the mockup's screen, when the page has one. */
-  video?: ProductScreenVideo;
+  demo: ProductHeroDemo;
 }
 
 export interface ProductFeatureHeading {
@@ -70,8 +72,14 @@ export interface ProductFeatureRow {
    * variant.
    */
   checks?: string[];
+  /**
+   * The 636px-wide media card export, cropped to the card — no margin, no
+   * baked shadow; the component draws the card's radius and shadow.
+   */
   media: string;
   mediaAlt: string;
+  /** Card height in px when a row is taller than the usual 520. */
+  mediaHeight?: number;
 }
 
 export interface ProductProblemSolutionData {

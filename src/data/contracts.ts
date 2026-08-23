@@ -22,18 +22,13 @@ export const contractsHero: ProductHeroData = {
   description:
     "Never miss a renewal. Automate recurring Proformas, Invoices, and Reminders. Perfect for AMCs, Rentals, and Retainers.",
   ctaLabel: "Automate Your Billing",
-  media: {
-    src: "/assets/contracts/hero-panel.png",
-    alt: "Effortless recurring invoice setup screen with billing cycle options",
-    width: 1336,
-    height: 1144,
-  },
-  video: {
-    mp4: "/assets/contracts/hero-demo.mp4",
+  demo: {
     webm: "/assets/contracts/hero-demo.webm",
-    poster: "/assets/contracts/hero-demo-poster.jpg",
-    device: { left: 34.43, top: 10.49, width: 31.06, height: 77.45 },
-    inset: { x: 0.0852, y: 0.0167, w: 0.8278, h: 0.9656 },
+    mov: "/assets/contracts/hero-demo.mov",
+    poster: "/assets/contracts/hero-demo-poster.png",
+    width: 480,
+    height: 854,
+    card: "phone",
   },
 };
 
@@ -175,6 +170,7 @@ export const contractsFeatureRows: ProductFeatureRow[] = [
     ],
     checks: ["Tally Sync", "Voucher Numbering Sync"],
     media: "/assets/contracts/feature-06.png",
+    mediaHeight: 548,
     mediaAlt: "Two-way sync between Effortless and Tally Prime",
   },
   {

@@ -10,16 +10,19 @@ import Logo from "./Logo";
 /**
  * Site footer — Figma node 1886:43277.
  *
- * Reuses `src/data/footer.ts` wholesale: its sections, social links and office
- * list already match the redesign one-for-one (including Pricing being
- * commented out, which matches the hidden Pricing nav item).
+ * Reuses `src/data/footer.ts` for its sections, social links and office list.
  *
- * Two implementation notes:
- *  - Social icons ship as white SVGs for the old dark site, so they are
- *    inverted in light and left alone in dark.
- *  - The oversized "Effortless" wordmark is rendered as gradient-clipped text
- *    rather than an exported image — it stays crisp at any width, scales with
- *    the viewport, and remains selectable. Marked aria-hidden as decoration.
+ * Type scale, which is smaller than the rest of the site: column headings are
+ * 16/20 semibold, Resources' sub-headings 14/16 medium accent, every link 13/16
+ * muted, and office addresses 14/16 in body ink rather than muted. Column and
+ * office dividers are dashed, and the logo lockup runs at the larger footer
+ * size (48px mark) — see `Logo`'s `size` prop.
+ *
+ * Social and location icons come from the Figma node itself (1886:43288-43301,
+ * 1886:43382) and are #666666, normalised into square 24/20 boxes. The
+ * root-level `/instagram.svg` etc. are white artwork for the old dark site and
+ * are still used by ContactSection, ProfileCard and the CMS pages, so they are
+ * left in place rather than overwritten.
  */
 
 type FooterItem = {
@@ -31,7 +34,7 @@ type FooterItem = {
 
 function FooterLink({ item }: { item: FooterItem }) {
   const classes = cn(
-    "inline-block rounded-sm py-1 text-body text-content-muted transition-colors duration-200",
+    "inline-block rounded-sm py-1 text-[13px] leading-4 text-content-muted transition-colors duration-200",
     "hover:text-accent",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
   );
@@ -52,8 +55,12 @@ function FooterLink({ item }: { item: FooterItem }) {
   return (
     <Link href={item.url} className={classes}>
       {item.title}
+      {/* Block, not inline: at the 13px footer scale these columns are narrow
+          enough that an inline marker broke "ROI Calculator" across three
+          lines. Figma shows the label alone (1886:43353); the marker is kept
+          because the link still points at "#". */}
       {item.soon && (
-        <span className="ml-1.5 text-caption italic text-accent">
+        <span className="block text-caption italic text-accent">
           coming soon
         </span>
       )}
@@ -71,18 +78,21 @@ function LinkList({
   accentTitle?: boolean;
 }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-2">
       {title && (
         <p
           className={cn(
-            "pb-1 text-body font-semibold",
-            accentTitle ? "text-accent" : "text-content"
+            accentTitle
+              ? // Resources' sub-headers are 14/16 medium accent (1886:43334),
+                // not the 16/20 semibold used by the top-level columns.
+                "text-label font-medium text-accent"
+              : "text-body font-semibold text-content"
           )}
         >
           {title}
         </p>
       )}
-      <ul className="flex flex-col">
+      <ul className="flex flex-col gap-1">
         {items.map((item) => (
           <li key={item.title}>
             <FooterLink item={item} />
@@ -101,9 +111,12 @@ export function SiteFooter() {
       <Container>
         {/* ---- Logo + socials ---- */}
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <Logo />
+          <Logo size="footer" />
 
-          <ul className="flex items-center gap-5">
+          {/* Figma 1886:43287 spaces the 24px icons 16px apart. The anchors
+              carry `p-1` for a usable hit area, which contributes 8px of that,
+              so the list gap is 8 rather than 16. */}
+          <ul className="flex items-center gap-2">
             {socials.map((social) => (
               <li key={social.url}>
                 <a
@@ -116,9 +129,9 @@ export function SiteFooter() {
                   <Image
                     src={social.icon}
                     alt=""
-                    width={20}
-                    height={20}
-                    className="h-5 w-5 invert dark:invert-0"
+                    width={24}
+                    height={24}
+                    className="h-6 w-6 dark:invert"
                   />
                 </a>
               </li>
@@ -138,7 +151,8 @@ export function SiteFooter() {
                 key={section.title ?? index}
                 className={cn(
                   "flex flex-col gap-6",
-                  withDivider && "lg:border-l lg:border-line lg:pl-8"
+                  withDivider &&
+                    "lg:border-l lg:border-dashed lg:border-line lg:pl-8"
                 )}
               >
                 {"groups" in section && section.groups
@@ -180,8 +194,8 @@ export function SiteFooter() {
         </div>
 
         {/* ---- Offices ---- */}
-        <div className="mt-10 border-t border-line pt-8">
-          <p className="text-body-lg font-semibold text-content">Our Offices</p>
+        <div className="mt-8 border-t border-line pt-8">
+          <p className="text-body font-semibold text-content">Our Offices</p>
 
           <ul className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
             {officeLocation.map((office, index) => (
@@ -189,14 +203,15 @@ export function SiteFooter() {
                 key={office.title}
                 className={cn(
                   "flex items-start justify-between gap-3",
-                  index > 0 && "lg:border-l lg:border-line lg:pl-6"
+                  index > 0 &&
+                    "lg:border-l lg:border-dashed lg:border-line lg:pl-6"
                 )}
               >
                 <div className="flex flex-col gap-1">
-                  <p className="text-body font-semibold text-accent">
+                  <p className="text-label leading-[18px] font-normal text-accent">
                     {office.title}
                   </p>
-                  <p className="text-[14px] leading-[20px] text-content-muted">
+                  <p className="text-label leading-4 text-content">
                     {parse(office.desc)}
                   </p>
                 </div>
@@ -209,30 +224,35 @@ export function SiteFooter() {
                   className="mt-1 inline-flex shrink-0 rounded-sm p-1 transition-opacity duration-200 hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
                 >
                   <Image
-                    src="/location.svg"
+                    src="/assets/footer/location.svg"
                     alt=""
                     width={20}
                     height={20}
-                    className="h-5 w-5 invert dark:invert-0"
+                    className="h-5 w-5 dark:invert"
                   />
                 </a>
               </li>
             ))}
           </ul>
         </div>
+        {/* ---- Oversized wordmark ---- */}
+        {/*
+          Figma 1886:43418 is 1312×196 filled with a radial grey ramp at 40%
+          opacity, and `/Effortless.svg` is that artwork exactly — 1309×201,
+          `#9A9A9A → #484848 → #9A9A9A`, `opacity="0.4"` baked in. It also
+          crops itself: the glyphs run to y=218 inside a 201-tall viewBox, so
+          the baseline trim comes from the asset rather than a clipped line
+          box. Using it drops the CSS gradient this previously approximated.
+        */}
+        <Image
+          src="/Effortless.svg"
+          alt=""
+          aria-hidden="true"
+          width={1309}
+          height={201}
+          className="mt-6 w-full select-none lg:mt-12"
+        />
       </Container>
-
-      {/* ---- Oversized wordmark ---- */}
-      <p
-        aria-hidden="true"
-        className={cn(
-          "mt-6 select-none bg-gradient-to-b from-content/30 to-content/5 bg-clip-text",
-          "px-4 text-center font-semibold leading-[0.8] text-transparent",
-          "text-[18vw] lg:mt-10"
-        )}
-      >
-        Effortless
-      </p>
     </footer>
   );
 }

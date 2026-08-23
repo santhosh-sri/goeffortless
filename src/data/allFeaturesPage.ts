@@ -475,12 +475,15 @@ export const allFeaturesGroups: AllFeaturesGroup[] = [
   },
 ];
 
-/** Closing CTA — Figma node 2426:65644. */
+/**
+ * Closing CTA — Figma node 2426:65644. `primary` is the filled button (the
+ * booking embed) and `secondary` the outlined one, which Figma draws first.
+ */
 export const allFeaturesClosingCta = {
   title: "Ready to see it in",
   accentTitle: "Action?",
   description:
-    "See how finance teams are saving hours and catching errors before they become losses",
-  primary: { label: "View Pricing", href: "/pricing" },
-  secondary: { label: "Book Live Demo" },
+    "See how Effortless fits your exact workflow — sales, procurement, payouts, and clean Tally books.",
+  primary: { label: "Book Live Demo" },
+  secondary: { label: "View Pricing", href: "/pricing" },
 };

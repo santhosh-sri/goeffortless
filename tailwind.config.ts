@@ -34,6 +34,7 @@ export default {
           DEFAULT: withOpacity("--color-surface"),
           raised: withOpacity("--color-surface-raised"),
           hover: withOpacity("--color-surface-hover"),
+          muted: withOpacity("--color-surface-muted"),
         },
         // Text — `content` so classes read `text-content`, `text-content-muted`
         content: {
@@ -56,11 +57,28 @@ export default {
           subtle: withOpacity("--color-accent-subtle"),
           surface: withOpacity("--color-accent-surface"),
         },
+        // Square behind a card/feature icon — carries its own alpha because
+        // the dark theme changes hue (orange@15% → white@10%), not just alpha.
+        "icon-tile":
+          "rgb(var(--color-icon-tile) / var(--color-icon-tile-alpha))",
+        // Secondary button: `bg-btn-secondary`, `border-btn-secondary-line`,
+        // `text-btn-secondary-ink`. Fill and stroke diverge per theme.
+        "btn-secondary": {
+          DEFAULT: withOpacity("--color-btn-secondary"),
+          line: withOpacity("--color-btn-secondary-line"),
+          ink: withOpacity("--color-btn-secondary-ink"),
+        },
         // Status
         success: withOpacity("--color-success"),
         danger: withOpacity("--color-danger"),
         info: withOpacity("--color-info"),
         focus: withOpacity("--color-focus"),
+        // Palette accents (Figma "White/Black Pallet" Blue / Purple). Namespaced
+        // so they don't shadow Tailwind's own `blue-*` / `purple-*` scales.
+        palette: {
+          blue: withOpacity("--color-blue"),
+          purple: withOpacity("--color-purple"),
+        },
 
         // Legacy aliases — kept so the pre-redesign pages keep compiling.
         // Remove once every page has been migrated.
@@ -71,7 +89,9 @@ export default {
       boxShadow: {
         sm: "var(--shadow-sm)",
         card: "var(--shadow-card)",
+        "card-raised": "var(--shadow-card-raised)",
         raised: "var(--shadow-raised)",
+        lift: "var(--shadow-lift)",
         overlay: "var(--shadow-overlay)",
         media: "var(--shadow-media)",
       },

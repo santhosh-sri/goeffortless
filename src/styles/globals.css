@@ -807,23 +807,49 @@ body {
 }
 
 @layer components {
+  /* 1px stroke that follows the element's radius and can be a gradient —
+     the dark palette's tag stroke is #282828 → #FFFFFF → #282828. A pseudo
+     element fills the box with `--tag-stroke` and a mask punches out
+     everything but a 1px ring, so `border-radius` still applies. Light
+     resolves `--tag-stroke` to black @ 8%, identical to `border-line-subtle`. */
+  .tag-stroke {
+    position: relative;
+  }
+  .tag-stroke::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--tag-stroke);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
   .htmlContainer h1 {
     font-size: 24px;
     font-weight: 500;
-    color: #FFFFFF
+    color: rgb(var(--color-text));
   }
 
   .htmlContainer h2 {
     font-size: 20px;
     font-weight: 500;
     padding-top: 12px;
-    color: #FFFFFF
+    color: rgb(var(--color-text));
   }
 
   .htmlContainer h3 {
     font-size: 18px;
     font-weight: 500;
-    color: #FFFFFF
+    color: rgb(var(--color-text));
   }
 
   .htmlContainer p {
@@ -851,7 +877,7 @@ body {
   }
 
   .htmlContainer a {
-    color: #3da9fc;
+    color: rgb(var(--color-info));
     text-decoration: underline;
   }
 }
@@ -986,6 +1012,13 @@ body {
 .slick-slide > div {
   display: flex;
   height: 100%;
+  /* `.slick-slide` above is a flex container, so this wrapper (react-slick's
+     own, which carries no width of its own) is a flex item and shrink-wraps to
+     the logo inside instead of filling the slot slick sizes in px. Every slide
+     therefore sat flush against its left padding and dumped all the slack on
+     the right — 8px on the left vs 19-79px on the right, so the logo strip read
+     as left-aligned. Fill the slot so `justify-center` below actually centres. */
+  width: 100%;
 }
 
 /* react-slick guard.

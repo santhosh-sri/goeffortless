@@ -13,9 +13,22 @@
  * against 1746:24062, a node that happens to hold no vectors of its own.
  */
 
+/** A row in an expanded Solutions accordion (Figma 1568:31104 / 1568:31103). */
+export interface NavChild {
+  label: string;
+  href: string;
+}
+
 export interface NavLink {
   label: string;
   href: string;
+  /**
+   * Turns the row into an accordion (Figma 1571:31323): the row becomes a
+   * toggle with a chevron, and opening it reveals these as a bulleted list.
+   * Only the Solutions rows have them — the sheets at 1746:24062 (Challenges),
+   * 1746:24064 (Industry) and 1746:24063 (Role) are where the copy comes from.
+   */
+  children?: NavChild[];
   /** Basename of the icon in `/public/assets/nav`, exported from Figma. */
   icon?: string;
   /**
@@ -41,6 +54,13 @@ export interface NavGroup {
   subtitle?: string;
   /** Accent-coloured qualifier beside the group title, e.g. "(Add-on)". */
   note?: string;
+  /**
+   * Tighter type and row spacing — 14px title and 8px item block padding
+   * instead of 16px/12px. Figma draws the Products right-hand column
+   * (2364:52293, 2426:70582) this way to fit its longer list; every other
+   * group in every panel uses the roomier default.
+   */
+  dense?: boolean;
   links: NavLink[];
 }
 
@@ -55,6 +75,23 @@ export interface NavMenu {
   groupIconSize?: number;
   /** Dashed rule between columns — only Products has one in Figma. */
   columnDividers?: boolean;
+  /**
+   * Where the dashed rule sits. Solutions (1746:24019) and Resources
+   * (1746:23990) underline the group header, which is the default. Products
+   * (2359:51640) instead closes each group with one, and omits it on the last
+   * group in a column — it is the only panel stacking several groups per
+   * column, so it needs the rule as a separator rather than as a header rule.
+   */
+  groupRule?: "header" | "group";
+  /**
+   * Row density. Products (2359:51452) packs a badge, tagline and description
+   * into every row, so it runs "compact": 14/18 label, 12/14 description, a 4px
+   * radius and 16/12 padding. Resources (1568:30371) carries only a label and
+   * one line under it, so it stays "roomy": 16/20 label, 13/16 description, an
+   * 8px radius and an even 16px of padding. Both reveal the same accent arrow
+   * on hover. Solutions rows are accordions and take neither — see `children`.
+   */
+  itemScale?: "compact" | "roomy";
 }
 
 export interface NavItem {
@@ -142,7 +179,8 @@ export const productMenu: NavMenu = {
       {
         title: "Other Platform Capabilities",
         icon: "grp-other-capabilities",
-        subtitle: "Built-in modules that strengthen your business.",
+        subtitle: "Built-in capabilities that strengthen your business.",
+        dense: true,
         links: [
           {
             icon: "banking",
@@ -192,6 +230,7 @@ export const productMenu: NavMenu = {
         title: "One Platform. Endless Possibilities.",
         icon: "grp-primary-products",
         subtitle: "Everything you need to run your business, in one place.",
+        dense: true,
         links: [
           {
             icon: "unified-data",
@@ -218,6 +257,8 @@ export const productMenu: NavMenu = {
   cta: { label: "Explore All Features", href: "/allFeatures" },
   groupIconSize: 40,
   columnDividers: true,
+  groupRule: "group",
+  itemScale: "compact",
 };
 
 /* ------------------------------------------------------------------ *
@@ -239,26 +280,72 @@ export const solutionMenu: NavMenu = {
             icon: "field-force",
             label: "Field Force & Logistics Governance",
             href: "/sales",
+            children: [
+              { label: "Van Sales Compliance", href: "/sales" },
+              { label: "Field Rep Fraud & Discipline", href: "/sales" },
+              { label: "Travel Claims & Reimbursements", href: "/sales" },
+            ],
           },
           {
             icon: "spend-control",
             label: "Spend Control & AP Automation",
             href: "/expenses",
+            children: [
+              {
+                label: "Multi-Branch Procurement Firewalls",
+                href: "/expenses",
+              },
+              { label: "Bulk Vendor Payout Execution", href: "/expenses" },
+              { label: "X-Ray Cost-Centre Visibility", href: "/expenses" },
+            ],
           },
           {
             icon: "revenue-collection",
             label: "Revenue & Collection Acceleration",
             href: "/sales",
+            children: [
+              { label: "Instant Dispatch-to-Cash (AR)", href: "/sales" },
+              { label: "Dormant Ledger & Debt Recovery", href: "/sales" },
+              { label: "B2B Contract & Recurring Billing", href: "/sales" },
+            ],
           },
           {
             icon: "data-integrity",
             label: "Data Integrity & Compliance Firewalls",
             href: "/compliance",
+            children: [
+              {
+                label: "Tally Data Pollution Prevention",
+                href: "/compliance",
+              },
+              {
+                label: "Proforma GST Shield (Working Capital)",
+                href: "/compliance",
+              },
+              {
+                label: "Client-Billable Expense Precision",
+                href: "/compliance",
+              },
+            ],
           },
           {
             icon: "operational-velocity",
             label: "Operational Velocity Automation",
             href: "/allFeatures",
+            children: [
+              {
+                label: "B2B Self-Serve Buyer Portals",
+                href: "/allFeatures",
+              },
+              {
+                label: "Sales vs. Finance Credit Locks",
+                href: "/allFeatures",
+              },
+              {
+                label: "Founder Approval Bottleneck Bypass",
+                href: "/allFeatures",
+              },
+            ],
           },
         ],
       },
@@ -273,21 +360,49 @@ export const solutionMenu: NavMenu = {
             icon: "industry-wholesale",
             label: "Wholesale, FMCG & Distribution",
             href: "/case-studies",
+            children: [
+              { label: "Van Sales", href: "/case-studies" },
+              { label: "Field Rep Discipline", href: "/case-studies" },
+              { label: "Self-Serve Portal / App", href: "/case-studies" },
+              { label: "Sales vs. Finance", href: "/case-studies" },
+              { label: "Debt Recovery", href: "/case-studies" },
+              { label: "Tally Pollution", href: "/case-studies" },
+            ],
           },
           {
             icon: "industry-manufacturing",
             label: "Mid-Market Manufacturing & Logistics",
             href: "/case-studies",
+            children: [
+              { label: "Self-Serve Portal / App", href: "/case-studies" },
+              { label: "Dispatch to Cash", href: "/case-studies" },
+              { label: "Bulk Payouts", href: "/case-studies" },
+              { label: "Cost-Centre Visibility", href: "/case-studies" },
+              { label: "Founder Bottleneck", href: "/case-studies" },
+              { label: "Tally Pollution", href: "/case-studies" },
+            ],
           },
           {
             icon: "industry-retail",
             label: "Multi-Outlet Retail & Hospitality Chains",
             href: "/case-studies",
+            children: [
+              { label: "Branch Procurement", href: "/case-studies" },
+              { label: "Bulk Payouts", href: "/case-studies" },
+              { label: "Claims Lockdown", href: "/case-studies" },
+              { label: "Cost-Centre Visibility", href: "/case-studies" },
+            ],
           },
           {
             icon: "industry-services",
             label: "Professional Services, Tech & Agencies",
             href: "/case-studies",
+            children: [
+              { label: "Bulk Payouts", href: "/case-studies" },
+              { label: "Contract Billing", href: "/case-studies" },
+              { label: "Proforma GST Shield", href: "/case-studies" },
+              { label: "Project Reimbursables", href: "/case-studies" },
+            ],
           },
         ],
       },
@@ -303,6 +418,14 @@ export const solutionMenu: NavMenu = {
             label: "For the CFO & Finance Controller",
             description: "Capital protection, audit trails, and data hygiene",
             href: "/allFeatures",
+            children: [
+              { label: "Dispatch to Cash", href: "/allFeatures" },
+              { label: "Branch Procurement", href: "/allFeatures" },
+              { label: "Payment Paralysis", href: "/allFeatures" },
+              { label: "Cost-Centre Drilldowns", href: "/allFeatures" },
+              { label: "Tally Pollution", href: "/allFeatures" },
+              { label: "Proforma GST Shield", href: "/allFeatures" },
+            ],
           },
           {
             icon: "role-vp-sales",
@@ -310,6 +433,13 @@ export const solutionMenu: NavMenu = {
             description:
               "Revenue velocity, team output, and friction-free ordering",
             href: "/sales",
+            children: [
+              { label: "Van Sales", href: "/sales" },
+              { label: "IronMan Field Rep", href: "/sales" },
+              { label: "Self-Serve Portals", href: "/sales" },
+              { label: "Ghost Debtor Recovery", href: "/sales" },
+              { label: "Contract Billing", href: "/sales" },
+            ],
           },
           {
             icon: "role-promoter",
@@ -317,6 +447,10 @@ export const solutionMenu: NavMenu = {
             description:
               "Growth blockades, operational scale, and internal alignment",
             href: "/about-us",
+            children: [
+              { label: "Sales vs. Finance Alignment", href: "/about-us" },
+              { label: "Bottleneck Boss Bypass", href: "/about-us" },
+            ],
           },
           {
             icon: "role-partners",
@@ -324,6 +458,10 @@ export const solutionMenu: NavMenu = {
             description:
               "Project-level margin protection and billable cost containment",
             href: "/contracts",
+            children: [
+              { label: "Claims Lockdown", href: "/contracts" },
+              { label: "Reimbursable Expense Tracking", href: "/contracts" },
+            ],
           },
         ],
       },
@@ -426,8 +564,15 @@ export const resourceMenu: NavMenu = {
             icon: "migrating",
             label: "Thinking of Migrating?",
             description: "Effortless vs <br/>SAP/Oracle/ERPs/Tally Plugins",
+            /*
+             * Figma 2749:7565 at 3x. Greyscale on a transparent ground is
+             * intentional — that node holds a greyscale fill and carries no
+             * filter. Re-exporting it needs one correction: Figma renders the
+             * node onto an opaque #7D7D7D ground, so the raw export draws a
+             * grey box behind the artwork and its alpha has to be restored.
+             */
             image: {
-              src: "/assets/nav/migrating-illustration.png",
+              src: "/assets/nav/thinking-of-migrating.png",
               width: 152,
               height: 160,
             },

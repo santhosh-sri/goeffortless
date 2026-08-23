@@ -22,30 +22,22 @@ export const purchasesHero: ProductHeroData = {
   description:
     "Master your full procurement loop. Create Purchase Orders, Effortless AI Auto maps directly to incoming Vendor Bills & pending customer orders (3-way match) , flag Variances from PO, Billable customer Order against received qty, vendor compliance threats, and manage hard departmental budgets easily.",
   ctaLabel: "Lock Down Your Procurement Spend",
-  media: {
-    src: "/assets/purchases/hero-panel.png",
-    alt: "Effortless purchase order screen with vendor details and GSTIN verification",
-    width: 1336,
-    height: 1252,
-  },
-  video: {
-    mp4: "/assets/purchases/hero-demo.mp4",
+  demo: {
     webm: "/assets/purchases/hero-demo.webm",
-    poster: "/assets/purchases/hero-demo-poster.jpg",
-    device: { left: 2.4, top: 21.01, width: 92.14, height: 55.75 },
-    inset: { x: 0.1156, y: 0.1083, w: 0.7695, h: 0.7903 },
+    mov: "/assets/purchases/hero-demo.mov",
+    poster: "/assets/purchases/hero-demo-poster.png",
+    width: 800,
+    height: 450,
+    card: "laptop",
   },
 };
 
 /**
  * "The Compliance Shield" — Figma node 1943:64560.
  *
- * The four status cards carry their own colour scale rather than the theme
- * tokens: they read as a traffic-light sequence inside one illustration, and
- * none of the four matches an existing token (sampled #28B463 / #F1923E /
- * #3B82F6 / #8A38F5 against accent #F08B32 and success #16BA84). Kept local
- * for the same reason the violet in ProductWhyThisMatters is; promote them if
- * another page reuses the same set.
+ * The four status cards are the palette swatches — #16BA84 (success), #F08B32
+ * (accent), #3B82F6 (`palette-blue`) and #8A38F5 (`palette-purple`), per the
+ * White Pallet 2682:25297.
  */
 export const purchasesComplianceShield = {
   eyebrow: "Interactive Dashboard Callout",
@@ -59,8 +51,8 @@ export const purchasesComplianceShield = {
     media: "/assets/purchases/vendor-bill-upload.png",
     mediaAlt:
       "Vendor bill matching status table flagging over-billed and under-billed lines",
-    mediaWidth: 1232,
-    mediaHeight: 602,
+    mediaWidth: 1228,
+    mediaHeight: 598,
   },
   after: {
     title: "Automated Checks",
@@ -207,6 +199,7 @@ export const purchasesFeatureRows: ProductFeatureRow[] = [
       "To keep your books pristine, we have 'Cut-Off Date Controls.' Once you close a month, the system physically blocks backdated vendor invoices from being squeezed in. Your CFO's month-end is locked tight.”",
     ],
     media: "/assets/purchases/feature-09.png",
+    mediaHeight: 548,
     mediaAlt: "Two-way sync between Effortless and Tally Prime",
   },
 ];
