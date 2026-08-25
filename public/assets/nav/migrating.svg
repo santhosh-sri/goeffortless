@@ -1,10 +1,7 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="18.75" height="18.125" viewBox="0 0 18.75 18.125" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="20" viewBox="0.5 0.5 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Group">
-<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M9.375 14.375V15.625H5.58614V14.375H9.375Z" fill="#F08B32"/>
-<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M6.00713 9.09428L4.94531 8.43472L7.28263 4.67188L8.35482 5.31416L6.00713 9.09428Z" fill="#F08B32"/>
-<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M13.65 8.51562L15.8519 12.1856L14.7747 12.8197L12.5781 9.15875L13.65 8.51562Z" fill="#F08B32"/>
-<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M6.25 3.125C6.25 1.39911 7.64913 0 9.375 0C11.1009 0 12.5 1.39911 12.5 3.125C12.5 4.85089 11.1009 6.25 9.375 6.25C7.64913 6.25 6.25 4.85089 6.25 3.125Z" fill="#F08B32"/>
-<path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 15C12.5 13.2741 13.8991 11.875 15.625 11.875C17.3509 11.875 18.75 13.2741 18.75 15C18.75 16.7259 17.3509 18.125 15.625 18.125C13.8991 18.125 12.5 16.7259 12.5 15Z" fill="#F08B32"/>
-<path id="Vector_6" fill-rule="evenodd" clip-rule="evenodd" d="M0 15C0 13.2741 1.39911 11.875 3.125 11.875C4.85089 11.875 6.25 13.2741 6.25 15C6.25 16.7259 4.85089 18.125 3.125 18.125C1.39911 18.125 0 16.7259 0 15Z" fill="#F08B32"/>
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M1.9 5H4.4A1.4 1.4 0 0 1 5.8 6.4V13.6A1.4 1.4 0 0 1 4.4 15H1.9A1.4 1.4 0 0 1 0.5 13.6V6.4A1.4 1.4 0 0 1 1.9 5Z" fill="#F08B32"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M15.6 5H18.1A1.4 1.4 0 0 1 19.5 6.4V13.6A1.4 1.4 0 0 1 18.1 15H15.6A1.4 1.4 0 0 1 14.2 13.6V6.4A1.4 1.4 0 0 1 15.6 5Z" fill="#F08B32"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M7.45 9.05H9.85A0.95 0.95 0 0 1 10.8 10V10A0.95 0.95 0 0 1 9.85 10.95H7.45A0.95 0.95 0 0 1 6.5 10V10A0.95 0.95 0 0 1 7.45 9.05ZM10.1 6.6L13.7 10L10.1 13.4Z" fill="#F08B32"/>
 </g>
 </svg>

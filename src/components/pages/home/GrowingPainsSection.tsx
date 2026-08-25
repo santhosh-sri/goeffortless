@@ -27,14 +27,24 @@ export function GrowingPainsSection() {
             description={growingPains.description}
           />
 
-          <ul className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {/*
+            `auto-rows-fr` sizes every row to the tallest card in the grid, not
+            the tallest in its own row. Without it the second row runs ~80px
+            taller than the first, because its copy is longer, and the six
+            cards read as two different components.
+          */}
+          <ul className="grid w-full auto-rows-fr grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {growingPains.cards.map((card) => (
               <li key={card.title} className="flex">
                 <InfoCard
                   icon={card.icon}
                   title={card.title}
                   description={card.description}
-                  className="w-full"
+                  // Every card is now the height of the tallest, so the ones
+                  // with shorter copy carry the surplus. `justify-center`
+                  // splits it above and below instead of letting it all pool
+                  // under the last line.
+                  className="w-full justify-center"
                 />
               </li>
             ))}

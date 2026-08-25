@@ -22,7 +22,7 @@
   },
   "usecaseFold": {
     "pageHeading": "Compliance",
-    "heading": "<span style=\"font-weight: 500;\">Automate TDS, GST & Cost Centers. Reduce Manual Work.</span>",
+    "heading": "<span style=\"font-weight: 500;\">Automate TDS, GST & Cost Centers. </span><span style='color:#F08B32;font-weight: 500'>Reduce Manual Work.</span>",
     "description": "Designed for Indian finance workflows. Ensure accurate compliance and faster closing.",
     "bannerImage": "/compliancebanner.png",
     "ctaText": "Request Demo",

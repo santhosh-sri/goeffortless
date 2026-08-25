@@ -64,18 +64,23 @@ export function ProductProblemSolution({
                 <p className="text-body text-content-muted">{side.subtitle}</p>
               </div>
 
-              <Image
-                src={side.media.src}
-                alt={side.media.alt}
-                width={side.media.width}
-                height={side.media.height}
-                loading="lazy"
-                sizes="(min-width: 1024px) 608px, 100vw"
-                className={cn(
-                  "h-auto w-full max-w-[608px]",
-                  index === 0 && "rounded-xl"
-                )}
-              />
+              {/* Both sides share one box so the taller 3:4 photo does not
+                  outgrow the wider phone composite; the photo letterboxes
+                  inside it rather than being cropped. */}
+              <div className="flex w-full max-w-[608px] items-center justify-center lg:aspect-[1016/896]">
+                <Image
+                  src={side.media.src}
+                  alt={side.media.alt}
+                  width={side.media.width}
+                  height={side.media.height}
+                  loading="lazy"
+                  sizes="(min-width: 1024px) 608px, 100vw"
+                  className={cn(
+                    "h-auto w-full object-contain lg:h-full lg:w-auto",
+                    index === 0 && "rounded-xl"
+                  )}
+                />
+              </div>
             </div>
           ))}
         </div>
