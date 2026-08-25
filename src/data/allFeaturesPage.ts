@@ -10,11 +10,23 @@
 /**
  * One feature row, on a card or in its "See all NN features" modal.
  *
- * `icon` is the feature's own glyph, taken from the live catalogue's `img`
- * field in `allFeatures.json`; features the redesign added reuse the closest
- * existing glyph, since the design supplies none. The files are drawn
- * `fill="white"` for the old dark theme, so they are rendered as a mask tinted
- * with the accent colour rather than as images — see `FeatureItemIcon`.
+ * `icon` is the feature's own glyph, matched to the row's title from the
+ * monochrome glyph set in `public/` — the design supplies none, so each row
+ * takes the closest existing icon and no two rows in the same card list share
+ * one.
+ *
+ * They point at `public/assets/all-features/icons/`, a normalised copy of that
+ * set rather than the originals: the source files come from several batches
+ * whose glyphs fill anywhere from 76% to 100% of their own viewBox, and 21 of
+ * them carry a 10%-alpha backing tile drawn for the old dark theme, which a
+ * mask renders as a tinted square. Each copy drops that tile and gets a square
+ * viewBox centred on the artwork at a uniform 92% fill, so every row's glyph
+ * lands the same optical size. The originals are left alone for the pages that
+ * still use them.
+ *
+ * The files are drawn `fill="white"`, so they are rendered as a mask tinted
+ * with the accent colour rather than as images, which is what keeps them
+ * legible on both themes — see `FeatureItemIcon`.
  */
 export interface AllFeaturesItem {
   title: string;
@@ -121,131 +133,139 @@ const SALES_ALL_FEATURES: AllFeaturesItem[] = [
     title: "GSTIN Powered Customer Onboarding",
     description:
       "Auto-fetch GSTIN details and verify GST compliance before onboarding.",
-    icon: "/user-check.svg",
+    icon: "/assets/all-features/icons/user-check.svg",
   },
+  
   {
     title: "Customizable Templates - Quote, Sales Order & Invoice",
     description: "Tailor document layouts to match your brand identity.",
-    icon: "/file-tree.svg",
+    icon: "/assets/all-features/icons/files-content.svg",
+  },
+  {
+    title: "Walk-in Customers",
+    description:
+      "Create invoices for walk-in customers by capturing only the customer's name and optional mobile number.",
+    icon: "/assets/all-features/icons/shop.svg",
   },
   {
     title: "Estimate, PI & Sales Order Creation (Multi-level Approvals)",
     description:
       "Create and approve sales documents with multi-stage verification.",
-    icon: "/bill 2.svg",
+    icon: "/assets/all-features/icons/estimate-and-order-creation.svg",
   },
   {
     title: "AI Powered Advanced Scheming Management",
     description:
       "Handle Buy A Get B, slab discounts, and complex pricing schemes.",
-    icon: "/ai.svg",
+    icon: "/assets/all-features/icons/ai.svg",
   },
   {
     title: "Bulk Upload Schemes",
     description: "Import large sets of scheme configurations efficiently.",
-    icon: "/bulkupload.svg",
+    icon: "/assets/all-features/icons/bulkupload.svg",
   },
   {
     title: "Customer wise Credit Limit Check",
     description:
       "Check real-time customer credit limits in sync with your books and restrict sales invoice creation.",
-    icon: "/user.svg",
+    icon: "/assets/all-features/icons/credit-card-check-1.svg",
   },
   {
     title: "Credit Days Restriction",
     description: "Warn or block users when customers exceed credit limits.",
-    icon: "/credit-day.svg",
+    icon: "/assets/all-features/icons/credit-day.svg",
   },
   {
     title: "Custom Attachments for Orders, Invoices",
     description: "Attach PDFs and images directly to Sales Orders, Invoices.",
-    icon: "/attach-ment.svg",
+    icon: "/assets/all-features/icons/attach-ment.svg",
   },
   {
     title: "Cut-Off Date Controls",
     description: "Lock Accounting periods at Org or Voucher-type level.",
-    icon: "/cut-off.svg",
+    icon: "/assets/all-features/icons/cut-off.svg",
   },
   {
     title: "MoQ Controls",
     description: "Set Minimum Order Quantity limits for customers or items.",
-    icon: "/list-checkbox-2.svg",
+    icon: "/assets/all-features/icons/list-checkbox-2.svg",
   },
   {
-    title: "Convert Quotes to Sales Orders or Invoices",
-    description: "Convert quotes to Sales Orders or Invoices seamlessly.",
-    icon: "/window-cursor.svg",
+    title: "Quotation Module with Flexible Conversion",
+    description:
+      "Convert quotes to Sales Orders or Invoices seamlessly.",
+    icon: "/assets/all-features/icons/estimate-sales-order.svg",
   },
   {
     title: "Bulk Multi Price List with Scheduling",
     description: "Manage complex pricing slabs and scheduled revisions.",
-    icon: "/money-bills.svg",
+    icon: "/assets/all-features/icons/money-bills.svg",
   },
   {
     title: "Future-Dated Invoice Creation",
     description:
       "Create invoices with future dates within the current accounting month.",
-    icon: "/calendar-check.svg",
+    icon: "/assets/all-features/icons/calendar-check.svg",
   },
   {
     title: "Follow your own Voucher Type & Numbering",
     description: "Use the same Voucher Types and Series from Tally.",
-    icon: "/laptop-settings.svg",
+    icon: "/assets/all-features/icons/laptop-settings.svg",
   },
   {
     title: "E-Invoicing & e-WayBill Generation",
     description: "Generate compliant invoices instantly right from the field.",
-    icon: "/file-content.svg",
+    icon: "/assets/all-features/icons/e-invoicing-eway-bill.svg",
   },
   {
     title: "Outstanding Receivables",
     description:
       "Track dues by customer and salesperson for proactive collections.",
-    icon: "/hand-holding-coins.svg",
+    icon: "/assets/all-features/icons/hand-holding-coins.svg",
   },
   {
     title: "Collections",
     description:
       "Record Payments against customer and details are synced with your Accountant.",
-    icon: "/hand-holding-money 2.svg",
+    icon: "/assets/all-features/icons/hand-holding-money-2.svg",
   },
   {
     title: "Payment Links",
     description:
       "Now include payment links during payment collection remainders.",
-    icon: "/link-4.svg",
+    icon: "/assets/all-features/icons/link-4.svg",
   },
   {
     title: "Customer Assignment to Team",
     description:
       "Assign customers to specific sales or support teams. No overlap. No confusion.",
-    icon: "/todo 2.svg",
+    icon: "/assets/all-features/icons/people-network.svg",
   },
   {
     title: "Reimbursement Notes",
     description: "Manage credit notes or reimbursement adjustments for sales.",
-    icon: "/hand-holding-money 2.svg",
+    icon: "/assets/all-features/icons/receipt-4.svg",
+  },
+  {
+    title: "Extra Special Discount (ESD)",
+    description: "Manage ad-hoc or special discounts flexibly.",
+    icon: "/assets/all-features/icons/money-bill.svg",
   },
   {
     title: "Foreign Currency: Invoice in any currency",
     description: "Generate invoices in any supported currency.",
-    icon: "/money-bill-coin.svg",
+    icon: "/assets/all-features/icons/money-bill-coin.svg",
   },
   {
     title: "Default Warehouse for Invoicing",
     description: "Pre-set warehouse locations for faster invoicing.",
-    icon: "/storage-unit.svg",
+    icon: "/assets/all-features/icons/storage-unit.svg",
   },
   {
     title: "Intelligent QR on Invoice",
     description:
       "Get Transaction specific QR on your Sales orders or Invoice - collect faster.",
-    icon: "/qrCode.svg",
-  },
-  {
-    title: "Extra Special Discount (ESD)",
-    description: "Manage ad-hoc or special discounts flexibly.",
-    icon: "/credit-card-check 1.svg",
+    icon: "/assets/all-features/icons/qrcode.svg",
   },
 ];
 
@@ -271,51 +291,51 @@ const BANKING_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "Bank Statement AI Fetch (all leading banks)",
     description: "Automated fetching from leading banks.",
-    icon: "/greek-temple 1.svg",
+    icon: "/assets/all-features/icons/bank-statement-fetch.svg",
   },
   {
     title: "Auto-categorisation of Bank Entries",
     description: "AI-driven mapping for bank transactions.",
-    icon: "/bell-filled 1.svg",
+    icon: "/assets/all-features/icons/smart-categorisation.svg",
   },
   {
     title: "Dedicated Reconciliation Workspace",
     description: "Streamlined reconciliation interface.",
-    icon: "/laptop-chart-cols 3.svg",
+    icon: "/assets/all-features/icons/bank-reconciliatio.svg",
   },
   {
     title: "Banking Bulk Categorization",
     description: "Categorize multiple bank transactions in a single action.",
-    icon: "/bulkupload.svg",
+    icon: "/assets/all-features/icons/list-checkbox-2-3.svg",
   },
   {
     title: "On-Account Knock-Off",
     description: "Manage unallocated receipts effectively.",
-    icon: "/money-transfer.svg",
+    icon: "/assets/all-features/icons/money-transfer.svg",
   },
   {
     title: "Collection Alerts to Owners",
     description:
       "Get notified instantly basis the frequency of bank statement to your email. Know who paid and how much.",
-    icon: "/user-update.svg",
+    icon: "/assets/all-features/icons/collection-alerts.svg",
   },
   {
     title: "Party Collection",
     description:
       "Map collections to specific customers and ensure data is shared with your accountant.",
-    icon: "/circle-user-filled 1.svg",
+    icon: "/assets/all-features/icons/hand-holding-coins.svg",
   },
   {
     title: "Generate Bulk Payment Files for (All Leading Banks)",
     description:
       "Do all approvals and checks in Effortless, & generate payment file basis each bank for one shot payment via bank portal.",
-    icon: "/hand-holding-money 1.svg",
+    icon: "/assets/all-features/icons/payment-file-generation.svg",
   },
   {
     title: "Petty Cash Management",
     description:
       "Track small cash spends at branches or in the field — with full control.",
-    icon: "/money-bill-coin.svg",
+    icon: "/assets/all-features/icons/money-bill-coin.svg",
   },
 ];
 
@@ -323,51 +343,51 @@ const CROSS_TEAM_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "Sales Approval Workflows for Orders, Invoices",
     description: "Ensure multi-level verification for sales.",
-    icon: "/Sales Approval flows.svg",
+    icon: "/assets/all-features/icons/sales-approval-flows.svg",
   },
   {
     title: "Approvals for Purchases, Claims & Payments",
     description: "Standardized approval processes across departments.",
-    icon: "/list-check.svg",
+    icon: "/assets/all-features/icons/approval.svg",
   },
   {
     title: "Dynamic Approval Remarks",
     description:
       "Approvers can be required to enter remarks when approving documents.",
-    icon: "/file-check 8.svg",
+    icon: "/assets/all-features/icons/message.svg",
   },
   {
     title: "Multi-Levels & Bulk Approvals",
     description: "Efficiently approve high volumes of transactions.",
-    icon: "/file-check 8.svg",
+    icon: "/assets/all-features/icons/multi-level-approval.svg",
   },
   {
     title: "Designation-based Claim Rule Setup",
     description: "Control claim access based on user hierarchy.",
-    icon: "/user-check.svg",
+    icon: "/assets/all-features/icons/briefcase.svg",
   },
   {
     title: "1-Click Invoice Creation",
     description: "Sales orders convert to invoices instantly. No lag. No loss.",
-    icon: "/window-cursor.svg",
+    icon: "/assets/all-features/icons/one-click.svg",
   },
   {
     title: "Audit Trail",
     description:
       "You may choose to track daily activity across effortless and have control on who is doing what!",
-    icon: "/calendar-check.svg",
+    icon: "/assets/all-features/icons/audit-season.svg",
   },
   {
     title: "Multiple outlet/ warehouse/company management",
     description:
       "Multi Warehouse management support for Invoicing and bill booking.",
-    icon: "/storage-unit.svg",
+    icon: "/assets/all-features/icons/multiple-outlet.svg",
   },
   {
     title: "Payment Gateway Integration",
     description:
       "Collect payments faster via integrated UPI, cards, or net banking.",
-    icon: "/credit-card-check 1.svg",
+    icon: "/assets/all-features/icons/payment-gateway-integrations.svg",
   },
 ];
 
@@ -375,62 +395,62 @@ const TRACKING_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "Live GPS Tracking",
     description: "Real-time map-based movement tracking.",
-    icon: "/Live Gps Tracking.svg",
+    icon: "/assets/all-features/icons/live-gps-tracking.svg",
   },
   {
     title: "Live Location check-in Photo – Not from Gallery",
     description: "Verify attendance via non-gallery photos.",
-    icon: "/photo-checkin.svg",
+    icon: "/assets/all-features/icons/photo-checkin.svg",
   },
   {
     title: "Multiple photos in a single customer point.",
     description: "Capture visual proof of visit.",
-    icon: "/multi-photo.svg",
+    icon: "/assets/all-features/icons/multi-photo.svg",
   },
   {
     title: "Fraud Prevention",
     description: "Security measures to prevent GPS spoofing.",
-    icon: "/lock-2.svg",
+    icon: "/assets/all-features/icons/lock-2.svg",
   },
   {
     title: "GPS-Based Field Team Check-Ins",
     description: "Ensure authentic field logging.",
-    icon: "/GPS Based Chickin.svg",
+    icon: "/assets/all-features/icons/gps-based-chickin.svg",
   },
   {
     title: "Supervisor Entry",
     description:
       "Authorize a Supervisor to punch attendence on behalf of your employees",
-    icon: "/trainer.svg",
+    icon: "/assets/all-features/icons/web-checkin-supervisor.svg",
   },
   {
     title: "Biometric Integration",
     description:
       "Add biometric hardware for secure check-ins with no proxy punching.",
-    icon: "/hold 1.svg",
+    icon: "/assets/all-features/icons/live-attendance-biometric.svg",
   },
   {
     title: "Time Spent in Market / Customer",
     description:
       "Know time spent in market / Customer place by your sales resource.",
-    icon: "/time-spent.svg",
+    icon: "/assets/all-features/icons/time-spent.svg",
   },
   {
     title: "Geo-Fencing",
     description: "Restrict check-ins to where your customers are.",
-    icon: "/Geo fencing.svg",
+    icon: "/assets/all-features/icons/geo-fencing.svg",
   },
   {
     title: "Attendance & Leave Management",
     description:
       "Leave requests, approvals, and balances — all managed digitally.",
-    icon: "/ballot-rect1.svg",
+    icon: "/assets/all-features/icons/calendar-days.svg",
   },
   {
     title: "Custom Forms with Tasks",
     description:
       "Create Custom Tasks for Custom for Sales, Delivery, & Support Teams.",
-    icon: "/customforms.svg",
+    icon: "/assets/all-features/icons/customforms.svg",
   },
 ];
 
@@ -438,51 +458,51 @@ const DASHBOARD_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "Daily Business Snapshot on WhatsApp",
     description: "Receive daily summaries directly to WhatsApp.",
-    icon: "/whatsapp.svg",
+    icon: "/assets/all-features/icons/whatsapp.svg",
   },
   {
     title: "Sales & Collection Performance",
     description: "Track daily earnings and collections.",
-    icon: "/laptop-chart-cols 3.svg",
+    icon: "/assets/all-features/icons/laptop-chart-cols-3.svg",
   },
   {
     title: "Sales Order Report",
     description: "Customizable order reporting by dimension.",
-    icon: "/chart-bar-arrow-up.svg",
+    icon: "/assets/all-features/icons/chart-bar-arrow-up.svg",
   },
   {
     title: "Sales Report",
     description: "Detailed sales analytics.",
-    icon: "/chart-pie-4 1.svg",
+    icon: "/assets/all-features/icons/chart-pie-4-1.svg",
   },
   {
     title: "Revenue Analysis",
     description: "Deep-dive analysis of growth metrics.",
-    icon: "/chart-stacked-line.svg",
+    icon: "/assets/all-features/icons/chart-stacked-line.svg",
   },
   {
     title: "Uncategorized Transactions",
     description:
       "Have an eye on your Uncategorized Transactions, and categories them.",
-    icon: "/money-transfer.svg",
+    icon: "/assets/all-features/icons/riskicon.svg",
   },
   {
     title: "Compliance Reports (TDS, ITC)",
     description:
       "TDS reports basis TDS rules set, and ITC reports to double ensure you don't lose out due to errors.",
-    icon: "/search-chart.svg",
+    icon: "/assets/all-features/icons/file-check.svg",
   },
   {
     title: "Cost Centre Reports: Income & Balance Sheet",
     description:
       "Set cost centre layers to compare real-time balance sheets and profitability.",
-    icon: "/receipt 5.svg",
+    icon: "/assets/all-features/icons/cost-centre-pl.svg",
   },
   {
     title: "Inventory Movement Analysis",
     description:
       "See what’s moving and what’s not. Plan purchase and sales better.",
-    icon: "/person-chart-arrow-up.svg",
+    icon: "/assets/all-features/icons/pallet-package.svg",
   },
 ];
 
@@ -490,56 +510,56 @@ const INTEGRATION_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "Tally (Concurrent & Bi-Directional)",
     description: "Seamless finance-intelligence bridge.",
-    icon: "/plug.svg",
+    icon: "/assets/all-features/icons/plug.svg",
   },
   {
     title: "Custom Development at Additional Cost (Basis Feasibility)",
     description: "Enterprise-tailored feature extensions.",
-    icon: "/customdev.svg",
+    icon: "/assets/all-features/icons/customdev.svg",
   },
   {
     title:
       "Bulk upload Invoices, Sales Orders, & Estimates. Auto-map Part Numbers to Tally Masters.",
     description: "Easy data ingestion for invoices/orders.",
-    icon: "/bulkupload.svg",
+    icon: "/assets/all-features/icons/migratemenu.svg",
   },
   {
     title: "Multi-Company Concurrent Sync",
     description: "Keep multiple entities in sync.",
-    icon: "/api.svg",
+    icon: "/assets/all-features/icons/sync.svg",
   },
   {
     title: "Bulk Upload",
     description:
       "Bulk upload Invoices, Sales Orders, & Estimates. Auto-map Part Numbers to Tally Masters.",
-    icon: "/bulkupload.svg",
+    icon: "/assets/all-features/icons/bulkupload.svg",
   },
   {
     title: "8 Levels of Enterprise Grade Security",
     description: "From perimeter to core, 8 level of unbreakable security.",
-    icon: "/shield-lock.svg",
+    icon: "/assets/all-features/icons/enterprse-level-security.svg",
   },
   {
     title: "Email, Call, & WhatsApp Support",
     description: "One team, Three channels, Total with support.",
-    icon: "/envelope.svg",
+    icon: "/assets/all-features/icons/customer-support.svg",
   },
   {
     title: "Dedicated Account Manager",
     description:
       "Your success partner- A dedicated Account manager for every step.",
-    icon: "/users-shaking-hands.svg",
+    icon: "/assets/all-features/icons/users-shaking-hands.svg",
   },
   {
     title: "Implementation & Onboarding Support",
     description:
       "Your journey starts smoothly with our Onboarding Experts supported by veteran CAs.",
-    icon: "/badge-check.svg",
+    icon: "/assets/all-features/icons/training.svg",
   },
   {
     title: "Payment Gateway (RazorPay)",
     description: "Got Razorpay? You are already halfway there.",
-    icon: "/money-bill.svg",
+    icon: "/assets/all-features/icons/credit-card.svg",
   },
 ];
 
@@ -547,45 +567,45 @@ const REIMBURSEMENT_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "AI-Powered Travel Claims Booking",
     description: "Automate the booking of travel claims.",
-    icon: "/receipt.svg",
+    icon: "/assets/all-features/icons/receipt.svg",
   },
   {
     title: "Travel policy limits",
     description: "Enforce spending policies automatically.",
-    icon: "/list-check.svg",
+    icon: "/assets/all-features/icons/list-check.svg",
   },
   {
     title: "Amount-Based Approvals (Multi-level)",
     description: "Multi-level approval flow based on claim amount.",
-    icon: "/money-bills.svg",
+    icon: "/assets/all-features/icons/money-bills.svg",
   },
   {
     title: "GST/TDS Automation",
     description: "Automate compliance for reimbursement claims.",
-    icon: "/ai.svg",
+    icon: "/assets/all-features/icons/calculator-active.svg",
   },
   {
     title: "Reimbursement Advance Limits",
     description: "Set ceilings for advance payments.",
-    icon: "/hand-holding-money 1.svg",
+    icon: "/assets/all-features/icons/hand-holding-money-1.svg",
   },
   {
     title: "Field Expense Claims",
     description:
       "Team submits bills directly from mobile. Finance doesn't chase paper.",
-    icon: "/bill 2.svg",
+    icon: "/assets/all-features/icons/bill-2.svg",
   },
   {
     title: "Reimbursement Policy Controls",
     description:
       "Define what's reimbursable. Eliminate debate, delays, and disputes.",
-    icon: "/hand-holding-money 2.svg",
+    icon: "/assets/all-features/icons/todo.svg",
   },
   {
     title: "Document Evidence Storage",
     description:
       "Upload, store, and retrieve all financial proofs — makes you audit ready.",
-    icon: "/file-tree.svg",
+    icon: "/assets/all-features/icons/document-evidence-storage.svg",
   },
 ];
 
@@ -593,73 +613,130 @@ const PROCUREMENT_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "GSTIN powered Vendor oboarding",
     description: "Easily onboard vendors using GSTIN validation.",
-    icon: "/user-check.svg",
+    icon: "/assets/all-features/icons/user-check.svg",
   },
+  {
+    title: "Vendor bulk upload - Create vendors in bulk",
+    description: "Create vendor records in large batches.",
+    icon: "/assets/all-features/icons/bulkupload.svg",
+  },
+  {
+    title: "Create Purchase Requisition",
+    description: "Create, approve, track, and convert Purchase Requisitions into Purchase Orders, bringing a structured approval process to procurement requests.",
+    icon: "/assets/all-features/icons/ballot-rect1.svg",
+  },
+  
   {
     title: "Create Purchase Orders",
     description: "Generate professional POs.",
-    icon: "/bill 2.svg",
+    icon: "/assets/all-features/icons/cart-plus.svg",
   },
   {
     title: "AI-Powered 3-Way Reconciliation (PO-to-GRN-to-Vendor Bill)",
     description:
       "Validate vendor bills against issued POs & GRN - check for variances (Rates/Qty/SKUs), set tolerance limits.",
-    icon: "/ai.svg",
+    icon: "/assets/all-features/icons/ai.svg",
   },
   {
-    title: "AI-Powered Bill Booking",
-    description: "Automate data entry from physical bills.",
-    icon: "/receipt.svg",
+    title: "Multi-Cost centre tagging in PR & POs.",
+    description: "Tag Purchase requisitions & POs to specific cost centers.",
+    icon: "/assets/all-features/icons/cost-centre-pl.svg",
   },
   {
-    title: "Multi-Level Budget Approvals",
-    description: "Ensure secure budget control and role-based access.",
-    icon: "/file-check 8.svg",
+    title: "Custom Attachments for Bills Booking",
+    description: "Attach supporting documents to bill entries.",
+    icon: "/assets/all-features/icons/attach-ment.svg",
   },
   {
     title: "Multi GSTN Compliance Support",
     description: "Centrally manage multiple GSTNs.",
-    icon: "/circle-check.svg",
-  },
-  {
-    title: "GST/TDS Automation",
-    description: "Automate tax calculations.",
-    icon: "/ai.svg",
-  },
-  {
-    title:
-      "Single Window for all Payment Types (Vendor/Customer/Statutory/Advances/Others)",
-    description: "Manage diverse payments through one portal.",
-    icon: "/window-cursor.svg",
-  },
-  {
-    title: "Custom Attachments for Bills Booking",
-    description: "Attach PDFs and images directly to bills.",
-    icon: "/attach-pdf.svg",
+    icon: "/assets/all-features/icons/compliance-active.svg",
   },
   {
     title: "Vendor Purchase Invoice Email",
-    description:
-      "AI auto email Vendor invoice — bills are read, validated, and booked in no time.",
-    icon: "/envelope-content.svg",
+    description: "AI-based email automation for vendor invoices.",
+    icon: "/assets/all-features/icons/envelope-content.svg",
   },
   {
-    title: "AI-Powered Bills & Claims Booking",
-    description:
-      "Just click a photo — bills are read, validated, and booked in no time.",
-    icon: "/receipt.svg",
+    title: "Amount-Based Approvals",
+    description: "Configure approvals based on spend thresholds.",
+    icon: "/assets/all-features/icons/money-bills.svg",
   },
   {
-    title: "Document Evidence Storage",
+    title: "Multi-Level budget & Role bases approvals",
+    description: "Ensure secure budget control and role-based access.",
+    icon: "/assets/all-features/icons/budget-exceed.svg",
+  },
+  {
+    title: "AI-Powered Bill Booking",
+    description: "Automate data entry from physical bills.",
+    icon: "/assets/all-features/icons/receipt.svg",
+  },
+  {
+    title: "GST/TDS Automation",
     description:
-      "Upload, store, and retrieve all financial proofs — makes you audit ready.",
-    icon: "/file-tree.svg",
+      "Automate tax calculations.",
+    icon: "/assets/all-features/icons/calculator-active.svg",
+  },
+  {
+    title: "Journals",
+    description:
+      "Manage ledger adjustments.",
+    icon: "/assets/all-features/icons/book.svg",
   },
   {
     title: "Utility Bill Payments",
     description:
       "Track and Pay recurring office expenses effortlessly like mobile, internet, and electricity.",
-    icon: "/banking-mobile.svg",
+    icon: "/assets/all-features/icons/bill-2.svg",
+  },
+  {
+    title: "Foreign Currency: POs, bills, and Expenses in any currency.",
+    description:
+      "Support for multi-currency transactions.",
+    icon: "/assets/all-features/icons/money-bill-coin.svg",
+  },
+  {
+    title: "Single Window for all Payment Types",
+    description:
+    "Manage diverse payments through one portal.",
+    icon: "/assets/all-features/icons/window-cursor.svg",
+  },
+  {
+    title: "Download bills with complete approval history",
+    description:
+      "Transparent record keeping for audits.",
+    icon: "/assets/all-features/icons/download-active.svg",
+  },
+  {
+    title: "Vendor Onboarding Approval Workflow",
+    description: "Route every new vendor through up to 5 approval levels, with automatic email alerts to approvers.",
+    icon: "/assets/all-features/icons/decision-process.svg",
+  },
+  {
+    title: "MSME & LDC Details Capture during Vendor Onboarding",
+    description: "Capture MSME registration and Lower Deduction Certificate details up front for correct compliance treatment.",
+    icon: "/assets/all-features/icons/award-certificate.svg",
+  },
+  {
+    title: "GSTIN Validation & On-Demand Status Refresh during document creation",
+    description: "Validate vendor GSTIN and refresh its live status while creating documents, so you never bill against a cancelled GSTIN.",
+    icon: "/assets/all-features/icons/circle-check.svg",
+  },
+  {
+    title: "Live Stock Availability while creating Procurement Transactions",
+    description: "See real-time stock on hand while raising requisitions, POs and bills to avoid over-ordering.",
+    icon: "/assets/all-features/icons/pallet-package.svg",
+  },
+  {
+    title: "Automated PO Expiry Policy (auto-close, block GRN/Bill, reopen by extending)",
+    description: "Auto-close POs past validity, block further GRNs or bills against them, and reopen by extending the expiry date.",
+    icon: "/assets/all-features/icons/calendar-clock.svg",
+  },
+  {
+    title: "Advance TDS Adjustment against Vendor Bill (prevents duplicate TDS)",
+    description: "Adjust TDS already deducted on advances against the final vendor bill, preventing double deduction.",
+    icon: "/assets/all-features/icons/money-transfer.svg",
   },
 ];
 
@@ -667,33 +744,33 @@ const BUYER_PORTAL_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "Effortless Connect mobile app (Android/iOS) — unlimited",
     description: "Provide unlimited mobile access for customers.",
-    icon: "/banking-mobile.svg",
+    icon: "/assets/all-features/icons/mobile-app.svg",
   },
   {
     title: "Product catalogue with in-stock items & view controls",
     description: "Display inventory availability with visibility controls.",
-    icon: "/cart-simple-add 1.svg",
+    icon: "/assets/all-features/icons/product-catalogue.svg",
   },
   {
     title: "Self-serve ordering (MoQ controls) & live order status tracking",
     description: "Allow customers to order and track status with MoQ controls.",
-    icon: "/cart-plus 1.svg",
+    icon: "/assets/all-features/icons/cart-plus-1.svg",
   },
   {
     title: "Dashboard with transaction, payables & invoice history",
     description: "Give buyers full visibility into their account history.",
-    icon: "/todo 1.svg",
+    icon: "/assets/all-features/icons/ardashboard.svg",
   },
   {
     title:
       "Open bills, schemes management, specialised SKU visibility controls",
     description: "Display pending bills and applicable schemes for buyers.",
-    icon: "/bill 3.svg",
+    icon: "/assets/all-features/icons/bill-3.svg",
   },
   {
     title: "Statement of Accounts",
     description: "Download or view SoA anytime — no need to contact finance.",
-    icon: "/statement.svg",
+    icon: "/assets/all-features/icons/bank-statement.svg",
   },
 ];
 
@@ -702,29 +779,29 @@ const RECURRING_ALL_FEATURES: AllFeaturesItem[] = [
     title: "Set Recurring Contracts",
     description:
       "Set frequency, duration, service start date, billing date, billing mode and payment mode once.",
-    icon: "/files-content.svg",
+    icon: "/assets/all-features/icons/subscription.svg",
   },
   {
     title: "Contract Renewal Reminders",
     description:
       "Set Up Multiple Auto-Reminders Before Contract Expiry (WhatsApp + Email)",
-    icon: "/calendar-check.svg",
+    icon: "/assets/all-features/icons/calendar-clock.svg",
   },
   {
     title: "Auto schedule Pro-forma / E-Invoice",
     description: "Schedule and forget. Let Effortless do it for you!",
-    icon: "/file-content.svg",
+    icon: "/assets/all-features/icons/doc-timer.svg",
   },
   {
     title: "Smart Reminders",
     description:
       "WhatsApp + Email payment outstanding reminders fire automatically. No manual follow-ups, no missed renewals.",
-    icon: "/alarm-clock.svg",
+    icon: "/assets/all-features/icons/alarm-clock.svg",
   },
   {
     title: "Payment QR & Pay Now Links",
     description: "Easily include QR/payment links in collection reminders.",
-    icon: "/link-4.svg",
+    icon: "/assets/all-features/icons/link-4.svg",
   },
 ];
 
@@ -732,27 +809,27 @@ const CUSTOMER_WORKFLOWS_ALL_FEATURES: AllFeaturesItem[] = [
   {
     title: "Pay Now Emails with Invoices",
     description: "Send invoice + payment link for instant action.",
-    icon: "/Pay Now Emails  with Invoices.svg",
+    icon: "/assets/all-features/icons/pay-now-emails-with-invoices.svg",
   },
   {
     title: "Auto-Share of Invoices (WhatsApp and Email)",
     description: "Automated distribution via WhatsApp/Email.",
-    icon: "/Auto-Share of Invoices(WhatsApp and Email).svg",
+    icon: "/assets/all-features/icons/auto-share-of-invoiceswhatsapp-and-email.svg",
   },
   {
     title: "Automated Reminders (WhatsApp and Email)",
     description: "Chase payments automatically.",
-    icon: "/circle-user-sparkle-2 1.svg",
+    icon: "/assets/all-features/icons/alarm-clock.svg",
   },
   {
     title: "Domain-Mapped Reminder Delivery",
     description: "Send professional branded communications.",
-    icon: "/alarm-clock.svg",
+    icon: "/assets/all-features/icons/envelope.svg",
   },
   {
     title: "Auto Notify Internal Users on Portal Orders",
     description: "Keep internal teams updated on buyer orders.",
-    icon: "/bell-filled 1.svg",
+    icon: "/assets/all-features/icons/bell-filled-1.svg",
   },
 ];
 
@@ -766,27 +843,27 @@ const BANKING: AllFeaturesCard = {
     {
       title: "Bank Statement AI Fetch (all leading banks)",
       description: "Automated fetching from leading banks.",
-      icon: "/greek-temple 1.svg",
+      icon: "/assets/all-features/icons/bank-statement-fetch.svg",
     },
     {
       title: "Auto-categorisation of Bank Entries",
       description: "AI-driven mapping for bank transactions.",
-      icon: "/bell-filled 1.svg",
+      icon: "/assets/all-features/icons/smart-categorisation.svg",
     },
     {
       title: "Dedicated Reconciliation Workspace",
       description: "Streamlined reconciliation interface.",
-      icon: "/laptop-chart-cols 3.svg",
+      icon: "/assets/all-features/icons/bank-reconciliatio.svg",
     },
     {
       title: "Banking Bulk Categorization",
       description: "Categorize multiple bank transactions in a single action.",
-      icon: "/bulkupload.svg",
+      icon: "/assets/all-features/icons/list-checkbox-2-3.svg",
     },
     {
       title: "On-Account Knock-Off",
       description: "Manage unallocated receipts effectively.",
-      icon: "/money-transfer.svg",
+      icon: "/assets/all-features/icons/money-transfer.svg",
     },
   ],
   allItems: BANKING_ALL_FEATURES,
@@ -803,28 +880,28 @@ const CROSS_TEAM: AllFeaturesCard = {
     {
       title: "Sales Approval Workflows for Orders, Invoices",
       description: "Ensure multi-level verification for sales.",
-      icon: "/Sales Approval flows.svg",
+      icon: "/assets/all-features/icons/sales-approval-flows.svg",
     },
     {
       title: "Approvals for Purchases, Claims & Payments",
       description: "Standardized approval processes across departments.",
-      icon: "/list-check.svg",
+      icon: "/assets/all-features/icons/approval.svg",
     },
     {
       title: "Dynamic Approval Remarks",
       description:
         "Approvers can be required to enter remarks when approving documents.",
-      icon: "/file-check 8.svg",
+      icon: "/assets/all-features/icons/message.svg",
     },
     {
       title: "Multi-Levels & Bulk Approvals",
       description: "Efficiently approve high volumes of transactions.",
-      icon: "/file-check 8.svg",
+      icon: "/assets/all-features/icons/multi-level-approval.svg",
     },
     {
       title: "Designation-based Claim Rule Setup",
       description: "Control claim access based on user hierarchy.",
-      icon: "/user-check.svg",
+      icon: "/assets/all-features/icons/briefcase.svg",
     },
   ],
   allItems: CROSS_TEAM_ALL_FEATURES,
@@ -841,27 +918,27 @@ const TRACKING: AllFeaturesCard = {
     {
       title: "Live GPS Tracking",
       description: "Real-time map-based movement tracking.",
-      icon: "/Live Gps Tracking.svg",
+      icon: "/assets/all-features/icons/live-gps-tracking.svg",
     },
     {
       title: "Live Location check-in Photo – Not from Gallery",
       description: "Verify attendance via non-gallery photos.",
-      icon: "/photo-checkin.svg",
+      icon: "/assets/all-features/icons/photo-checkin.svg",
     },
     {
       title: "Multiple photos in a single customer point.",
       description: "Capture visual proof of visit.",
-      icon: "/multi-photo.svg",
+      icon: "/assets/all-features/icons/multi-photo.svg",
     },
     {
       title: "Fraud Prevention",
       description: "Security measures to prevent GPS spoofing.",
-      icon: "/lock-2.svg",
+      icon: "/assets/all-features/icons/lock-2.svg",
     },
     {
       title: "GPS-Based Field Team Check-Ins",
       description: "Ensure authentic field logging.",
-      icon: "/GPS Based Chickin.svg",
+      icon: "/assets/all-features/icons/gps-based-chickin.svg",
     },
   ],
   allItems: TRACKING_ALL_FEATURES,
@@ -878,27 +955,27 @@ const DASHBOARD: AllFeaturesCard = {
     {
       title: "Daily Business Snapshot on WhatsApp",
       description: "Receive daily summaries directly to WhatsApp.",
-      icon: "/whatsapp.svg",
+      icon: "/assets/all-features/icons/whatsapp.svg",
     },
     {
       title: "Sales & Collection Performance",
       description: "Track daily earnings and collections.",
-      icon: "/laptop-chart-cols 3.svg",
+      icon: "/assets/all-features/icons/laptop-chart-cols-3.svg",
     },
     {
       title: "Sales Order Report",
       description: "Customizable order reporting by dimension.",
-      icon: "/chart-bar-arrow-up.svg",
+      icon: "/assets/all-features/icons/chart-bar-arrow-up.svg",
     },
     {
       title: "Sales Report",
       description: "Detailed sales analytics.",
-      icon: "/chart-pie-4 1.svg",
+      icon: "/assets/all-features/icons/chart-pie-4-1.svg",
     },
     {
       title: "Revenue Analysis",
       description: "Deep-dive analysis of growth metrics.",
-      icon: "/chart-stacked-line.svg",
+      icon: "/assets/all-features/icons/chart-stacked-line.svg",
     },
   ],
   allItems: DASHBOARD_ALL_FEATURES,
@@ -915,23 +992,23 @@ const INTEGRATION: AllFeaturesCard = {
     {
       title: "Tally (Concurrent & Bi-Directional)",
       description: "Seamless finance-intelligence bridge.",
-      icon: "/plug.svg",
+      icon: "/assets/all-features/icons/plug.svg",
     },
     {
       title: "Custom Development at Additional Cost (Basis Feasibility)",
       description: "Enterprise-tailored feature extensions.",
-      icon: "/customdev.svg",
+      icon: "/assets/all-features/icons/customdev.svg",
     },
     {
       title:
         "Bulk upload Invoices, Sales Orders, & Estimates. Auto-map Part Numbers to Tally Masters.",
       description: "Easy data ingestion for invoices/orders.",
-      icon: "/bulkupload.svg",
+      icon: "/assets/all-features/icons/migratemenu.svg",
     },
     {
       title: "Multi-Company Concurrent Sync",
       description: "Keep multiple entities in sync.",
-      icon: "/api.svg",
+      icon: "/assets/all-features/icons/sync.svg",
     },
   ],
   allItems: INTEGRATION_ALL_FEATURES,
@@ -948,27 +1025,27 @@ const REIMBURSEMENT: AllFeaturesCard = {
     {
       title: "AI-Powered Travel Claims Booking",
       description: "Automate the booking of travel claims.",
-      icon: "/receipt.svg",
+      icon: "/assets/all-features/icons/receipt.svg",
     },
     {
       title: "Travel policy limits",
       description: "Enforce spending policies automatically.",
-      icon: "/list-check.svg",
+      icon: "/assets/all-features/icons/list-check.svg",
     },
     {
       title: "Amount-Based Approvals (Multi-level)",
       description: "Multi-level approval flow based on claim amount.",
-      icon: "/money-bills.svg",
+      icon: "/assets/all-features/icons/money-bills.svg",
     },
     {
       title: "GST/TDS Automation",
       description: "Automate compliance for reimbursement claims.",
-      icon: "/ai.svg",
+      icon: "/assets/all-features/icons/calculator-active.svg",
     },
     {
       title: "Reimbursement Advance Limits",
       description: "Set ceilings for advance payments.",
-      icon: "/hand-holding-money 1.svg",
+      icon: "/assets/all-features/icons/hand-holding-money-1.svg",
     },
   ],
   allItems: REIMBURSEMENT_ALL_FEATURES,
@@ -995,45 +1072,45 @@ export const allFeaturesGroups: AllFeaturesGroup[] = [
           {
             title: "GSTIN powered Vendor oboarding",
             description: "Easily onboard vendors using GSTIN validation.",
-            icon: "/user-check.svg",
+            icon: "/assets/all-features/icons/user-check.svg",
           },
           {
             title: "Create Purchase Orders",
             description: "Generate professional POs.",
-            icon: "/bill 2.svg",
+            icon: "/assets/all-features/icons/cart-plus.svg",
           },
           {
             title:
               "AI-Powered 3-Way Reconciliation (PO-to-GRN-to-Vendor Bill)",
             description:
               "Validate vendor bills against issued POs & GRN - check for variances (Rates/Qty/SKUs), set tolerance limits.",
-            icon: "/ai.svg",
+            icon: "/assets/all-features/icons/ai.svg",
           },
           {
             title: "AI-Powered Bill Booking",
             description: "Automate data entry from physical bills.",
-            icon: "/receipt.svg",
+            icon: "/assets/all-features/icons/receipt.svg",
           },
           {
             title: "Multi-Level Budget Approvals",
             description: "Ensure secure budget control and role-based access.",
-            icon: "/file-check 8.svg",
+            icon: "/assets/all-features/icons/budget-exceed.svg",
           },
           {
             title: "Multi GSTN Compliance Support",
             description: "Centrally manage multiple GSTNs.",
-            icon: "/circle-check.svg",
+            icon: "/assets/all-features/icons/compliance-active.svg",
           },
           {
             title: "GST/TDS Automation",
             description: "Automate tax calculations.",
-            icon: "/ai.svg",
+            icon: "/assets/all-features/icons/calculator-active.svg",
           },
           {
             title:
               "Single Window for all Payment Types (Vendor/Customer/Statutory/Advances/Others)",
             description: "Manage diverse payments through one portal.",
-            icon: "/window-cursor.svg",
+            icon: "/assets/all-features/icons/window-cursor.svg",
           },
         ],
         allItems: PROCUREMENT_ALL_FEATURES,
@@ -1051,49 +1128,49 @@ export const allFeaturesGroups: AllFeaturesGroup[] = [
             title: "GSTIN powered Customer onboarding",
             description:
               "Simplify onboarding by fetching details automatically via GSTIN. Know their GST compliance history to predict realiability.",
-            icon: "/user-check.svg",
+            icon: "/assets/all-features/icons/user-check.svg",
           },
           {
             title: "Estimate, PI & Sales Order Creation (Multi-level Approvals)",
             description:
               "Create and approve sales documents with multi-stage verification.",
-            icon: "/bill 2.svg",
+            icon: "/assets/all-features/icons/estimate-and-order-creation.svg",
           },
           {
             title: "AI powered Advanced Scheming Management",
             description:
               "Supports complex schemes like Buy A Get B, slab discounts, triggers, and flexible accounting.",
-            icon: "/ai.svg",
+            icon: "/assets/all-features/icons/ai.svg",
           },
           {
             title: "Customer wise Credit Limit check",
             description:
               "Check real-time credit limits and restrict invoicing accordingly.",
-            icon: "/user.svg",
+            icon: "/assets/all-features/icons/credit-card-check-1.svg",
           },
           {
             title: "Outstanding Receivables",
             description:
               "Real-time visibility into customer-wise pending payments.",
-            icon: "/hand-holding-coins.svg",
+            icon: "/assets/all-features/icons/hand-holding-coins.svg",
           },
           {
             title: "Collections & Payment links",
             description:
               "Record and sync payments while sending collection reminders with payment links.",
-            icon: "/link-4.svg",
+            icon: "/assets/all-features/icons/link-4.svg",
           },
           {
             title: "E-Invoicing & e-WayBill Generation",
             description:
               "Record and sync payments while sending collection reminders with payment links.",
-            icon: "/file-content.svg",
+            icon: "/assets/all-features/icons/e-invoicing-eway-bill.svg",
           },
           {
             title: "Intelligent QR on Invoice",
             description:
               "Embed transaction-specific QR codes for faster payments.",
-            icon: "/qrCode.svg",
+            icon: "/assets/all-features/icons/qrcode.svg",
           },
         ],
         allItems: SALES_ALL_FEATURES,
@@ -1118,32 +1195,32 @@ export const allFeaturesGroups: AllFeaturesGroup[] = [
           {
             title: "Effortless Connect mobile app (Android/iOS) — unlimited",
             description: "Provide unlimited mobile access for customers.",
-            icon: "/banking-mobile.svg",
+            icon: "/assets/all-features/icons/mobile-app.svg",
           },
           {
             title: "Product catalogue with in-stock items & view controls",
             description:
               "Display inventory availability with visibility controls.",
-            icon: "/cart-simple-add 1.svg",
+            icon: "/assets/all-features/icons/product-catalogue.svg",
           },
           {
             title:
               "Self-serve ordering (MoQ controls) & live order status tracking",
             description:
               "Allow customers to order and track status with MoQ controls.",
-            icon: "/cart-plus 1.svg",
+            icon: "/assets/all-features/icons/cart-plus-1.svg",
           },
           {
             title: "Dashboard with transaction, payables & invoice history",
             description: "Give buyers full visibility into their account history.",
-            icon: "/todo 1.svg",
+            icon: "/assets/all-features/icons/ardashboard.svg",
           },
           {
             title:
               "Open bills, schemes management, specialised SKU visibility controls",
             description:
               "Display pending bills and applicable schemes for buyers.",
-            icon: "/bill 3.svg",
+            icon: "/assets/all-features/icons/bill-3.svg",
           },
         ],
         allItems: BUYER_PORTAL_ALL_FEATURES,
@@ -1161,30 +1238,30 @@ export const allFeaturesGroups: AllFeaturesGroup[] = [
             title: "Set Recurring Contracts",
             description:
               "Set frequency, duration, service start date, billing date, billing mode and payment mode once.",
-            icon: "/files-content.svg",
+            icon: "/assets/all-features/icons/subscription.svg",
           },
           {
             title: "Contract Renewal Reminders",
             description:
               "Set Up Multiple Auto-Reminders Before Contract Expiry (WhatsApp + Email)",
-            icon: "/calendar-check.svg",
+            icon: "/assets/all-features/icons/calendar-clock.svg",
           },
           {
             title: "Auto schedule Pro-forma / E-Invoice",
             description: "Schedule and forget. Let Effortless do it for you!",
-            icon: "/file-content.svg",
+            icon: "/assets/all-features/icons/doc-timer.svg",
           },
           {
             title: "Smart Reminders",
             description:
               "WhatsApp + Email payment outstanding reminders fire automatically. No manual follow-ups, no missed renewals.",
-            icon: "/alarm-clock.svg",
+            icon: "/assets/all-features/icons/alarm-clock.svg",
           },
           {
             title: "Payment QR & Pay Now Links",
             description:
               "Easily include QR/payment links in collection reminders.",
-            icon: "/link-4.svg",
+            icon: "/assets/all-features/icons/link-4.svg",
           },
         ],
         allItems: RECURRING_ALL_FEATURES,
@@ -1203,27 +1280,27 @@ export const allFeaturesGroups: AllFeaturesGroup[] = [
           {
             title: "Pay Now Emails with Invoices",
             description: "Send invoice + payment link for instant action.",
-            icon: "/Pay Now Emails  with Invoices.svg",
+            icon: "/assets/all-features/icons/pay-now-emails-with-invoices.svg",
           },
           {
             title: "Auto-Share of Invoices (WhatsApp and Email)",
             description: "Automated distribution via WhatsApp/Email.",
-            icon: "/Auto-Share of Invoices(WhatsApp and Email).svg",
+            icon: "/assets/all-features/icons/auto-share-of-invoiceswhatsapp-and-email.svg",
           },
           {
             title: "Automated Reminders (WhatsApp and Email)",
             description: "Chase payments automatically.",
-            icon: "/circle-user-sparkle-2 1.svg",
+            icon: "/assets/all-features/icons/alarm-clock.svg",
           },
           {
             title: "Domain-Mapped Reminder Delivery",
             description: "Send professional branded communications.",
-            icon: "/alarm-clock.svg",
+            icon: "/assets/all-features/icons/envelope.svg",
           },
           {
             title: "Auto Notify Internal Users on Portal Orders",
             description: "Keep internal teams updated on buyer orders.",
-            icon: "/bell-filled 1.svg",
+            icon: "/assets/all-features/icons/bell-filled-1.svg",
           },
         ],
         allItems: CUSTOMER_WORKFLOWS_ALL_FEATURES,

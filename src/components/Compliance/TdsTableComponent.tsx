@@ -91,7 +91,7 @@ const TdsTableComponent = ({
 
       {/* ================= MOBILE ================= */}
       <div className="md:hidden">
-        <div className="sticky top-[69px] z-10 border-b border-line bg-bg-subtle">
+        <div className="sticky top-[40px] z-10 border-b border-line bg-bg-subtle">
           <div className="relative flex w-full">
             <div className="w-[160px] border-r border-line p-3 text-label font-medium text-content">
               {tableHeader[0]?.label}

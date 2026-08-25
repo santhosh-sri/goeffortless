@@ -156,7 +156,7 @@ export function SiteHeader() {
         The component and its copy in `@/data/announcement` are left in place.
       */}
       {/* <AnnouncementBanner /> */}
-      <Container className="flex items-center justify-between gap-4 py-3 xl:pb-5 xl:pt-10">
+      <Container className="flex items-center justify-between gap-4 py-3 xl:pb-5 xl:pt-5">
         <Logo />
 
         {/*
@@ -314,7 +314,10 @@ export function SiteHeader() {
           onMouseEnter={() => openWithHover(openMenuItem.label)}
           onMouseLeave={closeWithDelay}
         >
-          <Container className="flex justify-center pt-1">
+          {/* No top padding: the panel drops `rounded-t` and its top border so
+              it reads as an extension of the header, which only works if it
+              actually meets the header's bottom edge. */}
+          <Container className="flex justify-center">
             <NavDropdown menu={openMenuItem.menu} onNavigate={closeAll} />
           </Container>
         </div>

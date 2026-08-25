@@ -56,7 +56,15 @@ const Modal = ({
         aria-modal="true"
         aria-labelledby={labelledBy}
         className={cn(
-          "relative z-10 mx-auto w-[1352px] max-w-[calc(100vw-40px)] rounded-xl border border-line bg-surface text-content shadow-overlay transition-all animate-scaleIn",
+          "relative z-10 mx-auto rounded-xl border border-line bg-surface text-content shadow-overlay transition-all animate-scaleIn",
+          // `cn` only joins — it has no tailwind-merge — so emitting the
+          // default width alongside a caller's own would leave both on the
+          // element and let stylesheet order pick the winner, which it did:
+          // a caller asking for `w-[1180px]` still rendered at 1352. The
+          // default is dropped whenever the caller sets its own width.
+          /(^|\s)w-/.test(className ?? "")
+            ? null
+            : "w-[1352px] max-w-[calc(100vw-40px)]",
           className
         )}
         onClick={(e) => e.stopPropagation()}

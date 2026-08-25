@@ -25,11 +25,24 @@ import React from "react";
  * top-level text nodes become the accent clause instead.
  */
 const ACCENT_STYLE = /linear-gradient|color\s*:\s*#(?!fff\b|ffffff\b)[0-9a-f]{3,6}/i;
+/**
+ * The one highlight that is *not* the accent clause: the Partners hero draws
+ * "Revenue." in mint (Figma 2835:25082). Copy predating that frame used
+ * #A3F0E6 for the same word, so both resolve to the mint token.
+ */
+const MINT_STYLE = /color\s*:\s*#(a3f0e6|36e3c0)\b/i;
 
-function spanTone(style: string | undefined): "accent" | "plain" {
+function spanTone(style: string | undefined): "accent" | "mint" | "plain" {
   if (!style) return "plain";
+  if (MINT_STYLE.test(style)) return "mint";
   return ACCENT_STYLE.test(style) ? "accent" : "plain";
 }
+
+const TONE_CLASS = {
+  accent: "font-bold text-accent",
+  mint: "font-bold text-palette-mint",
+  plain: undefined,
+} as const;
 
 export function parseCms(
   html: string | undefined,
@@ -42,7 +55,7 @@ export function parseCms(
       if (node instanceof Element && node.name === "span") {
         const tone = spanTone(node.attribs?.style);
         return (
-          <span className={tone === "accent" ? "font-bold text-accent" : undefined}>
+          <span className={TONE_CLASS[tone]}>
             {domToReact(node.children as DOMNode[], options)}
           </span>
         );

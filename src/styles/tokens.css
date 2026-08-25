@@ -27,6 +27,7 @@
   --color-surface-hover: 249 250 251; /* #F9FAFB  card hover                 */
   --color-surface-muted: 216 216 216; /* #D8D8D8  neutral card header bar    */
 
+
   /* ---- Text ------------------------------------------------------------- */
   --color-text: 26 26 26; /* #1A1A1A  headings, card titles      */
   --color-text-muted: 74 85 104; /* #4A5568  body copy, nav links       */
@@ -75,6 +76,10 @@
   /* ---- Palette accents — illustration/status fills, theme-invariant ------ */
   --color-blue: 59 130 246; /* #3B82F6  Pallet "Blue"              */
   --color-purple: 138 56 245; /* #8A38F5  Pallet "Purple"            */
+  /* Partners hero highlight — Figma 2835:25082 draws "Revenue." in mint on
+     white. The CMS copy predating that frame used #A3F0E6 for the same word,
+     so both resolve here. */
+  --color-mint: 54 227 192; /* #36E3C0                             */
 
   /* ---- Focus ring ------------------------------------------------------- */
   --color-focus: 240 139 50; /* matches accent                      */
@@ -91,6 +96,15 @@
      cards (Figma drop-shadow 0 4 8 black @ 10%). */
   --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
   --shadow-overlay: 0 12px 32px 0 rgb(16 25 40 / 0.16);
+  /* The header dropdown, which is a wide panel hanging flush off a sticky,
+     translucent header and carrying no border of its own.
+     Two layers — a close one for the edge, a far one for depth — because a
+     single blur wide enough to read under a 1140px panel goes muddy up close.
+     Both spreads are negative and both offsets exceed half the blur, so
+     neither layer reaches above the panel's top edge: a shadow that did would
+     show through the blurred header sitting on top of it. */
+  --shadow-menu: 0 12px 24px -6px rgb(16 25 40 / 0.1),
+    0 28px 56px -20px rgb(16 25 40 / 0.14);
   --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.12);
   /* Same shadow as a filter, for transparent artwork: box-shadow traces
      the element box, drop-shadow traces the image's alpha. The blur is
@@ -163,6 +177,8 @@
   --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.1);
   --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
   --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
+  --shadow-menu: 0 12px 24px -6px rgb(0 0 0 / 0.45),
+    0 28px 56px -20px rgb(0 0 0 / 0.55);
   --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);
   --drop-shadow-media: 32px -32px 20px rgb(0 0 0 / 0.5);
 }
@@ -202,6 +218,8 @@
     --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.1);
     --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
     --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
+    --shadow-menu: 0 12px 24px -6px rgb(0 0 0 / 0.45),
+      0 28px 56px -20px rgb(0 0 0 / 0.55);
     --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);
     --drop-shadow-media: 32px -32px 20px rgb(0 0 0 / 0.5);
   }

@@ -23,10 +23,10 @@
   "isPartnerPage": true,
   "usecaseFold": {
     "pageHeading": "Become a Partner",
-    "heading": "<span style=\"color: #FFFFFF; font-weight: 300;\">Partner with</span> Effortless. <span style=\"color: #FFFFFF; font-weight: 300;\">Unlock New </span><span style=\"color: #A3F0E6;\">Revenue.</span>",
+    "heading": "<span style=\"color: #FFFFFF; font-weight: 300;\">Partner with</span> Effortless. <br/><span style=\"color: #FFFFFF; font-weight: 300;\">Unlock New </span><span style=\"color: #36E3C0;\">Revenue.</span>",
     "description": "Help businesses simplify finance and compliance while earning commissions, exclusive rewards, and long-term revenue.",
     "isPartnerPage": true,
-    "bannerImage": "/Partner-2x.png",
+    "bannerImage": "/assets/partners/hero.png",
     "ctaText": "Partner Portal Login",
     "secondaryCtaText": "Join as a Partner",
     "businessTagline": "Over 1000 businesses trust Effortless to streamline their processes and save 400+ hours monthly",

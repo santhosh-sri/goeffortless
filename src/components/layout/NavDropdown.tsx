@@ -475,7 +475,11 @@ export function NavDropdown({
         // through it and the two layers read as overlapping rather than
         // stacked — the panel covers the page instead.
         "rounded-lg border border-line bg-surface-raised p-4 shadow-overlay",
-        "xl:rounded-t-none xl:rounded-b-2xl xl:border-t-0 xl:p-5",
+        // The border is for the drawer, where this renders as a card nested in
+        // a list and needs its own edge. The desktop panel drops it entirely
+        // and leans on the shadow: it hangs off the header as one surface, and
+        // a stroke around three sides only drew a seam across that.
+        "xl:rounded-t-none xl:rounded-b-2xl xl:border-0 xl:p-5 xl:shadow-menu",
         "w-full xl:max-w-[calc(100vw-4rem)]",
         // Products is 781px tall in Figma and the panel hangs off a 96px
         // header, so on a short laptop it would run past the fold with the

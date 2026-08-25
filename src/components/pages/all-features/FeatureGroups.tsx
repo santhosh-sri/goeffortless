@@ -121,7 +121,7 @@ function Card({
                   <p className="text-[13px] capitalize leading-4 text-content">
                     {item.title}
                   </p>
-                  <p className="text-caption leading-4 text-content-muted">
+                  <p className="text-caption text-content-muted">
                     {item.description}
                   </p>
                 </div>

@@ -43,7 +43,7 @@ export const growingPains = {
       icon: "/assets/home/suppliers.svg",
       title: "Multiple Suppliers & Vendors",
       description:
-        "Vendors grow when you grow, Complexities outgrow Everywhere — POs, Cost Centres, Expenses, Petty Cash, TDS, ITC, Budget, Approvals & PO-Vendor Bill-GRN Variance Control.",
+        "Vendors grow with you. Complexity grows faster — POs, expenses, TDS, ITC, budgets, approvals & variance control.",
     },
     {
       icon: "/assets/home/repeat-customers.svg",
@@ -95,7 +95,7 @@ export const tallyPower = {
       icon: "/assets/home/tally-multi-company.svg",
       title: "Multi-Company",
       description:
-        "Managing 5 companies in Tally? Effortless handles all of them with branch-wise controls and consolidated views.",
+        "Managing 5 companies in Tally? Effortless gives you branch-wise control and one consolidated view.",
     },
     {
       icon: "/assets/home/tally-clean-masters.svg",

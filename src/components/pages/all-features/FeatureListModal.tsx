@@ -7,8 +7,15 @@ import FeatureItemIcon from "./FeatureItemIcon";
  * The "See all NN features" dialog — Figma node 2117:5702.
  *
  * A 1180 × 816 white card holding the card's complete feature list in a
- * four-column grid of 276px chips: a 32px peach icon tile, a title, and a
- * one-line description under a fixed gap.
+ * four-column grid of 276px chips: a 32px peach icon tile, a title, and its
+ * description below.
+ *
+ * The frame sets a fixed 24px gap between the title and the description, drawn
+ * against one-line titles. The real catalogue wraps titles to three lines, so
+ * that gap aligns nothing and only opens a void inside the short chips — and
+ * an inner gap wider than the chip's own padding reads as content escaping the
+ * box. The pair is spaced on the card's 8/16 rhythm instead: 16px of padding
+ * around 8px between title and description.
  *
  * Two departures from the frame, both flagged rather than reproduced:
  *  - The frame has no heading, only a bare close control, so nothing names the
@@ -74,11 +81,17 @@ export function FeatureListModal({
 
       {/* 52 of clearance under the close control, 20 of padding, 12 gutters. */}
       <div className="max-h-[calc(100vh-80px)] overflow-y-auto px-5 pb-5 pt-[52px]">
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {/*
+          `auto-rows-fr` sizes every row to the tallest chip in the whole grid
+          rather than the tallest in its own row, so all 24 chips come out one
+          size. Without it each row self-sizes and the grid steps up and down
+          as the descriptions change length.
+        */}
+        <ul className="grid auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {card.allItems.map((item) => (
             <li
               key={item.title}
-              className="flex flex-col gap-6 rounded-lg border border-line p-3"
+              className="flex flex-col gap-2 rounded-xl border border-line p-4"
             >
               <div className="flex items-start gap-2">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-accent-surface">
@@ -90,12 +103,12 @@ export function FeatureListModal({
                   Payment Types (Vendor/Customer/Statutory/Advances/Others)"
                   overflows the 276px chip otherwise.
                 */}
-                <h3 className="min-w-0 break-words text-[13px] font-semibold leading-4 text-content">
+                <h3 className="min-w-0 break-words text-[13px] font-semibold capitalize leading-4 text-content">
                   {item.title}
                 </h3>
               </div>
 
-              <p className="text-caption leading-4 text-content-muted">
+              <p className="text-caption text-content-muted">
                 {item.description}
               </p>
             </li>

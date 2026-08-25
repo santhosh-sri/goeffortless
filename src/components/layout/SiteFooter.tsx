@@ -145,6 +145,12 @@ export function SiteFooter() {
         <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_3fr_1fr] lg:gap-x-0">
           {sections.map((section, index) => {
             const withDivider = index > 0;
+            // The rule sits on a column's own left edge, so `pl` alone only
+            // pads the side after it and the previous column's links run
+            // straight into it. The column before each divider carries the
+            // matching right padding, giving every rule 32px of clearance on
+            // both sides.
+            const beforeDivider = index < sections.length - 1;
 
             return (
               <div
@@ -152,7 +158,8 @@ export function SiteFooter() {
                 className={cn(
                   "flex flex-col gap-6",
                   withDivider &&
-                    "lg:border-l lg:border-dashed lg:border-line lg:pl-8"
+                    "lg:border-l lg:border-dashed lg:border-line lg:pl-8",
+                  beforeDivider && "lg:pr-8"
                 )}
               >
                 {"groups" in section && section.groups

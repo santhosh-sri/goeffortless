@@ -19,6 +19,9 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // `lib` renders markup too — cmsHtml.tsx maps CMS spans onto utilities.
+    // Without this, a class used only there is never generated.
+    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -78,6 +81,7 @@ export default {
         palette: {
           blue: withOpacity("--color-blue"),
           purple: withOpacity("--color-purple"),
+          mint: withOpacity("--color-mint"),
         },
 
         // Legacy aliases — kept so the pre-redesign pages keep compiling.
@@ -93,6 +97,7 @@ export default {
         raised: "var(--shadow-raised)",
         lift: "var(--shadow-lift)",
         overlay: "var(--shadow-overlay)",
+        menu: "var(--shadow-menu)",
         media: "var(--shadow-media)",
       },
 

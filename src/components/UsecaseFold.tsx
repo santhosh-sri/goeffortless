@@ -54,6 +54,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   founderTestominial = [],
   isCustomerPage,
   isCompliancePage,
+  isPartnerPage,
   activeTab,
   setActiveTab,
   languageModalConfig,
@@ -103,7 +104,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
 
   return (
     <>
-      <section className="bg-bg-subtle py-10 lg:pb-20 lg:pt-12">
+      <section className="bg-bg py-10 lg:pb-20 lg:pt-12">
         <Container className="flex flex-col items-start gap-10 lg:flex-row lg:items-center">
           {/* ---- Copy ---- */}
           <div className="flex w-full flex-col gap-8 lg:flex-1">
@@ -133,15 +134,30 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
 
             {(ctaText || secondaryCtaText) && (
               <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center">
-                {ctaText && (
-                  <Democta ctaText={ctaText} onTrialRequest={onTrialRequest} />
-                )}
-                {secondaryCtaText && (
-                  <SecondaryCta
-                    handleDirect={handleDirect}
-                    secondaryCtaText={secondaryCtaText}
-                    secondaryIcon={secondaryIcon}
-                  />
+                {/* Partners leads with the outlined action (Figma 2835:25082);
+                    every other page leads with the filled one. Reordered in
+                    markup rather than with `flex-row-reverse`, so tab order
+                    follows what is on screen. */}
+                {(isPartnerPage
+                  ? ["secondary", "primary"]
+                  : ["primary", "secondary"]
+                ).map((slot) =>
+                  slot === "primary"
+                    ? ctaText && (
+                        <Democta
+                          key="primary"
+                          ctaText={ctaText}
+                          onTrialRequest={onTrialRequest}
+                        />
+                      )
+                    : secondaryCtaText && (
+                        <SecondaryCta
+                          key="secondary"
+                          handleDirect={handleDirect}
+                          secondaryCtaText={secondaryCtaText}
+                          secondaryIcon={secondaryIcon}
+                        />
+                      )
                 )}
               </div>
             )}
