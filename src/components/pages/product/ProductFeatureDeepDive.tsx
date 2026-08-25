@@ -16,11 +16,12 @@ import type { ProductFeatureHeading, ProductFeatureRow } from "./types";
  * tall except where a card is taller (`mediaHeight`).
  *
  * The media card is the same 12px-radius white card as the hero, with the
- * palette's card shadow (0 4 16 black @ 10% — Figma's render of 1699:17382
- * darkens the margin by ~6% at the bottom edge). Each export is cropped to the
- * card itself. The earlier exports carried Figma's 16px shadow margin, baked
- * onto the grey band colour, which drew a hard grey halo around every image on
- * this white section — that halo is what read as a heavy shadow.
+ * palette's card shadow (`shadow-raised`, 0 4 16 black @ 10% — Figma's render
+ * of 1699:17382 darkens the margin by ~6% at the bottom edge). Each export is
+ * cropped to the card itself — Figma's shadow is offset 4px down, so the
+ * export margin is 24px above / 40px below, not centred — and the shadow is
+ * drawn in CSS, the same as the hero card. Baking it into the PNG drew a hard
+ * grey halo around every image instead.
  *
  * Copy (1699:20068): 16/20 medium accent eyebrow, 8px, 24px medium title;
  * 20px to the body; 20/28 muted paragraphs 20px apart.
@@ -69,7 +70,7 @@ export function ProductFeatureDeepDive({
                     height={row.mediaHeight ?? 520}
                     loading="lazy"
                     sizes="(min-width: 1024px) 636px, 100vw"
-                    className="h-auto w-full rounded-xl"
+                    className="h-auto w-full rounded-xl shadow-raised"
                   />
                 </div>
 

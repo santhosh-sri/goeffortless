@@ -1,7 +1,7 @@
 import { faqs } from "@/interface/type";
-import Image from "next/image";
 import React from "react";
 import { useState } from "react";
+import { ChevronDown } from "./ui";
 
 const FaqSection: React.FC<faqs> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,13 +13,7 @@ const FaqSection: React.FC<faqs> = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         {question}
-        <Image
-          src={isOpen ? "/accordion-open.svg" : "/accordion_open.svg"}
-          className="h-6 w-6"
-          alt="open or close accordion"
-          width={6}
-          height={6}
-        />
+        <ChevronDown open={isOpen} className="h-5 w-5 text-content-muted" />
       </button>
       {isOpen && (
         <p className="text-[16px] font-[300] leading-[25px] text-content-muted p-3 bg-bg rounded-xl">

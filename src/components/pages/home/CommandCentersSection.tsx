@@ -108,11 +108,12 @@ export function CommandCentersSection() {
             {/* Figma renders this hug-width (168×46), not stretched across the
                 column — the exported `w-full` sits on a wrapper that itself
                 hugs. Full width is kept below lg, where the column is narrow. */}
+            {/* No resting arrow — it slides in on hover, as on the hero CTAs
+                and goeffortless.ai. `Button` reveals it by default. */}
             <Button
               href={panel.ctaHref}
               fullWidth
               className="h-[46px] rounded-lg text-[15px] font-bold lg:w-auto lg:self-start"
-              trailingIcon={<span aria-hidden="true">→</span>}
             >
               {panel.ctaLabel}
             </Button>
@@ -150,16 +151,11 @@ export function CommandCentersSection() {
 
           {/* ---- Feature grid ---- */}
           <ul className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 xl:w-[640px] xl:shrink-0">
-            {panel.features.map((feature, index) => (
+            {panel.features.map((feature) => (
               <li key={feature.title} className="flex">
-                <div
-                  className={cn(
-                    "flex h-full w-full flex-col justify-between gap-3 rounded-card bg-surface p-5",
-                    index === 0
-                      ? "shadow-lift"
-                      : "border border-line"
-                  )}
-                >
+                {/* Same as the rows above: the design's first card is the
+                    hover state, so every card lifts on hover instead. */}
+                <div className="flex h-full w-full flex-col justify-between gap-3 rounded-card border border-line bg-surface p-5 transition-[colors,box-shadow] duration-200 hover:border-transparent hover:shadow-lift">
                   <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-icon-tile">
                     <Image
                       src={feature.icon}

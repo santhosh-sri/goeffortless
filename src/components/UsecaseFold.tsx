@@ -9,25 +9,14 @@ import Logocarousel from "./Logocarousel";
 import PageTitle from "./PageTitle";
 import SecondaryCta from "./SecondaryCta";
 import TabComponent from "./TabComponent";
-import Modal from "./ModalComponent/Modal";
-import LanguageModalContent from "./ModalComponent/LanguageModalContent";
-import GrowthVideosContent from "./ModalComponent/GrowthVideosContent";
+import DemoVideoModal from "./DemoVideoModal";
 import YoutubeVideoCard from "./YoutubeVideoCard";
 
-type DemoModalStep = "language" | "videos" | "play";
 type DemoVideo = {
   id: string;
   title: string;
   subtitle: string;
   videoId: string;
-};
-
-type LanguageOption = {
-  id: string;
-  label: string;
-  flag: string;
-  value: string;
-  videos?: DemoVideo[];
 };
 
 interface UsecaseFoldProps extends FirstFoldContent {
@@ -74,10 +63,6 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
   onTrialRequest,
 }) => {
   const [openDemoModal, setOpenDemoModal] = useState(false);
-  const [demoStep, setDemoStep] = useState<DemoModalStep>("language");
-  const [selectedLanguage, setSelectedLanguage] =
-    useState<LanguageOption | null>(null);
-  const [activeVideo, setActiveVideo] = useState<DemoVideo | null>(null);
 
   const handleDirect = () => {
     const cta = secondaryCtaText?.toLowerCase().trim();
@@ -103,11 +88,7 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
     }
   };
 
-  const closeDemoModal = () => {
-    setOpenDemoModal(false);
-    setDemoStep("language");
-    setSelectedLanguage(null);
-  };
+  const closeDemoModal = () => setOpenDemoModal(false);
 
   const tabList = [
     { val: "tds", label: "TDS" },
@@ -153,15 +134,10 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
             {(ctaText || secondaryCtaText) && (
               <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center">
                 {ctaText && (
-                  <Democta
-                    customStyle={true}
-                    ctaText={ctaText}
-                    onTrialRequest={onTrialRequest}
-                  />
+                  <Democta ctaText={ctaText} onTrialRequest={onTrialRequest} />
                 )}
                 {secondaryCtaText && (
                   <SecondaryCta
-                    customStyle={true}
                     handleDirect={handleDirect}
                     secondaryCtaText={secondaryCtaText}
                     secondaryIcon={secondaryIcon}
@@ -184,7 +160,9 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
               />
               {ishome && (
                 <div className="flex items-end justify-center gap-2">
-                  <p className="text-body-lg text-accent">Work seamlessly with:</p>
+                  <p className="text-body-lg text-accent">
+                    Work seamlessly with:
+                  </p>
                   <Image
                     src={"/tallylogo.png"}
                     alt="tallyprime-logo"
@@ -232,39 +210,11 @@ const UsecaseFold: React.FC<UsecaseFoldProps> = ({
         </div>
       )}
 
-      <Modal open={openDemoModal} onClose={closeDemoModal}>
-        {demoStep === "language" && (
-          <LanguageModalContent
-            data={languageModalConfig}
-            onSelect={(language) => {
-              setSelectedLanguage(language);
-              setDemoStep("videos");
-            }}
-            onClose={closeDemoModal}
-          />
-        )}
-
-        {demoStep === "videos" && (
-          <GrowthVideosContent
-            onBack={() => setDemoStep("language")}
-            onPlay={(video) => {
-              setActiveVideo(video);
-              setDemoStep("play");
-            }}
-            onClose={closeDemoModal}
-            videos={selectedLanguage?.videos || []}
-          />
-        )}
-
-        {demoStep === "play" && activeVideo && (
-          <YoutubeVideoCard
-            onBack={() => setDemoStep("videos")}
-            title={activeVideo.title}
-            videoId={activeVideo.videoId}
-            onClose={closeDemoModal}
-          />
-        )}
-      </Modal>
+      <DemoVideoModal
+        open={openDemoModal}
+        onClose={closeDemoModal}
+        config={languageModalConfig}
+      />
     </>
   );
 };

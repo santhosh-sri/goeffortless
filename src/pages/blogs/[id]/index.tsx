@@ -277,7 +277,7 @@ export default function BlogDetail({
               </section>
               <Section spacing="lg" as="article">
                 <div
-                  className="htmlContainer mx-auto flex max-w-4xl flex-col gap-3 text-content-muted"
+                  className="htmlContainer mx-auto flex flex-col gap-3 text-content-muted"
                   dangerouslySetInnerHTML={{ __html: cleanHTML(htmlContent) }}
                 />
               </Section>
@@ -297,7 +297,9 @@ export default function BlogDetail({
                   <PageTitle pageHeading={"Get Started"} tone="surface" />
                   <h2 className="text-heading-sm font-light text-content md:text-heading-md">
                     Growth Doesn&apos;t Wait.{" "}
-                    <span className="font-bold text-accent">Why Should You?</span>
+                    <span className="font-bold text-accent">
+                      Why Should You?
+                    </span>
                   </h2>
                 </div>
                 <p className="text-body text-content-muted md:text-body-lg">

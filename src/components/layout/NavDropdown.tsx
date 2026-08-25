@@ -86,6 +86,8 @@ function NavIcon({
 function NavGroupBlock({
   group,
   onNavigate,
+  openRow,
+  onToggleRow,
   iconSize = 20,
   rule = "header",
   scale = "roomy",
@@ -93,6 +95,9 @@ function NavGroupBlock({
 }: {
   group: NavGroup;
   onNavigate?: () => void;
+  /** Label of the one accordion open across the panel — see `NavDropdown`. */
+  openRow?: string | null;
+  onToggleRow?: (label: string) => void;
   iconSize?: number;
   /** See `NavMenu.groupRule`. */
   rule?: "header" | "group";
@@ -159,7 +164,12 @@ function NavGroupBlock({
         {group.links.map((link) => (
           <li key={link.label}>
             {link.children?.length ? (
-              <NavAccordionItem link={link} onNavigate={onNavigate} />
+              <NavAccordionItem
+                link={link}
+                onNavigate={onNavigate}
+                open={openRow === link.label}
+                onToggle={() => onToggleRow?.(link.label)}
+              />
             ) : (
               <NavItemLink
                 link={link}
@@ -186,15 +196,22 @@ function NavGroupBlock({
  *
  * The row is a button, not a link: Figma gives it no navigable affordance of
  * its own, and the children are the destinations.
+ *
+ * Open/closed is owned by the panel rather than the row, so opening one row
+ * closes whichever was open — three columns of expanded accordions made the
+ * panel scroll and buried the rest of the menu.
  */
 function NavAccordionItem({
   link,
   onNavigate,
+  open,
+  onToggle,
 }: {
   link: NavLink;
   onNavigate?: () => void;
+  open: boolean;
+  onToggle: () => void;
 }) {
-  const [open, setOpen] = useState(false);
   const panelId = useId();
 
   return (
@@ -203,7 +220,7 @@ function NavAccordionItem({
         type="button"
         aria-expanded={open}
         aria-controls={panelId}
-        onClick={() => setOpen((v) => !v)}
+        onClick={onToggle}
         className={cn(
           "flex w-full items-center gap-2 rounded-lg p-2 text-left md:p-4",
           "transition-colors duration-200 hover:bg-bg-subtle",
@@ -239,19 +256,11 @@ function NavAccordionItem({
           id={panelId}
           className="flex flex-col gap-1 rounded-b-lg bg-surface px-2 py-2 md:px-4"
         >
-          {link.children?.map((child) => (
-            <li key={child.label}>
-              <Link
-                href={child.href}
-                onClick={onNavigate}
-                className={cn(
-                  "group/child flex items-center gap-2.5 rounded-sm p-2",
-                  "transition-colors duration-200 hover:bg-bg-subtle",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-inset"
-                )}
-              >
-                {/* Figma bakes the bullet into the string; kept out of the
-                    accessible name so it is not announced. */}
+          {link.children?.map((child) => {
+            /* Figma bakes the bullet into the string; kept out of the
+               accessible name so it is not announced. */
+            const body = (
+              <>
                 <span
                   aria-hidden="true"
                   className="text-label leading-[18px] text-content"
@@ -261,12 +270,44 @@ function NavAccordionItem({
                 <span className="min-w-0 flex-1 text-label leading-[18px] font-medium text-content">
                   {child.label}
                 </span>
-                <span className="flex shrink-0 items-center opacity-0 transition-opacity duration-200 group-hover/child:opacity-100 group-focus-visible/child:opacity-100">
-                  <NavIcon name="arrow-right" size={16} />
-                </span>
-              </Link>
-            </li>
-          ))}
+                {child.href && (
+                  <span className="flex shrink-0 items-center opacity-0 transition-opacity duration-200 group-hover/child:opacity-100 group-focus-visible/child:opacity-100">
+                    <NavIcon name="arrow-right" size={16} />
+                  </span>
+                )}
+              </>
+            );
+
+            const rowClasses = cn(
+              "group/child flex items-center gap-2.5 rounded-sm p-2",
+              child.href &&
+                cn(
+                  "transition-colors duration-200 hover:bg-bg-subtle",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-inset"
+                )
+            );
+
+            return (
+              <li key={child.label}>
+                {/*
+                  Read-only where no page exists yet: no hover fill, no arrow
+                  and nothing focusable, so the row cannot be mistaken for a
+                  destination. Adding an `href` restores the link.
+                */}
+                {child.href ? (
+                  <Link
+                    href={child.href}
+                    onClick={onNavigate}
+                    className={rowClasses}
+                  >
+                    {body}
+                  </Link>
+                ) : (
+                  <span className={rowClasses}>{body}</span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
@@ -377,6 +418,14 @@ function NavItemLink({
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-inset"
   );
 
+  // A row with no destination reads as text — see `NavChild.href`. The hover
+  // fill goes with the link, so nothing about it invites a click.
+  if (!link.href) {
+    return (
+      <span className={classes.replace("hover:bg-bg-subtle", "")}>{inner}</span>
+    );
+  }
+
   if (link.external) {
     return (
       <a
@@ -408,9 +457,23 @@ export function NavDropdown({
   const columns = menu.columns.length;
   const twoColumn = columns === 2;
 
+  /*
+   * One accordion open at a time across the whole panel, not one per column:
+   * Solutions draws three columns of them side by side, and leaving each to
+   * its own state let every row sit open at once, which pushed the panel past
+   * the fold and left the columns badly out of step with each other.
+   */
+  const [openRow, setOpenRow] = useState<string | null>(null);
+  const toggleRow = (label: string) =>
+    setOpenRow((current) => (current === label ? null : label));
+
   return (
     <div
       className={cn(
+        // Opaque on purpose. A translucent panel was tried to match the live
+        // site's glass, but on the light theme the page behind stayed legible
+        // through it and the two layers read as overlapping rather than
+        // stacked — the panel covers the page instead.
         "rounded-lg border border-line bg-surface-raised p-4 shadow-overlay",
         "xl:rounded-t-none xl:rounded-b-2xl xl:border-t-0 xl:p-5",
         "w-full xl:max-w-[calc(100vw-4rem)]",
@@ -434,7 +497,7 @@ export function NavDropdown({
           <div
             key={index}
             className={cn(
-              "flex flex-col gap-4",
+              "flex flex-col gap-4 px-[20px]",
               /*
                * Figma nests a second 20px pad inside each Products column, so
                * its content sits 40px from the panel edge. That is not carried
@@ -449,7 +512,7 @@ export function NavDropdown({
               // first; on mobile the columns stack, so it is xl-only.
               menu.columnDividers &&
                 index > 0 &&
-                "xl:border-l xl:border-dashed xl:border-line xl:pl-5"
+                "xl:border-l xl:border-dashed xl:border-line"
             )}
           >
             {column.map((group, groupIndex) => (
@@ -457,6 +520,8 @@ export function NavDropdown({
                 key={group.title}
                 group={group}
                 onNavigate={onNavigate}
+                openRow={openRow}
+                onToggleRow={toggleRow}
                 iconSize={menu.groupIconSize}
                 rule={menu.groupRule}
                 scale={menu.itemScale}

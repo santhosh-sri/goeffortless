@@ -98,37 +98,14 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
       ) : (
         <div className="flex flex-col gap-3 w-full p-4">
           <div className="flex items-center justify-end">
-            <button onClick={onBack}>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 4C0 1.79086 1.79086 0 4 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H4C1.79086 32 0 30.2091 0 28V4Z"
-                  fill="white"
-                  fill-opacity="0.1"
-                />
-                <path
-                  d="M10 10L22 22"
-                  stroke="#FF0000"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10 22L22 10"
-                  stroke="#FF0000"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+            <button type="button" onClick={onClose} aria-label="Close">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="4" fill="rgb(var(--color-bg-subtle))" />
+            <path d="M10 10L22 22M10 22L22 10" stroke="rgb(var(--color-danger))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
             </button>
           </div>
-          <div className="relative aspect-video md:aspect-auto md:h-[630px] overflow-hidden bg-black">
+          <div className="relative aspect-video overflow-hidden rounded-lg bg-black md:aspect-auto md:h-[630px]">
             <iframe
               className="absolute inset-0 w-full h-full"
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -16,15 +15,6 @@ import type { ProductHeroData } from "./types";
  * a two-tone H1, 20px body and a single 56px-tall CTA.
  */
 const CARD_WIDTH = { phone: 554, laptop: 636 } as const;
-const ARROW = (
-  <Image
-    src="/assets/shared/arrow-right.svg"
-    alt=""
-    width={24}
-    height={24}
-    className="h-6 w-6 shrink-0"
-  />
-);
 
 export function ProductHero({ data }: { data: ProductHeroData }) {
   return (
@@ -50,7 +40,9 @@ export function ProductHero({ data }: { data: ProductHeroData }) {
               <h1 className="text-heading-md font-normal text-content md:text-heading-lg lg:text-display lg:leading-[80px]">
                 {data.title}
                 <br />
-                <span className="font-bold text-accent">{data.accentTitle}</span>
+                <span className="font-bold text-accent">
+                  {data.accentTitle}
+                </span>
               </h1>
             </div>
 
@@ -59,13 +51,17 @@ export function ProductHero({ data }: { data: ProductHeroData }) {
             </p>
           </div>
 
+          {/*
+            No resting arrow: goeffortless.ai reveals it on hover and hides it
+            at rest, on this CTA as on the home hero's. `Button` slides it in
+            by default, so the arrow is simply not pinned here any more.
+          */}
           <Button
             calBooking
-            size="hero"
-            trailingIcon={ARROW}
+            size="md"
             // sm:self-start as well as sm:w-auto — the column is a flex-col,
             // so without it `align-self: stretch` overrides the width.
-            className="w-full font-semibold sm:w-auto sm:self-start"
+            className="w-full sm:w-auto sm:self-start"
           >
             {data.ctaLabel}
           </Button>

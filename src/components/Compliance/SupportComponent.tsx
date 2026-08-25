@@ -8,10 +8,10 @@ const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
   return (
     <div className="flex w-full flex-col gap-10">
       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-        <Democta customStyle={true} ctaText={"Book Demo"} />
+        <Democta ctaText={"Book Demo"} />
         <Button
           variant="secondary"
-          size="hero"
+          size="md"
           calBooking
           leadingIcon={
             <Image
@@ -30,7 +30,10 @@ const SupportComponent = ({ keyvalues }: { keyvalues: TrackDataProps[] }) => {
       </div>
       <div className="flex flex-wrap items-start justify-center gap-x-[120px] gap-y-6">
         {keyvalues.map((item, index) => (
-          <div key={index} className="flex flex-col items-center gap-1 text-center">
+          <div
+            key={index}
+            className="flex flex-col items-center gap-1 text-center"
+          >
             <p className="text-heading-md font-bold text-accent md:text-heading-lg">
               {item?.title}
             </p>

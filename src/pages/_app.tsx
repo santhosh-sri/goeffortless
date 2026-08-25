@@ -11,6 +11,7 @@ import { Lexend } from "next/font/google";
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";
 import PageTransition from "@/components/PageTransition";
+import CalEmbed from "@/components/CalEmbed";
 import { ThemeProvider } from "@/context/ThemeProvider";
 
 const lexend = Lexend({
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <ThemeProvider>
+      <CalEmbed />
       <PageTransition>
         <div className={lexend.variable}>
           <Component {...pageProps} />

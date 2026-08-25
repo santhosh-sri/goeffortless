@@ -15,8 +15,11 @@ import { cn } from "@/lib/cn";
  *  - `iconTone="tile"`   Component 1296 (node 1694:1549) — 24px icon on a
  *                        40px accent-tinted tile, 20px padding, 14/18 body.
  *
- * `emphasis="raised"` drops the border for a shadow, matching the featured
- * first card of the Tally row.
+ * Figma draws the first card of each row borderless-on-a-shadow. That is the
+ * hover state being shown off, not a "featured" card — every card in the row is
+ * peer content, and freezing the treatment on the first one made card one look
+ * like a different component from cards two onwards. So the lift is bound to
+ * `:hover` and every card rests on the same 1px border.
  */
 export function InfoCard({
   icon,
@@ -25,7 +28,6 @@ export function InfoCard({
   description,
   align = "center",
   iconTone = "plain",
-  emphasis = "outline",
   bodySize = "md",
   titleSize = "md",
   bodyEmphasis = false,
@@ -42,7 +44,6 @@ export function InfoCard({
   description?: string;
   align?: "center" | "start";
   iconTone?: "plain" | "tile";
-  emphasis?: "outline" | "raised";
   bodySize?: "sm" | "md";
   /** 24/30 medium (default) or the 20px semibold of the security row. */
   titleSize?: "sm" | "md";
@@ -81,11 +82,12 @@ export function InfoCard({
     <Tag
       {...(href ? { href } : {})}
       className={cn(
-        "flex h-full flex-col rounded-card bg-surface transition-colors duration-200",
+        "flex h-full flex-col rounded-card bg-surface",
+        "transition-[colors,box-shadow] duration-200",
         tiled ? "gap-4 p-5" : "gap-4 p-[21px]",
-        emphasis === "raised"
-          ? "shadow-raised"
-          : "border border-line",
+        // The border stays in the box on hover, turned transparent rather than
+        // dropped, so the lift does not shift the card by a pixel.
+        "border border-line hover:border-transparent hover:shadow-raised",
         href && "hover:border-accent hover:bg-surface-hover",
         href &&
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-bg",

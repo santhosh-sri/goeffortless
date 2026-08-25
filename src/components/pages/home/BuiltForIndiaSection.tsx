@@ -24,7 +24,7 @@ export function BuiltForIndiaSection() {
           />
 
           <ul className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {builtForIndia.cards.map((card, index) => (
+            {builtForIndia.cards.map((card) => (
               <li key={card.title} className="flex">
                 <InfoCard
                   icon={card.icon}
@@ -33,7 +33,6 @@ export function BuiltForIndiaSection() {
                   footnote={card.footnote}
                   iconTone="tile"
                   bodySize="sm"
-                  emphasis={index === 0 ? "raised" : "outline"}
                   className="w-full"
                 />
               </li>

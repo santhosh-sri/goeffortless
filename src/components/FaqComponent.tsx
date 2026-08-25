@@ -6,6 +6,7 @@ import { useState, ChangeEvent } from "react";
 import { cn } from "@/lib/cn";
 import SearchBar from "./SearchBar";
 import MaskIcon from "./ui/MaskIcon";
+import { ChevronDown } from "./ui";
 
 interface Props {
   faqs: FAQData;
@@ -102,16 +103,9 @@ const FaqComponent: React.FC<Props> = ({ faqs }) => {
                         <span className="text-body font-medium text-content">
                           {item.question}
                         </span>
-                        <Image
-                          src={"/assets/shared/chevron-down.svg"}
-                          alt=""
-                          width={16}
-                          height={16}
-                          className={cn(
-                            "h-4 w-4 shrink-0 transition-transform duration-300",
-                            isOpen && "rotate-180"
-                          )}
-                          unoptimized
+                        <ChevronDown
+                          open={isOpen}
+                          className="text-content-muted"
                         />
                       </button>
                       {isOpen && (

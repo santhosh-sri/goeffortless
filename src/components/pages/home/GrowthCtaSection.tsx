@@ -24,13 +24,13 @@ export function GrowthCtaSection() {
         />
 
         <ul className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {growthCta.cards.map((card, index) => (
+          {growthCta.cards.map((card) => (
             <li key={card.title} className="flex">
-              <div
-                className={`flex w-full flex-col gap-4 rounded-card bg-surface p-5 text-left ${
-                  index === 0 ? "shadow-raised" : "border border-line"
-                }`}
-              >
+              {/* Figma's first card is the hover state on show, not a
+                  featured card — every card rests bordered and lifts on
+                  hover. The border turns transparent rather than being
+                  dropped, so the lift shifts nothing. */}
+              <div className="flex w-full flex-col gap-4 rounded-card border border-line bg-surface p-5 text-left transition-[colors,box-shadow] duration-200 hover:border-transparent hover:shadow-raised">
                 <div className="flex flex-col gap-2">
                   <h3 className="text-heading-sm font-medium text-content">
                     {card.title}

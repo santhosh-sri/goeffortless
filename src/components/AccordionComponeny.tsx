@@ -1,5 +1,6 @@
 import { HomePageVerticalSlider } from "@/interface/type";
 import Image from "next/image";
+import { ChevronDown } from "./ui";
 import React, { useRef, useState } from "react";
 import FeatureWrapper from "./FeatureWrapper";
 
@@ -71,14 +72,11 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
                 </p>
               )}
             </div>
-            <Image
-              src={
-                isOpen === index ? "/chevron-up.svg" : "/arrow-down-white.svg"
-              }
-              alt="open or close accordion"
-              width={16}
-              height={16}
-              className={`${isOpen === index ? "relative top-[-17px]" : ""}`}
+            <ChevronDown
+              open={isOpen === index}
+              className={`text-content-muted ${
+                isOpen === index ? "relative top-[-17px]" : ""
+              }`}
             />
           </button>
           {isOpen === index && (
