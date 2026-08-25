@@ -15,6 +15,8 @@ import type { PricingTableSection } from "./pricingTables";
 import { procurementComparison, salesComparison } from "./pricingTables";
 
 export interface PricingExtension {
+  /** 40px accent glyph, top-left of the card (Figma 2426:70026). */
+  icon: string;
   chip: string;
   name: string;
   subtitle: string;
@@ -23,12 +25,15 @@ export interface PricingExtension {
 }
 
 export interface PricingEdition {
+  /** 56px plan illustration beside the price (Figma 2410:58357). */
+  icon: string;
   name: string;
   price: string;
   users: string;
   terms: string;
   setup: string;
-  includes: { label: string; value: string }[];
+  /** `optional` swaps the accent tick for the hollow marker (Figma 2514:80584). */
+  includes: { label: string; value: string; optional?: boolean }[];
   extraUsers: string;
   cta: string;
   ribbon?: string;
@@ -62,6 +67,7 @@ export interface PricingDetail {
 }
 
 const CLAIMS_EXTENSION: PricingExtension = {
+  icon: "/assets/pricing/ext-claims.svg",
   chip: "Add-On",
   name: "Effortless Claims",
   subtitle: "Travel & expense reimbursements",
@@ -96,6 +102,7 @@ export const pricingProcurement: PricingDetail = {
       "Both editions include Claims and Contracts. Scale adds Buyer Commerce and higher limits across the board.",
     plans: [
       {
+        icon: "/assets/pricing/plan-grow.svg",
         name: "Grow",
         price: "₹12,833",
         users: "15 named users",
@@ -106,6 +113,7 @@ export const pricingProcurement: PricingDetail = {
         cta: "Book Demo",
       },
       {
+        icon: "/assets/pricing/plan-scale.svg",
         name: "Scale",
         price: "₹30,000",
         users: "50 named users",
@@ -120,9 +128,9 @@ export const pricingProcurement: PricingDetail = {
     ],
   },
   comparison: {
-    eyebrow: "Line by line · 11 modules, 126 features",
-    title: "Compare every",
-    accentTitle: "feature",
+    eyebrow: "Line By Line · 11 Modules, 126 Features",
+    title: "Compare Every",
+    accentTitle: "Feature",
     description:
       "The full ledger, module by module. Open a section to see exactly what changes between Grow and Scale.",
     sections: procurementComparison,
@@ -140,6 +148,7 @@ export const pricingSales: PricingDetail = {
       "Every extension below is available on top of above primary products.",
     items: [
       {
+        icon: "/assets/pricing/ext-buyer-commerce.svg",
         chip: "Add-On",
         name: "Effortless Buyer Commerce",
         subtitle: "Dealer self-service ordering portal",
@@ -153,6 +162,7 @@ export const pricingSales: PricingDetail = {
       },
       CLAIMS_EXTENSION,
       {
+        icon: "/assets/pricing/ext-contracts.svg",
         chip: "Add-On",
         name: "Effortless Contracts",
         subtitle: "Recurring billing & renewals",
@@ -172,6 +182,7 @@ export const pricingSales: PricingDetail = {
       "Both editions include Claims and Contracts. Scale adds Buyer Commerce and higher limits across the board.",
     plans: [
       {
+        icon: "/assets/pricing/plan-grow.svg",
         name: "Grow",
         price: "₹12,833",
         users: "15 named users",
@@ -180,12 +191,13 @@ export const pricingSales: PricingDetail = {
         includes: [
           { label: "Claims", value: "Included" },
           { label: "Contracts", value: "Included" },
-          { label: "Buyer Commerce", value: "Optional · ₹1.54 L" },
+          { label: "Buyer Commerce", value: "Optional · ₹1.54 L", optional: true },
         ],
         extraUsers: "Extra users · ₹3,000 / user",
         cta: "Book Demo",
       },
       {
+        icon: "/assets/pricing/plan-scale.svg",
         name: "Scale",
         price: "₹30,000",
         users: "50 named users",
@@ -204,9 +216,9 @@ export const pricingSales: PricingDetail = {
     ],
   },
   comparison: {
-    eyebrow: "Line by line · 11 modules, 126 features",
-    title: "Compare every",
-    accentTitle: "feature",
+    eyebrow: "Line By Line · 11 Modules, 126 Features",
+    title: "Compare Every",
+    accentTitle: "Feature",
     description:
       "The full ledger, module by module. Open a section to see exactly what changes between Grow and Scale.",
     sections: salesComparison,

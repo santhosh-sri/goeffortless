@@ -814,11 +814,15 @@ body {
      resolves `--tag-stroke` to black @ 8%, identical to `border-line-subtle`. */
   .tag-stroke {
     position: relative;
+    /* The chip keeps a transparent 1px `border` for its metrics. Without
+       this the fill painted under that border and showed as a white halo
+       outside the ring; the ring itself is pushed out to cover the border. */
+    background-clip: padding-box;
   }
   .tag-stroke::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: -1px;
     border-radius: inherit;
     padding: 1px;
     background: var(--tag-stroke);

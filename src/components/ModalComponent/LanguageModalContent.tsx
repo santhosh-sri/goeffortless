@@ -27,41 +27,18 @@ const LanguageModalContent: React.FC<Props> = ({ data, onSelect, onClose }) => {
   return (
     <div className="text-center p-8 flex flex-col gap-3">
       <div className="flex items-center justify-end">
-        <button onClick={onClose} className="text-red-500 text-xl font-bold">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 4C0 1.79086 1.79086 0 4 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H4C1.79086 32 0 30.2091 0 28V4Z"
-              fill="white"
-              fill-opacity="0.1"
-            />
-            <path
-              d="M10 10L22 22"
-              stroke="#FF0000"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M10 22L22 10"
-              stroke="#FF0000"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+        <button type="button" onClick={onClose} aria-label="Close">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="4" fill="rgb(var(--color-bg-subtle))" />
+            <path d="M10 10L22 22M10 22L22 10" stroke="rgb(var(--color-danger))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl md:text-[32px] font-medium bg-custom-gradient bg-clip-text text-transparent">
+        <h2 className="text-heading-sm font-semibold text-accent md:text-heading-md">
           {data.title}
         </h2>
-        <p className="text-content text-lg md:text-2xl font-light my-0">
+        <p className="my-0 text-body-lg text-content-muted md:text-heading-sm md:font-normal">
           {data.subtitle}
         </p>
 
@@ -72,12 +49,11 @@ const LanguageModalContent: React.FC<Props> = ({ data, onSelect, onClose }) => {
               key={item.id}
               onClick={() => onSelect(item)}
               className="
-              w-full max-w-[416px] h-auto md:h-[270px] rounded-xl bg-[#121317] p-6
-              flex flex-col gap-2 items-center justify-center border border-white/10
+              flex h-auto w-full max-w-[416px] flex-col items-center justify-center gap-2 rounded-xl border border-line bg-bg-subtle p-6 transition-colors hover:border-accent hover:bg-accent-subtle md:h-[270px]
             "
             >
               <Image src={item.flag} alt="flag" width={48} height={48} />
-              <span className="text-base md:text-lg text-content">
+              <span className="text-body font-medium text-content md:text-body-lg">
                 {item.label}
               </span>
             </button>

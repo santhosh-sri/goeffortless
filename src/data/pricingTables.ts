@@ -18,11 +18,29 @@ export interface PricingTableRow {
   label: string;
   grow: PricingCell;
   scale: PricingCell;
+  /** Figma 2426:70812: the money rows of Over View print their values in accent. */
+  accent?: boolean;
+  /**
+   * A second feature that shares this row's cells — Figma draws the Banking
+   * "AI Fetch" / "Auto-categorisation" pair as one 120px row with the
+   * "(Up To 2 Banks)" value centred across both labels.
+   */
+  alsoLabel?: string;
 }
 
 export interface PricingTableSection {
   name: string;
   badge?: string;
+  /**
+   * Figma 2426:70810: in Over View a trailing "(…)" qualifier on the label is
+   * set in accent. Other modules keep their parentheticals in ink.
+   */
+  highlightNotes?: boolean;
+  /**
+   * Figma 2426:70711: the Buyer Portal module prints one cell for the whole
+   * Grow column — "Add-on" — instead of a value per row.
+   */
+  growMerged?: string;
   rows: PricingTableRow[];
 }
 
@@ -31,16 +49,17 @@ export const procurementComparison: PricingTableSection[] = [
   {
     name: "Over View",
     badge: undefined,
+    highlightNotes: true,
     rows: [
-      { label: "Monthly price (billed annually)", grow: "₹12,833/mo", scale: "₹30,000/mo" },
-      { label: "One-Time Setup (CA-Led Onboarding)", grow: "₹48,000", scale: "₹1,24,000" },
+      { label: "Monthly price (billed annually)", grow: "₹12,833/mo", scale: "₹30,000/mo", accent: true },
+      { label: "One-Time Setup (CA-Led Onboarding)", grow: "₹48,000", scale: "₹1,24,000", accent: true },
       { label: "Named users included (With Primary Product)", grow: "15", scale: "50" },
       { label: "Additional user cost", grow: "₹3,000/user", scale: "₹3,000/user" },
       { label: "AI-powered document scans (Claims + Bills)", grow: "5000", scale: "20000" },
       { label: "Linked Bank Accounts (Auto-Fetch & BRS)", grow: "2", scale: "5" },
       { label: "Document Evidence Storage (Bills, POs, DC, GRN, Contracts, PDCs)", grow: "10GB", scale: "25GB" },
       { label: "Multi-level approval depth", grow: "up-to 2 levels", scale: "up-to 10 levels" },
-      { label: "Field Reimbursement Claims", grow: {"tick": true, "label": "Included"}, scale: {"tick": true, "label": "Included"} },
+      { label: "Field Reimbursement Claims", grow: "Included", scale: "Included" },
     ],
   },
   {
@@ -85,8 +104,7 @@ export const procurementComparison: PricingTableSection[] = [
     name: "Banking and Cash Flow Management",
     badge: "Enabler Module",
     rows: [
-      { label: "Bank Statement AI Fetch for (All Leading Banks)", grow: true, scale: true },
-      { label: "Auto-categorisation of Bank Entries", grow: "(Up To 2 Banks)", scale: "(Up To 5 Banks)" },
+      { label: "Bank Statement AI Fetch for (All Leading Banks)", alsoLabel: "Auto-categorisation of Bank Entries", grow: "(Up To 2 Banks)", scale: "(Up To 5 Banks)" },
       { label: "Dedicated Reconciliation Workspace", grow: true, scale: true },
       { label: "Banking Bulk Categorization", grow: true, scale: true },
       { label: "Bulk Payment File Generation (All Leading Banks)", grow: true, scale: true },
@@ -155,20 +173,19 @@ export const salesComparison: PricingTableSection[] = [
   {
     name: "Over View",
     badge: undefined,
+    highlightNotes: true,
     rows: [
-      { label: "Monthly price (billed annually)", grow: "₹12,833/mo", scale: "₹30,000/mo" },
-      { label: "One-Time Setup (CA-Led Onboarding)", grow: "₹48,000", scale: "₹1,24,000" },
+      { label: "Monthly price (billed annually)", grow: "₹12,833/mo", scale: "₹30,000/mo", accent: true },
+      { label: "One-Time Setup (CA-Led Onboarding)", grow: "₹48,000", scale: "₹1,24,000", accent: true },
       { label: "Named users included (With Primary Product)", grow: "15", scale: "50" },
       { label: "Additional user cost", grow: "₹3,000/user", scale: "₹3,000/user" },
       { label: "AI-powered document scans (Claims + Bills)", grow: "5000", scale: "20000" },
       { label: "Linked Bank Accounts (Auto-Fetch & BRS)", grow: "2", scale: "5" },
       { label: "Document Evidence Storage (Bills, POs, DC, GRN, Contracts, PDCs)", grow: "10GB", scale: "25GB" },
       { label: "Multi-level approval depth", grow: "up-to 2 levels", scale: "up-to 10 levels" },
-      { label: "Buyer Portal (self-serve commerce)", grow: true, scale: true },
-      { label: "Optional · ₹1.54L + ₹48,000 setup", grow: true, scale: true },
-      { label: "Optional · ₹1.54L + ₹48,000 setup", grow: true, scale: true },
-      { label: "Field Reimbursement Claims", grow: {"tick": true, "label": "Included"}, scale: {"tick": true, "label": "Included"} },
-      { label: "Recurring Contract & Auto Billing", grow: {"tick": true, "label": "Included"}, scale: {"tick": true, "label": "Included"} },
+      { label: "Buyer Portal (self-serve commerce)", grow: "Optional · ₹1.54L + ₹48,000 setup", scale: "Optional · ₹1.54L + ₹48,000 setup" },
+      { label: "Field Reimbursement Claims", grow: "Included", scale: "Included" },
+      { label: "Recurring Contract & Auto Billing", grow: "Included", scale: "Included" },
     ],
   },
   {
@@ -179,12 +196,12 @@ export const salesComparison: PricingTableSection[] = [
       { label: "Customizable Template (Quotations, Sales Orders, and Invoices)", grow: false, scale: true },
       { label: "Walk-in Customers", grow: true, scale: true },
       { label: "Estimate, PI & Sales Order Creation (Multi-level Approvals)", grow: true, scale: true },
-      { label: "Advanced Schement Management (Buy A Get A, Buy A get B, But A Get X% off, Buy A+B, get C, etc.), Scheme Slabs, Scheme Timer, Upsell Trigger. Flexible invoice and accounting treatment - the way you want!", grow: {"tick": true, "label": "Unlimited"}, scale: {"tick": true, "label": "Unlimited"} },
+      { label: "Advanced Schement Management (Buy A Get A, Buy A get B, But A Get X% off, Buy A+B, get C, etc.), Scheme Slabs, Scheme Timer, Upsell Trigger. Flexible invoice and accounting treatment - the way you want!", grow: "Unlimited", scale: "Unlimited" },
       { label: "Bulk upload schemes", grow: true, scale: true },
       { label: "Scheme Creation and Management (Unlimited)", grow: true, scale: true },
       { label: "Customer wise Credit Limit check", grow: true, scale: true },
       { label: "Credit Days Restriction", grow: true, scale: true },
-      { label: "Custom Attachments for Orders, Invoices", grow: {"tick": true, "label": "Custom"}, scale: {"tick": true, "label": "Custom"} },
+      { label: "Custom Attachments for Orders, Invoices", grow: "Custom", scale: "Custom" },
       { label: "Cut-Off Date Controls", grow: true, scale: true },
       { label: "MoQ controls", grow: true, scale: true },
       { label: "Quotation Module with Flexible Conversion — Convert to Sales Order, Invoice, or both.", grow: true, scale: true },
@@ -207,6 +224,7 @@ export const salesComparison: PricingTableSection[] = [
   {
     name: "Buyer Portal: Self Serve Commerce (Unlimited)",
     badge: "Add-On",
+    growMerged: "Add-on",
     rows: [
       { label: "Effortless connect Mobile App (Android/iOS) - unlimited", grow: true, scale: true },
       { label: "Product catalogue with In-Stock Items with view Controls", grow: true, scale: true },
@@ -215,7 +233,7 @@ export const salesComparison: PricingTableSection[] = [
       { label: "Open Bills, Schemes Management, specialised SKUs visibility controls", grow: true, scale: true },
       { label: "Amazon Like Catalogue browsing experience", grow: true, scale: true },
       { label: "Statement of Accounts (View/download)", grow: true, scale: true },
-      { label: "Auto approval for the customer portal (Based on limits)", grow: true, scale: {"tick": true, "label": "Add-on"} },
+      { label: "Auto approval for the customer portal (Based on limits)", grow: true, scale: true },
     ],
   },
   {
@@ -249,8 +267,7 @@ export const salesComparison: PricingTableSection[] = [
     name: "Banking and Cash Flow Management",
     badge: "Enabler Module",
     rows: [
-      { label: "Bank Statement AI Fetch for (All Leading Banks)", grow: true, scale: true },
-      { label: "Auto-categorisation of Bank Entries", grow: "(Up To 2 Banks)", scale: "(Up To 5 Banks)" },
+      { label: "Bank Statement AI Fetch for (All Leading Banks)", alsoLabel: "Auto-categorisation of Bank Entries", grow: "(Up To 2 Banks)", scale: "(Up To 5 Banks)" },
       { label: "Dedicated Reconciliation Workspace", grow: true, scale: true },
       { label: "Banking Bulk Categorization", grow: true, scale: true },
       { label: "On-Account Knock-Off", grow: true, scale: true },

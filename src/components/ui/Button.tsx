@@ -12,7 +12,7 @@ import { CalcomConfig } from "@/utils/calConfig";
  * intent is passed explicitly via `action`.
  */
 
-export type ButtonVariant = "primary" | "secondary" | "ghost" | "link";
+export type ButtonVariant = "primary" | "secondary" | "tint" | "ghost" | "link";
 export type ButtonSize = "sm" | "md" | "lg" | "hero";
 
 const VARIANT: Record<ButtonVariant, string> = {
@@ -22,8 +22,15 @@ const VARIANT: Record<ButtonVariant, string> = {
   // filled, not transparent, so it stays white on a grey band. The dark
   // palette keeps the white fill and swaps the stroke/ink — see the
   // `btn-secondary` tokens.
+  // Hover keeps the white fill and orange ink (goeffortless.ai) — the slide-in
+  // arrow is the affordance. Filling it orange also hid any accent-coloured
+  // trailing icon (the hero's play glyph) against the same orange.
   secondary:
-    "bg-btn-secondary text-btn-secondary-ink border border-btn-secondary-line hover:bg-accent hover:text-content-on-accent hover:border-accent",
+    "bg-btn-secondary text-btn-secondary-ink border border-btn-secondary-line hover:bg-accent-subtle",
+  // Pricing edition "Book Demo →" (Figma 2410:58396): #FFEFE0 fill, accent
+  // ink, no visible stroke. Fills solid on hover.
+  tint:
+    "bg-accent-surface text-accent border border-accent-surface hover:bg-accent hover:border-accent hover:text-content-on-accent",
   ghost:
     "bg-transparent text-content-muted border border-transparent hover:bg-surface-hover hover:text-content",
   link: "bg-transparent text-accent border-0 p-0 h-auto hover:underline underline-offset-4",
@@ -53,6 +60,19 @@ interface CommonProps {
   fullWidth?: boolean;
   /** Attach the Cal.com booking embed attributes. */
   calBooking?: boolean;
+  /**
+   * Reveal a trailing arrow on hover, the way the live site's CTAs do —
+   * goeffortless.ai slides "→" in beside the label of every primary and
+   * secondary action. On by default for the filled/outlined variants, off
+   * for `ghost` and `link`. Pass `false` on a button whose `trailingIcon`
+   * is already an arrow (the hero CTAs) so it doesn't get two.
+   */
+  hoverArrow?: boolean;
+  /**
+   * Swap the hover-revealed arrow for another glyph — the header's "Schedule
+   * Demo" reveals a calendar, as on goeffortless.ai. Implies `hoverArrow`.
+   */
+  hoverIcon?: React.ReactNode;
   className?: string;
   children: React.ReactNode;
 }
@@ -75,7 +95,7 @@ export type ButtonProps = ButtonAsButton | ButtonAsLink;
 // ("Effortless keeps your business running—without the mess. Discover How")
 // which would otherwise force horizontal page overflow on narrow viewports.
 const BASE =
-  "inline-flex items-center justify-center rounded-sm text-center font-medium " +
+  "group inline-flex items-center justify-center rounded-sm text-center font-medium " +
   "transition-colors duration-200 cursor-pointer select-none " +
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 " +
   "focus-visible:ring-offset-bg disabled:pointer-events-none disabled:opacity-50";
@@ -88,10 +108,20 @@ export function Button(props: ButtonProps) {
     leadingIcon,
     fullWidth,
     calBooking,
+    hoverArrow,
+    hoverIcon,
     className,
     children,
     ...rest
   } = props;
+
+  // Not on the 36px header pair: goeffortless.ai leaves those alone, and the
+  // 20px inline padding has no room for the overlay.
+  const showHoverArrow =
+    hoverArrow ??
+    (!!hoverIcon ||
+      (size !== "sm" &&
+        (variant === "primary" || variant === "secondary" || variant === "tint")));
 
   const classes = cn(
     BASE,
@@ -103,12 +133,41 @@ export function Button(props: ButtonProps) {
 
   const calAttrs = calBooking ? CalcomConfig : undefined;
 
+  // The arrow is overlaid past the label's right edge rather than laid out
+  // inline, and the label group nudges 12px left to meet it half way — so a
+  // fixed-width button (the hero pair) never grows or wraps on hover; the
+  // label + arrow stay centred on the label's resting centre.
   const content = (
-    <>
+    <span
+      className={cn(
+        "relative inline-flex items-center justify-center gap-2 transition-transform duration-300 ease-out",
+        showHoverArrow && "[@media(hover:hover)]:group-hover:-translate-x-3"
+      )}
+    >
       {leadingIcon}
       <span>{children}</span>
       {trailingIcon}
-    </>
+      {showHoverArrow && (
+        // Pointer devices only — there is no hover on touch, so the arrow
+        // would never appear.
+        <span
+          aria-hidden="true"
+          className="absolute left-full top-1/2 ml-2 hidden -translate-y-1/2 translate-x-[-6px] opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100 [@media(hover:hover)]:inline-flex"
+        >
+          {hoverIcon ?? (
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M2.4 8h11.2M9.6 12l4-4-4-4"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </span>
+      )}
+    </span>
   );
 
   if ("href" in rest && rest.href !== undefined) {

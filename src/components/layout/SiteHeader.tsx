@@ -1,9 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
 import { LOGIN_URL, visibleNav } from "@/data/navigation";
 import Button from "@/components/ui/Button";
+// Banner is commented out below — kept for when it is wanted again.
+// import AnnouncementBanner from "./AnnouncementBanner";
 import Container from "@/components/ui/Container";
 // import ThemeToggle from "@/components/ui/ThemeToggle";
 import Logo from "./Logo";
@@ -147,6 +150,12 @@ export function SiteHeader() {
       ref={headerRef}
       className="sticky top-0 z-50 w-full border-b border-line-subtle bg-bg/90 backdrop-blur-[32px]"
     >
+      {/*
+        Announcement strip — hidden for now, not needed. goeffortless.ai pins
+        it with the header; uncomment to bring the Live Masterclass bar back.
+        The component and its copy in `@/data/announcement` are left in place.
+      */}
+      {/* <AnnouncementBanner /> */}
       <Container className="flex items-center justify-between gap-4 py-3 xl:pb-5 xl:pt-10">
         <Logo />
 
@@ -242,6 +251,20 @@ export function SiteHeader() {
             calBooking
             size="sm"
             className="whitespace-nowrap font-semibold"
+            // goeffortless.ai reveals a calendar glyph on hover here (the
+            // legacy `/calendar-clock.svg`, white artwork for the filled
+            // button), where the other CTAs reveal an arrow.
+            hoverIcon={
+              <Image
+                src="/calendar-clock.svg"
+                alt=""
+                width={20}
+                height={20}
+                // The reveal span is absolutely positioned and shrink-wraps,
+                // so the global `img { max-width: 100% }` collapsed this to 0.
+                className="h-5 w-5 max-w-none"
+              />
+            }
           >
             Schedule Demo
           </Button>

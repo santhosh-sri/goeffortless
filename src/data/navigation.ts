@@ -16,12 +16,18 @@
 /** A row in an expanded Solutions accordion (Figma 1568:31104 / 1568:31103). */
 export interface NavChild {
   label: string;
-  href: string;
+  /** Omitted while the destination is undesigned — the row reads as text. */
+  href?: string;
 }
 
 export interface NavLink {
   label: string;
-  href: string;
+  /**
+   * Omitted while the destination is undesigned. Every Solutions row is in
+   * that state today, so the panel is read-only — see the note above
+   * `solutionMenu`.
+   */
+  href?: string;
   /**
    * Turns the row into an accordion (Figma 1571:31323): the row becomes a
    * toggle with a chevron, and opening it reveals these as a bulleted list.
@@ -264,8 +270,14 @@ export const productMenu: NavMenu = {
 /* ------------------------------------------------------------------ *
  * Solutions — Figma nodes 1746:24062 / 1746:24063 / 1746:24064
  *
- * Figma specifies no destinations for these rows. Each href points at the
- * closest existing page and needs content sign-off before launch.
+ * Read-only until these pages are designed. Figma specifies no destinations
+ * for any of these rows, and no page exists behind them, so none of them
+ * carries an `href`: the panel opens and reads, and every row renders as
+ * plain text rather than a link to a page that does not answer to it.
+ *
+ * An earlier pass pointed each row at the closest existing page (/sales,
+ * /expenses, /case-studies, /allFeatures). Those were invented, so they are
+ * gone. Restore an `href` per row as its page ships.
  * ------------------------------------------------------------------ */
 
 export const solutionMenu: NavMenu = {
@@ -279,71 +291,59 @@ export const solutionMenu: NavMenu = {
           {
             icon: "field-force",
             label: "Field Force & Logistics Governance",
-            href: "/sales",
             children: [
-              { label: "Van Sales Compliance", href: "/sales" },
-              { label: "Field Rep Fraud & Discipline", href: "/sales" },
-              { label: "Travel Claims & Reimbursements", href: "/sales" },
+              { label: "Van Sales Compliance" },
+              { label: "Field Rep Fraud & Discipline" },
+              { label: "Travel Claims & Reimbursements" },
             ],
           },
           {
             icon: "spend-control",
             label: "Spend Control & AP Automation",
-            href: "/expenses",
             children: [
               {
                 label: "Multi-Branch Procurement Firewalls",
-                href: "/expenses",
               },
-              { label: "Bulk Vendor Payout Execution", href: "/expenses" },
-              { label: "X-Ray Cost-Centre Visibility", href: "/expenses" },
+              { label: "Bulk Vendor Payout Execution" },
+              { label: "X-Ray Cost-Centre Visibility" },
             ],
           },
           {
             icon: "revenue-collection",
             label: "Revenue & Collection Acceleration",
-            href: "/sales",
             children: [
-              { label: "Instant Dispatch-to-Cash (AR)", href: "/sales" },
-              { label: "Dormant Ledger & Debt Recovery", href: "/sales" },
-              { label: "B2B Contract & Recurring Billing", href: "/sales" },
+              { label: "Instant Dispatch-to-Cash (AR)" },
+              { label: "Dormant Ledger & Debt Recovery" },
+              { label: "B2B Contract & Recurring Billing" },
             ],
           },
           {
             icon: "data-integrity",
             label: "Data Integrity & Compliance Firewalls",
-            href: "/compliance",
             children: [
               {
                 label: "Tally Data Pollution Prevention",
-                href: "/compliance",
               },
               {
                 label: "Proforma GST Shield (Working Capital)",
-                href: "/compliance",
               },
               {
                 label: "Client-Billable Expense Precision",
-                href: "/compliance",
               },
             ],
           },
           {
             icon: "operational-velocity",
             label: "Operational Velocity Automation",
-            href: "/allFeatures",
             children: [
               {
                 label: "B2B Self-Serve Buyer Portals",
-                href: "/allFeatures",
               },
               {
                 label: "Sales vs. Finance Credit Locks",
-                href: "/allFeatures",
               },
               {
                 label: "Founder Approval Bottleneck Bypass",
-                href: "/allFeatures",
               },
             ],
           },
@@ -359,49 +359,45 @@ export const solutionMenu: NavMenu = {
           {
             icon: "industry-wholesale",
             label: "Wholesale, FMCG & Distribution",
-            href: "/case-studies",
             children: [
-              { label: "Van Sales", href: "/case-studies" },
-              { label: "Field Rep Discipline", href: "/case-studies" },
-              { label: "Self-Serve Portal / App", href: "/case-studies" },
-              { label: "Sales vs. Finance", href: "/case-studies" },
-              { label: "Debt Recovery", href: "/case-studies" },
-              { label: "Tally Pollution", href: "/case-studies" },
+              { label: "Van Sales" },
+              { label: "Field Rep Discipline" },
+              { label: "Self-Serve Portal / App" },
+              { label: "Sales vs. Finance" },
+              { label: "Debt Recovery" },
+              { label: "Tally Pollution" },
             ],
           },
           {
             icon: "industry-manufacturing",
             label: "Mid-Market Manufacturing & Logistics",
-            href: "/case-studies",
             children: [
-              { label: "Self-Serve Portal / App", href: "/case-studies" },
-              { label: "Dispatch to Cash", href: "/case-studies" },
-              { label: "Bulk Payouts", href: "/case-studies" },
-              { label: "Cost-Centre Visibility", href: "/case-studies" },
-              { label: "Founder Bottleneck", href: "/case-studies" },
-              { label: "Tally Pollution", href: "/case-studies" },
+              { label: "Self-Serve Portal / App" },
+              { label: "Dispatch to Cash" },
+              { label: "Bulk Payouts" },
+              { label: "Cost-Centre Visibility" },
+              { label: "Founder Bottleneck" },
+              { label: "Tally Pollution" },
             ],
           },
           {
             icon: "industry-retail",
             label: "Multi-Outlet Retail & Hospitality Chains",
-            href: "/case-studies",
             children: [
-              { label: "Branch Procurement", href: "/case-studies" },
-              { label: "Bulk Payouts", href: "/case-studies" },
-              { label: "Claims Lockdown", href: "/case-studies" },
-              { label: "Cost-Centre Visibility", href: "/case-studies" },
+              { label: "Branch Procurement" },
+              { label: "Bulk Payouts" },
+              { label: "Claims Lockdown" },
+              { label: "Cost-Centre Visibility" },
             ],
           },
           {
             icon: "industry-services",
             label: "Professional Services, Tech & Agencies",
-            href: "/case-studies",
             children: [
-              { label: "Bulk Payouts", href: "/case-studies" },
-              { label: "Contract Billing", href: "/case-studies" },
-              { label: "Proforma GST Shield", href: "/case-studies" },
-              { label: "Project Reimbursables", href: "/case-studies" },
+              { label: "Bulk Payouts" },
+              { label: "Contract Billing" },
+              { label: "Proforma GST Shield" },
+              { label: "Project Reimbursables" },
             ],
           },
         ],
@@ -417,14 +413,13 @@ export const solutionMenu: NavMenu = {
             icon: "role-cfo",
             label: "For the CFO & Finance Controller",
             description: "Capital protection, audit trails, and data hygiene",
-            href: "/allFeatures",
             children: [
-              { label: "Dispatch to Cash", href: "/allFeatures" },
-              { label: "Branch Procurement", href: "/allFeatures" },
-              { label: "Payment Paralysis", href: "/allFeatures" },
-              { label: "Cost-Centre Drilldowns", href: "/allFeatures" },
-              { label: "Tally Pollution", href: "/allFeatures" },
-              { label: "Proforma GST Shield", href: "/allFeatures" },
+              { label: "Dispatch to Cash" },
+              { label: "Branch Procurement" },
+              { label: "Payment Paralysis" },
+              { label: "Cost-Centre Drilldowns" },
+              { label: "Tally Pollution" },
+              { label: "Proforma GST Shield" },
             ],
           },
           {
@@ -432,13 +427,12 @@ export const solutionMenu: NavMenu = {
             label: "For the VP of Sales & Commercial Ops",
             description:
               "Revenue velocity, team output, and friction-free ordering",
-            href: "/sales",
             children: [
-              { label: "Van Sales", href: "/sales" },
-              { label: "IronMan Field Rep", href: "/sales" },
-              { label: "Self-Serve Portals", href: "/sales" },
-              { label: "Ghost Debtor Recovery", href: "/sales" },
-              { label: "Contract Billing", href: "/sales" },
+              { label: "Van Sales" },
+              { label: "IronMan Field Rep" },
+              { label: "Self-Serve Portals" },
+              { label: "Ghost Debtor Recovery" },
+              { label: "Contract Billing" },
             ],
           },
           {
@@ -446,10 +440,9 @@ export const solutionMenu: NavMenu = {
             label: "For the Business Promoter / Founder / CEO",
             description:
               "Growth blockades, operational scale, and internal alignment",
-            href: "/about-us",
             children: [
-              { label: "Sales vs. Finance Alignment", href: "/about-us" },
-              { label: "Bottleneck Boss Bypass", href: "/about-us" },
+              { label: "Sales vs. Finance Alignment" },
+              { label: "Bottleneck Boss Bypass" },
             ],
           },
           {
@@ -457,10 +450,9 @@ export const solutionMenu: NavMenu = {
             label: "For Managing Partners & Project Operations",
             description:
               "Project-level margin protection and billable cost containment",
-            href: "/contracts",
             children: [
-              { label: "Claims Lockdown", href: "/contracts" },
-              { label: "Reimbursable Expense Tracking", href: "/contracts" },
+              { label: "Claims Lockdown" },
+              { label: "Reimbursable Expense Tracking" },
             ],
           },
         ],
@@ -598,4 +590,4 @@ export const primaryNav: NavItem[] = [
 
 export const visibleNav = primaryNav.filter((item) => !item.hidden);
 
-export const LOGIN_URL = "https://app.goeffortless.ai";
+export const LOGIN_URL = "https://i.goeffortless.ai/";

@@ -32,7 +32,9 @@ const DownloadApps = ({
       <div className="flex w-full flex-col gap-8 lg:max-w-[700px]">
         <div className="flex flex-col items-start gap-6">
           <div className="flex flex-col items-start gap-4">
-            <Badge tone={tone === "subtle" ? "surface" : "subtle"}>{appName}</Badge>
+            <Badge tone={tone === "subtle" ? "surface" : "subtle"}>
+              {appName}
+            </Badge>
             <h2 className="text-heading-md font-light text-content md:text-heading-lg">
               {title} <span className="font-bold text-accent">{highlight}</span>
             </h2>
@@ -86,7 +88,11 @@ const DownloadApps = ({
           </a>
         </div>
 
-        <Button calBooking size="hero" className="w-full font-semibold sm:w-auto sm:min-w-[260px] sm:self-start">
+        <Button
+          calBooking
+          size="md"
+          className="w-full font-semibold sm:w-auto sm:min-w-[260px] sm:self-start"
+        >
           Book a Demo
         </Button>
 

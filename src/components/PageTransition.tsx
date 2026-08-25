@@ -49,13 +49,32 @@ export default function PageTransition({
       {children}
       {loading && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-surface animate-fadeIn">
-          <div className="animate-logo">
+          {/* The legacy /header-logo.svg wordmark is fill="white", so on the
+              light overlay only its orange gradient ring showed and the
+              transition read as a stray spinner. Draw the real lockup. */}
+          <div className="animate-logo flex items-center gap-2">
+            <span className="relative block h-12 w-12 shrink-0">
+              <Image
+                src="/assets/shared/effortless-mark.png"
+                alt=""
+                width={48}
+                height={48}
+                className="absolute inset-0 h-full w-full"
+              />
+              <Image
+                src="/assets/shared/effortless-mark-union.svg"
+                alt=""
+                width={30}
+                height={11}
+                className="absolute left-[37.583%] top-[39.306%] h-[22.499%] w-[62.384%]"
+              />
+            </span>
             <Image
-              src={"/header-logo.svg"}
-              alt="Effortless-logo"
-              width={150}
-              height={50}
-              className="w-[188px] h-[48px]"
+              src="/assets/shared/effortless-wordmark.svg"
+              alt="Effortless"
+              width={176}
+              height={32}
+              className="h-8 w-auto"
             />
           </div>
         </div>

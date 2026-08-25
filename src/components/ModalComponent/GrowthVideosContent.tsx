@@ -44,14 +44,14 @@ const GrowthVideosContent: React.FC<GrowthVideosContentProps> = ({
           >
             <path
               d="M21 12.2656L3.94737 12.2656"
-              stroke="white"
+              stroke="currentColor"
               stroke-width="2.5"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
             <path
               d="M9 18.25L3 12.25L9 6.25"
-              stroke="white"
+              stroke="currentColor"
               stroke-width="2.5"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -63,40 +63,17 @@ const GrowthVideosContent: React.FC<GrowthVideosContentProps> = ({
           </span>
         </button>
 
-        <button onClick={onBack} className="text-red-500 text-xl font-bold">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 4C0 1.79086 1.79086 0 4 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H4C1.79086 32 0 30.2091 0 28V4Z"
-              fill="white"
-              fill-opacity="0.1"
-            />
-            <path
-              d="M10 10L22 22"
-              stroke="#FF0000"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M10 22L22 10"
-              stroke="#FF0000"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+        <button type="button" onClick={onClose} aria-label="Close">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="4" fill="rgb(var(--color-bg-subtle))" />
+            <path d="M10 10L22 22M10 22L22 10" stroke="rgb(var(--color-danger))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </div>
 
       {/* Title */}
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl md:text-[32px] font-medium text-content leading-10">
+        <h2 className="text-heading-sm font-semibold text-content md:text-heading-md">
           Effortless Growth Videos
         </h2>
 
@@ -126,10 +103,10 @@ const VideoCard = ({ title, subtitle, videoId, onClick }: VideoCardProps) => {
   return (
     <div className="flex flex-col gap-4 cursor-pointer" onClick={onClick}>
       <div className="flex flex-col gap-2">
-        <p className="text-accent text-lg md:text-xl font-medium leading-6">
+        <p className="text-body-lg font-semibold text-accent">
           {title}
         </p>
-        <p className="text-content text-sm md:text-base font-light leading-5">
+        <p className="text-label text-content-muted md:text-body">
           {subtitle}
         </p>
       </div>

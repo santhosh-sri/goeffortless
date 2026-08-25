@@ -23,7 +23,7 @@ export function TallyPowerSection() {
         />
 
         <ul className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {tallyPower.cards.map((card, index) => (
+          {tallyPower.cards.map((card) => (
             <li key={card.title} className="flex">
               <InfoCard
                 icon={card.icon}
@@ -31,7 +31,6 @@ export function TallyPowerSection() {
                 description={card.description}
                 iconTone="tile"
                 bodySize="sm"
-                emphasis={index === 0 ? "raised" : "outline"}
                 className="w-full"
               />
             </li>

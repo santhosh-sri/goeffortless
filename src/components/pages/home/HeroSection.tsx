@@ -1,7 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import DemoVideoModal from "@/components/DemoVideoModal";
+import { demoVideoConfig } from "@/data/demoVideos";
 import Container from "@/components/ui/Container";
 
 /**
@@ -14,19 +16,9 @@ import Container from "@/components/ui/Container";
  *
  * Tablet/mobile are derived — Figma has no frames below 1440.
  */
-const ARROW = (
-  <Image
-    src="/assets/shared/arrow-right.svg"
-    alt=""
-    width={24}
-    height={24}
-    className="h-6 w-6 shrink-0"
-  />
-);
-
 const PLAY = (
   <Image
-    src="/assets/shared/play-video.svg"
+    src="/seeAction.svg"
     alt=""
     width={24}
     height={24}
@@ -35,6 +27,10 @@ const PLAY = (
 );
 
 export function HeroSection() {
+  // "See it in Action" opens the demo-video picker, as on goeffortless.ai —
+  // it is not a link to the features page.
+  const [demoOpen, setDemoOpen] = useState(false);
+
   return (
     <section className="bg-bg-subtle py-[48px]">
       <Container className="flex flex-col items-start gap-10 lg:flex-row lg:gap-0">
@@ -62,23 +58,20 @@ export function HeroSection() {
           </div>
 
           <div className="flex w-full flex-col gap-4 sm:flex-row xl:w-[504px] lg:gap-5">
-            <Button
-              calBooking
-              size="lg"
-              fullWidth
-              trailingIcon={ARROW}
-              className="font-semibold sm:flex-1"
-            >
+            {/* No resting arrow — it slides in on hover like every other
+                CTA (goeffortless.ai). Opens the Cal.com booking modal. */}
+            <Button calBooking size="md" fullWidth className="sm:flex-1">
               Talk to Sales
             </Button>
 
             <Button
-              href="/allFeatures"
+              type="button"
+              onClick={() => setDemoOpen(true)}
               variant="secondary"
-              size="lg"
+              size="md"
               fullWidth
-              trailingIcon={PLAY}
-              className="font-semibold sm:flex-1"
+              leadingIcon={PLAY}
+              className="sm:flex-1"
             >
               See it in Action
             </Button>
@@ -121,6 +114,11 @@ export function HeroSection() {
           </div>
         </div>
       </Container>
+      <DemoVideoModal
+        open={demoOpen}
+        onClose={() => setDemoOpen(false)}
+        config={demoVideoConfig}
+      />
     </section>
   );
 }

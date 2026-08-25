@@ -55,6 +55,7 @@ const Democta = ({
       calBooking={shouldAttachCal}
       size={customStyle ? "hero" : "md"}
       trailingIcon={customStyle ? ARROW : undefined}
+      hoverArrow={!customStyle}
       className={
         extraWidth
           ? "w-full font-semibold sm:w-auto"

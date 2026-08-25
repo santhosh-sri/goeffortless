@@ -1,10 +1,15 @@
 import React, { ReactNode, useEffect } from "react";
+import { cn } from "@/lib/cn";
 
 interface ModalProps {
   open: boolean;
   onClose: () => void;
   children: ReactNode;
   closeOnBackdrop?: boolean;
+  /** Overrides the default 1352px container width for narrower dialogs. */
+  className?: string;
+  /** Id of the element labelling the dialog, for screen readers. */
+  labelledBy?: string;
 }
 
 const Modal = ({
@@ -12,6 +17,8 @@ const Modal = ({
   onClose,
   children,
   closeOnBackdrop = true,
+  className,
+  labelledBy,
 }: ModalProps) => {
   // ESC key close
   useEffect(() => {
@@ -39,15 +46,19 @@ const Modal = ({
     <div className="fixed inset-0 z-[999] flex items-center justify-center">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 transition-opacity animate-fadeIn"
+        className="absolute inset-0 bg-content/60 backdrop-blur-sm transition-opacity animate-fadeIn"
         onClick={closeOnBackdrop ? onClose : undefined}
       />
 
       {/* Modal Container */}
       <div
-        className="relative z-10 bg-[#15181BF0] rounded-xl shadow-xl border border-[#2A3038]
-                   w-[1352px] mx-auto backdrop-blur-[2px]
-                   transform transition-all animate-scaleIn max-md:m-5"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={labelledBy}
+        className={cn(
+          "relative z-10 mx-auto w-[1352px] max-w-[calc(100vw-40px)] rounded-xl border border-line bg-surface text-content shadow-overlay transition-all animate-scaleIn",
+          className
+        )}
         onClick={(e) => e.stopPropagation()}
       >
         {children}

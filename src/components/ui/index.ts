@@ -1,6 +1,7 @@
 export { Badge } from "./Badge";
 export { Button } from "./Button";
 export type { ButtonProps, ButtonSize, ButtonVariant } from "./Button";
+export { ChevronDown } from "./ChevronDown";
 export { Container } from "./Container";
 export { InfoCard } from "./InfoCard";
 export { Section } from "./Section";

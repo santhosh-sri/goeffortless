@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/cn";
 import MaskIcon from "../ui/MaskIcon";
+import { ChevronDown } from "../ui";
 import { COMPLIANCE_CARD } from "./card";
 
 interface Props {
@@ -45,17 +46,7 @@ const FaqCompliance: React.FC<Props> = ({ faqs }) => {
               <span className="text-body font-medium text-content">
                 {item.question}
               </span>
-              <Image
-                src={"/assets/shared/chevron-down.svg"}
-                alt=""
-                width={16}
-                height={16}
-                className={cn(
-                  "h-4 w-4 shrink-0 transition-transform duration-300",
-                  isOpen && "rotate-180"
-                )}
-                unoptimized
-              />
+              <ChevronDown open={isOpen} className="text-content-muted" />
             </button>
 
             {isOpen && (

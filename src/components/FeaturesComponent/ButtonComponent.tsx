@@ -12,7 +12,7 @@ const ButtonComponent = ({
   const router = useRouter();
   return (
     <div className="flex max-md:flex-col justify-center gap-6 items-center max-md:w-full">
-      <Democta ctaText={demoCtaButton} customStyle={true} />
+      <Democta ctaText={demoCtaButton} />
       {demoSecButton && (
         <SecondaryCta
           secondaryCtaText="See All Features"
