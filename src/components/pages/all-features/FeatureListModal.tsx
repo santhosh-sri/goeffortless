@@ -56,31 +56,40 @@ export function FeatureListModal({
         {card.title} — all {card.allItems.length} features
       </h2>
 
-      {/* Figma: a 20px close glyph inset 20 from the top-right corner. */}
-      <button
-        type="button"
-        onClick={onClose}
-        aria-label="Close"
-        className="absolute right-5 top-5 z-10 flex h-5 w-5 items-center justify-center text-danger transition-opacity hover:opacity-70"
-      >
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M5 5L15 15M15 5L5 15"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
-      </button>
+      <div className="max-h-[calc(100vh-80px)] overflow-y-auto px-5 pb-5">
+        {/*
+          The close control rides a sticky bar rather than sitting `absolute`
+          over the card: the list is long enough to scroll, and an absolute
+          glyph had chips sliding under it with nothing behind, so the two
+          collided. The bar carries the surface fill (and the card's top
+          radius, which it would otherwise square off) so rows pass cleanly
+          beneath it, and the control stays reachable at any scroll position.
+        */}
+        <div className="sticky top-0 z-10 -mx-5 flex justify-end rounded-t-xl bg-surface px-5 pb-3 pt-5">
+          {/* Figma: a 20px close glyph inset 20 from the top-right corner. */}
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="flex h-5 w-5 items-center justify-center text-danger transition-opacity hover:opacity-70"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 5L15 15M15 5L5 15"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+        </div>
 
-      {/* 52 of clearance under the close control, 20 of padding, 12 gutters. */}
-      <div className="max-h-[calc(100vh-80px)] overflow-y-auto px-5 pb-5 pt-[52px]">
         {/*
           `auto-rows-fr` sizes every row to the tallest chip in the whole grid
           rather than the tallest in its own row, so all 24 chips come out one
