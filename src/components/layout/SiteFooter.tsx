@@ -142,7 +142,10 @@ export function SiteFooter() {
         {/* ---- Link columns ---- */}
         {/* Resources holds four sub-columns, so it needs ~3× the width of its
             siblings — an even 4-column split collides its links. */}
-        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_3fr_1fr] lg:gap-x-0">
+        {/* Two columns from the narrowest width, as goeffortless.ai does:
+            stacking these one per row pushed the offices and the wordmark far
+            below the fold on a phone. */}
+        <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-8 lg:grid-cols-[1fr_1fr_3fr_1fr] lg:gap-x-0">
           {sections.map((section, index) => {
             const withDivider = index > 0;
             // The rule sits on a column's own left edge, so `pl` alone only
@@ -157,6 +160,13 @@ export function SiteFooter() {
                 key={section.title ?? index}
                 className={cn(
                   "flex flex-col gap-6",
+                  // Resources carries its own sub-columns, so on the two-column
+                  // mobile grid it takes the full width and lets Learn/Tools
+                  // and Company/Featured sit side by side underneath — as
+                  // goeffortless.ai lays it out. Legal then starts a new row.
+                  "subColumns" in section && section.subColumns
+                    ? "col-span-2 lg:col-span-1"
+                    : undefined,
                   withDivider &&
                     "lg:border-l lg:border-dashed lg:border-line lg:pl-8",
                   beforeDivider && "lg:pr-8"
@@ -179,7 +189,7 @@ export function SiteFooter() {
                         {section.title}
                       </p>
                     )}
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+                    <div className="grid grid-cols-2 gap-6 xl:grid-cols-4">
                       {section.subColumns.map((column) => (
                         <LinkList
                           key={column.title}
@@ -204,7 +214,7 @@ export function SiteFooter() {
         <div className="mt-8 border-t border-line pt-8">
           <p className="text-body font-semibold text-content">Our Offices</p>
 
-          <ul className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+          <ul className="mt-4 grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-0">
             {officeLocation.map((office, index) => (
               <li
                 key={office.title}

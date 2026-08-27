@@ -198,7 +198,7 @@ export const purchasesFeatureRows: ProductFeatureRow[] = [
       "Approved POs, bills, Payments sync to Tally with all tax ledgers and cost centres perfectly matched.",
       "To keep your books pristine, we have 'Cut-Off Date Controls.' Once you close a month, the system physically blocks backdated vendor invoices from being squeezed in. Your CFO's month-end is locked tight.”",
     ],
-    media: "/assets/purchases/feature-09.png",
+    media: "/assets/shared/feature-workflow.png",
     mediaHeight: 548,
     mediaAlt: "Two-way sync between Effortless and Tally Prime",
   },
@@ -230,15 +230,16 @@ export const purchasesWhyThisMatters: ProductWhyThisMattersData = {
 /**
  * "See it in Action" — Figma node 1943:71170.
  *
- * The design leaves the player area an empty white placeholder, so this reuses
- * the Purchase & Expenses video already referenced in src/data/expenses.json.
+ * The design leaves the player area an empty white placeholder, so this uses
+ * the English "Effortless Procurement" walkthrough (same video the home-page
+ * language modal plays — see src/data/demoVideos.ts).
  */
 export const purchasesSeeItInAction: ProductVideoData = {
   title: "See it in",
   accentTitle: "Action",
   description:
     "Watch how finance procurement and finance teams are automating purchase & expense management.",
-  videoId: "3OFsEO-47e0",
+  videoId: "9TG7jIRzdVE",
 };
 
 /** Closing CTA — Figma node 1943:71175. */

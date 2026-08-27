@@ -7,6 +7,7 @@ import {
   ProductProblemSolution,
   ProductFeatureDeepDive,
   ProductWhyThisMatters,
+  ProductSeeItInAction,
   ProductClosingCta,
 } from "@/components/pages/product";
 import {
@@ -15,6 +16,7 @@ import {
   buyerPortalFeatureHeading,
   buyerPortalFeatureRows,
   buyerPortalWhyThisMatters,
+  buyerPortalSeeItInAction,
   buyerPortalClosingCta,
 } from "@/data/buyerPortal";
 
@@ -22,8 +24,8 @@ import {
  * Buyer Portal — Figma node 1864:15745 (1440 × 7451).
  *
  * Section order follows the frame's y-coordinates. Composed entirely from the
- * shared product-page template. Like Field Staff Claims, the design has no
- * "See it in Action" band, so none is rendered.
+ * shared product-page template. The design has no "See it in Action" band, but
+ * the portal walkthrough video is rendered in one above the closing CTA.
  */
 export function BuyerPortalPage({
   metadata,
@@ -45,6 +47,7 @@ export function BuyerPortalPage({
             rows={buyerPortalFeatureRows}
           />
           <ProductWhyThisMatters data={buyerPortalWhyThisMatters} />
+          <ProductSeeItInAction data={buyerPortalSeeItInAction} />
           <ProductClosingCta data={buyerPortalClosingCta} />
         </main>
 

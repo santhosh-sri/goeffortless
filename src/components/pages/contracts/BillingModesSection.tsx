@@ -48,8 +48,14 @@ export function BillingModesSection() {
               </h3>
 
               {/* 1985:112340: a white 18px card with the 0/4/8 lift, 20px
-                  padding, holding the dashed step box and the two notes. */}
-              <div className="flex flex-col gap-5 rounded-card bg-surface p-5 shadow-lift">
+                  padding, holding the dashed step box and the two notes.
+                  `shadow-panel`, not `shadow-lift`: lift's 4px offset equals
+                  half its blur, so nothing reaches above the box and this
+                  borderless white card had no top edge against the page. */}
+              {/* `flex-1` so both cards run to the tallest column's height:
+                  the two modes list different numbers of steps and supports,
+                  and the shadow makes the shorter card's early end obvious. */}
+              <div className="flex flex-1 flex-col gap-5 rounded-card bg-surface p-5 shadow-panel">
                 <ol className="flex flex-col gap-4 rounded-lg border border-dashed border-line p-5">
                   {mode.steps.map((step, stepIndex) => (
                     <li key={step} className="flex items-center gap-3">

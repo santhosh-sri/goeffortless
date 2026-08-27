@@ -96,6 +96,12 @@
      cards (Figma drop-shadow 0 4 8 black @ 10%). */
   --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
   --shadow-overlay: 0 12px 32px 0 rgb(16 25 40 / 0.16);
+  /* A large borderless panel — the partner form. --shadow-lift's 4px offset
+     equals half its blur, so nothing reaches above the box; that is fine on a
+     small card with a border, but left this panel's top edge invisible once
+     its border came off. The zero-offset ambient layer draws the whole
+     outline, the directional layer keeps the lift. */
+  --shadow-panel: 0 0 4px 0 rgb(16 25 40 / 0.06), 0 4px 12px 0 rgb(0 0 0 / 0.1);
   /* The header dropdown, which is a wide panel hanging flush off a sticky,
      translucent header and carrying no border of its own.
      Two layers — a close one for the edge, a far one for depth — because a
@@ -177,6 +183,7 @@
   --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.1);
   --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
   --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
+  --shadow-panel: 0 0 4px 0 rgb(0 0 0 / 0.5), 0 4px 12px 0 rgb(0 0 0 / 0.45);
   --shadow-menu: 0 12px 24px -6px rgb(0 0 0 / 0.45),
     0 28px 56px -20px rgb(0 0 0 / 0.55);
   --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);
@@ -218,6 +225,7 @@
     --shadow-raised: 0 4px 16px 0 rgb(0 0 0 / 0.1);
     --shadow-lift: 0 4px 8px 0 rgb(0 0 0 / 0.1);
     --shadow-overlay: 0 12px 32px 0 rgb(0 0 0 / 0.6);
+    --shadow-panel: 0 0 4px 0 rgb(0 0 0 / 0.5), 0 4px 12px 0 rgb(0 0 0 / 0.45);
     --shadow-menu: 0 12px 24px -6px rgb(0 0 0 / 0.45),
       0 28px 56px -20px rgb(0 0 0 / 0.55);
     --shadow-media: 32px -32px 40px 0 rgb(0 0 0 / 0.5);

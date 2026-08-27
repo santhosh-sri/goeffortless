@@ -8,6 +8,7 @@ import type {
   ProductFeatureHeading,
   ProductFeatureRow,
   ProductWhyThisMattersData,
+  ProductVideoData,
   ProductClosingCtaData,
 } from "@/components/pages/product";
 
@@ -169,6 +170,20 @@ export const buyerPortalWhyThisMatters: ProductWhyThisMattersData = {
       tone: "success",
     },
   ],
+};
+
+/**
+ * "See it in Action".
+ *
+ * The Figma frame has no video band, but the portal walkthrough was published
+ * after the design, so the shared player section is rendered here.
+ */
+export const buyerPortalSeeItInAction: ProductVideoData = {
+  title: "See it in",
+  accentTitle: "Action",
+  description:
+    "Watch how regular customers order, track and reconcile on their own",
+  videoId: "8SRHfzE7OKM",
 };
 
 /** Closing CTA — Figma node 1941:63495. */

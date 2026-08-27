@@ -169,7 +169,7 @@ export const contractsFeatureRows: ProductFeatureRow[] = [
       "Invoices, Proformas, Payments — everything flows into Tally post approvals without conflict. No duplicate voucher numbers. No mismatches.",
     ],
     checks: ["Tally Sync", "Voucher Numbering Sync"],
-    media: "/assets/contracts/feature-06.png",
+    media: "/assets/shared/feature-workflow.png",
     mediaHeight: 548,
     mediaAlt: "Two-way sync between Effortless and Tally Prime",
   },
@@ -201,7 +201,7 @@ export const contractsWhyThisMatters: ProductWhyThisMattersData = {
       tone: "violet",
     },
     {
-      icon: "/assets/contracts/why-cash-flow.svg",
+      icon: "/assets/shared/why-growth.svg",
       label: "Predictable Cash Flow",
       tone: "success",
     },

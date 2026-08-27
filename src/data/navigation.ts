@@ -582,7 +582,7 @@ export const resourceMenu: NavMenu = {
 export const primaryNav: NavItem[] = [
   { label: "Products", menu: productMenu },
   { label: "Solutions", menu: solutionMenu },
-  { label: "Case Studies", href: "/case-studies" },
+  // { label: "Case Studies", href: "/case-studies" },
   { label: "Partners", href: "/partners" },
   { label: "Resources", menu: resourceMenu },
   { label: "Pricing", href: "/pricing" },

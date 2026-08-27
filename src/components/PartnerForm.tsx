@@ -128,7 +128,7 @@ const PartnerForm = () => {
       {showErrorPopup && (
         <ErrorToast setShowErrorPopup={setShowErrorPopup} />
       )}
-      <div className="mx-auto w-full max-w-[777px] rounded-xl border border-line bg-surface p-5 text-content shadow-lift md:p-10">
+      <div className="mx-auto w-full max-w-[777px] rounded-xl bg-surface p-5 text-content shadow-panel md:p-10">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="grid grid-cols-2 md:gap-6 gap-4"

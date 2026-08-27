@@ -41,7 +41,10 @@ export function BuiltForIndiaSection() {
         </div>
 
         <Button calBooking fullWidth className="sm:w-auto">
-          {builtForIndia.ctaLabel}
+          {/* The full sentence wraps to three lines on a phone, so narrow
+              viewports get the short label instead. */}
+          <span className="sm:hidden">{builtForIndia.ctaLabelShort}</span>
+          <span className="max-sm:hidden">{builtForIndia.ctaLabel}</span>
         </Button>
       </div>
     </Section>

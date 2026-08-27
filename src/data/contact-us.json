@@ -14,8 +14,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.goeffortless.ai" },
-          { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.goeffortless.ai/contact-us" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.goeffortless.ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact Us",
+            "item": "https://www.goeffortless.ai/contact-us"
+          }
         ]
       }
     ]
@@ -52,9 +62,10 @@
           "link": "https://maps.app.goo.gl/oYDrhUz1kiL7X8jM6"
         },
         {
-          "locationName": "NCR",
+          "locationName": "Delhi NCR",
           "locationSrc": "/ncrlocation.jpg",
-          "details": "Coming Soon"
+          "details": "Flat no 411, 4th floor, Deepshikha Building, 8 Rajendra Place, New Delhi -110008",
+          "link": "https://maps.app.goo.gl/3PhCUvSGDA3HXVrq7"
         }
       ]
     }

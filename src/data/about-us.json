@@ -14,8 +14,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.goeffortless.ai" },
-          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.goeffortless.ai/about-us" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.goeffortless.ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://www.goeffortless.ai/about-us"
+          }
         ]
       }
     ]
@@ -69,44 +79,123 @@
     {
       "mangementTeams": [
         {
-          "imageSrc": "/madhur.png",
-          "description": "Madhur leads Sales for our Channel Business at Effortless. He has held key Sales positions at Tally Solutions, iBall India, and CPM with deep expertise in IT and Retail Sales over a career that spans over a decade.",
+          "imageSrc": "/madhur-maheshwari.png",
+          "description": "Madhur is the National Sales Manager at Effortless, with over a decade of experience in IT and retail sales. He has held key sales roles at Tally Solutions, iBall India, and CPM, bringing strong expertise in channel sales and business development.",
           "linkedInUrl": "https://www.linkedin.com/in/madhur-maheshwari-m1234/",
           "isColoured": true,
-          "name": "Madhur M. Maheshwari",
-          "title": "National Sales Manager"
+          "name": "Madhur M. Maheshwari"
         },
         {
-          "imageSrc": "/manoj.png",
-          "description": "Manoj leads Product Management at Effortless. He is a Chartered Accountant and works closely with key stakeholders across customers, partners, and our users.",
+          "imageSrc": "/jayprakash.png",
+          "description": "Jayprakash is a Zonal Strategic Accounts Manager at Effortless, with 25+ years of experience in sales and business development. He brings strong expertise in ERP, channel sales, enterprise engagement, and GTM strategy, including 10+ years at Tally Solutions.",
+          "linkedInUrl": "https://www.linkedin.com/in/jayprakash-kahar-5203522a/",
+          "isColoured": true,
+          "name": "Jayprakash Kahar"
+        },
+        {
+          "imageSrc": "/manoj-s.png",
+          "description": "Manoj is a Senior Product Manager at Effortless, leading product strategy and management. A Chartered Accountant by profession, he works closely with customers, partners, and key stakeholders to build impactful products.",
           "linkedInUrl": "https://www.linkedin.com/in/manoj-ca-pm/",
           "isColoured": true,
-          "name": "CA Manoj S.",
-          "title": "Product Manager"
+          "name": "CA Manoj S."
         },
         {
-          "imageSrc": "/vignesh.png",
-          "description": "Vignesh leads Product Marketing at Effortless. As part of the Founding Team, he also served as the Founding Product Manager, helping shape the company’s product, positioning, and early go-to-market motion. ",
-          "linkedInUrl": "https://www.linkedin.com/in/hrorq/",
-          "isColoured": true,
-          "name": "Vignesh S.",
-          "title": "Product Marketing Manager"
-        },
-        {
-          "imageSrc": "/somu.png",
-          "description": "Somasundaram leads Engineering at Effortless. He is a Full-Stack Developer and oversees Effortless’ Product Development.  He is passionate about turning complex challenges into simple, powerful solutions that drive customer growth.",
+          "imageSrc": "/somasundaram.png",
+          "description": "Somasundaram is a Technical Lead at Effortless, overseeing product development and engineering. As a Full-Stack Developer, he focuses on turning complex challenges into simple, scalable solutions that drive customer growth.",
           "linkedInUrl": "https://www.linkedin.com/in/somasundaram-p-a4a71116b/",
           "isColoured": true,
-          "name": "Somasundaram P.",
-          "title": "Technical Lead"
+          "name": "Somasundaram P."
         },
         {
-          "imageSrc": "/sarvanana.png",
-          "description": "Saravanan leads as Customer Success and Inside Sales at Effortless. He previously ran Inside Sales at Brick & Bolt and had stints at Khatabook, Housing.com, and Mphasis. He is an experienced trainer and leader with close to a decade of professional experience.",
-          "linkedInUrl": "https://www.linkedin.com/in/saravanan-prabhaharan-42138b66/",
+          "imageSrc": "/mrudula.png",
+          "description": "Mrudula is an Onboarding Lead Consultant at Effortless, with experience in CFO services, client delivery, finance, and audits. A Chartered Accountant, she brings strong expertise in helping clients onboard seamlessly and manage their financial operations effectively.",
+          "linkedInUrl": "https://www.linkedin.com/in/mrudula-srinivas-669bbb2b2/",
           "isColoured": true,
-          "name": "Saravanan P.",
-          "title": "Customer Success Manager"
+          "name": "CA Mrudula Srinivas"
+        },
+        {
+          "imageSrc": "/mohit.png",
+          "description": "Mohit is a Senior Strategic Account Manager at Effortless, with experience across enterprise sales, business development, and channel partnerships. He brings strong expertise in SaaS, ERP, fintech, and strategic account management, with 5+ years at Tally Solutions.",
+          "linkedInUrl": "https://www.linkedin.com/in/mohit-sharma-76987a224/",
+          "isColoured": true,
+          "name": "Mohit Sharma"
+        },
+        {
+          "imageSrc": "/aravind.png",
+          "description": "Aravind is a Regional Strategic Account Manager at Effortless, with 13+ years of experience across strategic accounts, sales, and channel management. He brings strong expertise in SME and enterprise solutions, partner relationships, and business growth.",
+          "linkedInUrl": "https://www.linkedin.com/in/aravindamk/",
+          "isColoured": true,
+          "name": "Aravind Muthu Kumar"
+        },
+        {
+          "imageSrc": "/sateeshwaran.png",
+          "description": "Sateeshwaran is a Technical Lead at Effortless, with 10+ years of experience in software development. He brings strong expertise in ReactJS, React Native, responsive web applications, and frontend engineering.",
+          "linkedInUrl": "https://www.linkedin.com/in/k-s-sateeshwaran-6626b17a/",
+          "isColoured": true,
+          "name": "Sateeshwaran"
+        },
+        {
+          "imageSrc": "/kirthi.png",
+          "description": "Kirthi Vasan is a Senior Backend Developer at Effortless, with 5+ years of experience in software development. He brings strong expertise in Ruby on Rails, C, Elasticsearch, and full-stack development, building scalable and reliable solutions.",
+          "linkedInUrl": "https://www.linkedin.com/in/kirthi-vaasan-4a634271/",
+          "isColoured": true,
+          "name": "Kirthi Vaasan"
+        },
+        {
+          "imageSrc": "/logesh.png",
+          "description": "Lokesh is a Senior Product Designer at Effortless, with 6+ years of experience in UX and UI design. He brings strong expertise in usability, web application design, prototyping, and creating engaging user experiences.",
+          "linkedInUrl": "https://www.linkedin.com/in/lokesh-loki-291830161/",
+          "isColoured": true,
+          "name": "Logesh"
+        },
+        {
+          "imageSrc": "/sivabalan.png",
+          "description": "Siva is a Senior Quality Analyst Engineer at Effortless, with nearly 5 years of experience in software testing. He brings strong expertise in system testing, Selenium, and GUI test automation, ensuring product quality and reliability.",
+          "linkedInUrl": "https://www.linkedin.com/in/siva-balan-641873287/",
+          "isColoured": true,
+          "name": "Sivabalan"
+        },
+        {
+          "imageSrc": "/neeraj.png",
+          "description": "Neeraj is a Senior Customer Success professional at Effortless, focused on building strong customer relationships and delivering a seamless customer experience. He brings expertise in customer engagement, account management.",
+          "linkedInUrl": "",
+          "isColoured": true,
+          "name": "Neeraj Kumar"
+        },
+        {
+          "imageSrc": "/sandhiya.png",
+          "description": "Sandhiya is a Senior Customer Success Associate at Effortless, focused on building strong client relationships and delivering a seamless customer experience. She brings expertise in customer engagement and relationship management.",
+          "linkedInUrl": "",
+          "isColoured": true,
+          "name": "Sandhiya"
+        },
+        {
+          "imageSrc": "/yathin.png",
+          "description": "Yathin is a Senior Customer Success Associate at Effortless, with 4+ years of experience in customer support and functional consulting. He brings strong expertise in client services, post-sales support, implementation, and user training.",
+          "linkedInUrl": "https://www.linkedin.com/in/yathin-kumar-aba277257/",
+          "isColoured": true,
+          "name": "Yathin Kumar"
+        },
+        {
+          "imageSrc": "/rakhi.png",
+          "description": "Rakhi is a SaaS Implementation Specialist at Effortless, with experience in ERP consulting, customer support, and client onboarding. She brings expertise in Tally solutions, software migration, issue resolution, and customer support.",
+          "linkedInUrl": "https://www.linkedin.com/in/rakhi-saklani-265290194/",
+          "isColoured": true,
+          "name": "Rakhi Saklani"
+        },
+        {
+          "imageSrc": "/vignesh-designer.png",
+          "description": "Vignesh is a Marketing Designer at Effortless, specializing in visual design, branding, website design, marketing assets, and video editing. He creates impactful visuals that strengthen the brand and deliver engaging experiences.",
+          "linkedInUrl": "https://www.linkedin.com/in/vignesh-v-ba2439214/",
+          "isColoured": true,
+          "name": "Vignesh"
+        },
+        {
+          "imageSrc": "/subin.png",
+          "description": "Subin is a Manager – Human Resources at Effortless, with 10+ years of experience across HR, Talent Acquisition, and HR Business Partnering. He brings expertise in strategic HR planning, People Management, and driving workforce transformation.",
+          "linkedInUrl": "https://www.linkedin.com/in/subinpk1993/",
+          "isColoured": true,
+          "name": "Subin"
         }
       ]
     },

@@ -109,6 +109,12 @@ export const allFeaturesCommandCenter = {
     mediaHeight: 256,
   },
   ctaLabel: "See how Indian SMBs are Growing Faster with Effortless",
+  /**
+   * Narrow viewports show this instead — the full sentence wraps to three
+   * lines on a phone. Same wording the CMS variant already uses
+   * (BusineesCardSection).
+   */
+  ctaLabelShort: "How SMBs Grow with Effortless",
 };
 
 /**
@@ -565,8 +571,8 @@ const INTEGRATION_ALL_FEATURES: AllFeaturesItem[] = [
 
 const REIMBURSEMENT_ALL_FEATURES: AllFeaturesItem[] = [
   {
-    title: "AI-Powered Travel Claims Booking",
-    description: "Automate the booking of travel claims.",
+    title: "Mobile Bill Upload & Camera Capture for Claims",
+    description: "Upload or click bills instantly from the mobile app.",
     icon: "/assets/all-features/icons/receipt.svg",
   },
   {
@@ -590,21 +596,21 @@ const REIMBURSEMENT_ALL_FEATURES: AllFeaturesItem[] = [
     icon: "/assets/all-features/icons/hand-holding-money-1.svg",
   },
   {
-    title: "Field Expense Claims",
+    title: "Foreign Currency: Reimburse in any currency",
     description:
-      "Team submits bills directly from mobile. Finance doesn't chase paper.",
+      "Handle reimbursements in multiple currencies.",
     icon: "/assets/all-features/icons/bill-2.svg",
   },
   {
-    title: "Reimbursement Policy Controls",
+    title: "Accounting Date for Reimbursements",
     description:
-      "Define what's reimbursable. Eliminate debate, delays, and disputes.",
+      "Define specific accounting periods for claims.",
     icon: "/assets/all-features/icons/todo.svg",
   },
   {
-    title: "Document Evidence Storage",
+    title: "Download bills with complete approval history",
     description:
-      "Upload, store, and retrieve all financial proofs — makes you audit ready.",
+      "Maintain transparent audit trails for bills.",
     icon: "/assets/all-features/icons/document-evidence-storage.svg",
   },
 ];
@@ -1018,13 +1024,13 @@ const INTEGRATION: AllFeaturesCard = {
 const REIMBURSEMENT: AllFeaturesCard = {
   tone: "addon",
   header: "Add-on Module",
-  icon: "/assets/all-features/card-reimbursement.png",
+  icon: "/assets/shared/card-placeholder.png",
   title: "Field Reimbursement Claims",
   subtitle: "Keep Reimbursements in control.",
   items: [
     {
-      title: "AI-Powered Travel Claims Booking",
-      description: "Automate the booking of travel claims.",
+      title: "Mobile Bill Upload & Camera Capture for Claims",
+      description: "Upload or click bills instantly from the mobile app.",
       icon: "/assets/all-features/icons/receipt.svg",
     },
     {
@@ -1188,7 +1194,7 @@ export const allFeaturesGroups: AllFeaturesGroup[] = [
       {
         tone: "addon",
         header: "Add-on Module",
-        icon: "/assets/all-features/card-buyer-portal.png",
+        icon: "/assets/shared/card-placeholder.png",
         title: "Buyer Portal: Self-Serve Commerce",
         subtitle: "Enable your B2B customers via the Buyer Portal.",
         items: [

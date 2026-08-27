@@ -437,7 +437,10 @@ const ServiceSection = ({
                 <p className="text-heading-md font-medium text-content">
                   Leadership Team
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 !gap-6 w-full items-start">
+                {/* No `items-start`: the cards carry a shadow now, so they
+                    have to stretch to a common height per row rather than
+                    each ending wherever its bio does. */}
+                <div className="grid grid-cols-1 md:auto-rows-fr md:grid-cols-3 !gap-6 w-full">
                   {founderTeams?.map((team, index) => (
                     <FoundingTeamCard key={index} {...team} />
                   ))}
@@ -449,7 +452,10 @@ const ServiceSection = ({
                 <p className="text-heading-md font-medium text-content">
                   Management Team
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-5 !gap-6 w-full">
+                {/* `auto-rows-fr` so every row is the tallest row's height,
+                    not just even within its own row — the Figma grid is
+                    uniform top to bottom. */}
+                <div className="grid grid-cols-1 md:auto-rows-fr md:grid-cols-5 !gap-6 w-full">
                   {mangementTeams?.map((team, index) => (
                     <FoundingTeamCard key={index} {...team} />
                   ))}

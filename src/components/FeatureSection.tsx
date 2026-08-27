@@ -15,13 +15,15 @@ const FeatureBanner: React.FC<FeatureBannerItem> = ({
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 max-md:p-4">
         {/* Left: Image */}
         <div className="max-md:hidden md:col-span-4 flex justify-center items-center">
-          <Image
-            src={imageSrc || "/placeholder.png"}
-            alt={imageAlt || "Feature Image"}
-            width={400}
-            height={420}
-            className="object-contain rounded-md shadow-lg md:p-7 h-[320px]"
-          />
+          {imageSrc && (
+            <Image
+              src={imageSrc}
+              alt={imageAlt || "Feature Image"}
+              width={400}
+              height={420}
+              className="object-contain rounded-md shadow-lg md:p-7 h-[320px]"
+            />
+          )}
         </div>
 
         {/* Middle: Title & Description */}
@@ -35,13 +37,15 @@ const FeatureBanner: React.FC<FeatureBannerItem> = ({
         </div>
         {/* Left: Image */}
         <div className="md:hidden md:col-span-4 flex justify-center items-center">
-          <Image
-            src={imageSrc || "/placeholder.png"}
-            alt={imageAlt || "Feature Image"}
-            width={300}
-            height={300}
-            className="object-contain rounded-md shadow-lg md:p-7"
-          />
+          {imageSrc && (
+            <Image
+              src={imageSrc}
+              alt={imageAlt || "Feature Image"}
+              width={300}
+              height={300}
+              className="object-contain rounded-md shadow-lg md:p-7"
+            />
+          )}
         </div>
         {/* Right: Features with border */}
         <div className="md:col-span-4 md:border-l-2 md:border-gray-700 border-dashed md:p-7">

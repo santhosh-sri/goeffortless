@@ -90,7 +90,10 @@ export function CommandCenterSection() {
 
           <div className="flex justify-center">
             <Button calBooking className="font-semibold">
-              {data.ctaLabel}
+              {/* The full sentence wraps to three lines on a phone, so narrow
+                  viewports get the short label instead. */}
+              <span className="sm:hidden">{data.ctaLabelShort}</span>
+              <span className="max-sm:hidden">{data.ctaLabel}</span>
             </Button>
           </div>
         </div>

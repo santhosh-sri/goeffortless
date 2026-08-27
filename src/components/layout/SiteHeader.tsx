@@ -122,12 +122,17 @@ export function SiteHeader() {
     });
   };
 
+  /**
+   * The pointer leaving the trigger row or the panel closes the menu after a
+   * short grace period, whatever opened it. Click-opened menus used to be
+   * pinned until a click-away or Escape, but hovering a trigger already opens
+   * the panel, so any click on one promoted that same panel to "click" and it
+   * then ignored the pointer leaving entirely. Keyboard users are unaffected:
+   * no pointer, no `mouseleave`.
+   */
   const closeWithDelay = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => {
-      // A menu the user deliberately clicked open stays open until they click
-      // away or press Escape; only hover-opened menus time out.
-      if (openedBy.current === "click") return;
       setOpenMenu(null);
       openedBy.current = null;
     }, 300);
@@ -309,16 +314,24 @@ export function SiteHeader() {
           menu stays inside the page gutters instead of clipping at the
           viewport edge. */}
       {openMenuItem?.menu && (
-        <div
-          className="absolute inset-x-0 top-full hidden animate-fadeIn xl:block"
-          onMouseEnter={() => openWithHover(openMenuItem.label)}
-          onMouseLeave={closeWithDelay}
-        >
+        // The positioning layer spans the viewport but the panel inside it is a
+        // fixed, centred width. Hover handlers on this element therefore treated
+        // the empty gutters beside the panel as "inside the menu", so a pointer
+        // resting to its left never closed anything; `pointer-events-none` also
+        // stops those gutters swallowing hovers on the page beneath. The
+        // handlers live on the shrink-wrapped panel below instead.
+        <div className="pointer-events-none absolute inset-x-0 top-full hidden animate-fadeIn xl:block">
           {/* No top padding: the panel drops `rounded-t` and its top border so
               it reads as an extension of the header, which only works if it
               actually meets the header's bottom edge. */}
           <Container className="flex justify-center">
-            <NavDropdown menu={openMenuItem.menu} onNavigate={closeAll} />
+            <div
+              className="pointer-events-auto"
+              onMouseEnter={() => openWithHover(openMenuItem.label)}
+              onMouseLeave={closeWithDelay}
+            >
+              <NavDropdown menu={openMenuItem.menu} onNavigate={closeAll} />
+            </div>
           </Container>
         </div>
       )}
