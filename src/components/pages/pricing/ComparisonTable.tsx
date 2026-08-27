@@ -53,24 +53,14 @@ function Cell({ value, accent }: { value: PricingCell; accent?: boolean }) {
       </span>
     );
   }
-  if (typeof value === "string") {
-    return (
-      <span
-        className={cn(
-          "block text-center text-body font-semibold",
-          accent ? "text-accent" : "text-content"
-        )}
-      >
-        {value}
-      </span>
-    );
-  }
   return (
-    <span className="flex items-center justify-center gap-1.5">
-      <Tick />
-      <span className="text-body font-medium text-content">
-        {value.label}
-      </span>
+    <span
+      className={cn(
+        "block text-center text-body font-semibold",
+        accent ? "text-accent" : "text-content"
+      )}
+    >
+      {value}
     </span>
   );
 }

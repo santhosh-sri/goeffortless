@@ -20,6 +20,8 @@ export const growingPains = {
     "Every business that’s scaling faces the same challenges in different forms.",
   ctaLabel:
     "Effortless keeps your business running—without the mess. Discover How",
+  /** Narrow viewports show this instead: the sentence wraps to three lines. */
+  ctaLabelShort: "Discover How",
   cards: [
     {
       icon: "/assets/home/user-filled.svg",
@@ -115,6 +117,8 @@ export const builtForIndia = {
     "Every business that’s scaling faces the same challenges in different forms.",
   ctaLabel:
     "Effortless keeps your business running—without the mess. Discover How",
+  /** Narrow viewports show this instead: the sentence wraps to three lines. */
+  ctaLabelShort: "Discover How",
   cards: [
     {
       icon: "/assets/home/india-data-load.svg",

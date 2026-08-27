@@ -97,6 +97,7 @@ export default {
         raised: "var(--shadow-raised)",
         lift: "var(--shadow-lift)",
         overlay: "var(--shadow-overlay)",
+        panel: "var(--shadow-panel)",
         menu: "var(--shadow-menu)",
         media: "var(--shadow-media)",
       },

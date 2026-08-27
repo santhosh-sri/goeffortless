@@ -17,23 +17,29 @@ export const demoVideoConfig: LanguageModalConfig = {
       "value": "english",
       "videos": [
         {
+          "id": "procurement",
+          "title": "Effortless Procurement",
+          "subtitle": "Faster Approvals, Smarter Buying",
+          "videoId": "9TG7jIRzdVE"
+        },
+        {
           "id": "sales",
           "title": "Effortless Sales",
           "subtitle": "Faster Cash, Full Confidence",
-          "videoId": "PpCSJ6IGCUI"
+          "videoId": "bMrf3iGMQt0"
         },
-        {
-          "id": "expenses",
-          "title": "Effortless Expenses",
-          "subtitle": "Every Rupee Verified",
-          "videoId": "3OFsEO-47e0"
-        },
-        {
-          "id": "contracts",
-          "title": "Effortless Contracts",
-          "subtitle": "Predictable Billing",
-          "videoId": "H845WIK8seA"
-        }
+        // {
+        //   "id": "expenses",
+        //   "title": "Effortless Expenses",
+        //   "subtitle": "Every Rupee Verified",
+        //   "videoId": "3OFsEO-47e0"
+        // },
+        // {
+        //   "id": "contracts",
+        //   "title": "Effortless Contracts",
+        //   "subtitle": "Predictable Billing",
+        //   "videoId": "H845WIK8seA"
+        // }
       ]
     },
     {
@@ -43,23 +49,29 @@ export const demoVideoConfig: LanguageModalConfig = {
       "value": "hindi",
       "videos": [
         {
+          "id": "procurement",
+          "title": "Effortless Procurement",
+          "subtitle": "Faster Approvals, Smarter Buying",
+          "videoId": "l_8-yYmA2h0"
+        },
+        {
           "id": "sales",
           "title": "Effortless Sales",
           "subtitle": "Faster Cash, Full Confidence",
-          "videoId": "ppJZDz986pQ"
+          "videoId": "2QhP0ptdozQ"
         },
-        {
-          "id": "expenses",
-          "title": "Effortless Expenses",
-          "subtitle": "Every Rupee Verified",
-          "videoId": "QmYvTHXt7Is"
-        },
-        {
-          "id": "contracts",
-          "title": "Effortless Contracts",
-          "subtitle": "Predictable Billing",
-          "videoId": "FYZ9FmqeAMs"
-        }
+        // {
+        //   "id": "expenses",
+        //   "title": "Effortless Expenses",
+        //   "subtitle": "Every Rupee Verified",
+        //   "videoId": "QmYvTHXt7Is"
+        // },
+        // {
+        //   "id": "contracts",
+        //   "title": "Effortless Contracts",
+        //   "subtitle": "Predictable Billing",
+        //   "videoId": "FYZ9FmqeAMs"
+        // }
       ]
     },
     {
@@ -69,23 +81,29 @@ export const demoVideoConfig: LanguageModalConfig = {
       "value": "tamil",
       "videos": [
         {
+          "id": "procurement",
+          "title": "Effortless Procurement",
+          "subtitle": "Faster Approvals, Smarter Buying",
+          "videoId": "ivsv0uZkxnY"
+        },
+        {
           "id": "sales",
           "title": "Effortless Sales",
           "subtitle": "Faster Cash, Full Confidence",
-          "videoId": "mPIAgl29uBo"
+          "videoId": "61ngqSW1nB8"
         },
-        {
-          "id": "expenses",
-          "title": "Effortless Expenses",
-          "subtitle": "Every Rupee Verified",
-          "videoId": "rDd1XqjzhGc"
-        },
-        {
-          "id": "contracts",
-          "title": "Effortless Contracts",
-          "subtitle": "Predictable Billing",
-          "videoId": "wQ99Wo955TI"
-        }
+        // {
+        //   "id": "expenses",
+        //   "title": "Effortless Expenses",
+        //   "subtitle": "Every Rupee Verified",
+        //   "videoId": "rDd1XqjzhGc"
+        // },
+        // {
+        //   "id": "contracts",
+        //   "title": "Effortless Contracts",
+        //   "subtitle": "Predictable Billing",
+        //   "videoId": "wQ99Wo955TI"
+        // }
       ]
     }
   ]

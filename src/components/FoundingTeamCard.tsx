@@ -17,8 +17,8 @@ const FoundingTeamCard: FC<TeamMember> = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-col gap-4",
-        isColoured && "rounded-xl border border-line bg-surface p-1.5"
+        "flex h-full w-full flex-col gap-4 rounded-xl border border-line bg-surface hover:border-none hover:shadow-panel",
+        isColoured ? "p-1.5" : "p-2"
       )}
     >
       <div className="relative w-full overflow-hidden rounded-xl">
@@ -40,7 +40,9 @@ const FoundingTeamCard: FC<TeamMember> = ({
       <p
         className={cn(
           "whitespace-pre-line text-label text-content-muted md:leading-6",
-          isColoured ? "px-1.5 pb-1.5 md:text-label" : "md:text-body-lg"
+          isColoured
+            ? "px-1.5 pb-1.5 md:text-label"
+            : "px-2 pb-2 md:text-body-lg"
         )}
       >
         {description}

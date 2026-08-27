@@ -23,14 +23,24 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   return (
     <div className="absolute bottom-0 flex w-full items-center justify-between gap-3 overflow-hidden bg-black/50 p-3 text-white backdrop-blur-lg">
       <div className="flex min-w-0 flex-col gap-0.5">
-        <h3 className={cn("truncate font-medium", isColoured ? "text-label" : "text-body-lg")}>
+        <h3
+          className={cn(
+            "truncate font-medium",
+            isColoured ? "text-label" : "text-body-lg"
+          )}
+        >
           {name}
         </h3>
-        <p className={cn("truncate text-white/80", isColoured ? "text-caption" : "text-body")}>
+        <p
+          className={cn(
+            "truncate text-white/80",
+            isColoured ? "text-caption" : "text-body"
+          )}
+        >
           {title}
         </p>
       </div>
-      {linkedinUrl && (
+      {linkedinUrl ? (
         <a
           href={linkedinUrl}
           target="_blank"
@@ -41,12 +51,24 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           className="inline-flex shrink-0 rounded-sm transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           <Image
-            src="/linkedIn.svg"
-            alt=""
+            src="/linkedin.svg"
+            alt="linkedin"
             width={isColoured ? 26 : 36}
             height={isColoured ? 26 : 36}
           />
         </a>
+      ) : (
+        <span
+          aria-hidden="true"
+          className="inline-flex shrink-0 cursor-default rounded-sm opacity-50"
+        >
+          <Image
+            src="/linkedin.svg"
+            alt=""
+            width={isColoured ? 26 : 36}
+            height={isColoured ? 26 : 36}
+          />
+        </span>
       )}
     </div>
   );

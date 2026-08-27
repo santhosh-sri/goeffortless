@@ -3,8 +3,9 @@
  * 2426:66274 (Procurement) and 2426:67870 (Sales).
  *
  * Generated from the design's text layers, then reconciled against the frame
- * render: a cell is `true` for a plain green tick, `false` for a red cross, a
- * string for a plain label, or { tick, label } for a tick followed by a label.
+ * render: a cell is `true` for a plain green tick, `false` for a red cross, or
+ * a string for a plain label. Labelled cells carry no tick — the label is the
+ * value, and a tick in front of it read as a second, contradictory state.
  *
  * The crosses carry real meaning and are not in the text layers at all — they
  * are vector glyphs — so they were located by scanning the rendered frame for
@@ -12,7 +13,7 @@
  * four. All five sit in the Grow column.
  */
 
-export type PricingCell = boolean | string | { tick: true; label: string };
+export type PricingCell = boolean | string;
 
 export interface PricingTableRow {
   label: string;
@@ -55,7 +56,7 @@ export const procurementComparison: PricingTableSection[] = [
       { label: "One-Time Setup (CA-Led Onboarding)", grow: "₹48,000", scale: "₹1,24,000", accent: true },
       { label: "Named users included (With Primary Product)", grow: "15", scale: "50" },
       { label: "Additional user cost", grow: "₹3,000/user", scale: "₹3,000/user" },
-      { label: "AI-powered document scans (Claims + Bills)", grow: "5000", scale: "20000" },
+      { label: "AI-powered document scans (Vendor Bills)", grow: "5000", scale: "20000" },
       { label: "Linked Bank Accounts (Auto-Fetch & BRS)", grow: "2", scale: "5" },
       { label: "Document Evidence Storage (Bills, POs, DC, GRN, Contracts, PDCs)", grow: "10GB", scale: "25GB" },
       { label: "Multi-level approval depth", grow: "up-to 2 levels", scale: "up-to 10 levels" },
@@ -66,13 +67,13 @@ export const procurementComparison: PricingTableSection[] = [
     name: "Purchase Orders & Vendor Expense Management",
     badge: "Primary Product",
     rows: [
-      { label: "GSTIN powered Vendor onboarding", grow: true, scale: {"tick": true, "label": "Customer Field Capture"} },
+      { label: "GSTIN powered Vendor onboarding", grow: true, scale: "Customer Field Capture" },
       { label: "Vendor bulk upload - Create vendors in bulk", grow: true, scale: true },
       { label: "Create Purchase Requisition", grow: false, scale: true },
       { label: "Create Purchase Orders", grow: true, scale: true },
       { label: "AI-Powered 3-Way Reconciliation (PO-to-GRN-to-Vendor Bill)", grow: true, scale: true },
-      { label: "Multi-Cost centre tagging in PR & POs.", grow: {"tick": true, "label": "Custom"}, scale: {"tick": true, "label": "Custom"} },
-      { label: "Custom attachments for bill booking", grow: {"tick": true, "label": "Standard - up to 5"}, scale: {"tick": true, "label": "Custom"} },
+      { label: "Multi-Cost centre tagging in PR & POs.", grow: "Custom", scale: "Custom" },
+      { label: "Custom attachments for bill booking", grow: "Standard - up to 5", scale: "Custom" },
       { label: "Multi GSTN Compliance Support", grow: true, scale: true },
       { label: "Vendor Purchase Invoice Email", grow: true, scale: true },
       { label: "Amount-Based Approvals", grow: "Up To 2 levels", scale: "Up To 10 levels" },
@@ -179,11 +180,11 @@ export const salesComparison: PricingTableSection[] = [
       { label: "One-Time Setup (CA-Led Onboarding)", grow: "₹48,000", scale: "₹1,24,000", accent: true },
       { label: "Named users included (With Primary Product)", grow: "15", scale: "50" },
       { label: "Additional user cost", grow: "₹3,000/user", scale: "₹3,000/user" },
-      { label: "AI-powered document scans (Claims + Bills)", grow: "5000", scale: "20000" },
+      // { label: "AI-powered document scans (Claims + Bills)", grow: "5000", scale: "20000" },
       { label: "Linked Bank Accounts (Auto-Fetch & BRS)", grow: "2", scale: "5" },
       { label: "Document Evidence Storage (Bills, POs, DC, GRN, Contracts, PDCs)", grow: "10GB", scale: "25GB" },
       { label: "Multi-level approval depth", grow: "up-to 2 levels", scale: "up-to 10 levels" },
-      { label: "Buyer Portal (self-serve commerce)", grow: "Optional · ₹1.54L + ₹48,000 setup", scale: "Optional · ₹1.54L + ₹48,000 setup" },
+      { label: "Buyer Portal (self-serve commerce)", grow: "Optional · ₹1.54L + ₹48,000 setup", scale: "Included" },
       { label: "Field Reimbursement Claims", grow: "Included", scale: "Included" },
       { label: "Recurring Contract & Auto Billing", grow: "Included", scale: "Included" },
     ],

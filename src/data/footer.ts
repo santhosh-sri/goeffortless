@@ -3,19 +3,24 @@ export const footerData = {
     {
       title: "Products",
       items: [
+        { title: "Procurement", url: "/expenses" },
         { title: "Sales & Collections", url: "/sales" },
         { title: "Expense & Claims", url: "/expenses" },
         { title: "Contract & Billing", url: "/contracts" },
+        { title: "Buyer Portal", url: "/buyer-portal" },
         { title: "All Product Features", url: "/allFeatures" },
       ],
     },
     {
       border: true,
       groups: [
-        {
-          title: "Our Customers",
-          items: [{ title: "Case Studies", url: "/case-studies" }],
-        },
+        // Case Studies is hidden for now (see HIDDEN_SLUGS in the catch-all
+        // route), and it was this group's only item, so the whole group goes
+        // rather than leaving an empty "Our Customers" heading.
+        // {
+        //   title: "Our Customers",
+        //   items: [{ title: "Case Studies", url: "/case-studies" }],
+        // },
         {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],
@@ -78,19 +83,24 @@ export const footerData = {
     {
       title: "Products",
       items: [
+        { title: "Procurement", url: "/expenses" },
         { title: "Sales & Collections", url: "/sales" },
         { title: "Expense & Claims", url: "/expenses" },
         { title: "Contract & Billing", url: "/contracts" },
+        { title: "Buyer Portal", url: "/buyer-portal" },
         { title: "All Product Features", url: "/allFeatures" },
       ],
     },
     {
       border: true,
       groups: [
-        {
-          title: "Our Customers",
-          items: [{ title: "Case Studies", url: "/case-studies" }],
-        },
+        // Case Studies is hidden for now (see HIDDEN_SLUGS in the catch-all
+        // route), and it was this group's only item, so the whole group goes
+        // rather than leaving an empty "Our Customers" heading.
+        // {
+        //   title: "Our Customers",
+        //   items: [{ title: "Case Studies", url: "/case-studies" }],
+        // },
         {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],

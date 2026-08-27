@@ -24,29 +24,30 @@
     {
       "tagLine": "Governance & Recognition",
       "marginTop": true,
+      "bgColour": true,
       "Customtitle": "<span style='font-weight: 500'>Certifications & Awards</span>",
       "description": "Accreditations and accolades that prove we walk the talk on excellence and trust",
       "certificate": [
         {
-          "button": "/Iso.png",
+          "button": "/assets/certifications/iso-27001.png",
           "view": "/ISMS.png",
           "big": true
         },
         {
-          "button": "/dpiit1.png",
+          "button": "/assets/certifications/dpiit.png",
           "view": "/DPIIT.png",
           "col": true
         },
         {
-          "button": "/ficci-1.png",
+          "button": "/assets/certifications/ficci.png",
           "view": "/FICCI.png"
         },
         {
-          "button": "/IFTA 1.png",
+          "button": "/assets/certifications/ifta.png",
           "view": "/IFTA.png"
         },
         {
-          "button": "/iamai-1.png",
+          "button": "/assets/certifications/iamai.png",
           "view": "/IAMAI.png",
           "col": true
         }

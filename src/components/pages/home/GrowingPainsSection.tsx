@@ -52,7 +52,10 @@ export function GrowingPainsSection() {
         </div>
 
         <Button calBooking fullWidth className="sm:w-auto">
-          {growingPains.ctaLabel}
+          {/* The full sentence wraps to three lines on a phone, so narrow
+              viewports get the short label instead. */}
+          <span className="sm:hidden">{growingPains.ctaLabelShort}</span>
+          <span className="max-sm:hidden">{growingPains.ctaLabel}</span>
         </Button>
       </div>
     </Section>

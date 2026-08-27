@@ -51,8 +51,11 @@ export function PricingDetailPage({
                 headingClassName="lg:leading-[80px]"
               />
 
-              {/* Only this platform's card, per the design. */}
-              <PlatformCards platforms={[platform]} />
+              {/*
+                Only this platform's card, per the design — and unlinked: the
+                page it would navigate to is this one, so the arrow goes too.
+              */}
+              <PlatformCards platforms={[platform]} linked={false} />
             </div>
           </Section>
 

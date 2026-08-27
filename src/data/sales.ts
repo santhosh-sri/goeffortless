@@ -207,7 +207,7 @@ export const salesWhyThisMatters: ProductWhyThisMattersData = {
       tone: "violet" as const,
     },
     {
-      icon: "/assets/sales/why-growth.svg",
+      icon: "/assets/shared/why-growth.svg",
       label: "Enable Pro-Active Growth",
       tone: "success" as const,
     },
@@ -218,15 +218,15 @@ export const salesWhyThisMatters: ProductWhyThisMattersData = {
  * "See it in Action" — Figma node 1886:41801.
  *
  * The design leaves the player area as an empty white placeholder — no poster,
- * no embed, no video id. Rather than ship a blank box, this reuses the existing
- * "Effortless Sales — Faster Cash, Full Confidence" video already referenced in
- * src/data/landing.json, rendered in the new section's UI.
+ * no embed, no video id. Rather than ship a blank box, this uses the English
+ * "Effortless Sales — Faster Cash, Full Confidence" walkthrough (same video the
+ * home-page language modal plays — see src/data/demoVideos.ts).
  */
 export const salesSeeItInAction: ProductVideoData = {
   title: "See it in",
   accentTitle: "Action",
   description: "Watch how field teams are transforming their sales operations",
-  videoId: "PpCSJ6IGCUI",
+  videoId: "bMrf3iGMQt0",
 };
 
 /** Closing CTA — Figma node 1893:45937. */

@@ -152,7 +152,7 @@ export const claimsFeatureRows: ProductFeatureRow[] = [
       "Masters stay clean, reconciliations stay simple, and audit stays smooth.",
       "To  keep your books pristine, we have 'Cut-Off Date Controls.' Once you close a month, the system physically blocks employees from submitting backdated travel expenses from two months ago. No more 'Month-End Mess'.”",
     ],
-    media: "/assets/claims/feature-07.png",
+    media: "/assets/shared/feature-workflow.png",
     mediaHeight: 548,
     mediaAlt: "Two-way sync between Effortless and Tally Prime",
   },
