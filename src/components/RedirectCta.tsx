@@ -1,6 +1,6 @@
-import { CalcomConfig } from "@/utils/calConfig";
-import Image from "next/image";
+import Button from "./ui/Button";
 
+/** Cal.com booking CTA on the CMS pages — the shared primary `Button`. */
 const RedirectCta = ({
   ctaText,
   fullWidth,
@@ -9,61 +9,12 @@ const RedirectCta = ({
   fullWidth?: boolean;
 }) => {
   return (
-    <button
-      {...CalcomConfig}
-      id="democta"
-      className={`
-        group
-        relative
-        bg-[#F08B32]
-        py-[12px]
-        px-[30px]
-        rounded
-        text-[14px]
-        md:text-[16px]
-        text-white
-        font-[500]
-        cursor-pointer
-        flex
-        items-center
-        justify-center
-        ${fullWidth ? "md:w-full" : "md:w-fit"}
-        max-md:w-full
-        overflow-hidden
-        transition-all
-        duration-500
-        ease-in-out
-        md:hover:!pr-[50px]
-      `}
+    <Button
+      calBooking
+      className={fullWidth ? "w-full font-semibold" : "w-full font-semibold sm:w-auto"}
     >
-      <span className="relative z-10">{ctaText}</span>
-      <div
-        className="
-          absolute
-          max-md:hidden
-          right-2
-          flex
-          items-center
-          justify-center
-          transition-all
-          duration-500
-          ease-in-out
-          opacity-0
-          translate-x-4
-          group-hover:opacity-100
-          group-hover:translate-x-0
-          pr-4
-        "
-      >
-        <Image
-          src="/newRightArrow.svg"
-          alt="arrow"
-          width={16}
-          height={16}
-          className=""
-        />
-      </div>
-    </button>
+      {ctaText}
+    </Button>
   );
 };
 

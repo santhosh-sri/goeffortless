@@ -7,8 +7,8 @@ import {
 } from "@/interface/type";
 import React, { useEffect, useState } from "react";
 import CareersSection from "./CareersBanner";
-import Footer from "./Footer";
-import Header from "./NewHeader";
+import SiteFooter from "./layout/SiteFooter";
+import SiteHeader from "./layout/SiteHeader";
 import Metadata from "./Metadata";
 import ServiceSection from "./ServiceSection";
 import UsecaseFold from "./UsecaseFold";
@@ -94,19 +94,17 @@ const Landing: React.FC<Content> = ({
     <>
       {/* Render Metadata component */}
       <Metadata {...metadata} />
-      <div>
-        <div className={`fixed top-0 w-full z-[999]`}>
-          {/* {!closeBanner && <HeaderBanner setCloseBanner={handleCloseBanner} />} */}
-          <Header
-            {...headerItems}
-            isMobile={isMobile}
-            closeBanner={closeBanner}
-            setCloseBanner={setCloseBanner}
-          />
-        </div>
-        <div
-          className={`bg-[#08090A] ${!closeBanner ? "md:mt-24" : "md:mt-20"}`}
-        >
+      {/*
+        These pages are still CMS-driven and predate the redesign, but they no
+        longer pin data-theme="dark": their colours come from the token layer
+        now, so they follow the light/dark toggle like the rebuilt pages. The
+        chrome is the redesigned SiteHeader/SiteFooter, which is sticky rather
+        than fixed, so the old top-offset spacers are gone with it.
+      */}
+      <div className="min-h-screen bg-bg text-content" data-cms-content>
+        <SiteHeader />
+        {/* Landmark for assistive tech — the CMS pages had no <main>. */}
+        <main>
           {firstFold && <FirstFold {...firstFold} />}
           {careersBanner && <CareersSection {...careersBanner} />}
           {usecaseFold && (
@@ -134,31 +132,26 @@ const Landing: React.FC<Content> = ({
                 isCareersPage={isCareersPage}
                 isDownloadPage={isDownloadPage}
                 isCompliancePage={isCompliancePage}
+                // Only the first section carries the page title, and
+                // only when nothing above it already provided an h1.
+                isPageHeading={index === 0 && !firstFold && !careersBanner}
               />
             ))}
-        </div>
-        <div
-          className={`${
-            (isHomePage ||
-              isPricingPlanPage ||
-              isPricingPage ||
-              isCareersPage ||
-              isDownloadPage ||
-              isBlogPage ||
-              isCompliancePage ||
-              isFeaturePage) &&
-            "pt-[60px] md:pt-[120px] bg-black"
-          }`}
-        >
-          <Footer isMobile={isMobile} />
-        </div>
+        </main>
+        {/* The product pages end on a white band and put an 80px grey strip
+            before the footer (see ProductClosingCta); the CMS pages do the
+            same unless their last band is already grey. */}
+        {!activeServiceContent?.[activeServiceContent.length - 1]?.bgColour && (
+          <div aria-hidden="true" className="h-12 bg-bg-subtle lg:h-20" />
+        )}
+        <SiteFooter />
         {/* {isFormVisible &&
           isCtaVisible &&
           hideCta &&
           !careersBanner &&
           !showForm && (
             <div
-              className={` md:hidden fixed bottom-0 w-full p-4 bg-[#08090A] shadow-md z-[999]`}
+              className={` md:hidden fixed bottom-0 w-full p-4 bg-bg shadow-md z-[999]`}
             >
               <Democta
                 ctaText={firstFold?.ctaText || usecaseFold?.ctaText}

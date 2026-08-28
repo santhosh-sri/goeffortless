@@ -33,10 +33,10 @@ const BillingModesComparison: React.FC<Props> = ({ modes }) => {
               <div className="bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)] border border-[#1E1E1E] rounded-xl p-4 md:p-5 flex flex-col gap-4">
                 {mode.steps.map((step, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <div className="w-6 h-6 md:w-10 md:h-10 shrink-0 rounded-full bg-[#FFE8D3] text-[#F08B32] text-sm md:text-base flex items-center justify-center font-medium">
+                    <div className="w-6 h-6 md:w-10 md:h-10 shrink-0 rounded-full bg-[#FFE8D3] text-accent text-sm md:text-base flex items-center justify-center font-medium">
                       {i + 1}
                     </div>
-                    <p className="text-white text-sm md:text-base font-medium leading-relaxed">
+                    <p className="text-content text-sm md:text-base font-medium leading-relaxed">
                       {step}
                     </p>
                   </div>
@@ -45,29 +45,29 @@ const BillingModesComparison: React.FC<Props> = ({ modes }) => {
 
               {/* Why */}
               <div className="flex flex-col gap-3">
-                <p className="text-[#F08B32] text-base font-medium">
+                <p className="text-accent text-base font-medium">
                   {mode.whyTitle}
                 </p>
-                <p className="text-white font-light text-sm md:text-base">
+                <p className="text-content font-light text-sm md:text-base">
                   {mode.whyText}
                 </p>
               </div>
 
               {/* Supports */}
               <div className="flex flex-col gap-3">
-                <p className="text-[#F08B32] font-medium text-sm md:text-base">
+                <p className="text-accent font-medium text-sm md:text-base">
                   Supports:
                 </p>
                 <ul className="flex flex-col gap-3">
                   {mode.supports.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-white">
+                    <li key={i} className="flex items-start gap-2 text-content">
                       <Image
                         src="/pointsTick.svg"
                         alt="pointsTick"
                         width={24}
                         height={24}
                       />
-                      <span className="text-base md:text-xl text-white font-light leading-6">
+                      <span className="text-base md:text-xl text-content font-light leading-6">
                         {item}
                       </span>
                     </li>

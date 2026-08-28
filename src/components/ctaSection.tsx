@@ -28,7 +28,7 @@ const CtaSection = ({
       )}
       {secondaryCtaText && (
         <button
-          className="py-[14px] w-full md:text-[20px] md:!max-w-[30%] cursor-pointer !border-[1px] border-[#F08B32] text-[#F08B32] font-semibold  text-[16px] px-4 rounded"
+          className="py-[14px] w-full md:text-[20px] md:!max-w-[30%] cursor-pointer !border-[1px] border-accent text-accent font-semibold  text-[16px] px-4 rounded"
           onClick={handleDirect}
         >
           {secondaryCtaText}

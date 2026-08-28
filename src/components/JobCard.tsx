@@ -44,20 +44,20 @@ const JobCard: FC<JobCardList> = ({
               height={13}
               className="w-[13px] h-[13px]"
             />
-            <span className="text-[#E4E4E7] md:text-[14px] text-[12px] font-[300] leading-[20px]">
+            <span className="text-content-muted md:text-[14px] text-[12px] font-[300] leading-[20px]">
               {item.title}
             </span>
           </div>
         ))}
       </div>
-      <p className="text-[#E4E4E7] md:text-[16px] text-[13px] font-[300] leading-[20px]">
+      <p className="text-content-muted md:text-[16px] text-[13px] font-[300] leading-[20px]">
         {description}
       </p>
       <div
         className="flex items-center gap-1  max-md:!mt-8 md:!mb-6"
         onClick={() => window.open(url, "_blank")}
       >
-        <p className="md:text-[#E4E4E7] max-md:text-[#F08B32] text-[13px] md:text-[16px] font-[300] leading-[20px]">
+        <p className="md:text-content-muted max-md:text-accent text-[13px] md:text-[16px] font-[300] leading-[20px]">
           Explore Now
         </p>
         <Image

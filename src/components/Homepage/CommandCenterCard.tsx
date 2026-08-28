@@ -30,23 +30,23 @@ const CommandCenterCard: React.FC<CommandCenterCardProps> = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-lg md:text-2xl font-semibold text-[#F08B32] text-center">
+        <h3 className="text-lg md:text-2xl font-semibold text-accent text-center">
           {title}
         </h3>
-        <p className="text-xs leading-4 text-[#E4E4E7] font-medium text-center">
+        <p className="text-xs leading-4 text-content-muted font-medium text-center">
           {subtitle}
         </p>
       </div>
       {/* Description */}
       <div>
-        <p className="text-base text-white font-normal text-center">
+        <p className="text-base text-content font-normal text-center">
           {description}
         </p>
 
         <hr className="h-[1px] border-[#3A3A3A] mt-5" />
       </div>
       {/* Features */}
-      <div className="flex flex-col gap-4 text-sm text-white font-normal">
+      <div className="flex flex-col gap-4 text-sm text-content font-normal">
         {features.map((feature, index) => (
           <p key={index} className="flex items-start gap-2">
             <Image

@@ -35,7 +35,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ producttabs }) => {
 
       {/* Content */}
       {selectedTabData && (
-        <div className="bg-[#121316] p-6 rounded-md text-white border border-gray-700">
+        <div className="bg-surface p-6 rounded-md text-white border border-gray-700">
           <h2 className="text-xl font-bold mb-4">{selectedTabData.name}</h2>
           <p className="text-sm text-gray-300 mb-4">
             {selectedTabData.content}

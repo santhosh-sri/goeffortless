@@ -60,14 +60,14 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
               fill="#F08B32"
             />
           </svg>
-          <p className="text-[#F08B32] text-base font-medium whitespace-nowrap">
+          <p className="text-accent text-base font-medium whitespace-nowrap">
             Live Masterclass: Fix the process blocks slowing your business.
             Every Tue & Thu · 4–4:30 PM
           </p>
         </div>
         <div className="flex gap-6">
           <button
-            className="text-[#F08B32] text-sm font-semibold py-1.5 px-[16px] leading-4 whitespace-nowrap border-2 border-[#F08B32] rounded"
+            className="text-accent text-sm font-semibold py-1.5 px-[16px] leading-4 whitespace-nowrap border-2 border-accent rounded"
             onClick={handleCloseBanner}
           >
             Save My Spot
@@ -184,7 +184,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
               />
             </svg>
 
-            <p className="text-[#F08B32] text-xs font-medium">
+            <p className="text-accent text-xs font-medium">
               Live Masterclass: Fix the process blocks slowing your business.
               Tue & Thu · 4–4:30 PM
             </p>
@@ -192,7 +192,7 @@ const HeaderBanner = ({ setCloseBanner }: any) => {
 
           <div className="flex gap-3 mt-4">
             <button
-              className="flex-1 text-[#F08B32] text-xs font-semibold py-2 border-2 border-[#F08B32] rounded"
+              className="flex-1 text-accent text-xs font-semibold py-2 border-2 border-accent rounded"
               onClick={handleCloseBanner}
             >
               Save My Spot

@@ -1,5 +1,6 @@
 import { HomePageVerticalSlider } from "@/interface/type";
 import Image from "next/image";
+import { ChevronDown } from "./ui";
 import React, { useRef, useState } from "react";
 import FeatureWrapper from "./FeatureWrapper";
 
@@ -36,7 +37,7 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
           className="flex flex-col gap-4 w-full pt-1 px-2 max-md:gradient-border-bottom"
         >
           <button
-            className="flex gap-2 items-center justify-between w-full text-[16px] font-[400] leading-[20px] text-[#FFFF]"
+            className="flex gap-2 items-center justify-between w-full text-[16px] font-[400] leading-[20px] text-content"
             onClick={() => handleFeatureClick(index)}
           >
             <div className="flex flex-col gap-1 items-start ">
@@ -59,26 +60,23 @@ const AccordionComponeny: React.FC<HomePageVerticalSlider> = ({
                 <h2
                   ref={isOpen === index ? titleRef : null}
                   className={`text-[14px] !font-[400] leading-[24px] cursor-pointer text-left ${
-                    isOpen === index ? "text-[#F08B32]" : "text-white"
+                    isOpen === index ? "text-accent" : "text-content"
                   }`}
                 >
                   {feature.title}
                 </h2>
               </div>
               {isOpen === index && (
-                <p className="text-[12px] font-[300] text-[#F08B32] leading-[20px] cursor-pointer text-left">
+                <p className="text-[12px] font-[300] text-accent leading-[20px] cursor-pointer text-left">
                   {feature.description}
                 </p>
               )}
             </div>
-            <Image
-              src={
-                isOpen === index ? "/chevron-up.svg" : "/arrow-down-white.svg"
-              }
-              alt="open or close accordion"
-              width={16}
-              height={16}
-              className={`${isOpen === index ? "relative top-[-17px]" : ""}`}
+            <ChevronDown
+              open={isOpen === index}
+              className={`text-content-muted ${
+                isOpen === index ? "relative top-[-17px]" : ""
+              }`}
             />
           </button>
           {isOpen === index && (

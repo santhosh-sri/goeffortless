@@ -1,10 +1,6 @@
-import Landing from "@/components/Landing";
+import HomePage from "@/components/pages/home/HomePage";
 import data from "../data/landing.json";
 
 export default function Home() {
-  return (
-    <div>
-      <Landing {...data} />
-    </div>
-  );
+  return <HomePage metadata={data.metadata} />;
 }

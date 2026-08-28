@@ -596,11 +596,19 @@ export interface CommandCenterCardProps {
   ctaUrl: string;
 }
 
+export interface DemoVideo {
+  id: string;
+  title: string;
+  subtitle: string;
+  videoId: string;
+}
+
 export interface LanguageOption {
   id: string;
   label: string;
   flag: string;
   value: string;
+  videos?: DemoVideo[];
 }
 
 export interface LanguageModalConfig {

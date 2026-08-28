@@ -21,7 +21,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   onClose,
 }) => {
   const primaryCTA =
-    "flex justify-center gap-2 items-center bg-[#F08B32] xl:text-base text-sm xl:font-[600] font-[400] text-[#fff] xl:py-[14px] py-[7px] px-[16px] rounded-[32px] font-lexend max-md:w-full";
+    "flex justify-center gap-2 items-center bg-[#F08B32] xl:text-base text-sm xl:font-[600] font-[400] text-content xl:py-[14px] py-[7px] px-[16px] rounded-[32px] font-lexend max-md:w-full";
 
   const handleDownload = async () => {
     try {
@@ -318,7 +318,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                   {stats.map((s, idx) => (
                     <div key={idx} className="flex flex-col gap-1">
                       <p
-                        className={`flex items-baseline gap-1 text-[#F08B32] font-bold text-xl xl:text-[40px]`}
+                        className={`flex items-baseline gap-1 text-accent font-bold text-xl xl:text-[40px]`}
                       >
                         {s.raiseType && (
                           <Image
@@ -375,7 +375,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
             <div className="mt-2 md:mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-2 md:pt-4">
               {contacts.map((c, idx) => (
                 <div key={idx} className="flex flex-col gap-2">
-                  <p className="font-medium text-sm xl:text-base text-[#F08B32] leading-[100%] tracking-0">
+                  <p className="font-medium text-sm xl:text-base text-accent leading-[100%] tracking-0">
                     {c.label}
                   </p>
                   <p className="font-light text-sm xl:text-base text-[#000000] leading-[100%] tracking-0">

@@ -73,14 +73,14 @@ const CaseStudiesSection: React.FC<Props> = ({ caseStudies }) => {
             <CategoryTabs active={activeTab} setActive={setActiveTab} />
           </div>
 
-          <h3 className="font-light text-xl md:text-[32px] text-white">
+          <h3 className="font-light text-xl md:text-[32px] text-content">
             Featured {activeTab !== "All" && "Stories"}{" "}
             <span className="bg-custom-gradient bg-clip-text text-transparent font-medium">
               {activeTab === "All" ? "Stories" : `In ${activeTab}`}
             </span>
           </h3>
 
-          <p className="text-base md:text-2xl font-light text-white mt-2">
+          <p className="text-base md:text-2xl font-light text-content mt-2">
             Helping companies of all sizes and in all industries in India
           </p>
 

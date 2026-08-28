@@ -112,12 +112,12 @@ const RequestDemoForm = ({
         <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999] md:p-4 pt-[45px] pb-[45px]">
           {" "}
           {/* Added padding for mobile */}
-          <div className="bg-[#08090A] z-[9999] relative border border-[#E5E5E533] md:p-[20px] rounded-2xl w-full h-full md:h-auto md:max-w-[700px] flex flex-col mx-5 max-md:overflow-y-auto">
+          <div className="bg-bg z-[9999] relative border border-[#E5E5E533] md:p-[20px] rounded-2xl w-full h-full md:h-auto md:max-w-[700px] flex flex-col mx-5 max-md:overflow-y-auto">
             {/* Header - Fixed on mobile */}
             <div className="flex items-center justify-between p-4 md:p-[28px] pb-6  md:border-none">
-              <h2 className="text-white text-[18px]  md:text-[24px] font-[300] flex-1 text-center ">
+              <h2 className="text-content text-[18px]  md:text-[24px] font-[300] flex-1 text-center ">
                 Get a Free{" "}
-                <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFF]">
+                <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-accent to-content">
                   Demo{" "}
                 </span>
               </h2>
@@ -143,9 +143,9 @@ const RequestDemoForm = ({
                     key={field.name}
                     className={`md:col-span-${field.colSpan} max-md:col-span-2 w-full flex flex-col gap-[11px]`}
                   >
-                    <p className="text-[#FFFFFF] font-normal text-[14px]">
+                    <p className="text-content font-normal text-[14px]">
                       {field.label}
-                      <span className="text-[#F08B32]">*</span>
+                      <span className="text-accent">*</span>
                     </p>
 
                     {["text", "number", "email"].includes(field.type) && (
@@ -174,7 +174,7 @@ const RequestDemoForm = ({
             </div>
 
             {/* Sticky Button - Fixed at bottom on mobile */}
-            <div className="sticky bottom-0 bg-[#08090A] flex justify-center p-4 md:px-[28px]">
+            <div className="sticky bottom-0 bg-bg flex justify-center p-4 md:px-[28px]">
               <button
                 type="submit"
                 onClick={handleSubmit(onSubmit)}

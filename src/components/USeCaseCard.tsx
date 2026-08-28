@@ -4,7 +4,7 @@ import React from "react";
 
 const USeCaseCard: React.FC<UseCaseCard> = ({ title, description, img }) => {
   return (
-    <div className="text-[#FFF] flex flex-col gap-[32px] md:gap-[56px] p-[42px] md:p-9 rounded-xl bg-[#121316] items-center justify-center">
+    <div className="text-content flex flex-col gap-[32px] md:gap-[56px] p-[42px] md:p-9 rounded-xl bg-surface items-center justify-center">
       {img && (
         <Image src={img} alt="Icon" width={48} height={48} />
       )}
@@ -16,7 +16,7 @@ const USeCaseCard: React.FC<UseCaseCard> = ({ title, description, img }) => {
           {description}
         </p>
         {/* <div className="flex gap-1 items-center cursor-pointer">
-          <p className="text-[#F08B32] text-[20px] font-[300]">Learn more</p>
+          <p className="text-accent text-[20px] font-[300]">Learn more</p>
           <Image src={"/arrow-right.svg"} alt="arrow" width={16} height={16} />
         </div> */}
       </div>

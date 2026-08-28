@@ -16,7 +16,7 @@ export default async function handler(
     // { url: "/pricing-plan", priority: "0.8", changefreq: "monthly" },
     { url: "/about-us", priority: "0.7", changefreq: "monthly" },
     { url: "/blogs", priority: "0.8", changefreq: "daily" },
-    { url: "/case-studies", priority: "0.8", changefreq: "monthly" },
+    // { url: "/case-studies", priority: "0.8", changefreq: "monthly" },
     { url: "/faqs", priority: "0.7", changefreq: "monthly" },
     { url: "/compliance", priority: "0.7", changefreq: "monthly" },
     { url: "/partners", priority: "0.6", changefreq: "monthly" },

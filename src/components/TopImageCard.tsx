@@ -12,7 +12,7 @@ const TopImagecard: React.FC<TopImagecards> = ({
   return (
     <div className="rounded-lg shadow-md">
       <div
-        className={`text-[#FFF] flex flex-col gap-2 md:gap-4 p-4 md:p-5 rounded-xl bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]`}
+        className={`text-content flex flex-col gap-2 md:gap-4 p-4 md:p-5 rounded-xl bg-[linear-gradient(111.18deg,rgba(255,255,255,0.1)_-28.62%,rgba(255,255,255,0)_104.36%)]`}
       >
         {img && (
           <Image

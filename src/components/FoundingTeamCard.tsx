@@ -2,8 +2,10 @@
 import { TeamMember } from "@/interface/type";
 import Image from "next/image";
 import { FC } from "react";
+import { cn } from "@/lib/cn";
 import ProfileCard from "./ProfileCard";
 
+/** Team member tile: photo with the name plate, bio below. */
 const FoundingTeamCard: FC<TeamMember> = ({
   imageSrc,
   description,
@@ -14,17 +16,19 @@ const FoundingTeamCard: FC<TeamMember> = ({
 }) => {
   return (
     <div
-      className={`text-white shadow-md w-full ${
-        isColoured ? "p-[6px] rounded-3xl md:rounded-2xl bg-[#15181B]" : ""
-      }`}
+      className={cn(
+        "flex h-full w-full flex-col gap-4 rounded-xl border border-line bg-surface hover:border-none hover:shadow-panel",
+        isColoured ? "p-1.5" : "p-2"
+      )}
     >
-      <div className={`relative w-full overflow-hidden rounded-2xl`}>
+      <div className="relative w-full overflow-hidden rounded-xl">
         <Image
           src={imageSrc}
-          alt={"Team Member"}
+          alt={name ?? "Team Member"}
           width={591}
           height={471}
           priority
+          className="h-auto w-full"
         />
         <ProfileCard
           name={name}
@@ -34,11 +38,12 @@ const FoundingTeamCard: FC<TeamMember> = ({
         />
       </div>
       <p
-        className={`text-[13px] font-[300] leading-[20px] md:leading-[26px] text-[#E4E4E7] mt-4 whitespace-pre-line ${
+        className={cn(
+          "whitespace-pre-line text-label text-content-muted md:leading-6",
           isColoured
-            ? "p-3 md:p-1.5 md:text-[14px] md:min-h-[240px]"
-            : "md:text-[20px] "
-        }`}
+            ? "px-1.5 pb-1.5 md:text-label"
+            : "px-2 pb-2 md:text-body-lg"
+        )}
       >
         {description}
       </p>

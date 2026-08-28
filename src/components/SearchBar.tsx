@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { ChangeEvent } from "react";
+import MaskIcon from "./ui/MaskIcon";
 
 type SearchBarProps = {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -9,16 +9,17 @@ type SearchBarProps = {
 
 export default function SearchBar({ onChange }: SearchBarProps) {
   return (
-    <div className="w-full max-w-[640px] mx-auto my-6">
-      <div className="flex gap-2 items-center bg-[#2626264D] text-white rounded-lg px-3 py-2.5 shadow-md">
-        <Image src={"/search-bar.svg"} alt="" width={20} height={20} />
+    <div className="mx-auto w-full max-w-[640px]">
+      <label className="flex items-center gap-2 rounded-lg border border-line bg-surface px-3 py-2.5 transition-colors focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20">
+        <MaskIcon src="/search-bar.svg" tone="muted" className="h-5 w-5" />
         <input
-          type="text"
+          type="search"
           placeholder="Search questions..."
+          aria-label="Search questions"
           onChange={onChange}
-          className="bg-transparent focus:outline-none w-full text-sm placeholder-[#E5E5E580]"
+          className="w-full bg-transparent text-body text-content placeholder:text-content-subtle focus:outline-none"
         />
-      </div>
+      </label>
     </div>
   );
 }

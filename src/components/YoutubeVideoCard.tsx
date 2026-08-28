@@ -6,6 +6,12 @@ interface YoutubeVideoCardProps {
   onClose?: () => void;
   onBack?: () => void;
   type?: string;
+  /**
+   * Hold a true 16:9 box instead of the fixed 630px desktop height. The fixed
+   * height works out to roughly 1.93:1, so YouTube pillarboxes the player with
+   * black bars. Opt-in, to leave the pages built against the old height alone.
+   */
+  widescreen?: boolean;
 }
 
 const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
@@ -13,6 +19,7 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
   onClose,
   onBack,
   type = "",
+  widescreen = false,
 }) => {
   const [play, setPlay] = useState(false);
 
@@ -21,7 +28,9 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
       {type === "page" ? (
         <div className="w-full">
           <div
-            className="relative aspect-video md:aspect-auto md:h-[630px] w-full rounded-xl bg-[#0F1113] overflow-hidden cursor-pointer"
+            className={`relative aspect-video w-full rounded-xl bg-[#0F1113] overflow-hidden cursor-pointer ${
+              widescreen ? "" : "md:aspect-auto md:h-[630px]"
+            }`}
             onClick={() => setPlay(true)}
           >
             {!play ? (
@@ -32,13 +41,25 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
                   className="h-full w-full object-cover contrast-110"
                 />
 
+                {/*
+                  The glyph is white, so on a thumbnail with a light centre it
+                  used to disappear completely. The scrim and the dark disc
+                  behind it guarantee contrast whatever the poster looks like.
+                */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div>
+                  <button
+                    type="button"
+                    aria-label="Play video"
+                    className="flex h-20 w-20 items-center justify-center rounded-full bg-black/55 backdrop-blur-sm transition hover:scale-105 hover:bg-black/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  >
                     <svg
-                      width="64"
-                      height="64"
+                      width="40"
+                      height="40"
                       viewBox="0 0 64 64"
                       fill="none"
+                      aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -46,7 +67,7 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
                         fill="white"
                       />
                     </svg>
-                  </div>
+                  </button>
                 </div>
               </>
             ) : (
@@ -77,37 +98,14 @@ const YoutubeVideoCard: React.FC<YoutubeVideoCardProps> = ({
       ) : (
         <div className="flex flex-col gap-3 w-full p-4">
           <div className="flex items-center justify-end">
-            <button onClick={onBack}>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 4C0 1.79086 1.79086 0 4 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H4C1.79086 32 0 30.2091 0 28V4Z"
-                  fill="white"
-                  fill-opacity="0.1"
-                />
-                <path
-                  d="M10 10L22 22"
-                  stroke="#FF0000"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10 22L22 10"
-                  stroke="#FF0000"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+            <button type="button" onClick={onClose} aria-label="Close">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="4" fill="rgb(var(--color-bg-subtle))" />
+            <path d="M10 10L22 22M10 22L22 10" stroke="rgb(var(--color-danger))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
             </button>
           </div>
-          <div className="relative aspect-video md:aspect-auto md:h-[630px] overflow-hidden bg-black">
+          <div className="relative aspect-video overflow-hidden rounded-lg bg-black md:aspect-auto md:h-[630px]">
             <iframe
               className="absolute inset-0 w-full h-full"
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}

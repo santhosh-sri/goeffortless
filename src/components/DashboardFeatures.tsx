@@ -13,7 +13,7 @@ const DashboardFeaturesDynamic: React.FC<DashboardSection> = (card) => {
     subDesc = "",
   } = card;
   return (
-    <div className="w-fit bg-[#15181B] p-4 rounded-lg  border-[1px] border-[#E5E5E533]">
+    <div className="w-fit bg-surface p-4 rounded-lg  border-[1px] border-[#E5E5E533]">
       <section
         className={
           layout != "test"
@@ -22,28 +22,28 @@ const DashboardFeaturesDynamic: React.FC<DashboardSection> = (card) => {
         }
       >
         <div className="md:min-h-[110px] flex flex-col gap-3">
-          <h2 className="md:font-[500] text-[#EEEFFC] md:text-[24px] text-[18px] leading-[20px] md:leading-[24px]">
+          <h2 className="md:font-[500] text-content md:text-[24px] text-[18px] leading-[20px] md:leading-[24px]">
             {title}
           </h2>
           {solution && (
             <p className="">
               💡
-              <span className=" text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFFFFF]">
+              <span className=" text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] bg-clip-text text-transparent bg-gradient-to-r from-accent to-content">
                 {solution}
               </span>
             </p>
           )}
           {description && (
-            <p className="!font-[300] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-[#FFFFFF]">
+            <p className="!font-[300] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-content">
               {description}
             </p>
           )}
           {layout == "test" && subTitle && (
             <div>
-              <p className="!font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-[#F08B32]">
+              <p className="!font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-accent">
                 {subTitle}
               </p>
-              <p className="!font-[300] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-[#FFFFFF]">
+              <p className="!font-[300] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-content">
                 {subDesc}
               </p>
             </div>
@@ -61,10 +61,10 @@ const DashboardFeaturesDynamic: React.FC<DashboardSection> = (card) => {
           )}
           {layout != "test" && subTitle && (
             <div>
-              <p className="!font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-[#F08B32]">
+              <p className="!font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-accent">
                 {subTitle}
               </p>
-              <p className="!font-[300] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-[#FFFFFF]">
+              <p className="!font-[300] text-[14px] md:text-[18px] leading-[20px] md:leading-[24px] text-content">
                 {subDesc}
               </p>
             </div>

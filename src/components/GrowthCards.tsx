@@ -21,13 +21,13 @@ const GrowthCards: React.FC<GrowthCardsContent> = ({
         <div className="flex flex-col md:gap-4 gap-3 items-center justify-center md:px-4">
           <p
             className={`${
-              showLine ? "text-[#FFFFFF]" : "text-[#F08B32]"
+              showLine ? "text-content" : "text-accent"
             } text-[14px] md:text-[20px] font-[500] md:leading-[26px] leading-[16px] text-center`}
           >
             {title}
           </p>
           {description && (
-            <p className="text-[#FFFFFF] text-[14px] md:text-[16px] font-[300] leading-[20px] text-center md:pb-3 md:px-[40px]">
+            <p className="text-content text-[14px] md:text-[16px] font-[300] leading-[20px] text-center md:pb-3 md:px-[40px]">
               {parse(description)}
             </p>
           )}

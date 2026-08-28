@@ -16,7 +16,7 @@ const HomePageCarousel: FC<HomePageVerticalSlider> = ({
   };
 
   return (
-    <div className="text-white">
+    <div className="text-content">
       <div className="flex gap-8 items-start">
         <div className="flex flex-col gap-4">
           {features.map((feature, index) => (
@@ -24,7 +24,7 @@ const HomePageCarousel: FC<HomePageVerticalSlider> = ({
               key={index}
               className={`flex flex-col gap-2 w-full p-2 pl-3 ${
                 selectedFeature === index
-                  ? "bg-[#FFFFFF1F] rounded border-l-[1px] border-[#F08B32]"
+                  ? "bg-[#FFFFFF1F] rounded border-l-[1px] border-accent"
                   : ""
               }`}
             >
@@ -49,21 +49,21 @@ const HomePageCarousel: FC<HomePageVerticalSlider> = ({
                 )}
                 <h2
                   className={`text-[18px] !font-[400] leading-[24px] cursor-pointer text-left ${
-                    selectedFeature === index ? "text-[#F08B32]" : "text-white"
+                    selectedFeature === index ? "text-accent" : "text-content"
                   }`}
                 >
                   {feature.title}
                 </h2>
               </div>
               {selectedFeature === index && (
-                <p className="text-[13px] font-[300] text-[#F08B32] leading-[20px] cursor-pointer">
+                <p className="text-[13px] font-[300] text-accent leading-[20px] cursor-pointer">
                   {feature.description}
                 </p>
               )}
             </div>
           ))}
         </div>
-        <div className="w-[68%] p-4 border-[1px] border-[#E5E5E533] rounded-lg bg-[#15181B]">
+        <div className="w-[68%] p-4 border-[1px] border-[#E5E5E533] rounded-lg bg-surface">
           {selectedFeature !== null && (
             <FeatureWrapper
               GridCols={false}

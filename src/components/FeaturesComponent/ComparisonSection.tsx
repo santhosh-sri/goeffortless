@@ -15,10 +15,10 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
         <div className="flex max-md:flex-col justify-between max-md:gap-12">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-lg md:text-xl leading-[26px] font-medium text-center text-white">
+              <h2 className="text-lg md:text-xl leading-[26px] font-medium text-center text-content">
                 {left.title}
               </h2>
-              <p className="text-sm md:text-base leading-5 text-center text-[#E4E4E7]">
+              <p className="text-sm md:text-base leading-5 text-center text-content-muted">
                 {left.subtitle}
               </p>
             </div>
@@ -29,13 +29,13 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
                   <Image src="/chatUser.svg" alt="" width={40} height={40} />
                 </div>
                 <div className=" flex flex-col gap-2">
-                  <p className="text-sm text-[#F08B32] leading-[22px] font-normal">
+                  <p className="text-sm text-accent leading-[22px] font-normal">
                     {left.chat.label}
                   </p>
                   <div className="bg-[#DCF8C6] text-black text-sm leading-[22px] rounded-xl !rounded-bl-[4px] font-normal p-3">
                     {left.chat.message}
                   </div>
-                  <p className="text-xs font-normal text-[#E4E4E7]">
+                  <p className="text-xs font-normal text-content-muted">
                     {left.chat.time}
                   </p>
                 </div>
@@ -46,7 +46,7 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
                 {left.points.map((point) => (
                   <li
                     key={point}
-                    className="flex items-center gap-3 text-base font-normal text-[#FFFFFF]"
+                    className="flex items-center gap-3 text-base font-normal text-content"
                   >
                     <span>
                       <svg
@@ -91,10 +91,10 @@ const ComparisonSection = ({ data }: ComparisonSectionProps) => {
         {/* RIGHT */}
         <div className="flex flex-col gap-[43px]">
           <div className="flex flex-col gap-4">
-            <h2 className="text-lg md:text-xl leading-[26px] font-medium text-[#F08B32] text-center">
+            <h2 className="text-lg md:text-xl leading-[26px] font-medium text-accent text-center">
               {right.title}
             </h2>
-            <p className="text-sm md:text-base leading-5 text-center text-[#E4E4E7]">
+            <p className="text-sm md:text-base leading-5 text-center text-content-muted">
               {right.subtitle}
             </p>
           </div>

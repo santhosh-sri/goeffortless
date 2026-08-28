@@ -55,10 +55,10 @@ const PricingSection: React.FC<PricingSectionProps> = ({
       <div className="bg-[linear-gradient(97.25deg,rgba(229,229,229,0.2)_-21.96%,rgba(255,255,255,0)_182.96%)] p-[1px] !rounded-xl mt-4">
         <div
           className={` ${
-            Recommended ? "border-[1px] border-[#F08B32]" : ""
-          } bg-[#15181B] rounded-xl !w-full max-md:min-w-[80%] md:min-w-[25%]`}
+            Recommended ? "border-[1px] border-accent" : ""
+          } bg-surface rounded-xl !w-full max-md:min-w-[80%] md:min-w-[25%]`}
         >
-          <div className="flex flex-col p-5 gap-2 text-[#FFFF] border-b border-[#393939] md:min-h-[220px]">
+          <div className="flex flex-col p-5 gap-2 text-content border-b border-[#393939] md:min-h-[220px]">
             <div className="flex gap-2 md:gap-3 md:items-center md:justify-between">
               <h3 className="xl:text-[24px] text-[20px] font-semibold leading-6 pb-1">
                 {packageTitle}
@@ -73,10 +73,10 @@ const PricingSection: React.FC<PricingSectionProps> = ({
                 </div>
               )}
             </div>
-            <p className="md:text-[26px] text-[20px] leading-6 font-semibold text-[#F08B32]">
+            <p className="md:text-[26px] text-[20px] leading-6 font-semibold text-accent">
               {packageSubTitle}{" "}
               {/* {showAnnum && (
-                <span className="text-[#FFFFFF] text-[12px] font-[300] self-center text-center">
+                <span className="text-content text-[12px] font-[300] self-center text-center">
                   {activeTab === "annually" ? "per Annum" : "half yearly"}
                 </span>
               )} */}
@@ -90,14 +90,14 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               </p>
             ))}
           </div>
-          <div className="flex flex-col p-5 gap-3 text-[#FFFF] lg:min-h-[530px] xl:min-h-[400px]">
+          <div className="flex flex-col p-5 gap-3 text-content lg:min-h-[530px] xl:min-h-[400px]">
             {packageDescription && (
-              <p className="md:text-[15px]  text-[14px] font-bold leading-[22px] text-[#F08B32]">
+              <p className="md:text-[15px]  text-[14px] font-bold leading-[22px] text-accent">
                 {packageDescription}
               </p>
             )}
             {packageItems?.map((item, index) => (
-              <div key={index} className="flex gap-4 text-[#FFFFFF]">
+              <div key={index} className="flex gap-4 text-content">
                 <Image
                   src="/whiteTickk.svg"
                   alt="tick"
@@ -155,7 +155,7 @@ export const PricingCardsGroup = ({
       ))}
       {/* <div className={`w-full`}>
         <Link href="/pricing-plan">
-          <button className="border-[1px] border-[#F08B32] text-[#F08B32] px-4 py-2 rounded-[4px] w-full md:text-[16px] text-[14px] font-[500]">
+          <button className="border-[1px] border-accent text-accent px-4 py-2 rounded-[4px] w-full md:text-[16px] text-[14px] font-[500]">
             Compare all Plans in Detail
           </button>
         </Link>

@@ -111,12 +111,12 @@ const TrialForm = ({
 
   return (
     <div className="bg-black/75 h-dvh w-dvw flex justify-center items-center fixed top-0 left-0 z-[999]">
-      <div className="bg-[#08090A] z-[9999] relative border border-[#E5E5E533] rounded-2xl w-full max-h-[90vh] md:max-w-[800px] flex flex-col mx-5">
+      <div className="bg-bg z-[9999] relative border border-[#E5E5E533] rounded-2xl w-full max-h-[90vh] md:max-w-[800px] flex flex-col mx-5">
         {/* Header - Fixed */}
         <div className="flex items-center justify-between p-4 md:p-6 md:border-none shrink-0">
-          <h2 className="text-white text-[18px] md:text-[24px] font-[300] flex-1 text-center">
+          <h2 className="text-content text-[18px] md:text-[24px] font-[300] flex-1 text-center">
             Request a Free{" "}
-            <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F08B32] to-[#FFF]">
+            <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-accent to-content">
               Trial
             </span>
           </h2>
@@ -145,10 +145,10 @@ const TrialForm = ({
                     field.colSpan === 1 ? "md:col-span-1" : "md:col-span-2"
                   } col-span-2 w-full flex flex-col gap-[11px]`}
                 >
-                  <p className="text-[#FFFFFF] font-normal text-[14px]">
+                  <p className="text-content font-normal text-[14px]">
                     {parse(field.label)}
                     {field.validation?.required && (
-                      <span className="text-[#F08B32]">*</span>
+                      <span className="text-accent">*</span>
                     )}
                   </p>
 
@@ -173,7 +173,7 @@ const TrialForm = ({
                         borderImage:
                           "linear-gradient(128.65deg, rgba(255, 255, 255, 0.2) -75.81%, rgba(255, 255, 255, 0) 154.59%) 1",
                       }}
-                      className={`w-full rounded border px-3 py-2 text-[#B1B1B1] placeholder:text-[13px] focus:outline-none text-[13px] ${
+                      className={`w-full rounded border px-3 py-2 text-content-muted placeholder:text-[13px] focus:outline-none text-[13px] ${
                         errors[fieldName]
                           ? "border-red-500"
                           : "border-[#E5E5E533]"
@@ -200,7 +200,7 @@ const TrialForm = ({
         </div>
 
         {/* Footer - Fixed */}
-        <div className="shrink-0 bg-[#08090A] flex justify-center p-4 md:px-[28px] border-t border-[#E5E5E533] rounded-b-2xl">
+        <div className="shrink-0 bg-bg flex justify-center p-4 md:px-[28px] border-t border-[#E5E5E533] rounded-b-2xl">
           <button
             type="submit"
             onClick={handleSubmit(onSubmit)}
