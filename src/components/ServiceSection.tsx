@@ -189,7 +189,11 @@ const ServiceSection = ({
       >
         {caseStudies?.length === 0 && (
           <div className="flex w-full flex-col items-center justify-center gap-10 lg:gap-12">
-            {(colouredTagLine || tagLine || Customtitle || title || description) && (
+            {(colouredTagLine ||
+              tagLine ||
+              Customtitle ||
+              title ||
+              description) && (
               // Same anatomy as SectionHeading: chip 16 over the title, the
               // description 24 below that pair. Built inline because the CMS
               // titles carry markup that parseCms has to rewrite.
@@ -450,7 +454,7 @@ const ServiceSection = ({
             {mangementTeams && (
               <div className="flex w-full flex-col items-start gap-6 md:gap-10">
                 <p className="text-heading-md font-medium text-content">
-                  Management Team
+                  Execution Team
                 </p>
                 {/* `auto-rows-fr` so every row is the tallest row's height,
                     not just even within its own row — the Figma grid is
@@ -659,7 +663,9 @@ const ServiceSection = ({
         )}
         {pricingCards && (
           <div
-            className={` ${isHomePage == true ? "md:hidden" : "md:block"} flex flex-col md:gap-[4.5rem] gap-8 w-full`}
+            className={` ${
+              isHomePage == true ? "md:hidden" : "md:block"
+            } flex flex-col md:gap-[4.5rem] gap-8 w-full`}
           >
             {pricingFeatures && (isPricingPlanPage || !isMobile) && (
               <PricingFeatures setSelectedPlan={setSelectedPlan} />
@@ -707,7 +713,6 @@ const ServiceSection = ({
             tone={index % 2 === 0 ? "subtle" : "default"}
           />
         ))}
-
     </>
   );
 };
