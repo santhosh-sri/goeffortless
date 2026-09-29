@@ -226,7 +226,7 @@ export const salesSeeItInAction: ProductVideoData = {
   title: "See it in",
   accentTitle: "Action",
   description: "Watch how field teams are transforming their sales operations",
-  videoId: "bMrf3iGMQt0",
+  videoId: "M7f6cr6vRn4",
 };
 
 /** Closing CTA — Figma node 1893:45937. */

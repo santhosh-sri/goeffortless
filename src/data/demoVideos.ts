@@ -20,13 +20,13 @@ export const demoVideoConfig: LanguageModalConfig = {
           "id": "procurement",
           "title": "Effortless Procurement",
           "subtitle": "Faster Approvals, Smarter Buying",
-          "videoId": "9TG7jIRzdVE"
+          "videoId": "hLkrP1T2_ok"
         },
         {
           "id": "sales",
           "title": "Effortless Sales",
           "subtitle": "Faster Cash, Full Confidence",
-          "videoId": "bMrf3iGMQt0"
+          "videoId": "M7f6cr6vRn4"
         },
         // {
         //   "id": "expenses",
@@ -52,13 +52,13 @@ export const demoVideoConfig: LanguageModalConfig = {
           "id": "procurement",
           "title": "Effortless Procurement",
           "subtitle": "Faster Approvals, Smarter Buying",
-          "videoId": "l_8-yYmA2h0"
+          "videoId": "I90Xgg1nEkQ"
         },
         {
           "id": "sales",
           "title": "Effortless Sales",
           "subtitle": "Faster Cash, Full Confidence",
-          "videoId": "2QhP0ptdozQ"
+          "videoId": "JRTtM0N0ju0"
         },
         // {
         //   "id": "expenses",
@@ -84,13 +84,13 @@ export const demoVideoConfig: LanguageModalConfig = {
           "id": "procurement",
           "title": "Effortless Procurement",
           "subtitle": "Faster Approvals, Smarter Buying",
-          "videoId": "ivsv0uZkxnY"
+          "videoId": "DCip0aDekew"
         },
         {
           "id": "sales",
           "title": "Effortless Sales",
           "subtitle": "Faster Cash, Full Confidence",
-          "videoId": "61ngqSW1nB8"
+          "videoId": "sKXkKqV97d8"
         },
         // {
         //   "id": "expenses",
