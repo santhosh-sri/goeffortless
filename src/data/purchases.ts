@@ -239,7 +239,7 @@ export const purchasesSeeItInAction: ProductVideoData = {
   accentTitle: "Action",
   description:
     "Watch how finance procurement and finance teams are automating purchase & expense management.",
-  videoId: "9TG7jIRzdVE",
+  videoId: "hLkrP1T2_ok",
 };
 
 /** Closing CTA — Figma node 1943:71175. */
