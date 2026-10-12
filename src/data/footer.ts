@@ -14,13 +14,10 @@ export const footerData = {
     {
       border: true,
       groups: [
-        // Case Studies is hidden for now (see HIDDEN_SLUGS in the catch-all
-        // route), and it was this group's only item, so the whole group goes
-        // rather than leaving an empty "Our Customers" heading.
-        // {
-        //   title: "Our Customers",
-        //   items: [{ title: "Case Studies", url: "/case-studies" }],
-        // },
+        {
+          title: "Our Customers",
+          items: [{ title: "Case Studies", url: "/case-studies" }],
+        },
         {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],
@@ -94,13 +91,10 @@ export const footerData = {
     {
       border: true,
       groups: [
-        // Case Studies is hidden for now (see HIDDEN_SLUGS in the catch-all
-        // route), and it was this group's only item, so the whole group goes
-        // rather than leaving an empty "Our Customers" heading.
-        // {
-        //   title: "Our Customers",
-        //   items: [{ title: "Case Studies", url: "/case-studies" }],
-        // },
+        {
+          title: "Our Customers",
+          items: [{ title: "Case Studies", url: "/case-studies" }],
+        },
         {
           title: "Ecosystem",
           items: [{ title: "Partners", url: "/partners" }],
