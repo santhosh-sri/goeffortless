@@ -479,18 +479,23 @@ export function NavDropdown({
         // a list and needs its own edge. The desktop panel drops it entirely
         // and leans on the shadow: it hangs off the header as one surface, and
         // a stroke around three sides only drew a seam across that.
-        "xl:rounded-t-none xl:rounded-b-2xl xl:border-0 xl:p-5 xl:shadow-menu",
-        "w-full xl:max-w-[calc(100vw-4rem)]",
+        // Full width on desktop: the panel spans the viewport under the header
+        // as a band, square-cornered, and only its content keeps the menu's
+        // own width (see the grid below).
+        "xl:rounded-none xl:border-0 xl:px-0 xl:py-5 xl:shadow-menu",
+        "w-full",
         // Products is 781px tall in Figma and the panel hangs off a 96px
         // header, so on a short laptop it would run past the fold with the
         // "Explore All Features" CTA unreachable. Scroll inside instead.
-        "xl:max-h-[calc(100dvh-6rem-1rem)] xl:overflow-y-auto xl:overscroll-contain",
-        PANEL_WIDTH[columns] ?? PANEL_WIDTH[1]
+        "xl:max-h-[calc(100dvh-6rem-1rem)] xl:overflow-y-auto xl:overscroll-contain"
       )}
     >
       <div
         className={cn(
           "grid grid-cols-1 gap-y-6",
+          // The menu's content width, centred in the full-width band.
+          "xl:mx-auto xl:max-w-[calc(100vw-4rem)]",
+          PANEL_WIDTH[columns] ?? PANEL_WIDTH[1],
           // The two-column panel pads its columns individually (below), so the
           // rule lands on the box boundary rather than inside a gap.
           twoColumn ? "xl:gap-x-0" : "gap-x-5",
