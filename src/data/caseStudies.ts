@@ -3719,8 +3719,7 @@ export const caseStudies: CaseStudy[] = [
 export const caseStudiesHero = {
   eyebrow: "Case Studies · 1000+ growing companies",
   title: "Real businesses. Real leakage plugged.",
-  accentTitle: "Real growth",
-  titleSuffix: "— the Effortless way.",
+  accentTitle: "Real growth the Effortless way.",
   description:
     "From a 14-truck van-sales operation in Indore to a 1,500-freelancer consultancy in Bengaluru, see how India’s mid-market runs Finance, Sales and Operations on Effortless — without ever leaving Tally.",
   primaryCta: "Book a 20-min demo",

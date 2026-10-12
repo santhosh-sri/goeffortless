@@ -28,9 +28,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   // "pricing" has been removed: the redesigned page now lives at the dedicated
   // /pricing route, which takes precedence over this catch-all anyway. The old
   // CMS "pricing-plan" page stays hidden — it has no redesigned equivalent.
-  // "case-studies" is pulled from the nav for now, so the route 404s rather
-  // than staying reachable by typing the URL.
-  const HIDDEN_SLUGS = ["pricing-plan", "case-studies"];
+  const HIDDEN_SLUGS = ["pricing-plan"];
   if (service && HIDDEN_SLUGS.includes(service)) {
     return { notFound: true };
   }

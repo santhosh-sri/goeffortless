@@ -174,25 +174,24 @@ export function CaseStudiesPage({
         <main>
           {/* ---- Hero ---- */}
           <Section tone="subtle" spacing="lg">
-            <div className="mx-auto flex max-w-[960px] flex-col items-center gap-6 text-center">
+            <div className="mx-auto flex max-w-[1120px] flex-col items-center gap-6 text-center">
               <SectionHeading
                 as="h1"
                 eyebrow={caseStudiesHero.eyebrow}
-                title={caseStudiesHero.title}
+                // Two lines: the first clause holds together from \`lg\` up, and
+                // "Real growth the Effortless way." starts the second.
+                title={`<span class="lg:whitespace-nowrap">${caseStudiesHero.title}</span><br />`}
                 accentTitle={caseStudiesHero.accentTitle}
-                titleSuffix={caseStudiesHero.titleSuffix}
-                accentOnNewLine
                 description={caseStudiesHero.description}
               />
 
               <div className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:gap-3">
-                <Button calBooking size="lg" fullWidth className="sm:w-auto">
+                <Button calBooking fullWidth className="sm:w-auto">
                   {caseStudiesHero.primaryCta}
                 </Button>
                 <Button
                   href={caseStudiesHero.secondaryCta.href}
                   variant="secondary"
-                  size="lg"
                   fullWidth
                   className="sm:w-auto"
                 >
@@ -213,9 +212,11 @@ export function CaseStudiesPage({
                 ))}
               </ul>
 
-              {/* Jump links to all six sections, regardless of the filter —
-                  the prototype keeps them fixed so the page's shape stays
-                  legible while filtering. */}
+              {/*
+                Hidden for now; uncomment to bring them back. Jump links to all
+                six sections, regardless of the filter — the prototype keeps
+                them fixed so the page's shape stays legible while filtering.
+
               <nav
                 aria-label="Jump to industry"
                 className="flex flex-wrap justify-center gap-2"
@@ -231,6 +232,7 @@ export function CaseStudiesPage({
                   </a>
                 ))}
               </nav>
+              */}
             </div>
           </Section>
 
@@ -337,7 +339,7 @@ export function CaseStudiesPage({
                   {caseStudiesMidCta.description}
                 </p>
               </div>
-              <Button calBooking size="lg" className="shrink-0">
+              <Button calBooking className="shrink-0">
                 {caseStudiesMidCta.ctaLabel}
               </Button>
             </Container>
