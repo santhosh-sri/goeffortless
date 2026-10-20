@@ -3,8 +3,8 @@ import { cn } from "@/lib/cn";
 import type { CaseStudyOption } from "@/data/caseStudies";
 
 /**
- * The sticky filter bar: a single row of industry, product, problem-solved and
- * reset, then the match count.
+ * The sticky filter bar: a single row of search, industry, product,
+ * problem-solved and reset, then the match count.
  *
  * The design pins this under the header, so `top` has to clear it. The header's
  * height is measured rather than hard-coded: a fixed `top-24` drifted out of
@@ -52,7 +52,12 @@ export function CaseStudyFilters({
   const ids = useId();
   const headerHeight = useHeaderHeight();
   const sentinelRef = useRef<HTMLDivElement>(null);
-  const { hidden, stuck } = useStickyBarState(sentinelRef, headerHeight);
+  const barRef = useRef<HTMLDivElement>(null);
+  const { hidden, stuck } = useStickyBarState(
+    sentinelRef,
+    barRef,
+    headerHeight,
+  );
 
   /*
     A filter change can shrink the list a long way. Read from far down the
@@ -82,7 +87,7 @@ export function CaseStudyFilters({
     onReset();
     scrollToResults();
   };
-  // const searchId = `${ids}-search`;
+  const searchId = `${ids}-search`;
   const industryId = `${ids}-industry`;
   const productId = `${ids}-product`;
   const useCaseId = `${ids}-usecase`;
@@ -100,6 +105,7 @@ export function CaseStudyFilters({
           (transformed) box. */}
       <div ref={sentinelRef} aria-hidden="true" />
       <div
+        ref={barRef}
         className={cn(
           "border-y border-line bg-surface transition-transform duration-300 ease-out xl:sticky xl:z-40",
           // Pinned, the header's own bottom edge already draws that line.
@@ -109,33 +115,30 @@ export function CaseStudyFilters({
         style={{ top: headerHeight }}
       >
         <div className="mx-auto w-full max-w-frame px-5 md:px-10 lg:px-gutter">
-          <div className="grid grid-cols-1 gap-3 pt-4 sm:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_auto]">
+          <div className="grid grid-cols-1 gap-3 pt-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.5fr)_repeat(3,minmax(0,1fr))_auto]">
             {/*
-            Search is switched off for now and industry takes its slot. The
-            filtering behind it still works, so uncommenting the field brings
-            it back. The search glyph is a background image rather than an
-            absolutely positioned node, so the input keeps a single box for
-            focus ring and border to paint on.
-
-          <div className="sm:col-span-2 lg:col-span-1">
-            <label htmlFor={searchId} className="sr-only">
-              Search
-            </label>
-            <input
-              id={searchId}
-              type="search"
-              value={filters.search}
-              onChange={(e) => onChange("search", e.target.value)}
-              placeholder="Search by company, city, industry, or keyword…"
-              className={cn(FIELD, "w-full bg-no-repeat pl-11 pr-3.5")}
-              style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%236B6B6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E\")",
-                backgroundPosition: "14px center",
-              }}
-            />
-          </div>
-          */}
+            The search glyph is a background image rather than an absolutely
+            positioned node, so the input keeps a single box for focus ring and
+            border to paint on.
+            */}
+            <div className="sm:col-span-2 lg:col-span-1">
+              <label htmlFor={searchId} className="sr-only">
+                Search
+              </label>
+              <input
+                id={searchId}
+                type="search"
+                value={filters.search}
+                onChange={(e) => change("search", e.target.value)}
+                placeholder="Search by company, city, industry, or keyword…"
+                className={cn(FIELD, "w-full bg-no-repeat pl-11 pr-3.5")}
+                style={{
+                  backgroundImage:
+                    "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%236B6B6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E\")",
+                  backgroundPosition: "14px center",
+                }}
+              />
+            </div>
 
             <div>
               <label htmlFor={industryId} className="sr-only">
@@ -203,7 +206,7 @@ export function CaseStudyFilters({
               onClick={reset}
               className={cn(
                 FIELD,
-                "px-4 font-medium text-content-muted sm:col-span-2 lg:col-span-1",
+                "px-4 font-medium text-content-muted",
                 "hover:border-accent hover:text-accent",
               )}
             >
@@ -250,9 +253,14 @@ function useHeaderHeight() {
  * point — the bar slides up behind the header to give the stories the room,
  * and comes back on the first scroll up. Small moves are ignored so trackpad
  * jitter can't make it flicker.
+ *
+ * Hiding waits until the bar's own slot in the flow has scrolled under the
+ * header. Hidden any earlier, it would uncover that empty slot and leave a
+ * blank band between the header and the first story.
  */
 function useStickyBarState(
   sentinelRef: React.RefObject<HTMLDivElement | null>,
+  barRef: React.RefObject<HTMLDivElement | null>,
   headerHeight: number,
 ) {
   const [hidden, setHidden] = useState(false);
@@ -268,12 +276,16 @@ function useStickyBarState(
       const isStuck =
         !!sentinel && sentinel.getBoundingClientRect().top < headerHeight;
       setStuck(isStuck);
+      const barHeight = barRef.current?.offsetHeight ?? 0;
+      const pastSlot =
+        !!sentinel &&
+        sentinel.getBoundingClientRect().top < headerHeight - barHeight;
 
       const y = window.scrollY;
       const delta = y - lastY;
       if (Math.abs(delta) < 8) return;
       lastY = y;
-      setHidden(isStuck && delta > 0);
+      setHidden(pastSlot && delta > 0);
     };
 
     const onScroll = () => {
@@ -289,7 +301,7 @@ function useStickyBarState(
       window.removeEventListener("scroll", onScroll);
       if (frame) cancelAnimationFrame(frame);
     };
-  }, [sentinelRef, headerHeight]);
+  }, [sentinelRef, barRef, headerHeight]);
 
   return { hidden, stuck };
 }

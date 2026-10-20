@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
+import Badge from "@/components/ui/Badge";
 import { cn } from "@/lib/cn";
 import type { CaseStudy } from "@/data/caseStudies";
 
@@ -77,14 +78,14 @@ function StorySummary({
         {study.stat.map((line) => (
           <p
             key={line}
-            className="text-[20px] font-bold leading-[1.2] tracking-negative text-accent-hover"
+            className="text-body-lg font-semibold text-accent"
           >
             {line}
           </p>
         ))}
       </div>
 
-      <p className="text-[14px] font-medium leading-[18px] text-content-muted">
+      <p className="text-body text-content-muted">
         {study.snapshot}
       </p>
 
@@ -101,12 +102,9 @@ function StorySummary({
 
       <div className="flex flex-wrap gap-1.5">
         {study.chips.map((chip) => (
-          <span
-            key={chip}
-            className="inline-flex items-center rounded-sm bg-surface-muted px-2.5 py-1 text-caption text-content-muted"
-          >
+          <Badge key={chip} tone="subtle">
             {chip}
-          </span>
+          </Badge>
         ))}
       </div>
     </>
@@ -157,13 +155,13 @@ export function CaseStudyCard({
       <article
         ref={cardRef}
         className={cn(
-          "flex h-full w-full flex-col gap-5 rounded-xl border border-line bg-surface p-6 transition-[colors,box-shadow] duration-200 hover:border-line-strong hover:shadow-card-raised lg:p-7",
+          "flex h-full w-full flex-col gap-5 rounded-xl border border-line bg-surface p-6 transition-[colors,box-shadow] duration-200 hover:border-transparent hover:shadow-card-raised lg:p-7",
           origin && "invisible"
         )}
       >
         <StoryHeader study={study} useCaseLabel={useCaseLabel} />
 
-        <h4 className="text-balance text-[22px] font-bold leading-[1.25] tracking-negative text-content">
+        <h4 className="text-balance text-heading-sm font-semibold text-content">
           {study.title}
         </h4>
 

@@ -3717,7 +3717,7 @@ export const caseStudies: CaseStudy[] = [
 ];
 /** Hero — the prototype's opening band. */
 export const caseStudiesHero = {
-  eyebrow: "Case Studies · 1000+ growing companies",
+  eyebrow: "Case Studies · Thousands of growing companies",
   title: "Real businesses. Real leakage plugged.",
   accentTitle: "Real growth the Effortless way.",
   description:
@@ -3725,7 +3725,7 @@ export const caseStudiesHero = {
   primaryCta: "Book a 20-min demo",
   secondaryCta: { label: "See your use case", href: "#case-study-sections" },
   proofPoints: [
-    "1000+ growing companies",
+    "Thousands of growing companies",
     "85% of manual work automated",
     "2-way Tally Prime sync",
     "8 levels of enterprise-grade security",
