@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import Metadata from "@/components/Metadata";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
+import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -248,7 +249,11 @@ export function CaseStudiesPage({
           />
 
           {/* ---- Stories ---- */}
-          <Section id="case-study-sections" spacing="lg">
+          <Section
+            id="case-study-sections"
+            spacing="lg"
+            className="pt-8 md:pt-10 lg:pt-12"
+          >
             {visibleSections.sections.length === 0 ? (
               <div className="flex flex-col items-center gap-5 rounded-xl border border-dashed border-line bg-surface px-5 py-24 text-center">
                 <p className="text-heading-sm font-medium text-content">
@@ -274,8 +279,8 @@ export function CaseStudiesPage({
                     id={`section-${section.id}`}
                     className="scroll-mt-48"
                   >
-                    <div className="mb-3 flex items-baseline gap-5">
-                      <span className="text-heading-sm tabular-nums text-accent">
+                    <div className="mb-3 flex items-baseline gap-4">
+                      <span className="text-heading-md font-medium tabular-nums tracking-negative text-accent">
                         {section.num}
                       </span>
                       <h2 className="text-heading-md font-medium tracking-negative text-content">
@@ -294,10 +299,10 @@ export function CaseStudiesPage({
                             <h3 className="text-heading-sm font-medium tracking-negative text-content">
                               {group.label}
                             </h3>
-                            <span className="rounded-full bg-surface-muted px-2.5 py-1 text-caption font-semibold text-content-muted">
+                            <Badge tone="subtle">
                               {group.cards.length}{" "}
                               {group.cards.length === 1 ? "story" : "stories"}
-                            </span>
+                            </Badge>
                           </div>
 
                           <ul className="grid grid-cols-1 gap-5 xl:grid-cols-2">
@@ -329,9 +334,6 @@ export function CaseStudiesPage({
           <section className="border-y border-accent-surface bg-accent-subtle py-14">
             <Container className="flex flex-wrap items-center justify-between gap-8">
               <div className="flex-1 basis-[480px]">
-                <p className="mb-2.5 text-label font-semibold uppercase tracking-[0.06em] text-accent">
-                  {caseStudiesMidCta.eyebrow}
-                </p>
                 <h2 className="mb-2.5 text-heading-md font-medium tracking-negative text-content">
                   {caseStudiesMidCta.title}
                 </h2>
@@ -347,10 +349,8 @@ export function CaseStudiesPage({
 
           {/* ---- By the numbers ---- */}
           <Section spacing="lg">
-            <div className="mb-10 text-center">
-              <p className="mb-2 text-label font-semibold uppercase tracking-[0.06em] text-accent">
-                {caseStudiesByTheNumbers.eyebrow}
-              </p>
+            <div className="mb-10 flex flex-col items-center gap-4 text-center">
+              <Badge tone="subtle">{caseStudiesByTheNumbers.eyebrow}</Badge>
               <h2 className="text-heading-md font-medium tracking-negative text-content">
                 {caseStudiesByTheNumbers.title}
               </h2>
@@ -362,10 +362,10 @@ export function CaseStudiesPage({
                   key={item.label}
                   className="rounded-xl border border-line bg-bg-subtle px-4 py-6 text-center"
                 >
-                  <p className="mb-2 text-[32px] font-bold leading-[1.1] tracking-negative text-accent-hover">
+                  <p className="mb-2 text-heading-md font-semibold text-accent">
                     {item.stat}
                   </p>
-                  <p className="text-caption font-semibold text-content-muted">
+                  <p className="text-body text-content-muted">
                     {item.label}
                   </p>
                 </li>
@@ -375,10 +375,8 @@ export function CaseStudiesPage({
 
           {/* ---- Objection-buster ---- */}
           <Section tone="subtle" spacing="md">
-            <div className="mx-auto max-w-[820px] text-center">
-              <p className="mb-3 text-label font-semibold uppercase tracking-[0.06em] text-accent">
-                {caseStudiesObjection.eyebrow}
-              </p>
+            <div className="mx-auto flex max-w-[820px] flex-col items-center gap-4 text-center">
+              <Badge tone="surface">{caseStudiesObjection.eyebrow}</Badge>
               <p className="text-pretty text-[24px] font-medium leading-[1.5] tracking-negative text-content">
                 {caseStudiesObjection.lead}
                 <em className="font-bold not-italic text-accent">
