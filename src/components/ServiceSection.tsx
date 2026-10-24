@@ -16,7 +16,7 @@ import FeatureBanner from "./FeatureSection";
 import FeatureWrapper from "./FeatureWrapper";
 import FounderTestimonialCard from "./FounderTestimonials";
 import FoundingTeamCard from "./FoundingTeamCard";
-import TeamMemberCard from "./TeamMemberCard";
+import TeamCarousel from "./TeamCarousel";
 import GrowthCards from "./GrowthCards";
 import HomePageCarousel from "./HomepageProductCarousel";
 import IdeasCardSection from "./IdeasCard";
@@ -469,21 +469,11 @@ const ServiceSection = ({
               </div>
             )}
             {teamGroups && (
-              // Figma 3294:10379: one titled run per team, 40px apart, four
-              // 310px tiles to a row on the 1312 grid with a 24px gutter.
-              <div className="flex w-full flex-col gap-10">
-                {teamGroups.map((group) => (
-                  <div key={group.title} className="flex w-full flex-col gap-5">
-                    <h2 className="text-heading-md font-semibold text-content md:text-heading-lg">
-                      {group.title}
-                    </h2>
-                    <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                      {group.members.map((member) => (
-                        <TeamMemberCard key={member.name} {...member} />
-                      ))}
-                    </div>
-                  </div>
-                ))}
+              <div className="flex w-full flex-col items-center gap-6 md:gap-10">
+                <h2 className="text-center text-heading-md font-semibold text-content md:text-heading-lg">
+                  Meet the Team
+                </h2>
+                <TeamCarousel groups={teamGroups} />
               </div>
             )}
             {mentorsCard && (
