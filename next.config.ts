@@ -3,9 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
-  experimental: {
-    agentUpgrade: "security",
-  },
   env: {
     GTM_ID: "GTM-3388VMGJ",
     HUBSPOT_ACCESS_TOKEN: process.env.HUBSPOT_ACCESS_TOKEN,

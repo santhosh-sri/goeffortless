@@ -8,10 +8,14 @@
 
 export interface PricingPlatform {
   name: string;
-  chip: string;
+  /** Green chip in the header bar. Effortless One has none (Figma 3210:13084). */
+  chip?: string;
   title: string;
-  /** The end-to-end flow, rendered as one line in a tinted box. */
-  flow: string;
+  /**
+   * The end-to-end flow, rendered in a tinted box — one line per entry.
+   * Effortless One lists both its flows, so it carries two.
+   */
+  flow: string | string[];
   priceLabel: string;
   price: string;
   href: string;
@@ -26,7 +30,10 @@ export const pricingHero = {
     "Start with Sales or Procurement. Add Buyer Commerce, Claims, or Contracts whenever the business is ready — every module posts to the same books.",
 };
 
-/** The two platform cards — Figma nodes 2426:61003 / 2426:61004. */
+/**
+ * The platform cards — Figma nodes 2426:61003 / 2426:61004 side by side, then
+ * 3210:13084 (Effortless One) full-width beneath them.
+ */
 export const pricingPlatforms: PricingPlatform[] = [
   {
     name: "Effortless Procurement",
@@ -45,6 +52,18 @@ export const pricingPlatforms: PricingPlatform[] = [
     priceLabel: "Starts at",
     price: "₹12,833/M",
     href: "/pricing/sales",
+  },
+  {
+    name: "Effortless One",
+    // Figma reads "complete Suit"; "Suite" is the intended word.
+    title: "Complete Order-To-Cash & Procure-To-Pay Complete Suite",
+    flow: [
+      "Order-to-Cash: Customer KYC → Verified Visit (Check-in & Beat Plan) → Credit-Checked Order → Auto-Scheme → E-Invoice Delivery → Delivery challan → Dispatch → POD → Collections → Banking → Tally Sync → Dashboards",
+      "Procure-to-Pay: Vendor KYC → PO (Cost Centre) → 3-Way Match (PO vs Vendor Bill vs GRN) → Over-billing Alerts → Tax Compliance → Approvals → Payments & Settlements → Tally Sync → Dashboards",
+    ],
+    priceLabel: "Starts at",
+    price: "₹18,750/M",
+    href: "/pricing/effortless-one",
   },
 ];
 

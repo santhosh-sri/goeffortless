@@ -172,6 +172,36 @@ export interface TeamMember {
   title?: string;
 }
 
+/**
+ * How a team photo sits in its slab, lifted from the Figma image fill: the
+ * image box as a percentage of the slab, offset from its top-left corner.
+ */
+export interface TeamPhotoCrop {
+  width: number;
+  height: number;
+  left: number;
+  top: number;
+}
+
+/** One tile in a team group — Figma 3296:10601: photo, name, title, LinkedIn. */
+export interface TeamGroupMember {
+  imageSrc: string;
+  name: string;
+  title: string;
+  linkedInUrl?: string;
+  /**
+   * Figma crops most portraits in on the face and bottom-aligns a few;
+   * omitted means a plain centred cover.
+   */
+  crop?: TeamPhotoCrop | "bottom";
+}
+
+/** A titled run of team tiles ("Execution Team", "Product Team", …) — Figma 3294:10379. */
+export interface TeamGroup {
+  title: string;
+  members: TeamGroupMember[];
+}
+
 export interface MissionSectionContent {
   image: {
     src: string;
@@ -261,6 +291,7 @@ export interface ServiceContent {
   homePageVerticalSlider?: HomePageVerticalSlider;
   founderTeams?: TeamMember[];
   mangementTeams?: TeamMember[];
+  teamGroups?: TeamGroup[];
   investors?: TeamMember[];
   mentorsCard?: TeamMember[];
   companyValuesItems?: CompanyValue[];

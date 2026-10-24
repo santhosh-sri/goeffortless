@@ -25,9 +25,10 @@ export function PlatformCards({
   /** Whether each card navigates to its detail page. Off on the detail pages. */
   linked?: boolean;
 }) {
-  // /pricing shows both cards side by side (646px each); a detail page shows
-  // only its own, and Figma draws that one full-bleed at 1312 rather than
-  // leaving the second column empty (e.g. 2410:59310 on the procurement page).
+  // /pricing shows Procurement and Sales side by side (646px each) with
+  // Effortless One full-width on the row beneath (Figma 3210:13083); a detail
+  // page shows only its own, and Figma draws that one full-bleed at 1312
+  // rather than leaving the second column empty (e.g. 2410:59310).
   return (
     <ul
       className={cn(
@@ -35,14 +36,17 @@ export function PlatformCards({
         platforms.length > 1 && "lg:grid-cols-2"
       )}
     >
-      {platforms.map((platform) => {
+      {platforms.map((platform, index) => {
+        const flows = Array.isArray(platform.flow)
+          ? platform.flow
+          : [platform.flow];
         const body = (
           <>
             <div className="flex items-center justify-between gap-3 bg-accent px-5 py-3.5">
               <p className="text-body font-semibold text-white">
                 {platform.name}
               </p>
-              <Badge tone="success">{platform.chip}</Badge>
+              {platform.chip && <Badge tone="success">{platform.chip}</Badge>}
             </div>
 
             <div className="flex flex-1 flex-col gap-4 p-5">
@@ -50,9 +54,11 @@ export function PlatformCards({
                 {platform.title}
               </h3>
 
-              <p className="rounded-sm bg-bg-inset px-4 py-3 text-[14px] leading-[22px] text-content-muted">
-                {platform.flow}
-              </p>
+              <div className="flex flex-col rounded-sm bg-bg-inset px-4 py-3 text-[14px] leading-[22px] text-content-muted">
+                {flows.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </div>
 
               <div className="mt-auto flex items-end justify-between gap-4 pt-2">
                 <div className="flex flex-col gap-1">
@@ -85,8 +91,17 @@ export function PlatformCards({
           </>
         );
 
+        // An odd card at the end of a two-column grid takes the whole row.
+        const fullRow =
+          platforms.length > 1 &&
+          index === platforms.length - 1 &&
+          platforms.length % 2 === 1;
+
         return (
-          <li key={platform.name} className="flex">
+          <li
+            key={platform.name}
+            className={cn("flex", fullRow && "lg:col-span-2")}
+          >
             {linked ? (
               <Link
                 href={platform.href}

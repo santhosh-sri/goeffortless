@@ -16,7 +16,7 @@
     "@hookform/resolvers": "^3.10.0",
     "axios": "^1.7.9",
     "html-react-parser": "^5.2.2",
-    "next": "^16.4.3",
+    "next": "^16.0.8",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-gtm-module": "^2.0.11",

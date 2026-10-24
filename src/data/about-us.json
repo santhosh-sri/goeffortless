@@ -77,125 +77,336 @@
       ]
     },
     {
-      "mangementTeams": [
+      "teamGroups": [
         {
-          "imageSrc": "/madhur-maheshwari.png",
-          "description": "Madhur is the National Sales Manager at Effortless, with over a decade of experience in IT and retail sales. He has held key sales roles at Tally Solutions, iBall India, and CPM, bringing strong expertise in channel sales and business development.",
-          "linkedInUrl": "https://www.linkedin.com/in/madhur-maheshwari-m1234/",
-          "isColoured": true,
-          "name": "Madhur M. Maheshwari"
+          "title": "Execution Team",
+          "members": [
+            {
+              "imageSrc": "/team/madhur-maheshwari.png",
+              "name": "Madhur M. Maheshwari",
+              "title": "Director Sales Manager",
+              "linkedInUrl": "https://www.linkedin.com/in/madhur-maheshwari-m1234/"
+            },
+            {
+              "imageSrc": "/team/jayprakash-kahar.png",
+              "name": "Jayprakash Kahar",
+              "title": "Zonal Strategic Accounts",
+              "linkedInUrl": "https://www.linkedin.com/in/jayprakash-kahar-5203522a/"
+            },
+            {
+              "imageSrc": "/team/aravind-muthu-kumar.png",
+              "name": "Aravind Muthu Kumar",
+              "title": "RSAM",
+              "linkedInUrl": "https://www.linkedin.com/in/aravindamk/",
+              "crop": {
+                "width": 123.66,
+                "height": 123.68,
+                "left": -11.93,
+                "top": -7.09
+              }
+            },
+            {
+              "imageSrc": "/team/mohit-sharma.png",
+              "name": "Mohit Sharma",
+              "title": "SSAM",
+              "linkedInUrl": "https://www.linkedin.com/in/mohit-sharma-76987a224/"
+            },
+            {
+              "imageSrc": "/team/tanya-arora.png",
+              "name": "Tanya Arora",
+              "title": "SAM - NCR",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 130.69,
+                "height": 110.5,
+                "left": -15.48,
+                "top": -3.68
+              }
+            },
+            {
+              "imageSrc": "/team/rishabh-sharma.png",
+              "name": "Rishabh Sharma",
+              "title": "SAM - NCR",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 162.12,
+                "height": 184.92,
+                "left": -31.14,
+                "top": -7.39
+              }
+            }
+          ]
         },
         {
-          "imageSrc": "/jayprakash.png",
-          "description": "Jayprakash is a Zonal Strategic Accounts Manager at Effortless, with 25+ years of experience in sales and business development. He brings strong expertise in ERP, channel sales, enterprise engagement, and GTM strategy, including 10+ years at Tally Solutions.",
-          "linkedInUrl": "https://www.linkedin.com/in/jayprakash-kahar-5203522a/",
-          "isColoured": true,
-          "name": "Jayprakash Kahar"
+          "title": "Product Team",
+          "members": [
+            {
+              "imageSrc": "/team/manoj.png",
+              "name": "Manoj",
+              "title": "Senior Product Manager",
+              "linkedInUrl": "https://www.linkedin.com/in/manoj-ca-pm/",
+              "crop": {
+                "width": 128.07,
+                "height": 128.09,
+                "left": -14,
+                "top": -7.3
+              }
+            },
+            {
+              "imageSrc": "/team/logesh.png",
+              "name": "Logesh",
+              "title": "Senior Product Designer",
+              "linkedInUrl": "https://www.linkedin.com/in/lokesh-loki-291830161/"
+            },
+            {
+              "imageSrc": "/team/dharanidharan.png",
+              "name": "Dharanidharan",
+              "title": "Associate Product Manager",
+              "linkedInUrl": "",
+              "crop": "bottom"
+            },
+            {
+              "imageSrc": "/team/sakthiman.png",
+              "name": "Sakthiman",
+              "title": "Product Manager",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 122.33,
+                "height": 122.35,
+                "left": -11.26,
+                "top": -4.61
+              }
+            },
+            {
+              "imageSrc": "/team/keerthana.png",
+              "name": "Keerthana",
+              "title": "Junior Product Designer",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 155.43,
+                "height": 136.21,
+                "left": -26.07,
+                "top": -4.62
+              }
+            }
+          ]
         },
         {
-          "imageSrc": "/manoj-s.png",
-          "description": "Manoj is a Senior Product Manager at Effortless, leading product strategy and management. A Chartered Accountant by profession, he works closely with customers, partners, and key stakeholders to build impactful products.",
-          "linkedInUrl": "https://www.linkedin.com/in/manoj-ca-pm/",
-          "isColoured": true,
-          "name": "CA Manoj S."
+          "title": "Developer Team",
+          "members": [
+            {
+              "imageSrc": "/team/somasundaram.png",
+              "name": "Somasundaram",
+              "title": "Technical Lead",
+              "linkedInUrl": "https://www.linkedin.com/in/somasundaram-p-a4a71116b/"
+            },
+            {
+              "imageSrc": "/team/sateeshwaran.png",
+              "name": "Sateeshwaran",
+              "title": "Technical Lead",
+              "linkedInUrl": "https://www.linkedin.com/in/k-s-sateeshwaran-6626b17a/",
+              "crop": {
+                "width": 148.4,
+                "height": 167.4,
+                "left": -24.2,
+                "top": -1.56
+              }
+            },
+            {
+              "imageSrc": "/team/kirthi-vaasan.png",
+              "name": "Kirthi Vaasan",
+              "title": "Senior Software Developer",
+              "linkedInUrl": "https://www.linkedin.com/in/kirthi-vaasan-4a634271/",
+              "crop": {
+                "width": 122.26,
+                "height": 122.28,
+                "left": -11.08,
+                "top": -8.17
+              }
+            },
+            {
+              "imageSrc": "/team/kathiravan.png",
+              "name": "Kathiravan",
+              "title": "Senior Software Engineer",
+              "linkedInUrl": "",
+              "crop": "bottom"
+            },
+            {
+              "imageSrc": "/team/periyasamy.png",
+              "name": "Periyasamy",
+              "title": "Senior Software Developer",
+              "linkedInUrl": "",
+              "crop": "bottom"
+            },
+            {
+              "imageSrc": "/team/karthi.png",
+              "name": "Karthi",
+              "title": "Senior Software Developer",
+              "linkedInUrl": ""
+            },
+            {
+              "imageSrc": "/team/santhosh.png",
+              "name": "Santhosh",
+              "title": "Junior Developer",
+              "linkedInUrl": ""
+            },
+            {
+              "imageSrc": "/team/muthu-karthi.png",
+              "name": "Muthu Karthi",
+              "title": "Junior Developer",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 118.89,
+                "height": 118.91,
+                "left": -9.45,
+                "top": -0.09
+              }
+            },
+            {
+              "imageSrc": "/team/poonthandral.png",
+              "name": "Poonthandral",
+              "title": "Junior Developer",
+              "linkedInUrl": "",
+              "crop": "bottom"
+            },
+            {
+              "imageSrc": "/team/suraj-vishwakarma.png",
+              "name": "Suraj Vishwakarma",
+              "title": "Junior Developer",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 100,
+                "height": 112.73,
+                "left": 0,
+                "top": -4.6
+              }
+            }
+          ]
         },
         {
-          "imageSrc": "/somasundaram.png",
-          "description": "Somasundaram is a Technical Lead at Effortless, overseeing product development and engineering. As a Full-Stack Developer, he focuses on turning complex challenges into simple, scalable solutions that drive customer growth.",
-          "linkedInUrl": "https://www.linkedin.com/in/somasundaram-p-a4a71116b/",
-          "isColoured": true,
-          "name": "Somasundaram P."
+          "title": "QA Engineers",
+          "members": [
+            {
+              "imageSrc": "/team/sivabalan.png",
+              "name": "Sivabalan",
+              "title": "Senior Quality Analyst",
+              "linkedInUrl": "https://www.linkedin.com/in/siva-balan-641873287/",
+              "crop": "bottom"
+            },
+            {
+              "imageSrc": "/team/karthikeyan.png",
+              "name": "Karthikeyan",
+              "title": "Quality Analyst",
+              "linkedInUrl": ""
+            },
+            {
+              "imageSrc": "/team/sangameshwaran.png",
+              "name": "Sangameshwaran",
+              "title": "Quality Analyst",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 140.88,
+                "height": 158.19,
+                "left": -20.47,
+                "top": -11.18
+              }
+            }
+          ]
         },
         {
-          "imageSrc": "/mrudula.png",
-          "description": "Mrudula is an Onboarding Lead Consultant at Effortless, with experience in CFO services, client delivery, finance, and audits. A Chartered Accountant, she brings strong expertise in helping clients onboard seamlessly and manage their financial operations effectively.",
-          "linkedInUrl": "https://www.linkedin.com/in/mrudula-srinivas-669bbb2b2/",
-          "isColoured": true,
-          "name": "CA Mrudula Srinivas"
+          "title": "Customer Success Team",
+          "members": [
+            {
+              "imageSrc": "/team/mrudula-srinivas.png",
+              "name": "CA Mrudula Srinivas",
+              "title": "Technical Lead",
+              "linkedInUrl": "https://www.linkedin.com/in/mrudula-srinivas-669bbb2b2/",
+              "crop": {
+                "width": 115.64,
+                "height": 101.59,
+                "left": -7.83,
+                "top": -0.75
+              }
+            },
+            {
+              "imageSrc": "/team/sandhiya.png",
+              "name": "Sandhiya",
+              "title": "SCSA",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 120.47,
+                "height": 120.49,
+                "left": -10.18,
+                "top": -0.08
+              }
+            },
+            {
+              "imageSrc": "/team/yathin-kumar.png",
+              "name": "Yathin Kumar",
+              "title": "SCSA",
+              "linkedInUrl": "https://www.linkedin.com/in/yathin-kumar-aba277257/"
+            },
+            {
+              "imageSrc": "/team/rakhi-saklani.png",
+              "name": "Rakhi Saklani",
+              "title": "SCSA",
+              "linkedInUrl": "https://www.linkedin.com/in/rakhi-saklani-265290194/"
+            },
+            {
+              "imageSrc": "/team/neeraj-kumar.png",
+              "name": "Neeraj Kumar",
+              "title": "SCSA",
+              "linkedInUrl": ""
+            },
+            {
+              "imageSrc": "/team/chandni-damai.png",
+              "name": "Chandni Damai",
+              "title": "Customer Success Associate",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 150.16,
+                "height": 168.61,
+                "left": -25.15,
+                "top": -7.38
+              }
+            },
+            {
+              "imageSrc": "/team/shalini.png",
+              "name": "Shalini",
+              "title": "Executive – Customer Success",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 173.58,
+                "height": 195.68,
+                "left": -36.7,
+                "top": -15.83
+              }
+            },
+            {
+              "imageSrc": "/team/nitesh-yadav.png",
+              "name": "Nitesh Yadav",
+              "title": "Executive – Customer Success",
+              "linkedInUrl": "",
+              "crop": {
+                "width": 125.12,
+                "height": 114.38,
+                "left": -12.64,
+                "top": -0.07
+              }
+            }
+          ]
         },
         {
-          "imageSrc": "/mohit.png",
-          "description": "Mohit is a Senior Strategic Account Manager at Effortless, with experience across enterprise sales, business development, and channel partnerships. He brings strong expertise in SaaS, ERP, fintech, and strategic account management, with 5+ years at Tally Solutions.",
-          "linkedInUrl": "https://www.linkedin.com/in/mohit-sharma-76987a224/",
-          "isColoured": true,
-          "name": "Mohit Sharma"
-        },
-        {
-          "imageSrc": "/aravind.png",
-          "description": "Aravind is a Regional Strategic Account Manager at Effortless, with 13+ years of experience across strategic accounts, sales, and channel management. He brings strong expertise in SME and enterprise solutions, partner relationships, and business growth.",
-          "linkedInUrl": "https://www.linkedin.com/in/aravindamk/",
-          "isColoured": true,
-          "name": "Aravind Muthu Kumar"
-        },
-        {
-          "imageSrc": "/sateeshwaran.png",
-          "description": "Sateeshwaran is a Technical Lead at Effortless, with 10+ years of experience in software development. He brings strong expertise in ReactJS, React Native, responsive web applications, and frontend engineering.",
-          "linkedInUrl": "https://www.linkedin.com/in/k-s-sateeshwaran-6626b17a/",
-          "isColoured": true,
-          "name": "Sateeshwaran"
-        },
-        {
-          "imageSrc": "/kirthi.png",
-          "description": "Kirthi Vasan is a Senior Backend Developer at Effortless, with 5+ years of experience in software development. He brings strong expertise in Ruby on Rails, C, Elasticsearch, and full-stack development, building scalable and reliable solutions.",
-          "linkedInUrl": "https://www.linkedin.com/in/kirthi-vaasan-4a634271/",
-          "isColoured": true,
-          "name": "Kirthi Vaasan"
-        },
-        {
-          "imageSrc": "/logesh.png",
-          "description": "Lokesh is a Senior Product Designer at Effortless, with 6+ years of experience in UX and UI design. He brings strong expertise in usability, web application design, prototyping, and creating engaging user experiences.",
-          "linkedInUrl": "https://www.linkedin.com/in/lokesh-loki-291830161/",
-          "isColoured": true,
-          "name": "Logesh"
-        },
-        {
-          "imageSrc": "/sivabalan.png",
-          "description": "Siva is a Senior Quality Analyst Engineer at Effortless, with nearly 5 years of experience in software testing. He brings strong expertise in system testing, Selenium, and GUI test automation, ensuring product quality and reliability.",
-          "linkedInUrl": "https://www.linkedin.com/in/siva-balan-641873287/",
-          "isColoured": true,
-          "name": "Sivabalan"
-        },
-        {
-          "imageSrc": "/neeraj.png",
-          "description": "Neeraj is a Senior Customer Success professional at Effortless, focused on building strong customer relationships and delivering a seamless customer experience. He brings expertise in customer engagement, account management.",
-          "linkedInUrl": "",
-          "isColoured": true,
-          "name": "Neeraj Kumar"
-        },
-        {
-          "imageSrc": "/sandhiya.png",
-          "description": "Sandhiya is a Senior Customer Success Associate at Effortless, focused on building strong client relationships and delivering a seamless customer experience. She brings expertise in customer engagement and relationship management.",
-          "linkedInUrl": "",
-          "isColoured": true,
-          "name": "Sandhiya"
-        },
-        {
-          "imageSrc": "/yathin.png",
-          "description": "Yathin is a Senior Customer Success Associate at Effortless, with 4+ years of experience in customer support and functional consulting. He brings strong expertise in client services, post-sales support, implementation, and user training.",
-          "linkedInUrl": "https://www.linkedin.com/in/yathin-kumar-aba277257/",
-          "isColoured": true,
-          "name": "Yathin Kumar"
-        },
-        {
-          "imageSrc": "/rakhi.png",
-          "description": "Rakhi is a SaaS Implementation Specialist at Effortless, with experience in ERP consulting, customer support, and client onboarding. She brings expertise in Tally solutions, software migration, issue resolution, and customer support.",
-          "linkedInUrl": "https://www.linkedin.com/in/rakhi-saklani-265290194/",
-          "isColoured": true,
-          "name": "Rakhi Saklani"
-        },
-        {
-          "imageSrc": "/vignesh-designer.png",
-          "description": "Vignesh is a Marketing Designer at Effortless, specializing in visual design, branding, website design, marketing assets, and video editing. He creates impactful visuals that strengthen the brand and deliver engaging experiences.",
-          "linkedInUrl": "https://www.linkedin.com/in/vignesh-v-ba2439214/",
-          "isColoured": true,
-          "name": "Vignesh"
-        },
-        {
-          "imageSrc": "/subin.png",
-          "description": "Subin is a Manager – Human Resources at Effortless, with 10+ years of experience across HR, Talent Acquisition, and HR Business Partnering. He brings expertise in strategic HR planning, People Management, and driving workforce transformation.",
-          "linkedInUrl": "https://www.linkedin.com/in/subinpk1993/",
-          "isColoured": true,
-          "name": "Subin"
+          "title": "Marketing",
+          "members": [
+            {
+              "imageSrc": "/team/vignesh.png",
+              "name": "Vignesh",
+              "title": "Designer",
+              "linkedInUrl": "https://www.linkedin.com/in/vignesh-v-ba2439214/",
+              "crop": "bottom"
+            }
+          ]
         }
       ]
     },

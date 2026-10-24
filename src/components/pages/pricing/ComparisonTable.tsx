@@ -196,9 +196,12 @@ export function ComparisonTable({
                           <span
                             className={cn(
                               "rounded-sm px-2 py-0.5 text-caption font-medium text-white",
-                              section.badge === "Primary Product"
+                              // Figma: "Primary Product" and "Included" are
+                              // green; anything reading "add-on" ("Add-On",
+                              // "Grow add-on · Included in Scale") is orange.
+                              /^(Primary Product|Included)$/.test(section.badge)
                                 ? "bg-success"
-                                : section.badge === "Add-On"
+                                : /add-on/i.test(section.badge)
                                 ? "bg-accent"
                                 : "bg-content-subtle"
                             )}
@@ -236,7 +239,9 @@ export function ComparisonTable({
 
                 {isOpen &&
                   section.rows.map((row, index) => (
-                    <tr key={row.label} className="border-b border-line">
+                    // Index in the key: the One frame repeats a label
+                    // ("Walk-in Customers") inside one module.
+                    <tr key={`${index}-${row.label}`} className="border-b border-line">
                       {row.alsoLabel ? (
                         // Two features sharing one value: the labels stack,
                         // split by a rule, inside a single 120px row.
