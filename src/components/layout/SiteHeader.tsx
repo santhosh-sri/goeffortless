@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 import { cn } from "@/lib/cn";
 import { LOGIN_URL, visibleNav } from "@/data/navigation";
 import Button from "@/components/ui/Button";
@@ -147,15 +146,6 @@ export function SiteHeader() {
   );
 
   const openMenuItem = visibleNav.find((item) => item.label === openMenu);
-
-  // Where the scrim starts — the header's bottom edge, read when a menu opens
-  // so the scrim never tints the translucent header itself.
-  const [scrimTop, setScrimTop] = useState(0);
-  useEffect(() => {
-    if (openMenuItem?.menu && headerRef.current) {
-      setScrimTop(headerRef.current.getBoundingClientRect().bottom);
-    }
-  }, [openMenuItem]);
 
   const isActive = (href?: string) =>
     !!href && (pathname === href || pathname?.startsWith(`${href}/`));
@@ -320,24 +310,29 @@ export function SiteHeader() {
         </div>
       </Container>
 
-      {/* Panels are rendered here, not inside the nav item, so the panel can
-          span the full viewport width under the header. */}
+      {/* Panels are rendered here, not inside the nav item, so a 1140px-wide
+          menu stays inside the page gutters instead of clipping at the
+          viewport edge. */}
       {openMenuItem?.menu && (
-        // Hover handlers live on the panel wrapper below rather than on this
-        // positioning layer, so only the panel itself counts as "inside the
-        // menu".
+        // The positioning layer spans the viewport but the panel inside it is a
+        // fixed, centred width. Hover handlers on this element therefore treated
+        // the empty gutters beside the panel as "inside the menu", so a pointer
+        // resting to its left never closed anything; `pointer-events-none` also
+        // stops those gutters swallowing hovers on the page beneath. The
+        // handlers live on the shrink-wrapped panel below instead.
         <div className="pointer-events-none absolute inset-x-0 top-full hidden animate-fadeIn xl:block">
-          {/* No top padding: the panel drops its top border so it reads as an
-              extension of the header, which only works if it actually meets
-              the header's bottom edge. The panel spans the full width; it
-              centres its own content. */}
-          <div
-            className="pointer-events-auto"
-            onMouseEnter={() => openWithHover(openMenuItem.label)}
-            onMouseLeave={closeWithDelay}
-          >
-            <NavDropdown menu={openMenuItem.menu} onNavigate={closeAll} />
-          </div>
+          {/* No top padding: the panel drops `rounded-t` and its top border so
+              it reads as an extension of the header, which only works if it
+              actually meets the header's bottom edge. */}
+          <Container className="flex justify-center">
+            <div
+              className="pointer-events-auto"
+              onMouseEnter={() => openWithHover(openMenuItem.label)}
+              onMouseLeave={closeWithDelay}
+            >
+              <NavDropdown menu={openMenuItem.menu} onNavigate={closeAll} />
+            </div>
+          </Container>
         </div>
       )}
 
@@ -409,23 +404,6 @@ export function SiteHeader() {
           </Container>
         </div>
       )}
-
-      {/* Dims the page behind an open desktop menu so the white panel reads as
-          a layer above it on any section, grey or white. Portalled to <body>
-          because the header's backdrop blur would otherwise make the header,
-          not the viewport, the containing block of a `fixed` child. Above the
-          page's own sticky bars (z-40), under the header and its panel (z-50).
-          A click on it lands outside the header, which the pointerdown handler
-          above already treats as a click-away. */}
-      {openMenuItem?.menu &&
-        createPortal(
-          <div
-            aria-hidden="true"
-            className="fixed inset-x-0 bottom-0 z-[45] hidden animate-fadeIn bg-content/20 xl:block"
-            style={{ top: scrimTop }}
-          />,
-          document.body
-        )}
     </header>
   );
 }
